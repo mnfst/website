@@ -5,17 +5,20 @@ export const keyFeaturesContents: KeyFeature[] = [
 		name: 'Sécurité et privacité',
 		description:
 			'Mot de passe, contenu accessible uniquement à certains utilisateurs, copies de sauvegarde…',
-		image: 'key-features/security.png'
+		image: 'key-features/security.png',
+		usages: ['planification']
 	},
 	{
 		name: 'Branding',
 		description: 'Adapté à votre identité et vos couleurs',
-		image: 'key-features/branding.png'
+		image: 'key-features/branding.png',
+		usages: ['planification']
 	},
 	{
 		name: 'Simple à utiliser',
 		description:
 			'Pas besoin de mode d’emploi, si vous savez utilisez Google, vous savez utiliser CASE',
-		image: 'key-features/simple.png'
+		image: 'key-features/simple.png',
+		usages: []
 	}
 ]
