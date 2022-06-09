@@ -1,8 +1,13 @@
-<script>
-	import '../styles/app.scss';
+<script lang="ts">
+	import '../styles/app.scss'
+
+	import { usageContents } from '../content/usages.content'
+	import type { Usage } from '../interfaces/usage.interface'
+
+	let usages: Usage[] = usageContents
 </script>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
 			<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
@@ -27,14 +32,12 @@
 			<a class="navbar-item" href="/faq"> FAQ </a>
 
 			<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link"> Usages </a>
+				<span class="navbar-link"> Usages </span>
 
 				<div class="navbar-dropdown">
-					<a class="navbar-item"> About </a>
-					<a class="navbar-item"> Jobs </a>
-					<a class="navbar-item"> Contact </a>
-					<hr class="navbar-divider" />
-					<a class="navbar-item"> Report an issue </a>
+					{#each usages as usage}
+						<a class="navbar-item" href="/usages/{usage.slug}">{usage.name}</a>
+					{/each}
 				</div>
 			</div>
 		</div>
