@@ -51,7 +51,7 @@
 						<li
 							on:mouseover={() => (activeKeyFeature = keyFeature)}
 							on:focus={() => (activeKeyFeature = keyFeature)}
-							class:is-active={activeKeyFeature.name === keyFeature.name}
+							class:is-active={activeKeyFeature === keyFeature}
 						>
 							<strong>{keyFeature.name}</strong>
 							<p>{keyFeature.description}</p>
