@@ -8,6 +8,12 @@ export const faqContents: Faq[] = [
 		group: 'general'
 	},
 	{
+		question: `'Est-ce que c'est compatible avec un téléphone portable'`,
+		answer: `Oui c'est vrai`,
+		usages: ['devis -et-factures'],
+		group: 'general'
+	},
+	{
 		question: `Est ce que c'est gratuit ?`,
 		answer: 'Ca dépend',
 		usages: ['planification'],

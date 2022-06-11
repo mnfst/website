@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { keyFeaturesContents } from '../content/key-features.content'
+	import { keyFeatureContents } from '../content/key-features.content'
 
 	import { usageContents } from '../content/usages.content'
 	import type { KeyFeature } from '../interfaces/key-feature.interface'
 	import type { Usage } from '../interfaces/usage.interface'
 
 	let usages: Usage[] = usageContents
-	let keyFeatures: KeyFeature[] = keyFeaturesContents
+	let keyFeatures: KeyFeature[] = keyFeatureContents
 
 	let activeKeyFeature: KeyFeature = keyFeatures[0]
 </script>

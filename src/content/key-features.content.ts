@@ -1,6 +1,6 @@
 import type { KeyFeature } from '../interfaces/key-feature.interface'
 
-export const keyFeaturesContents: KeyFeature[] = [
+export const keyFeatureContents: KeyFeature[] = [
 	{
 		name: 'Sécurité et privacité',
 		description:

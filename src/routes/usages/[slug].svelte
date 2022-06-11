@@ -3,8 +3,6 @@
 	import type { KeyFeature } from '../../interfaces/key-feature.interface'
 	import type { Usage } from '../../interfaces/usage.interface'
 
-	export let usage: Usage
-
 	/** @type {import('./__types/[slug]').Load} */
 	export async function load({ params }: { params: { slug: string } }) {
 		const usage: Usage = usageContents.find((usage: Usage) => usage.slug === params.slug)
@@ -18,14 +16,19 @@
 </script>
 
 <script lang="ts">
-	import { keyFeaturesContents } from '../../content/key-features.content'
+	import { keyFeatureContents } from '../../content/key-features.content'
+	import type { Faq } from '../../interfaces/faq.interface'
+	import { faqContents } from '../../content/faqs.content'
 
 	export let usage: Usage
 
-	const keyFeatures: KeyFeature[] = keyFeaturesContents.filter((keyFeature: KeyFeature) =>
+	const keyFeatures: KeyFeature[] = keyFeatureContents.filter((keyFeature: KeyFeature) =>
 		keyFeature.usages.includes(usage.slug)
 	)
-	let activeKeyFeature = keyFeatures[0]
+	let activeKeyFeature: KeyFeature = keyFeatures[0]
+
+	const faqs: Faq[] = faqContents.filter((faq: Faq) => faq.usages.includes(usage.slug))
+	let activeFaq: Faq
 </script>
 
 <!-- Hero -->
@@ -84,6 +87,27 @@
 					{/each}
 				</ul>
 			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Faqs -->
+<div class="container">
+	<div class="columns">
+		<div class="column">
+			<ul>
+				{#each faqs as faq}
+					<li on:click={() => (activeFaq === faq ? (activeFaq = null) : (activeFaq = faq))}>
+						<strong>{faq.question}</strong>
+						<i class:is-open={activeFaq === faq} class:is-closed={activeFaq !== faq}
+							>%% Icon chevron</i
+						>
+					</li>
+					{#if activeFaq === faq}
+						<p>{faq.answer}</p>
+					{/if}
+				{/each}
+			</ul>
 		</div>
 	</div>
 </div>
