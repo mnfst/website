@@ -21,8 +21,6 @@
 
 <!-- Usage list -->
 <div class="container">
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
 	<div class="columns is-multiline is-mobile">
 		{#each usages as usage}
 			<div class="column is-6 notification is-info">

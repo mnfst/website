@@ -33,7 +33,9 @@
 			<ul>
 				<li>A propos</li>
 				<li>Carrières</li>
-				<li>Contact</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
 			</ul>
 		</div>
 	</div>
