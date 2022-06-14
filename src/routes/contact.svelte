@@ -3,8 +3,7 @@
 	import type { ValidatorFn, ValidatorResult } from '../lib/validators'
 	import { flashMessage } from '../stores'
 	import { MessageType } from '../enums/message-type.enum'
-
-	let errors: { [inputName: string]: ValidatorResult } = {}
+	import { appConstants } from '../app.constants'
 
 	let form: {
 		[inputName: string]: {
@@ -20,10 +19,14 @@
 		email: {
 			validators: [Validators.required, Validators.email]
 		},
-		message: {
+		phone_number: {
+			validators: []
+		},
+		comment: {
 			validators: [Validators.required]
 		}
 	}
+	let errors: { [inputName: string]: ValidatorResult } = {}
 
 	function isFormValid(): boolean {
 		return !Object.values(errors).some((field) =>
@@ -31,7 +34,14 @@
 		)
 	}
 
-	function validateForm(data: { [inputName: string]: any }): void {
+	function validateForm(formData: any): void {
+		errors = {}
+		const data: any = {}
+		for (let field of formData) {
+			const [key, value] = field
+			data[key] = value
+		}
+
 		Object.keys(data).forEach((field) => validateField(field, data[field]))
 	}
 
@@ -45,23 +55,27 @@
 			})
 	}
 
-	const onSubmit = (event: any) => {
+	const onSubmit = async (event: any) => {
 		const formData: any = new FormData(event.target)
 
-		const data: any = {}
-		for (let field of formData) {
-			const [key, value] = field
-			data[key] = value
-		}
-
-		validateForm(data)
+		validateForm(formData)
 
 		if (isFormValid()) {
-			console.log(data)
-			// TODO: Send POST request to email API.
-			$flashMessage = {
-				type: MessageType.Success,
-				message: 'Le message a bien été envoyé, nous reviendrons vers vous très prochainement.'
+			const res: Response = await fetch(appConstants.contactEndpointUrl, {
+				method: 'POST',
+				body: new FormData(event.target)
+			})
+
+			if (res.status === 200) {
+				$flashMessage = {
+					type: MessageType.Success,
+					message: 'Le message a bien été envoyé, nous reviendrons vers vous très prochainement.'
+				}
+			} else {
+				$flashMessage = {
+					type: MessageType.Error,
+					message: `Une erreur s'est passée lors de l'envoi du message. Veuillez essayer de nous contacter d'une autre façon.`
+				}
 			}
 		} else {
 			$flashMessage = {
@@ -108,37 +122,28 @@
 					<p class="error-message">{errors.email.email.message}</p>
 				{/if}
 			</div>
-		</div>
-		<div class="columns">
 			<div class="column">
-				<label for="message">Message<span class="has-text-danger">*</span></label><br />
-				<textarea
-					name="message"
-					id="message"
-					class="textarea"
-					class:is-danger={errors?.message}
-					cols="30"
-					rows="10"
+				<label for="phone_number">Téléphone</label><br />
+				<input
+					type="tel"
+					id="phone_number"
+					name="phone_number"
+					class="input"
+					class:is-danger={errors?.tel}
 				/>
 			</div>
 		</div>
 		<div class="columns">
 			<div class="column">
-				<label for="attachment">Pièce jointe</label><br />
-				<div class="file has-name">
-					<label class="file-label">
-						<input class="file-input" type="file" name="resume" />
-						<span class="file-cta">
-							<span class="file-icon">
-								<i class="fas fa-upload" />
-							</span>
-							<span class="file-label">
-								Ajouter une pièce jointe (cahier des charges, specifications,etc.)</span
-							>
-						</span>
-						<span class="file-name"> %% File name</span>
-					</label>
-				</div>
+				<label for="comment">Message<span class="has-text-danger">*</span></label><br />
+				<textarea
+					name="comment"
+					id="comment"
+					class="textarea"
+					class:is-danger={errors?.comment}
+					cols="30"
+					rows="10"
+				/>
 			</div>
 		</div>
 
