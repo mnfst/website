@@ -19,8 +19,8 @@
 }
 
 .dropdown-trigger:after {
-  @extend %icon;
-  @extend .icon-chevron-down;
+  @extend i;
+  @extend .ci-caret_down;
 }
 
 .navbar {

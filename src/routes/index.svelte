@@ -678,24 +678,24 @@
 <p class="buttons">
 	<button class="button">
 	  <span class="icon is-small">
-		<i class="fas fa-bold"></i>
+		<i class="ci-bar_chart_alt"></i>
 	  </span>
 	</button>
 	<button class="button">
 	  <span class="icon is-small">
-		<i class="fas fa-italic"></i>
+		<i class="ci-app_store"></i>
 	  </span>
 	</button>
 	<button class="button">
 	  <span class="icon is-small">
-		<i class="fas fa-underline"></i>
+		<i class="ci-unsplash"></i>
 	  </span>
 	</button>
   </p>
   <p class="buttons">
 	<button class="button">
 	  <span class="icon">
-		<i class="fab fa-github"></i>
+		<i class="ci-caret_down"></i>
 	  </span>
 	  <span>GitHub</span>
 	</button>
@@ -721,25 +721,25 @@
   <p class="buttons">
 	<button class="button is-small">
 	  <span class="icon is-small">
-		<i class="fab fa-github"></i>
+		<i class="ci-app_store"></i>
 	  </span>
 	  <span>GitHub</span>
 	</button>
 	<button class="button">
 	  <span class="icon">
-		<i class="fab fa-github"></i>
+		<i class="icon-chevron-down"></i>
 	  </span>
 	  <span>GitHub</span>
 	</button>
 	<button class="button is-medium">
 	  <span class="icon">
-		<i class="fab fa-github"></i>
+		<i class="ci-bar_chart_alt"></i>
 	  </span>
 	  <span>GitHub</span>
 	</button>
 	<button class="button is-large">
 	  <span class="icon is-medium">
-		<i class="fab fa-github"></i>
+		<i class="ci-unsplash"></i>
 	  </span>
 	  <span>GitHub</span>
 	</button>
@@ -747,53 +747,53 @@
   <p class="buttons">
 	<button class="button is-small">
 	  <span class="icon is-small">
-		<i class="fas fa-heading"></i>
+		<i class="ci-bar_chart_alt"></i>
 	  </span>
 	</button>
   </p>
   <p class="buttons">
 	<button class="button">
 	  <span class="icon is-small">
-		<i class="fas fa-heading"></i>
+		<i class="ci-bar_chart_alt"></i>
 	  </span>
 	</button>
 	<button class="button">
 	  <span class="icon">
-		<i class="fas fa-heading fa-lg"></i>
+		<i class="ci-bar_chart_alt fa-lg"></i>
 	  </span>
 	</button>
   </p>
   <p class="buttons">
 	<button class="button is-medium">
 	  <span class="icon is-small">
-		<i class="fas fa-heading"></i>
+		<i class="ci-bar_chart_alt"></i>
 	  </span>
 	</button>
 	<button class="button is-medium">
 	  <span class="icon">
-		<i class="fas fa-heading fa-lg"></i>
+		<i class="ci-bar_chart_alt fa-lg"></i>
 	  </span>
 	</button>
 	<button class="button is-medium">
 	  <span class="icon is-medium">
-		<i class="fas fa-heading fa-2x"></i>
+		<i class="ci-bar_chart_alt fa-2x"></i>
 	  </span>
 	</button>
   </p>
   <p class="buttons">
 	<button class="button is-large">
 	  <span class="icon is-small">
-		<i class="fas fa-heading"></i>
+		<i class="ci-bar_chart_alt"></i>
 	  </span>
 	</button>
 	<button class="button is-large">
 	  <span class="icon">
-		<i class="fas fa-heading fa-lg"></i>
+		<i class="ci-bar_chart_alt fa-lg"></i>
 	  </span>
 	</button>
 	<button class="button is-large">
 	  <span class="icon is-medium">
-		<i class="fas fa-heading fa-2x"></i>
+		<i class="ci-bar_chart_alt fa-2x"></i>
 	  </span>
 	</button>
   </p>
