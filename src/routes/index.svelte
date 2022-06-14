@@ -335,7 +335,7 @@
                 </ol>
               </li>
             </ol>
-            <table>
+            <table class="table is-bordered is-striped is-hoverable">
               <thead>
                 <tr>
                   <th>Fabio vel</th>
@@ -370,7 +370,7 @@
               <tbody></tbody>
             </table>
             <p>Second tableau avec des cellules mergées sur 2 lignes</p>
-            <table>
+            <table class="table is-bordered is-striped is-hoverable">
               <thead>
                 <tr>
                   <th>Fabio vel</th>
