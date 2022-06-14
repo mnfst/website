@@ -256,7 +256,7 @@ a.dropdown-item {
   text-align: left;
 
   .dropdown-menu & {
-    @include shadow($link-alpha07);
+    @include shadow($link--10);
     border: 1px solid $border;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -695,7 +695,7 @@ my-date-picker {
 
     &:hover,
     &.is-focused {
-      background-color: $link-alpha07;
+      background-color:$link--10;
       color: $link;
     }
   }
