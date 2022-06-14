@@ -1,2 +1,35 @@
 /* Variables and mixins declared here will be available in all other SCSS files */ /* https://github.com/jgthms/bulma/issues/1293 */
+
+@use 'sass:math';
 $body-overflow-y: auto;
+
+@import 'variables/fonts';
+@import 'variables/colors';
+@import 'variables/grid';
+
+@import 'variables/address-input';
+@import 'variables/avatar';
+@import 'variables/box';
+@import 'variables/buttons';
+@import 'variables/derived-variables';
+@import 'variables/breadcrumbs';
+@import 'variables/cards';
+@import 'variables/dropdown';
+@import 'variables/generic';
+@import 'variables/grid';
+@import 'variables/icons';
+@import 'variables/lists';
+@import 'variables/login';
+@import 'variables/forms';
+@import 'variables/nav';
+@import 'variables/type';
+@import 'variables/modals';
+@import 'variables/notifications';
+@import 'variables/pagination';
+@import 'variables/progress-bar';
+@import 'variables/spacing';
+@import 'variables/switch-yield';
+@import 'variables/table';
+@import 'variables/tags';
+@import 'variables/tooltip';
+@import 'variables/yield-file-icon';
