@@ -165,18 +165,18 @@ select {
 .file-label .file-cta {
   height: $field-height;
   color: $link;
-  border-color: $link-light;
+  border-color: $link--10;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: $link-light;
+  background-color: $link--10;
   overflow: hidden;
   text-overflow: ellipsis;
 
   width: 100%;
 }
 .file-label:hover .file-cta {
-  border-color: rgba($link-light, 0.82);
-  background-color: rgba($link-light, 0.82);
+  border-color: rgba($link--10, 0.82);
+  background-color: rgba($link--10, 0.82);
   color: $link;
 }
 .file-label .file-name {

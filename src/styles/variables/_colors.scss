@@ -1,58 +1,53 @@
-$black: #303032 !default; // Overload
+$black: #121212 !default; // Overload
 $white: #fff !default; // Overload
 
 $dark: $black !default; // Overload
 $light: $white !default; // Overload
 
 $black-bis: $dark !default;
-$black-ter: $dark !default;
+$black-ter: #102326 !default;
 $grey-darker: $dark !default;
-$grey-dark: #7e6d72;
-$grey: #b9b5b8 !default;
-$grey-light: #ebeef1 !default;
+$grey-dark: #3B3638;
+$grey: #7E7D7E !default;
+$grey-light: #D1D5DB !default;
 $grey-lighter: #e9eeff !default;
 $white-ter: #f7f7f7 !default;
 $white-bis: #f5f7f9 !default;
 
-$link: #5c1ee8 !default;
-$link-light: #eee8fd !default;
+/* Color styles */
 
-$primary: #466b84 !default;
-$primary-light: #f1f9ff !default;
 
-$success: #57b3a0 !default;
-$success-light: #eff7f5 !default;
+$primary: #6B29B0 !default;
+$primary--90: #793DB7 !default;
+$primary--10: #F0EAF7 !default;
+$primary--05: #F8F4FB !default;
 
-$info: #1eb1e8 !default;
-$info-light: #ecf7fd !default;
+$info: #FBF0CC !default;
 
-$warning: #f8a94a !default;
-$warning-light: #fef6ee !default;
+$link: #01C5FD !default;
+$link--10: #E6F9FF !default;
+$link--05: #F2FCFF !default;
 
-$danger: #f46470 !default;
-$danger-light: #fef0f1 !default;
+$success: #25AE90 !default;
+$success--90: #25AE90 !default;
+$success--05: #F4FBFA !default;
+$success--10: #E9F7F4 !default;
+
+$warning: #FFB61B !default;
+$warning--90: #FEBC31 !default;
+$warning--10: #FFF8E8 !default;
+$warning--05: #FFFBF4 !default;
+
+$danger: #F5576A !default;
+$danger--90: #F66879 !default;
+$danger--10: #FEEEF0 !default;
+$danger--05: #FFF7F8 !default;
+
+$orange: #F5804E !default;
 
 $border-color: $grey-lighter !default;
 
 // Additional values
 
-$link-alpha10: rgba($link, 0.1) !default;
-$link-alpha07: rgba($link, 0.07) !default;
-$link-alpha03: rgba($link, 0.03) !default;
 $main-background: $white-bis !default;
-$border-color-input: $link-alpha10 !default;
-
-$icon-color-1: #ad8875 !default;
-$icon-color-2: #6f627a !default;
-$icon-color-3: #6f627a !default;
-$icon-color-4: #ff8080 !default;
-$icon-color-5: #774e94 !default;
-$icon-color-6: #87655c !default;
-$icon-color-7: #ffc155 !default;
-$icon-color-8: #fa8c43 !default;
-$icon-color-9: #53788d !default;
-$icon-color-10: $danger !default;
-$icon-color-11: $success !default;
-$icon-color-12: $warning !default;
-$icon-color-13: $link !default;
-$icon-color-13: $info !default;
+$border-color-input: $primary--10 !default;

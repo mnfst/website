@@ -1,38 +1,32 @@
 $custom-colors: (
-  'link-light': (
-    $link-light,
+  'link--10': (
+    $link--10,
     $link,
-    $link-light,
+    $link--10,
     $link
   ),
   'primary-light': (
-    $primary-light,
+    $primary--10,
     $primary,
     $white,
     $primary
   ),
   'warning-light': (
-    $warning-light,
+    $warning--10,
     $warning,
     $white,
     $warning
   ),
   'danger-light': (
-    $danger-light,
+    $danger--10,
     $danger,
     $white,
     $danger
   ),
   'success-light': (
-    $success-light,
+    $success--10,
     $success,
     $white,
     $success
-  ),
-  'info-light': (
-    $info-light,
-    $info,
-    $white,
-    $info
   )
 );
