@@ -69,33 +69,33 @@
 	<div class="columns">
 		<div class="column">
 			
-            <p class="u-color-green u-text-uppercase u-font-700">Titres</p>
-            <h1>Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
-            <h3>Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
-            <h4>Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
-            <h5>Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
-            <h6>Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
+            <p class="">Titres</p>
+            <h1 class="title is-1">Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
+            <h3 class="title is-3">Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
+            <h4 class="title is-4">Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
+            <h5 class="title is-5">Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
+            <h6 class="title is-6">Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
             <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
             <hr />
-            <p class="u-color-green u-text-uppercase u-font-700">
+            <p class="">
               Titres suivis et précédés d'un paragraphe
             </p>
-            <h1>Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
+            <h1 class="title is-1">Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
             <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
-            <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
-
-            <h3>Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
             <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
 
-            <h4>Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
+            <h3 class="title is-3">Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
             <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
 
-            <h5>Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
+            <h4 class="title is-4">Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
             <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
 
-            <h6>Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
+            <h5 class="title is-5">Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
+            <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
+
+            <h6 class="title is-6">Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
             <p>Prima luce, cum quibus mons aliud consensu ab eo.</p>
 
             <p>
@@ -114,66 +114,66 @@
               metus
             </p>
             <hr />
-            <p class="u-color-green u-text-uppercase u-font-700">
+            <p class="">
               Titres précédés d'un span (date ou tag par exemple)
             </p>
             <span>Le 28/10/2021</span>
-            <h1>Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
+            <h1 class="title is-1">Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
             <span>Le 28/10/2021</span>
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
             <span>Le 28/10/2021</span>
-            <h3>Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
+            <h3 class="title is-3">Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
             <span>Le 28/10/2021</span>
-            <h4>Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
+            <h4 class="title is-4">Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
             <span>Le 28/10/2021</span>
-            <h5>Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
+            <h5 class="title is-5">Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
             <span>Le 28/10/2021</span>
-            <h6>Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
+            <h6 class="title is-6">Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
             <hr />
 
-            <p class="u-color-green u-text-uppercase u-font-700">
+            <p class="">
               Titres précédés d'un séparateur
             </p>
             <hr />
-            <h1>Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
+            <h1 class="title is-1">Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
             <hr />
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
             <hr />
-            <h3>Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
+            <h3 class="title is-3">Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
             <hr />
-            <h4>Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
+            <h4 class="title is-4">Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
             <hr />
-            <h5>Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
+            <h5 class="title is-5">Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
             <hr />
-            <h6>Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
+            <h6 class="title is-6">Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
             <hr />
-            <p class="u-color-green u-text-uppercase u-font-700">
+            <p class="">
               Titres suivis et précédés d'une image
             </p>
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h1>Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
+            <h1 class="title is-1">Title h1 : Quam diu etiam furor iste tuus nos eludet</h1>
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h3>Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
+            <h3 class="title is-3">Title h3 : Quam diu etiam furor iste tuus nos eludet</h3>
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h4>Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
+            <h4 class="title is-4">Title h4 : Quam diu etiam furor iste tuus nos eludet</h4>
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h5>Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
+            <h5 class="title is-5">Title h5 : Quam diu etiam furor iste tuus nos eludet</h5>
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h6>Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
+            <h6 class="title is-6">Title h6 : Quam diu etiam furor iste tuus nos eludet</h6>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
@@ -182,7 +182,7 @@
               placerat eleifend leo.
             </p>
             <hr />
-            <p class="u-color-green u-text-uppercase u-font-700">
+            <p class="">
               Elements inline
             </p>
             <ul>
@@ -483,7 +483,7 @@
                 Service retouches du mangasin de Wittenheim
               </figcaption>
             </figure>
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
             <p>
               Prima luce, cum quibus mons aliud consensu ab eo. Quo usque tandem
               abutere, Catilina, patientia nostra?
@@ -491,7 +491,7 @@
             <img
               src="https://cms.cora.fr/fileadmin/national/les-magasins-cora/service-retouches.jpg"
             />
-            <h2>Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
+            <h2 class="title is-2">Title h2 : Quam diu etiam furor iste tuus nos eludet</h2>
             <p>
               Prima luce, cum quibus mons aliud consensu ab eo. Quo usque tandem
               abutere, Catilina, patientia nostra?
@@ -542,7 +542,7 @@
               needed—but you’re not going that far until you go through an
               initial design cycle.
             </p>
-            <h2>Lorem risus neque mauris eu amet</h2>
+            <h2 class="title is-2">Lorem risus neque mauris eu amet</h2>
             <p>
               Lorem Ipsum actually is usefull in the design stage as it focuses
               our attention on places where the content is a dynamic block
@@ -565,7 +565,7 @@
               working towards the final goal of your site where questions about
               lorem ipsum don’t.
             </p>
-            <h2>Lorem risus neque mauris eu amet</h2>
+            <h2 class="title is-2">Lorem risus neque mauris eu amet</h2>
             <h3 class="u-font-700">Ab illo tempore, ab.</h3>
             <p>
               Summing up, if the copy is diverting attention from the design
@@ -593,7 +593,7 @@
               copy comes up in a meeting confused questions about it ensue.
             </p>
 
-            <h2>Summing up, really:</h2>
+            <h2 class="title is-2">Summing up, really:</h2>
             <p class="u-text-uppercase">Ab illo tempore</p>
             <p>
               ab est sed immemorabili. Donec sed odio operae, eu vulputate felis

@@ -96,27 +96,6 @@
   }
 }
 
-// TODO : Put all this css in the appropriate component when JS is developed
-.is-collapsed {
-  li a {
-    i + span,
-    span + i {
-      display: none;
-    }
-  }
-  aside .has-submenu + ul {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 9;
-    background: $sidenav-background-color;
-    box-shadow: 10px 10px 20px rgba(48, 48, 50, 0.07);
-
-    li a {
-      padding-left: $gap !important;
-    }
-  }
-}
 .navbar-burger {
   @include desktop {
     display: block;

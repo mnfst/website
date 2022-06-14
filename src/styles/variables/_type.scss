@@ -23,8 +23,7 @@ $size-5-touch: 1.36rem !default;
 $title-size: $size-1 !default;
 $subtitle-size: $size-2 !default;
 
-$title-weight: 400 !default;
-$title-weight-bold: 700 !default;
+$title-weight: 700 !default;
 
 $subtitle-weight: 400 !default;
 
@@ -38,3 +37,8 @@ $size-normal: $size-6 !default;
 $size-medium: $size-6 !default;
 $size-large: $size-5 !default;
 
+// Custom variables
+$list-style: initial !default;
+$list-ml: 2em !default;
+$list-mt: 1em !default;
+$list-mb: 1em !default;
