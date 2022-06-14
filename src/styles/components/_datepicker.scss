@@ -52,7 +52,7 @@
     &:hover {
       .myDpDayValue {
         color: $link;
-        background-color: $link-light;
+        background-color: $link--10;
       }
     }
     &:focus {
@@ -61,7 +61,7 @@
   }
   .myDpMarkCurrDay {
     border: 0;
-    box-shadow: $day-cell-box-shadow-size $link-light;
+    box-shadow: $day-cell-box-shadow-size $link--10;
     color: $link;
   }
 
@@ -82,7 +82,7 @@
     &:hover {
       .myDpDayValue {
         color: $link;
-        background-color: $link-light;
+        background-color: $link--10;
       }
     }
   }
