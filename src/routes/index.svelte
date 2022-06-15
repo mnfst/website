@@ -22,11 +22,11 @@
           class="column
         is-10-mobile 
         is-10-tablet 
-        is-6-desktop "
+        is-6-desktop"
         >
           <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
           <p class="is-size-5">CASE est la seule application dont votre PME a besoin</p>
-          <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-6">
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-2 mb-5">
             <span
               class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
             >
@@ -62,8 +62,8 @@
 
 <div class="container">
   <div class="columns">
-    <div class="column">
-      <h2 class="title is-2">CASE est l’application métier des PME</h2>
+    <div class="column is-10">
+      <h2 class="title is-2 has-line mt-8">CASE est l’application métier des PME</h2>
       <p>
         CASE est l’outil qui centralise l’activité des petites et moyennes organisations. Immaginez
         une application à votre nom qui rassemble les documents, informations et communications
@@ -76,13 +76,28 @@
 
 <!-- Usage list -->
 <div class="container">
-  <div class="columns is-multiline is-mobile">
+  <div class="columns is-multiline">
     {#each usages as usage}
-      <a href="/usages/{usage.slug}" class="column is-6 notification is-info">
-        <a href="/usages/{usage.slug}">{usage.name}</a>
-        <p>{usage.description}</p>
-        <img src="/usages/{usage.image}" alt={usage.name} style="height:100px" />
-      </a>
+      <div class="column">
+        <a
+          href="/usages/{usage.slug}"
+          class="box content has-background-white-bis px-4 is-shadowless"
+        >
+          <h3 class="title is-5">{usage.name}</h3>
+          <p>{usage.description}</p>
+          <div class="tags are-small">
+            <span class="tag is-dark">Managers</span>
+            <span class="tag is-dark">Commerciaux</span>
+          </div>
+          <img src="/usages/{usage.image}" alt={usage.name} style="height:100px" />
+          <a href="/usages/{usage.slug}" class="button is-small is-primary is-outlined">
+            <span class="icon is-small">
+              <i class="ci ci-long_up_right" />
+            </span>
+            <span> En savoir plus </span>
+          </a>
+        </a>
+      </div>
     {/each}
   </div>
 </div>
@@ -160,6 +175,26 @@
 
 <style lang="scss">
   @import './bulma/sass/utilities/all';
+
+  .has-gradient {
+    &:before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Created with https://www.css-gradient.com */
+      background: $primary;
+      background: -webkit-linear-gradient(top right, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
+      background: -moz-linear-gradient(top right, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
+      background: linear-gradient(to bottom left, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, hsla(5, 93%, 68%, 0) 50%);
+    }
+  }
   .hero-figure-wrapper {
     position: absolute;
     bottom: 0;
