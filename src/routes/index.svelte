@@ -6,7 +6,9 @@
   import type { Usage } from '../interfaces/usage.interface'
 
   let usages: Usage[] = usageContents
-  let keyFeatures: KeyFeature[] = keyFeatureContents
+  let keyFeatures: KeyFeature[] = keyFeatureContents.filter((keyFeature: KeyFeature) =>
+    keyFeature.usages.includes('home')
+  )
 
   let activeKeyFeature: KeyFeature = keyFeatures[0]
 </script>
@@ -92,6 +94,45 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <h2 class="title is-2">Comment ça marche ?</h2>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <p>
+        CASE est une application métier créée pour aider les PME dans leurs activités au quotidien.
+        Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE s’adapte à vous
+        en se configurant avec vos processus et vos équipements.
+      </p>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <h3 class="title is-3">Ne changez pas votre façon de faire, boostez-la.</h3>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column">
+      <p>
+        Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et du
+        conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre taille
+        et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont vous avez
+        besoin.
+      </p>
+    </div>
+  </div>
+</div>
+
+<hr />
+<hr />
+<hr />
+<hr />
+<!-- TMP for style -->
 <div class="container">
   <div class="columns">
     <div class="column">
