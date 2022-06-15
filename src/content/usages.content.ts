@@ -4,7 +4,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Opérationnel',
     slug: 'operationnel',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Gestion de projet, travaux, livrables et recette',
     title: 'Opérationnel',
     subtitle:
@@ -52,7 +52,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Planification',
     slug: 'planification',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Organisation des agendas, des équipes et du temps passé',
     title:
       'Une app de planification pour gérer les ressources humaines et physiques de votre activité',
@@ -117,7 +117,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Reporting et analytique',
     slug: 'reporting-et-analytique',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Graphiques, tableaux, rapports, etc.',
     title:
       'Une app de planification pour gérer les ressources humaines et physiques de votre activité',
@@ -164,7 +164,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Devis et factures',
     slug: 'devis-et-factures',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Devis et factures',
     title:
       'Une app de planification pour gérer les ressources humaines et physiques de votre activité',

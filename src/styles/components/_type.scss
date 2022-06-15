@@ -25,6 +25,10 @@ table {
       width: $gap;
       height: 2px;
       background-color: $danger;
+
+      .has-text-centered & {
+        left: calc(50% - #{$column-gap});
+      }
     }
   }
 }
