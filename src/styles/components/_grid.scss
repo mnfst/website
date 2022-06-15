@@ -1,0 +1,5 @@
+.container {
+  @include touch {
+    width: calc(100% - #{$column-gap})
+  }
+}

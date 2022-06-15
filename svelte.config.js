@@ -8,8 +8,6 @@ const config = {
 	preprocess: [
 		preprocess({
 			scss: {
-				enableSourcemap: true,
-				sourceMap: true,
 				prependData: '@use "src/styles/variables.scss" as *;'
 			}
 		})
@@ -22,8 +20,6 @@ const config = {
 			css: {
 				preprocessorOptions: {
 					scss: {
-						enableSourcemap: true,
-						sourceMap: true,
 						additionalData: '@use "src/styles/variables.scss" as *;'
 					}
 				}

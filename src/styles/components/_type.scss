@@ -28,9 +28,43 @@ h1,
     font-size: $size-1-touch;
   }
 }
+h2,
+.title.is-2,
+.h2 {
+  @include touch {
+    font-size: $size-2-touch;
+  }
+}
+h3,
+.title.is-3,
+.h3 {
+  @include touch {
+    font-size: $size-3-touch;
+  }
+}
+h4,
+.title.is-4,
+.h4 {
+  @include touch {
+    font-size: $size-4-touch;
+  }
+}
+h5,
+.title.is-5,
+.h5 {
+  @include touch {
+    font-size: $size-4-touch;
+  }
+}
+h6,
+.title.is-6,
+.h6 {
+  @include touch {
+    font-size: $size-4-touch;
+  }
+}
 
 .title--small {
-
   text-transform: uppercase;
   padding-bottom: 5px;
   display: inline-block;
@@ -89,12 +123,6 @@ a {
     pointer-events: none;
     color: $grey-light;
   }
-}
-//_ Specific rules
-.status-text {
-  font-size: 1.1rem;
-  font-weight: $weight-bold;
-  text-transform: uppercase;
 }
 
 //_ Tooltip
