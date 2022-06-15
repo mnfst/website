@@ -8,7 +8,7 @@ export interface Usage {
   positionsInterested: {
     title: string
     subtitle: string
-    positions: { name: string; benefits: string[] }[]
+    positions: { name: string; image: string; benefits: string[] }[]
   }
   paragraphs: { title: string; content: string }[]
 }

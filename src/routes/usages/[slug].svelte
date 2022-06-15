@@ -128,6 +128,9 @@
       <div class="columns is-multiline">
         {#each usage.positionsInterested.positions as position}
           <div class="column is-4 card">
+            <figure class="image is-128x128">
+              <img class="is-rounded" src="/img/positions/{position.image}" alt={position.name} />
+            </figure>
             <h3 class="title is-5">{position.name}</h3>
             <ul>
               {#each position.benefits as benefit}
