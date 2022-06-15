@@ -12,13 +12,13 @@ export const keyFeatureContents: KeyFeature[] = [
 		name: 'Branding',
 		description: 'Adapté à votre identité et vos couleurs',
 		image: 'key-features/branding.png',
-		usages: ['planification']
+		usages: ['planification', 'operationnel', 'devis -et-factures']
 	},
 	{
 		name: 'Simple à utiliser',
 		description:
 			'Pas besoin de mode d’emploi, si vous savez utilisez Google, vous savez utiliser CASE',
 		image: 'key-features/simple.png',
-		usages: []
+		usages: ['reporting-et-analytique']
 	}
 ]

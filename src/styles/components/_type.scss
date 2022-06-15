@@ -24,39 +24,20 @@ h1.title.is-2 {
 h1,
 .title.is-1,
 .h1 {
-  font-weight: $weight-light;
-
   @include touch {
-    font-size: 3.2rem;
+    font-size: $size-1-touch;
   }
 }
 
 .title--small {
-  font-weight: $weight-bold;
+
   text-transform: uppercase;
-  color: #303032;
   padding-bottom: 5px;
   display: inline-block;
-  font-size: $size-8;
+  font-size: $size-7;
   margin-bottom: 0;
 }
 
-
-.total {
-  position: absolute;
-  top: 0;
-  right: 30px;
-
-  &.aligned-to-title {
-    top: -30px;
-  }
-
-  &--alt {
-    right: 0;
-    top: unset;
-    bottom: 0;
-  }
-}
 
 //_ Global rules
 hr {
@@ -84,6 +65,7 @@ a {
     }
   }
 }
+
 
 *[routerLink],
 *[href],
@@ -115,16 +97,6 @@ a {
   text-transform: uppercase;
 }
 
-.coma-list {
-  display: inline-block;
-  + .coma-list {
-    &:before {
-      content: ',';
-      padding-right: 2px;
-    }
-  }
-}
-
 //_ Tooltip
 .tooltip {
   &:before {
@@ -147,4 +119,17 @@ a {
   &:hover {
     color: $link;
   }
+}
+
+ul, ol {
+  margin-left: $list-ml;
+  margin-top: $list-mt;
+
+  &:not(:last-child) {
+    margin-bottom: $list-mb;
+  }
+}
+
+ul {
+  list-style: $list-style;
 }
