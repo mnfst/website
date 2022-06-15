@@ -25,7 +25,9 @@
         is-6-desktop "
         >
           <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
-          <p class="is-size-5">CASE est la seule application dont votre PME a besoin</p>
+          <p class="is-size-5">
+            Gérez toute l'activité de votre PME sur la même plateforme avec CASE
+          </p>
           <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-6">
             <span
               class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
@@ -33,7 +35,7 @@
               <span class="  icon mr-2">
                 <i class="fas fa-layer-group has-text-warning" />
               </span>
-              <span>Application web sur mesure</span>
+              <span>Centralisez production, commercial et RH</span>
             </span>
             <span
               class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
@@ -41,13 +43,13 @@
               <span class="  icon mr-2">
                 <i class="fas fa-rocket has-text-warning" />
               </span>
-              <span>Adapté pour les PME</span>
+              <span>Automatisez les tâches répétitives</span>
             </span>
             <span class="icon-text is-flex is-align-items-center is-justify-content-flex-start">
               <span class="  icon mr-2">
                 <i class="fas fa-shield-alt has-text-warning" />
               </span>
-              <span>Données sécurisées</span>
+              <span>Prenez de meilleures décisions</span>
             </span>
           </div>
 
