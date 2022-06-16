@@ -152,6 +152,9 @@
 <!-- Faqs -->
 <div class="container">
   <div class="columns">
+    <div class="column is-3">
+      <h2 class="title is-3">Questions fréquentes au sujet de CASE</h2>
+    </div>
     <div class="column">
       <ul>
         {#each faqs as faq}
