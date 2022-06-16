@@ -6,7 +6,7 @@ export const keyFeatureContents: KeyFeature[] = [
     description:
       'Mot de passe, contenu limité par groupe, encryption SLL copies de sauvegarde quotidiennes.',
     image: 'key-features/security.png',
-    usages: ['planification', 'home', 'reporting-et-analytique']
+    usages: ['planification', 'home', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Branding',
@@ -17,7 +17,8 @@ export const keyFeatureContents: KeyFeature[] = [
       'operationnel',
       'devis -et-factures',
       'home',
-      'reporting-et-analytique'
+      'reporting-et-analytique',
+      'devis-et-factures'
     ]
   },
   {
@@ -25,7 +26,7 @@ export const keyFeatureContents: KeyFeature[] = [
     description:
       'Pas besoin de mode d’emploi, si vous savez utilisez Google, vous savez utiliser CASE',
     image: 'key-features/security.png',
-    usages: ['home', 'operationnel']
+    usages: ['home', 'operationnel', 'devis-et-factures']
   },
   {
     name: 'Intégration avec vos outils',
@@ -37,7 +38,7 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Génération de documents',
     description: 'PDFs, Excel, Word… Générez vos documents officiels depuis CASE',
     image: 'key-features/security.png',
-    usages: ['home', 'reporting-et-analytique']
+    usages: ['home', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Notifications',
@@ -56,7 +57,7 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Rôles et permissions',
     description: 'Définissez les droits et permissions pour chaque type d’utilisateur',
     image: 'key-features/security.png',
-    usages: ['operationnel', 'reporting-et-analytique']
+    usages: ['operationnel', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Calendrier intéractif',
@@ -95,7 +96,7 @@ export const keyFeatureContents: KeyFeature[] = [
     description:
       'Analysez le temps et le coût du travail pour chaque projet, collaborateur ou période déterminée',
     image: 'key-features/security.png',
-    usages: ['planification']
+    usages: ['planification', 'devis-et-factures']
   },
   {
     name: 'Congés et jours fériés',

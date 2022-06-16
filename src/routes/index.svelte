@@ -5,13 +5,45 @@
   import type { KeyFeature } from '../interfaces/key-feature.interface'
   import type { Usage } from '../interfaces/usage.interface'
 
+  import { MetaTags } from 'svelte-meta-tags'
+
   let usages: Usage[] = usageContents
   let keyFeatures: KeyFeature[] = keyFeatureContents.filter((keyFeature: KeyFeature) =>
     keyFeature.usages.includes('home')
   )
 
   let activeKeyFeature: KeyFeature = keyFeatures[0]
+
+  const metaTitle: string = `CASE, L'Application Métier des PME`
+  const metaDescription: string = `Gérez toute l'activité de votre entreprise sur la même plateforme.`
 </script>
+
+<!-- TODO: add OG and TW cards images and alt texts-->
+<MetaTags
+  title={metaTitle}
+  description={metaDescription}
+  openGraph={{
+    url: 'https://case.app',
+    title: metaTitle,
+    description: metaDescription,
+    images: [
+      {
+        url: 'https://www.example.ie/og-image-01.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Og Image Alt'
+      }
+    ],
+    site_name: 'SiteName'
+  }}
+  twitter={{
+    cardType: 'summary_large_image',
+    title: metaTitle,
+    description: metaDescription,
+    image: 'https://www.example.ie/twitter-image.jpg',
+    imageAlt: 'Twitter image alt'
+  }}
+/>
 
 <!-- Hero -->
 <section class="hero is-primary is-large is-relative has-gradient">
@@ -59,7 +91,11 @@
     </div>
   </div>
 
-  <img class="hero-figure-wrapper" src="/img/case-hero-list.png" />
+  <img
+    class="hero-figure-wrapper"
+    src="/img/case-hero-list.png"
+    alt="Capture d'écran de l'application metier CASE"
+  />
 </section>
 
 <div class="container">

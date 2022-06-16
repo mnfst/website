@@ -5,6 +5,8 @@
   import { MessageType } from '../enums/message-type.enum'
   import { appConstants } from '../app.constants'
 
+  import { MetaTags } from 'svelte-meta-tags'
+
   let form: {
     [inputName: string]: {
       validators: ValidatorFn[]
@@ -86,6 +88,11 @@
     }
   }
 </script>
+
+<MetaTags
+  title="Contact | CASE"
+  description="Contactez-nous pour nous questionner, nous vous répondrons dans les plus brefs délais."
+/>
 
 <div class="container">
   <div class="columns">

@@ -3,6 +3,8 @@
   import type { KeyFeature } from '../../interfaces/key-feature.interface'
   import type { Usage } from '../../interfaces/usage.interface'
 
+  import { MetaTags } from 'svelte-meta-tags'
+
   /** @type {import('./__types/[slug]').Load} */
   export async function load({ params }: { params: { slug: string } }) {
     const usage: Usage = usageContents.find((usage: Usage) => usage.slug === params.slug)
@@ -26,10 +28,13 @@
     keyFeature.usages.includes(usage.slug)
   )
   let activeKeyFeature: KeyFeature = keyFeatures[0]
+  let otherUsages: Usage[] = usageContents.filter((u: Usage) => u.slug !== usage.slug)
 
   const faqs: Faq[] = faqContents.filter((faq: Faq) => faq.usages.includes(usage.slug))
   let activeFaq: Faq
 </script>
+
+<MetaTags title={usage.metaTitle} description={usage.metaDescription} />
 
 <!-- Hero -->
 <section class="hero is-info">
@@ -162,6 +167,31 @@
         {/each}
       </ul>
     </div>
+  </div>
+</div>
+
+<!-- Other usages -->
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <h2 class="title is-2">Regardez ce que CASE peut faire pour vous</h2>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      Lancez la digitalisation de votre activité grâce aux fonctionnalités de CASE.
+    </div>
+  </div>
+  <div class="columns">
+    {#each otherUsages as usage}
+      <div class="column">
+        <a href="/usages/{usage.slug}" class="column is-6 notification is-info">
+          <a href="/usages/{usage.slug}">{usage.name}</a>
+          <p>{usage.description}</p>
+          <img src="/usages/{usage.image}" alt={usage.name} style="height:100px" />
+        </a>
+      </div>
+    {/each}
   </div>
 </div>
 

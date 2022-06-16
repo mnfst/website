@@ -2,6 +2,7 @@
   import { faqContents } from '../content/faqs.content'
 
   import type { Faq } from '../interfaces/faq.interface'
+  import { MetaTags } from 'svelte-meta-tags'
 
   let faqs: Faq[] = faqContents
   let activeFaq: Faq
@@ -22,6 +23,8 @@
     []
   )
 </script>
+
+<MetaTags title="FAQ | CASE" description="Questions récurrentes sur l'application CASE." />
 
 <h1 class="title is-1">FAQ</h1>
 

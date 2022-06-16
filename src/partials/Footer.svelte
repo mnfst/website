@@ -10,6 +10,11 @@
     <div class="columns">
       <div class="column is-3">
         <p><strong>CASE</strong></p>
+        <p>
+          CASE est une plateforme de gestion d'activité personnalisable pour gérer la production, la
+          gestion et la commercialisation de produits et de services. Elle gère votre activité de
+          bout en bout.
+        </p>
       </div>
       <div class="column is-3">
         <p><strong>Usages</strong></p>
@@ -35,8 +40,6 @@
       <div class="column is-3">
         <p><strong>Société</strong></p>
         <ul>
-          <li>A propos</li>
-          <li>Carrières</li>
           <li>
             <a href="/contact">Contact</a>
           </li>
