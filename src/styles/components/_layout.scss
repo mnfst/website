@@ -48,18 +48,15 @@ body {
   width: 100vw;
 }
 
-.wrapper,
-.aside {
+.wrapper {
   min-height: calc(100vh - #{$navbar-height} + #{$gap});
 }
+
 .section {
   @include mobile {
     padding-left: 0;
     padding-right: 0;
   }
-}
-aside {
-  border-right: 1px solid $border-color;
 }
 
 main {

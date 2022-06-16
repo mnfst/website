@@ -1,23 +1,12 @@
 thead {
   white-space: nowrap;
 }
-tr {
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      background-color: $color-invert;
-      border-left: $border-width-table-row-highlighted solid $color;
-      color: $color;
-    }
-  }
-}
 
 th {
   white-space: nowrap;
   text-transform: uppercase;
 }
+
 td {
   &.is-narrow {
     padding-top: 0.8em;
@@ -31,12 +20,6 @@ td {
   padding: $table-cell-padding-narrow;
 }
 
-case-image,
-case-image-yield {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 
 td,
 th {
