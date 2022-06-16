@@ -54,13 +54,13 @@
           class="column
         is-10-mobile 
         is-10-tablet 
-        is-6-desktop "
+        is-6-desktop"
         >
           <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
           <p class="is-size-5">
             Gérez toute l'activité de votre PME sur la même plateforme avec CASE
           </p>
-          <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-6">
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-2 mb-5">
             <span
               class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
             >
@@ -98,10 +98,10 @@
   />
 </section>
 
-<div class="container">
+<div class="container content">
   <div class="columns">
-    <div class="column">
-      <h2 class="title is-2">CASE est l’application métier des PME</h2>
+    <div class="column is-10">
+      <h2 class="title is-2 has-line mt-8">CASE est l’application métier des PME</h2>
       <p>
         CASE est l’outil qui centralise l’activité des petites et moyennes organisations. Immaginez
         une application à votre nom qui rassemble les documents, informations et communications
@@ -113,44 +113,65 @@
 </div>
 
 <!-- Usage list -->
-<div class="container">
-  <div class="columns is-multiline is-mobile">
+<div class="container pb-8">
+  <div class="columns is-multiline">
     {#each usages as usage}
-      <a href="/usages/{usage.slug}" class="column is-6 notification is-info">
-        <a href="/usages/{usage.slug}">{usage.name}</a>
-        <p>{usage.description}</p>
-        <img src="/usages/{usage.image}" alt={usage.name} style="height:100px" />
-      </a>
+      <div class="column usage-card">
+        <a
+          href="/usages/{usage.slug}"
+          class="box is-relative content has-background-white-bis px-4 is-flex is-flex-direction-column is-justify-content-space-between is-clipped is-align-items-flex-start"
+        >
+          <img src="img/usages/{usage.image}" alt={usage.name} />
+
+          <div>
+            <h3 class="title is-5 mb-3">{usage.name}</h3>
+            <p class="has-text-grey-dark">{usage.description}</p>
+            <div class="tags are-small">
+              <span class="tag is-dark">Managers</span>
+              <span class="tag is-dark">Commerciaux</span>
+            </div>
+          </div>
+          <a href="/usages/{usage.slug}" class="button is-small is-primary">
+            <span class="icon is-small">
+              <i class="ci ci-long_up_right" />
+            </span>
+            <span> En savoir plus </span>
+          </a>
+        </a>
+      </div>
     {/each}
   </div>
 </div>
 
 <!-- Key features -->
-<div class="hero is-warning">
+<div class="hero is-primary">
   <div class="container">
     <div class="columns">
-      <div class="column is-10 is-offset-1">
-        <h2 class="title is-2">On travaille mieux quand on a les bons outils</h2>
-        <p>
-          CASE vous est livré avec un paquet de fonctionnalités prêtes à être employées pour votre
-          cause.
-        </p>
+      <div class="column is-10 is-offset-1 has-text-centered">
+        <div class="content">
+          <h2 class="title is-2 has-line mt-8">On travaille mieux quand on a les bons outils</h2>
+          <p>
+            CASE vous est livré avec un paquet de fonctionnalités prêtes à être employées pour votre
+            cause.
+          </p>
+        </div>
       </div>
     </div>
     <div class="columns">
       <div class="column is-4">
-        <ul>
+        <div class="is-flex is-flex-direction-column key-features">
           {#each keyFeatures as keyFeature}
-            <li
+            <div
+              class="box px-4 pointer mb-0"
               on:mouseover={() => (activeKeyFeature = keyFeature)}
               on:focus={() => (activeKeyFeature = keyFeature)}
               class:is-active={activeKeyFeature === keyFeature}
             >
               <strong>{keyFeature.name}</strong>
               <p>{keyFeature.description}</p>
-            </li>
+            </div>
           {/each}
-        </ul>
+        </div>
       </div>
       <div class="column">
         <div class="box">
@@ -198,6 +219,26 @@
 
 <style lang="scss">
   @import './bulma/sass/utilities/all';
+
+  .has-gradient {
+    &:before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Created with https://www.css-gradient.com */
+      background: $primary;
+      background: -webkit-linear-gradient(top right, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
+      background: -moz-linear-gradient(top right, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
+      background: linear-gradient(to bottom left, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, hsla(5, 93%, 68%, 0) 50%);
+    }
+  }
   .hero-figure-wrapper {
     position: absolute;
     bottom: 0;
@@ -207,6 +248,61 @@
 
     @include touch {
       opacity: 0.5;
+    }
+  }
+  .usage-card {
+    .box {
+      height: 457px;
+      transition: all 0.18s ease-in-out;
+      box-shadow: none;
+      &:hover {
+        box-shadow: $shadow;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='3' stroke-dasharray='8%2c 16' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      }
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 61.8%;
+      height: auto;
+    }
+
+    &:first-child {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+    &:last-child {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+  }
+  .key-features .box {
+    box-shadow: none;
+    transition: all 0.18s ease-in-out;
+    background-color: transparent;
+    color: $white;
+
+    &.is-active {
+      box-shadow: $box-shadow;
+      background-color: $info;
+      color: $primary;
     }
   }
 </style>

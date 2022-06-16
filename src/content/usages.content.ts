@@ -4,7 +4,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Opérationnel',
     slug: 'operationnel',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Gestion de projet, travaux, livrables et recette',
     title: 'Gérez toutes les opérations de votre entreprise au même endroit',
     subtitle: 'Sur le terrain, en chaîne de production ou au bureau, chacun collabore avec CASE.',
@@ -54,7 +54,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Planification',
     slug: 'planification',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Organisation des agendas, des équipes et du temps passé',
     title:
       'Une app de planification pour gérer les ressources humaines et physiques de votre activité',
@@ -122,7 +122,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Reporting et analytique',
     slug: 'reporting-et-analytique',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Graphiques, tableaux, rapports, etc.',
     title:
       'Gérez la situation en temps réel avec CASE : la seule application dont votre entreprise a besoin',
@@ -172,7 +172,7 @@ export const usageContents: Usage[] = [
   {
     name: 'Devis et factures',
     slug: 'devis-et-factures',
-    image: 'operations.jpg',
+    image: 'erp-operationnel.png',
     description: 'Devis et factures',
     title: 'CASE: L’app tout en un pour gérer la production et la vente de votre PME',
     subtitle: 'Une app simple qui centralise ce que vous faites et comment vous le vendez.',

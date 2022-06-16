@@ -12,6 +12,25 @@ table {
 
 .title {
   color: $dark;
+
+  &.has-line {
+    position: relative;
+    padding-top: 14px;
+    &:before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $gap;
+      height: 2px;
+      background-color: $danger;
+
+      .has-text-centered & {
+        left: calc(50% - #{$column-gap});
+      }
+    }
+  }
 }
 
 h1.title.is-2 {
