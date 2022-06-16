@@ -4,22 +4,29 @@ export const keyFeatureContents: KeyFeature[] = [
   {
     name: 'Sécurité et privacité',
     description:
-      'Mot de passe, contenu accessible uniquement à certains utilisateurs, copies de sauvegarde…',
+      'Mot de passe, contenu limité par groupe, encryption SLL copies de sauvegarde quotidiennes.',
     image: 'key-features/security.png',
-    usages: ['planification', 'home']
+    usages: ['planification', 'home', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Branding',
     description: 'Adapté à votre identité et vos couleurs',
     image: 'key-features/security.png',
-    usages: ['planification', 'operationnel', 'devis -et-factures', 'home']
+    usages: [
+      'planification',
+      'operationnel',
+      'devis -et-factures',
+      'home',
+      'reporting-et-analytique',
+      'devis-et-factures'
+    ]
   },
   {
     name: 'Simple à utiliser',
     description:
       'Pas besoin de mode d’emploi, si vous savez utilisez Google, vous savez utiliser CASE',
     image: 'key-features/security.png',
-    usages: ['reporting-et-analytique', 'home', 'operationnel']
+    usages: ['home', 'operationnel', 'devis-et-factures']
   },
   {
     name: 'Intégration avec vos outils',
@@ -31,7 +38,7 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Génération de documents',
     description: 'PDFs, Excel, Word… Générez vos documents officiels depuis CASE',
     image: 'key-features/security.png',
-    usages: ['home']
+    usages: ['home', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Notifications',
@@ -50,18 +57,51 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Rôles et permissions',
     description: 'Définissez les droits et permissions pour chaque type d’utilisateur',
     image: 'key-features/security.png',
-    usages: ['operationnel']
+    usages: ['operationnel', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Calendrier intéractif',
     description: 'Suivez les agendas de vos équipes visuellement',
     image: 'key-features/security.png',
-    usages: ['operationnel']
+    usages: ['operationnel', 'planification']
   },
   {
     name: 'Cloud',
     description: 'Accédez à CASE partout, tout le temps et sans rien installer',
     image: 'key-features/security.png',
     usages: ['operationnel']
+  },
+  {
+    name: 'Génération de rapports',
+    description: 'Faites-vous livrer des rapports d’activités personnalisés sur votre boite email',
+    image: 'key-features/security.png',
+    usages: ['reporting-et-analytique']
+  },
+  {
+    name: 'Data-visualization',
+    description:
+      'Graphiques et tableaux sont là pour vous montrer les informations dans un format visuel',
+    image: 'key-features/security.png',
+    usages: ['reporting-et-analytique']
+  },
+  {
+    name: 'Export au format Excel',
+    description:
+      'Vous gérez vos rapports sur Excel ? Sélectionnez les dates et téléchargez le tout en format XLS ou CSV',
+    image: 'key-features/security.png',
+    usages: ['planification']
+  },
+  {
+    name: 'Suivi de la rentabilité',
+    description:
+      'Analysez le temps et le coût du travail pour chaque projet, collaborateur ou période déterminée',
+    image: 'key-features/security.png',
+    usages: ['planification', 'devis-et-factures']
+  },
+  {
+    name: 'Congés et jours fériés',
+    description: 'Gérez les jours de repos de vos collaborateurs et les jours non travaillés',
+    image: 'key-features/security.png',
+    usages: ['planification']
   }
 ]

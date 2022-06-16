@@ -5,13 +5,45 @@
   import type { KeyFeature } from '../interfaces/key-feature.interface'
   import type { Usage } from '../interfaces/usage.interface'
 
+  import { MetaTags } from 'svelte-meta-tags'
+
   let usages: Usage[] = usageContents
   let keyFeatures: KeyFeature[] = keyFeatureContents.filter((keyFeature: KeyFeature) =>
     keyFeature.usages.includes('home')
   )
 
   let activeKeyFeature: KeyFeature = keyFeatures[0]
+
+  const metaTitle: string = `CASE, L'Application Métier des PME`
+  const metaDescription: string = `Gérez toute l'activité de votre entreprise sur la même plateforme.`
 </script>
+
+<!-- TODO: add OG and TW cards images and alt texts-->
+<MetaTags
+  title={metaTitle}
+  description={metaDescription}
+  openGraph={{
+    url: 'https://case.app',
+    title: metaTitle,
+    description: metaDescription,
+    images: [
+      {
+        url: 'https://www.example.ie/og-image-01.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Og Image Alt'
+      }
+    ],
+    site_name: 'SiteName'
+  }}
+  twitter={{
+    cardType: 'summary_large_image',
+    title: metaTitle,
+    description: metaDescription,
+    image: 'https://www.example.ie/twitter-image.jpg',
+    imageAlt: 'Twitter image alt'
+  }}
+/>
 
 <!-- Hero -->
 <section class="hero is-primary is-large is-relative has-gradient">
@@ -25,7 +57,9 @@
         is-6-desktop"
         >
           <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
-          <p class="is-size-5">CASE est la seule application dont votre PME a besoin</p>
+          <p class="is-size-5">
+            Gérez toute l'activité de votre PME sur la même plateforme avec CASE
+          </p>
           <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-2 mb-5">
             <span
               class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
@@ -33,7 +67,7 @@
               <span class="  icon mr-2">
                 <i class="fas fa-layer-group has-text-warning" />
               </span>
-              <span>Application web sur mesure</span>
+              <span>Centralisez production, commercial et RH</span>
             </span>
             <span
               class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
@@ -41,13 +75,13 @@
               <span class="  icon mr-2">
                 <i class="fas fa-rocket has-text-warning" />
               </span>
-              <span>Adapté pour les PME</span>
+              <span>Automatisez les tâches répétitives</span>
             </span>
             <span class="icon-text is-flex is-align-items-center is-justify-content-flex-start">
               <span class="  icon mr-2">
                 <i class="fas fa-shield-alt has-text-warning" />
               </span>
-              <span>Données sécurisées</span>
+              <span>Prenez de meilleures décisions</span>
             </span>
           </div>
 
@@ -57,7 +91,11 @@
     </div>
   </div>
 
-  <img class="hero-figure-wrapper" src="/img/case-hero-list.png" />
+  <img
+    class="hero-figure-wrapper"
+    src="/img/case-hero-list.png"
+    alt="Capture d'écran de l'application metier CASE"
+  />
 </section>
 
 <div class="container content">

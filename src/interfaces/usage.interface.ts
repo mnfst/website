@@ -11,4 +11,6 @@ export interface Usage {
     positions: { name: string; image: string; benefits: string[] }[]
   }
   paragraphs: { title: string; content: string }[]
+  metaTitle: string
+  metaDescription: string
 }
