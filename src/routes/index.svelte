@@ -190,44 +190,48 @@
 </section>
 
 <!-- CTA -->
-<section class="hero is-primary is-relative ">
+<section class="hero has-gradient-bis is-relative ">
   <div class="hero-body">
     <div class="container">
-      <div class="columns">
-        <div class="column is-12">
-          <div class="card has-background-info p-8">
-            <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
-            <p class="is-size-5">
-              Gérez toute l'activité de votre PME sur la même plateforme avec CASE
+      <div class="card has-background-info p-8 card--cta is-shadowless">
+        <div class="columns">
+          <div class="column is-6">
+            <h3 class="title is-3 has-text-dark">Essayez CASE en 2 clics</h3>
+            <p class="has-text-grey-dark mb-4">
+              Prenez en main CASE tout de suite grâce à la démo en ligne.
             </p>
-            <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-5">
+
+            <button class="button is-warning">Essayez CASE</button>
+          </div>
+          <div class="column is-6">
+            <div
+              class="advantage-list is-flex is-flex-direction-column is-justify-content-space-between is-fullheight"
+            >
               <span
-                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
               >
                 <span class="icon mr-2">
                   <i class="fas fa-layer-group has-text-warning" />
                 </span>
-                <span>Centralisez production, commercial et RH</span>
+                <span>Sans création de compte</span>
               </span>
               <span
-                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
               >
                 <span class="  icon mr-2">
                   <i class="fas fa-rocket has-text-warning" />
                 </span>
-                <span>Automatisez les tâches répétitives</span>
+                <span>Aucune information à donner</span>
               </span>
               <span
-                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap "
               >
                 <span class="  icon mr-2">
                   <i class="fas fa-shield-alt has-text-warning" />
                 </span>
-                <span>Prenez de meilleures décisions</span>
+                <span>Choisissez parmi 2 exemples</span>
               </span>
             </div>
-
-            <button class="button is-warning">Essayez CASE</button>
           </div>
         </div>
       </div>

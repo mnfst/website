@@ -30,4 +30,9 @@
             background: radial-gradient(to bottom left, rgba($danger, 0.2), $primary);
         }
     }
+    &-bis {
+        background: $primary;
+        background: linear-gradient(180deg, $primary 0%, $primary 50%, $white 50%, $white 100%);
+
+    }
   }
