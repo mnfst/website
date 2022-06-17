@@ -18,38 +18,38 @@ $white-bis: #f5f7f9 !default;
 
 
 $primary: #6B29B0 !default;
+$primary-light: #F0EAF7 !default;
 $primary--90: #793DB7 !default;
-$primary--10: #F0EAF7 !default;
 $primary--05: #F8F4FB !default;
 
 $info: #FBF0CC !default;
-$info--10: #FFFDFA !default;
+$info-light: #FFFDFA !default;
 
 $link: #01C5FD !default;
-$link--10: #E6F9FF !default;
+$link-light: #E6F9FF !default;
 $link--05: #F2FCFF !default;
 
 $success: #25AE90 !default;
+$success-light: #E9F7F4 !default;
 $success--90: #25AE90 !default;
 $success--05: #F4FBFA !default;
-$success--10: #E9F7F4 !default;
 
 $warning: #FFB61B !default;
+$warning-light: #FFF8E8 !default;
 $warning--90: #FEBC31 !default;
-$warning--10: #FFF8E8 !default;
 $warning--05: #FFFBF4 !default;
 
 $danger: #F5576A !default;
+$danger-light: #FEEEF0 !default;
 $danger--90: #F66879 !default;
-$danger--10: #FEEEF0 !default;
 $danger--05: #FFF7F8 !default;
 
 $orange: #F5804E !default;
-$orange--10: #FEF2EE !default;
+$orange-light: #FEF2EE !default;
 
 $border-color: $grey-lighter !default;
 
 // Additional values
 
 $main-background: $white !default;
-$border-color-input: $primary--10 !default;
+$border-color-input: $primary-light !default;

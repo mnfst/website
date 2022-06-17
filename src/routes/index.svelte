@@ -49,7 +49,7 @@
 <section class="hero is-primary is-large is-relative has-gradient">
   <div class="hero-body">
     <div class="container">
-      <div class="columns  is-vcentered reverse-columns">
+      <div class="columns  is-vcentered ">
         <div
           class="column
         is-12-mobile 
@@ -99,7 +99,6 @@
     alt="Capture d'écran de l'application metier CASE"
   />
 </section>
-<!-- Hero -->
 
 <div class="container content">
   <div class="columns">
@@ -191,7 +190,7 @@
 
 <!-- CTA -->
 <section class="hero has-gradient-bis is-relative ">
-  <div class="hero-body">
+  <div class="hero-body py-0">
     <div class="container">
       <div class="card has-background-info p-8 card--cta is-shadowless">
         <div class="columns">
@@ -239,21 +238,95 @@
   </div>
 </section>
 
-<div class="container">
-  <div class="columns">
-    <div class="column">
-      <h2 class="title is-2">Comment ça marche ?</h2>
+<!-- Why choose CASE ? -->
+<div class="advantages">
+  <div class="container my-8">
+    <div class="columns">
+      <div class="column is-8">
+        <h2 class="title is-2 has-line">Comment ça marche ?</h2>
+        <p class="has-text-grey-dark">
+          CASE est une application métier créée pour aider les PME dans leurs activités au
+          quotidien. Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE
+          s’adapte à vous en se configurant avec vos processus et vos équipements.
+        </p>
+      </div>
     </div>
   </div>
-  <div class="columns">
-    <div class="column">
-      <p class="has-text-grey-dark">
-        CASE est une application métier créée pour aider les PME dans leurs activités au quotidien.
-        Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE s’adapte à vous
-        en se configurant avec vos processus et vos équipements.
-      </p>
+
+  <section class="hero is-white">
+    <div class="hero-body py-4">
+      <div class="container content">
+        <div class="columns  is-vcentered ">
+          <div class="column is-6 ">
+            <span class="p-2 has-background-danger-light is-inline-flex">
+              <i class="ci ci-settings_future is-size-4 has-text-link" />
+            </span>
+            <h3 class="title is-3 mt-4">On le configure pour vous</h3>
+            <p>Vous êtes expert dans votre activité, pas dans la configuration d’outils.</p>
+            <p>
+              Pour cela, vous indiquez simplement votre besoin, nous proposons la solution
+              technique.
+            </p>
+          </div>
+          <div class="column is-6 py-0 pl-0">
+            <figure class="image is-square mx-0">
+              <img src="./img/case-features-01.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <section class="hero is-white">
+    <div class="hero-body py-4">
+      <div class="container content">
+        <div class="columns  is-vcentered is-flex-direction-row-reverse">
+          <div class="column is-6  py-6">
+            <span class="p-2 has-background-danger-light is-inline-flex">
+              <i class="ci ci-settings_future is-size-4 has-text-link" />
+            </span>
+            <h3 class="title is-3 mt-4">Toujours accessible depuis n’importe quel navigateur</h3>
+            <ul>
+              <li>Votre application métier CASE est accessible depuis votre navigateur web.</li>
+
+              <li>
+                Les données sont sécurisées en ligne (UE), avec copies de sauvegarde quotidiennes
+              </li>
+
+              <li>Mode hors-ligne et app mobile pour</li>
+            </ul>
+          </div>
+          <div class="column is-6 py-0 pr-0">
+            <figure class="image is-square mx-0">
+              <img src="./img/case-features-02.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-white">
+    <div class="hero-body py-4">
+      <div class="container content">
+        <div class="columns  is-vcentered ">
+          <div class="column is-6  py-6">
+            <h1 class="title is-3">Evolving business with technology</h1>
+            <div class="buttons">
+              <button class="button is-yellow">Esablished technical teams</button>
+              <button class="button">Less-technical teams</button>
+            </div>
+          </div>
+          <div class="column is-6 py-0 pl-0">
+            <figure class="image is-square mx-0">
+              <img src="./img/case-features-03.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container mt-8">
   <div class="columns">
     <div class="column">
       <h3 class="title is-3">Ne changez pas votre façon de faire, boostez-la.</h3>
@@ -347,6 +420,24 @@
     }
     figure {
       max-height: 695px;
+    }
+  }
+  .advantages {
+    .column {
+    }
+    .is-flex-direction-row-reverse {
+      .column:first-child {
+        @include tablet {
+          padding-left: #{$gap * 2};
+        }
+      }
+    }
+    .columns:not(.is-flex-direction-row-reverse) {
+      .column:first-child {
+        @include tablet {
+          padding-right: #{$gap * 2};
+        }
+      }
     }
   }
 </style>
