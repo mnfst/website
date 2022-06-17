@@ -23,6 +23,9 @@ html {
   @include touch {
     font-size: $body-size-touch;
   }
+  @include mobile {
+    font-size: $body-size-mobile;
+  }
 
   &.is-clipped {
     position: fixed;

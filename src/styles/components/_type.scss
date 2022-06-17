@@ -1,3 +1,7 @@
+::marker {
+  color: $primary;
+}
+
 th {
   font-weight: $weight-bold;
 }
@@ -177,6 +181,6 @@ ul, ol {
   }
 }
 
-ul {
+ul, .content ul {
   list-style: $list-style;
 }
