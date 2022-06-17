@@ -1,0 +1,33 @@
+%before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.has-gradient {
+    &:before {
+        @extend %before;
+      
+      background: $primary;
+      background: -webkit-linear-gradient(top right, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
+      background: -moz-linear-gradient(top right, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
+      background: linear-gradient(to bottom left, rgba($info, 0.2), $primary),
+        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, hsla(5, 93%, 68%, 0) 50%);
+    }
+
+    &-alt {
+        &:before {
+            @extend %before;
+            background: rgba($danger, 0.2);
+            background: -webkit-radial-gradient(top right, rgba($danger, 0.2), $primary);
+            background: -moz-radial-gradient(top right, rgba($danger, 0.2), $primary);
+            background: radial-gradient(to bottom left, rgba($danger, 0.2), $primary);
+        }
+    }
+  }

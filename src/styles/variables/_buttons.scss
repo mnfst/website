@@ -15,3 +15,43 @@ $perimeter: 4.4rem !default;
 $perimeter-small: 3.52rem !default;
 $perimeter-medium: 4.4rem !default;
 $perimeter-large: 5.502rem !default;
+
+
+$custom-colors: (
+
+  'danger--10': (
+    $danger--10,
+    $danger,
+    $danger--10
+  ),
+  'warning--10': (
+    $warning--10,
+    $warning,
+    $warning--10
+  ),
+  'primary--10': (
+    $primary--10,
+    $primary,
+    $primary--10
+  ),
+  'link--10': (
+    $link--10,
+    $link,
+    $link--10
+  ),
+  'success--10': (
+    $success--10,
+    $success,
+    $success--10
+  ),
+  'orange--10': (
+    $orange--10,
+    $orange,
+    $orange--10
+  ),
+  'orange': (
+    $orange,
+    $light,
+    $orange
+  )
+);

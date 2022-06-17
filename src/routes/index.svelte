@@ -52,7 +52,7 @@
       <div class="columns  is-vcentered reverse-columns">
         <div
           class="column
-        is-10-mobile 
+        is-12-mobile 
         is-10-tablet 
         is-6-desktop"
         >
@@ -60,24 +60,26 @@
           <p class="is-size-5">
             Gérez toute l'activité de votre PME sur la même plateforme avec CASE
           </p>
-          <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-2 mb-5">
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-5">
             <span
-              class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
+              class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
             >
-              <span class="  icon mr-2">
+              <span class="icon mr-2">
                 <i class="fas fa-layer-group has-text-warning" />
               </span>
               <span>Centralisez production, commercial et RH</span>
             </span>
             <span
-              class="icon-text is-flex is-align-items-center is-justify-content-flex-start mr-4"
+              class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
             >
               <span class="  icon mr-2">
                 <i class="fas fa-rocket has-text-warning" />
               </span>
               <span>Automatisez les tâches répétitives</span>
             </span>
-            <span class="icon-text is-flex is-align-items-center is-justify-content-flex-start">
+            <span
+              class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
+            >
               <span class="  icon mr-2">
                 <i class="fas fa-shield-alt has-text-warning" />
               </span>
@@ -97,6 +99,7 @@
     alt="Capture d'écran de l'application metier CASE"
   />
 </section>
+<!-- Hero -->
 
 <div class="container content">
   <div class="columns">
@@ -144,13 +147,13 @@
 </div>
 
 <!-- Key features -->
-<div class="hero is-primary">
+<section class="hero is-primary  is-relative pb-8">
   <div class="container">
     <div class="columns">
       <div class="column is-10 is-offset-1 has-text-centered">
         <div class="content">
           <h2 class="title is-2 has-line mt-8">On travaille mieux quand on a les bons outils</h2>
-          <p>
+          <p class="has-text-white-bis">
             CASE vous est livré avec un paquet de fonctionnalités prêtes à être employées pour votre
             cause.
           </p>
@@ -173,14 +176,64 @@
           {/each}
         </div>
       </div>
-      <div class="column">
-        <div class="box">
-          <img src={activeKeyFeature.image} alt={activeKeyFeature.name} />
+      <div class="column is-8">
+        <div
+          class="is-flex is-align-items-center is-justify-content-center key-features is-fullheight is-fullwidth"
+        >
+          <figure class=" has-object-fit-contain has-object-position-center-center">
+            <img src="img/key-features/{activeKeyFeature.image}" alt={activeKeyFeature.name} />
+          </figure>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- CTA -->
+<section class="hero is-primary is-relative ">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-12">
+          <div class="card has-background-info p-8">
+            <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
+            <p class="is-size-5">
+              Gérez toute l'activité de votre PME sur la même plateforme avec CASE
+            </p>
+            <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-5">
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+              >
+                <span class="icon mr-2">
+                  <i class="fas fa-layer-group has-text-warning" />
+                </span>
+                <span>Centralisez production, commercial et RH</span>
+              </span>
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+              >
+                <span class="  icon mr-2">
+                  <i class="fas fa-rocket has-text-warning" />
+                </span>
+                <span>Automatisez les tâches répétitives</span>
+              </span>
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
+              >
+                <span class="  icon mr-2">
+                  <i class="fas fa-shield-alt has-text-warning" />
+                </span>
+                <span>Prenez de meilleures décisions</span>
+              </span>
+            </div>
+
+            <button class="button is-warning">Essayez CASE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="container">
   <div class="columns">
@@ -190,7 +243,7 @@
   </div>
   <div class="columns">
     <div class="column">
-      <p>
+      <p class="has-text-grey-dark">
         CASE est une application métier créée pour aider les PME dans leurs activités au quotidien.
         Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE s’adapte à vous
         en se configurant avec vos processus et vos équipements.
@@ -205,7 +258,7 @@
 
   <div class="columns">
     <div class="column">
-      <p>
+      <p class="has-text-grey-dark">
         Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et du
         conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre taille
         et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont vous avez
@@ -218,27 +271,9 @@
 <hr />
 
 <style lang="scss">
+  @import './../styles/variables.scss';
   @import './bulma/sass/utilities/all';
 
-  .has-gradient {
-    &:before {
-      display: inline-block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* Created with https://www.css-gradient.com */
-      background: $primary;
-      background: -webkit-linear-gradient(top right, rgba($info, 0.2), $primary),
-        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
-      background: -moz-linear-gradient(top right, rgba($info, 0.2), $primary),
-        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
-      background: linear-gradient(to bottom left, rgba($info, 0.2), $primary),
-        radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, hsla(5, 93%, 68%, 0) 50%);
-    }
-  }
   .hero-figure-wrapper {
     position: absolute;
     bottom: 0;
@@ -293,16 +328,21 @@
       }
     }
   }
-  .key-features .box {
-    box-shadow: none;
-    transition: all 0.18s ease-in-out;
-    background-color: transparent;
-    color: $white;
+  .key-features {
+    .box {
+      box-shadow: none;
+      transition: all 0.18s ease-in-out;
+      background-color: transparent;
+      color: $white;
 
-    &.is-active {
-      box-shadow: $box-shadow;
-      background-color: $info;
-      color: $primary;
+      &.is-active {
+        box-shadow: $box-shadow;
+        background-color: $info;
+        color: $primary;
+      }
+    }
+    figure {
+      max-height: 695px;
     }
   }
 </style>
