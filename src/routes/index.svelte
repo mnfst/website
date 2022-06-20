@@ -277,13 +277,13 @@
       </div>
     </div>
   </section>
-  <section class="hero is-white">
+  <section class="hero is-rose">
     <div class="hero-body py-4">
       <div class="container content">
         <div class="columns  is-vcentered is-flex-direction-row-reverse">
           <div class="column is-6  py-6">
-            <span class="p-2 has-background-danger-light is-inline-flex">
-              <i class="ci ci-settings_future is-size-4 has-text-link" />
+            <span class="p-2 has-background-info is-inline-flex">
+              <i class="ci ci-devices is-size-4 has-text-primary" />
             </span>
             <h3 class="title is-3 mt-4">Toujours accessible depuis n’importe quel navigateur</h3>
             <ul>
@@ -530,62 +530,102 @@
   </div>
 </div>
 <!-- Clients -->
-<div class="container mt-8">
-  <div class="mx-4 clients">
-    <div class="columns is-multiline is-mobile">
-      <div
-        class="column is-12-mobile is-8-tablet is-9-desktop is-6-widescreen is-3-fullhd pl-0 pt-0 "
-      >
-        <h3 class="title is-3 has-line">Ne changez pas votre façon de faire, boostez-la.</h3>
-        <p class="has-text-grey-dark">
-          Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et du
-          conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre
-          taille et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont
-          vous avez besoin.
-        </p>
-      </div>
-      <div
-        class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo is-offset-3-widescreen is-offset-0-fullhd"
-      >
-        <figure class="image is-square">
-          <figure>
+<div class="container-fluid has-background-white-bis py-9 mb-8 mt-9">
+  <div class="container mt-8">
+    <div class="mx-4 clients">
+      <div class="columns is-multiline is-mobile">
+        <div
+          class="column is-12-mobile is-8-tablet is-9-desktop is-6-widescreen is-3-fullhd pl-0 pt-0 "
+        >
+          <h3 class="title is-3 has-line">Ne changez pas votre façon de faire, boostez-la.</h3>
+          <p class="has-text-grey-dark">
+            Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et
+            du conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre
+            taille et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont
+            vous avez besoin.
+          </p>
+        </div>
+        <div
+          class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo is-offset-3-widescreen is-offset-0-fullhd"
+        >
+          <figure class="image is-square">
+            <figure>
+              <img src="./img/clients/wp-mail.svg" alt="" />
+            </figure>
+          </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square">
+            <img src="./img/clients/eu-flag.svg" alt="" />
+          </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square">
+            <img src="./img/clients/neorhea.svg" alt="" />
+          </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square">
+            <img src="./img/clients/neorhea.svg" alt="" />
+          </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square">
+            <img src="./img/clients/eu-flag.svg" alt="" />
+          </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square">
             <img src="./img/clients/wp-mail.svg" alt="" />
           </figure>
-        </figure>
-      </div>
-      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-        <figure class="image is-square">
-          <img src="./img/clients/eu-flag.svg" alt="" />
-        </figure>
-      </div>
-      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-        <figure class="image is-square">
-          <img src="./img/clients/neorhea.svg" alt="" />
-        </figure>
-      </div>
-      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-        <figure class="image is-square">
-          <img src="./img/clients/neorhea.svg" alt="" />
-        </figure>
-      </div>
-      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-        <figure class="image is-square">
-          <img src="./img/clients/eu-flag.svg" alt="" />
-        </figure>
-      </div>
-      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-        <figure class="image is-square">
-          <img src="./img/clients/wp-mail.svg" alt="" />
-        </figure>
-      </div>
-      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-        <figure class="image is-square">
-          <img src="./img/clients/neorhea.svg" alt="" />
-        </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square">
+            <img src="./img/clients/neorhea.svg" alt="" />
+          </figure>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<!-- CTA bottom -->
+<section class="hero  is-relative  hero--cta-bottom">
+  <div class="hero-body py-0">
+    <div class="container">
+      <div class="card has-background-info p-8 card--cta is-shadowless">
+        <div class="columns">
+          <div class="column is-6">
+            <h3 class="title is-3 has-text-dark">Démo en ligne sur demande</h3>
+            <p class="has-text-grey-dark mb-4">
+              Integer legentibus erat a ante historiarum dapibus. Cum ceteris in veneratione tui
+              montes, nascetur mus. Phasellus laoreet lorem vel dolor tempus vehicula.
+            </p>
+
+            <button class="button is-orange mb-4">Essayez CASE gratuitement</button>
+            <span
+              class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
+            >
+              <span class="icon mr-2">
+                <i class="fas fa-layer-group has-text-danger" />
+              </span>
+              <span>Sans création de compte</span>
+            </span>
+          </div>
+          <div class="column is-6 is-relative">
+            <figure class=" cta-img cta-img--01">
+              <img src="./img/case-sidemenu-example.png" />
+            </figure>
+            <figure
+              class=" cta-img cta-img--02 is-flex is-justify-content-flex-end is-align-items-flex-end"
+            >
+              <img src="./img/case-login-example.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style lang="scss">
   @import './../styles/variables.scss';
@@ -789,6 +829,69 @@
     figure {
       margin: auto;
       width: 50%;
+    }
+  }
+
+  .cta-img {
+    img {
+      box-shadow: $shadow;
+    }
+    &--01 {
+      position: absolute;
+      width: 75%;
+      left: 0;
+
+      @include mobile {
+        position: relative;
+        top: 0;
+      }
+
+      @include tablet {
+        transform: translateY(-50%);
+        top: 50%;
+      }
+      @include tablet-only {
+        left: 24px;
+      }
+      @include widescreen-only {
+        width: 95%;
+      }
+    }
+    &--02 {
+      position: absolute;
+
+      @include mobile {
+        width: 46%;
+        bottom: 0;
+        right: 24px;
+      }
+      @include tablet-only {
+        right: 0;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 60%;
+      }
+      @include desktop {
+        right: 0;
+        bottom: -24px;
+        width: 60%;
+      }
+      @include widescreen {
+        width: 80%;
+        bottom: -70%;
+      }
+    }
+  }
+  .hero--cta-bottom {
+    margin-top: 9.6rem;
+    margin-bottom: 9.6rem;
+    @include widescreen {
+      margin-top: 15rem;
+      margin-bottom: 22.8rem;
+    }
+    @include fullhd {
+      margin-top: 18.4rem;
+      margin-bottom: 20.8rem;
     }
   }
 </style>

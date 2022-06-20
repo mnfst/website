@@ -44,8 +44,15 @@ $danger-light: #FEEEF0 !default;
 $danger--90: #F66879 !default;
 $danger--05: #FFF7F8 !default;
 
-$orange: #F5804E !default;
 $orange-light: #FEF2EE !default;
+
+$orange: #F5804E !default;
+$orange-invert: findColorInvert($orange);
+$custom-colors: ("orange": ($orange, $orange-invert));
+
+$orange-light: #FEF2EE !default;
+$orange-light-invert: findColorInvert($orange-light);
+$custom-colors: ("orange-light": ($orange-light, $orange-light-invert));
 
 $border-color: $grey-lighter !default;
 
@@ -53,3 +60,46 @@ $border-color: $grey-lighter !default;
 
 $main-background: $white !default;
 $border-color-input: $primary-light !default;
+
+
+$custom-colors: (
+
+  'danger-light': (
+    $danger-light,
+    $danger,
+    $danger-light
+  ),
+  'warning-light': (
+    $warning-light,
+    $warning,
+    $warning-light
+  ),
+  'primary-light': (
+    $primary-light,
+    $primary,
+    $primary-light
+  ),
+  'link-light': (
+    $link-light,
+    $link,
+    $link-light
+  ),
+  'success-light': (
+    $success-light,
+    $success,
+    $success-light
+  ),
+  'orange-light': (
+    $orange-light,
+    $orange,
+    $orange-light
+  ),
+  'orange': (
+    $orange,
+    $light,
+    $orange
+  )
+);
+
+
+
