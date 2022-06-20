@@ -75,9 +75,6 @@
             </div>
           </div>
         </div>
-        <div class="navbar-item">
-          <a class="button is-primary" href="/contact"> Contactez-nous </a>
-        </div>
       </div>
 
       <div class="navbar-end is-hidden-touch">
