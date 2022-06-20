@@ -601,7 +601,7 @@
               montes, nascetur mus. Phasellus laoreet lorem vel dolor tempus vehicula.
             </p>
 
-            <button class="button is-orange mb-4">Essayez CASE gratuitement</button>
+            <button class="button is-danger mb-4">Essayez CASE gratuitement</button>
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
             >

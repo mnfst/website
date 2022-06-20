@@ -3,79 +3,25 @@
   @extend .ci-caret_down;
 }
 
-.navbar {
-  position: relative;
-  &:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    height: 100%;
-    border-bottom: 1px solid $border-color;
-    @include mobile {
-      width: 100%;
-    }
-
-    @include tablet {
-      left: calc(#{$aside-width-tablet} + #{$aside-border-width});
-      width: calc(100% - #{$aside-width-tablet} - #{$aside-border-width});
-    }
-    @include desktop {
-      left: calc(#{$aside-width-desktop} + #{$aside-border-width});
-      width: calc(100% - #{$aside-width-desktop} - #{$aside-border-width});
-    }
-    @include widescreen {
-      left: calc(#{$aside-width-widescreen} + #{$aside-border-width});
-      width: calc(100% - #{$aside-width-widescreen} - #{$aside-border-width});
-    }
-    @include fullhd {
-      left: calc(#{$aside-width-fullhd} + #{$aside-border-width});
-      width: calc(100% - #{$aside-width-fullhd} - #{$aside-border-width});
-    }
-
-    .is-collapsed & {
-      left: $aside-width-collapsed;
-      width: calc(100% - #{$aside-width-collapsed});
-    }
-  }
-  > div:first-child {
-    display: flex;
+.navbar.has-centered-menu {
+  .navbar-start {
+    flex-grow: 1;
     justify-content: center;
-    align-items: center;
-  }
-}
-
-
-.collapse-button {
-  position: absolute;
-  height: $navbar-height;
-  width: $navbar-height;
-  border: 1px solid $border-color;
-  top: 0;
-  left: 306px;
-  z-index: 33;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include desktop {
-    left: calc(#{$aside-width-desktop} + #{$aside-border-width});
-  }
-  @include widescreen {
-    left: calc(#{$aside-width-widescreen} + #{$aside-border-width});
-  }
-  @include fullhd {
-    left: calc(#{$aside-width-fullhd} + #{$aside-border-width});
-  }
-
-  a {
-    height: 100%;
-    width: 100%;
   }
 }
 
 .navbar-burger {
-  @include desktop {
-    display: block;
-    margin: unset;
+  background-color: $navbar-burger-background-color;
+}
+
+.navbar {
+  font-family: $family-alt;
+
+  &-link:not(.is-arrowless) {
+    @include ltr-property("padding", 2em);
+
+  &::after {
+    font-size: .8em;
+  }
   }
 }
