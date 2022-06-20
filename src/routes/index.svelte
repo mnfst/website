@@ -258,7 +258,7 @@
       <div class="container content">
         <div class="columns  is-vcentered ">
           <div class="column is-6 ">
-            <span class="p-2 has-background-danger-light is-inline-flex">
+            <span class="p-2 has-background-orange-light is-inline-flex">
               <i class="ci ci-settings_future is-size-4 has-text-link" />
             </span>
             <h3 class="title is-3 mt-4">On le configure pour vous</h3>
@@ -310,11 +310,22 @@
       <div class="container content">
         <div class="columns  is-vcentered ">
           <div class="column is-6  py-6">
-            <h1 class="title is-3">Evolving business with technology</h1>
-            <div class="buttons">
-              <button class="button is-yellow">Esablished technical teams</button>
-              <button class="button">Less-technical teams</button>
-            </div>
+            <span class="p-2 has-background-danger-light is-inline-flex">
+              <i class="ci ci-Sketch is-size-4 has-text-success" />
+            </span>
+            <h3 class="title is-3 mt-4">Commencez tout de suite, sans engagement</h3>
+            <p>
+              Votre entreprise, vos données, vos choix. Nous aussi, nous pensons que les données
+              appartiennent à ceux et celles qui les créent
+            </p>
+            <ul>
+              <li>
+                Si vous quittez le navire, faites le avec vos données,le code et la propriété
+                intellectuelle
+              </li>
+              <li>Récupérez votre CASE à tout moment pour l’héberger et le modifier</li>
+              <li>Forfait annuel sans engagement</li>
+            </ul>
           </div>
           <div class="column is-6 py-0 pl-0">
             <figure class="image is-square mx-0">
@@ -326,26 +337,255 @@
     </div>
   </section>
 </div>
-<div class="container mt-8">
+<!-- Competitors -->
+<div class="container my-8">
   <div class="columns">
-    <div class="column">
-      <h3 class="title is-3">Ne changez pas votre façon de faire, boostez-la.</h3>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column">
-      <p class="has-text-grey-dark">
-        Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et du
-        conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre taille
-        et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont vous avez
-        besoin.
-      </p>
+    <div class="column is-12 has-text-centered">
+      <h2 class="title is-2 has-line">Et vous, qu’utilisez-vous ?</h2>
     </div>
   </div>
 </div>
-
-<hr />
+<div class="container is-overflow">
+  <div class="competitors">
+    <div class="columns is-mobile has-text-weight-bold	is-uppercase is-size-6">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop" />
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">CASE</div>
+      <div class="column is-2 has-text-centered">Excel</div>
+      <div class="column is-2 has-text-centered">ProChantier</div>
+      <div class="column is-2 has-text-centered">Sage</div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+    <!-- First line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
+        <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
+          <span class="icon">
+            <i class="ci ci-chevron_big_right" />
+          </span>
+          <div class="pl-2">
+            <span>Données sécurisés</span>
+            <!-- Sub content here -->
+          </div>
+        </span>
+      </div>
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+    <!-- Second line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
+        <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
+          <span class="icon">
+            <i class="ci ci-chevron_big_down" />
+          </span>
+          <div class="pl-2">
+            <span>Notifications</span>
+            <p class=" has-text-grey mt-2">
+              Avec CASE, vous choisissez les niveaux d’accès de chaque utilisateur, et si le pire
+              arrive quand même, nous pouvons rétablir les données précédentes grâce aux copies de
+              sauvegarde effectuées quotidiennement.
+            </p>
+          </div>
+        </span>
+      </div>
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+    <!-- Third line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
+        <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
+          <span class="icon">
+            <i class="ci ci-chevron_big_right" />
+          </span>
+          <div class="pl-2">
+            <span>Ergonomie intéligente</span>
+            <!-- Sub content here -->
+          </div>
+        </span>
+      </div>
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+    <!-- Fourth line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
+        <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
+          <span class="icon">
+            <i class="ci ci-chevron_big_right" />
+          </span>
+          <div class="pl-2">
+            <span>Propriétaire de vos données</span>
+            <!-- Sub content here -->
+          </div>
+        </span>
+      </div>
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+    <!-- CTA line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop" />
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered is-size-7">
+        <p class="mb-1">Vous souhaitez implémenter CASE au sein de votre entreprise ?</p>
+        <a href="" class="button is-small is-fullwidth is-success">Contactez-nous</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Clients -->
+<div class="container mt-8">
+  <div class="mx-4 clients">
+    <div class="columns is-multiline is-mobile">
+      <div
+        class="column is-12-mobile is-8-tablet is-9-desktop is-6-widescreen is-3-fullhd pl-0 pt-0 "
+      >
+        <h3 class="title is-3 has-line">Ne changez pas votre façon de faire, boostez-la.</h3>
+        <p class="has-text-grey-dark">
+          Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et du
+          conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre
+          taille et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont
+          vous avez besoin.
+        </p>
+      </div>
+      <div
+        class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo is-offset-3-widescreen is-offset-0-fullhd"
+      >
+        <figure class="image is-square">
+          <figure>
+            <img src="./img/clients/wp-mail.svg" alt="" />
+          </figure>
+        </figure>
+      </div>
+      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+        <figure class="image is-square">
+          <img src="./img/clients/eu-flag.svg" alt="" />
+        </figure>
+      </div>
+      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+        <figure class="image is-square">
+          <img src="./img/clients/neorhea.svg" alt="" />
+        </figure>
+      </div>
+      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+        <figure class="image is-square">
+          <img src="./img/clients/neorhea.svg" alt="" />
+        </figure>
+      </div>
+      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+        <figure class="image is-square">
+          <img src="./img/clients/eu-flag.svg" alt="" />
+        </figure>
+      </div>
+      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+        <figure class="image is-square">
+          <img src="./img/clients/wp-mail.svg" alt="" />
+        </figure>
+      </div>
+      <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+        <figure class="image is-square">
+          <img src="./img/clients/neorhea.svg" alt="" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style lang="scss">
   @import './../styles/variables.scss';
@@ -438,6 +678,117 @@
           padding-right: #{$gap * 2};
         }
       }
+    }
+  }
+  .competitors {
+    @include mobile {
+      min-width: 200%;
+    }
+
+    .is-expandable .icon {
+      position: relative;
+      top: 3px;
+    }
+
+    &:before {
+      display: inline-block;
+      position: absolute;
+      content: '';
+      top: 0;
+
+      height: 100%;
+      box-shadow: $shadow;
+
+      @include mobile {
+        left: calc(66.6666667% - 6px);
+        width: calc(33.33333% + 6px);
+      }
+      @include tablet {
+        left: calc(25% - 6px);
+        width: calc(25% + 6px);
+      }
+      @include desktop {
+        left: calc(33.33333% - 6px);
+        width: calc(16.66666674% + 6px);
+      }
+    }
+  }
+  .is-overflow {
+    @include mobile {
+      overflow-x: auto;
+      overflow-y: clip;
+    }
+  }
+  .has-client-logo {
+    border-top: 1px solid $grey-light;
+    border-left: 1px solid $grey-light;
+    @include mobile {
+      &:last-child,
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(7) {
+        border-right: 1px solid $grey-light;
+      }
+      &:last-child,
+      &:nth-child(7) {
+        border-bottom: 1px solid $grey-light;
+      }
+    }
+    @include tablet-only {
+      &:last-child,
+      &:nth-child(2),
+      &:nth-child(5) {
+        border-right: 1px solid $grey-light;
+      }
+      &:last-child,
+      &:nth-child(6),
+      &:nth-child(7) {
+        border-bottom: 1px solid $grey-light;
+      }
+    }
+    @include desktop-only {
+      &:last-child,
+      &:nth-child(2),
+      &:nth-child(6) {
+        border-right: 1px solid $grey-light;
+      }
+      &:last-child,
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        border-bottom: 1px solid $grey-light;
+      }
+    }
+    @include widescreen-only {
+      &:last-child,
+      &:nth-child(2),
+      &:nth-child(6) {
+        border-right: 1px solid $grey-light;
+      }
+      &:last-child,
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        border-bottom: 1px solid $grey-light;
+      }
+    }
+    @include fullhd {
+      &:last-child,
+      &:nth-child(4) {
+        border-right: 1px solid $grey-light;
+      }
+      &:last-child,
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        border-bottom: 1px solid $grey-light;
+      }
+    }
+  }
+  .clients {
+    figure {
+      margin: auto;
+      width: 50%;
     }
   }
 </style>
