@@ -33,7 +33,7 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="navbar-menu is-active">
       <div class="navbar-start">
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Home </a>
         <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
@@ -43,7 +43,7 @@
 
           <div class="navbar-dropdown">
             <div class="container">
-              <div class="columns">
+              <div class="columns columns--fullwidth">
                 <div class="column is-4 has-separator">
                   <p class="title is-3 has-line is-hidden-touch">Usages</p>
                   <p>
@@ -77,7 +77,7 @@
         </div>
       </div>
 
-      <div class="navbar-end is-hidden-touch">
+      <div class="navbar-end ">
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-warning" href="/demo"> Essayez CASE </a>
@@ -104,6 +104,12 @@
     }
 
     .navbar-dropdown {
+      left: 0;
+      top: 0;
+      width: 100%;
+      border: 0;
+      font-size: inherit;
+
       @include desktop {
         position: fixed;
         padding-top: 7.2rem;
@@ -112,25 +118,42 @@
       }
       @include touch {
         position: relative;
-      }
-      left: 0;
-      top: 0;
-      width: 100%;
-      border: 0;
-      font-size: inherit;
-
-      .navbar-column:hover {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
         background-color: $white-bis;
-        color: $warning;
+      }
+
+      .navbar-column {
+        &:hover {
+          background-color: $white-bis;
+          color: $warning;
+        }
+        @include touch {
+          padding-left: 1.6rem;
+          padding-right: 1.6rem;
+          padding-top: 0;
+          padding-bottom: 0;
+
+          > .navbar-item {
+          }
+        }
+      }
+      .column--usage-list {
+        @include tablet {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
       }
     }
   }
   .has-separator {
     position: relative;
     @include touch {
-      padding-left: 7.2rem;
-      padding-right: 7.2rem;
       padding-bottom: 0;
+      > p {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+      }
     }
     &:before {
       @include tablet {
@@ -146,6 +169,54 @@
     }
   }
   a.navbar-item:hover {
-    background-color: transparent;
+    // background-color: transparent;
+  }
+  .navbar-menu {
+    .navbar-item {
+      @include touch {
+        border-bottom: 1px solid $border;
+
+        .navbar-item:not(.has-dropdown) {
+          padding: 1.6rem 0;
+        }
+      }
+
+      &:not(.has-dropdown),
+      .navbar-link {
+        @include touch {
+          padding: 2.4rem;
+        }
+      }
+
+      .navbar-dropdown & {
+        border-bottom: 0;
+      }
+    }
+  }
+  .navbar-link {
+    @include touch {
+      padding: 0;
+    }
+  }
+  .navbar-start > .navbar-item {
+    @include desktop {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  .navbar-end .button {
+    @include touch {
+      font-size: $size-3-touch;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .navbar.is-fixed-top .navbar-menu,
+  .navbar.is-fixed-top-touch .navbar-menu {
+    @include touch {
+      min-height: calc(100vh - #{$navbar-height});
+    }
   }
 </style>
