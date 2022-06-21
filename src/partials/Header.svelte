@@ -43,8 +43,8 @@
 
           <div class="navbar-dropdown">
             <div class="container">
-              <div class="columns columns--fullwidth">
-                <div class="column is-4 has-separator">
+              <div class="columns is-multiline columns--fullwidth">
+                <div class="column is-12-touch is-4-desktop has-separator">
                   <p class="title is-3 has-line is-hidden-touch">Usages</p>
                   <p>
                     Introduction to usages: Quam temere in vitiis, legem sancimus haerentia.
@@ -52,10 +52,10 @@
                     petere vellent. Ut enim ad minim veniam, quis nostrud exercitation.
                   </p>
                 </div>
-                <div class="column is-8">
-                  <div class="columns is-multiline p-4">
+                <div class="column is-12-touch is-8-desktop">
+                  <div class="columns is-multiline">
                     {#each usages as usage}
-                      <div class="column is-6 navbar-column">
+                      <div class="column is-12-touch is-6-desktop navbar-column p-0">
                         <a
                           class="navbar-item is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start"
                           href="/usages/{usage.slug}"
@@ -128,39 +128,27 @@
           background-color: $white-bis;
           color: $warning;
         }
-        @include touch {
-          padding-left: 1.6rem;
-          padding-right: 1.6rem;
-          padding-top: 0;
-          padding-bottom: 0;
-
-          > .navbar-item {
-          }
-        }
-      }
-      .column--usage-list {
-        @include tablet {
-          padding-top: 0;
-          padding-bottom: 0;
+        > .navbar-item {
+          padding: $column-gap;
         }
       }
     }
   }
   .has-separator {
-    position: relative;
     @include touch {
       padding-bottom: 0;
       > p {
-        padding-right: 0.8rem;
-        padding-left: 0.8rem;
+        font-size: $size-3-touch;
       }
     }
-    &:before {
-      @include tablet {
+    @include desktop {
+      position: relative;
+      padding-right: #{$gap};
+      &:before {
         position: absolute;
         display: inline-block;
         content: '';
-        right: 0;
+        right: #{$column-gap};
         top: #{$column-gap};
         width: 1px;
         height: calc(100% - #{$gap});
@@ -168,31 +156,34 @@
       }
     }
   }
-  a.navbar-item:hover {
-    // background-color: transparent;
-  }
-  .navbar-menu {
-    .navbar-item {
-      @include touch {
-        border-bottom: 1px solid $border;
 
-        .navbar-item:not(.has-dropdown) {
-          padding: 1.6rem 0;
-        }
-      }
+  .navbar-menu .navbar-item {
+    @include touch {
+      border-bottom: 1px solid $border;
 
-      &:not(.has-dropdown),
-      .navbar-link {
-        @include touch {
-          padding: 2.4rem;
-        }
-      }
-
-      .navbar-dropdown & {
-        border-bottom: 0;
+      .navbar-item:not(.has-dropdown) {
+        padding: 1.6rem 0;
       }
     }
+
+    p {
+      @include touch {
+        font-size: $size-3-touch;
+      }
+    }
+
+    &:not(.has-dropdown),
+    .navbar-link {
+      @include touch {
+        padding: 2.4rem;
+      }
+    }
+
+    .navbar-dropdown & {
+      border-bottom: 0;
+    }
   }
+
   .navbar-link {
     @include touch {
       padding: 0;
@@ -213,10 +204,14 @@
       width: 100%;
     }
   }
-  .navbar.is-fixed-top .navbar-menu,
-  .navbar.is-fixed-top-touch .navbar-menu {
+  .navbar.is-fixed-top .navbar-menu {
     @include touch {
       min-height: calc(100vh - #{$navbar-height});
+    }
+  }
+  .navbar {
+    @include touch {
+      font-size: $size-1-touch;
     }
   }
 </style>
