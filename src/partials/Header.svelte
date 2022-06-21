@@ -33,7 +33,7 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu is-active">
+    <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Home </a>
         <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
