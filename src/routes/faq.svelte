@@ -39,7 +39,7 @@
   </div>
 </section>
 
-<div class="container mt-5">
+<div class="container mt-6">
   {#each groups as group}
     <div class="columns groups">
       <div class="column is-3 group-names">
@@ -70,6 +70,61 @@
     <hr class="has-background-grey-darker group-separator is-hidden-mobile mb-6 mt-5" />
   {/each}
 </div>
+<!-- CTA  -->
+<section class="hero is-success-light is-relative">
+  <div class="hero-body py-0">
+    <div class="container">
+      <div class="card  py-8 card--cta is-shadowless has-background-success-light">
+        <div class="columns">
+          <div class="column is-6">
+            <h3 class="title is-3 has-text-dark">Démo en ligne sur demande</h3>
+            <p class="has-text-grey-dark mb-4">
+              Integer legentibus erat a ante historiarum dapibus. Cum ceteris in veneratione tui
+              montes, nascetur mus. Phasellus laoreet lorem vel dolor tempus vehicula.
+            </p>
+            <div class="advantage-list mb-4">
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4"
+              >
+                <span class="icon mr-2">
+                  <i class="fas fa-layer-group has-text-warning" />
+                </span>
+                <span>Sans création de compte</span>
+              </span>
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4"
+              >
+                <span class="  icon mr-2">
+                  <i class="fas fa-rocket has-text-warning" />
+                </span>
+                <span>Aucune information à donner</span>
+              </span>
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap "
+              >
+                <span class="  icon mr-2">
+                  <i class="fas fa-shield-alt has-text-warning" />
+                </span>
+                <span>Choisissez parmi 2 exemples</span>
+              </span>
+            </div>
+            <button class="button is-warning mb-4">Essayez CASE gratuitement</button>
+          </div>
+          <div class="column is-6 is-relative">
+            <figure
+              class=" cta-img cta-img--01 is-flex is-justify-content-flex-end is-align-items-flex-end"
+            >
+              <img src="./img/case-list-view.png" />
+            </figure>
+            <figure class=" cta-img cta-img--02">
+              <img src="./img/case-history-activity.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style lang="scss">
   @import './../styles/variables.scss';
@@ -98,5 +153,36 @@
   }
   .group-separator:last-child {
     display: none;
+  }
+
+  .cta-img {
+    img {
+      box-shadow: $shadow;
+    }
+    &--01 {
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    &--02 {
+      position: absolute;
+      width: 80%;
+      bottom: -24px;
+      left: -24px;
+    }
+  }
+  .hero--cta-bottom {
+    margin-top: 9.6rem;
+    margin-bottom: 9.6rem;
+
+    @include widescreen {
+      margin-top: 15rem;
+      margin-bottom: 22.8rem;
+    }
+    @include fullhd {
+      margin-top: 18.4rem;
+      margin-bottom: 20.8rem;
+    }
   }
 </style>
