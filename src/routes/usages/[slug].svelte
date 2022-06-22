@@ -37,26 +37,49 @@
 <MetaTags title={usage.metaTitle} description={usage.metaDescription} />
 
 <!-- Hero -->
-<section class="hero is-info">
+<section class="hero has-background-white-bis is-medium is-relative mb-8">
   <div class="hero-body">
     <div class="container">
-      <div class="columns">
-        <div class="column">
-          <p class="subtitle">{usage.name}</p>
-          <h1 class="title is-1">{usage.title}</h1>
-          <p class="subtitle">{usage.subtitle}</p>
+      <div class="columns  is-vcentered ">
+        <div
+          class="column
+        is-12-mobile 
+        is-6-tablet "
+        >
+          <div class="hero-content">
+            <p class="is-size-5 is-bold is-uppercase has-text-weight-bold has-text-primary mb-2">
+              {usage.name}
+            </p>
+            <h1 class="title is-1">{usage.title}</h1>
+            <p class="is-size-5">
+              {usage.subtitle}
+            </p>
+          </div>
+        </div>
+        <div
+          class="column hero-images
+        is-12-mobile
+        is-6-tablet
+        is-5-widescreen"
+        >
+          <figure class="cover-01">
+            <img src="./../img/usages/{usage.cover01}" alt={usage.name} class="has-shadow" />
+          </figure>
+          <figure class="cover-02">
+            <img src="./../img/usages/{usage.cover02}" alt={usage.name} class="has-shadow" />
+          </figure>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Paragraphs -->
+<!-- Key features -->
 <div class="container">
   {#each usage.paragraphs as paragraph}
     <div class="columns">
       <div class="column">
-        <h2 class="title is-3">{paragraph.title}</h2>
+        <h2 class="title is-2 has-line">{paragraph.title}</h2>
       </div>
     </div>
     <div class="columns">
@@ -71,7 +94,7 @@
 <div class="hero is-warning">
   <div class="container">
     <div class="columns">
-      <div class="column is-10 is-offset-1">
+      <div class="column is-12 is-10-desktop is-8-widescreen is-offset-1">
         <h2 class="title is-2">On travaille mieux quand on a les bons outils</h2>
         <p>
           CASE vous est livré avec un paquet de fonctionnalités prêtes à être employées pour votre
@@ -199,7 +222,55 @@
 </div>
 
 <style lang="scss">
+  @import './../../styles/variables.scss';
+  @import './bulma/sass/utilities/all';
+
   li.is-active {
     background-color: #f5f5f5;
+  }
+  .hero-content {
+    @include desktop {
+      padding-right: $column-gap;
+    }
+    @include widescreen {
+      padding-right: $gap;
+    }
+  }
+  .hero-images {
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .cover-01 {
+    @include mobile {
+      width: 600px;
+    }
+    @include tablet {
+      width: 800px;
+    }
+
+    @include widescreen {
+      width: 100%;
+    }
+  }
+  .cover-02 {
+    position: absolute;
+    bottom: 0;
+    @include mobile {
+      width: 150px;
+      left: 12px;
+      bottom: 12px;
+    }
+    @include tablet {
+      right: 0;
+      width: 200px;
+    }
+
+    @include widescreen {
+      top: 25%;
+      bottom: unset;
+      width: unset;
+    }
   }
 </style>
