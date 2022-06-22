@@ -3,10 +3,12 @@
 @use 'sass:math';
 $body-overflow-y: auto;
 
+
+@import "bulma/sass/utilities/functions";
+
 @import 'variables/fonts';
 @import 'variables/colors';
 @import 'variables/grid';
-
 
 @import 'variables/box';
 @import 'variables/buttons';
@@ -27,4 +29,12 @@ $body-overflow-y: auto;
 @import 'variables/tags';
 @import 'variables/tooltip';
 
+@import "bulma/sass/utilities/derived-variables";
+
+$addColors: (
+  "orange":($orange, $orange-invert),
+  "orange-light": ($orange-light, $orange-light-invert)
+);
+
+$colors: map-merge($colors, $addColors);
 
