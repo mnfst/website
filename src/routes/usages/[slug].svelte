@@ -244,24 +244,36 @@
 </div>
 
 <!-- Other usages -->
-<div class="container">
-  <div class="columns">
+<div class="container mb-8 mt-5">
+  <div class="columns ">
     <div class="column">
-      <h2 class="title is-2">Regardez ce que CASE peut faire pour vous</h2>
+      <h2 class="title is-2 has-line">Regardez ce que CASE peut faire pour vous</h2>
+      <p>Lancez la digitalisation de votre activité grâce aux fonctionnalités de CASE.</p>
     </div>
   </div>
-  <div class="columns">
-    <div class="column">
-      Lancez la digitalisation de votre activité grâce aux fonctionnalités de CASE.
-    </div>
-  </div>
-  <div class="columns">
+  <div class="columns is-multiline">
     {#each otherUsages as usage}
-      <div class="column">
-        <a href="/usages/{usage.slug}" class="column is-6 notification is-info">
-          <a href="/usages/{usage.slug}">{usage.name}</a>
-          <p>{usage.description}</p>
-          <img src="/usages/{usage.image}" alt={usage.name} style="height:100px" />
+      <div class="column usage-card">
+        <a
+          href="/usages/{usage.slug}"
+          class="box is-relative content has-background-white-bis px-4 is-flex is-flex-direction-column is-justify-content-space-between is-clipped is-align-items-flex-start"
+        >
+          <img src="./../img/usages/{usage.image}" alt={usage.name} />
+
+          <div>
+            <h3 class="title is-5 mb-3">{usage.name}</h3>
+            <p class="has-text-grey-dark">{usage.description}</p>
+            <div class="tags are-small">
+              <span class="tag is-dark">Managers</span>
+              <span class="tag is-dark">Commerciaux</span>
+            </div>
+          </div>
+          <a href="/usages/{usage.slug}" class="button is-small is-primary">
+            <span class="icon is-small">
+              <i class="ci ci-long_up_right" />
+            </span>
+            <span> En savoir plus </span>
+          </a>
         </a>
       </div>
     {/each}
@@ -335,6 +347,51 @@
       max-height: 424px;
     }
   }
+
+  .usage-card {
+    .box {
+      height: 457px;
+      transition: all 0.18s ease-in-out;
+      box-shadow: none;
+      &:hover {
+        box-shadow: $shadow;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='3' stroke-dasharray='8%2c 16' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      }
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 61.8%;
+      height: auto;
+    }
+
+    &:first-child {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+    &:last-child {
+      img {
+        bottom: -14px;
+        right: -2px;
+      }
+    }
+  }
+
   .icon-text {
     span.icon {
       margin-top: 4px;
