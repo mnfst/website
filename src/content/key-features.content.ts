@@ -43,7 +43,7 @@ export const keyFeatureContents: KeyFeature[] = [
   {
     name: 'Notifications',
     description: 'Notifications temps réel, push, email, SMS…',
-    image: 'security.png',
+    image: 'case-factures.png',
     usages: ['home']
   },
   {
@@ -95,7 +95,7 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Suivi de la rentabilité',
     description:
       'Analysez le temps et le coût du travail pour chaque projet, collaborateur ou période déterminée',
-    image: 'security.png',
+    image: 'case-factures.png',
     usages: ['planification', 'devis-et-factures']
   },
   {

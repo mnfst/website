@@ -693,9 +693,7 @@
       color: $white;
 
       &.is-active {
-        box-shadow: $box-shadow;
-        background-color: $info;
-        color: $primary;
+        background-color: rgba($warning-light, 0.15);
       }
     }
     figure {

@@ -90,56 +90,61 @@
   {/each}
 </div>
 
-<!-- Key features -->
-<div class="hero is-warning">
+<!-- Key feature tabs-->
+<div class="hero is-white my-8">
   <div class="container">
     <div class="columns">
-      <div class="column is-12 is-10-desktop is-8-widescreen is-offset-1">
-        <h2 class="title is-2">On travaille mieux quand on a les bons outils</h2>
-        <p>
-          CASE vous est livré avec un paquet de fonctionnalités prêtes à être employées pour votre
-          cause.
-        </p>
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column is-4">
+      <div class="column is-3">
         <!-- TODO: Separate keyFeatures into 2 columns -->
-        <ul>
+        <div class="is-flex is-flex-direction-column key-features">
           {#each keyFeatures as keyFeature, i}
             {#if i % 2 === 0}
-              <li
+              <div
+                class="box px-4 pointer mb-0"
                 on:mouseover={() => (activeKeyFeature = keyFeature)}
                 on:focus={() => (activeKeyFeature = keyFeature)}
                 class:is-active={activeKeyFeature === keyFeature}
               >
                 <strong>{keyFeature.name}</strong>
                 <p>{keyFeature.description}</p>
-              </li>
+              </div>
             {/if}
           {/each}
-        </ul>
-      </div>
-      <div class="column is-4">
-        <div class="box">
-          <img src="../../{activeKeyFeature.image}" alt={activeKeyFeature.name} />
         </div>
       </div>
-      <div class="column is-4">
-        <ul>
-          {#each keyFeatures as keyFeature, i}
-            {#if i % 2 !== 0}
-              <li
-                on:mouseover={() => (activeKeyFeature = keyFeature)}
-                on:focus={() => (activeKeyFeature = keyFeature)}
-                class:is-active={activeKeyFeature === keyFeature}
-              >
-                <strong>{keyFeature.name}</strong>
-                <p>{keyFeature.description}</p>
-              </li>
-            {/if}
-          {/each}
-        </ul>
+      <div class="column is-9">
+        <div class="columns">
+          <div class="column is-8">
+            <div
+              class="is-flex is-align-items-center is-justify-content-center key-features is-fullheight is-fullwidth"
+            >
+              <figure class=" has-object-fit-contain has-object-position-center-center">
+                <img
+                  src="./../img/key-features/{activeKeyFeature.image}"
+                  alt={activeKeyFeature.name}
+                />
+              </figure>
+            </div>
+          </div>
+
+          <div class="column is-4">
+            <div class="is-flex is-flex-direction-column key-features">
+              {#each keyFeatures as keyFeature, i}
+                {#if i % 2 !== 0}
+                  <div
+                    class="box px-4 pointer mb-0"
+                    on:mouseover={() => (activeKeyFeature = keyFeature)}
+                    on:focus={() => (activeKeyFeature = keyFeature)}
+                    class:is-active={activeKeyFeature === keyFeature}
+                  >
+                    <strong>{keyFeature.name}</strong>
+                    <p>{keyFeature.description}</p>
+                  </div>
+                {/if}
+              {/each}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -148,50 +153,92 @@
 <!-- Positions interested -->
 <div class="container">
   <div class="columns">
-    <div class="column is-4">
-      <h2 class="title is-2">{usage.positionsInterested.title}</h2>
+    <div class="column is-3">
+      <h2 class="title is-2 has-line">{usage.positionsInterested.title}</h2>
       <p>{usage.positionsInterested.subtitle}</p>
     </div>
-    <div class="column">
-      <div class="columns is-multiline">
+    <div class="column is-9">
+      <div class="columns is-multiline is-flex is-flex-wrap-wrap">
         {#each usage.positionsInterested.positions as position}
-          <div class="column is-4 card">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="/img/positions/{position.image}" alt={position.name} />
-            </figure>
-            <h3 class="title is-5">{position.name}</h3>
-            <ul>
+          <div class="column is-4 is-flex">
+            <div class="box is-fullheight is-fullwidth p-4 is-shadowless has-background-white-bis">
+              <figure class="image is-128x128">
+                <img class="is-rounded" src="/img/positions/{position.image}" alt={position.name} />
+              </figure>
+              <h3 class="title is-5 mt-4">{position.name}</h3>
+
               {#each position.benefits as benefit}
-                <li>{benefit}</li>
+                <span
+                  class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-3"
+                >
+                  <span class="icon mr-2">
+                    <i class="ci ci-checkbox_checked has-text-success" />
+                  </span>
+                  <span>{benefit}</span>
+                </span>
               {/each}
-            </ul>
+            </div>
           </div>
         {/each}
       </div>
     </div>
   </div>
 </div>
+<section class="hero  is-relative  hero--cta-bottom ">
+  <div class="hero-body py-0">
+    <div class="container">
+      <div class="card has-background-primary has-text-light p-8 card--cta is-shadowless">
+        <div class="columns">
+          <div class="column is-6">
+            <h3 class="title is-3  has-text-light">Démo en ligne sur demande</h3>
+            <p class=" mb-4">
+              Integer legentibus erat a ante historiarum dapibus. Cum ceteris in veneratione tui
+              montes, nascetur mus. Phasellus laoreet lorem vel dolor tempus vehicula.
+            </p>
+
+            <button class="button is-warning mb-4">Essayez CASE gratuitement</button>
+          </div>
+          <div class="column is-6 is-relative">
+            <figure class=" cta-img cta-img--01">
+              <img src="./../img/case-sidemenu-example.png" />
+            </figure>
+            <figure
+              class=" cta-img cta-img--02 is-flex is-justify-content-flex-end is-align-items-flex-end"
+            >
+              <img src="./../img/case-login-example.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Faqs -->
 <div class="container">
-  <div class="columns">
-    <div class="column is-3">
-      <h2 class="title is-3">Questions fréquentes au sujet de CASE</h2>
+  <div class="columns groups">
+    <div class="column is-3 group-names">
+      <h2 class=" group-name title is-3 has-line">Questions fréquentes au sujet de CASE</h2>
     </div>
-    <div class="column">
-      <ul>
+    <div class="column questions">
+      <div class="accordion">
         {#each faqs as faq}
-          <li on:click={() => (activeFaq === faq ? (activeFaq = null) : (activeFaq = faq))}>
-            <strong>{faq.question}</strong>
-            <i class:is-open={activeFaq === faq} class:is-closed={activeFaq !== faq}
-              >%% Icon chevron</i
-            >
-          </li>
+          <div
+            class="accordion-item is-flex is-justify-content-space-between is-fullwidth  pointer"
+            on:click={() => (activeFaq === faq ? (activeFaq = null) : (activeFaq = faq))}
+          >
+            <h3 class="title is-5 mb-0">{faq.question}</h3>
+            <i
+              class="ci"
+              class:ci-chevron_big_up={activeFaq === faq}
+              class:ci-chevron_big_down={activeFaq !== faq}
+            />
+          </div>
           {#if activeFaq === faq}
-            <p>{faq.answer}</p>
-          {/if}
+            <p class="mt-2" />{/if}
+          <hr />
         {/each}
-      </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -271,6 +318,92 @@
       top: 25%;
       bottom: unset;
       width: unset;
+    }
+  }
+  .key-features {
+    .box {
+      box-shadow: none;
+      transition: all 0.18s ease-in-out;
+      background-color: transparent;
+
+      &.is-active {
+        background-color: $warning-light;
+        color: $primary;
+      }
+    }
+    figure {
+      max-height: 424px;
+    }
+  }
+  .icon-text {
+    span.icon {
+      margin-top: 4px;
+
+      + span {
+        line-height: 1.5;
+      }
+    }
+  }
+  .cta-img {
+    img {
+      box-shadow: $shadow;
+    }
+    &--01 {
+      position: absolute;
+      width: 75%;
+      left: 0;
+
+      @include mobile {
+        position: relative;
+        top: 0;
+      }
+
+      @include tablet {
+        transform: translateY(-50%);
+        top: 50%;
+      }
+      @include tablet-only {
+        left: 24px;
+      }
+      @include widescreen-only {
+        width: 95%;
+      }
+    }
+    &--02 {
+      position: absolute;
+
+      @include mobile {
+        width: 46%;
+        bottom: 0;
+        right: 24px;
+      }
+      @include tablet-only {
+        right: 0;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 60%;
+      }
+      @include desktop {
+        right: 0;
+        bottom: -24px;
+        width: 60%;
+      }
+      @include widescreen {
+        width: 80%;
+        bottom: -70%;
+      }
+    }
+  }
+  .hero--cta-bottom {
+    margin-top: 9.6rem;
+    margin-bottom: 9.6rem;
+    @include widescreen {
+      margin-top: 15rem;
+      margin-bottom: 22.8rem;
+    }
+    @include fullhd {
+      margin-top: 18.4rem;
+      margin-bottom: 20.8rem;
     }
   }
 </style>
