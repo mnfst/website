@@ -56,10 +56,10 @@
         is-10-tablet 
         is-6-desktop"
         >
-          <h1 class="title is-1">Et si votre activité avait son app personnalisée ?</h1>
-          <p class="is-size-5">
+          <h1 class="title is-1">
             Gérez toute l'activité de votre PME sur la même plateforme avec CASE
-          </p>
+          </h1>
+          <p class="is-size-5">Une app personnalisée pour votre activité</p>
           <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-5">
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
@@ -67,7 +67,7 @@
               <span class="icon mr-2">
                 <i class="fas fa-layer-group has-text-warning" />
               </span>
-              <span>Centralisez production, commercial et RH</span>
+              <span>Gérez la production, les ventes et les ressources humaines</span>
             </span>
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
