@@ -4,7 +4,7 @@ export const keyFeatureContents: KeyFeature[] = [
   {
     name: 'Sécurité et privacité',
     description:
-      'Mot de passe, contenu limité par groupe, encryption SLL copies de sauvegarde quotidiennes.',
+      'Mot de passe, contenu limité par groupe, encryption SLL copies de sauvegarde quotidiennes',
     image: 'security.png',
     usages: ['planification', 'home', 'reporting-et-analytique', 'devis-et-factures']
   },
@@ -23,14 +23,13 @@ export const keyFeatureContents: KeyFeature[] = [
   },
   {
     name: 'Simple à utiliser',
-    description:
-      'Pas besoin de mode d’emploi, si vous savez utilisez Google, vous savez utiliser CASE',
+    description: `Pas besoin de mode d'emploi, si vous savez utilisez Google, vous savez utiliser CASE`,
     image: 'security.png',
     usages: ['home', 'operationnel', 'devis-et-factures']
   },
   {
     name: 'Intégration avec vos outils',
-    description: 'Intégration sur mesure avec d’autres outils du marché ou à vous',
+    description: `Intégration sur mesure avec d'autres outils du marché ou à vous`,
     image: 'case-factures.png',
     usages: ['home']
   },
@@ -73,7 +72,7 @@ export const keyFeatureContents: KeyFeature[] = [
   },
   {
     name: 'Génération de rapports',
-    description: 'Faites-vous livrer des rapports d’activités personnalisés sur votre boite email',
+    description: `Faites-vous livrer des rapports d'activités personnalisés sur votre boite email`,
     image: 'security.png',
     usages: ['reporting-et-analytique']
   },

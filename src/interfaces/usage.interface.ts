@@ -7,6 +7,7 @@ export interface Usage {
   subtitle: string
   slug: string
   description: string
+  shortDescription: string
   positionsInterested: {
     title: string
     subtitle: string
