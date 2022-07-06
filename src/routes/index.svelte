@@ -16,6 +16,16 @@
 
   const metaTitle: string = `CASE, L'Application Métier des PME`
   const metaDescription: string = `Gérez toute l'activité de votre entreprise sur la même plateforme.`
+
+  let extendedTableLine: number
+
+  function toggleExtendedTableLine(lineNumber: number): void {
+    if (extendedTableLine === lineNumber) {
+      extendedTableLine = null
+    } else {
+      extendedTableLine = lineNumber
+    }
+  }
 </script>
 
 <!-- TODO: add OG and TW cards images and alt texts-->
@@ -103,9 +113,9 @@
 <div class="container content">
   <div class="columns">
     <div class="column is-10">
-      <h2 class="title is-2 has-line mt-8">CASE est l’application métier des PME</h2>
+      <h2 class="title is-2 has-line mt-8">CASE est l'application métier des PME</h2>
       <p>
-        CASE est l’outil qui centralise l’activité des petites et moyennes organisations. Immaginez
+        CASE est l'outil qui centralise l'activité des petites et moyennes organisations. Immaginez
         une application à votre nom qui rassemble les documents, informations et communications
         néécessaires à la producitvité.
       </p>
@@ -247,7 +257,7 @@
         <p class="has-text-grey-dark">
           CASE est une application métier créée pour aider les PME dans leurs activités au
           quotidien. Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE
-          s’adapte à vous en se configurant avec vos processus et vos équipements.
+          s'adapte à vous en se configurant avec vos processus et vos équipements.
         </p>
       </div>
     </div>
@@ -262,7 +272,7 @@
               <i class="ci ci-settings_future is-size-4 has-text-link" />
             </span>
             <h3 class="title is-3 mt-4">On le configure pour vous</h3>
-            <p>Vous êtes expert dans votre activité, pas dans la configuration d’outils.</p>
+            <p>Vous êtes expert dans votre activité, pas dans la configuration d'outils.</p>
             <p>
               Pour cela, vous indiquez simplement votre besoin, nous proposons la solution
               technique.
@@ -285,7 +295,7 @@
             <span class="p-2 has-background-info is-inline-flex">
               <i class="ci ci-devices is-size-4 has-text-primary" />
             </span>
-            <h3 class="title is-3 mt-4">Toujours accessible depuis n’importe quel navigateur</h3>
+            <h3 class="title is-3 mt-4">Toujours accessible depuis n'importe quel navigateur</h3>
             <ul>
               <li>Votre application métier CASE est accessible depuis votre navigateur web.</li>
 
@@ -323,7 +333,7 @@
                 Si vous quittez le navire, faites le avec vos données,le code et la propriété
                 intellectuelle
               </li>
-              <li>Récupérez votre CASE à tout moment pour l’héberger et le modifier</li>
+              <li>Récupérez votre CASE à tout moment pour l'héberger et le modifier</li>
               <li>Forfait annuel sans engagement</li>
             </ul>
           </div>
@@ -344,7 +354,7 @@
       <h2 class="title is-2 has-line">
         Comment se positionne CASE par rapport aux solutions alternatives ?
       </h2>
-      <p>Un comparatif de CASE avec d’autres solutions digitales disponibles sur le marché.</p>
+      <p>Un comparatif de CASE avec d'autres solutions digitales disponibles sur le marché.</p>
     </div>
   </div>
 </div>
@@ -354,8 +364,18 @@
       <div class="column is-4-mobile is-3-tablet is-4-desktop" />
       <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">CASE</div>
       <div class="column is-2 has-text-centered">Excel</div>
-      <div class="column is-2 has-text-centered" title="Logiciel de niche créé uniquement pour un secteur d’activité. Généralement des logiciels fermés et destinés à un usage restreint">Progiciel niche</div>
-      <div class="column is-2 has-text-centered" title="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME.">Logiciel ERP</div>
+      <div
+        class="column is-2 has-text-centered"
+        title="Logiciel de niche créé uniquement pour un secteur d'activité. Généralement des logiciels fermés et destinés à un usage restreint"
+      >
+        Progiciel niche
+      </div>
+      <div
+        class="column is-2 has-text-centered"
+        title="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME."
+      >
+        Logiciel ERP
+      </div>
     </div>
     <div class="columns is-mobile">
       <div class="column is-12">
@@ -363,19 +383,25 @@
       </div>
     </div>
     <!-- First line -->
-    <div class="columns is-mobile">
+    <div class="columns is-mobile" on:click={() => toggleExtendedTableLine(1)}>
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
         <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
           <span class="icon">
-            <i class="ci ci-chevron_big_right" />
+            <i
+              class="ci"
+              class:ci-chevron_big_right={extendedTableLine !== 1}
+              class:ci-chevron_big_down={extendedTableLine === 1}
+            />
           </span>
           <div class="pl-2">
             <span>Données sécurisées</span>
-            <p class=" has-text-grey mt-2">
-              Avec CASE vous choisissez vos utilisateurs et leur niveau d’accès. Si jamais une
-              erreur survient, nous pouvons rétablir les données précédentes grâce aux copies de
-              sauvegarde effectuées quotidiennement.
-            </p>
+            {#if extendedTableLine === 1}
+              <p class=" has-text-grey mt-2">
+                Avec CASE vous choisissez vos utilisateurs et leur niveau d'accès. Si jamais une
+                erreur survient, nous pouvons rétablir les données précédentes grâce aux copies de
+                sauvegarde effectuées quotidiennement.
+              </p>
+            {/if}
           </div>
         </span>
       </div>
@@ -393,7 +419,7 @@
         <span class="icon">
           <i
             class="ci ci-id_card has-text-warning"
-            title="Souvent opaque et au bon vouloir de l’éditeur du logiciel."
+            title="Souvent opaque et au bon vouloir de l'éditeur du logiciel."
           />
         </span>
       </div>
@@ -410,18 +436,24 @@
     </div>
 
     <!-- Second line -->
-    <div class="columns is-mobile">
+    <div class="columns is-mobile" on:click={() => toggleExtendedTableLine(2)}>
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
         <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
           <span class="icon">
-            <i class="ci ci-chevron_big_down" />
+            <i
+              class="ci"
+              class:ci-chevron_big_right={extendedTableLine !== 2}
+              class:ci-chevron_big_down={extendedTableLine === 2}
+            />
           </span>
           <div class="pl-2">
             <span>Propriétaire de vos données</span>
-            <p class=" has-text-grey mt-2">
-              Si vous quittez CASE, vous partez avec vos données, le code et la propriété
-              intellectuelle.
-            </p>
+            {#if extendedTableLine === 2}
+              <p class=" has-text-grey mt-2">
+                Si vous quittez CASE, vous partez avec vos données, le code et la propriété
+                intellectuelle.
+              </p>
+            {/if}
           </div>
         </span>
       </div>
@@ -453,18 +485,24 @@
     </div>
 
     <!-- Third line -->
-    <div class="columns is-mobile">
+    <div class="columns is-mobile" on:click={() => toggleExtendedTableLine(3)}>
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
         <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
           <span class="icon">
-            <i class="ci ci-chevron_big_right" />
+            <i
+              class="ci"
+              class:ci-chevron_big_right={extendedTableLine !== 3}
+              class:ci-chevron_big_down={extendedTableLine === 3}
+            />
           </span>
           <div class="pl-2">
             <span>Adapté à votre activité</span>
-            <p class=" has-text-grey mt-2">
-              Chaque application CASE est mise en place uniquement pour un besoin particulier. C’est
-              donc l’outil qui s’adapte à votre activité et non l’inverse.
-            </p>
+            {#if extendedTableLine === 3}
+              <p class=" has-text-grey mt-2">
+                Chaque application CASE est mise en place uniquement pour un besoin particulier.
+                C'est donc l'outil qui s'adapte à votre activité et non l'inverse.
+              </p>
+            {/if}
           </div>
         </span>
       </div>
@@ -482,7 +520,7 @@
         <span class="icon">
           <i
             class="ci ci-id_card has-text-warning"
-            title="Adapté à votre secteur d’activité mais pas à votre façon de faire"
+            title="Adapté à votre secteur d'activité mais pas à votre façon de faire"
           />
         </span>
       </div>
@@ -498,19 +536,25 @@
       </div>
     </div>
     <!-- Fourth line -->
-    <div class="columns is-mobile">
+    <div class="columns is-mobile" on:click={() => toggleExtendedTableLine(4)}>
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
         <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
           <span class="icon">
-            <i class="ci ci-chevron_big_right" />
+            <i
+              class="ci"
+              class:ci-chevron_big_right={extendedTableLine !== 4}
+              class:ci-chevron_big_down={extendedTableLine === 4}
+            />
           </span>
           <div class="pl-2">
             <span>Evolutif</span>
-            <p class=" has-text-grey mt-2">
-              Une application en bonne santé est une application qui évolue dans le temps. Nouvelles
-              fonctionnalités, nouveaux usages, nouvelle ergonomie… CASE avance dans la même
-              direction que votre entreprise.
-            </p>
+            {#if extendedTableLine === 4}
+              <p class=" has-text-grey mt-2">
+                Une application en bonne santé est une application qui évolue dans le temps.
+                Nouvelles fonctionnalités, nouveaux usages, nouvelle ergonomie… CASE avance dans la
+                même direction que votre entreprise.
+              </p>
+            {/if}
           </div>
         </span>
       </div>
@@ -546,18 +590,24 @@
     </div>
 
     <!-- 5th line -->
-    <div class="columns is-mobile">
+    <div class="columns is-mobile" on:click={() => toggleExtendedTableLine(5)}>
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
         <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
           <span class="icon">
-            <i class="ci ci-chevron_big_right" />
+            <i
+              class="ci"
+              class:ci-chevron_big_right={extendedTableLine !== 5}
+              class:ci-chevron_big_down={extendedTableLine === 5}
+            />
           </span>
           <div class="pl-2">
             <span>Intégrations</span>
-            <p class=" has-text-grey mt-2">
-              CASE est ouvert et se connecte à tous vos appareils qui le permettent. Aucune
-              restriction logicielle ou légale ne peut l'empêcher.
-            </p>
+            {#if extendedTableLine === 5}
+              <p class=" has-text-grey mt-2">
+                CASE est ouvert et se connecte à tous vos appareils qui le permettent. Aucune
+                restriction logicielle ou légale ne peut l'empêcher.
+              </p>
+            {/if}
           </div>
         </span>
       </div>
@@ -580,7 +630,7 @@
         <span class="icon">
           <i
             class="ci ci-id_card has-text-warning"
-            title="Dans la limite de ce que l’éditeur vous autorise à intégrer"
+            title="Dans la limite de ce que l'éditeur vous autorise à intégrer"
           />
         </span>
       </div>
@@ -592,19 +642,25 @@
     </div>
 
     <!-- 6th line -->
-    <div class="columns is-mobile">
+    <div class="columns is-mobile" on:click={() => toggleExtendedTableLine(6)}>
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
         <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
           <span class="icon">
-            <i class="ci ci-chevron_big_right" />
+            <i
+              class="ci"
+              class:ci-chevron_big_right={extendedTableLine !== 6}
+              class:ci-chevron_big_down={extendedTableLine === 6}
+            />
           </span>
           <div class="pl-2">
             <span>Open source</span>
-            <p class=" has-text-grey mt-2">
-              CASE est un logiciel Open Source qui se configure et s’adapte à votre besoin. Le
-              code-source est donc ouvert et peut être personnalisé ou modifié par des développeurs
-              tiers.
-            </p>
+            {#if extendedTableLine === 6}
+              <p class=" has-text-grey mt-2">
+                CASE est un logiciel Open Source qui se configure et s'adapte à votre besoin. Le
+                code-source est donc ouvert et peut être personnalisé ou modifié par des
+                développeurs tiers.
+              </p>
+            {/if}
           </div>
         </span>
       </div>
@@ -657,8 +713,8 @@
           <h3 class="title is-3 has-line">Ne changez pas votre façon de faire, boostez-la.</h3>
           <p class="has-text-grey-dark">
             Plûtot que de vous imposer une façon de faire, CASE fait le choix de la flexibilité et
-            du conseil. Ses différentes briques s’ajoutent de façon a créer une application à votre
-            taille et faite pour votre activité. Notre équipe vous aide à mettre en place l’app dont
+            du conseil. Ses différentes briques s'ajoutent de façon a créer une application à votre
+            taille et faite pour votre activité. Notre équipe vous aide à mettre en place l'app dont
             vous avez besoin.
           </p>
         </div>
