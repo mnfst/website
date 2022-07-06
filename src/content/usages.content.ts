@@ -7,7 +7,8 @@ export const usageContents: Usage[] = [
     cover01: 'operationnel.png',
     cover02: 'operationnel.png',
     image: 'erp-operationnel.png',
-    description: 'Gestion de projet, travaux, livrables et recette',
+    description: 'Production, travaux, livrables et recette. Au bureau comme sur le terrain !',
+    shortDescription: 'Production, travaux, livrables et recette',
     title: 'Gérez toutes les opérations de votre entreprise au même endroit',
     subtitle: 'Sur le terrain, en chaîne de production ou au bureau, chacun collabore avec CASE.',
     positionsInterested: {
@@ -59,7 +60,8 @@ export const usageContents: Usage[] = [
     cover01: 'planification/cover-01.png',
     cover02: 'planification/cover-02.jpg',
     image: 'erp-operationnel.png',
-    description: 'Organisation des agendas, des équipes et du temps passé',
+    description: 'Assignez les équipes sur les tâches et optimisez les délais de livraison.',
+    shortDescription: 'Organisation des agendas, des équipes et des projets',
     title:
       'Une app de planification pour gérer les ressources humaines et physiques de votre activité',
     subtitle:
@@ -129,7 +131,9 @@ export const usageContents: Usage[] = [
     cover01: 'reporting-et-analytique.png',
     cover02: 'operationnel.png',
     image: 'erp-operationnel.png',
-    description: 'Graphiques, tableaux, rapports, etc.',
+    description:
+      'Data-visualization, rapports quotidiens, etc. Toutes les données nécessaires pour prendre les meilleures décisions.',
+    shortDescription: 'Un tableau de bord pour votre business',
     title:
       'Gérez la situation en temps réel avec CASE : la seule application dont votre entreprise a besoin',
     subtitle:
@@ -181,7 +185,9 @@ export const usageContents: Usage[] = [
     cover01: 'devis-et-factures.png',
     cover02: 'operationnel.png',
     image: 'erp-operationnel.png',
-    description: 'Devis et factures',
+    description:
+      'Gérez vos ventes directement depuis CASE pour gagner du temps et éviter de dupliquer vos données.',
+    shortDescription: 'Gestion des ventes et des clients',
     title: 'CASE: L’app tout en un pour gérer la production et la vente de votre PME',
     subtitle: 'Une app simple qui centralise ce que vous faites et comment vous le vendez.',
     positionsInterested: {

@@ -56,10 +56,10 @@
         is-10-tablet 
         is-6-desktop"
         >
-          <h1 class="title is-1">
-            Gérez toute l'activité de votre PME sur la même plateforme avec CASE
-          </h1>
-          <p class="is-size-5">Une app personnalisée pour votre activité</p>
+          <h1 class="title is-1">Gérez toute votre activité sur la même plateforme</h1>
+          <p class="is-size-5">
+            CASE est la seule application dont vous aurez besoin pour mener votre activité
+          </p>
           <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-5">
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
@@ -67,7 +67,7 @@
               <span class="icon mr-2">
                 <i class="fas fa-layer-group has-text-warning" />
               </span>
-              <span>Gérez la production, les ventes et les ressources humaines</span>
+              <span>Gérez tout au même endroit: production, planification et vente</span>
             </span>
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
@@ -83,7 +83,7 @@
               <span class="  icon mr-2">
                 <i class="fas fa-shield-alt has-text-warning" />
               </span>
-              <span>Prenez de meilleures décisions</span>
+              <span>Prenez de meilleures décisions grâce à la data-visualisation</span>
             </span>
           </div>
 
@@ -153,8 +153,8 @@
         <div class="content">
           <h2 class="title is-2 has-line mt-8">On travaille mieux quand on a les bons outils</h2>
           <p class="has-text-white-bis">
-            CASE vous est livré avec un paquet de fonctionnalités prêtes à être employées pour votre
-            cause.
+            En plus de vos fonctionnalités personnalisées, CASE inclut une multitude de
+            fonctionnalités prêtes à être activées pour vous.
           </p>
         </div>
       </div>
@@ -341,7 +341,10 @@
 <div class="container my-8">
   <div class="columns">
     <div class="column is-12 has-text-centered">
-      <h2 class="title is-2 has-line">Et vous, qu’utilisez-vous ?</h2>
+      <h2 class="title is-2 has-line">
+        Comment se positionne CASE par rapport aux solutions alternatives ?
+      </h2>
+      <p>Un comparatif de CASE avec d’autres solutions digitales disponibles sur le marché.</p>
     </div>
   </div>
 </div>
@@ -351,8 +354,8 @@
       <div class="column is-4-mobile is-3-tablet is-4-desktop" />
       <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">CASE</div>
       <div class="column is-2 has-text-centered">Excel</div>
-      <div class="column is-2 has-text-centered">ProChantier</div>
-      <div class="column is-2 has-text-centered">Sage</div>
+      <div class="column is-2 has-text-centered" title="Logiciel de niche créé uniquement pour un secteur d’activité. Généralement des logiciels fermés et destinés à un usage restreint">Progiciel niche</div>
+      <div class="column is-2 has-text-centered" title="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME.">Logiciel ERP</div>
     </div>
     <div class="columns is-mobile">
       <div class="column is-12">
@@ -367,8 +370,12 @@
             <i class="ci ci-chevron_big_right" />
           </span>
           <div class="pl-2">
-            <span>Données sécurisés</span>
-            <!-- Sub content here -->
+            <span>Données sécurisées</span>
+            <p class=" has-text-grey mt-2">
+              Avec CASE vous choisissez vos utilisateurs et leur niveau d’accès. Si jamais une
+              erreur survient, nous pouvons rétablir les données précédentes grâce aux copies de
+              sauvegarde effectuées quotidiennement.
+            </p>
           </div>
         </span>
       </div>
@@ -384,7 +391,10 @@
       </div>
       <div class="column is-2 has-text-centered">
         <span class="icon">
-          <i class="ci ci-check_big has-text-success" />
+          <i
+            class="ci ci-id_card has-text-warning"
+            title="Souvent opaque et au bon vouloir de l’éditeur du logiciel."
+          />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -398,6 +408,7 @@
         <hr class="my-0" />
       </div>
     </div>
+
     <!-- Second line -->
     <div class="columns is-mobile">
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
@@ -406,11 +417,10 @@
             <i class="ci ci-chevron_big_down" />
           </span>
           <div class="pl-2">
-            <span>Notifications</span>
+            <span>Propriétaire de vos données</span>
             <p class=" has-text-grey mt-2">
-              Avec CASE, vous choisissez les niveaux d’accès de chaque utilisateur, et si le pire
-              arrive quand même, nous pouvons rétablir les données précédentes grâce aux copies de
-              sauvegarde effectuées quotidiennement.
+              Si vous quittez CASE, vous partez avec vos données, le code et la propriété
+              intellectuelle.
             </p>
           </div>
         </span>
@@ -441,6 +451,7 @@
         <hr class="my-0" />
       </div>
     </div>
+
     <!-- Third line -->
     <div class="columns is-mobile">
       <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
@@ -449,8 +460,11 @@
             <i class="ci ci-chevron_big_right" />
           </span>
           <div class="pl-2">
-            <span>Ergonomie intéligente</span>
-            <!-- Sub content here -->
+            <span>Adapté à votre activité</span>
+            <p class=" has-text-grey mt-2">
+              Chaque application CASE est mise en place uniquement pour un besoin particulier. C’est
+              donc l’outil qui s’adapte à votre activité et non l’inverse.
+            </p>
           </div>
         </span>
       </div>
@@ -466,7 +480,10 @@
       </div>
       <div class="column is-2 has-text-centered">
         <span class="icon">
-          <i class="ci ci-close_big has-text-danger" />
+          <i
+            class="ci ci-id_card has-text-warning"
+            title="Adapté à votre secteur d’activité mais pas à votre façon de faire"
+          />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -488,8 +505,106 @@
             <i class="ci ci-chevron_big_right" />
           </span>
           <div class="pl-2">
-            <span>Propriétaire de vos données</span>
-            <!-- Sub content here -->
+            <span>Evolutif</span>
+            <p class=" has-text-grey mt-2">
+              Une application en bonne santé est une application qui évolue dans le temps. Nouvelles
+              fonctionnalités, nouveaux usages, nouvelle ergonomie… CASE avance dans la même
+              direction que votre entreprise.
+            </p>
+          </div>
+        </span>
+      </div>
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i
+            class="ci ci-id_card has-text-warning"
+            title="Avec quelques compétences en tableur, vous pouvez adapter vos tableaux à votre activité… Mais attention à ne pas tout détruire !"
+          />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+
+    <!-- 5th line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
+        <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
+          <span class="icon">
+            <i class="ci ci-chevron_big_right" />
+          </span>
+          <div class="pl-2">
+            <span>Intégrations</span>
+            <p class=" has-text-grey mt-2">
+              CASE est ouvert et se connecte à tous vos appareils qui le permettent. Aucune
+              restriction logicielle ou légale ne peut l'empêcher.
+            </p>
+          </div>
+        </span>
+      </div>
+      <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">
+        <span class="icon">
+          <i class="ci ci-check_big has-text-success" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i class="ci ci-close_big has-text-danger" />
+        </span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <span class="icon">
+          <i
+            class="ci ci-id_card has-text-warning"
+            title="Dans la limite de ce que l’éditeur vous autorise à intégrer"
+          />
+        </span>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-12">
+        <hr class="my-0" />
+      </div>
+    </div>
+
+    <!-- 6th line -->
+    <div class="columns is-mobile">
+      <div class="column is-4-mobile is-3-tablet is-4-desktop is-expandable">
+        <span class="is-flex is-align-items-flex-start is-justify-content-flex-start pointer">
+          <span class="icon">
+            <i class="ci ci-chevron_big_right" />
+          </span>
+          <div class="pl-2">
+            <span>Open source</span>
+            <p class=" has-text-grey mt-2">
+              CASE est un logiciel Open Source qui se configure et s’adapte à votre besoin. Le
+              code-source est donc ouvert et peut être personnalisé ou modifié par des développeurs
+              tiers.
+            </p>
           </div>
         </span>
       </div>
@@ -519,16 +634,18 @@
         <hr class="my-0" />
       </div>
     </div>
+
     <!-- CTA line -->
     <div class="columns is-mobile">
       <div class="column is-4-mobile is-3-tablet is-4-desktop" />
       <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered is-size-7">
-        <p class="mb-1">Vous souhaitez implémenter CASE au sein de votre entreprise ?</p>
-        <a href="" class="button is-small is-fullwidth is-success">Contactez-nous</a>
+        <p class="mb-1">Vous souhaitez implémenter CASE pour votre entreprise ?</p>
+        <a href="/contact" class="button is-small is-fullwidth is-success">Contactez-nous</a>
       </div>
     </div>
   </div>
 </div>
+
 <!-- Clients -->
 <div class="container-fluid has-background-white-bis py-9 mb-8 mt-9">
   <div class="container mt-8">

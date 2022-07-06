@@ -35,22 +35,20 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="/" class:is-active={path === '/'}> Home </a>
+        <a class="navbar-item" href="/" class:is-active={path === '/'}> Accueil </a>
         <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
 
         <div class="navbar-item has-dropdown is-hoverable is-mega">
-          <span class="navbar-link" class:is-active={path.includes('/usages/')}> Usages </span>
+          <span class="navbar-link" class:is-active={path.includes('/usages/')}>
+            Votre besoin
+          </span>
 
           <div class="navbar-dropdown">
             <div class="container">
               <div class="columns is-multiline columns--fullwidth">
                 <div class="column is-12-touch is-4-desktop has-separator">
-                  <p class="title is-3 has-line is-hidden-touch">Usages</p>
-                  <p>
-                    Introduction to usages: Quam temere in vitiis, legem sancimus haerentia.
-                    Ambitioni dedisse scripsisse iudicaretur. Plura mihi bona sunt, inclinet, amari
-                    petere vellent. Ut enim ad minim veniam, quis nostrud exercitation.
-                  </p>
+                  <p class="title is-3 has-line is-hidden-touch">Votre besoin</p>
+                  <p>En quoi est-ce CASE peut améliorer votre organisation et vos performances ?</p>
                 </div>
                 <div class="column is-12-touch is-8-desktop">
                   <div class="columns is-multiline">
@@ -65,7 +63,7 @@
                             <i class="ci ci-settings_future is-size-4 has-text-warning" />
                           </span>
                           <span class="py-1"> {usage.name}</span>
-                          <p class="has-text-grey">Explanation oh this usage</p>
+                          <p class="has-text-grey">{usage.shortDescription}</p>
                         </a>
                       </div>
                     {/each}
@@ -80,7 +78,7 @@
       <div class="navbar-end ">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-warning" href="/demo"> Essayez CASE </a>
+            <a class="button is-warning" href="/contact"> Essayez CASE </a>
           </div>
         </div>
       </div>
