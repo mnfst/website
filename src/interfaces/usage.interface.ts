@@ -2,6 +2,8 @@ export interface Usage {
   name: string
   title: string
   image: string
+  cover01: string
+  cover02: string
   subtitle: string
   slug: string
   description: string

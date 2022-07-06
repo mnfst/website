@@ -29,3 +29,5 @@ button,
     }
   }
 }
+
+$colors: map-merge($colors, $custom-colors);
