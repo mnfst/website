@@ -247,8 +247,12 @@
 <div class="container mb-8 mt-5">
   <div class="columns ">
     <div class="column">
-      <h2 class="title is-2 has-line">Regardez ce que CASE peut faire pour vous</h2>
-      <p>Lancez la digitalisation de votre activité grâce aux fonctionnalités de CASE.</p>
+      <h2 class="title is-2 has-line">
+        Quels sont vos challenges qui peuvent être optimisés par CASE ?
+      </h2>
+      <p>
+        Passez au niveau supérieur en digitalisant votre activité grâce aux fonctionnalités de CASE.
+      </p>
     </div>
   </div>
   <div class="columns is-multiline">

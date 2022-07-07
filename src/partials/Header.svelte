@@ -48,7 +48,11 @@
               <div class="columns is-multiline columns--fullwidth">
                 <div class="column is-12-touch is-4-desktop has-separator">
                   <p class="title is-3 has-line is-hidden-touch">Votre besoin</p>
-                  <p>En quoi est-ce CASE peut améliorer votre organisation et vos performances ?</p>
+                  <p>
+                    CASE optimise les processus de production et de distribution des entreprises et
+                    organisations.
+                  </p>
+                  <p>Voyez comment CASE fonctionne pour les différents usages.</p>
                 </div>
                 <div class="column is-12-touch is-8-desktop">
                   <div class="columns is-multiline">

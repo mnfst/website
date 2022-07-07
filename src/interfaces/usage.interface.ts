@@ -16,4 +16,5 @@ export interface Usage {
   paragraphs: { title: string; content: string }[]
   metaTitle: string
   metaDescription: string
+  keywords: string[]
 }

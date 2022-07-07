@@ -66,9 +66,9 @@
         is-10-tablet 
         is-6-desktop"
         >
-          <h1 class="title is-1">Gérez toute votre activité sur la même plateforme</h1>
+          <h1 class="title is-1">Pilotez votre PME sur une seule et même plateforme</h1>
           <p class="is-size-5">
-            CASE est la seule application dont vous aurez besoin pour mener votre activité
+            CASE est la seule application dont vous aurez besoin pour gérer votre activité
           </p>
           <div class="is-flex is-align-items-center is-flex-wrap-wrap mt-4 mb-5">
             <span
@@ -77,7 +77,7 @@
               <span class="icon mr-2">
                 <i class="fas fa-layer-group has-text-warning" />
               </span>
-              <span>Gérez tout au même endroit: production, planification et vente</span>
+              <span>Gérez la production, la planification et les ventes</span>
             </span>
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
@@ -115,11 +115,11 @@
     <div class="column is-10">
       <h2 class="title is-2 has-line mt-8">CASE est l'application métier des PME</h2>
       <p>
-        CASE est l'outil qui centralise l'activité des petites et moyennes organisations. Immaginez
-        une application à votre nom qui rassemble les documents, informations et communications
-        néécessaires à la producitvité.
+        CASE est une application métier créée pour aider les PME dans leurs activités au quotidien.
+        Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE s'adapte à vos
+        processus et à vos challenges.
       </p>
-      <p>Et vous, quels sont vos principaux challenges ?</p>
+      <p>Quels sont vos challenges qui peuvent être optimisés par CASE ?</p>
     </div>
   </div>
 </div>
@@ -139,8 +139,9 @@
             <h3 class="title is-5 mb-3">{usage.name}</h3>
             <p class="has-text-grey-dark">{usage.description}</p>
             <div class="tags are-small">
-              <span class="tag is-dark">Managers</span>
-              <span class="tag is-dark">Commerciaux</span>
+              {#each usage.keywords as keyword}
+                <span class="tag is-success">{keyword}</span>
+              {/each}
             </div>
           </div>
           <a href="/usages/{usage.slug}" class="button is-small is-primary">
@@ -163,8 +164,8 @@
         <div class="content">
           <h2 class="title is-2 has-line mt-8">On travaille mieux quand on a les bons outils</h2>
           <p class="has-text-white-bis">
-            En plus de vos fonctionnalités personnalisées, CASE inclut une multitude de
-            fonctionnalités prêtes à être activées pour vous.
+            CASE inclut une multitude de fonctionnalités prêtes à fonctionner pour optimiser vos
+            processus.
           </p>
         </div>
       </div>
@@ -250,19 +251,6 @@
 
 <!-- Why choose CASE ? -->
 <div class="advantages">
-  <div class="container my-8">
-    <div class="columns">
-      <div class="column is-8">
-        <h2 class="title is-2 has-line">Comment ça marche ?</h2>
-        <p class="has-text-grey-dark">
-          CASE est une application métier créée pour aider les PME dans leurs activités au
-          quotidien. Comme votre entreprise ne fonctionne pas comme celle de votre voisin, CASE
-          s'adapte à vous en se configurant avec vos processus et vos équipements.
-        </p>
-      </div>
-    </div>
-  </div>
-
   <section class="hero is-white">
     <div class="hero-body py-4">
       <div class="container content">
@@ -303,7 +291,7 @@
                 Les données sont sécurisées en ligne (UE), avec copies de sauvegarde quotidiennes
               </li>
 
-              <li>Mode hors-ligne et app mobile pour</li>
+              <li>Mode hors-ligne et app mobile pour usage dans toutes les conditions</li>
             </ul>
           </div>
           <div class="column is-6 py-0 pr-0">
@@ -329,12 +317,12 @@
               appartiennent à ceux et celles qui les créent
             </p>
             <ul>
+              <li>Export des donnés simplifié</li>
+              <li>Forfait annuel sans engagement</li>
               <li>
                 Si vous quittez le navire, faites le avec vos données,le code et la propriété
                 intellectuelle
               </li>
-              <li>Récupérez votre CASE à tout moment pour l'héberger et le modifier</li>
-              <li>Forfait annuel sans engagement</li>
             </ul>
           </div>
           <div class="column is-6 py-0 pl-0">
@@ -450,8 +438,8 @@
             <span>Propriétaire de vos données</span>
             {#if extendedTableLine === 2}
               <p class=" has-text-grey mt-2">
-                Si vous quittez CASE, vous partez avec vos données, le code et la propriété
-                intellectuelle.
+                Avec CASE vous êtes et resterez toujours le propriétaire de vos données et du
+                code-source de votre application.
               </p>
             {/if}
           </div>
@@ -499,8 +487,8 @@
             <span>Adapté à votre activité</span>
             {#if extendedTableLine === 3}
               <p class=" has-text-grey mt-2">
-                Chaque application CASE est mise en place uniquement pour un besoin particulier.
-                C'est donc l'outil qui s'adapte à votre activité et non l'inverse.
+                Chaque installation CASE est unique car configurée pour votre besoin uniqument.
+                C'est CASE s'adapte à votre activité et non l'inverse.
               </p>
             {/if}
           </div>
