@@ -7,6 +7,7 @@ export interface Usage {
   subtitle: string
   slug: string
   description: string
+  shortDescription: string
   positionsInterested: {
     title: string
     subtitle: string
@@ -15,4 +16,5 @@ export interface Usage {
   paragraphs: { title: string; content: string }[]
   metaTitle: string
   metaDescription: string
+  keywords: string[]
 }

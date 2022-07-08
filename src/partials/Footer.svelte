@@ -13,9 +13,9 @@
           <img src="/img/logo-case-white.svg" width="117" alt="CASE logo" />
         </a>
         <p class="pt-4">
-          CASE est une plateforme de gestion d'activité personnalisable pour gérer la production, la
-          gestion et la commercialisation de produits et de services. Elle gère votre activité de
-          bout en bout.
+          CASE est une plateforme de gestion d'activité personnalisable pour piloter la production,
+          la gestion et la commercialisation de produits et de services. Elle vous permet de gérer
+          votre activité de bout en bout.
         </p>
       </div>
       <div class="column is-3-tablet is-2-widescreen is-offset-2-widescreen">

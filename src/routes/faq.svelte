@@ -32,7 +32,9 @@
       <div class="columns">
         <div class="column has-text-centered">
           <h1 class="title is-6 is-uppercase">FAQ</h1>
-          <h2 class="title is-2">Hello! Comment pouvons-nous vous aider ?</h2>
+          <h2 class="title is-2">
+            Toutes les questions que vous pouvez vous poser au sujet de CASE
+          </h2>
         </div>
       </div>
     </div>

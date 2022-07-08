@@ -2,6 +2,12 @@ import type { Faq } from '../interfaces/faq.interface'
 
 export const faqContents: Faq[] = [
   {
+    question: `Qu'est ce que CASE ?`,
+    answer: `CASE est una application web et mobile destinée aux entreprises et aux organisations. L'application est largement personnalisable pour adapter ses fonctionnalités à vos processus. `,
+    usages: [],
+    group: 'Général'
+  },
+  {
     question: 'Quelles sont les étapes pour implémenter CASE ?',
     answer: `Vous pensez que CASE peut vous faire gagner du temps et améliorer votre productivité ?
 

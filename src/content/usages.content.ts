@@ -7,7 +7,8 @@ export const usageContents: Usage[] = [
     cover01: 'operationnel.png',
     cover02: 'operationnel.png',
     image: 'erp-operationnel.png',
-    description: 'Gestion de projet, travaux, livrables et recette',
+    description: 'Gérez la production et les livrables, au bureau comme sur le terrain !',
+    shortDescription: 'Production, travaux, livrables et recette',
     title: 'Gérez toutes les opérations de votre entreprise au même endroit',
     subtitle: 'Sur le terrain, en chaîne de production ou au bureau, chacun collabore avec CASE.',
     positionsInterested: {
@@ -18,10 +19,10 @@ export const usageContents: Usage[] = [
         {
           name: 'Agents opérationnels',
           image: 'manager.jpg',
-          benefits: ['Accès rapide sur l’app', 'Remplace un processus non optimisé']
+          benefits: [`Accès rapide sur l'app`, 'Remplace un processus non optimisé']
         },
         {
-          name: 'Chefs d’équipe',
+          name: `Chefs d'équipe`,
           image: 'sales.jpg',
           benefits: ['Gérer les collaborateurs et les ressources', 'Données en temps réel']
         },
@@ -40,18 +41,19 @@ export const usageContents: Usage[] = [
     paragraphs: [
       {
         title: 'Mettez en place un processus optimisé et sécurisé',
-        content: `<p>CASE s’adresse à ceux et celles qui travaillent en équipe. Comment fonctionne la vôtre ?  L’échange d’informations et les validations sont au cœur des processus des entreprises. Comment peut-on les améliorer ? Les rendre plus sûrs ? Et le tout avec une expérience intuitive pour les collaborateurs.
+        content: `<p>CASE s'adresse à ceux et celles qui travaillent en équipe. Comment fonctionne la vôtre ?  L'échange d'informations et les validations sont au cœur des processus des entreprises. Comment peut-on les améliorer ? Les rendre plus sûrs ? Et le tout avec une expérience intuitive pour les collaborateurs.
 			</p>`
       },
       {
         title: 'Une application, plusieurs entrées',
-        content: `<p>Les métiers sont différents et leurs besoins également. Une application CASE sera vue de façon totalement différente par différents types d’utilisateurs, par exemple: l’opérateur va créer des ressources, son chef les valider et le commercial les facturera. Dans ce cas, chacun aura un accès limité à son périmètre.
+        content: `<p>Les métiers sont différents et leurs besoins également. Une application CASE sera vue de façon totalement différente par différents types d'utilisateurs, par exemple: l'opérateur va créer des ressources, son chef les valider et le commercial les facturera. Dans ce cas, chacun aura un accès limité à son périmètre.
 		</p>`
       }
     ],
     metaTitle: 'App opérationnelle  | CASE',
     metaDescription:
-      'Sur le terrain, en chaîne de production ou au bureau, chacun collabore avec CASE.'
+      'Sur le terrain, en chaîne de production ou au bureau, chacun collabore avec CASE.',
+    keywords: ['Digitalisation de processus', 'Mobilité']
   },
   {
     name: 'Planification',
@@ -59,13 +61,13 @@ export const usageContents: Usage[] = [
     cover01: 'planification/cover-01.png',
     cover02: 'planification/cover-02.jpg',
     image: 'erp-operationnel.png',
-    description: 'Organisation des agendas, des équipes et du temps passé',
-    title:
-      'Une app de planification pour gérer les ressources humaines et physiques de votre activité',
+    description: 'Assignez vos équipes sur les tâches et optimisez les délais de livraison.',
+    shortDescription: 'Organisation des agendas, des équipes et des projets',
+    title: 'Une app de planification pour gérer vos effectifs et vos ressources',
     subtitle:
       'CASE vous permet de gérer les plannings de vos équipes pour respecter les délais et les budgets impartis.',
     positionsInterested: {
-      title: 'CASE fait gagner du temps à différents corps de métiers',
+      title: 'CASE fait gagner du temps à vos différents corps de métiers',
       subtitle:
         'Un processus de travail bien optimisé grâce à CASE fait gagner du temps à tout le monde. Chaque métier est libre de se concentrer sur son travail.',
       positions: [
@@ -75,7 +77,7 @@ export const usageContents: Usage[] = [
           benefits: ['Prévoir les prochains recrutements', 'Gérer les congés, primes, etc.']
         },
         {
-          name: 'Chefs d’équipe',
+          name: `Chefs d'équipe`,
           image: 'manager.jpg',
           benefits: ['Gérer ses équipiers', 'Visualiser les disponibilités']
         },
@@ -84,7 +86,7 @@ export const usageContents: Usage[] = [
           image: 'sales.jpg',
           benefits: [
             'Renseigner les heures travaillées',
-            'Accéder à l’app depuis smartphone / tablette'
+            `Accéder à l'app depuis smartphone / tablette`
           ]
         },
         {
@@ -95,7 +97,7 @@ export const usageContents: Usage[] = [
         {
           name: 'Externes',
           image: 'sales.jpg',
-          benefits: ['Organiser son planning', 'Accès restreint pour s’imputer']
+          benefits: ['Organiser son planning', `Accès restreint pour s'imputer`]
         },
         {
           name: 'Commerciaux',
@@ -109,19 +111,20 @@ export const usageContents: Usage[] = [
     },
     paragraphs: [
       {
-        title: 'Travaillez mieux, plus simplement grâce au digital',
-        content: `<p>Vos ressources sont-elles utilisées de façon optimale ? Comment réagissez-vous en cas d’imprévu ?</p><p>Vous le savez, le pilotage de l’activité demande des compétences organisationnelles et relationnelles ainsi que du sang-froid pour réagir rapidement. Ca c’est votre affaire. Celle de CASE, c’est de vous fournir les bonnes informations pour que vous puissiez prendre les meilleures décisions et les bons outils pour pouvoir les communiquer rapidement.
+        title: 'Travaillez mieux, plus simplement',
+        content: `<p>Vos ressources sont-elles utilisées de façon optimale ? Comment réagissez-vous en cas d'imprévu ?</p><p>Vous le savez, le pilotage de l'activité demande des compétences organisationnelles et relationnelles ainsi que du sang-froid pour réagir rapidement. Ca c'est votre affaire. Celle de CASE, c'est de vous fournir les bonnes informations pour que vous puissiez prendre les meilleures décisions et les bons outils pour pouvoir les communiquer rapidement.
         </p>`
       },
       {
         title: 'Passez sur CASE pour piloter vos équipes',
-        content: `<p>CASE est une application métier destinée aux PME qui permet de gérer des équipes RH ou bien des ressources physiques. Elle est accessible depuis n’importe quel dispositif équipé d’un navigateur web, au bureau et sur le terrain.
+        content: `<p>CASE est une application métier destinée aux PME qui permet de gérer des équipes RH ou bien des ressources physiques. Elle est accessible depuis n'importe quel dispositif équipé d'un navigateur web, au bureau et sur le terrain.
       </p>`
       }
     ],
     metaTitle: 'App de planification pour PME | CASE',
     metaDescription:
-      'Une app de planification pour gérer les ressources humaines et physiques de votre activité.'
+      'Une app de planification pour gérer les ressources humaines et physiques de votre activité.',
+    keywords: ['RH', 'Productivité', 'Respect des délais']
   },
   {
     name: 'Reporting et analytique',
@@ -129,25 +132,25 @@ export const usageContents: Usage[] = [
     cover01: 'reporting-et-analytique.png',
     cover02: 'operationnel.png',
     image: 'erp-operationnel.png',
-    description: 'Graphiques, tableaux, rapports, etc.',
-    title:
-      'Gérez la situation en temps réel avec CASE : la seule application dont votre entreprise a besoin',
-    subtitle:
-      'Il est difficile de piloter correctement une activité à l’aveugle. Les outils de monitoring et de data-visualisation sont là pour vous permettre de consulter vos données et d’en tirer parti.',
+    description:
+      'Prenez les meilleures décisions grâce à un veritable tableau de bord de votre entreprise.',
+    shortDescription: 'Un tableau de bord pour votre business',
+    title: 'Pilotez votre entreprise en temps réel avec CASE',
+    subtitle: `Les outils de monitoring et de data-visualisation sont là pour vous permettre de consulter vos données et d'en tirer parti.`,
     positionsInterested: {
-      title: 'Soulagez votre équipe de travail',
+      title: 'Optimisez la coordination de vos différents corps de métiers',
       subtitle:
         'Un processus de travail bien optimisé grâce à CASE fait gagner du temps à tout le monde. Chaque métier est libre de se concentrer sur son travail.',
       positions: [
         {
-          name: 'Chefs d’équipe',
+          name: `Chefs d'équipe`,
           image: 'manager.jpg',
           benefits: ['Gérer ses équipiers', 'Organiser les calendriers']
         },
         {
           name: 'Equipe opérations',
           image: 'sales.jpg',
-          benefits: ['Accéder à l’app depuis smartphone / tablette', 'Générer documents officiels']
+          benefits: [`Accéder à l'app depuis smartphone / tablette`, 'Générer documents officiels']
         },
         {
           name: 'Direction',
@@ -163,17 +166,18 @@ export const usageContents: Usage[] = [
     },
     paragraphs: [
       {
-        title: 'Réunissez les opérations et l’analytique sur une seule et même plate-forme',
+        title: `Réunissez les opérations et l'analytique sur une seule et même plateform`,
         content: `<p>CASE centralise vos processus et vos données. Toutes les informations importantes vous sont présentées, à vous de prendre les décisions. </p>
       <ul><li>Meilleure prise de décision</li>
       <li>Reporting de l'activité en temps réel</li>
-      <li>Connexion à d’autres outils et APIs</li>
+      <li>Connexion à d'autres outils et APIs</li>
       <li>Exports possibles (Excel, outils spécifiques)</li></ul>`
       }
     ],
     metaTitle: 'App Reporting et analytique | CASE',
     metaDescription:
-      'Gérez la situation de votre entreprise en temps réel avec CASE : la seule application dont vous avez besoin.'
+      'Gérez la situation de votre entreprise en temps réel avec CASE : la seule application dont vous avez besoin.',
+    keywords: ['Reporting', 'Rentabilité']
   },
   {
     name: 'Devis et factures',
@@ -181,11 +185,12 @@ export const usageContents: Usage[] = [
     cover01: 'devis-et-factures.png',
     cover02: 'operationnel.png',
     image: 'erp-operationnel.png',
-    description: 'Devis et factures',
-    title: 'CASE: L’app tout en un pour gérer la production et la vente de votre PME',
-    subtitle: 'Une app simple qui centralise ce que vous faites et comment vous le vendez.',
+    description: 'Gagnez du temps en gérant vos ventes directement depuis CASE.',
+    shortDescription: 'Gestion des ventes et des clients',
+    title: `Une app tout en un pour gérer la production et les ventes de votre PME`,
+    subtitle: 'Générez vos documents officiels simplement: devis, factures',
     positionsInterested: {
-      title: 'Quels corps de métiers ont besoin de CASE ?',
+      title: 'CASE facilite le travail de vos équipes',
       subtitle:
         'Un processus de travail bien optimisé grâce à CASE fait gagner du temps à tout le monde. Chaque métier est libre de se concentrer sur son travail.',
       positions: [
@@ -196,11 +201,6 @@ export const usageContents: Usage[] = [
             'Facturer les produits et services',
             'Préparer des devis basés sur des planifications'
           ]
-        },
-        {
-          name: 'Chargés de projet',
-          image: 'manager.jpg',
-          benefits: ['Renseigner le temps passé sur les missions']
         },
         {
           name: 'Comptabilité',
@@ -217,12 +217,13 @@ export const usageContents: Usage[] = [
     paragraphs: [
       {
         title: 'Des documents administratifs et légaux en quelques clics',
-        content: `<p>Générez directement vos devis, factures et autres documents légaux très rapidement. CASE allie des fonctionnalités d’ERP et de CRM avec une interface très simple..
-            </p><p>Vous pouvez également paramétrer les documents que vous manipulez au quotidien: commandes, marchés, PV de réception… CASE s’adapte à votre façon de travailler.</p>`
+        content: `<p>Générez directement vos devis, factures et autres documents légaux très rapidement. CASE allie des fonctionnalités d'ERP et de CRM avec une interface très simple..
+            </p><p>Vous pouvez également paramétrer les documents que vous manipulez au quotidien: commandes, marchés, PV de réception… CASE s'adapte à votre façon de travailler.</p>`
       }
     ],
     metaTitle: 'App de Devis et Factures pour PME | CASE',
     metaDescription:
-      'Gérez la situation de votre entreprise en temps réel avec CASE : la seule application dont vous avez besoin.'
+      'Gérez la situation de votre entreprise en temps réel avec CASE : la seule application dont vous avez besoin.',
+    keywords: ['Ventes', 'Rapidité', 'Automatisation']
   }
 ]
