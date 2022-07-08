@@ -75,7 +75,7 @@
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
             >
               <span class="icon mr-2">
-                <i class="fas fa-layer-group has-text-warning" />
+                <i class="fas fa-layer-group has-text-danger" />
               </span>
               <span>Gérez la production, la planification et les ventes</span>
             </span>
@@ -83,7 +83,7 @@
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
             >
               <span class="  icon mr-2">
-                <i class="fas fa-rocket has-text-warning" />
+                <i class="fas fa-rocket has-text-danger" />
               </span>
               <span>Automatisez les tâches répétitives</span>
             </span>
@@ -91,13 +91,13 @@
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
             >
               <span class="  icon mr-2">
-                <i class="fas fa-shield-alt has-text-warning" />
+                <i class="fas fa-shield-alt has-text-danger" />
               </span>
               <span>Prenez de meilleures décisions grâce à la data-visualisation</span>
             </span>
           </div>
 
-          <button class="button is-warning">Essayez CASE</button>
+          <button class="button is-danger">Essayez CASE</button>
         </div>
       </div>
     </div>
@@ -253,9 +253,9 @@
 <div class="advantages">
   <section class="hero is-white">
     <div class="hero-body py-4">
-      <div class="container content">
-        <div class="columns  is-vcentered ">
-          <div class="column is-6 ">
+      <div class="container content mt-6">
+        <div class="columns">
+          <div class="column is-4 ">
             <span class="p-2 has-background-orange-light is-inline-flex">
               <i class="ci ci-settings_future is-size-4 has-text-link" />
             </span>
@@ -266,20 +266,7 @@
               technique.
             </p>
           </div>
-          <div class="column is-6 py-0 pl-0">
-            <figure class="image is-square mx-0">
-              <img src="./img/case-features-01.png" />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="hero is-rose">
-    <div class="hero-body py-4">
-      <div class="container content">
-        <div class="columns  is-vcentered is-flex-direction-row-reverse">
-          <div class="column is-6  py-6">
+          <div class="column is-4">
             <span class="p-2 has-background-info is-inline-flex">
               <i class="ci ci-devices is-size-4 has-text-primary" />
             </span>
@@ -294,20 +281,7 @@
               <li>Mode hors-ligne et app mobile pour usage dans toutes les conditions</li>
             </ul>
           </div>
-          <div class="column is-6 py-0 pr-0">
-            <figure class="image is-square mx-0">
-              <img src="./img/case-features-02.png" />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="hero is-white">
-    <div class="hero-body py-4">
-      <div class="container content">
-        <div class="columns  is-vcentered ">
-          <div class="column is-6  py-6">
+          <div class="column is-4">
             <span class="p-2 has-background-danger-light is-inline-flex">
               <i class="ci ci-Sketch is-size-4 has-text-success" />
             </span>
@@ -325,18 +299,14 @@
               </li>
             </ul>
           </div>
-          <div class="column is-6 py-0 pl-0">
-            <figure class="image is-square mx-0">
-              <img src="./img/case-features-03.png" />
-            </figure>
-          </div>
         </div>
+        <hr class="mt-6 mb-0" />
       </div>
     </div>
   </section>
 </div>
 <!-- Competitors -->
-<div class="container my-8">
+<div class="container mt-6 mb-8">
   <div class="columns">
     <div class="column is-12 has-text-centered">
       <h2 class="title is-2 has-line">

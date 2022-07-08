@@ -82,7 +82,7 @@
       <div class="navbar-end ">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-warning" href="/contact"> Essayez CASE </a>
+            <a class="button is-danger" href="/contact"> Essayez CASE </a>
           </div>
         </div>
       </div>
