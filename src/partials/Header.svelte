@@ -63,7 +63,7 @@
                           href="/usages/{usage.slug}"
                           class:is-active={path === '/usages/' + usage.slug}
                         >
-                          <span class="p-2 has-background-danger is-inline-flex">
+                          <span class="p-2 has-background-warning-light is-inline-flex">
                             <i class="ci ci-settings_future is-size-4 has-text-warning" />
                           </span>
                           <span class="py-1"> {usage.name}</span>
@@ -82,7 +82,7 @@
       <div class="navbar-end ">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-danger" href="/contact"> Essayez CASE </a>
+            <a class="button is-warning" href="/contact"> Essayez CASE </a>
           </div>
         </div>
       </div>

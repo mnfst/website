@@ -364,6 +364,7 @@
     }
     img {
       position: absolute;
+      mix-blend-mode: multiply;
       bottom: 0;
       right: 0;
       width: 61.8%;

@@ -75,7 +75,7 @@
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
             >
               <span class="icon mr-2">
-                <i class="fas fa-layer-group has-text-danger" />
+                <i class="fas fa-layer-group has-text-warning" />
               </span>
               <span>Gérez la production, la planification et les ventes</span>
             </span>
@@ -83,7 +83,7 @@
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
             >
               <span class="  icon mr-2">
-                <i class="fas fa-rocket has-text-danger" />
+                <i class="fas fa-rocket has-text-warning" />
               </span>
               <span>Automatisez les tâches répétitives</span>
             </span>
@@ -91,13 +91,13 @@
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
             >
               <span class="  icon mr-2">
-                <i class="fas fa-shield-alt has-text-danger" />
+                <i class="fas fa-shield-alt has-text-warning" />
               </span>
               <span>Prenez de meilleures décisions grâce à la data-visualisation</span>
             </span>
           </div>
 
-          <button class="button is-danger">Essayez CASE</button>
+          <button class="button is-warning">Essayez CASE</button>
         </div>
       </div>
     </div>
@@ -133,22 +133,22 @@
           href="/usages/{usage.slug}"
           class="box is-relative content has-background-white-bis px-4 is-flex is-flex-direction-column is-justify-content-space-between is-clipped is-align-items-flex-start"
         >
-          <img src="img/usages/{usage.image}" alt={usage.name} />
+          <img src="img/usages/type02/{usage.image}" alt={usage.name} />
 
           <div>
             <h3 class="title is-5 mb-3">{usage.name}</h3>
             <p class="has-text-grey-dark">{usage.description}</p>
             <div class="tags are-small">
               {#each usage.keywords as keyword}
-                <span class="tag is-success">{keyword}</span>
+                <span class="tag is-primary">{keyword}</span>
               {/each}
             </div>
           </div>
-          <a href="/usages/{usage.slug}" class="button is-small is-primary">
+          <a href="/usages/{usage.slug}" class="button is-small is-warning">
+            <span> En savoir plus </span>
             <span class="icon is-small">
               <i class="ci ci-long_up_right" />
             </span>
-            <span> En savoir plus </span>
           </a>
         </a>
       </div>
@@ -374,11 +374,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Souvent opaque et au bon vouloir de l'éditeur du logiciel."
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Souvent opaque et au bon vouloir de l'éditeur du logiciel."
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -475,11 +475,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Adapté à votre secteur d'activité mais pas à votre façon de faire"
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Adapté à votre secteur d'activité mais pas à votre façon de faire"
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -522,11 +522,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Avec quelques compétences en tableur, vous pouvez adapter vos tableaux à votre activité… Mais attention à ne pas tout détruire !"
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Avec quelques compétences en tableur, vous pouvez adapter vos tableaux à votre activité… Mais attention à ne pas tout détruire !"
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -585,11 +585,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Dans la limite de ce que l'éditeur vous autorise à intégrer"
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Dans la limite de ce que l'éditeur vous autorise à intégrer"
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
     </div>
@@ -761,6 +761,7 @@
 <style lang="scss">
   @import './../styles/variables.scss';
   @import './bulma/sass/utilities/all';
+  @import './@creativebulma/bulma-tooltip/src/sass/index';
 
   .hero-figure-wrapper {
     position: absolute;
@@ -785,6 +786,7 @@
     }
     img {
       position: absolute;
+      mix-blend-mode: multiply;
       bottom: 0;
       right: 0;
       width: 61.8%;
