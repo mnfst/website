@@ -94,70 +94,135 @@
   description="Contactez-nous pour nous questionner, nous vous répondrons dans les plus brefs délais."
 />
 
-<div class="container">
-  <div class="columns">
-    <div class="column">
-      <h1 class="title is-1">Contact</h1>
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="columns">
+        <div class="column is-6-tablet is-7-desktop is-8-wisescreen is-8-fullhd has-text-left">
+          <div class="mr-6">
+            <h1 class="title is-1">Contact Us</h1>
+            <p class="is-size-4 mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eligendi soluta
+              voluptate facere molestiae consequatur.
+            </p>
+            <div class="">
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+              >
+                <span class="icon mr-2">
+                  <i class="fas fa-check has-text-warning" />
+                </span>
+                <span>Centralisez production, commercial et RH</span>
+              </span>
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+              >
+                <span class="  icon mr-2">
+                  <i class="fas fa-check has-text-warning" />
+                </span>
+                <span>Automatisez les tâches répétitives</span>
+              </span>
+              <span
+                class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
+              >
+                <span class="  icon mr-2">
+                  <i class="fas fa-check has-text-warning" />
+                </span>
+                <span>Prenez de meilleures décisions</span>
+              </span>
+            </div>
+            <figure class="has-object-fit-cover">
+              <img src="./img/contact-img.svg" alt="" />
+            </figure>
+          </div>
+        </div>
+        <div class="column is-6-tablet is-5-desktop is-4-wisescreen is-4-fullhd has-text-left">
+          <div class="card p-6">
+            <form novalidate on:submit|preventDefault={onSubmit}>
+              <div class="field mb-4">
+                <label for="name">Nom et prénom<span class="has-text-danger">*</span></label>
+
+                <p class="control">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="input"
+                    class:is-danger={errors?.name}
+                  />
+                </p>
+              </div>
+              <div class="field mb-4">
+                <label for="company"
+                  >Entreprise ou organisation<span class="has-text-danger">*</span></label
+                >
+                <div class="control">
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    class="input"
+                    class:is-danger={errors?.company}
+                  />
+                </div>
+              </div>
+              <div class="field mb-4">
+                <label for="email">Email<span class="has-text-danger">*</span></label>
+                <div class="control">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="input"
+                    class:is-danger={errors?.email}
+                  />
+                  {#if errors?.email?.email?.error}
+                    <p class="error-message">{errors.email.email.message}</p>
+                  {/if}
+                </div>
+              </div>
+
+              <div class="field mb-4">
+                <label for="phone_number">Téléphone</label>
+                <div class="control">
+                  <input
+                    type="tel"
+                    id="phone_number"
+                    name="phone_number"
+                    class="input"
+                    class:is-danger={errors?.tel}
+                  />
+                </div>
+              </div>
+              <div class="field mb-4">
+                <label for="comment">Message<span class="has-text-danger">*</span></label>
+                <div class="control">
+                  <textarea
+                    name="comment"
+                    id="comment"
+                    class="textarea"
+                    class:is-danger={errors?.comment}
+                    cols="30"
+                    rows="5"
+                  />
+                </div>
+              </div>
+              <button class="button is-primary" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
 
-  <form novalidate on:submit|preventDefault={onSubmit}>
-    <div class="columns">
-      <div class="column">
-        <label for="name">Nom et prénom<span class="has-text-danger">*</span></label><br />
-        <input type="text" id="name" name="name" class="input" class:is-danger={errors?.name} />
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column">
-        <label for="company">Entreprise ou organisation<span class="has-text-danger">*</span></label
-        ><br />
-        <input
-          type="text"
-          id="company"
-          name="company"
-          class="input"
-          class:is-danger={errors?.company}
-        />
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column">
-        <label for="email">Email<span class="has-text-danger">*</span></label><br />
-        <input type="email" id="email" name="email" class="input" class:is-danger={errors?.email} />
-        {#if errors?.email?.email?.error}
-          <p class="error-message">{errors.email.email.message}</p>
-        {/if}
-      </div>
-      <div class="column">
-        <label for="phone_number">Téléphone</label><br />
-        <input
-          type="tel"
-          id="phone_number"
-          name="phone_number"
-          class="input"
-          class:is-danger={errors?.tel}
-        />
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column">
-        <label for="comment">Message<span class="has-text-danger">*</span></label><br />
-        <textarea
-          name="comment"
-          id="comment"
-          class="textarea"
-          class:is-danger={errors?.comment}
-          cols="30"
-          rows="10"
-        />
-      </div>
-    </div>
+<style lang="scss">
+  @import './../styles/variables.scss';
+  @import './bulma/sass/utilities/all';
 
-    <div class="columns">
-      <div class="column">
-        <button class="button is-primary" type="submit">Envoyer</button>
-      </div>
-    </div>
-  </form>
-</div>
+  figure {
+    height: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+</style>

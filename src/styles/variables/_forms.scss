@@ -1,7 +1,7 @@
 //controls
 $control-padding-vertical: 0.375em !default;
 $control-padding-horizontal: math.div($gap, 2) !default;
-$input-background-color: $white-ter !default;
+$input-background-color: $white !default;
 $input-placeholder-color: rgba($black-ter, 0.5) !default;
 $input-color: $black !default;
 $input-radius: 3px !default;
@@ -28,7 +28,7 @@ $input-disabled-placeholder-color: bulmaRgba(
   0.3
 ) !default;
 
-$label-color: $grey !default;
+$label-color: $black !default;
 
 //Datepicker
 $calendar-height: 268px !default;

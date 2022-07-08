@@ -192,7 +192,7 @@
 <section class="hero has-gradient-bis is-relative ">
   <div class="hero-body py-0">
     <div class="container">
-      <div class="card has-background-info p-8 card--cta is-shadowless">
+      <div class="card has-background-info p-8 card--cta is-shadowless has-case-pattern">
         <div class="columns">
           <div class="column is-6">
             <h3 class="title is-3 has-text-dark">Essayez CASE en 2 clics</h3>
@@ -881,6 +881,11 @@
     }
   }
   .hero--cta-bottom {
+    .card {
+      background-image: url(./img/pattern-info.svg);
+      background-repeat: repeat;
+      background-color: $info;
+    }
     margin-top: 9.6rem;
     margin-bottom: 9.6rem;
     @include widescreen {
