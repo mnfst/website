@@ -331,14 +331,14 @@
       <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">CASE</div>
       <div class="column is-2 has-text-centered">Excel</div>
       <div
-        class="column is-2 has-text-centered"
-        title="Logiciel de niche créé uniquement pour un secteur d'activité. Généralement des logiciels fermés et destinés à un usage restreint"
+        class="column is-2 has-text-centered has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+        data-tooltip="Logiciel de niche créé uniquement pour un secteur d'activité. Généralement des logiciels fermés et destinés à un usage restreint"
       >
         Progiciel niche
       </div>
       <div
-        class="column is-2 has-text-centered"
-        title="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME."
+        class="column is-2 has-text-centered has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+        data-tooltip="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME."
       >
         Logiciel ERP
       </div>

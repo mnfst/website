@@ -1,6 +1,7 @@
-span[data-tooltip] {
+*[data-tooltip] {
     cursor: pointer;
     &:before {
         margin-top: -4px !important;
+        text-transform:none;
     }
 }
