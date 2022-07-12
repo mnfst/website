@@ -63,8 +63,31 @@
                           href="/usages/{usage.slug}"
                           class:is-active={path === '/usages/' + usage.slug}
                         >
-                          <span class="p-2 has-background-primary-light is-inline-flex">
-                            <i class="ci ci-settings_future is-size-4 has-text-primary" />
+                          <span
+                            class="p-2 is-inline-flex 
+                          {usage.name === 'Opérationnel'
+                              ? 'has-background-link-light'
+                              : usage.name === 'Planification'
+                              ? 'has-background-danger-light'
+                              : usage.name === 'Devis et factures'
+                              ? 'has-background-success-light'
+                              : usage.name === 'Reporting et analytique'
+                              ? 'has-background-primary-light'
+                              : ''}
+                        "
+                          >
+                            <i
+                              class="ci is-size-4 {usage.name === 'Opérationnel'
+                                ? 'ci-settings_future has-text-link-dark'
+                                : usage.name === 'Planification'
+                                ? 'ci-calendar has-text-danger'
+                                : usage.name === 'Devis et factures'
+                                ? 'ci-file_blank_outline has-text-success-dark'
+                                : usage.name === 'Reporting et analytique'
+                                ? 'ci-bar_chart has-text-primary'
+                                : ''}
+                              "
+                            />
                           </span>
                           <span class="py-1"> {usage.name}</span>
                           <p class="has-text-grey">{usage.shortDescription}</p>
@@ -126,10 +149,6 @@
       }
 
       .navbar-column {
-        &:hover {
-          background-color: $white-bis;
-          color: $primary;
-        }
         > .navbar-item {
           padding: $column-gap;
         }
