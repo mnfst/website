@@ -63,8 +63,8 @@
                           href="/usages/{usage.slug}"
                           class:is-active={path === '/usages/' + usage.slug}
                         >
-                          <span class="p-2 has-background-warning-light is-inline-flex">
-                            <i class="ci ci-settings_future is-size-4 has-text-warning" />
+                          <span class="p-2 has-background-primary-light is-inline-flex">
+                            <i class="ci ci-settings_future is-size-4 has-text-primary" />
                           </span>
                           <span class="py-1"> {usage.name}</span>
                           <p class="has-text-grey">{usage.shortDescription}</p>
@@ -128,7 +128,7 @@
       .navbar-column {
         &:hover {
           background-color: $white-bis;
-          color: $warning;
+          color: $primary;
         }
         > .navbar-item {
           padding: $column-gap;

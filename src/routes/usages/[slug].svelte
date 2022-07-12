@@ -354,7 +354,7 @@
 
   .usage-card {
     .box {
-      height: 457px;
+      height: 417px;
       transition: all 0.18s ease-in-out;
       box-shadow: none;
       &:hover {
