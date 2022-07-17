@@ -9,7 +9,7 @@ export const usageContents: Usage[] = [
     image: 'erp-operationnel.png',
     colorName: 'link-dark',
     description: 'Gérez la production et les livrables, au bureau comme sur le terrain !',
-    shortDescription: 'Production, travaux, livrables et recette',
+    shortDescription: `Améliorez vos processus de production et vos livrables`,
     title: 'Gérez toutes les opérations de votre entreprise au même endroit',
     subtitle: 'Sur le terrain, en chaîne de production ou au bureau, chacun collabore avec CASE.',
     positionsInterested: {
@@ -64,7 +64,7 @@ export const usageContents: Usage[] = [
     image: 'erp-planification.png',
     colorName: 'danger',
     description: 'Assignez vos équipes sur les tâches et optimisez les délais de livraison.',
-    shortDescription: 'Organisation des agendas, des équipes et des projets',
+    shortDescription: 'Plannifiez vos équipes sur vos projets',
     title: 'Une app de planification pour gérer vos effectifs et vos ressources',
     subtitle:
       'CASE vous permet de gérer les plannings de vos équipes pour respecter les délais et les budgets impartis.',
@@ -126,7 +126,7 @@ export const usageContents: Usage[] = [
     metaTitle: 'App de planification pour PME | CASE',
     metaDescription:
       'Une app de planification pour gérer les ressources humaines et physiques de votre activité.',
-    keywords: ['RH', 'Productivité', 'Respect des délais']
+    keywords: ['Gestion RH', 'Productivité', 'Respect des délais']
   },
   {
     name: 'Reporting et analytique',
@@ -180,7 +180,7 @@ export const usageContents: Usage[] = [
     metaTitle: 'App Reporting et analytique | CASE',
     metaDescription:
       'Gérez la situation de votre entreprise en temps réel avec CASE : la seule application dont vous avez besoin.',
-    keywords: ['Reporting', 'Rentabilité']
+    keywords: ['Pilotage', 'Rentabilité']
   },
   {
     name: 'Devis et factures',
@@ -190,7 +190,7 @@ export const usageContents: Usage[] = [
     colorName: 'success-dark',
     image: 'devis-facturation.png',
     description: 'Gagnez du temps en gérant vos ventes directement depuis CASE.',
-    shortDescription: 'Gestion des ventes et des clients',
+    shortDescription: 'Estimez, facturez, analysez.',
     title: `Une app tout en un pour gérer la production et les ventes de votre PME`,
     subtitle: 'Générez vos documents officiels simplement: devis, factures',
     positionsInterested: {

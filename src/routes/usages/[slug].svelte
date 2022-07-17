@@ -25,14 +25,20 @@
 
   export let usage: Usage
 
-  const keyFeatures: KeyFeature[] = keyFeatureContents.filter((keyFeature: KeyFeature) =>
-    keyFeature.usages.includes(usage.slug)
-  )
-  let activeKeyFeature: KeyFeature = keyFeatures[0]
-  let otherUsages: Usage[] = usageContents.filter((u: Usage) => u.slug !== usage.slug)
-
-  const faqs: Faq[] = faqContents.filter((faq: Faq) => faq.usages.includes(usage.slug))
+  let otherUsages: Usage[]
+  let keyFeatures: KeyFeature[]
+  let activeKeyFeature: KeyFeature
   let activeFaq: Faq
+  let faqs: Faq[]
+
+  $: {
+    keyFeatures = keyFeatureContents.filter((keyFeature: KeyFeature) =>
+      keyFeature.usages.includes(usage.slug)
+    )
+    activeKeyFeature = keyFeatures[0]
+    otherUsages = usageContents.filter((u: Usage) => u.slug !== usage.slug)
+    faqs = faqContents.filter((faq: Faq) => faq.usages.includes(usage.slug))
+  }
 </script>
 
 <MetaTags title={usage.metaTitle} description={usage.metaDescription} />
