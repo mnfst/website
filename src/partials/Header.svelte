@@ -51,6 +51,7 @@
           class:is-active={isUsageDropdownActive}
           on:mouseenter={() => (isUsageDropdownActive = true)}
           on:mouseleave={() => (isUsageDropdownActive = false)}
+          on:click={() => (isUsageDropdownActive = !isUsageDropdownActive)}
         >
           <span class="navbar-link" class:is-active={path.includes('/usages/')}>
             Votre besoin
