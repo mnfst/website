@@ -12,12 +12,12 @@
     &:before {
         @extend %before;
       
-      background: $primary;
-      background: -webkit-linear-gradient(top right, rgba($info, 0.2), $primary),
+      background: $dark;
+      background: -webkit-linear-gradient(top right, rgba($info, 0.2), $dark),
         radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
-      background: -moz-linear-gradient(top right, rgba($info, 0.2), $primary),
+      background: -moz-linear-gradient(top right, rgba($info, 0.2), $dark),
         radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, rgba($danger, 0) 50%);
-      background: linear-gradient(to bottom left, rgba($info, 0.2), $primary),
+      background: linear-gradient(to bottom left, rgba($info, 0.2), $dark),
         radial-gradient(at 55% 47%, rgba($danger, 0.2) 0, hsla(5, 93%, 68%, 0) 50%);
     }
 
@@ -25,14 +25,14 @@
         &:before {
             @extend %before;
             background: rgba($danger, 0.2);
-            background: -webkit-radial-gradient(top right, rgba($danger, 0.2), $primary);
-            background: -moz-radial-gradient(top right, rgba($danger, 0.2), $primary);
-            background: radial-gradient(to bottom left, rgba($danger, 0.2), $primary);
+            background: -webkit-radial-gradient(top right, rgba($danger, 0.2), $dark);
+            background: -moz-radial-gradient(top right, rgba($danger, 0.2), $dark);
+            background: radial-gradient(to bottom left, rgba($danger, 0.2), $dark);
         }
     }
     &-bis {
-        background: $primary;
-        background: linear-gradient(180deg, $primary 0%, $primary 50%, $white 50%, $white 100%);
+        background: $dark;
+        background: linear-gradient(180deg, $dark 0%, $dark 50%, $white 50%, $white 100%);
 
     }
   }

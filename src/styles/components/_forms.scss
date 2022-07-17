@@ -16,18 +16,6 @@
   color: $input-placeholder-color !important;
 }
 
-label:not(.file-label):not(.checkbox):not(.image-label):not(.is-boxed) {
-  font-size: $size-6;
-  font-weight: $weight-bold;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  color: $label-color;
-  display: inline-block;
-
-  @include touch {
-    margin-top: $column-gap;
-  }
-}
 select,
 .select {
   font-size: $size-normal;
@@ -42,6 +30,14 @@ select,
   &.is-large {
     font-size: $size-large;
   }
+}
+
+label:not(.file-label):not(.checkbox):not(.image-label):not(.is-boxed) {
+  font-size: $size-small;
+}
+
+input {
+  font-family: $family-alt
 }
 
 //  Checkbox

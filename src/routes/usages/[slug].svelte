@@ -354,7 +354,7 @@
 
   .usage-card {
     .box {
-      height: 457px;
+      height: 417px;
       transition: all 0.18s ease-in-out;
       box-shadow: none;
       &:hover {
@@ -364,6 +364,7 @@
     }
     img {
       position: absolute;
+      mix-blend-mode: multiply;
       bottom: 0;
       right: 0;
       width: 61.8%;
