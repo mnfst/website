@@ -8,6 +8,7 @@
   let path: string
 
   let isUsageDropdownActive: boolean
+  let isTouchMenuActive: boolean
 
   function getPath(currentPath: string) {
     path = currentPath
@@ -16,6 +17,7 @@
   $: {
     getPath($page.url.pathname)
     isUsageDropdownActive = false
+    isTouchMenuActive = false
   }
 </script>
 
@@ -31,6 +33,7 @@
         class="navbar-burger is-hidden-desktop"
         aria-label="menu"
         aria-expanded="false"
+        on:click={() => (isTouchMenuActive = !isTouchMenuActive)}
       >
         <span aria-hidden="true" />
         <span aria-hidden="true" />
@@ -38,7 +41,7 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-menu" class:is-active={isTouchMenuActive}>
       <div class="navbar-start">
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Accueil </a>
         <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
