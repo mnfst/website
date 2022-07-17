@@ -19,6 +19,16 @@
     isUsageDropdownActive = false
     isTouchMenuActive = false
   }
+
+  function toggleTouchMenuActive() {
+    if (!isTouchMenuActive) {
+      isTouchMenuActive = true
+      document.body.classList.add('is-clipped')
+    } else {
+      isTouchMenuActive = false
+      document.body.classList.remove('is-clipped')
+    }
+  }
 </script>
 
 <nav class="navbar is-fixed-top has-shadow has-centered-menu" aria-label="main navigation">
@@ -33,7 +43,7 @@
         class="navbar-burger is-hidden-desktop"
         aria-label="menu"
         aria-expanded="false"
-        on:click={() => (isTouchMenuActive = !isTouchMenuActive)}
+        on:click={() => toggleTouchMenuActive()}
       >
         <span aria-hidden="true" />
         <span aria-hidden="true" />
