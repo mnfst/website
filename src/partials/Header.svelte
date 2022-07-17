@@ -7,11 +7,16 @@
   let usages: Usage[] = usageContents
   let path: string
 
+  let isUsageDropdownActive: boolean
+
   function getPath(currentPath: string) {
     path = currentPath
   }
 
-  $: getPath($page.url.pathname)
+  $: {
+    getPath($page.url.pathname)
+    isUsageDropdownActive = false
+  }
 </script>
 
 <nav class="navbar is-fixed-top has-shadow has-centered-menu" aria-label="main navigation">
@@ -38,7 +43,12 @@
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Accueil </a>
         <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
 
-        <div class="navbar-item has-dropdown is-hoverable is-mega">
+        <div
+          class="navbar-item has-dropdown is-mega"
+          class:is-active={isUsageDropdownActive}
+          on:mouseenter={() => (isUsageDropdownActive = true)}
+          on:mouseleave={() => (isUsageDropdownActive = false)}
+        >
           <span class="navbar-link" class:is-active={path.includes('/usages/')}>
             Votre besoin
           </span>
