@@ -4,6 +4,7 @@ export interface Usage {
   image: string
   cover01: string
   cover02: string
+  colorName: string
   subtitle: string
   slug: string
   description: string

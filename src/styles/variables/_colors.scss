@@ -1,13 +1,13 @@
-$black: #121212 !default; // Overload
+$black: #110722 !default; // Overload
 $white: #fff !default; // Overload
 
 $dark: $black !default; // Overload
 $light: $white !default; // Overload
 
 $black-bis: $dark !default;
-$black-ter: #102326 !default;
+$black-ter: #251B2F !default;
 $grey-darker: $dark !default;
-$grey-dark: #3B3638;
+$grey-dark: #525252;
 $grey: #7E7D7E !default;
 $grey-light: #D1D5DB !default;
 $grey-lighter: #e9eeff !default;
@@ -17,29 +17,29 @@ $white-bis: #f5f7f9 !default;
 /* Color styles */
 
 
-$primary: #2B0A15 !default;
-$primary-light: #EAE6E8 !default;
-$primary--90: #40232C !default;
-$primary--05: #F4F3F3 !default;
+$primary: #6B29B0 !default;
+$primary-light: #F0EAF7 !default;
+$primary--90: #793DB7 !default;
+$primary--05: #F8F4FB !default;
 
 $info: #FBF0CC !default;
 $info-light: #FFFDFA !default;
 
-$link: #01C5FD !default;
-$link-light: #E6F9FF !default;
-$link--05: #F2FCFF !default;
+$link: #16CFF4 !default;
+$link-light: #E1F6FB !default;
+$link--05: #EDF8FC !default;
 
 $success: #25AE90 !default;
 $success-light: #E9F7F4 !default;
 $success--90: #25AE90 !default;
 $success--05: #F4FBFA !default;
 
-$warning: #FFB61B !default;
-$warning-light: #FFF8E8 !default;
-$warning--90: #FEBC31 !default;
-$warning--05: #FFFBF4 !default;
+$warning: #FCDC3D !default;
+$warning-light: #FFFFED !default;
+$warning--90: #FEFF62 !default;
+$warning--05: #FFFFF6 !default;
 
-$danger: #F5576A !default;
+$danger: #fe5448 !default;
 $danger-light: #FEEEF0 !default;
 $danger--90: #F66879 !default;
 $danger--05: #FFF7F8 !default;

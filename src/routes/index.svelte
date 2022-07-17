@@ -56,7 +56,7 @@
 />
 
 <!-- Hero -->
-<section class="hero is-primary is-large is-relative has-gradient">
+<section class="hero is-dark is-large is-relative has-gradient">
   <div class="hero-body">
     <div class="container">
       <div class="columns  is-vcentered ">
@@ -128,7 +128,7 @@
 <div class="container pb-8">
   <div class="columns is-multiline">
     {#each usages as usage}
-      <div class="column usage-card">
+      <div class="column is-12-mobile is-6-tablet is-3-widescreen usage-card">
         <a
           href="/usages/{usage.slug}"
           class="box is-relative content has-background-white-bis px-4 is-flex is-flex-direction-column is-justify-content-space-between is-clipped is-align-items-flex-start"
@@ -140,15 +140,23 @@
             <p class="has-text-grey-dark">{usage.description}</p>
             <div class="tags are-small">
               {#each usage.keywords as keyword}
-                <span class="tag is-success">{keyword}</span>
+                <span class="tag is-white"
+                  ><span
+                    class:has-text-link-dark={usage.name === 'Opérationnel'}
+                    class:has-text-danger={usage.name === 'Planification'}
+                    class:has-text-success-dark={usage.name === 'Devis et factures'}
+                    class:has-text-primary={usage.name === 'Reporting et analytique'}
+                    >{keyword}</span
+                  ></span
+                >
               {/each}
             </div>
           </div>
-          <a href="/usages/{usage.slug}" class="button is-small is-primary">
-            <span class="icon is-small">
+          <a href="/usages/{usage.slug}" class="icon-text has-text-primary">
+            <span> En savoir plus </span>
+            <span class="icon ml-1">
               <i class="ci ci-long_up_right" />
             </span>
-            <span> En savoir plus </span>
           </a>
         </a>
       </div>
@@ -157,7 +165,7 @@
 </div>
 
 <!-- Key features -->
-<section class="hero is-primary  is-relative pb-8">
+<section class="hero is-dark  is-relative pb-8">
   <div class="container">
     <div class="columns">
       <div class="column is-10 is-offset-1 has-text-centered">
@@ -203,7 +211,7 @@
 <section class="hero has-gradient-bis is-relative ">
   <div class="hero-body py-0">
     <div class="container">
-      <div class="card has-background-info p-8 card--cta is-shadowless">
+      <div class="card has-background-warning-light p-8 card--cta  has-case-pattern">
         <div class="columns">
           <div class="column is-6">
             <h3 class="title is-3 has-text-dark">Essayez CASE en 2 clics</h3>
@@ -211,7 +219,7 @@
               Prenez en main CASE tout de suite grâce à la démo en ligne.
             </p>
 
-            <button class="button is-warning">Essayez CASE</button>
+            <button class="button is-warning has-shadow">Essayez CASE</button>
           </div>
           <div class="column is-6">
             <div
@@ -221,7 +229,7 @@
                 class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
               >
                 <span class="icon mr-2">
-                  <i class="fas fa-layer-group has-text-warning" />
+                  <i class="fas fa-layer-group" />
                 </span>
                 <span>Sans création de compte</span>
               </span>
@@ -229,7 +237,7 @@
                 class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
               >
                 <span class="  icon mr-2">
-                  <i class="fas fa-rocket has-text-warning" />
+                  <i class="fas fa-rocket" />
                 </span>
                 <span>Aucune information à donner</span>
               </span>
@@ -237,7 +245,7 @@
                 class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap "
               >
                 <span class="  icon mr-2">
-                  <i class="fas fa-shield-alt has-text-warning" />
+                  <i class="fas fa-shield-alt" />
                 </span>
                 <span>Choisissez parmi 2 exemples</span>
               </span>
@@ -253,11 +261,11 @@
 <div class="advantages">
   <section class="hero is-white">
     <div class="hero-body py-4">
-      <div class="container content">
-        <div class="columns  is-vcentered ">
-          <div class="column is-6 ">
-            <span class="p-2 has-background-orange-light is-inline-flex">
-              <i class="ci ci-settings_future is-size-4 has-text-link" />
+      <div class="container content mt-6">
+        <div class="columns is-multiline">
+          <div class="column is-4 ">
+            <span class="p-2 has-background-primary-light is-inline-flex">
+              <i class="ci ci-settings_future is-size-4 has-text-primary" />
             </span>
             <h3 class="title is-3 mt-4">On le configure pour vous</h3>
             <p>Vous êtes expert dans votre activité, pas dans la configuration d'outils.</p>
@@ -266,21 +274,8 @@
               technique.
             </p>
           </div>
-          <div class="column is-6 py-0 pl-0">
-            <figure class="image is-square mx-0">
-              <img src="./img/case-features-01.png" />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="hero is-rose">
-    <div class="hero-body py-4">
-      <div class="container content">
-        <div class="columns  is-vcentered is-flex-direction-row-reverse">
-          <div class="column is-6  py-6">
-            <span class="p-2 has-background-info is-inline-flex">
+          <div class="column is-4">
+            <span class="p-2 has-background-primary-light is-inline-flex">
               <i class="ci ci-devices is-size-4 has-text-primary" />
             </span>
             <h3 class="title is-3 mt-4">Toujours accessible depuis n'importe quel navigateur</h3>
@@ -294,22 +289,9 @@
               <li>Mode hors-ligne et app mobile pour usage dans toutes les conditions</li>
             </ul>
           </div>
-          <div class="column is-6 py-0 pr-0">
-            <figure class="image is-square mx-0">
-              <img src="./img/case-features-02.png" />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="hero is-white">
-    <div class="hero-body py-4">
-      <div class="container content">
-        <div class="columns  is-vcentered ">
-          <div class="column is-6  py-6">
-            <span class="p-2 has-background-danger-light is-inline-flex">
-              <i class="ci ci-Sketch is-size-4 has-text-success" />
+          <div class="column is-4">
+            <span class="p-2 has-background-primary-light is-inline-flex">
+              <i class="ci ci-Sketch is-size-4 has-text-primary" />
             </span>
             <h3 class="title is-3 mt-4">Commencez tout de suite, sans engagement</h3>
             <p>
@@ -325,18 +307,14 @@
               </li>
             </ul>
           </div>
-          <div class="column is-6 py-0 pl-0">
-            <figure class="image is-square mx-0">
-              <img src="./img/case-features-03.png" />
-            </figure>
-          </div>
         </div>
+        <hr class="mt-6 mb-0" />
       </div>
     </div>
   </section>
 </div>
 <!-- Competitors -->
-<div class="container my-8">
+<div class="container mt-6 mb-8">
   <div class="columns">
     <div class="column is-12 has-text-centered">
       <h2 class="title is-2 has-line">
@@ -353,14 +331,14 @@
       <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered">CASE</div>
       <div class="column is-2 has-text-centered">Excel</div>
       <div
-        class="column is-2 has-text-centered"
-        title="Logiciel de niche créé uniquement pour un secteur d'activité. Généralement des logiciels fermés et destinés à un usage restreint"
+        class="column is-2 has-text-centered has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+        data-tooltip="Logiciel de niche créé uniquement pour un secteur d'activité. Généralement des logiciels fermés et destinés à un usage restreint"
       >
         Progiciel niche
       </div>
       <div
-        class="column is-2 has-text-centered"
-        title="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME."
+        class="column is-2 has-text-centered has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+        data-tooltip="Des logiciels tout-en-un développés par de gros éditeurs. Conviennent au très grosses organisations (avec beaucoup de configuration) mais peu adapté pour une PME."
       >
         Logiciel ERP
       </div>
@@ -404,11 +382,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Souvent opaque et au bon vouloir de l'éditeur du logiciel."
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Souvent opaque et au bon vouloir de l'éditeur du logiciel."
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -505,11 +483,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Adapté à votre secteur d'activité mais pas à votre façon de faire"
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Adapté à votre secteur d'activité mais pas à votre façon de faire"
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -552,11 +530,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Avec quelques compétences en tableur, vous pouvez adapter vos tableaux à votre activité… Mais attention à ne pas tout détruire !"
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Avec quelques compétences en tableur, vous pouvez adapter vos tableaux à votre activité… Mais attention à ne pas tout détruire !"
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
       <div class="column is-2 has-text-centered">
@@ -615,11 +593,11 @@
         </span>
       </div>
       <div class="column is-2 has-text-centered">
-        <span class="icon">
-          <i
-            class="ci ci-id_card has-text-warning"
-            title="Dans la limite de ce que l'éditeur vous autorise à intégrer"
-          />
+        <span
+          class="icon has-tooltip-arrow has-tooltip-multiline has-tooltip-text-left"
+          data-tooltip="Dans la limite de ce que l'éditeur vous autorise à intégrer"
+        >
+          <i class="ci ci-warning has-text-warning" />
         </span>
       </div>
     </div>
@@ -684,7 +662,7 @@
       <div class="column is-4-mobile is-3-tablet is-4-desktop" />
       <div class="column is-2-mobile is-3-tablet is-2-desktop has-text-centered is-size-7">
         <p class="mb-1">Vous souhaitez implémenter CASE pour votre entreprise ?</p>
-        <a href="/contact" class="button is-small is-fullwidth is-success">Contactez-nous</a>
+        <a href="/contact" class="button is-small is-fullwidth is-warning">Contactez-nous</a>
       </div>
     </div>
   </div>
@@ -762,15 +740,10 @@
               montes, nascetur mus. Phasellus laoreet lorem vel dolor tempus vehicula.
             </p>
 
-            <button class="button is-danger mb-4">Essayez CASE gratuitement</button>
+            <button class="button is-warning ">Essayez CASE gratuitement</button>
             <span
               class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap"
-            >
-              <span class="icon mr-2">
-                <i class="fas fa-layer-group has-text-danger" />
-              </span>
-              <span>Sans création de compte</span>
-            </span>
+            />
           </div>
           <div class="column is-6 is-relative">
             <figure class=" cta-img cta-img--01">
@@ -791,6 +764,7 @@
 <style lang="scss">
   @import './../styles/variables.scss';
   @import './bulma/sass/utilities/all';
+  @import './@creativebulma/bulma-tooltip/src/sass/index';
 
   .hero-figure-wrapper {
     position: absolute;
@@ -805,7 +779,7 @@
   }
   .usage-card {
     .box {
-      height: 457px;
+      height: 417px;
       transition: all 0.18s ease-in-out;
       box-shadow: none;
       &:hover {
@@ -815,6 +789,7 @@
     }
     img {
       position: absolute;
+      mix-blend-mode: multiply;
       bottom: 0;
       right: 0;
       width: 61.8%;
@@ -824,25 +799,26 @@
     &:first-child {
       img {
         bottom: -14px;
-        right: -2px;
+        right: -14px;
       }
     }
     &:nth-child(2) {
       img {
-        bottom: -14px;
-        right: -2px;
+        bottom: -23px;
+        right: -23px;
+        width: 69%;
       }
     }
     &:nth-child(3) {
       img {
-        bottom: -14px;
+        bottom: -10px;
         right: -2px;
       }
     }
     &:last-child {
       img {
         bottom: -14px;
-        right: -2px;
+        right: 3px;
       }
     }
   }
@@ -1042,6 +1018,11 @@
     }
   }
   .hero--cta-bottom {
+    .card {
+      background-image: url(./img/pattern-info.svg);
+      background-repeat: repeat;
+      background-color: $info;
+    }
     margin-top: 9.6rem;
     margin-bottom: 9.6rem;
     @include widescreen {
