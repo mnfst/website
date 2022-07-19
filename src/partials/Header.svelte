@@ -36,7 +36,6 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Accueil </a>
-        <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
 
         <div class="navbar-item has-dropdown is-hoverable is-mega">
           <span class="navbar-link" class:is-active={path.includes('/usages/')}>
@@ -100,6 +99,7 @@
             </div>
           </div>
         </div>
+        <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
       </div>
 
       <div class="navbar-end ">

@@ -118,7 +118,7 @@
             <div
               class="is-flex is-align-items-center is-justify-content-center key-features is-fullheight is-fullwidth"
             >
-              <figure class=" has-object-fit-contain has-object-position-center-center">
+              <figure class=" has-object-fit-contain has-object-position-center-center ">
                 <img
                   src="./../img/key-features/{activeKeyFeature.image}"
                   alt={activeKeyFeature.name}
@@ -268,15 +268,24 @@
             <h3 class="title is-5 mb-3">{usage.name}</h3>
             <p class="has-text-grey-dark">{usage.description}</p>
             <div class="tags are-small">
-              <span class="tag is-dark">Managers</span>
-              <span class="tag is-dark">Commerciaux</span>
+              {#each usage.keywords as keyword}
+                <span class="tag is-white"
+                  ><span
+                    class:has-text-link-dark={usage.name === 'Opérationnel'}
+                    class:has-text-danger={usage.name === 'Planification'}
+                    class:has-text-success-dark={usage.name === 'Devis et factures'}
+                    class:has-text-primary={usage.name === 'Reporting et analytique'}
+                    >{keyword}</span
+                  ></span
+                >
+              {/each}
             </div>
           </div>
-          <a href="/usages/{usage.slug}" class="button is-small is-primary">
-            <span class="icon is-small">
+          <a href="/usages/{usage.slug}" class="icon-text has-text-primary">
+            <span> En savoir plus </span>
+            <span class="icon ml-1 mt-0">
               <i class="ci ci-long_up_right" />
             </span>
-            <span> En savoir plus </span>
           </a>
         </a>
       </div>

@@ -5,13 +5,13 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Sécurité et contenu privé',
     description:
       'Mot de passe, contenu limité par groupe, encryption SLL copies de sauvegarde quotidiennes',
-    image: 'security.png',
+    image: 'securite.png',
     usages: ['planification', 'home', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Branding',
     description: 'Marque blanche: CASE est personnalisable à votre identité et vos couleurs',
-    image: 'case-factures.png',
+    image: 'branding.png',
     usages: [
       'planification',
       'operationnel',
@@ -24,13 +24,13 @@ export const keyFeatureContents: KeyFeature[] = [
   {
     name: 'Simple à utiliser',
     description: `CASE fonctionne comme les apps utilisées au quotidien sur votre smartphone, pas besoin de mode d'emploi.`,
-    image: 'security.png',
+    image: 'simple-a-utiliser.png',
     usages: ['home', 'operationnel', 'devis-et-factures']
   },
   {
     name: 'Intégration avec vos outils',
     description: `Connectez vos logiciels, outils et processus`,
-    image: 'case-factures.png',
+    image: 'connecte.png',
     usages: ['home']
   },
   {
@@ -42,7 +42,7 @@ export const keyFeatureContents: KeyFeature[] = [
   {
     name: 'Notifications',
     description: 'Notifications en temps réel, push, email, SMS…',
-    image: 'case-factures.png',
+    image: 'notifications.png',
     usages: ['home']
   },
   {
