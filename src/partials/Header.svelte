@@ -7,11 +7,28 @@
   let usages: Usage[] = usageContents
   let path: string
 
+  let isUsageDropdownActive: boolean
+  let isTouchMenuActive: boolean
+
   function getPath(currentPath: string) {
     path = currentPath
   }
 
-  $: getPath($page.url.pathname)
+  $: {
+    getPath($page.url.pathname)
+    isUsageDropdownActive = false
+    isTouchMenuActive = false
+  }
+
+  function toggleTouchMenuActive() {
+    if (!isTouchMenuActive) {
+      isTouchMenuActive = true
+      document.body.classList.add('is-clipped')
+    } else {
+      isTouchMenuActive = false
+      document.body.classList.remove('is-clipped')
+    }
+  }
 </script>
 
 <nav class="navbar is-fixed-top has-shadow has-centered-menu" aria-label="main navigation">
@@ -26,6 +43,7 @@
         class="navbar-burger is-hidden-desktop"
         aria-label="menu"
         aria-expanded="false"
+        on:click={() => toggleTouchMenuActive()}
       >
         <span aria-hidden="true" />
         <span aria-hidden="true" />
@@ -33,12 +51,18 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-menu" class:is-active={isTouchMenuActive}>
       <div class="navbar-start">
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Accueil </a>
         <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
 
-        <div class="navbar-item has-dropdown is-hoverable is-mega">
+        <div
+          class="navbar-item has-dropdown is-mega"
+          class:is-active={isUsageDropdownActive}
+          on:mouseenter={() => (isUsageDropdownActive = true)}
+          on:mouseleave={() => (isUsageDropdownActive = false)}
+          on:click={() => (isUsageDropdownActive = !isUsageDropdownActive)}
+        >
           <span class="navbar-link" class:is-active={path.includes('/usages/')}>
             Votre besoin
           </span>

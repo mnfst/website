@@ -6,6 +6,7 @@
   import type { Usage } from '../interfaces/usage.interface'
 
   import { MetaTags } from 'svelte-meta-tags'
+  import UsageCard from '../partials/UsageCard.svelte'
 
   let usages: Usage[] = usageContents
   let keyFeatures: KeyFeature[] = keyFeatureContents.filter((keyFeature: KeyFeature) =>
@@ -128,38 +129,7 @@
 <div class="container pb-8">
   <div class="columns is-multiline">
     {#each usages as usage}
-      <div class="column is-12-mobile is-6-tablet is-3-widescreen usage-card">
-        <a
-          href="/usages/{usage.slug}"
-          class="box is-relative content has-background-white-bis px-4 is-flex is-flex-direction-column is-justify-content-space-between is-clipped is-align-items-flex-start"
-        >
-          <img src="img/usages/{usage.image}" alt={usage.name} />
-
-          <div>
-            <h3 class="title is-5 mb-3">{usage.name}</h3>
-            <p class="has-text-grey-dark">{usage.description}</p>
-            <div class="tags are-small">
-              {#each usage.keywords as keyword}
-                <span class="tag is-white"
-                  ><span
-                    class:has-text-link-dark={usage.name === 'Opérationnel'}
-                    class:has-text-danger={usage.name === 'Planification'}
-                    class:has-text-success-dark={usage.name === 'Devis et factures'}
-                    class:has-text-primary={usage.name === 'Reporting et analytique'}
-                    >{keyword}</span
-                  ></span
-                >
-              {/each}
-            </div>
-          </div>
-          <a href="/usages/{usage.slug}" class="icon-text has-text-primary">
-            <span> En savoir plus </span>
-            <span class="icon ml-1">
-              <i class="ci ci-long_up_right" />
-            </span>
-          </a>
-        </a>
-      </div>
+      <UsageCard {usage} />
     {/each}
   </div>
 </div>
@@ -779,7 +749,7 @@
   }
   .usage-card {
     .box {
-      height: 417px;
+      height: 457px;
       transition: all 0.18s ease-in-out;
       box-shadow: none;
       &:hover {
@@ -789,7 +759,6 @@
     }
     img {
       position: absolute;
-      mix-blend-mode: multiply;
       bottom: 0;
       right: 0;
       width: 61.8%;
@@ -799,26 +768,25 @@
     &:first-child {
       img {
         bottom: -14px;
-        right: -14px;
+        right: -2px;
       }
     }
     &:nth-child(2) {
       img {
-        bottom: -23px;
-        right: -23px;
-        width: 69%;
+        bottom: -14px;
+        right: -2px;
       }
     }
     &:nth-child(3) {
       img {
-        bottom: -10px;
+        bottom: -14px;
         right: -2px;
       }
     }
     &:last-child {
       img {
         bottom: -14px;
-        right: 3px;
+        right: -2px;
       }
     }
   }
