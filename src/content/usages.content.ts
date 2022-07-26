@@ -19,22 +19,22 @@ export const usageContents: Usage[] = [
       positions: [
         {
           name: 'Agents opérationnels',
-          image: 'manager.jpg',
+          image: 'equipe-operationnelle.jpg',
           benefits: [`Accès rapide sur l'app`, 'Remplace un processus non optimisé']
         },
         {
           name: `Chefs d'équipe`,
-          image: 'sales.jpg',
+          image: 'chef-dequipe.jpg',
           benefits: ['Gérer les collaborateurs et les ressources', 'Données en temps réel']
         },
         {
           name: 'Chefs de projet',
-          image: 'sales.jpg',
+          image: 'chef-de-projet.jpg',
           benefits: ['Gestion des imprévus', 'Centralisation des documents']
         },
         {
           name: 'Direction',
-          image: 'manager.jpg',
+          image: 'direction.jpg',
           benefits: ['Analyser la production', 'Mesurer la performance des équipes']
         }
       ]
@@ -75,17 +75,17 @@ export const usageContents: Usage[] = [
       positions: [
         {
           name: 'Responsable RH',
-          image: 'sales.jpg',
+          image: 'rh.jpg',
           benefits: ['Prévoir les prochains recrutements', 'Gérer les congés, primes, etc.']
         },
         {
           name: `Chefs d'équipe`,
-          image: 'manager.jpg',
+          image: 'chef-dequipe.jpg',
           benefits: ['Gérer ses équipiers', 'Visualiser les disponibilités']
         },
         {
           name: 'Equipe opérations',
-          image: 'sales.jpg',
+          image: 'equipe-operationnelle.jpg',
           benefits: [
             'Renseigner les heures travaillées',
             `Accéder à l'app depuis smartphone / tablette`
@@ -93,17 +93,17 @@ export const usageContents: Usage[] = [
         },
         {
           name: 'Direction',
-          image: 'manager.jpg',
+          image: 'direction.jpg',
           benefits: ['Analyser la production', 'Mesurer la performance des équipes']
         },
         {
           name: 'Externes',
-          image: 'sales.jpg',
+          image: 'commerciaux-01.jpg',
           benefits: ['Organiser son planning', `Accès restreint pour s'imputer`]
         },
         {
           name: 'Commerciaux',
-          image: 'manager.jpg',
+          image: 'commerciaux-old.jpg',
           benefits: [
             'Facturer directement temps passé',
             'Préparer des devis basés sur des planifications'
@@ -147,22 +147,22 @@ export const usageContents: Usage[] = [
       positions: [
         {
           name: `Chefs d'équipe`,
-          image: 'manager.jpg',
+          image: 'chef-dequipe.jpg',
           benefits: ['Gérer ses équipiers', 'Organiser les calendriers']
         },
         {
           name: 'Equipe opérations',
-          image: 'sales.jpg',
+          image: 'equipe-operationnelle.jpg',
           benefits: [`Accéder à l'app depuis smartphone / tablette`, 'Générer documents officiels']
         },
         {
           name: 'Direction',
-          image: 'manager.jpg',
+          image: 'direction.jpg',
           benefits: ['Analyser la production', 'Mesurer la performance des équipes']
         },
         {
           name: 'Commerciaux',
-          image: 'sales.jpg',
+          image: 'commerciaux-old.jpg',
           benefits: ['Préparer des devis et factures']
         }
       ]
@@ -200,7 +200,7 @@ export const usageContents: Usage[] = [
       positions: [
         {
           name: 'Commerciaux',
-          image: 'manager.jpg',
+          image: 'commerciaux-old.jpg',
           benefits: [
             'Facturer les produits et services',
             'Préparer des devis basés sur des planifications'
@@ -208,12 +208,12 @@ export const usageContents: Usage[] = [
         },
         {
           name: 'Comptabilité',
-          image: 'manager.jpg',
+          image: 'comptable.jpg',
           benefits: ['Extraction des données comptables', 'Réunir les documents légaux']
         },
         {
           name: 'Direction',
-          image: 'manager.jpg',
+          image: 'direction.jpg',
           benefits: ['Analyser la production', 'Mesurer la performance des équipes']
         }
       ]
