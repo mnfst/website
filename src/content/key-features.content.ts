@@ -15,7 +15,7 @@ export const keyFeatureContents: KeyFeature[] = [
     usages: [
       'planification',
       'operationnel',
-      'devis -et-factures',
+      'devis-et-factures',
       'home',
       'reporting-et-analytique',
       'devis-et-factures'
@@ -36,7 +36,7 @@ export const keyFeatureContents: KeyFeature[] = [
   {
     name: 'Génération de documents',
     description: 'PDFs, Excel, Word… Générez vos documents officiels depuis CASE',
-    image: 'security.png',
+    image: 'docs.png',
     usages: ['home', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
@@ -49,58 +49,58 @@ export const keyFeatureContents: KeyFeature[] = [
     name: 'Mobile',
     description:
       'Tirez parti de toutes les fonctionnalités de votre dispositif: caméra, GPS, notifications push, etc.',
-    image: 'security.png',
+    image: 'mobile.png',
     usages: ['operationnel']
   },
   {
     name: `Utilisateurs et droits d'accès`,
     description: `Définissez différents groupes d'utilisateurs et le contenu auquel ils ont accès`,
-    image: 'security.png',
+    image: 'roles.png',
     usages: ['operationnel', 'reporting-et-analytique', 'devis-et-factures']
   },
   {
     name: 'Calendrier intéractif',
     description: 'Suivez les agendas de vos équipes visuellement',
-    image: 'security.png',
+    image: 'calendrier.png',
     usages: ['operationnel', 'planification']
   },
   {
     name: 'Cloud',
     description: 'Accédez à CASE partout, tout le temps et sans rien installer',
-    image: 'security.png',
+    image: 'cloud.png',
     usages: ['operationnel']
   },
   {
     name: 'Génération de rapports',
     description: `Faites-vous livrer des rapports d'activités personnalisés sur votre boite email`,
-    image: 'security.png',
+    image: 'rapport.png',
     usages: ['reporting-et-analytique']
   },
   {
     name: 'Data-visualization',
     description:
       'Graphiques et tableaux sont là pour vous montrer les informations dans un format visuel',
-    image: 'security.png',
+    image: 'reports.png',
     usages: ['reporting-et-analytique']
   },
   {
     name: 'Export au format Excel',
     description:
       'Vous gérez vos rapports sur Excel ? Sélectionnez les dates et téléchargez le tout en format XLS ou CSV',
-    image: 'security.png',
+    image: 'docs.png',
     usages: ['planification']
   },
   {
     name: 'Suivi de la rentabilité',
     description:
       'Analysez le temps et le coût du travail pour chaque projet, collaborateur ou période déterminée',
-    image: 'case-factures.png',
+      image: 'reports.png',
     usages: ['planification', 'devis-et-factures']
   },
   {
     name: 'Congés et jours fériés',
     description: 'Gérez les jours de repos de vos collaborateurs et les jours non travaillés',
-    image: 'security.png',
+    image: 'calendrier.png',
     usages: ['planification']
   }
 ]

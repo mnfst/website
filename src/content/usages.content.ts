@@ -4,8 +4,8 @@ export const usageContents: Usage[] = [
   {
     name: 'Opérationnel',
     slug: 'operationnel',
-    cover01: 'operationnel.png',
-    cover02: 'operationnel.png',
+    cover01: 'operationnel/cover-01.png',
+    cover02: 'operationnel/cover-02.jpg',
     image: 'erp-operationnel.png',
     colorName: 'link-dark',
     description: 'Gérez la production et les livrables, au bureau comme sur le terrain !',
@@ -131,8 +131,8 @@ export const usageContents: Usage[] = [
   {
     name: 'Reporting et analytique',
     slug: 'reporting-et-analytique',
-    cover01: 'reporting-et-analytique.png',
-    cover02: 'operationnel.png',
+    cover01: 'reporting/cover-01.png',
+    cover02: 'reporting/cover-02.jpg',
     image: 'reporting-analytique.png',
     colorName: 'primary',
     description:
@@ -185,8 +185,8 @@ export const usageContents: Usage[] = [
   {
     name: 'Devis et factures',
     slug: 'devis-et-factures',
-    cover01: 'devis-et-factures.png',
-    cover02: 'operationnel.png',
+    cover01: 'factures/cover-01.png',
+    cover02: 'factures/cover-02.jpg',
     colorName: 'success-dark',
     image: 'devis-facturation.png',
     description: 'Gagnez du temps en gérant vos ventes directement depuis CASE.',
