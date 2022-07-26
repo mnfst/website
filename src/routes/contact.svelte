@@ -110,7 +110,7 @@
                 class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
               >
                 <span class="icon mr-2">
-                  <i class="fas fa-check has-text-warning" />
+                  <i class="fas fa-check has-text-primary" />
                 </span>
                 <span>Centralisez production, commercial et RH</span>
               </span>
@@ -118,7 +118,7 @@
                 class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
               >
                 <span class="  icon mr-2">
-                  <i class="fas fa-check has-text-warning" />
+                  <i class="fas fa-check has-text-primary" />
                 </span>
                 <span>Automatisez les tâches répétitives</span>
               </span>
@@ -126,14 +126,52 @@
                 class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4 "
               >
                 <span class="  icon mr-2">
-                  <i class="fas fa-check has-text-warning" />
+                  <i class="fas fa-check has-text-primary" />
                 </span>
                 <span>Prenez de meilleures décisions</span>
               </span>
             </div>
-            <figure class="has-object-fit-cover">
-              <img src="./img/contact-img.svg" alt="" />
-            </figure>
+            <hr />
+            <div class="content" itemscope itemtype="https://schema.org/Organization">
+              <p class="has-text-weight-bold" itemprop="name">CASE</p>
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span
+                  class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+                >
+                  <span class="icon has-text-grey mr-2">
+                    <i class="ci ci-location" />
+                  </span>
+                  <span
+                    ><span itemprop="streetAddress">171, quai de Valmy</span>
+                    <span itemprop="postalCode">75010 </span><span itemprop="addressLocality"
+                      >Paris, France</span
+                    >
+                  </span>
+                </span>
+              </p>
+              <p />
+              <p>
+                <span
+                  class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+                >
+                  <span class="icon has-text-grey mr-2">
+                    <i class="ci ci-phone" />
+                  </span>
+                  <span itemprop="telephone">01 40 38 76 08</span>
+                </span>
+              </p>
+
+              <p>
+                <span
+                  class="icon-text is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-wrap-nowrap mb-4  mr-4"
+                >
+                  <span class="icon has-text-grey mr-2">
+                    <i class="ci ci-mail" />
+                  </span>
+                  <span itemprop="email">info@case.app</span>
+                </span>
+              </p>
+            </div>
           </div>
         </div>
         <div class="column is-6-tablet is-5-desktop is-4-wisescreen is-4-fullhd has-text-left">
