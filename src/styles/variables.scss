@@ -1,0 +1,40 @@
+/* Variables and mixins declared here will be available in all other SCSS files */ /* https://github.com/jgthms/bulma/issues/1293 */
+
+@use 'sass:math';
+$body-overflow-y: auto;
+
+
+@import "bulma/sass/utilities/functions";
+
+@import 'variables/fonts';
+@import 'variables/colors';
+@import 'variables/grid';
+
+@import 'variables/box';
+@import 'variables/buttons';
+@import 'variables/derived-variables';
+@import 'variables/cards';
+@import 'variables/content';
+@import 'variables/dropdown';
+@import 'variables/generic';
+@import 'variables/grid';
+@import 'variables/icons';
+@import 'variables/lists';
+@import 'variables/forms';
+@import 'variables/nav';
+@import 'variables/type';
+@import 'variables/modals';
+@import 'variables/spacing';
+@import 'variables/table';
+@import 'variables/tags';
+@import 'variables/tooltip';
+
+@import "bulma/sass/utilities/derived-variables";
+
+$addColors: (
+  "orange":($orange, $orange-invert),
+  "orange-light": ($orange-light, $orange-light-invert)
+);
+
+$colors: map-merge($colors, $addColors);
+

@@ -1,0 +1,186 @@
+::marker {
+  color: $warning;
+}
+
+th {
+  font-weight: $weight-bold;
+}
+table {
+  font-size: $size-7;
+  @include fullhd {
+    font-size: $size-6;
+  }
+}
+
+//Title
+
+.title {
+  color: $dark;
+
+  &.has-line {
+    position: relative;
+    padding-top: 14px;
+    &:before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $gap;
+      height: 2px;
+      background-color: $danger;
+
+      .has-text-centered & {
+        left: calc(50% - #{$column-gap});
+      }
+    }
+  }
+}
+
+h1.title.is-2 {
+  > .icon {
+    position: relative;
+    top: 1.5px;
+  }
+}
+
+h1,
+.title.is-1,
+.h1 {
+  @include touch {
+    font-size: $size-1-touch;
+  }
+}
+h2,
+.title.is-2,
+.h2 {
+  @include touch {
+    font-size: $size-2-touch;
+  }
+}
+h3,
+.title.is-3,
+.h3 {
+  @include touch {
+    font-size: $size-3-touch;
+  }
+}
+h4,
+.title.is-4,
+.h4 {
+  @include touch {
+    font-size: $size-4-touch;
+  }
+}
+h5,
+.title.is-5,
+.h5 {
+  @include touch {
+    font-size: $size-4-touch;
+  }
+}
+h6,
+.title.is-6,
+.h6 {
+  @include touch {
+    font-size: $size-4-touch;
+  }
+}
+
+.title--small {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  display: inline-block;
+  font-size: $size-7;
+  margin-bottom: 0;
+}
+
+
+//_ Global rules
+hr {
+  height: 1px;
+  background-color: $border-color;
+}
+
+a {
+  cursor: pointer;
+  &.no-deco {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+
+  &.become-link {
+    color: $grey;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $link !important;
+    }
+  }
+}
+
+
+*[routerLink],
+*[href],
+*[ng-reflect-router-link] {
+  cursor: pointer;
+}
+
+.is-italic {
+  font-style: italic;
+}
+.no-transfo {
+  text-transform: none;
+}
+.is-regular {
+  font-weight: $weight-normal;
+}
+
+a {
+  &[disabled] {
+    cursor: no-drop;
+    pointer-events: none;
+    color: $grey-light;
+  }
+}
+
+//_ Tooltip
+.tooltip {
+  &:before {
+    background-color: $dark !important;
+    border: 1px solid $dark;
+    color: $light !important;
+    font-size: 1.3rem !important;
+    z-index: 99;
+  }
+}
+
+.is-default,
+.is-default a {
+  cursor: default;
+}
+
+.has-custom-link {
+  text-decoration: underline;
+
+  &:hover {
+    color: $link;
+  }
+}
+
+ul, ol {
+  margin-left: $list-ml;
+  margin-top: $list-mt;
+
+  &:not(:last-child) {
+    margin-bottom: $list-mb;
+  }
+}
+
+ul, .content ul {
+  list-style: $list-style;
+}

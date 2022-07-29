@@ -1,0 +1,6 @@
+.list-separated {
+  padding: $column-gap 0;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+}

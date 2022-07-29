@@ -1,0 +1,53 @@
+thead {
+  white-space: nowrap;
+}
+
+th {
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+td {
+  &.is-narrow {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+  }
+}
+
+// override
+.table.is-narrow td,
+.table.is-narrow th {
+  padding: $table-cell-padding-narrow;
+}
+
+
+td,
+th {
+  vertical-align: middle !important;
+
+  &:first-child {
+    padding-left: $gap;
+  }
+  &:last-child {
+    padding-right: $gap;
+  }
+
+  a {
+    color: inherit;
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+}
+
+.more {
+  height: 100%;
+  position: relative;
+
+  > span {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}

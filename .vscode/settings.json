@@ -1,0 +1,12 @@
+{
+  "cSpell.words": ["sveltekit"],
+  "workbench.colorCustomizations": {
+    "sash.hoverBorder": "#843bd1",
+    "statusBar.background": "#6b29b0",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#843bd1",
+    "statusBarItem.remoteBackground": "#6b29b0",
+    "statusBarItem.remoteForeground": "#e7e7e7"
+  },
+  "peacock.color": "#6B29B0"
+}

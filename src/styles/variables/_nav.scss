@@ -1,0 +1,32 @@
+// Navbar
+$navbar-background-color: $white !default;
+$navbar-height: 6.6rem !default;
+$navbar-item-color: $dark !default;
+$navbar-item-hover-color: $primary !default;
+$navbar-item-active-color: $primary !default;
+$navbar-item-img-max-height: unset !default;
+$navbar-burger-color: $white !default;
+$navbar-box-shadow-size: 0px 3px 22px !default;
+$navbar-box-shadow-color: rgba($dark, 0.08) !default;
+$navbar-tab-active-border-bottom-color: $primary !default;
+$navbar-tab-hover-border-bottom-color: $primary !default;
+$navbar-item-hover-background-color: transparent !default;
+$navbar-dropdown-arrow: $dark !default;
+
+$navbar-tab-hover-background-color: transparent !default;
+
+$navbar-tab-active-color: $primary !default;
+$navbar-tab-active-background-color: transparent !default;
+$navbar-tab-active-border-bottom-color: $link !default;
+$navbar-tab-active-border-bottom-style: solid !default;
+$navbar-tab-active-border-bottom-width: 5px !default;
+
+// Dropdowns
+$navbar-dropdown-item-active-background-color: $white-bis !default;
+$navbar-dropdown-item-focus-background-color: $white-bis !default;
+$navbar-dropdown-item-hover-background-color: $white-bis !default;
+$navbar-dropdown-item-hover-color: $primary !default;
+
+//  Custom color
+$navbar-burger-background-color: $primary !default;
+$navbar-burger-hover-background-color: lighten($primary, 0.1) !default;
