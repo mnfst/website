@@ -175,6 +175,10 @@
       .navbar-column {
         > .navbar-item {
           padding: $column-gap;
+
+          p {
+            white-space: break-spaces;
+          }
         }
       }
     }

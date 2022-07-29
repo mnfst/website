@@ -168,7 +168,7 @@
                   <span class="icon has-text-grey mr-2">
                     <i class="ci ci-mail" />
                   </span>
-                  <span itemprop="email">info@case.app</span>
+                  <!-- <span itemprop="email">info@case.app</span> -->
                 </span>
               </p>
             </div>
