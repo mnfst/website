@@ -659,38 +659,42 @@
         >
           <figure class="image is-square">
             <figure>
-              <img src="./img/clients/wp-mail.svg" alt="" />
+              <img src="./img/clients/logo-enedis.svg" alt="" />
             </figure>
           </figure>
         </div>
         <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-          <figure class="image is-square">
-            <img src="./img/clients/eu-flag.svg" alt="" />
+          <figure class="image is-square has-object-fit-contain">
+            <img
+              src="./img/clients/logo-svl-energie.jpeg"
+              style="mix-blend-mode: multiply"
+              alt=""
+            />
+          </figure>
+        </div>
+        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
+          <figure class="image is-square has-object-fit-contain">
+            <img src="./img/clients/logo-terra.png" alt="" style="mix-blend-mode: multiply" />
           </figure>
         </div>
         <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
           <figure class="image is-square">
-            <img src="./img/clients/neorhea.svg" alt="" />
+            <img src="./img/clients/logo-greenchem.svg" alt="" />
           </figure>
         </div>
         <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
           <figure class="image is-square">
-            <img src="./img/clients/neorhea.svg" alt="" />
+            <img src="./img/clients/logo-etenergie.svg" alt="" />
           </figure>
         </div>
         <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
           <figure class="image is-square">
-            <img src="./img/clients/eu-flag.svg" alt="" />
+            <img src="./img/clients/logo-ega.svg" alt="" />
           </figure>
         </div>
         <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
           <figure class="image is-square">
-            <img src="./img/clients/wp-mail.svg" alt="" />
-          </figure>
-        </div>
-        <div class="column is-6-mobile is-4-tablet is-3-desktop p-0 has-client-logo">
-          <figure class="image is-square">
-            <img src="./img/clients/neorhea.svg" alt="" />
+            <img src="./img/clients/logo-buddyweb.svg" alt="" />
           </figure>
         </div>
       </div>

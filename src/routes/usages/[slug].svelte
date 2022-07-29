@@ -124,7 +124,7 @@
             <div
               class="is-flex is-align-items-center is-justify-content-center key-features is-fullheight is-fullwidth"
             >
-              <figure class=" has-object-fit-contain has-object-position-center-center">
+              <figure class=" has-object-fit-contain has-object-position-center-center ">
                 <img
                   src="./../img/key-features/{activeKeyFeature.image}"
                   alt={activeKeyFeature.name}

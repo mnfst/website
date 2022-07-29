@@ -54,7 +54,6 @@
     <div class="navbar-menu" class:is-active={isTouchMenuActive}>
       <div class="navbar-start">
         <a class="navbar-item" href="/" class:is-active={path === '/'}> Accueil </a>
-        <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
 
         <div
           class="navbar-item has-dropdown is-mega"
@@ -124,6 +123,7 @@
             </div>
           </div>
         </div>
+        <a class="navbar-item" href="/faq" class:is-active={path === '/faq'}> FAQ </a>
       </div>
 
       <div class="navbar-end ">
@@ -175,6 +175,10 @@
       .navbar-column {
         > .navbar-item {
           padding: $column-gap;
+
+          p {
+            white-space: break-spaces;
+          }
         }
       }
     }
