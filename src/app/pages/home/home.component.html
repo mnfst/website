@@ -13,11 +13,11 @@
                     <div class="buttons is-justify-content-center">
                         <button class="button is-link">Get started</button>
                     </div>
-                    <p class="content is-small mb-1 mt-2">Work with:</p>
+                    <p class="content is-small mb-1 mt-2">Works with:</p>
                     <div class="is-flex is-align-items-center is-justify-content-center">
-                        <img class="mx-2" src="./assets/images/angular.svg" alt="">
-                        <img class="mx-2" src="./assets/images/nestjs.svg" alt="">
-                        <img class="mx-2" src="./assets/images/typeorm.svg" alt="">
+                        <img class="mx-2" src="./assets/images/angular.svg" alt="Angular logo" title="Angular">
+                        <img class="mx-2" src="./assets/images/nestjs.svg" alt="NestJS logo" title="Nest">
+                        <img class="mx-2" src="./assets/images/typeorm.svg" alt="TypeORM logo" title="TypeORM">
                     </div>
                 </div>
             </div>
@@ -137,9 +137,18 @@
                 </div>
             </div>
         </div>
-        <div class="columns is-multiline">
-            <div class="column is-10-tablet is-8-desktop is-offset-1-tablet is-offset-2-desktop">
-                    <!-- TODO: accordion here -->
+        <div class="columns is-multiline" *ngFor="let faq of faqs; let i = index">
+            <div class="column is-12 faq-title"  (click)="activeFaq = i">
+                <div class="content">
+                    <h3 class="title is-3 has-text-white">{{ faq.question}}</h3> 
+                    <i class="fa" [ngClass]="{
+                        'fa-angle-down': activeFaq === i,
+                        'fa-angle-right': activeFaq !== i
+                    }"></i>
+                </div>
+            </div>
+            <div class="column is-12 faq-content" *ngIf="activeFaq === i">
+                <div [innerHTML]="faq.answer"></div>
             </div>
         </div>
     </div>
