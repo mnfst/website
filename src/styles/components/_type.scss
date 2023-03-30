@@ -239,7 +239,7 @@ a {
 pre {
   border-width: 1px;
   border-style: solid;
-  border-image: linear-gradient(to bottom right, $link, $primary) 1;
+  border-image: $border-image;
   font-family: 'Fira Code', monospace;
   color: $white-ter;
   max-width: fit-content;

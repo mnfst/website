@@ -15,8 +15,8 @@ $size-8: 0.87rem !default;
 $size-1-touch: 3.32rem !default;
 $size-2-touch: 2.656rem !default;
 $size-3-touch: 2.125rem !default;
-$size-4-touch: 1.7rem !default;
-$size-5-touch: 1.36rem !default;
+$size-4-touch: 2.656rem !default;
+$size-5-touch: 2.125rem !default;
 
 // Typography
 
@@ -52,3 +52,4 @@ $body-color: $darkness !default;
 
 // Custom variables
 $letter-spacing: 0.4px !default;
+$border-image: linear-gradient(to bottom right, $link, $primary) 1 !default;

@@ -1,3 +1,6 @@
+@import '../../../styles/variables/all';
+@import '../../../node_modules/bulma/sass/utilities/mixins';
+
 .is-collapsible {
     &:not(.is-active) {
         opacity: 0;
@@ -15,4 +18,37 @@
 
 .faq-title {
     cursor: pointer;
+}
+
+.section-featured {
+    --height: 515px;
+    min-height: calc(var(--height) * 1.25 + 9rem);
+
+    @include touch{
+        min-height: 87vw;
+    }
+    @media screen and (max-width: 350px) {
+        min-height: 100vw;
+    }
+}
+
+.image-featured {
+    --height: 515px;
+    position: absolute;
+    top: #{$gap  * 4};
+    right: 0;
+    height: auto;
+    width: calc(var(--height) * 1.618);
+    max-width: 100%;
+    object-fit: cover;
+    border-width: 1px;
+    border-style: solid;
+    border-image: $border-image;
+
+
+}
+
+.terminal {
+    position: relative;
+    z-index: 1;
 }
