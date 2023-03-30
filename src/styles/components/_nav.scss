@@ -30,8 +30,8 @@
 .navbar-item,
 .navbar-link {
   @include widescreen {
-    padding-right: $column-gap; 
-    padding-left: $column-gap; 
+    padding-right: $gap; 
+    padding-left: $gap; 
   }
   .navbar-brand & {
     @include desktop-only {
