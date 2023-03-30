@@ -242,6 +242,7 @@ pre {
   border-image: linear-gradient(to bottom right, $link, $primary) 1;
   font-family: 'Fira Code', monospace;
   color: $white-ter;
+  max-width: fit-content;
   
   > * {
     font-family: 'Fira Code', monospace;
