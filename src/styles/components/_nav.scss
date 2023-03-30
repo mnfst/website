@@ -1,5 +1,9 @@
 .navbar {
   position: relative;
+
+  &.is-transparent {
+    background-color: transparent
+  }
 }
 
 .navbar-dropdown {
@@ -34,7 +38,7 @@
       padding-left: $gap;
     }
     @include widescreen {
-      padding-left: 0;
+      padding-hleft: 0;
       position: relative;
     }
   }

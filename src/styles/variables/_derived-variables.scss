@@ -1,4 +1,10 @@
 $custom-colors: (
+  'link': (
+    $link,
+    $black,
+    $link,
+    $black
+  ),
   'link-light': (
     $link-light,
     $link,
@@ -41,7 +47,7 @@ $custom-colors: (
     $white,
     $sun
   ),
-  
+
   'sun': (
     $sun,
     $white,
@@ -50,8 +56,8 @@ $custom-colors: (
   ),
   'white-ter': (
     $white-ter,
-    $dark,
-    $dark,
+    $black,
+    $black,
     $white-ter
   ),
 );
