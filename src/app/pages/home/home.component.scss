@@ -1,0 +1,13 @@
+.is-collapsible {
+    &:not(.is-active) {
+        opacity: 0;
+        height: 0;
+        transition: opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+    }
+
+    &.is-active {
+        opacity: 1;
+        height: 100%;
+        transition: opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) .2s, height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
