@@ -172,24 +172,27 @@
 <section>
     <div class="container mt-8 pb-8">
         <div class="columns is-multiline">
-            <div class="column is-10-tablet is-offset-1-tablet has-text-centered">
+            <div class="column is-10-tablet is-offset-1-tablet">
+                
                 <div class="content ">
                     <h2 class="title is-2 has-text-white">FAQ</h2>
                 </div>
-            </div>
-        </div>
-        <div class="columns is-multiline" *ngFor="let faq of faqs; let i = index">
-            <div class="column is-12 faq-title"  (click)="activeFaq = i">
-                <div class="content">
-                    <h3 class="title is-3 has-text-white">{{ faq.question}}</h3> 
-                    <i class="fa" [ngClass]="{
-                        'fa-angle-down': activeFaq === i,
-                        'fa-angle-right': activeFaq !== i
-                    }"></i>
+                <div class="" *ngFor="let faq of faqs; let i = index">
+                    <div class="faq-title py-2"  (click)="activeFaq = i">
+                        <div class="content">
+                            <div class="is-flex is-align-items-center is-justify-content-space-between">
+                                <h3 class="title is-4 has-text-white mb-0">{{ faq.question}}</h3> 
+                                <i class="fa" [ngClass]="{
+                                    'fa-angle-down': activeFaq === i,
+                                    'fa-angle-right': activeFaq !== i
+                                }"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" faq-content py-2 content" *ngIf="activeFaq === i">
+                        <div [innerHTML]="faq.answer"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="column is-12 faq-content" *ngIf="activeFaq === i">
-                <div [innerHTML]="faq.answer"></div>
             </div>
         </div>
     </div>
