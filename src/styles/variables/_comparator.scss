@@ -1,0 +1,5 @@
+$static-column-width:254px !default;
+$column-min-width:280px !default;
+
+$static-column-width-mobile: #{$static-column-width * .5} !default;
+$column-min-width-mobile: calc(100vw - #{$static-column-width-mobile}) !default;

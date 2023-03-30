@@ -1,0 +1,18 @@
+.dropdown-item {
+  font-size: $size-7;
+
+  &.is-active {
+    font-weight: $weight-bold;
+  }
+}
+
+.dropdown-menu {
+  &.is-large {
+    min-width: $dropdown-menu-large-min-width;
+  }
+}
+
+.dropdown-content {
+    max-height: $dropdown-max-height;
+  overflow: auto;
+}

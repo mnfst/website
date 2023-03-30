@@ -1,0 +1,64 @@
+$black: #0a0a0a !default;
+$grey: #b5b5b5 !default;
+$white: #fff !default;
+$light: #fff !default;
+
+$darkness: $black !default; // Some titles
+$dark: #0a0a0a !default;
+$light-bis: #fafafa !default; // Sheet
+$light: #fff !default; // Sheet
+
+$black-bis: #242424 !default;
+$black-ter: #363636 !default;
+$grey-darker: #4a4a4a !default;
+$grey-dark: #b5b5b5 !default;
+$grey-light: #dbdbdb !default;
+$grey-lighter: #f5f5f5 !default;
+$white-ter: #fafafa !default;
+$white-bis: $light-bis !default;
+
+$success: #07aa9a !default;
+$link: #0097dd !default;
+$info: #ecccc6 !default;
+$primary: #02375b !default;
+$purple: #ad97dd !default;
+$danger: #e9314e !default;
+$sun: #ec7432 !default;
+$warning: #f2be56 !default;
+$violet: #92375b !default;
+$sand: #efddc7 !default;
+$sky: #a9e4ea !default;
+
+$success-light: #35c5b7 !default;
+$link-light: #f3ddd9 !default;
+$info-light: #62bbe4 !default;
+$primary-light: #115c7f !default;
+$purple-light: #bdaedb !default;
+$danger-light: #e2576c !default;
+$sun-light: #e99669 !default;
+$warning-light: #fad180 !default;
+$violet-light: #b3708b !default;
+$sand-light: #f7ece0 !default;
+$sky-light: #effcfd !default;
+
+$success-dark: #009485 !default;
+$link-dark: #d6afa8 !default;
+$info-dark: #0076ad !default;
+$primary-dark: #074663 !default;
+$purple-dark: #834b83 !default;
+$danger-dark: #d11c38 !default;
+$sun-dark: #d46022 !default;
+$warning-dark: #a59339 !default;
+$violet-dark: #7a2648 !default;
+$sand-dark: #d3b99a !default;
+$sky-dark: #84c5cc !default;
+
+
+$border-color: $grey-lighter !default;
+
+// Additional values
+
+$link-alpha10: rgba($link, 0.1) !default;
+$link-alpha07: rgba($link, 0.07) !default;
+$link-alpha03: rgba($link, 0.03) !default;
+$border-color-input: $link-alpha10 !default;

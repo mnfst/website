@@ -1,0 +1,41 @@
+.navbar {
+  position: relative;
+}
+
+.navbar-dropdown {
+  font-size: inherit;
+}
+
+.navbar-menu {
+  @include touch {
+    height: calc(100vh - #{$navbar-height});
+  }
+}
+
+.navbar-burger {
+  background-color: $white-ter;
+}
+
+.navbar-end > .navbar-item {
+  > .navbar-link, .navbar-item {
+    height: 100%;
+    transition: all 0.18s ease-out;
+  }
+}
+
+.navbar-item,
+.navbar-link {
+  @include widescreen {
+    padding-right: $column-gap; 
+    padding-left: $column-gap; 
+  }
+  .navbar-brand & {
+    @include desktop-only {
+      padding-left: $gap;
+    }
+    @include widescreen {
+      padding-left: 0;
+      position: relative;
+    }
+  }
+}

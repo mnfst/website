@@ -1,0 +1,37 @@
+@use 'sass:math';
+
+//controls
+$control-padding-vertical: 0.375em !default;
+$control-padding-horizontal: $column-gap !default;
+$input-background-color: $white !default;
+$input-placeholder-color: rgba($black-ter, 0.5) !default;
+$input-color: $black !default;
+$input-radius: 4px !default;
+$input-arrow: $primary-dark !default;
+$input-border-color: $grey !default;
+$input-icon-color: $black-ter !default;
+$input-icon-active-color: $link !default;
+
+$input-shadow: none !default;
+
+$input-hover-color: $black-ter !default;
+$input-hover-border-color: rgba($black-ter, 0.1) !default;
+$input-focus-color: $link !default;
+$input-focus-box-shadow-size: 0 3px 15px;
+$input-focus-box-shadow-color: rgba($black-ter, 0.1) !default;
+
+$input-disabled-color: $grey !default;
+$input-disabled-background-color: $grey-light !default;
+$input-disabled-border-color: $grey-dark !default;
+$input-disabled-placeholder-color: bulmaRgba(
+  $input-disabled-color,
+  0.3
+) !default;
+
+
+//Custom variables
+$field-background: $white !default;
+$border: $grey-light !default;
+$checkbox-spacing: 24px !default;
+$checkbox-box-shadow-width: 0 0 0 4px !default;
+

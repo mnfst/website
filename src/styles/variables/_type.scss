@@ -1,0 +1,54 @@
+// Font-size
+
+$size-1: 5.188rem !default;
+$size-2: 4.15rem !default;
+$size-3: 3.32rem !default;
+$size-4: 2.656rem !default;
+$size-5: 2.125rem !default;
+$size-6: 1.7rem !default;
+$size-7: 1.36rem !default;
+$size-8: 1.088rem !default;
+$size-8: 0.87rem !default;
+
+// $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
+
+$size-1-touch: 3.32rem !default;
+$size-2-touch: 2.656rem !default;
+$size-3-touch: 2.125rem !default;
+$size-4-touch: 1.7rem !default;
+$size-5-touch: 1.36rem !default;
+
+// Typography
+
+$ff-sans: "Hind", sans-serif !default;
+$ff-serif: "Hind", sans-serif !default;
+
+$family-sans-serif: $ff-sans !default;
+$family-monospace: $ff-serif !default;
+$family-secondary: $ff-serif, sans-serif !default;
+
+$master-size: $size-2 !default;
+$title-size: $size-1 !default;
+
+$title-weight: 700 !default;
+$title-weight-bold: 700 !default;
+$title-color: inherit !default;
+$title-line-height: 1.17 !default;
+
+$subtitle-size: $size-5 !default;
+$subtitle-color: $darkness !default;
+$subtitle-weight: 400 !default;
+
+$weight-light: 100 !default;
+$weight-normal: 400 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+$strong-color: inherit !default;
+
+// Body
+$body-font-size: $size-6 !default;
+$body-color: $darkness !default;
+
+// Custom variables
+$letter-spacing: 0.4px !default;

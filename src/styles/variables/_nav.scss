@@ -1,0 +1,17 @@
+// Navbar
+$navbar-height: 9.8rem !default;
+$navbar-item-color: $primary !default;
+$navbar-item-hover-color: $danger !default;
+$navbar-item-hover-background-color: transparent !default;
+$navbar-item-active-color: $danger !default;
+$navbar-item-active-background-color: transparent !default;
+$navbar-item-img-max-height: unset !default;
+$navbar-box-shadow-color: $grey-lighter !default;
+$navbar-box-shadow-size : 0 1px 0 0 !default;
+
+//Dropdown
+$navbar-dropdown-item-hover-color: $danger !default;
+$navbar-dropdown-item-active-color: $danger !default;
+
+$navbar-dropdown-arrow: $dark !default;
+$navbar-dropdown-border-top: 0 !default;

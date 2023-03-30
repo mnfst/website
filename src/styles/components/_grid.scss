@@ -1,0 +1,71 @@
+.container {
+  @include until-widescreen {
+    max-width: calc(100% - #{$container-offset});
+  }
+  @include touch {
+    max-width: calc(100% - #{$gap});
+  }
+}
+
+.is-12percent-fullhd {
+  @include fullhd {
+    flex: none;
+    width: 12% !important;
+  }
+}
+.is-1-5 {
+  @include desktop {
+    flex: none;
+    width: 12.5% !important;
+  }
+  @include touch {
+    width: 100%;
+  }
+}
+.is-20-percent {
+  @include desktop {
+    flex: none;
+    width: 20% !important;
+  }
+  @include touch {
+    width: 100%;
+  }
+}
+
+.column {
+  @include retina {
+    @for $i from 0 through 12 {
+      &.is-#{$i}-retina {
+        flex: none;
+        width: percentage(divide($i, 12));
+      }
+      &.is-offset-#{$i}-retina {
+        @include ltr-property("margin", percentage(divide($i, 12)), false);
+      }
+    }
+  }
+  
+}
+
+
+  @include mobile {
+    .mb-0-mobile {
+    margin-bottom: 0 !important;
+  }
+    .pb-0-mobile {
+    padding-bottom: 0 !important;
+  }
+
+  .m-4-mobile {
+    margin: 1.8rem !important;
+  }
+  .p-4-mobile {
+    padding: 1.8rem !important;
+  }
+}
+
+@include touch {
+  .ml-2-touch {
+    margin-left: 2rem !important;
+  }
+}

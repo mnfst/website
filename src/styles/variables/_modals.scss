@@ -1,0 +1,29 @@
+$modal-z: 999 !default;
+
+$modal-background-background-color: $light !default;
+
+$modal-content-width: 90% !default;
+$modal-content-margin-mobile: 20px !default;
+$modal-content-spacing-mobile: 160px !default;
+$modal-content-spacing-tablet: calc($gap * 1.25) !default;
+
+$modal-card-head-border-bottom: 0 !default;
+$modal-card-head-padding: calc($column-gap * 1.25) !default;
+$modal-card-head-radius: 4px !default;
+
+$modal-card-title-color: $black !default;
+$modal-card-title-line-height: 1 !default;
+$modal-card-title-size: $size-2 !default;
+
+$modal-card-foot-radius: 4px !default;
+$modal-card-foot-border-top: 0 !default;
+
+$modal-card-body-padding: calc($column-gap * 1.25) !default;
+
+$modal-close-dimensions: calc($gap * 1.25) !default;
+$modal-close-right: calc($column-gap * 1.25) !default;
+$modal-close-top: calc($column-gap * 1.25) !default;
+
+$modal-card-spacing: calc($gap * 1.25) !default;
+
+$modal-breakpoint: $tablet !default;

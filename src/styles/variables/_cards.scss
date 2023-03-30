@@ -1,0 +1,27 @@
+$card-color: $black !default;
+$card-radius: 16px !default;
+$border-color: $grey-lighter !default;
+$card-header-color: inherit !default;
+$card-header-padding: 1.6rem !default;
+$card-content-padding: 1.6rem !default;
+$card-header-shadow: 0 1px 0 $grey-lighter !default;
+$card-shadow: 3px 11px 44px rgba($black-ter, 0.0275),
+  11px 3px 44px rgba($black-ter, 0.0275),
+  -11px 3px 44px rgba($black-ter, 0.0275) !default;
+
+$card-footer-padding: 1.8rem !default;
+$card-footer-border-top: 1px solid $grey-lighter !default;
+
+// Messsage
+
+$message-background-color: $white !default;
+$background: $white !default;
+$message-radius: 0 !default;
+
+$message-header-padding: 0.75em 1em !default;
+$message-header-radius: 0 !default;
+
+$message-body-border-width: 0 0 0 8px !default;
+
+$message-body-padding: 0.8em 1.6em !default;
+$message-body-radius: 0 !default;

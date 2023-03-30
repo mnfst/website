@@ -1,0 +1,54 @@
+button,
+.button {
+  font-weight: $weight-bold;
+  transition: all 0.1s ease-in-out;
+
+  &.is-circle {
+    height: $perimeter;
+    width: $perimeter;
+    min-height: $perimeter;
+    min-width: $perimeter;
+    max-height: $perimeter;
+    max-width: $perimeter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: $perimeter;
+
+    &.is-small {
+      height: $perimeter-small;
+      width: $perimeter-small;
+      min-height: $perimeter-small;
+      min-width: $perimeter-small;
+      max-height: $perimeter-small;
+      max-width: $perimeter-small;
+      border-radius: $perimeter-small;
+    }
+    &.is-medium {
+      height: $perimeter-medium;
+      width: $perimeter-medium;
+      border-radius: $perimeter-medium;
+      min-height: $perimeter-medium;
+      min-width: $perimeter-medium;
+      max-height: $perimeter-medium;
+      max-width: $perimeter-medium;
+    }
+    &.is-large {
+      height: $perimeter-large;
+      width: $perimeter-large;
+      border-radius: $perimeter-large;
+      min-height: $perimeter-large;
+      min-width: $perimeter-large;
+      max-height: $perimeter-large;
+      max-width: $perimeter-large;
+    }
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    
+  }
+}
+
