@@ -28,7 +28,7 @@
         min-height: 87vw;
     }
     @media screen and (max-width: 350px) {
-        min-height: 100vw;
+        min-height: 93vw;
     }
 }
 
@@ -41,9 +41,6 @@
     width: calc(var(--height) * 1.618);
     max-width: 100%;
     object-fit: cover;
-    border-width: 1px;
-    border-style: solid;
-    border-image: $border-image;
 
 
 }
