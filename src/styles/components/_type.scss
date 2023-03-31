@@ -243,6 +243,9 @@ pre {
   font-family: 'Fira Code', monospace;
   color: $white-ter;
   max-width: fit-content;
+  @include tablet {
+    min-width: calc(80ch + #{$gap * 2});
+  }
   
   > * {
     font-family: 'Fira Code', monospace;
