@@ -21,6 +21,7 @@
 }
 
 .section-featured {
+    position: relative;
     --height: 515px;
     min-height: calc(var(--height) * 1.25 + 9rem);
 
@@ -41,8 +42,6 @@
     width: calc(var(--height) * 1.618);
     max-width: 100%;
     object-fit: cover;
-
-
 }
 
 .terminal {

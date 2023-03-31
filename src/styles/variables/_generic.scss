@@ -30,3 +30,7 @@ $footer-padding: 3rem 1.5rem !default;
 
 $pre-background: $dark !default;
 $pre-padding: $column-gap  $gap !default;
+
+//  Custom variables
+$lines-offset: $gap !default;
+$lines-max-width: calc($fullhd + $lines-offset) !default;
