@@ -134,3 +134,48 @@ main {
   }
 }
 
+hr {
+  &.has-cross {
+    height: 42px;
+    background-color: transparent;
+    position: relative;
+    overflow: visible;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: #{-1 * $gap};
+      width: 42px;
+      height: 42px;
+      background-image: url(../../assets/images/cross.svg);
+      background-repeat: no-repeat;
+      background-position: top left;
+
+      @include touch{
+        left: 0;
+      }
+      @include desktop-only {
+        opacity:0
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: #{-1 * $gap};
+      width: 42px;
+      height: 42px;
+      background-image: url(../../assets/images/cross.svg);
+      background-repeat: no-repeat;
+      background-position: top left;
+
+      @include touch{
+        right: 0;
+      }
+      @include desktop-only {
+        opacity:0
+      }
+    }
+  }
+}
