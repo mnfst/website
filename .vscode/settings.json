@@ -7,5 +7,6 @@
     "statusBarItem.remoteBackground": "#6b29b0",
     "statusBarItem.remoteForeground": "#e7e7e7"
   },
-  "peacock.color": "#6B29B0"
+  "peacock.color": "#6B29B0",
+  "cSpell.words": ["Scully"]
 }

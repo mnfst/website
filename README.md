@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run the following command to install the dependencies:
 
 ```
-npm install
+npm install --force
 ```
 
 ## Development server
