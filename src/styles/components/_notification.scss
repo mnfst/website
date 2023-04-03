@@ -1,0 +1,9 @@
+.notification {
+    position: fixed;
+    width: 640px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    box-shadow: $shadow;
+}

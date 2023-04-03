@@ -1,0 +1,81 @@
+@import '../../../styles/variables/all';
+@import 'bulma/sass/utilities/mixins';
+
+.is-collapsible {
+  &:not(.is-active) {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+      height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  }
+
+  &.is-active {
+    opacity: 1;
+    height: 100%;
+    transition: opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s,
+      height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.faq-title {
+  cursor: pointer;
+}
+
+.section-featured {
+  position: relative;
+  --height: 515px;
+  min-height: calc(var(--height) * 1.25 + 9rem);
+
+  @include touch {
+    min-height: 87vw;
+  }
+  @media screen and (max-width: 350px) {
+    min-height: 93vw;
+  }
+}
+
+.image-featured {
+  --height: 515px;
+  position: absolute;
+  top: #{$gap * 4};
+  right: 0;
+  height: auto;
+  width: calc(var(--height) * 1.618);
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.terminal {
+  position: relative;
+  z-index: 1;
+}
+
+.anim-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid $light;
+  white-space: nowrap;
+  margin: 0 auto;
+
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 78ch;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $light;
+  }
+}

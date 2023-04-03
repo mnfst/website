@@ -1,5 +1,9 @@
 .dropdown-item {
-  font-size: $size-6;
+  font-size: $size-7;
+
+  &.is-active {
+    font-weight: $weight-bold;
+  }
 }
 
 .dropdown-menu {
@@ -7,23 +11,8 @@
     min-width: $dropdown-menu-large-min-width;
   }
 }
-.dropdown.is-west {
-  .dropdown-menu {
-    right: 200%;
-    left: unset;
-  }
 
-  &:not(.is-up) {
-    .dropdown-menu {
-      top: -1.5rem;
-      bottom: unset;
-    }
-  }
-  .rev-pos-0 &,
-  &.is-up {
-    .dropdown-menu {
-      bottom: -1.5rem;
-      top: unset;
-    }
-  }
+.dropdown-content {
+    max-height: $dropdown-max-height;
+  overflow: auto;
 }

@@ -1,12 +1,23 @@
 thead {
   white-space: nowrap;
 }
+tr {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      background-color: $color-invert;
+      border-left: $border-width-table-row-highlighted solid $color;
+      color: $color;
+    }
+  }
+}
 
 th {
   white-space: nowrap;
   text-transform: uppercase;
 }
-
 td {
   &.is-narrow {
     padding-top: 0.8em;
@@ -20,10 +31,9 @@ td {
   padding: $table-cell-padding-narrow;
 }
 
-
 td,
 th {
-  vertical-align: middle !important;
+  vertical-align: top;
 
   &:first-child {
     padding-left: $gap;
@@ -49,5 +59,12 @@ th {
     display: flex;
     align-items: center;
     height: 100%;
+  }
+}
+
+.link-box {
+  transition: all .36s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  &:hover {
+    background-color: $white-bis;
   }
 }

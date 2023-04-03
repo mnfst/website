@@ -1,0 +1,8 @@
+.flag {
+    &.is-small {
+        width: 24px;
+    }
+    &:not(.is-small) {
+        width: 72px;
+    }
+}

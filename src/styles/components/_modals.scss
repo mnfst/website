@@ -31,4 +31,29 @@
   .modal-card-title {
     flex: 1;
   }
+
+  &.is-right  {
+    --top-header-height : 28.61px;
+    right: 0;
+    display: block;
+    opacity: 0;
+    transform: translateX(100%);
+    top: $navbar-height;
+    max-height: calc(100vh - #{$navbar-height});
+    background-color: $light;
+    box-shadow: $shadow;
+    left: unset;
+    bottom: unset;
+    transition: transform .18s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.08s, opacity .18s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+    &.is-active {
+      transform: translateX(0);
+      transition: transform .18s cubic-bezier(0.390, 0.575, 0.565, 1.000), opacity .18s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.08s;
+      opacity: 1;
+    }
+  }
+  
+      &-card {
+        max-height: calc(100vh - #{$navbar-height});
+       
+      }
 }

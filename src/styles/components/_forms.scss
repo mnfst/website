@@ -16,29 +16,6 @@
   color: $input-placeholder-color !important;
 }
 
-select,
-.select {
-  font-size: $size-normal;
-
-  &.is-small {
-    border-radius: $control-radius-small;
-    font-size: $size-small;
-  }
-  &.is-medium {
-    font-size: $size-medium;
-  }
-  &.is-large {
-    font-size: $size-large;
-  }
-}
-
-label:not(.file-label):not(.checkbox):not(.image-label):not(.is-boxed) {
-  font-size: $size-small;
-}
-
-input {
-  font-family: $family-alt
-}
 
 //  Checkbox
 .checkbox {
@@ -58,6 +35,7 @@ input {
       display: block;
     }
   }
+  
   &.is-checked:focus .checkmark {
     box-shadow: $checkbox-box-shadow-width $link inset;
   }
@@ -67,28 +45,58 @@ input {
   &:hover .checkmark {
     box-shadow: $checkbox-box-shadow-width rgba($grey, 0.75) inset;
   }
+  
   &.is-checked:hover .checkmark {
     box-shadow: $checkbox-box-shadow-width $link inset;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+
+    &.is-checked .checkmark {
+      box-shadow: $checkbox-box-shadow-width $input-disabled-border-color inset;
+      background-color: transparent;
+    }
+    &:hover .checkmark {
+      box-shadow: 0 0 0 1px $input-disabled-color inset;
+    }
+    &.is-checked:hover .checkmark {
+      box-shadow: $checkbox-box-shadow-width $input-disabled-border-color  inset;
+    }
+  }
+
+  &.is-small {
+    font-size: $size-small;
   }
 }
 
 // Checkbox & radio
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   height: 16px;
   width: 16px;
   border-radius: 50%;
   background-color: $light;
   box-shadow: 0 0 0 1px rgba($grey, 0.75) inset;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.18s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+
+  .checkbox.is-small & {
+    height: 14px;
+  width: 14px;
+  }
+
+  .is-disabled & {
+    box-shadow: 0 0 0 1px $input-disabled-color inset;
+    background-color: transparent;
+  }
 
   &:after {
     content: '';
     position: absolute;
     display: none;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.18s cubic-bezier(0.390, 0.575, 0.565, 1.000);
   }
 }
 
@@ -107,10 +115,7 @@ label.radio {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-transform: uppercase;
-  color: $grey-dark;
-  font-weight: $weight-bold;
-  margin-bottom: 14px;
+  color: $input-color;
 
   input {
     position: absolute;
@@ -141,6 +146,22 @@ label.radio {
   &:hover input.is-checked ~ .checkmark {
     box-shadow: $checkbox-box-shadow-width $link inset;
   }
+
+
+  &.is-disabled {
+    cursor: not-allowed;
+
+    &.is-checked .checkmark {
+      box-shadow: $checkbox-box-shadow-width $input-disabled-border-color inset;
+      background-color: transparent;
+    }
+    &:hover .checkmark {
+      box-shadow: 0 0 0 1px $input-disabled-color inset;
+    }
+    &.is-checked:hover .checkmark {
+      box-shadow: $checkbox-box-shadow-width $input-disabled-border-color  inset;
+    }
+  }
 }
 
 .radio.is-boxed {
@@ -156,7 +177,7 @@ label.radio {
   position: relative;
   text-align: center;
   padding: $control-padding-vertical $control-padding-horizontal;
-
+  
   img {
     display: none;
     position: absolute;

@@ -1,18 +1,19 @@
 // Buttons
 $control-border-width: 1px !default;
-$button-border-width: 1px !default;
-$button-hover-color: $danger !default;
-$button-padding-vertical: calc(0.5em - #{$button-border-width}) !default;
-$button-padding-top: calc(0.5em - #{$button-border-width}) !default;
-$button-padding-bottom: 0.5em !default;
-$button-padding-horizontal: 1.38em !default;
-$radius: 2px !default;
+$button-hover-color: $link !default;
+$button-padding-horizontal: 2.6em !default;
+$radius: 0px !default;
+$control-height: 2.75em !default;
+$control-inputs-height: 2.75em !default;
 $control-shadow-secondary: 0 6px 16px 0 rgba($primary, 0.2) !default;
-$control-height: 2.589em !default;
-$navbar-dropdown-radius: 0 !default;
+$size-small: 1.36rem !default;
+$size-normal: 1.7rem !default;
+$control-line-height: 1 !default;
+$size-medium: 2.125rem !default;
+$size-large: 2.656rem !default;
 
 // Custom variables
-$perimeter: 4.4rem !default;
-$perimeter-small: 3.52rem !default;
-$perimeter-medium: 4.4rem !default;
-$perimeter-large: 5.502rem !default;
+$perimeter: 3.5rem !default;
+$perimeter-small: 2.8rem !default;
+$perimeter-medium: 4.6rem !default;
+$perimeter-large: 5.8rem !default;
