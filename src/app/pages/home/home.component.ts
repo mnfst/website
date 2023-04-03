@@ -41,20 +41,20 @@ export class HomeComponent {
   ]
 
   constructor(meta: Meta, title: Title) {
-    title.setTitle('CASE - Develop Fantastic Business Apps In Minutes')
+    title.setTitle('CASE - Full Stack Framework | Build your app faster')
     meta.addTag({
       name: 'og:title',
-      content: 'CASE - Develop Fantastic Business Apps In Minutes'
+      content: 'CASE - Full Stack Framework | Build your app faster'
     })
     meta.addTag({
       name: 'description',
       content:
-        'Develop quickly and easily fantastic custom business applications with CASE.'
+        'Build quickly and easily your custom web apps, ERPs and dashboards with this Angular + NestJS framework.'
     })
     meta.addTag({
       name: 'og:description',
       content:
-        'Develop quickly and easily fantastic custom business applications with CASE.'
+        'Build quickly and easily your custom web apps, ERPs and dashboards with this Angular + NestJS framework.'
     })
     meta.addTag({ name: 'og:url', content: 'https://case.app' })
     meta.addTag({
