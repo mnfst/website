@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { ScullyLibModule } from '@scullyio/ng-lib'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -17,7 +16,7 @@ import { Error404Component } from './errors/error404/error404.component'
     FooterComponent,
     Error404Component
   ],
-  imports: [BrowserModule, AppRoutingModule, ScullyLibModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
