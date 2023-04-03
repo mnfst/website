@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Component } from '@angular/core'
+import { Meta, Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-home',
@@ -7,8 +7,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  activeFaq: number | null = null; 
+  activeFaq: number | null = null
 
   faqs = [
     {
@@ -38,17 +37,38 @@ export class HomeComponent {
       answer: `<p>On our beta tests, most of the developers were able to create a basic dashboard app in 1 hour.  And half of them were not familiar with Angular and Nest !</p>
 
       <p>Follow the quickstart guide to create your first CASE app. From there you are free to use (or not) CASE elements, resources and features.</p>`
-    }  
+    }
   ]
 
   constructor(meta: Meta, title: Title) {
-    title.setTitle('CASE - Develop Fantastic Business Apps In Minutes');
-    meta.addTag({name: 'og:title', content: 'CASE - Develop Fantastic Business Apps In Minutes'})
-    meta.addTag({ name: 'description', content: 'Develop quickly and easily fantastic custom business applications with CASE.' });
-    meta.addTag({ name: 'og:description', content: 'Develop quickly and easily fantastic custom business applications with CASE.' });
-    meta.addTag({name: 'og:url', content: 'https://case.app'})
-    meta.addTag({name: 'og:image', content: 'https://case.app/assets/images/case-og-image.png'})
-    meta.addTag({name: 'keywords', content: 'CASE, Angular, Nest,  Admin panel, Dashboard, ERP, Business app, Business application, Business software, Business tool, Business tool, Framework, CLI'})
+    title.setTitle('CASE - Develop Fantastic Business Apps In Minutes')
+    meta.addTag({
+      name: 'og:title',
+      content: 'CASE - Develop Fantastic Business Apps In Minutes'
+    })
+    meta.addTag({
+      name: 'description',
+      content:
+        'Develop quickly and easily fantastic custom business applications with CASE.'
+    })
+    meta.addTag({
+      name: 'og:description',
+      content:
+        'Develop quickly and easily fantastic custom business applications with CASE.'
+    })
+    meta.addTag({ name: 'og:url', content: 'https://case.app' })
+    meta.addTag({
+      name: 'og:image',
+      content: 'https://case.app/assets/images/case-og-image.png'
+    })
+    meta.addTag({
+      name: 'keywords',
+      content:
+        'CASE, Angular, Nest,  Admin panel, Dashboard, ERP, Business app, Business application, Business software, Business tool, Business tool, Framework, CLI'
+    })
   }
 
+  toggleFaq(index: number) {
+    this.activeFaq = this.activeFaq === index ? null : index
+  }
 }

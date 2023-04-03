@@ -248,7 +248,7 @@
           <h2 class="title is-2 has-text-white">FAQ</h2>
         </div>
         <div class="" *ngFor="let faq of faqs; let i = index">
-          <div class="faq-title py-2" (click)="activeFaq = i">
+          <div class="faq-title py-2" (click)="toggleFaq(i)">
             <div class="content">
               <div
                 class="is-flex is-align-items-center is-justify-content-space-between"
