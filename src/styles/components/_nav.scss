@@ -1,27 +1,64 @@
-.dropdown-trigger:after {
-  @extend .ci;
-  @extend .ci-caret_down;
+.navbar {
+  position: relative;
+
+  &.is-transparent {
+    background-color: transparent
+  }
 }
 
-.navbar.has-centered-menu {
-  .navbar-start {
-    flex-grow: 1;
-    justify-content: center;
+.navbar-dropdown {
+  font-size: inherit;
+}
+
+.navbar-menu {
+  @include touch {
+    height: calc(100vh - #{$navbar-height});
   }
 }
 
 .navbar-burger {
-  background-color: $navbar-burger-background-color;
+  background-color: $white-ter;
 }
 
-.navbar {
-  font-family: $family-alt;
-
-  &-link:not(.is-arrowless) {
-    @include ltr-property("padding", 2em);
-
-  &::after {
-    font-size: .8em;
+.navbar-end > .navbar-item {
+  > .navbar-link, .navbar-item {
+    height: 100%;
+    transition: all 0.18s ease-out;
   }
+}
+
+.navbar-item,
+.navbar-link {
+  @include widescreen {
+    padding-right: $gap; 
+    padding-left: $gap; 
+  }
+  .navbar-brand & {
+    @include desktop-only {
+      padding-left: $gap;
+    }
+    @include widescreen {
+      padding-hleft: 0;
+      position: relative;
+    }
+  }
+}
+p {
+  border: 4px solid $color-stroke-gradient;
+}
+
+.navbar-brand {
+  @include touch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar-touch {
+  @include touch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

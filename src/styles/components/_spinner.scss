@@ -1,0 +1,199 @@
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
+  }
+}
+
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.loader-animation {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, $grey-lighter 8%, $white-bis 18%, $grey-lighter 33%);
+  background-size: 800px 104px;
+  height: 70px;
+  position: relative;
+}
+
+.spinner {
+  
+  .card {
+    overflow: hidden;
+  }
+
+  & [class^='spinner--'] {
+    border-radius: 4px;
+    @extend .loader-animation;
+  }
+  & &--h5 {
+    height: 22px;
+    width: 100%;
+  }
+  & &--h6 {
+    height: 19px;
+    width: 100%;
+  }
+  & &--p {
+    height: 15px;
+    width: 100%;
+  }
+  & &--label {
+    height: 7px;
+    width: 63px;
+  }
+
+  & &--title {
+    height: 41px;
+    max-width: 100%;
+    min-width: 50%;
+    width: 50%;
+  }
+
+
+  & &--square {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  & &--img {    
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    @include mobile {
+      height: calc((100vw - #{$gap}) * .6);
+      min-height:  calc((100vw - #{$gap}) * .6);
+      max-height:  calc((100vw - #{$gap}) * .6);
+    }
+    @include tablet {
+      height: calc(((100vw * .5) - #{$gap}) * .6 );
+      min-height:  calc(((100vw * .5) - #{$gap}) * .6 );
+      max-height:  calc(((100vw * .5) - #{$gap}) * .6 );
+    }
+    @include desktop {
+      height: calc((((100vw - 64px) * .33333) - #{$gap}) * .6 );
+      min-height:  calc((((100vw - 64px) * .33333) - #{$gap}) * .6 );
+      max-height:  calc((((100vw - 64px) * .33333) - #{$gap}) * .6 );
+    }
+    @include widescreen {
+      height: 167.39px;
+      min-height:   167.39px;
+      max-height:   167.39px;
+    }
+    @include fullhd {
+      height: 213.59px;
+      min-height:  213.59px;
+      max-height:  213.59px;
+    }
+  }
+
+  .container-full.container-comparator &--comparator  {
+    td {
+      display: none;
+      @include touch {
+        &:nth-child(-n+2) {
+          display: table-cell;
+        }
+      }
+      @include desktop {
+        &:nth-child(-n+3) {
+          display: table-cell;
+        }
+      }
+      
+        @include fullhd {
+          &:nth-child(-n+5) {
+            display: table-cell;
+          }
+        }
+        
+        @include from(1800px) {
+          &:nth-child(-n+9) {
+            display: table-cell;
+          }
+        }
+      
+    }
+  }
+  .container & {
+    td {
+        display: none;
+        
+        &:nth-child(-n+2) {
+          display: table-cell;
+        }  
+
+        @include tablet {
+          &:nth-child(-n+3) {
+            display: table-cell;
+          }
+        }
+      
+    }
+  }
+}
+
+.loader--chart {
+  margin: 100px auto;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  text-align: center;
+  
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: $primary;
+  border-radius: 100%;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

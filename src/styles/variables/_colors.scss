@@ -1,105 +1,65 @@
-$black: #110722 !default; // Overload
-$white: #fff !default; // Overload
-
-$dark: $black !default; // Overload
-$light: $white !default; // Overload
-
-$black-bis: $dark !default;
-$black-ter: #251B2F !default;
-$grey-darker: $dark !default;
-$grey-dark: #525252;
-$grey: #7E7D7E !default;
-$grey-light: #D1D5DB !default;
-$grey-lighter: #e9eeff !default;
-$white-ter: #f7f7f7 !default;
-$white-bis: #f5f7f9 !default;
-
-/* Color styles */
 
 
-$primary: #6B29B0 !default;
-$primary-light: #F0EAF7 !default;
-$primary--90: #793DB7 !default;
-$primary--05: #F8F4FB !default;
 
-$info: #FBF0CC !default;
-$info-light: #FFFDFA !default;
 
-$link: #16CFF4 !default;
-$link-light: #E1F6FB !default;
-$link--05: #EDF8FC !default;
 
-$success: #25AE90 !default;
-$success-light: #E9F7F4 !default;
-$success--90: #25AE90 !default;
-$success--05: #F4FBFA !default;
+$black: #161616 !default;
+$darkness: $black !default; // Some titles
+$black-bis: #1c1c1c !default;
+$dark: #232323 !default;
+$black-ter: #282828 !default;
+$grey-darker: #363636 !default;
+$grey-dark: #505050 !default;
+$grey: #7e7e7e !default;
+$grey-light: #a0a0a0 !default;
+$grey-lighter: #ededed !default;
+$light: #f1f3f5 !default;
+$white-ter: #f8f9fa !default;
+$white-bis: #fbfcfd !default;
+$light-bis: $white-bis !default; // Sheet
+$white: #fff !default;
 
-$warning: #FCDC3D !default;
-$warning-light: #FFFFED !default;
-$warning--90: #FEFF62 !default;
-$warning--05: #FFFFF6 !default;
+$success: #23f0c3 !default;
+$link: #c6ff73 !default;
+$info: #549cde !default;
+$primary: #8448f8 !default;
+$danger: #ff006e !default;
+$sun: #fb5607 !default;
+$warning: #ffbe0b !default;
 
-$danger: #fe5448 !default;
-$danger-light: #FEEEF0 !default;
-$danger--90: #F66879 !default;
-$danger--05: #FFF7F8 !default;
+$success-light: #e9fef9 !default;
+$link-light: #edf4e8 !default;
+$info-light: #eef5fc !default;
+$primary-light: #f3edfe !default;
+$danger-light: #ffe5f0 !default;
+$sun-light: #ffeee6 !default;
+$warning-light: #fff8e8 !default;
 
-$orange-light: #FEF2EE !default;
 
-$orange: #F5804E !default;
-$orange-invert: findColorInvert($orange);
-$custom-colors: ("orange": ($orange, $orange-invert));
-
-$orange-light: #FEF2EE !default;
-$orange-light-invert: findColorInvert($orange-light);
-$custom-colors: ("orange-light": ($orange-light, $orange-light-invert));
+$success-dark: #10b692 !default;
+$link-dark: #a5e643 !default;
+$info-dark: #2c71b0 !default;
+$primary-dark: #551fc1 !default;
+$danger-dark: #b3004e !default;
+$sun-dark: #ad3700 !default;
+$warning-dark: #c79200 !default;
 
 $border-color: $grey-lighter !default;
 
 // Additional values
 
-$main-background: $white !default;
-$border-color-input: $primary-light !default;
+$link-alpha10: rgba($link, 0.1) !default;
+$link-alpha07: rgba($link, 0.07) !default;
+$link-alpha03: rgba($link, 0.03) !default;
 
+$color-stroke-gradient: linear-gradient(to bottom, #23f0c3 0%,#8448f8 100%);
 
-$custom-colors: (
-
-  'danger-light': (
-    $danger-light,
-    $danger,
-    $danger-light
-  ),
-  'warning-light': (
-    $warning-light,
-    $warning,
-    $warning-light
-  ),
-  'primary-light': (
-    $primary-light,
-    $primary,
-    $primary-light
-  ),
-  'link-light': (
-    $link-light,
-    $link,
-    $link-light
-  ),
-  'success-light': (
-    $success-light,
-    $success,
-    $success-light
-  ),
-  'orange-light': (
-    $orange-light,
-    $orange,
-    $orange-light
-  ),
-  'orange': (
-    $orange,
-    $light,
-    $orange
-  )
-);
-
-
-
+@mixin effect-style-website-shadow-1() {
+	box-shadow: 0px 3px 16px #102326;
+}
+@mixin effect-style-website-shadow-2() {
+	box-shadow: 0px 1px 60px #5065ff;
+}
+@mixin effect-style-website-shadow-3() {
+	box-shadow: 0px 3px 44px #000000;
+}
