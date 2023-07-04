@@ -16,7 +16,7 @@ import { Error404Component } from './errors/error404/error404.component'
     FooterComponent,
     Error404Component
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
