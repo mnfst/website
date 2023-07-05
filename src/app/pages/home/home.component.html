@@ -1,41 +1,43 @@
-<section class="hero is-black is-large">
+<section class="hero is-light is-large">
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="columns">
         <div class="column is-10-tablet is-offset-1-tablet">
-          <h1 class="title is-1">
-            Develop <span class="has-text-link">quickly</span> and
-            <span class="has-text-link">easily</span>
-            <br />
-            fantastic custom business apps.
-          </h1>
+          <h1 class="title is-1">Develop a CRUD web app in 15 minutes</h1>
           <h2 class="subtitle">
-            CASE is a TypeScript framework that helps you to build
-            data-intensive apps like dashboards, admin panels or ERPs.
+            Forget about frameworks, forms, controllers and databases. CASE
+            eliminates 95% of the work to let you focus on your data.
           </h2>
-          <div class="buttons is-justify-content-center">
+          <div class="is-flex is-justify-content-center">
+            <div
+              class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start"
+            >
+              <div
+                class="has-border-radius is-flex is-full-height isalign-items-stretch is-family-code p-0 has-background-dark has-text-light"
+              >
+                <span class="px-4 py-2"> npx create-case-app my-case-app </span>
+                <a
+                  class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center"
+                >
+                  <span class="icon">
+                    <i class="icon icon-copy"></i>
+                  </span>
+                  <span>Copy</span>
+                </a>
+              </div>
+              <p class="content is-small has-text-weight-bold">
+                80KB - 12 files
+              </p>
+            </div>
+          </div>
+          <div class="buttons is-justify-content-center mt-4">
             <a
-              class="button is-link"
+              class="button is-light"
               target="_blank"
               href="https://docs.case.app/#/getting-started/quick-start-guide?id=section-a-create-a-new-project"
             >
               Get started
             </a>
-          </div>
-          <p class="content is-small mb-1 mt-2">Works with:</p>
-          <div class="is-flex is-align-items-center is-justify-content-center">
-            <img
-              class="mx-2"
-              src="./assets/images/angular.svg"
-              alt="Angular logo"
-              title="Angular"
-            />
-            <img
-              class="mx-2"
-              src="./assets/images/nestjs.svg"
-              alt="NestJS logo"
-              title="Nest"
-            />
           </div>
         </div>
       </div>
@@ -248,41 +250,6 @@
             src="./assets/images/welovedevs-shadow.svg"
             alt="CASE inputs and fields"
           />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="container pb-8">
-    <hr class="has-cross mb-8 mt-0" />
-    <div class="columns is-multiline">
-      <div class="column is-10-tablet is-offset-1-tablet">
-        <div class="content">
-          <h2 class="title is-2 has-text-white">FAQ</h2>
-        </div>
-        <div class="" *ngFor="let faq of faqs; let i = index">
-          <div class="faq-title py-2" (click)="toggleFaq(i)">
-            <div class="content">
-              <div
-                class="is-flex is-align-items-center is-justify-content-space-between"
-              >
-                <h3 class="title is-4 has-text-white mb-0">
-                  {{ faq.question }}
-                </h3>
-                <i
-                  class="fa"
-                  [ngClass]="{
-                    'fa-angle-down': activeFaq === i,
-                    'fa-angle-right': activeFaq !== i
-                  }"
-                ></i>
-              </div>
-            </div>
-          </div>
-          <div class="faq-content py-2 content" *ngIf="activeFaq === i">
-            <div [innerHTML]="faq.answer"></div>
-          </div>
         </div>
       </div>
     </div>
