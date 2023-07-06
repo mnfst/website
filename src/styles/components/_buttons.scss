@@ -6,7 +6,7 @@ button,
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     &.is-#{$name}, &.is-#{$name}:focus,&.is-#{$name}:active, &.is-#{$name}:hover, &.is-#{$name}:hover:active, &.is-#{$name}:focus:active, &.is-#{$name}:focus:hover {
-      @if $name == "light" {
+      @if $name == "light" or $name == "white" {
         box-shadow:0px 100px 80px rgba($dark, 0.07), 
         0px 41.7776px 33.4221px rgba($dark, 0.0503198), 
         0px 22.3363px 17.869px rgba($dark, 0.0417275), 
