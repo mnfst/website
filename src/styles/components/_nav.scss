@@ -29,6 +29,8 @@
 
 .navbar-item,
 .navbar-link {
+  transition: all .22s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
   @include widescreen {
     padding-right: $gap; 
     padding-left: $gap; 
@@ -41,6 +43,11 @@
       padding-hleft: 0;
       position: relative;
     }
+  }
+
+  &:hover {
+    background-color: $navbar-item-hover-background-color !important;
+    color: $navbar-item-hover-color !important;
   }
 }
 p {
