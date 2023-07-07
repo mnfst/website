@@ -1,8 +1,10 @@
 @import '../../../styles/variables/all';
 @import 'bulma/sass/utilities/mixins';
 
+
 .has-bg-gradient {
   top: -1200px;
+
   img {
     position: relative;
     left: 50%;
@@ -28,11 +30,12 @@
 
   }
 }
-figure {
+figure.main-pic {
   position: relative;
   img {
     position: relative;
     z-index: 1;
+    border: 1px solid $border-color;
   }
 }
 
@@ -57,15 +60,19 @@ figure {
 }
 
   &-left {
-    left: 24px;
+    left: 36px;
     div {
       background: $primary;
     }
   }
   &-right {
-    right: 24px;
+    right: 36px;
     div {
-      background: $info;
+      background: $success;
     }
   }
+}
+
+.buttons .button  {
+  z-index: 1;
 }
