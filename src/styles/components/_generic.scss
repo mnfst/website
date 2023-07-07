@@ -37,3 +37,8 @@ img {
 .is-overflow-hidden {
   overflow: hidden;
 }
+
+.has-border-radius {
+  border-radius: $radius-large;
+  overflow: hidden;
+}
