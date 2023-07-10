@@ -14,7 +14,7 @@
             </h2>
             <div class="is-flex is-justify-content-center">
               <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start"
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start npx-wrapper"
               >
                 <div
                   class="has-border-radius is-flex is-full-height isalign-items-stretch is-family-code p-0 has-background-dark has-text-light"
@@ -24,13 +24,25 @@
                   </span>
                   <a
                     (click)="copyToClipboard()"
-                    class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center"
+                    class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center has-text-white is-relative"
                   >
                     <span class="icon">
                       <i class="icon icon-copy"></i>
                     </span>
-                    <span *ngIf="!isCopied">Copy</span>
-                    <span *ngIf="isCopied">Copied !</span>
+                    <span
+                      class="is-inline-flex is-flex-direction-column is-relative"
+                    >
+                      <span
+                        class="button-copy"
+                        [ngClass]="{ 'has-been-copied': isCopied }"
+                        >Copy</span
+                      >
+                      <span
+                        [ngClass]="{ 'is-active': isCopied }"
+                        class="is-copied"
+                        >Copied !</span
+                      >
+                    </span>
                   </a>
                 </div>
                 <p class="content is-small has-text-weight-bold">
