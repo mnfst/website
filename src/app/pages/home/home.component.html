@@ -23,12 +23,14 @@
                     npx create-case-app my-case-app
                   </span>
                   <a
+                    (click)="copyToClipboard()"
                     class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center"
                   >
                     <span class="icon">
                       <i class="icon icon-copy"></i>
                     </span>
-                    <span>Copy</span>
+                    <span *ngIf="!isCopied">Copy</span>
+                    <span *ngIf="isCopied">Copied !</span>
                   </a>
                 </div>
                 <p class="content is-small has-text-weight-bold">
