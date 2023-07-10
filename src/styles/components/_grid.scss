@@ -69,3 +69,10 @@
     margin-left: 2rem !important;
   }
 }
+
+@include mobile {
+  .py-6-mobile {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+}
