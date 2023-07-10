@@ -7,6 +7,7 @@ import { Meta, Title } from '@angular/platform-browser'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  isCopied = false
   constructor(meta: Meta, title: Title) {
     title.setTitle('CASE - Develop a CRUD web app in 15 minutes 🚀')
     meta.addTag({
@@ -33,5 +34,13 @@ export class HomeComponent {
       content:
         'CASE, Typescript, Javascript,Admin panel, Dashboard, ERP, Business app, Business application, Business software, APIs, Business tool, CMS, Frameworkless, CRUD app, CLI, ERP, Custom web app'
     })
+  }
+
+  copyToClipboard() {
+    navigator.clipboard
+      .writeText('npx create-case-app my-case-app')
+      .then(() => {
+        this.isCopied = true
+      })
   }
 }
