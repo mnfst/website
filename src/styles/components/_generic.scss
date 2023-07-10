@@ -29,3 +29,16 @@ img {
 .has-shadow {
   box-shadow: $shadow;
 }
+
+.has-border-radius {
+  border-radius: 4px;
+}
+
+.is-overflow-hidden {
+  overflow: hidden;
+}
+
+.has-border-radius {
+  border-radius: $radius-large;
+  overflow: hidden;
+}
