@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="title is-1">FAQ</h1>
+
+  <div class="mb-6" *ngFor="let faq of faqs">
+    <h2 class="title is-4 mb-1">{{ faq.question }}</h2>
+    <div [innerHTML]="faq.answer"></div>
+  </div>
+</div>
