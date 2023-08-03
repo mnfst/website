@@ -1,8 +1,19 @@
 <div class="container">
-  <h1 class="title is-1">FAQ</h1>
-
-  <div class="mb-6" *ngFor="let faq of faqs">
-    <h2 class="title is-4 mb-1">{{ faq.question }}</h2>
-    <div [innerHTML]="faq.answer"></div>
+  <div class="columns">
+    <div
+      class="column is-10-tablet is-offset-1-tablet is-8-widescreen is-offset-2-widescreen"
+    >
+      <h1 class="title is-1 mt-9">FAQ</h1>
+      <div class="card is-bordered is-shadowless">
+        <div class="card-content p-4">
+          <div class="content">
+            <div class="mb-4" *ngFor="let faq of faqs">
+              <h2 class="title is-5 mb-2">{{ faq.question }}</h2>
+              <div [innerHTML]="faq.answer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
