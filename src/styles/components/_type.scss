@@ -149,6 +149,13 @@ hr {
 
 a {
   cursor: pointer;
+  .content & {
+    color: $primary;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
   
   .content & {
     text-decoration: underline;
