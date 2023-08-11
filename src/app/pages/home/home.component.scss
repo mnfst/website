@@ -188,3 +188,27 @@ opacity: 1
     font-size: $size-7;
   }
 }
+
+.has-icon-left {
+--star-width: 24px;
+--star-margin: 9px;
+  span:first-child {
+    margin-right: var(--star-margin);
+    width: var(--star-width);
+  }
+  span:last-child {
+    width: calc(100% - var(--star-width));
+  }
+
+  .card-icon {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.star-us {
+  background-image: url('/assets/images/stars.svg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 100%  55%;
+}
