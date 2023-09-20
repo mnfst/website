@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser'
 })
 export class HomeComponent {
   isCopied = false
+
   constructor(meta: Meta, title: Title) {
     title.setTitle('CASE - Develop a CRUD web app in 15 minutes 🚀')
     meta.addTag({
@@ -36,8 +37,8 @@ export class HomeComponent {
     })
   }
 
-  copyToClipboard() {
-    navigator.clipboard
+  copyToClipboard(): Promise<void> {
+    return navigator.clipboard
       .writeText('npx create-case-app my-case-app')
       .then(() => {
         this.isCopied = true
