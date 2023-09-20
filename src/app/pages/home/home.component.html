@@ -27,6 +27,8 @@
                   </span>
                   <a
                     (click)="copyToClipboard()"
+                    (keyup)="copyToClipboard()"
+                    tabindex="0"
                     class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center has-text-white is-relative"
                   >
                     <span class="icon">
@@ -152,7 +154,7 @@
       </div>
       <div class="column is-6">
         <div class="card is-fullheight is-bordered is-shadowless">
-          <div class="card-content p-4">
+          <div class="card-content is-fullheight p-4">
             <div class="content">
               <h3 class="title is-5 mb-2">
                 <span>CASE </span>
@@ -169,7 +171,7 @@
       </div>
       <div class="column is-6">
         <div class="card is-fullheight is-bordered is-shadowless">
-          <div class="card-content p-4">
+          <div class="card-content is-fullheight p-4">
             <div class="content">
               <h3 class="title is-5 mb-2">
                 <span>CASE </span><em>VS </em>
@@ -196,12 +198,20 @@
           the project excites you, please give us a hand !
         </p>
       </div>
-      <div class="column is-4">
-        <div class="card is-fullheight has-background-white-ter is-shadowless">
-          <div class="card-content p-4">
-            <h3 class="title is-5 mb-3">Star us on Github</h3>
+      <div class="column is-12-touch is-12-desktop is-5-widescreen">
+        <div class="card is-fullheight has-background-dark is-shadowless">
+          <div class="card-content p-4 star-us">
+            <h3
+              class="title is-5 mb-3 is-inline-flex is-align-items-flex-start has-icon-left is-fullwidth has-text-light"
+            >
+              <span class="is-inline-flex"
+                ><img src="./assets/images/star.svg" alt="" class="card-icon"
+              /></span>
+              <span class="is-inline-flex">Star us on Github </span>
+            </h3>
+
             <a
-              class="button is-dark"
+              class="button is-light"
               target="_blank"
               href="https://github.com/casejs/case"
             >
@@ -213,10 +223,32 @@
           </div>
         </div>
       </div>
-      <div class="column is-4">
+      <div class="column">
         <div class="card is-fullheight has-background-white-ter is-shadowless">
-          <div class="card-content p-4">
-            <h3 class="title is-5 mb-3">Say hello !</h3>
+          <div class="card-content is-fullheight p-4">
+            <h3
+              class="title is-5 mb-3 is-inline-flex is-align-items-flex-start has-icon-left is-fullwidth"
+            >
+              <span class="is-inline-flex">Share ideas and upvote others</span>
+            </h3>
+
+            <a
+              class="button is-dark"
+              target="_blank"
+              href="https://github.com/casejs/case/discussions"
+            >
+              <span class="icon">
+                <i class="fa-brands fa-github is-rounded"></i>
+              </span>
+              <span>Discussions</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card is-fullheight has-background-white-ter is-shadowless">
+          <div class="card-content is-fullheight p-4">
+            <h3 class="title is-5 mb-3">Get help from the community</h3>
             <a
               class="button is-primary"
               target="_blank"
@@ -226,23 +258,6 @@
                 <i class="fa-brands fa-discord is-rounded"></i>
               </span>
               <span>Discord</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="column is-4">
-        <div class="card is-fullheight has-background-white-ter is-shadowless">
-          <div class="card-content p-4">
-            <h3 class="title is-5 mb-3">Stay tuned</h3>
-            <a
-              class="button is-white"
-              href="https://dev.to/casejs"
-              target="_blank"
-            >
-              <span class="icon">
-                <i class="fa-brands is-size-4 fa-dev is-rounded"></i>
-              </span>
-              <span>DEV Community</span>
             </a>
           </div>
         </div>
