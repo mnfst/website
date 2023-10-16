@@ -227,3 +227,21 @@ figure.main-pic {
   background-size: 40%;
   background-position: 100% 55%;
 }
+
+.illu {
+  position: absolute;
+  top: -32px;
+  left: $gap;
+  border-radius: $radius-large;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 67%;
+    height: auto;
+  }
+
+}
