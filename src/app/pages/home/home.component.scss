@@ -245,3 +245,15 @@ figure.main-pic {
   }
 
 }
+
+.col-left {
+  @include touch {
+    padding-top: 3rem;
+  }
+}
+
+.col-right {
+  @include touch {
+    padding-top: 7rem;
+  }
+}
