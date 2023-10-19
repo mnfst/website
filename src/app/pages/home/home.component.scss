@@ -8,7 +8,7 @@
   img {
     position: relative;
     left: 50%;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
     min-width: unset;
     width: unset;
     max-width: unset;
@@ -16,10 +16,10 @@
 }
 
 .bg-shape {
-  position: absolute; 
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -31,12 +31,15 @@
 
   }
 }
+
 figure.main-pic {
   position: relative;
+
   img {
     position: relative;
     z-index: 1;
     border: 1px solid $border-color;
+    border-radius: 24px;
   }
 }
 
@@ -46,8 +49,9 @@ figure.main-pic {
   transform: translateY(-50%);
   width: 65.93%;
   height: 86.36%;
+
   div {
-  translate: none;
+    translate: none;
     rotate: none;
     scale: none;
     transform: translate(0px, 0px);
@@ -58,35 +62,41 @@ figure.main-pic {
     border-radius: 16px;
     filter: blur(45px);
     will-change: transform;
-}
+  }
 
   &-left {
     left: 36px;
+
     div {
       background: $primary;
     }
   }
+
   &-right {
     right: 36px;
+
     div {
       background: $success;
     }
   }
 }
 
-.buttons .button  {
+.buttons .button {
   z-index: 1;
 }
 
 .npx-wrapper {
   position: relative;
+
   .is-copied {
     position: absolute;
-    opacity: 0;    
+    opacity: 0;
+
     &.is-active {
       @extend .slideInUp;
     }
   }
+
   .button-copy {
     opacity: 1;
 
@@ -96,10 +106,11 @@ figure.main-pic {
   }
 }
 
-.button-copy, .is-copied {
+.button-copy,
+.is-copied {
   display: inline-block;
-    min-width: 81px;
-    white-space: nowrap;
+  min-width: 81px;
+  white-space: nowrap;
 }
 
 .slideInUp {
@@ -109,71 +120,72 @@ figure.main-pic {
   animation-duration: .5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  }
-  @-webkit-keyframes slideInUp {
-    0% {
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-      opacity: 0
-      
-    }
-  
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideInUp {
-    0% {
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-      opacity: 0
-
 }
 
-100% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: 1;
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
 
 .slideOutUp {
--webkit-animation-name: slideOutUp;
-animation-name: slideOutUp;
--webkit-animation-duration: .5s;
-animation-duration: .5s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
+
 @-webkit-keyframes slideOutUp {
-0% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: 1
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
 
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
-100% {
--webkit-transform: translateY(-100%);
-transform: translateY(-100%);
-opacity: 0;
-}
-}
+
 @keyframes slideOutUp {
-0% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: 1
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
 
-}
-100% {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  opacity: 0;
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 
@@ -184,18 +196,21 @@ opacity: 1
 
 .install-code {
   white-space: nowrap;
+
   @include touch {
     font-size: $size-7;
   }
 }
 
 .has-icon-left {
---star-width: 24px;
---star-margin: 9px;
+  --star-width: 24px;
+  --star-margin: 9px;
+
   span:first-child {
     margin-right: var(--star-margin);
     width: var(--star-width);
   }
+
   span:last-child {
     width: calc(100% - var(--star-width));
   }
@@ -210,5 +225,35 @@ opacity: 1
   background-image: url('/assets/images/stars.svg');
   background-repeat: no-repeat;
   background-size: 40%;
-  background-position: 100%  55%;
+  background-position: 100% 55%;
+}
+
+.illu {
+  position: absolute;
+  top: -48px;
+  left: $gap;
+  border-radius: $radius-large;
+  height: 96px;
+  width: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 67%;
+    height: auto;
+  }
+
+}
+
+.col-left {
+  @include touch {
+    padding-top: 3rem;
+  }
+}
+
+.col-right {
+  @include touch {
+    padding-top: 7rem;
+  }
 }
