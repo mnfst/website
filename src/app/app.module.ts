@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { HomeComponent } from './pages/home/home.component'
-import { HeaderComponent } from './partials/header/header.component'
-import { FooterComponent } from './partials/footer/footer.component'
-import { Error404Component } from './errors/error404/error404.component';
+import { Error404Component } from './errors/error404/error404.component'
 import { FaqComponent } from './pages/faq/faq.component'
+import { HomeComponent } from './pages/home/home.component'
+import { FooterComponent } from './partials/footer/footer.component'
+import { HeaderComponent } from './partials/header/header.component'
+import { LiveCodeHeroComponent } from './partials/live-code-hero/live-code-hero.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FaqComponent } from './pages/faq/faq.component'
     HeaderComponent,
     FooterComponent,
     Error404Component,
-    FaqComponent
+    FaqComponent,
+    LiveCodeHeroComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
