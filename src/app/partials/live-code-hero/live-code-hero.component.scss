@@ -1,14 +1,17 @@
+@import '../../../styles/variables/all';
+@import 'bulma/sass/utilities/mixins';
+
+
 .var-highlight {
   color: #c0ad60;
 }
+
 .string-highlight {
   color: rgba(253, 149, 90, 0.8);
 }
 
 #typewriter {
-  font-size: 2em;
-  margin: 0;
-  font-family: 'Courier New';
+  font-family: $family-code;
 
   &:after {
     content: '|';
@@ -20,6 +23,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -29,6 +33,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -38,6 +43,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
