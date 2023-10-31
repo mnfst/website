@@ -1,5 +1,5 @@
-<div class="box box--code is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-direction-column">
-    <div class="box--code__head">
+<div class="box box--code is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-direction-column p-0">
+    <div class="box--code__head is-size-7">
         <span class="icon-text">
             <span class="icon">
               <img src="./assets/images/ts-logo.svg" width="12px" alt="">
@@ -27,18 +27,29 @@
             <span>16</span>
             <span>17</span>
         </div>
-        <div class="box--code__content">
-            <pre #typewriter>
-                <span class="var-highlight">var</span> object = {{ '{' }}'
-                name: <span class="string-highlight">'Foo'</span>,
-                type: <span class="string-highlight">'Bar'</span>,
-                location: <span class="string-highlight">'Earth'</span>,
-                properties:[<span class="string-highlight">'Javascript'</span>,
-                <span class="string-highlight">'HTML'</span>,
-                <span class="string-highlight">'CSS'</span>
-                ];
-                {{ '};' }}'
-            </pre>
+        <div class="box--code__content is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-direction-column">
+<pre>
+export class User &#123;
+    @Prop &#40;&#41;
+    name: string
+&#125;
+</pre>
+<pre #typewriter>
+@Prop &#40;&#123;
+    label: ‘Active user',
+    type: PropType.Boolean,
+&#125;&#41;
+isActive: boolean
+
+@Prop &#40;&#123;
+type: PropType.Relation,
+options: &#123;
+    entity: Job,
+&#125;,
+&#125;&#41;
+job: Job
+</pre>
         </div>
     </div>
 </div>
+

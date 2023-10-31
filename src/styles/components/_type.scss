@@ -242,7 +242,7 @@ a {
 .coma-list {
   display: inline-block;
 
-  +.coma-list {
+  + .coma-list {
     &:before {
       content: ',';
       padding-right: 2px;
@@ -271,24 +271,6 @@ a {
 
   &:hover {
     color: $link;
-  }
-}
-
-
-pre {
-  border-width: 1px;
-  border-style: solid;
-  border-image: $border-image;
-  font-family: 'Fira Code', monospace;
-  color: $white-ter;
-  max-width: fit-content;
-
-  @include tablet {
-    min-width: calc(80ch + #{$gap * 2});
-  }
-
-  >* {
-    font-family: 'Fira Code', monospace;
   }
 }
 
