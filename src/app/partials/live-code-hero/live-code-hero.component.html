@@ -1,4 +1,6 @@
-<div class="box box--code is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-direction-column p-0">
+<div class="box-wrapper">
+<div class="box box--code is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-direction-column px-0 pt-0 pb-3 is-shadowless">
+    <div class="left"></div>
     <div class="box--code__head is-size-7">
         <span class="icon-text">
             <span class="icon">
@@ -26,30 +28,32 @@
             <span>15</span>
             <span>16</span>
             <span>17</span>
+            <span>18</span>
         </div>
         <div class="box--code__content is-flex is-align-items-flex-start is-justify-content-flex-start is-flex-direction-column">
 <pre>
-export class User &#123;
-    @Prop &#40;&#41;
-    name: string
+export class <span class="has-text-link">User</span> &#123;
+    @<span class="has-text-pink is-italic">Prop</span><span class="has-text-link">&#40;&#41;</span>
+    name: <span class="has-text-success">string</span>
 &#125;
+
 </pre>
 <pre #typewriter>
-@Prop &#40;&#123;
-    label: ‘Active user',
-    type: PropType.Boolean,
-&#125;&#41;
-isActive: boolean
+@<span class="has-text-pink is-italic">Prop</span><span class="has-text-link">&#40;&#123;</span>
+    type: <span class="has-text-link">PropType</span>.<span class="has-text-success">Email</span>,
+<span class="has-text-link">&#125;&#41;</span>
+<span class="is-italic">email</span>: <span class="has-text-success">string</span>
 
-@Prop &#40;&#123;
-type: PropType.Relation,
-options: &#123;
-    entity: Job,
-&#125;,
-&#125;&#41;
-job: Job
+@<span class="has-text-pink is-italic">Prop</span><span class="has-text-link">&#40;&#123;</span>
+    label: 'Job',
+    type: <span class="has-text-link">PropType</span>.<span class="has-text-success">Relation</span>,
+    options: &#123;
+        entity: <span class="has-text-link">Job</span>,
+    &#125;,
+<span class="has-text-link">&#125;&#41;</span>
+<span class="is-italic">job</span>: <span class="has-text-link">string</span>
 </pre>
+            </div>
         </div>
     </div>
 </div>
-

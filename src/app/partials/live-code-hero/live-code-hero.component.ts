@@ -23,7 +23,7 @@ export class LiveCodeHeroComponent {
       tag: any = '',
       writingTag = false,
       tagOpen = false,
-      typeSpeed = 100,
+      typeSpeed = 5,
       tempTypeSpeed = 0
 
     var type = function () {
@@ -50,7 +50,7 @@ export class LiveCodeHeroComponent {
         if (HTML[cursorPosition] === ' ') {
           tempTypeSpeed = 0
         } else {
-          tempTypeSpeed = Math.random() * typeSpeed + 50
+          tempTypeSpeed = Math.random() * typeSpeed + 35
         }
         t.innerHTML += HTML[cursorPosition]
       }

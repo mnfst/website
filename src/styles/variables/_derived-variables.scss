@@ -1,63 +1,47 @@
 $custom-colors: (
-  'link': (
-    $link,
+  'link': ($link,
     $black,
     $link,
-    $black
-  ),
-  'link-light': (
-    $link-light,
+    $black ),
+  'link-light': ($link-light,
     $link,
     $link-light,
-    $link
-  ),
-  'primary-light': (
-    $primary-light,
+    $link ),
+  'primary-light': ($primary-light,
     $primary,
     $white,
-    $primary
-  ),
-  'warning-light': (
-    $warning-light,
+    $primary ),
+  'warning-light': ($warning-light,
     $warning,
     $white,
-    $warning
-  ),
-  'danger-light': (
-    $danger-light,
+    $warning ),
+  'danger-light': ($danger-light,
     $danger,
     $white,
-    $danger
-  ),
-  'success-light': (
-    $success-light,
+    $danger ),
+  'success-light': ($success-light,
     $success,
     $white,
-    $success
-  ),
-  'info-light': (
-    $info-light,
+    $success ),
+  'info-light': ($info-light,
     $info,
     $white,
-    $info
-  ),
-  'sun-light': (
-    $sun-light,
+    $info ),
+  'sun-light': ($sun-light,
     $sun,
     $white,
-    $sun
-  ),
+    $sun ),
 
-  'sun': (
-    $sun,
+  'sun': ($sun,
     $white,
     $white,
-    $sun
-  ),
-  'white-ter': (
-    $white-ter,
+    $sun ),
+  'white-ter': ($white-ter,
     $black,
     $black,
-    $white-ter
-  ),
+    $white-ter ),
+  'pink': ($pink,
+    $black,
+    $black,
+    $pink )
 );
