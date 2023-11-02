@@ -260,6 +260,19 @@ figure.main-pic {
 
 
 // svg animation
+
+$width-emails: 219px !default;
+$width-positions: 178px !default;
+$avatar-x-01: -404px !default;
+$avatar-x-02: -226px !default;
+$button-x-01: -398px !default;
+$button-x-02: -219px !default;
+$duration-scale-01: 2s !default;
+$delay-scale-01: 4.63s !default;
+$duration-text: 0.2s !default;
+$delay-text: #{$delay-scale-01 + $duration-scale-01 * 0.4} !default;
+$animation-text: cubic-bezier(.09, .86, .52, 1.39) !default;
+
 .svg-container {
   width: 100%;
   height: 100%;
@@ -271,39 +284,58 @@ figure.main-pic {
 
 #animation-wrapper {
   transform: scale(1);
-  transition: all 0.3s ease-in-out;
-  // backface-visibility: visible;
-  // -webkit-animation-name: scale;
-  // animation-name: scale;
-  // -webkit-animation-duration: 2s;
-  // animation-duration: 2s;
-  // -webkit-animation-delay: 1.63s;
-  // animation-delay: 1.63s;
-  // -webkit-animation-fill-mode: both;
-  // animation-fill-mode: both;
-  // -webkit-animation-timing-function: ease-out;
-  // animation-timing-function: ease-out;
-}
-
-$width-emails: 219px;
-$width-positions: 178px;
-$header-right-part-position: -404px;
-
-#col-emails {
-  transform: translateX(#{-1 * $width-emails});
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  -webkit-animation-name: apparition-01;
-  animation-name: apparition-01;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-delay: 3.63s;
-  animation-delay: 3.63s;
+  transition: all 0.3s ease-out;
+  backface-visibility: visible;
+  -webkit-animation-name: scale;
+  animation-name: scale;
+  -webkit-animation-duration: $duration-scale-01;
+  animation-duration: $duration-scale-01;
+  -webkit-animation-delay: 4.63s;
+  animation-delay: 4.63s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
 }
+
+#col-emails {
+  transform: translateX(#{-1 * $width-emails});
+
+  transition: all 0.3s ease-in-out;
+  -webkit-animation-name: emails-displayed;
+  animation-name: emails-displayed;
+  -webkit-animation-duration: $duration-scale-01;
+  animation-duration: $duration-scale-01;
+  -webkit-animation-delay: $delay-scale-01;
+  animation-delay: $delay-scale-01;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+
+  .text-dark {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.3s ease-in-out;
+    -webkit-animation-name: text-dark;
+    animation-name: text-dark;
+    -webkit-animation-duration: $duration-text;
+    animation-duration: $duration-text;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: $animation-text;
+    animation-timing-function: $animation-text;
+
+    @for $i from 1 through 10 {
+      &-#{$i} {
+        -webkit-animation-delay: calc(#{$i * 0.02s} + #{$delay-text});
+        animation-delay: calc(#{$i * 0.02s} + #{$delay-text});
+      }
+    }
+  }
+}
+
+
 
 #col-positions {
   transform: translateX(#{-1 * $width-positions});
@@ -315,12 +347,12 @@ $header-right-part-position: -404px;
 #col-ends {
   transform: translateX(#{-1 * $width-positions - $width-emails});
   transition: all 0.3s ease-in-out;
-  -webkit-animation-name: translation-01;
-  animation-name: translation-01;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-delay: 3.63s;
-  animation-delay: 3.63s;
+  -webkit-animation-name: col-ends-x;
+  animation-name: col-ends-x;
+  -webkit-animation-duration: $duration-scale-01;
+  animation-duration: $duration-scale-01;
+  -webkit-animation-delay: $delay-scale-01;
+  animation-delay: $delay-scale-01;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-timing-function: ease-out;
@@ -328,90 +360,129 @@ $header-right-part-position: -404px;
 }
 
 #header-right-part {
-  transform: translateX(#{$header-right-part-position});
+  transform: translateX(#{$avatar-x-01});
   transition: all 0.3s ease-in-out;
+  -webkit-animation-name: avatar-x-01;
+  animation-name: avatar-x-01;
+  -webkit-animation-duration: $duration-scale-01;
+  animation-duration: $duration-scale-01;
+  -webkit-animation-delay: $delay-scale-01;
+  animation-delay: $delay-scale-01;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
 
+#button {
+  transform: translateX(#{$button-x-01});
+  transition: all 0.3s ease-in-out;
+  -webkit-animation-name: button-x;
+  animation-name: button-x;
+  -webkit-animation-duration: $duration-scale-01;
+  animation-duration: $duration-scale-01;
+  -webkit-animation-delay: 4.63s;
+  animation-delay: 4.63s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 
 
 @-webkit-keyframes scale {
   0% {
-    -webkit-transform: scale(1.522);
-    transform: scale(1.522);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 
-  98% {
-    -webkit-transform: scale(1.522);
-    transform: scale(1.522);
+  40% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
   }
 
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
   }
 }
 
 @keyframes scale {
   0% {
-    -webkit-transform: scale(1.522);
-    transform: scale(1.522);
-  }
-
-  98% {
-    -webkit-transform: scale(1.522);
-    transform: scale(1.522);
-  }
-
-
-  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-}
 
-
-
-@-webkit-keyframes apparition-01 {
-  0% {
-    -webkit-transform: translateX(#{-1 * $width-emails});
-    transform: translateX(#{-1 * $width-emails});
-    opacity: 0;
-
+  40% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
   }
 
 
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
   }
 }
 
-@keyframes apparition-01 {
+
+
+@-webkit-keyframes emails-displayed {
+  0% {
+    -webkit-transform: translateX(#{-1 * $width-emails});
+    transform: translateX(#{-1 * $width-emails});
+
+
+  }
+
+  40% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes emails-displayed {
   0% {
     -webkit-transform: translateX(#{-1 * $width-emails});
 
-    opacity: 0;
+
     transform: translateX(#{-1 * $width-emails});
 
   }
 
+  40% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 
+  }
 
   100% {
     -webkit-transform: translateX(0);
-    opacity: 1;
+
     transform: translateX(0);
   }
 }
 
 
-@-webkit-keyframes translation-01 {
+@-webkit-keyframes col-ends-x {
   0% {
     -webkit-transform: translateX(#{-1 * $width-positions - $width-emails});
     transform: translateX(#{-1 * $width-positions - $width-emails});
   }
 
+  40% {
+    -webkit-transform: translateX(#{-1 * $width-emails});
+    transform: translateX(#{-1 * $width-emails});
+
+  }
+
   100% {
     -webkit-transform: translateX(#{-1 * $width-emails});
     transform: translateX(#{-1 * $width-emails});
@@ -419,15 +490,123 @@ $header-right-part-position: -404px;
   }
 }
 
-@keyframes translation-01 {
+@keyframes col-ends-x {
   0% {
     -webkit-transform: translateX(#{-1 * $width-positions - $width-emails});
     transform: translateX(#{-1 * $width-positions - $width-emails});
 
   }
 
+  40% {
+    -webkit-transform: translateX(#{-1 * $width-emails});
+    transform: translateX(#{-1 * $width-emails});
+
+  }
+
   100% {
     -webkit-transform: translateX(#{-1 * $width-emails});
     transform: translateX(#{-1 * $width-emails});
+  }
+}
+
+@-webkit-keyframes button-x {
+  0% {
+    -webkit-transform: translateX(#{$button-x-01});
+    transform: translateX(#{$button-x-01});
+  }
+
+  40% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+  }
+
+  100% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+
+  }
+}
+
+@keyframes button-x {
+  0% {
+    -webkit-transform: translateX(#{$button-x-01});
+    transform: translateX(#{$button-x-01});
+
+  }
+
+  40% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+  }
+
+  100% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+  }
+}
+
+@-webkit-keyframes avatar-x-01 {
+  0% {
+    -webkit-transform: translateX(#{$button-x-01});
+    transform: translateX(#{$button-x-01});
+  }
+
+  40% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+  }
+
+  100% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+
+  }
+}
+
+@keyframes avatar-x-01 {
+  0% {
+    -webkit-transform: translateX(#{$button-x-01});
+    transform: translateX(#{$button-x-01});
+
+  }
+
+  40% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+  }
+
+  100% {
+    -webkit-transform: translateX(#{$button-x-02});
+    transform: translateX(#{$button-x-02});
+  }
+}
+
+@-webkit-keyframes text-dark {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+}
+
+@keyframes text-dark {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }

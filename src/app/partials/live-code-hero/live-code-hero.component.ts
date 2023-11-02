@@ -50,12 +50,12 @@ export class LiveCodeHeroComponent {
         if (HTML[cursorPosition] === ' ') {
           tempTypeSpeed = 0
         } else {
-          tempTypeSpeed = Math.random() * typeSpeed + 35
+          tempTypeSpeed = Math.random() * typeSpeed + 20
         }
         t.innerHTML += HTML[cursorPosition]
       }
       if (writingTag === true && HTML[cursorPosition] === '>') {
-        tempTypeSpeed = Math.random() * typeSpeed + 50
+        tempTypeSpeed = Math.random() * typeSpeed + 20
         writingTag = false
         if (tagOpen) {
           var newSpan = document.createElement('span')

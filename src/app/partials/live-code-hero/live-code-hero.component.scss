@@ -2,22 +2,6 @@
 @import 'bulma/sass/utilities/mixins';
 
 .box {
-  transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(11deg) rotateZ(0deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
-
-}
-
-.left {
-  transform: rotateY(270deg) translateX(-100px);
-  transform-origin: center left;
-  background-color: #00ff73;
-}
-
-.box-wrapper {
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-}
-
-.box {
   --code-color: #b3bbc7;
   --sidebar-width: 40px;
   --sidebar-padding: 10px;
