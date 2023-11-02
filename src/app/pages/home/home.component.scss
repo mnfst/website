@@ -265,12 +265,12 @@ $width-emails: 219px !default;
 $width-positions: 178px !default;
 
 $avatar-x-01: -404px !default;
-$avatar-x-02: -226px !default;
-$avatar-x-03: -126px !default;
+$avatar-x-02: -224px !default;
+$avatar-x-03: 0 !default;
 
 $button-x-01: -398px !default;
 $button-x-02: -219px !default;
-$button-x-03: -119px !default;
+$button-x-03: 0 !default;
 
 $duration-scale: 6s !default;
 $delay-scale: 4.63s !default;
@@ -787,4 +787,13 @@ $animation-link: $animation-text !default;
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+svg {
+  border: 2px solid $border-color;
+  border-radius: $radius-large;
+  background-image: url('/assets/images/user-list-v.svg');
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
