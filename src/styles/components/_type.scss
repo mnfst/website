@@ -280,3 +280,19 @@ a {
   padding: 0 0.3em;
   border-radius: $radius-large;
 }
+
+
+
+
+
+.content ul.checklist,
+ul.checklist {
+  margin-left: 0;
+
+  li {
+    background-position: left 8px;
+    list-style-type: none;
+    background: url('./../../assets/images/checkmark.svg') no-repeat left top;
+    padding: 0px 0 3px 24px;
+  }
+}

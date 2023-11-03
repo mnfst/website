@@ -23,15 +23,6 @@
   z-index: -1;
 }
 
-.versus {
-  em {
-    margin-right: 4px;
-    color: $warning;
-    -webkit-text-stroke: .5px black;
-
-  }
-}
-
 figure.main-pic {
   position: relative;
 
@@ -277,5 +268,55 @@ app-admin-panel-hero {
   &.is-active {
     background-color: $success;
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 2px, $success 0 2px 12px;
+  }
+}
+
+
+.icon-wrapper {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary-light;
+
+  i {
+    background: -webkit-linear-gradient($primary, #5065FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.count-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-width: 46px;
+  max-width: 46px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: calc(100% - 36px);
+    background: $grey-lighter;
+  }
+}
+
+.square {
+  width: 12px;
+  min-width: 12px;
+  height: 12px;
+  background: $success;
+  background: linear-gradient(90deg, rgba($success, 1) 0%, rgba($link, 1) 100%);
+  margin-right: 6px;
+  margin-top: 14px;
+
+  + span {
+    position: relative;
+    top: -12px;
+    padding-right: 18px;
   }
 }
