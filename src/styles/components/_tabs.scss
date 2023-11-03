@@ -5,26 +5,38 @@
     display: block;
   }
 }
+
 tr {
 
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
+
     &.is-#{$name} td {
       background-color: rgba($color, 0.04);
     }
   }
 }
 
-.tabs li.is-active {
-  background-color: $light;
-  a {
-    position: relative;
-    background-color: rgba($tabs-link-active-color, 0.12);
+.tabs {
+
+
+  li {
+    a {
+      background-color: $tabs-toggle-link-background-color;
+    }
+
+    &.is-active {
+      a {
+        position: relative;
+        background-color: rgba($tabs-link-active-color, 0.12);
+      }
+    }
   }
 }
 
 @each $name, $pair in $colors {
   $color: nth($pair, 1);
+
   .tabs.is-#{$name} {
     li {
       &.is-active {
