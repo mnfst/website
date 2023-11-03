@@ -8,7 +8,8 @@ import { FaqComponent } from './pages/faq/faq.component'
 import { HomeComponent } from './pages/home/home.component'
 import { FooterComponent } from './partials/footer/footer.component'
 import { HeaderComponent } from './partials/header/header.component'
-import { LiveCodeHeroComponent } from './partials/live-code-hero/live-code-hero.component'
+import { LiveCodeHeroComponent } from './partials/live-code-hero/live-code-hero.component';
+import { AdminPanelHeroComponent } from './partials/admin-panel-hero/admin-panel-hero.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LiveCodeHeroComponent } from './partials/live-code-hero/live-code-hero.
     FooterComponent,
     Error404Component,
     FaqComponent,
-    LiveCodeHeroComponent
+    LiveCodeHeroComponent,
+    AdminPanelHeroComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
