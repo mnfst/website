@@ -137,12 +137,9 @@
   </section>
   <section class="section-featured">
     <div class="container py-6-mobile">
-      <div class="columns">
-        <div class="column is-4 has-text-centered">
-          <app-live-code-hero></app-live-code-hero>
-        </div>
-        <div class="column is-8">
-          <div class="tabs is-centered is-toggle mb-1 is-toggle-rounded">
+      <div class="columns is-mobile">
+        <div class="column is-12">
+          <div class="tabs is-centered is-toggle is-toggle-rounded">
             <ul>
               <li [ngClass]="{
                 'is-active': !isApiWindow
@@ -150,6 +147,9 @@
                 <a aria-hidden="true" class="has-text-light" (click)="isApiWindow = false" (keydown)="isApiWindow = false">
                   <span class="icon is-size-7"><i class="fa-solid fa-desktop has-text-danger-light" aria-hidden="true"></i></span>
                   <span class="is-size-7">Admin panel</span>
+                  <span class="circle"
+                  [ngClass]="{ 'is-active': isApiWindow === false }"
+                  ></span>
                 </a>
               </li>
               <li [ngClass]="{
@@ -158,14 +158,31 @@
                 <a aria-hidden="true" class="has-text-light" (click)="isApiWindow = true" (keydown)="isApiWindow = true">
                   <span class="icon is-size-7"><i class="fa-solid fa-database has-text-warning" aria-hidden="true"></i></span>
                   <span class="is-size-7">API</span>
+                  <span class="circle"
+                  [ngClass]="{ 'is-active': isApiWindow === true }"
+                  ></span>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="svg-container" *ngIf="!isApiWindow">       
+        </div>
+      </div>
+      <div class="columns is-multiline" *ngIf="!isApiWindow">
+        <div class="column is-12-touch  is-5-desktop is-4-widescreen has-text-centered">
+          <app-live-code-hero></app-live-code-hero>
+        </div>
+        <div class="column is-12-touch is-7-desktop is-8-widescreen is-flex is-align-items-center">
+          <div class="svg-container">       
             <app-admin-panel-hero></app-admin-panel-hero>
           </div>
-          <div class="api-container is-fullheight" *ngIf="isApiWindow">
+        </div>
+      </div>
+      <div class="columns is-multiline" *ngIf="isApiWindow">
+        <div class="column is-12-mobile  is-6-tablet is-5-desktop is-4-widescreen has-text-centered">
+          <app-live-code-hero></app-live-code-hero>
+        </div>
+        <div class="column is-12-mobile is-6-tablet is-7-desktop is-8-widescreen is-flex is-align-items-center">
+          <div class="api-container is-fullheight is-fullwidth">
             <app-api-hero class="is-fullheight"></app-api-hero>
           </div>
         </div>

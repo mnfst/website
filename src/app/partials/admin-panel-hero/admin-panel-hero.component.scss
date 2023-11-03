@@ -33,6 +33,8 @@ $animation-link: $animation-text !default;
 }
 
 svg {
+    width: 100%;
+    height: auto;
     border: 2px solid $border-color;
     border-radius: $radius-large;
     background-image: url('/assets/images/user-list-v.svg');

@@ -46,6 +46,7 @@ pre {
 
   &:after {
     content: '|';
+    color: $white;
     animation: blink 500ms linear infinite alternate;
   }
 }
