@@ -9,7 +9,8 @@ import { HomeComponent } from './pages/home/home.component'
 import { FooterComponent } from './partials/footer/footer.component'
 import { HeaderComponent } from './partials/header/header.component'
 import { LiveCodeHeroComponent } from './partials/live-code-hero/live-code-hero.component';
-import { AdminPanelHeroComponent } from './partials/admin-panel-hero/admin-panel-hero.component'
+import { AdminPanelHeroComponent } from './partials/admin-panel-hero/admin-panel-hero.component';
+import { ApiHeroComponent } from './partials/api-hero/api-hero.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminPanelHeroComponent } from './partials/admin-panel-hero/admin-panel
     Error404Component,
     FaqComponent,
     LiveCodeHeroComponent,
-    AdminPanelHeroComponent
+    AdminPanelHeroComponent,
+    ApiHeroComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

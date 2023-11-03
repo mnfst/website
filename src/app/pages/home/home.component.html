@@ -165,8 +165,8 @@
           <div class="svg-container" *ngIf="!isApiWindow">       
             <app-admin-panel-hero></app-admin-panel-hero>
           </div>
-          <div *ngIf="isApiWindow">
-            <p>test</p>
+          <div class="api-container is-fullheight" *ngIf="isApiWindow">
+            <app-api-hero class="is-fullheight"></app-api-hero>
           </div>
         </div>
       </div>
