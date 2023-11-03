@@ -9,6 +9,7 @@ import { Meta, Title } from '@angular/platform-browser'
 export class HomeComponent {
   isCopied = false
   isDemoMenuOpen = false
+  isApiWindow = false
 
   @ViewChild('demoButton') demoButton: ElementRef
 
