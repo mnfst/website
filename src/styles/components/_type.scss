@@ -290,9 +290,8 @@ ul.checklist {
   margin-left: 0;
 
   li {
-    background-position: left 8px;
     list-style-type: none;
-    background: url('./../../assets/images/checkmark.svg') no-repeat left top;
+    background: url('./../../assets/images/checkmark.svg') no-repeat left 8px;
     padding: 0px 0 3px 24px;
   }
 }
