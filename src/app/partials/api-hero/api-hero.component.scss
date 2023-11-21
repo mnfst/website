@@ -2,7 +2,8 @@
 @import 'bulma/sass/utilities/mixins';
 
 pre {
-    border-radius: $radius-large;
+    border-bottom-left-radius: $radius-large;
+    border-bottom-right-radius: $radius-large;
 }
 
 .api-display {
@@ -72,4 +73,25 @@ pre {
         opacity: 1;
         background-color: transparent;
     }
+}
+
+
+.top-bar {
+    border-top-left-radius: $radius-large;
+    border-top-right-radius: $radius-large;
+    background-color: $dark;
+    padding: #{$column-gap / 2} $column-gap;
+
+    > div:first-child {
+        flex-grow: 1
+    }
+}
+
+.endpoint-request {
+    border-radius: 100px;
+    border: 0.5px solid $grey-darker;
+    background-color: $black-ter;
+    color: $grey-lighter;
+    padding: 6px #{$column-gap / 1.5};
+    width: 100%;
 }
