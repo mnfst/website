@@ -1,33 +1,39 @@
 <div class="columns">
     <div class="column is-3 is-fullheight">
-        <div class="card is-fullheight">
+        <div class="card is-fullheight is-shadowless is-bordered">
             <div class="card-content is-fullheight">
                 <div class="content is-fullheight">
                     <div class="tabs is-boxed is-vertical is-fullheight is-shadowless">
                         <ul class="is-flex is-flex-direction-column is-fullwidth is-fullheight m-0">
                         <li (click)="selectedTab = 'fetch'" 
                         (keydown)="selectedTab = 'filters'" 
-                        [ngClass]="{'is-active': selectedTab === 'fetch'}" data-target="fetch" class="is-active"  tabindex="0"><a class="has-text-dark no-deco">Fetch</a></li>
+                        [ngClass]="{'is-active': selectedTab === 'fetch'}" data-target="fetch" class="is-active"  tabindex="0"><a class="has-text-dark no-deco">Fetch <i class="icon icon-chevron-right mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'filters'" (keyup)="selectedTab = 'filters'" [ngClass]="{
                                                             'is-active': selectedTab === 'filters'
-                                                        }" data-target="filters" tabindex="1"><a class="has-text-dark no-deco">Filters</a></li>
+                                                        }" data-target="filters" tabindex="1"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Filters <i class="icon icon-chevron-right mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'manipulate'" (keyup)="selectedTab = 'manipulate'" [ngClass]="{
                                                             'is-active': selectedTab === 'manipulate'
-                                                        }" data-target="manipulate" tabindex="2"><a class="has-text-dark no-deco">Manipulate</a></li>
+                                                        }" data-target="manipulate" tabindex="2"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Manipulate <i class="icon icon-chevron-right mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'upload'" (keyup)="selectedTab = 'upload'" [ngClass]="{
                                                             'is-active': selectedTab === 'upload'
-                                                        }" data-target="upload" tabindex="3"><a class="has-text-dark no-deco">Upload</a></li>
+                                                        }" data-target="upload" tabindex="3"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Upload <i class="icon icon-chevron-right mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'auth'" (keyup)="selectedTab = 'auth'" [ngClass]="{
                                                             'is-active': selectedTab === 'auth'
-                                                        }" data-target="auth" tabindex="4"><a class="has-text-dark no-deco">Auth</a></li>
-                        </ul>
+                                                        }" data-target="auth" tabindex="4"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Auth <i class="icon icon-chevron-right mr-0"></i></a></li>
+                                                    </ul>
                                                                 </div>
                                                         </div>
                                                 </div>
                                         </div>
-                                        <a class="m-2" href="">View more</a>
-                                        
-                                </div>
+                                        <div class="content my-2 mx-4">
+                                            <a class="icon-text no-deco has-text-info" href="">
+                                                <span>%%View more</span>
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-arrow-right ml-1"></i>
+                                                </span>
+                                            </a>
+                                        </div>    
+                                    </div>
                                 <div class="column is-9">
                                         <div class="content-wrap">
                                                 <div *ngIf="selectedTab === 'fetch'" id="fetch" class="tab-content is-active">
