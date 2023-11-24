@@ -18,8 +18,6 @@ tr {
 }
 
 .tabs {
-
-
   li {
     a {
       background-color: $tabs-toggle-link-background-color;
@@ -29,6 +27,49 @@ tr {
       a {
         position: relative;
         background-color: rgba($tabs-link-active-color, 0.12);
+      }
+    }
+  }
+
+  &.is-vertical {
+    ul {
+      gap: 1px
+    }
+
+    li {
+      width: 100%;
+
+      a {
+        justify-content: space-between;
+        border-radius: $radius-large;
+      }
+
+    }
+  }
+
+  &.is-boxed {
+
+    ul {
+      border-bottom: $tabs-border-bottom-width;
+      gap: 2px;
+      padding-bottom: 2px;
+    }
+
+    li {
+      a {
+        background-color: $tabs-boxed-link-background-color;
+        border-width: $tabs-boxed-link-border-width;
+      }
+
+      &.is-active {
+        a {
+          background-color: $tabs-boxed-link-active-color;
+
+          &:hover {
+            background-color: $tabs-boxed-link-hover-background-color;
+            border-bottom-color: $tabs-boxed-link-hover-border-bottom-color;
+          }
+        }
       }
     }
   }
