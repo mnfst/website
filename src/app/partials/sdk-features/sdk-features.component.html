@@ -7,19 +7,19 @@
                         <ul class="is-flex is-flex-direction-column is-fullwidth is-fullheight m-0">
                         <li (click)="selectedTab = 'fetch'" 
                         (keydown)="selectedTab = 'filters'" 
-                        [ngClass]="{'is-active': selectedTab === 'fetch'}" data-target="fetch" class="is-active"  tabindex="0"><a class="has-text-dark no-deco">Fetch <i class="icon icon-chevron-right mr-0"></i></a></li>
+                        [ngClass]="{'is-active': selectedTab === 'fetch'}" data-target="fetch" class="is-active"  tabindex="0"><a class="has-text-dark no-deco">Fetch <i class="icon icon-arrow-right  has-text-success mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'filters'" (keyup)="selectedTab = 'filters'" [ngClass]="{
                                                             'is-active': selectedTab === 'filters'
-                                                        }" data-target="filters" tabindex="1"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Filters <i class="icon icon-chevron-right mr-0"></i></a></li>
+                                                        }" data-target="filters" tabindex="1"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Filters <i class="icon icon-arrow-right  has-text-success mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'manipulate'" (keyup)="selectedTab = 'manipulate'" [ngClass]="{
                                                             'is-active': selectedTab === 'manipulate'
-                                                        }" data-target="manipulate" tabindex="2"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Manipulate <i class="icon icon-chevron-right mr-0"></i></a></li>
+                                                        }" data-target="manipulate" tabindex="2"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Manipulate <i class="icon icon-arrow-right  has-text-success mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'upload'" (keyup)="selectedTab = 'upload'" [ngClass]="{
                                                             'is-active': selectedTab === 'upload'
-                                                        }" data-target="upload" tabindex="3"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Upload <i class="icon icon-chevron-right mr-0"></i></a></li>
+                                                        }" data-target="upload" tabindex="3"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Upload <i class="icon icon-arrow-right  has-text-success mr-0"></i></a></li>
                                                                         <li (click)="selectedTab = 'auth'" (keyup)="selectedTab = 'auth'" [ngClass]="{
                                                             'is-active': selectedTab === 'auth'
-                                                        }" data-target="auth" tabindex="4"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Auth <i class="icon icon-chevron-right mr-0"></i></a></li>
+                                                        }" data-target="auth" tabindex="4"><a class="has-text-dark no-deco is-inlind-flex is-justify-content-space-between">Auth <i class="icon icon-arrow-right  has-text-success mr-0"></i></a></li>
                                                     </ul>
                                                                 </div>
                                                         </div>
@@ -37,23 +37,19 @@
                                 <div class="column is-9">
                                         <div class="content-wrap">
                                                 <div *ngIf="selectedTab === 'fetch'" id="fetch" class="tab-content is-active">
-                                                    <img src="/assets/images/case-sdk.svg" alt="">
+                                                    <img class="is-fullwidth is-inline-block" src="/assets/images/fetch.svg" alt="">
                                                 </div>
                                                 <div *ngIf="selectedTab === 'filters'" id="filters" class="tab-content is-active">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                                                        Reges: constructio interrete.</p>
+                                                    <img class="is-fullwidth is-inline-block" src="/assets/images/filter.svg" alt="">
                                                 </div>
                                                 <div *ngIf="selectedTab === 'manipulate'" id="manipulate" class="tab-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                                                        Reges: constructio interrete.</p>
+                                                    <img class="is-fullwidth is-inline-block" src="/assets/images/manipulate.svg" alt="">
                                                 </div>
                                                 <div *ngIf="selectedTab === 'upload'" id="upload" class="tab-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                                                        Reges: constructio interrete.</p>
+                                                    <img class="is-fullwidth is-inline-block" src="/assets/images/upload.svg" alt="">
                                                 </div>
                                                 <div *ngIf="selectedTab === 'auth'" id="auth" class="tab-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                                                        Reges: constructio interrete.</p>
+                                                    <img class="is-fullwidth is-inline-block" src="/assets/images/auth.svg" alt="">
                                                 </div>
                                             </div>
                                 </div>
