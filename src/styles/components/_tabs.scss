@@ -59,6 +59,14 @@ tr {
       a {
         background-color: $tabs-boxed-link-background-color;
         border-width: $tabs-boxed-link-border-width;
+
+
+      }
+
+      &:focus {
+        a {
+          background-color: $grey-lighter;
+        }
       }
 
       &.is-active {

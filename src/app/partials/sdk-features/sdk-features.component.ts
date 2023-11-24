@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sdk-features.component.css']
 })
 export class SdkFeaturesComponent {
-  sdkFeature01 = false
-  sdkFeature02 = false
-
+  selectedTab = 'fetch'
 }

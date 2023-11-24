@@ -5,40 +5,50 @@
                 <div class="content is-fullheight">
                     <div class="tabs is-boxed is-vertical is-fullheight is-shadowless">
                         <ul class="is-flex is-flex-direction-column is-fullwidth is-fullheight m-0">
-                        <li data-target="fetch" class="is-active"><a class="has-text-dark no-deco">Fetch</a></li>
-                        <li data-target="filters"><a class="has-text-dark no-deco">Filters</a></li>
-                        <li data-target="manipulate"><a class="has-text-dark no-deco">Manipulate</a></li>
-                        <li data-target="upload"><a class="has-text-dark no-deco">Upload</a></li>
-                        <li data-target="auth"><a class="has-text-dark no-deco">Auth</a></li>
+                        <li (click)="selectedTab = 'fetch'" 
+                        (keydown)="selectedTab = 'filters'" 
+                        [ngClass]="{'is-active': selectedTab === 'fetch'}" data-target="fetch" class="is-active"  tabindex="0"><a class="has-text-dark no-deco">Fetch</a></li>
+                                                                        <li (click)="selectedTab = 'filters'" (keyup)="selectedTab = 'filters'" [ngClass]="{
+                                                            'is-active': selectedTab === 'filters'
+                                                        }" data-target="filters" tabindex="1"><a class="has-text-dark no-deco">Filters</a></li>
+                                                                        <li (click)="selectedTab = 'manipulate'" (keyup)="selectedTab = 'manipulate'" [ngClass]="{
+                                                            'is-active': selectedTab === 'manipulate'
+                                                        }" data-target="manipulate" tabindex="2"><a class="has-text-dark no-deco">Manipulate</a></li>
+                                                                        <li (click)="selectedTab = 'upload'" (keyup)="selectedTab = 'upload'" [ngClass]="{
+                                                            'is-active': selectedTab === 'upload'
+                                                        }" data-target="upload" tabindex="3"><a class="has-text-dark no-deco">Upload</a></li>
+                                                                        <li (click)="selectedTab = 'auth'" (keyup)="selectedTab = 'auth'" [ngClass]="{
+                                                            'is-active': selectedTab === 'auth'
+                                                        }" data-target="auth" tabindex="4"><a class="has-text-dark no-deco">Auth</a></li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="m-2" href="">View more</a>
-        
-    </div>
-    <div class="column is-9">
-        <div class="content-wrap">
-            <div id="manipulate" class="tab-content is-active">
-              <img src="/assets/images/case-sdk.svg" alt="">
-            </div>
-            <div id="filters" class="tab-content is-active">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                Reges: constructio interrete.</p>
-            </div>
-            <div id="manipulate" class="tab-content is-active">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                Reges: constructio interrete.</p>
-            </div>
-            <div id="upload" class="tab-content is-active">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                Reges: constructio interrete.</p>
-            </div>
-            <div id="auth" class="tab-content is-active">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
-                Reges: constructio interrete.</p>
-            </div>
-          </div>
-    </div>
-</div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <a class="m-2" href="">View more</a>
+                                        
+                                </div>
+                                <div class="column is-9">
+                                        <div class="content-wrap">
+                                                <div *ngIf="selectedTab === 'fetch'" id="fetch" class="tab-content is-active">
+                                                    <img src="/assets/images/case-sdk.svg" alt="">
+                                                </div>
+                                                <div *ngIf="selectedTab === 'filters'" id="filters" class="tab-content is-active">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
+                                                        Reges: constructio interrete.</p>
+                                                </div>
+                                                <div *ngIf="selectedTab === 'manipulate'" id="manipulate" class="tab-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
+                                                        Reges: constructio interrete.</p>
+                                                </div>
+                                                <div *ngIf="selectedTab === 'upload'" id="upload" class="tab-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
+                                                        Reges: constructio interrete.</p>
+                                                </div>
+                                                <div *ngIf="selectedTab === 'auth'" id="auth" class="tab-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quodsi ipsam honestatem undique pertectam atque absolutam. Summae mihi videtur inscitiae. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Age, inquies, ista parva sunt. Duo
+                                                        Reges: constructio interrete.</p>
+                                                </div>
+                                            </div>
+                                </div>
+                        </div>
