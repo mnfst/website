@@ -325,3 +325,15 @@ app-admin-panel-hero {
     padding-right: 18px;
   }
 }
+
+.columns--features {
+  background: rgb(20, 47, 78);
+  background: linear-gradient(28deg, rgba($white-ter, 0.1) 0%, rgba($white, .5) 50%, rgba($white-ter, 0.4) 100%);
+  border-top: 1px solid $grey-lighter;
+  border-left: 1px solid $grey-lighter;
+}
+
+.column--feature {
+  border-bottom: 1px solid $grey-lighter;
+  border-right: 1px solid $grey-lighter;
+}
