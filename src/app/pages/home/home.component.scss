@@ -278,10 +278,15 @@ app-admin-panel-hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $primary-light;
 
-  i {
+  &.has-background-primary-light i {
     background: -webkit-linear-gradient($primary, #5065FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &.has-background-success-light i {
+    background: -webkit-linear-gradient(rgba($success-dark, 0.8), $success-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

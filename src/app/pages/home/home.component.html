@@ -226,7 +226,7 @@
           <h2 clas="title is-2 has-text-weight-bold">Meet your new backend</h2>
           
           <p class="mb-3">
-            A complete backend solution with essential features, hassle-free. You
+            A complete <strong>backend solution</strong> with essential features, hassle-free. You
             can install CASE locally in minutes without any configuration and
             start building your app right away.
           </p>
@@ -283,7 +283,7 @@
         <div class="content is-size-5 has-text-centered">
           <h3>Ready-to-use features</h3>
           <p class="mb-3">
-            CASE is a Backend-as-a-Service equipped with all the essential
+            CASE is a <strong>Backend-as-a-Service</strong> equipped with all the essential
             features needed for your web application.
           </p>
         </div>
@@ -292,7 +292,7 @@
     <div class="columns is-multiline">
       <div class="column is-20percent">
         <div class="content">
-          <div class="icon-wrapper">
+          <div class="icon-wrapper has-background-primary-light">
             <i class="fa-solid fa-user is-size-4"></i>
           </div>
           <h5 class="mt-2">Auth</h5>
@@ -301,7 +301,7 @@
       </div>
       <div class="column is-20percent">
         <div class="content">
-          <div class="icon-wrapper">
+          <div class="icon-wrapper has-background-primary-light">
             <i class="fa-solid fa-database is-size-4"></i>
           </div>
           <h5 class="mt-2">Storage</h5>
@@ -313,8 +313,8 @@
       </div>
       <div class="column is-20percent">
         <div class="content">
-          <div class="icon-wrapper">
-            <i class="fa-brands fa-osi is-size-4"></i>
+          <div class="icon-wrapper has-background-primary-light">
+            <i class="fa-solid fa-list-check is-size-4"></i>
           </div>
           <h5 class="mt-2">Validation</h5>
           <p>Add pre-built or custom validators to your properties.</p>
@@ -322,8 +322,8 @@
       </div>
       <div class="column is-20percent">
         <div class="content">
-          <div class="icon-wrapper">
-            <i class="fa-brands fa-osi is-size-4"></i>
+          <div class="icon-wrapper has-background-primary-light">
+            <i class="fa-solid fa-puzzle-piece is-size-4"></i>
           </div>
           <h5 class="mt-2">Hooks</h5>
           <p>Add your own logic and import your own packages.</p>
@@ -331,8 +331,8 @@
       </div>
       <div class="column is-20percent">
         <div class="content">
-          <div class="icon-wrapper">
-            <i class="fa-brands fa-osi is-size-4"></i>
+          <div class="icon-wrapper has-background-primary-light">
+            <i class="fa-solid fa-icons is-size-4"></i>
           </div>
           <h5 class="mt-2">Real-world types</h5>
           <p>
@@ -364,29 +364,27 @@
     <div class="columns">
       <div class="column is-8  is-offset-2">
         <app-sdk-features></app-sdk-features>
+        <div class="is-flex is-fullwidth is-align-items-center is-justify-content-center mt-3">
+          <a href="https://docs.case.app/connect" class="button is-success">Checkout SDK doc</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<section class="section">
-  <div class="container">
-    <hr class="my-0" />
-  </div>
-</section>
-
-<section class="section is-medium is-relative">
+<section class="section is-medium is-relative has-background-white mt-6 is-bordered">
   <div class="container">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title is-2">Why choose CASE ?</h2>
-        <p>
+        <div class="content is-size-5">
+        <h2>Why choose CASE ?</h2>
+        <p class="mb-3">
           Choosing CASE as your backend solution will give you many advantages.
         </p>
       </div>
-      <div class="column is-20percent">
+      </div>
+      <div class="column is-4">
         <div class="content">
-          <div class="icon-wrapper">
+          <div class="icon-wrapper has-background-success-light">
             <i class="fa-solid fa-clock is-size-4"></i>
           </div>
           <h5 class="mt-2">Save time, eliminate headaches</h5>
@@ -395,19 +393,19 @@
           </p>
         </div>
       </div>
-      <div class="column is-20percent">
+      <div class="column is-4">
         <div class="content">
-          <div class="icon-wrapper">
-            <i class="fa-solid fa-database is-size-4"></i>
+          <div class="icon-wrapper has-background-success-light">
+            <i class="fa-solid fa-code is-size-4"></i>
           </div>
           <h5 class="mt-2">Just code it</h5>
-          <p>No-no-code: You know how to code, so go ahead and do it.</p>
+          <p>Not another no-code wizardry.: You know how to code, so go ahead and do it.</p>
         </div>
       </div>
-      <div class="column is-20percent">
+      <div class="column is-4">
         <div class="content">
-          <div class="icon-wrapper">
-            <i class="fa-brands fa-osi is-size-4"></i>
+          <div class="icon-wrapper has-background-success-light">
+            <i class="fa-solid fa-bolt is-size-4"></i>
           </div>
           <h5 class="mt-2">Be (really) free</h5>
           <p>
@@ -416,54 +414,57 @@
           </p>
         </div>
       </div>
+      <div class="column is-12 pt-6">
+        <div class="is-flex is-justify-content-center">
+          <div
+            class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start npx-wrapper"
+          >
+            <div
+              class="has-border-radius is-flex is-full-height isalign-items-stretch is-family-code p-0 has-background-dark has-text-light"
+            >
+              <span class="px-4 py-2 install-code">
+                npx create-case-app my-case-app
+              </span>
+              <a
+                (click)="copyToClipboard()"
+                (keyup)="copyToClipboard()"
+                tabindex="0"
+                class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center has-text-white is-relative"
+              >
+                <span class="icon">
+                  <i class="icon icon-copy"></i>
+                </span>
+                <span
+                  class="is-inline-flex is-flex-direction-column is-relative is-hidden-touch has-text-centered"
+                >
+                  <span class="button-copy" [ngClass]="{ 'has-been-copied': isCopied }"
+                    >Copy</span
+                  >
+                  <span [ngClass]="{ 'is-active': isCopied }" class="is-copied"
+                    >Copied !</span
+                  >
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="is-flex is-justify-content-center">
-  <div
-    class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start npx-wrapper"
-  >
-    <div
-      class="has-border-radius is-flex is-full-height isalign-items-stretch is-family-code p-0 has-background-dark has-text-light"
-    >
-      <span class="px-4 py-2 install-code">
-        npx create-case-app my-case-app
-      </span>
-      <a
-        (click)="copyToClipboard()"
-        (keyup)="copyToClipboard()"
-        tabindex="0"
-        class="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center has-text-white is-relative"
-      >
-        <span class="icon">
-          <i class="icon icon-copy"></i>
-        </span>
-        <span
-          class="is-inline-flex is-flex-direction-column is-relative is-hidden-touch"
-        >
-          <span class="button-copy" [ngClass]="{ 'has-been-copied': isCopied }"
-            >Copy</span
-          >
-          <span [ngClass]="{ 'is-active': isCopied }" class="is-copied"
-            >Copied !</span
-          >
-        </span>
-      </a>
-    </div>
-  </div>
-</div>
 
 <!-- Community -->
 <section class="section is-medium">
   <div class="container">
     <div class="columns is-multiline">
       <div class="column is-8 is-offset-2 has-text-centered">
+        <div class="content is-size-5">
         <h2 class="title is-2 mb-2">Join our community</h2>
-        <p>
+        <p class="mb-3">
           CASE is still in its early days and has so much room to improve. If
           the project excites you, please give us a hand !
         </p>
+      </div>
       </div>
       <div class="column is-12-touch is-12-desktop is-5-widescreen">
         <div class="card is-fullheight has-background-dark is-shadowless">
