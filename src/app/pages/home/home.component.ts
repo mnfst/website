@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core'
+import { Component } from '@angular/core'
 import { Meta, Title } from '@angular/platform-browser'
 
 @Component({
@@ -10,8 +10,6 @@ export class HomeComponent {
   isCopied = false
   isDemoMenuOpen = false
   isApiWindow = false
-
-  @ViewChild('demoButton') demoButton: ElementRef
 
   constructor(meta: Meta, title: Title) {
     title.setTitle('CASE - A complete backend without leaving your IDE 🚀')
@@ -47,12 +45,5 @@ export class HomeComponent {
       .then(() => {
         this.isCopied = true
       })
-  }
-
-  @HostListener('document:click', ['$event.target'])
-  clickOut(eventTarget: HTMLElement) {
-    if (!this.demoButton.nativeElement.contains(eventTarget)) {
-      this.isDemoMenuOpen = false
-    }
   }
 }
