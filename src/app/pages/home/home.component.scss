@@ -279,16 +279,28 @@ app-admin-panel-hero {
   align-items: center;
   justify-content: center;
 
-  &.has-background-primary-light i {
-    background: -webkit-linear-gradient($primary, #5065FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &.has-background-primary-light {
+    &.is-bordered {
+      border-color: rgba($primary, 0.5);
+    }
+
+    i {
+      background: -webkit-linear-gradient($primary, #5065FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
-  &.has-background-success-light i {
-    background: -webkit-linear-gradient(rgba($success-dark, 0.8), $success-dark);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &.has-background-success-light {
+    &.is-bordered {
+      border-color: rgba($success, 0.5);
+    }
+
+    i {
+      background: -webkit-linear-gradient(rgba($success-dark, 0.8), $success-dark);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 
