@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core'
+import { Component } from '@angular/core'
 import { Meta, Title } from '@angular/platform-browser'
 
 @Component({
@@ -9,24 +9,23 @@ import { Meta, Title } from '@angular/platform-browser'
 export class HomeComponent {
   isCopied = false
   isDemoMenuOpen = false
-
-  @ViewChild('demoButton') demoButton: ElementRef
+  isApiWindow = false
 
   constructor(meta: Meta, title: Title) {
-    title.setTitle('CASE - Develop a CRUD web app in 15 minutes 🚀')
+    title.setTitle('CASE - A complete backend without leaving your IDE 🚀')
     meta.addTag({
       name: 'og:title',
-      content: 'CASE - Develop a CRUD web app in 15 minutes 🚀'
+      content: 'CASE - A complete backend without leaving your IDE 🚀'
     })
     meta.addTag({
       name: 'description',
       content:
-        'CASE allows developers to install, develop and deploy a crud app in minutes'
+        'CASE is a Typescript lightweight BaaS (Backend As A Service) requiring minimal coding.'
     })
     meta.addTag({
       name: 'og:description',
       content:
-        'CASE allows developers to install, develop and deploy a crud app in minutes'
+        'CASE is a Typescript lightweight BaaS (Backend As A Service) requiring minimal coding.'
     })
     meta.addTag({ name: 'og:url', content: 'https://case.app' })
     meta.addTag({
@@ -36,7 +35,7 @@ export class HomeComponent {
     meta.addTag({
       name: 'keywords',
       content:
-        'CASE, Typescript, Javascript,Admin panel, Dashboard, ERP, Business app, Business application, Business software, APIs, Business tool, CMS, Frameworkless, CRUD app, CLI, ERP, Custom web app'
+        'BaaS, Typescript, Javascript, Admin panel, Dashboard, ERP, Business app, Business application, Business software, APIs, CRUD app, CLI, ERP, Custom web app'
     })
   }
 
@@ -46,12 +45,5 @@ export class HomeComponent {
       .then(() => {
         this.isCopied = true
       })
-  }
-
-  @HostListener('document:click', ['$event.target'])
-  clickOut(eventTarget: HTMLElement) {
-    if (!this.demoButton.nativeElement.contains(eventTarget)) {
-      this.isDemoMenuOpen = false
-    }
   }
 }

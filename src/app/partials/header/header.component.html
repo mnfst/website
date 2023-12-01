@@ -3,6 +3,7 @@
     <div class="navbar-brand">
       <a class="navbar-item" routerLink="/">
         <img src="./assets/images/logo-black.svg" alt="CASE logo" width="124" />
+        <span class="beta has-text-weight-bold ml-1">beta</span>
       </a>
       <div class="navbar-touch is-hidden-desktop">
         <a
@@ -59,17 +60,13 @@
         </a>
       </div>
       <div class="navbar-end">
-        <div class="navbar-item pt-2">
-          <a
-            class="github-button"
-            href="https://github.com/casejs/case"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star casejs/case on GitHub"
-            >Star</a
-          >
-        </div>
+        <a
+        class="navbar-item px-2"
+        href="https://github.com/casejs/case"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
         <a
           class="navbar-item px-2"
           href="https://discord.com/invite/FepAked3W7"
@@ -87,56 +84,9 @@
           </a>
         </div>
         <div class="navbar-item pl-0">
-          <div class="dropdown is-active">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-danger"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu"
-                (click)="isDemoMenuOpen = !isDemoMenuOpen"
-              >
-                <span class="icon is-small">
-                  <i class="fa-solid fa-desktop" aria-hidden="true"></i>
-                </span>
-                <span>Live demo</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div
-              class="dropdown-menu"
-              id="dropdown-menu"
-              role="menu"
-              *ngIf="isDemoMenuOpen"
-            >
-              <div class="dropdown-content">
-                <a
-                  class="dropdown-item has-text-dark"
-                  target="_blank"
-                  href="https://demo2.case.app/auth/login?email=user1@case.app&password=case"
-                >
-                  Invoicing app
-                </a>
-                <a
-                  target="_blank"
-                  href="https://demo3.case.app/auth/login?email=user1@case.app&password=case"
-                  class="dropdown-item has-text-dark"
-                >
-                  Project management app
-                </a>
-                <a
-                  target="_blank"
-                  href="https://demo1.case.app/auth/login?email=user1@case.app&password=case"
-                  class="dropdown-item has-text-dark"
-                >
-                  HR dashboard
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
 </nav>
+`

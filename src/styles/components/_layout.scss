@@ -1,7 +1,7 @@
-
 *:focus {
   outline: none;
 }
+
 html {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -15,6 +15,7 @@ html {
   @include touch {
     font-size: $body-size-touch;
   }
+
   @include mobile {
     font-size: $body-size-mobile;
   }
@@ -49,6 +50,7 @@ body {
     padding-right: 0;
   }
 }
+
 aside {
   border-right: 1px solid $border-color;
 }
@@ -56,13 +58,15 @@ aside {
 main {
   min-height: calc(100vh + #{$gap} - 163.19px - #{$navbar-height});
   padding-bottom: $gap;
+
   @include touch {
-    --top-header-height : 28.61px;
+    --top-header-height: 28.61px;
     min-height: calc(100vh + #{$gap} - 163.19px - #{$navbar-height} - var(--top-header-height));
     margin-top: calc($column-gap + var(--top-header-height));
   }
+
   @include mobile {
-    --top-header-height : 21.83px;
+    --top-header-height: 21.83px;
   }
 }
 
@@ -82,4 +86,8 @@ main {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.has-shadow-success {
+  box-shadow: 0px 15px 73px 43px #10b69210, 0px 7px 41px 4px #a5e64315;
 }
