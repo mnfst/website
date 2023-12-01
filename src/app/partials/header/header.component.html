@@ -3,6 +3,7 @@
     <div class="navbar-brand">
       <a class="navbar-item" routerLink="/">
         <img src="./assets/images/logo-black.svg" alt="CASE logo" width="124" />
+        <span class="beta has-text-weight-bold ml-1">beta</span>
       </a>
       <div class="navbar-touch is-hidden-desktop">
         <a
@@ -59,17 +60,13 @@
         </a>
       </div>
       <div class="navbar-end">
-        <div class="navbar-item pt-2">
-          <a
-            class="github-button"
-            href="https://github.com/casejs/case"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star casejs/case on GitHub"
-            >Star</a
-          >
-        </div>
+        <a
+        class="navbar-item px-2"
+        href="https://github.com/casejs/case"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
         <a
           class="navbar-item px-2"
           href="https://discord.com/invite/FepAked3W7"
@@ -79,14 +76,17 @@
         </a>
         <div class="navbar-item">
           <a
-            class="button is-link"
+            class="button is-success"
             href="https://docs.case.app"
             target="_blank"
           >
             Get started
           </a>
         </div>
+        <div class="navbar-item pl-0">
+        </div>
       </div>
     </div>
   </div>
 </nav>
+`

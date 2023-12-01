@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 
 @Component({
@@ -8,8 +8,9 @@ import { NavigationEnd, Router } from '@angular/router'
 })
 export class HeaderComponent implements OnInit {
   currentPath: string
+  isDemoMenuOpen = false
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((routeChanged) => {
@@ -17,5 +18,12 @@ export class HeaderComponent implements OnInit {
         this.currentPath = routeChanged.url
       }
     })
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  clickOut(eventTarget: HTMLElement) {
+    if (!this.elementRef.nativeElement.contains(eventTarget)) {
+      this.isDemoMenuOpen = false
+    }
   }
 }

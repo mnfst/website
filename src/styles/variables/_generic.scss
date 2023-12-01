@@ -1,11 +1,11 @@
 // generic
 
-$shadow:0px 100px 80px rgba(#000000, 0.07), 
-0px 41.7776px 33.4221px rgba(#000000, 0.0503198), 
-0px 22.3363px 17.869px rgba(#000000, 0.0417275), 
-0px 12.5216px 10.0172px rgba(#000000, 0.035), 
-0px 6.6501px 5.32008px rgba(#000000, 0.0282725), 
-0px 2.76726px 2.21381px rgba(#000000, 0.0196802) !default;
+$shadow: 0px 100px 80px rgba(#000000, 0.07),
+    0px 41.7776px 33.4221px rgba(#000000, 0.0503198),
+    0px 22.3363px 17.869px rgba(#000000, 0.0417275),
+    0px 12.5216px 10.0172px rgba(#000000, 0.035),
+    0px 6.6501px 5.32008px rgba(#000000, 0.0282725),
+    0px 2.76726px 2.21381px rgba(#000000, 0.0196802) !default;
 
 $border-color: $border !default;
 $radius-large: 4px !default;
@@ -15,9 +15,8 @@ $body-size: 10px !default;
 $body-size-touch: 10.22px !default;
 $body-size-mobile: 7.8px !default;
 
-$body-background-color: $white !default;
-$body-color: $black !default;
-
+$body-background-color: $white-bis !default;
+$body-color: $grey-darker !default;
 $footer-background-color: transparent !default;
 
 $hr-background-color: $grey-light !default;
@@ -28,8 +27,8 @@ $body-line-height: 1.8 !default;
 $footer-height: 76px !default;
 $footer-padding: 3rem 1.5rem !default;
 
-$pre-background: $dark !default;
-$pre-padding: $column-gap  $gap !default;
+$pre-background: $black-ter !default;
+$pre-padding: $column-gap $gap !default;
 
 //  Custom variables
 $lines-offset: $gap !default;
