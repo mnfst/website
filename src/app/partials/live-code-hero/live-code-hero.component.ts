@@ -1,4 +1,11 @@
-import { Component, ElementRef, ViewChild } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
+import {
+  Component,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  ViewChild
+} from '@angular/core'
 
 @Component({
   selector: 'app-live-code-hero',
@@ -8,10 +15,13 @@ import { Component, ElementRef, ViewChild } from '@angular/core'
 export class LiveCodeHeroComponent {
   @ViewChild('typewriter', { static: true }) typewriter: ElementRef
 
-  ngOnInit(): void {
-    var typer = this.setupTypewriter(this.typewriter.nativeElement)
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-    typer.type()
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const typewriter = this.setupTypewriter(this.typewriter.nativeElement)
+      typewriter.type()
+    }
   }
 
   setupTypewriter(t: any) {
