@@ -198,5 +198,104 @@ export const content = {
     <p>Ready to connect your Angular frontend to your new CASE backend?</p>
     `
     }
+  },
+  svelte: {
+    title: 'The best backend for Svelte: CASE',
+    h1: 'Svelte Framework with CASE backend',
+    description:
+      'Plug your Svelte frontend to a CASE backend and get a fullstack app in minutes.',
+    cta: 'Get started with Svelte',
+    ctaLink: 'https://case.app/docs/connect/svelte',
+    body: `<p>Svelte is a modern framework for building web applications, known for its simplicity and ease of use. Svelte is a compiler that converts your code into JavaScript at build time, rather than interpreting it at runtime. This results in a smaller bundle size and faster load times. Svelte is a great choice for building interactive web applications.</p>
+  <p>Svelte comes with Sveltekit, a framework for building web applications with SSR, routing, and more.</p>
+  
+  <h2 class="title is-2">Why would you need a backend for your Svelte / Sveltekit app?</h2>
+  At some point, a backend is mandatory for implementing critical features:</p>
+  
+  <ul>
+  <li><strong>Dynamic Data Management</strong><br>
+  Be prepared to interact with data that will vary and update over time.</li>
+  <li><strong>CRUD Operations</strong><br>
+  CRUD encompasses the activities of Creating, Reading, Updating, and Deleting. Enable users to create, modify, and manage their own content effectively. You can't do that with just a front-end</li>
+  <li><strong>User Authentication Setup</strong><br>
+  This involves establishing mechanisms for user logins and sign-ups, as well as setting up access rights to your offerings.</li>
+  <li><strong>File and Image Handling</strong><br>
+  Concentrate on the processes of uploading, storing, and retrieving files and images.</li>
+  <li><strong>Developing Server-side Processes</strong><br>
+  Add server-based functionalities like sending emails or tasks that need a secure environment and cannot be executed from the client side.</li>
+</ul>
+  
+  <h2 class="title is-2">What is CASE?</h2>
+  CASE is a lightweight backend-as-a-service that deploys a full backend in one-command with everything you need without configuration:</p>
+  
+  <ul>
+      <li>Database</li>
+      <li>REST API</li>
+      <li>Admin Panel</li>
+  </ul>
+  
+  <p><strong>Why is CASE the best backend to use with Svelte ?</strong><br>
+  Combining CASE and SvelteJS gives you many advantages:</p>
+  
+  <ul>
+      <li>Keep it simple<br>
+      Svelte stands out for its simplicity, CASE too. Deploy your backend in one connect with your svelte app</li>
+      <li>Use the JS SDK<br>
+      Use the CASE JS SDK in Svelte to access backend functions such as lists, filters, upload, creation, auth...</li>
+      <li>Nothing to configure<br>
+      The backend, often a complex realm with many components, is simplified with CASE as there is nothing to configure.</li>
+  </ul>
+  
+  <p>Ready to connect your Svelte frontend to your new CASE backend?</p>
+  `
+  },
+  vue: {
+    title: 'The best backend for Vue: CASE',
+    h1: 'Vue Framework with CASE backend',
+    description:
+      'Plug your VueJS frontend to a CASE backend and get a fullstack app in minutes.',
+    cta: 'Get started with Vue',
+    ctaLink: 'https://case.app/docs/connect/vue',
+    body: `<p>Vue.js is an open-source JavaScript framework used for building user interfaces and single-page applications. It is known for its simplicity, ease of integration with other projects and libraries. Vue.js focuses on the view layer, allowing developers to easily pick up and integrate it into their existing projects.</p>
+  
+  <h2 class="title is-2">Why would you need a backend for your Vue app?</h2>
+  At some point, a backend is mandatory for implementing critical features on your app:</p>
+  
+  <ul>
+  <li><strong>Dynamic Data Management</strong><br>
+  Be prepared to interact with data that will vary and update over time.</li>
+  <li><strong>CRUD Operations</strong><br>
+  CRUD encompasses the activities of Creating, Reading, Updating, and Deleting. Enable users to create, modify, and manage their own content effectively. You can't do that with just a front-end</li>
+  <li><strong>User Authentication Setup</strong><br>
+  This involves establishing mechanisms for user logins and sign-ups, as well as setting up access rights to your offerings.</li>
+  <li><strong>File and Image Handling</strong><br>
+  Concentrate on the processes of uploading, storing, and retrieving files and images.</li>
+  <li><strong>Developing Server-side Processes</strong><br>
+  Add server-based functionalities like sending emails or tasks that need a secure environment and cannot be executed from the client side.</li>
+</ul>
+  
+  <h2 class="title is-2">What is CASE?</h2>
+  CASE is a lightweight backend-as-a-service that deploys a full backend in one-command with everything you need without configuration:</p>
+  
+  <ul>
+      <li>Database</li>
+      <li>REST API</li>
+      <li>Admin Panel</li>
+  </ul>
+  
+  <p><strong>Why is CASE the best backend to use with Vue ?</strong><br>
+  Combining CASE and VueJS gives you many advantages:</p>
+  
+  <ul>
+      <li>Keep it simple<br>
+      Vue stands out for its simplicity, CASE too. Deploy your backend in one connect with your Vue app</li>
+      <li>Use the JS SDK<br>
+      Use the CASE JS SDK in Vue to access backend functions such as lists, filters, upload, creation, auth...</li>
+      <li>Nothing to configure<br>
+      The backend, often a complex realm with many components, is simplified with CASE as there is nothing to configure.</li>
+  </ul>
+  
+  <p>Ready to connect your Vue frontend to your new CASE backend?</p>
+  `
   }
 }
