@@ -27,6 +27,27 @@ const routes: Routes = [
     }
   },
   {
+    path: 'backend-for-angular',
+    component: IntegrationComponent,
+    data: {
+      framework: 'angular'
+    }
+  },
+  {
+    path: 'backend-for-vue',
+    component: IntegrationComponent,
+    data: {
+      framework: 'vue'
+    }
+  },
+  {
+    path: 'backend-for-svelte',
+    component: IntegrationComponent,
+    data: {
+      framework: 'svelte'
+    }
+  },
+  {
     path: '**',
     redirectTo: '/404'
   }
