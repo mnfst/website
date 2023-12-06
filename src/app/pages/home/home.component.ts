@@ -12,10 +12,10 @@ export class HomeComponent {
   isApiWindow = false
 
   constructor(meta: Meta, title: Title) {
-    title.setTitle('CASE - A complete backend without leaving your IDE 🚀')
+    title.setTitle('CASE - A Complete Backend Without Leaving your IDE 🚀')
     meta.addTag({
       name: 'og:title',
-      content: 'CASE - A complete backend without leaving your IDE 🚀'
+      content: 'CASE - A Complete Backend Without Leaving your IDE 🚀'
     })
     meta.addTag({
       name: 'description',
