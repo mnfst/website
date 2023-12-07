@@ -419,7 +419,9 @@ app-admin-panel-hero {
 }
 
 @include mobile {
-  .column--feature {
+
+  .column--feature,
+  .column--advantage {
     .content {
       display: flex;
       align-items: flex-start;
@@ -448,3 +450,5 @@ app-admin-panel-hero {
     margin-bottom: 1rem;
   }
 }
+
+.column--advantages {}
