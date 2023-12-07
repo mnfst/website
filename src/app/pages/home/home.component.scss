@@ -343,6 +343,10 @@ app-admin-panel-hero {
   background: linear-gradient(28deg, rgba($white-ter, 0.1) 0%, rgba($white, .5) 50%, rgba($white-ter, 0.4) 100%);
   border-top: 1px solid $grey-lighter;
   border-left: 1px solid $grey-lighter;
+
+  @include tablet-only {
+    border-left: 0;
+  }
 }
 
 .column--feature {
@@ -411,5 +415,36 @@ app-admin-panel-hero {
   8% {
     -webkit-transform: translate3d(5px, 0, 0);
     transform: translate3d(5px, 0, 0);
+  }
+}
+
+@include mobile {
+  .column--feature {
+    .content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+    }
+  }
+
+  .icon-wrapper {
+    width: 54px;
+    min-width: 54px;
+    max-width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $column-gap;
+
+    + div {
+      flex: 1;
+    }
+  }
+
+  h5 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
   }
 }
