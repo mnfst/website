@@ -46,8 +46,6 @@ export const content = {
         <li>Nothing to configure<br>
         The backend, often a complex realm with many components, is simplified with CASE as there is nothing to configure.</li>
     </ul>
-    
-    <p>Ready to connect your REACT frontend to your new CASE backend?</p>
     `
   },
   angular: {
@@ -84,8 +82,8 @@ export const content = {
         <li>Admin Panel</li>
     </ul>
     
-    <p><strong>Why is CASE the best backend to use with Angular ?</strong><br>
-    Combining CASE and AngularJS gives you many advantages:</p>
+    <p><strong>Why is CASE the best backend to use with Angular ?</strong></p>
+    <p>Combining CASE and AngularJS gives you many advantages:</p>
     
     <ul>
         <li>Stay in TypeScript<br>

@@ -6,7 +6,7 @@ import { content } from './content'
 @Component({
   selector: 'app-integration',
   templateUrl: './integration.component.html',
-  styleUrl: './integration.component.css'
+  styleUrl: './integration.component.scss'
 })
 export class IntegrationComponent {
   framework: string

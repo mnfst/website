@@ -1,25 +1,42 @@
-<div class="container">
-  <div class="columns">
-    <div class="column">
-      <h1 class="title is-1">{{ content.h1 }}</h1>
+<section class="section is-medium is-gradient">
+  <div class="hero">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-12">
+        <h1 class="title is-1 has-text-centered mb-10">{{ content.h1 }}</h1>
+        <figure class="has-shapes">
+          <img class="is-fullwidth is-bordered" src="./assets/images/backend-for-{{ framework }}.svg" alt="">
+        </figure>
+      </div>
     </div>
   </div>
-
-  <!-- TODO: Images for framework: use {{ framework }} variable to determine which image to use -->
-
-  <div class="columns">
-    <div class="column">
-      <div [innerHTML]="bodyHtml"></div>
-    </div>
   </div>
-
-  <div class="columns">
-    <div class="column">
-      <p>
-        <a [href]="content.ctaLink" class="button is-primary" target="_blank">{{
-          content.cta
-        }}</a>
-      </p>
+</section>
+<section>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content is-size-5 ">
+        <div [innerHTML]="bodyHtml"></div>
+      </div>
+      </div>
     </div>
-  </div>
+
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="card has-background-dark has-text-light is-shadowless is-bordered my-6">
+          <div class="card-content p-6 has-text-centered">
+            <div class="content is-size-5 mb-2">
+              <p class="">Ready to connect your <span class="is-uppercase">{{ framework }}</span> frontend to your new CASE backend?</p>
+            </div>
+              <p>
+                <a [href]="content.ctaLink" class="button is-link" target="_blank">{{
+                  content.cta
+                }}</a>
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
+</section>
