@@ -164,31 +164,51 @@
         <div
           class="is-flex is-align-items-center is-justify-content-center mt-2 is-flex-direction-column"
         >
-          <div class="is-flex is-align-items-center is-justify-content-center">
-            <img
-              src="./assets/images/react.svg"
-              alt="React logo"
-              width="40px"
-              class="mx-2"
-            />
-            <img
-              src="./assets/images/vue.svg"
-              alt="Vue logo"
-              width="40px"
-              class="mx-2"
-            />
-            <img
-              src="./assets/images/angular.svg"
-              alt="Angular logo"
-              width="40px"
-              class="mx-2"
-            />
-            <img
-              src="./assets/images/svelte.svg"
-              alt="Svelte logo"
-              width="40px"
-              class="mx-2"
-            />
+          <div class="is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap">
+            <a
+              routerLink="/backend-for-react"
+              title="See how to plug CASE with React"
+            >
+              <img
+                src="./assets/images/react.svg"
+                alt="React logo"
+                width="40px"
+                class="mx-2"
+              />
+            </a>
+            <a
+              routerLink="/backend-for-vue"
+              title="See how to plug CASE with Vue"
+            >
+              <img
+                src="./assets/images/vue.svg"
+                alt="Vue logo"
+                width="40px"
+                class="mx-2"
+              />
+            </a>
+            <a
+              routerLink="/backend-for-angular"
+              title="See how to plug CASE with Angular"
+            >
+              <img
+                src="./assets/images/angular.svg"
+                alt="Angular logo"
+                width="40px"
+                class="mx-2"
+              />
+            </a>
+            <a
+              routerLink="/backend-for-svelte"
+              title="See how to plug CASE with Svelte"
+            >
+              <img
+                src="./assets/images/svelte.svg"
+                alt="Svelte logo"
+                width="40px"
+                class="mx-2"
+              />
+            </a>
             <img
               src="./assets/images/nuxt.svg"
               alt="Nuxt logo"
@@ -227,7 +247,7 @@
           </p>
         </div>
 
-        <div class="tags is-centered">
+        <div class="tags is-centered is-flex-direction-column--mobile">
           <span
             class="tag mx-3 is-large is-white-ter is-rounded has-text-weight-bold is-bordered"
           >
@@ -290,8 +310,10 @@
           <div class="icon-wrapper is-bordered has-background-primary-light">
             <i class="fa-solid fa-user is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Auth</h5>
           <p>One line login & logout, entity-based access control policies.</p>
+        </div>
         </div>
       </div>
       <div class="column is-20percent column--feature">
@@ -299,11 +321,13 @@
           <div class="icon-wrapper is-bordered has-background-primary-light">
             <i class="fa-solid fa-database is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Storage</h5>
           <p>
             Store files and images locally. Define various sizes for image
             uploads.
           </p>
+        </div>
         </div>
       </div>
       <div class="column is-20percent column--feature">
@@ -311,8 +335,10 @@
           <div class="icon-wrapper is-bordered has-background-primary-light">
             <i class="fa-solid fa-list-check is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Validation</h5>
           <p>Add pre-built or custom validators to your properties.</p>
+        </div>
         </div>
       </div>
       <div class="column is-20percent column--feature">
@@ -320,8 +346,10 @@
           <div class="icon-wrapper is-bordered has-background-primary-light">
             <i class="fa-solid fa-puzzle-piece is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Hooks</h5>
           <p>Add your own logic and import your own packages.</p>
+        </div>
         </div>
       </div>
       <div class="column is-20percent column--feature">
@@ -329,11 +357,13 @@
           <div class="icon-wrapper is-bordered has-background-primary-light">
             <i class="fa-solid fa-icons is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Real-world types</h5>
           <p>
             A dozen of types like date, email, password, image, relation and
             more.
           </p>
+        </div>
         </div>
       </div>
     </div>
@@ -354,17 +384,67 @@
         </div>
       </div>
     </div>
-    <div class="columns">
+    <div class="columns is-multiline">
       <div class="column is-8 is-offset-2">
         <app-sdk-features></app-sdk-features>
+      </div>
+      <div class="column is-12 is-offset-0 is-8-widescreen is-offset-2-widescreen">
         <div
-          class="is-flex is-fullwidth is-align-items-center is-justify-content-center mt-3"
+          class="is-flex is-fullwidth is-align-items-center is-justify-content-space-between mt-3 is-flex-direction-column--mobile"
         >
           <a
             href="https://docs.case.app/connect"
             target="_blank"
             class="button is-success"
             >Checkout SDK doc</a
+          >
+          <a
+            href="https://docs.case.app/connect/react"
+            target="_blank"
+            class="has-text-primary icon-text mt-4-mobile"
+            >
+              <span class="icon">
+              <i class="fa-brands fa-react"></i>
+              </span>
+              <span>Start with React</span></a
+          >
+          <a
+            href="https://docs.case.app/connect/angular"
+            target="_blank"
+            class="has-text-primary icon-text mt-4-mobile"
+            >
+              <span class="icon">
+                <i class="fa-brands fa-angular"></i>
+              </span>
+              <span>Start with Angular</span></a
+          >
+          <a
+            href="https://docs.case.app/connect/vue"
+            target="_blank"
+            class="has-text-primary icon-text mt-4-mobile"
+            >
+              <span class="icon">
+                <i class="fa-brands fa-vuejs"></i>
+              </span>
+              <span>Start with Vue</span></a
+          >
+          <a
+            href="https://docs.case.app/connect/svelte"
+            target="_blank"
+            class="has-text-primary icon-text mt-4-mobile"
+            >
+              <span class="icon">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M31.5693 4.76321C28.2264 -0.0212833 21.6243 -1.43943 16.8506 1.60203L8.46687 6.94536C6.17682 8.38608 4.59947 10.7247 4.1216 13.3877C3.72168 15.6061 4.07319 17.8946 5.12048 19.8908C4.40285 20.9794 3.91339 22.2022 3.6817 23.4853C3.19921 26.1994 3.83035 28.9935 5.43261 31.2367C8.77618 36.0217 15.3784 37.4392 20.1513 34.3979L28.535 29.0546C30.8252 27.614 32.4026 25.2754 32.8803 22.6123C33.2801 20.3938 32.9289 18.1054 31.8821 16.109C32.5996 15.0205 33.0888 13.7977 33.3203 12.5147C33.8031 9.80053 33.1719 7.00632 31.5694 4.76321"
+                      fill="#8448f8" />
+                  <path
+                      d="M16.0309 31.6923C13.3277 32.3952 10.4731 31.3371 8.88113 29.0421C7.91711 27.6928 7.53735 26.012 7.82763 24.3793C7.87629 24.1139 7.94325 23.8522 8.02804 23.5961L8.18597 23.1145L8.61562 23.4301C9.60787 24.1592 10.7173 24.7135 11.8961 25.0692L12.2078 25.1637L12.1791 25.4748C12.141 25.9174 12.2608 26.3591 12.5173 26.7217C12.9964 27.413 13.8559 27.732 14.67 27.5207C14.8523 27.472 15.026 27.3956 15.1851 27.2943L23.5715 21.95C23.9864 21.6888 24.2724 21.2651 24.3595 20.7826C24.4464 20.2905 24.332 19.7841 24.042 19.3771C23.5626 18.6857 22.7029 18.3666 21.8885 18.5777C21.7064 18.6264 21.533 18.7027 21.374 18.8039L18.1738 20.8439C17.6476 21.1785 17.0733 21.4307 16.4709 21.5918C13.7677 22.2946 10.9132 21.2365 9.32124 18.9416C8.35717 17.5922 7.97741 15.9114 8.26773 14.2787C8.55512 12.6769 9.50406 11.2702 10.8817 10.4039L19.2674 5.05918C19.7939 4.72404 20.3685 4.47153 20.9715 4.31044C23.6746 3.60763 26.5291 4.66574 28.1211 6.96063C29.0851 8.30997 29.4649 9.9908 29.1746 11.6235C29.1257 11.8888 29.0588 12.1505 28.9742 12.4067L28.8163 12.8882L28.3868 12.5731C27.3947 11.8437 26.2851 11.2891 25.1061 10.9334L24.7944 10.8388L24.8231 10.5277C24.8609 10.0852 24.7411 9.6436 24.4849 9.28084C24.0058 8.58956 23.1463 8.27055 22.3322 8.48186C22.15 8.53057 21.9762 8.60692 21.8171 8.70824L13.4307 14.0528C13.0158 14.3138 12.7301 14.7375 12.6434 15.2199C12.5559 15.712 12.6701 16.2185 12.9603 16.6255C13.4397 17.3169 14.2993 17.6361 15.1138 17.4249C15.296 17.3761 15.4697 17.2998 15.6288 17.1985L18.8286 15.1593C19.3546 14.8243 19.9289 14.5718 20.5314 14.4108C23.2345 13.708 26.0891 14.7661 27.681 17.0611C28.6451 18.4104 29.0248 20.0912 28.7345 21.7239C28.447 23.3258 27.4981 24.7326 26.1205 25.5993L17.7348 30.9436C17.2084 31.2787 16.6337 31.5312 16.0308 31.6923"
+                      fill="white" />
+                </svg>
+              
+              </span>
+              <span>Start with Svelte</span></a
           >
         </div>
       </div>
@@ -385,39 +465,45 @@
           </p>
         </div>
       </div>
-      <div class="column is-4">
+      <div class="column is-4 column--advantage">
         <div class="content">
           <div class="icon-wrapper is-bordered has-background-success-light">
             <i class="fa-solid fa-clock is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Save time, eliminate headaches</h5>
           <p>
             By keeping it simple: no configuration at all. Nothing to maintain.
           </p>
         </div>
+        </div>
       </div>
-      <div class="column is-4">
+      <div class="column is-4 column--advantage">
         <div class="content">
           <div class="icon-wrapper is-bordered has-background-success-light">
             <i class="fa-solid fa-code is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Just code it</h5>
           <p>
             Not another no-code wizardry. You know how to code, so go ahead and
             do it.
           </p>
         </div>
+        </div>
       </div>
-      <div class="column is-4">
+      <div class="column is-4 column--advantage">
         <div class="content">
           <div class="icon-wrapper is-bordered has-background-success-light">
             <i class="fa-solid fa-bolt is-size-4"></i>
           </div>
+          <div>
           <h5 class="mt-2">Be (really) free</h5>
           <p>
             Self-hosted, Open Source and Local-first. Easy to enter, easy to
             leave.
           </p>
+        </div>
         </div>
       </div>
       <div class="column is-12 pt-6">
@@ -469,27 +555,41 @@
         <div class="content is-size-5">
           <div class="card is-bordered shake">
             <div class="card-content has-text-left p-6">
+              <h2 class="title is-2 mb-2 has-text-centereds">
+                🙏 We need your honest feedback
+              </h2>
 
-            
-              <h2 class="title is-2 mb-2 has-text-centereds">🙏 We need your honest feedback</h2>
-            
-          <p class="mb-3">
-            CASE is still in its early days and has much room to improve. If you
-            also think we deserve a hassle-free backend, here's how you can lend
-            us a hand:
+              <p class="mb-3">
+                CASE is still in its early days and has much room to improve. If
+                you also think we deserve a hassle-free backend, here's how you
+                can lend us a hand:
+              </p>
+              <ol>
+                <li>Try CASE using the <code>npx</code> command.</li>
+                <li>
+                  Leave your feedback (good or bad) on
+                  <a
+                    target="_blank"
+                    href="https://github.com/casejs/CASE/discussions/categories/feedback"
+                    >Github Discussions</a
+                  >.
+                </li>
+                <li>
+                  If you want to follow the progress,
+                  <a href="https://github.com/casejs/CASE">star us on Github</a
+                  >.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <p class="content py-2 has-text-left">
+            <em>
+              Something is not working ? Contact us through our
+              <a href="https://discord.gg/xcShXUrQpf" target="_blank"
+                >Discord support channel</a
+              ></em
+            >
           </p>
-          <ol>
-            <li>Try CASE using the <code>npx</code> command.</li>
-            <li>Leave your feedback (good or bad) on <a target="_blank" href="https://github.com/casejs/CASE/discussions/categories/feedback">Github Discussions</a>.</li>
-            <li>If you want to follow the progress, <a href="https://github.com/casejs/CASE">star us on Github</a>.</li>
-          </ol>
-        </div>
-      </div>
-      <p class="content py-2 has-text-left">
-        <em>
-          Something is not working ? Contact us through our <a href="https://discord.gg/xcShXUrQpf" target="_blank">Discord support channel</a></em
-        >
-      </p>
         </div>
       </div>
     </div>
