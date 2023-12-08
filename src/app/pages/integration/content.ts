@@ -5,7 +5,7 @@ export const content = {
     description:
       'Plug your ReactJS frontend to a CASE backend and get a fullstack app in minutes.',
     cta: 'Get started with React',
-    ctaLink: 'https://docs.case.app/connect/react',
+    ctaLink: 'https://docs.case.app/react',
     body: `<p><strong>React is a highly popular front-end framework.</strong> Developed and maintained by Facebook (now Meta), React was first released in 2013 and quickly gained popularity in the developer community.</p>
 
     <p>It offers a blend of performance, reusability, and flexibility. Its widespread adoption and strong community support make it a top choice for developers building interactive web applications.</p>
@@ -46,7 +46,7 @@ export const content = {
     description:
       'Plug your Angular frontend to a CASE backend and get a fullstack app in minutes.',
     cta: 'Get started with Angular',
-    ctaLink: 'https://docs.case.app/connect/angular',
+    ctaLink: 'https://docs.case.app/angular',
     body: `<p><strong>Angular (previously AngularJS) is a Google-maintained open-source framework</strong> designed for building dynamic web applications. Utilizing TypeScript, it features a component-based structure, enabling developers to create reusable and manageable UI components. Angular's standout features include two-way data binding and dependency injection, simplifying the development of complex applications.</p>
     
     <h2 class="title is-2">Why would you need a backend for your Angular app?</h2>
@@ -86,7 +86,7 @@ export const content = {
     description:
       'Plug your Svelte frontend to a CASE backend and get a fullstack app in minutes.',
     cta: 'Get started with Svelte',
-    ctaLink: 'https://docs.case.app/connect/svelte',
+    ctaLink: 'https://docs.case.app/svelte',
     body: `<p><strong>Svelte is a modern framework for building web applications</strong>, known for its simplicity and ease of use. Svelte is a compiler that converts your code into JavaScript at build time, rather than interpreting it at runtime. This results in a smaller bundle size and faster load times. Svelte is a great choice for building interactive web applications.</p>
   <p>Svelte comes with Sveltekit, a framework for building web applications with SSR, routing, and more.</p>
   
@@ -126,7 +126,7 @@ export const content = {
     description:
       'Plug your VueJS frontend to a CASE backend and get a fullstack app in minutes.',
     cta: 'Get started with Vue',
-    ctaLink: 'https://docs.case.app/connect/vue',
+    ctaLink: 'https://docs.case.app/vue',
     body: `<p><strong>Vue.js is an open-source JavaScript framework</strong> used for building user interfaces and single-page applications. It is known for its simplicity, ease of integration with other projects and libraries. Vue.js focuses on the view layer, allowing developers to easily pick up and integrate it into their existing projects.</p>
   
   <h2 class="title is-2">Why would you need a backend for your Vue app?</h2>
