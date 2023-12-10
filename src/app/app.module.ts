@@ -11,7 +11,8 @@ import { HeaderComponent } from './partials/header/header.component'
 import { LiveCodeHeroComponent } from './partials/live-code-hero/live-code-hero.component';
 import { AdminPanelHeroComponent } from './partials/admin-panel-hero/admin-panel-hero.component';
 import { ApiHeroComponent } from './partials/api-hero/api-hero.component';
-import { SdkFeaturesComponent } from './partials/sdk-features/sdk-features.component'
+import { SdkFeaturesComponent } from './partials/sdk-features/sdk-features.component';
+import { IntegrationComponent } from './pages/integration/integration.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SdkFeaturesComponent } from './partials/sdk-features/sdk-features.compo
     LiveCodeHeroComponent,
     AdminPanelHeroComponent,
     ApiHeroComponent,
-    SdkFeaturesComponent
+    SdkFeaturesComponent,
+    IntegrationComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [

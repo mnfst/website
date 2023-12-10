@@ -2,6 +2,7 @@
   @include until-widescreen {
     max-width: calc(100% - #{$container-offset});
   }
+
   @include touch {
     max-width: calc(100% - #{$gap});
   }
@@ -13,21 +14,43 @@
     width: 12% !important;
   }
 }
+
 .is-1-5 {
   @include desktop {
     flex: none;
     width: 12.5% !important;
   }
+
   @include touch {
     width: 100%;
   }
 }
-.is-20-percent {
+
+.is-20percent {
+  @include tablet {
+    flex: none;
+    width: 33.33333% !important;
+  }
+
+  &:nth-child(4) {
+    @include tablet-only {
+      margin-left: 16.66667% !important;
+      border-left: 1px solid $grey-lighter;
+    }
+  }
+
+  &:first-child {
+    @include tablet-only {
+      border-left: 1px solid $grey-lighter;
+    }
+  }
+
   @include desktop {
     flex: none;
     width: 20% !important;
   }
-  @include touch {
+
+  @include mobile {
     width: 100%;
   }
 }
@@ -39,28 +62,35 @@
         flex: none;
         width: percentage(divide($i, 12));
       }
+
       &.is-offset-#{$i}-retina {
         @include ltr-property("margin", percentage(divide($i, 12)), false);
       }
     }
   }
-  
+
 }
 
 
-  @include mobile {
-    .mb-0-mobile {
+@include mobile {
+  .mb-0-mobile {
     margin-bottom: 0 !important;
   }
-    .pb-0-mobile {
+
+  .pb-0-mobile {
     padding-bottom: 0 !important;
   }
 
   .m-4-mobile {
     margin: 1.8rem !important;
   }
+
   .p-4-mobile {
     padding: 1.8rem !important;
+  }
+
+  .is-flex-direction-column--mobile {
+    flex-direction: column !important;
   }
 }
 
@@ -74,5 +104,9 @@
   .py-6-mobile {
     padding-top: 6rem !important;
     padding-bottom: 6rem !important;
+  }
+
+  .mt-4-mobile {
+    margin-top: $gap !important;
   }
 }
