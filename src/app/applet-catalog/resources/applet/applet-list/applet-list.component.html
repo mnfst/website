@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <h1 class="title is-1">Applet catalog</h1>
+    </div>
+  </div>
+
+  <div class="columns is-multiline">
+    <div class="column is-4" *ngFor="let applet of applets">
+      <a class="button is-fullwidth" [routerLink]="['/applets', applet.slug]">
+        <h2 class="title is-4">{{ applet.name }}</h2>
+      </a>
+    </div>
+  </div>
+</div>

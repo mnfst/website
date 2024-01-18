@@ -47,6 +47,14 @@ const routes: Routes = [
       framework: 'svelte'
     }
   },
+
+  {
+    path: 'applets',
+    loadChildren: () =>
+      import('./applet-catalog/applet-catalog.module').then(
+        (m) => m.AppletCatalogModule
+      )
+  },
   {
     path: '**',
     redirectTo: '/404'
