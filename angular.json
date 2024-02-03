@@ -26,13 +26,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.png",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles/main.scss"
-            ],
+            "assets": ["src/assets", "src/robots.txt", "src/sitemap.xml"],
+            "styles": ["src/styles/main.scss"],
             "scripts": []
           },
           "configurations": {
@@ -94,23 +89,15 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.png",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles/main.scss"
-            ],
+            "assets": ["src/assets", "src/robots.txt"],
+            "styles": ["src/styles/main.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "cypress-run": {
@@ -189,9 +176,7 @@
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {
