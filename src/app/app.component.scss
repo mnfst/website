@@ -1,0 +1,40 @@
+@import '../styles/variables/all';
+@import 'bulma/sass/utilities/mixins';
+
+.card--donation {
+    width: 350px;
+    position: fixed;
+    bottom: $gap;
+    right: $gap;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(36deg,
+            hsl(270deg 100% 92%) 0%,
+            hsl(107deg 10% 95%) 50%,
+            hsl(104deg 100% 99%) 100%);
+
+    img {
+        mix-blend-mode: darken;
+    }
+
+    @include fullhd {
+        width: 450px;
+    }
+
+    p > span {
+        border-bottom: 3px solid $dark;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        border-color: $primary;
+
+        box-shadow: 3px 11px 44px rgba($primary, 0.05),
+            11px 3px 44px rgba($primary, 0.05),
+            -11px 3px 44px rgba($primary, 0.05);
+
+        p > span {
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}
