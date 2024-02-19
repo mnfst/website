@@ -3,6 +3,8 @@
 
 .card--donation {
     width: 350px;
+    max-width: calc(100vw - 87px);
+    z-index: 999;
     position: fixed;
     bottom: $gap;
     right: $gap;
