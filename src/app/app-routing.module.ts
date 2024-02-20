@@ -46,10 +46,6 @@ const routes: Routes = [
     data: {
       framework: 'svelte'
     }
-  },
-  {
-    path: '**',
-    redirectTo: '/404'
   }
 ]
 
