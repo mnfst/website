@@ -8,14 +8,16 @@ const SubscribeForm: React.FC = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
 
-    // TODO: Setup env variable for API URL
-    const response = await fetch('http://localhost:4000/api/dynamic/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email })
-    })
+    const response = await fetch(
+      'https://api.manifest.build/api/dynamic/emails',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      }
+    )
 
     if (response.ok) {
       // Handle success
