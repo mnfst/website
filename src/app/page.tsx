@@ -1,3 +1,5 @@
+import SubscribeForm from './components/SubscribeForm'
+
 export default function Home() {
   return (
     <main>
@@ -76,6 +78,7 @@ export default function Home() {
               embark on this adventure with us? Leave your email to stay in
               touch and start that journey with us.
             </p>
+            <SubscribeForm />
           </div>
         </div>
       </div>
