@@ -1,95 +1,84 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <div className="container">
+        <div className="columns">
+          <div className="column">
+            <h1 className="title is-3">
+              Building the simplest backend in the world
+            </h1>
+
+            <h2 className="title is-4">There are no “easy backends”</h2>
+            <p>
+              Let's imagine that you have a web app, built with React or
+              something similar, and you need to implement a simple backend
+              feature to make it less static.
+            </p>
+            <p>
+              How would you do it ? A quick internet search and you suddenly
+              need to learn about different databases, runtimes, infrastructure
+              and so on.. The amount of skills and energy needed for a simple
+              backend implementation is ridiculously high.
+            </p>
+            <p>
+              If you ask that question to 10 backend developers, they will
+              probably come up with 10 different stacks. Why ? Because there is
+              no straightforward way to create a backend.
+            </p>
+
+            <h2 className="title is-4">
+              Aren't no-code tools the solution to simplify backends ?
+            </h2>
+
+            <p>
+              No-code tools are great for people that do not know how to code.
+            </p>
+            <p>
+              What is the added value when you can do it faster by coding ? Not
+              that much. Moreover all of those solutions generate an awful code
+              that is hard to validate and maintain, especially when working
+              with a team.
+            </p>
+
+            <h2 className="title is-4">Our journey to rethink the backend</h2>
+            <p>
+              We strongly think that the backend can be simpler and more
+              inclusive. We also think that this can be done without a
+              perceptible performance drop, and more importantly, without
+              trading off our love for coding properly.
+            </p>
+
+            <p>Here are some statements that we believe in:</p>
+
+            <h3 className="title is-6">Simple code over no code</h3>
+            <p>
+              We are looking for the simplest and more minimalist syntax
+              possible. We do not want to trade off professionalism for
+              simplicity.
+            </p>
+
+            <h3 className="title is-6">Inclusive rather than powerful</h3>
+            <p>
+              Making a backend easy to learn and use is the key. A perfect
+              backend should be appealing even for frontend developers with no
+              backend experience.
+            </p>
+
+            <h3 className="title is-6">Cloud-based equals lock-in</h3>
+            <p>
+              Even if Open Source, cloud-based apps revoke your ownership and
+              impose vendor lock-in by design. A truly free tool should be made
+              for your machine first.
+            </p>
+
+            <p>
+              We are building the simplest backend in the world. Do you want to
+              embark on this adventure with us? Leave your email to stay in
+              touch and start that journey with us.
+            </p>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  );
+  )
 }
