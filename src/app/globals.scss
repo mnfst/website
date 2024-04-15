@@ -1,3 +1,81 @@
+$size-1: 5.61rem !default;
+$size-2: 4.209rem !default;
+$size-3: 3.157rem !default;
+$size-4: 2.369rem !default;
+$size-5: 1.777rem !default;
+$size-6: 1.333rem !default;
+$size-7: 1rem !default;
+$size-8: 0.75rem !default;
+$family-sans-serif: "Inter", sans-serif;
+
+
+$black: #323232 !default;
+$darkness: $black !default; // Some titles
+$black-bis: #1c1c1c !default;
+$dark: #232323 !default;
+$black-ter: #282828 !default;
+$grey-darker: #363636 !default;
+$grey-dark: #505050 !default;
+$grey: #7e7e7e !default;
+$grey-light: #a0a0a0 !default;
+$grey-lighter: #ededed !default;
+$light: #f1f3f5 !default;
+$white-ter: #f8f9fa !default;
+$white-bis: #fbfcfd !default;
+$light-bis: $white-bis !default; // Sheet
+$white: #fff !default;
+
+$input-radius: 100px !default;
+$input-border-color: $grey-light !default;
+$input-background-color: $white-ter !default;
+
+$danger: #FF5E5B !default;
+$success: #2BE1B7 !default;
+$info: #4CC9F0 !default;
+$warning: #F4D58D !default;
+$link: #2430F0 !default;
+$primary: #7209B7 !default;
+$title-weight: 900 !default;
+$content-heading-weight: 900 !default;
+
+$weight-medium: 600 !default;
+
+$border: $grey-lighter !default;
+$body-background-color: $white-ter !default;
+$navbar-item-hover-background-color: transparent !default;
+
+$navbar-height: 6.4rem !default;
+
 @import "bulma/bulma";
 
-$family-sans-serif: "Inter", sans-serif;
+.navbar-item img {
+    max-height: 52px;
+}
+
+.my-8 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.is-fullwidth {
+    width: 100%;
+}
+
+.has-background-gradient {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="0.75"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="130" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(%23bbblurry-filter)"><ellipse rx="125" ry="52" cx="783.8145975642178" cy="49.824249826800724" fill="%232430f0ff"></ellipse><ellipse rx="125" ry="52" cx="63.723303070867246" cy="714.6869909476235" fill="%23f2c79cff"></ellipse></g></svg>');
+    background-size: cover;
+}
+
+.is-bordered {
+    border: 2px solid $dark;
+}
+
+input[type="email"] {
+    box-shadow: none;
+}
+
+.title-gradient {
+    background: -webkit-linear-gradient(0deg, #{$link} 0%, #{$success} 50%, #{$warning} 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
