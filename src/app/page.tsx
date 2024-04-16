@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <div className="container">
         <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
-          <div className="navbar-brand is-fullwidth is-flex is-justify-content-center">
+          <div className="navbar-brand">
             <a className="navbar-item">
               <Image
                 src="/logo-transparent.svg"
@@ -17,18 +17,18 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="navbar-menu has-text-weight-bold is-hidden">
+          <div className="navbar-menu has-text-weight-bold">
             <div className="navbar-end">
               <a className="navbar-item is-hidden" href="https://docs.case.app" target="_blank">
                 Documentation
               </a>
-              <a className="navbar-item is-hidden" href="https://discord.gg/FepAked3W7" target="_blank">
+              <a className="navbar-item" href="https://discord.gg/FepAked3W7" target="_blank">
                 Discord
               </a>
               <a className="navbar-item is-hidden" href="https://github.com/casejs/CASE" target="_blank">
                 Github
               </a>
-              <div className="navbar-item">
+              <div className="navbar-item is-hidden">
                 <div className="buttons">
                   <a className="button is-small is-dark" href="https://github.com/casejs/CASE" target="_blank">
                     <strong>Github</strong>
