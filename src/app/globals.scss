@@ -79,3 +79,9 @@ input[type="email"] {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.container:not(.is-header) {
+    @include mobile {
+        max-width: calc(100% - 1.5rem);
+    }
+}
