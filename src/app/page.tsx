@@ -14,6 +14,7 @@ export default function Home() {
                   width={180}
                   height={52}
                   alt="logo of manifest"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -50,6 +51,7 @@ export default function Home() {
                   </h1>
 
                   <h2 className="title is-4">There are no “easy backends”</h2>
+
                   <p>
                     Let's imagine that you have a web app, built with React or
                     something similar, and you need to implement a simple backend
@@ -111,6 +113,25 @@ export default function Home() {
                     impose vendor lock-in by design. A truly free tool should be made
                     for your machine first.
                   </p>
+
+                  <h2 className="title is-4">Our roadmap</h2>
+
+                  <p>
+                    ✅ <strong>Q4 2023:</strong> Identification of the problem
+                  </p>
+                  <p>
+                    ✅ <strong>Q2 2024:</strong> Poc launched
+                  </p>
+                  <p>
+                    🔲 <strong>Q3 2024:</strong> MVP launch
+                  </p>
+                  <p>
+                    🔲 <strong>Q4 2024:</strong> Product improvements based on feedback from developers
+                  </p>
+                  <p>
+                    🔲 <strong>Q1 2025:</strong> Cloud service launch
+                  </p>
+
 
                   <SubscribeForm />
                 </div>

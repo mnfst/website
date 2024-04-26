@@ -31,6 +31,7 @@ const SubscribeForm: React.FC = () => {
   return (
     <div className="card has-background-white is-shadowless is-bordered mt-6">
       <div className="card-content p-6">
+        <h2 className="title is-5">Stay tuned ✉️</h2>
         <p>
           We are building the simplest backend in the world. Do you want to
           embark on this adventure with us? Leave your email to stay in
