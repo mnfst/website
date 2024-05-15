@@ -12,7 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "fetch-content": "./fetch-content.sh"
   },
   "dependencies": {
     "@docusaurus/core": "3.3.2",
