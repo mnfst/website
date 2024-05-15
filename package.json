@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run copy-docs && next build",
+    "copy-docs": "cp -R docs public",
     "start": "next start",
     "lint": "next lint"
   },
