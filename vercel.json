@@ -1,0 +1,11 @@
+{
+  "rewrites": [{ "source": "/docs/(.*)", "destination": "/docs/index.html" }],
+  "routes": [
+    {
+      "src": "/docs/(.*)",
+      "headers": { "Cache-Control": "no-cache" },
+      "continue": true
+    }
+  ],
+  "cleanUrls": true
+}
