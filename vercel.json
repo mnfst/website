@@ -1,13 +1,14 @@
 {
   "rewrites": [
-    { "source": "/docs", "destination": "/docs/index.html" },
-    { "source": "/docs/(.*)", "destination": "/docs/index.html" }
-  ],
-  "headers": [
     {
       "source": "/docs/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      "destination": "/public/docs/$1"
     }
   ],
-  "cleanUrls": true
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_ENV": "production"
+    }
+  },
+  "ignoreCommand": "if [ -d docs ]; then exit 1; fi"
 }

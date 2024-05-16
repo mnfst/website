@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Manifest',
+  tagline: 'Effortless backends',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -15,8 +15,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'manifest', // Usually your GitHub org/user name.
+  projectName: 'manifest', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,8 +40,7 @@ const config: Config = {
 
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+          editUrl: 'https://github.com/casejs/docs/blob/master/'
         },
         blog: false,
         theme: {
@@ -55,9 +54,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Manifest',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Manifest Logo',
         src: 'img/logo.svg'
       },
       items: [
@@ -68,7 +67,7 @@ const config: Config = {
           label: 'Tutorial'
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/casejs/case',
           label: 'GitHub',
           position: 'right'
         }
