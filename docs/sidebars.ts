@@ -41,14 +41,6 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'properties'
-        },
-        {
-          type: 'doc',
-          id: 'property-types'
-        },
-        {
-          type: 'doc',
-          id: 'dummy-data'
         }
       ]
     },
