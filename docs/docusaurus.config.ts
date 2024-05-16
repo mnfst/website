@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
 const config: Config = {
-  title: 'Manifest',
+  title: 'Manifest Docs',
   tagline: 'Effortless backends',
   favicon: 'img/favicon.ico',
 
@@ -64,7 +64,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'docSidebar',
           position: 'left',
-          label: 'Tutorial'
+          label: 'Docs'
         },
         {
           href: 'https://github.com/casejs/case',
@@ -80,7 +80,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Introduction',
               to: '/'
             }
           ]

@@ -28,8 +28,12 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Structure your data',
+      label: 'The Manifest file',
       items: [
+        {
+          type: 'doc',
+          id: 'manifest-file'
+        },
         {
           type: 'doc',
           id: 'entities'
@@ -41,10 +45,6 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'property-types'
-        },
-        {
-          type: 'doc',
-          id: 'validation'
         },
         {
           type: 'doc',
@@ -62,19 +62,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'storage'
-        },
-        {
-          type: 'doc',
-          id: 'hooks'
-        },
-        {
-          type: 'doc',
           id: 'auth'
-        },
-        {
-          type: 'doc',
-          id: 'api-policies'
         },
         {
           type: 'doc',
