@@ -46,7 +46,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Use your backend',
+      label: 'Connect to your backend',
       items: [
         {
           type: 'doc',
@@ -54,7 +54,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'auth'
+          id: 'rest-api'
         },
         {
           type: 'doc',
@@ -71,16 +71,6 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'vue'
-        }
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Deploy',
-      items: [
-        {
-          type: 'doc',
-          id: 'going-to-production'
         }
       ]
     }
