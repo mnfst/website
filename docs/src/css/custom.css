@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --m-color-dark: #22110C;
   --ifm-color-primary: #2430F0;
   --ifm-color-primary-dark: #202AD2;
   --ifm-color-primary-darker: #1B24B4;
@@ -14,6 +15,8 @@
   --ifm-color-primary-lighter: #535EF3;
   --ifm-color-primary-lightest: #666FF5;
   --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #555769;
+  --ifm-footer-link-hover-color: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --m-h1-font-size: 2.027rem;
   --m-h2-font-size: 1.802rem;
@@ -21,7 +24,8 @@
   --m-h4-font-size: 1.424rem;
   --m-h5-font-size: 1.266rem;
   --m-h6-font-size: 1.125rem;
-  --m-sidebar-menu-list-item-font-size: 0.889rem
+  --m-sidebar-menu-list-item-font-size: 0.889rem;
+  --m-navbar-items-font-size: 0.889rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -66,4 +70,20 @@ h6 {
 
 .menu__link--sublist-caret:after {
   background-size: 1.2rem 1.2rem;
+}
+
+.navbar__link {
+  font-size: var(--m-navbar-items-font-size)
+}
+
+.footer.footer--dark {
+  background-color: var(--m-color-dark);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-footer-link-hover-color);
+}
+
+.alert {
+  border-radius: 2px;
 }

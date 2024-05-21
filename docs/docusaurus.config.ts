@@ -77,8 +77,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Introduction',
+              label: 'Developer Docs',
               to: '/'
+            },
+            {
+              html: '<span>Contributor Docs <span class="badge badge--primary">Coming soon</span></span>',
+
             }
           ]
         },
@@ -86,16 +90,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus'
+              href: 'https://discord.gg/FepAked3W7'
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus'
+              label: 'Discussion',
+              href: 'https://github.com/casejs/CASE/discussions'
             }
           ]
         },
@@ -104,12 +104,15 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus'
+              href: 'https://github.com/casejs/CASE/'
+            },
+            {
+              label: 'manifest.build',
+              href: 'https://manifest.build'
             }
           ]
         }
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+      ],      
     },
     docs: {
       sidebar: {
@@ -126,3 +129,4 @@ const config: Config = {
 }
 
 export default config
+
