@@ -38,7 +38,6 @@ const config: Config = {
           routeBasePath: '/',
           path: 'content',
 
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: ({ versionDocsDirPath, docPath }) => {
             const baseUrl = 'https://github.com/casejs/docs/blob/master/';
@@ -59,18 +58,11 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Manifest',
       logo: {
         alt: 'Manifest Logo',
         src: 'img/logo.svg'
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'docSidebar',
-          position: 'left',
-          label: 'Docs'
-        },
         {
           href: 'https://github.com/casejs/case',
           label: 'GitHub',
