@@ -6,25 +6,64 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #2430F0;
+  --ifm-color-primary-dark: #202AD2;
+  --ifm-color-primary-darker: #1B24B4;
+  --ifm-color-primary-darkest: #151B87;
+  --ifm-color-primary-light: #404AF2;
+  --ifm-color-primary-lighter: #535EF3;
+  --ifm-color-primary-lightest: #666FF5;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --m-h1-font-size: 2.027rem;
+  --m-h2-font-size: 1.802rem;
+  --m-h3-font-size: 1.602rem;
+  --m-h4-font-size: 1.424rem;
+  --m-h5-font-size: 1.266rem;
+  --m-h6-font-size: 1.125rem;
+  --m-sidebar-menu-list-item-font-size: 0.889rem
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #6971F5;
+  --ifm-color-primary-dark: #5B64F4;
+  --ifm-color-primary-darker: #4E57F3;
+  --ifm-color-primary-darkest: #404AF2;
+  --ifm-color-primary-light: #777EF6;
+  --ifm-color-primary-lighter: #9298F8;
+  --ifm-color-primary-lightest: #a6acf7;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: var(--m-h1-font-size)
+}
+
+h2 {
+  font-size: var(--m-h2-font-size)
+}
+
+h3 {
+  font-size: var(--m-h3-font-size)
+}
+
+h4 {
+  font-size: var(--m-h4-font-size)
+}
+
+h5 {
+  font-size: var(--m-h5-font-size)
+}
+
+h6 {
+  font-size: var(--m-h6-font-size)
+}
+
+.menu .menu__link {
+  font-size: var(--m-sidebar-menu-list-item-font-size)
+}
+
+.menu__link--sublist-caret:after {
+  background-size: 1.2rem 1.2rem;
 }
