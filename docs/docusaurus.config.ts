@@ -60,7 +60,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'Manifest Logo',
-        src: 'img/logo.svg'
+        src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg'
       },
       items: [
         {
