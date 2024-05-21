@@ -87,3 +87,26 @@ h6 {
 .alert {
   border-radius: 2px;
 }
+
+.table-of-contents__link {
+  position: relative;
+}
+
+
+
+.menu__link--active:not(.menu__link--sublist):before,
+.table-of-contents__link--active:before {
+  display: inline-block;
+  background-color: var(--ifm-color-primary);
+  border-radius: 0 2px 2px 0;
+  bottom: 0;
+  content: " ";
+  top: 0;
+  position: absolute;
+  left: -16px;
+  width: 3px;
+}
+
+.table-of-contents__link + ul .table-of-contents__link--active:before {
+  left: -32px;
+}
