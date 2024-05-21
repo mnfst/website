@@ -1,6 +1,6 @@
-import { themes as prismThemes } from 'prism-react-renderer'
-import type { Config } from '@docusaurus/types'
-import type * as Preset from '@docusaurus/preset-classic'
+import type * as Preset from '@docusaurus/preset-classic';
+import type { Config } from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const config: Config = {
   title: 'Manifest Docs',
@@ -40,7 +40,12 @@ const config: Config = {
 
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/casejs/docs/blob/master/'
+          editUrl: ({ versionDocsDirPath, docPath }) => {
+            const baseUrl = 'https://github.com/casejs/docs/blob/master/';
+            // Enlève 'content/' du chemin pour correspondre à la structure du repo GitHub
+            const newDocPath = docPath.replace(/^content\//, '');
+            return baseUrl + newDocPath;
+          },
         },
         blog: false,
         theme: {
@@ -113,6 +118,13 @@ const config: Config = {
         }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+
+      },
     },
     prism: {
       theme: prismThemes.github,
