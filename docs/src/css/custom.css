@@ -27,12 +27,16 @@
   --m-h6-font-size: 1.125rem;
   --m-sidebar-menu-list-item-font-size: 0.889rem;
   --m-navbar-items-font-size: 0.889rem;
+  --m-font-size-small: 0.889rem;
   --ifm-code-padding-vertical: 0.25rem;
   --ifm-code-padding-horizontal: 0.5rem;
   --ifm-code-border-radius: .25rem;
   --m-code-background-color: #E7EBF4;
   --m-code-border-color: #E7EBF4;
   --m-code-color: #151B87;
+  --m-card-hilighted-border: #dadde1;
+  --m-card-hilighted-background: #E7EBF4;
+  --m-card-hilighted-color: #1B1B1D;
 }
 
 h1 code,
@@ -62,6 +66,10 @@ table code {
   --m-code-background-color: #4e4f63;
   --m-code-border-color: #4e4f63;
   --m-code-color: #E7EBF4;
+  --m-card-hilighted-border: #4e4f63;
+  --m-card-hilighted-background: #1B1B1D;
+  --m-card-hilighted-color: #E7EBF4;
+  --ifm-heading-color: #E7EBF4;
 }
 
 h1 {
@@ -152,4 +160,18 @@ html[data-theme="dark"] .navbar {
 .theme-doc-markdown a,
 .theme-doc-footer a {
   text-decoration: underline;
+}
+
+.card--highlighted {
+  position: absolute;
+  bottom: 56px;
+  left: 16px;
+  background: var(--m-card-hilighted-background);
+  border: 1px solid var(--m-card-hilighted-border);
+  width: calc(100% - 32px);
+  color: var(--m-card-hilighted-color);
+}
+
+.card--highlighted p {
+  font-size: var(--m-font-size-small)
 }
