@@ -16,6 +16,7 @@
   --ifm-color-primary-lightest: #666FF5;
   --ifm-code-font-size: 95%;
   --ifm-font-color-base: #555769;
+  --ifm-heading-color: #2A2A2F;
   --ifm-footer-link-hover-color: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --m-h1-font-size: 2.027rem;
@@ -85,6 +86,15 @@ h5 {
 
 h6 {
   font-size: var(--m-h6-font-size)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ifm-heading-color);
 }
 
 .menu .menu__link {
