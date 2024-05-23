@@ -14,7 +14,7 @@ const sidebars: SidebarsConfig = {
   docSidebar: [
     {
       type: 'category',
-      label: 'Getting started',
+      label: '🚀 Getting started',
       items: [
         {
           type: 'doc',
@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'The Manifest file',
+      label: '📄 Create your backend',
       items: [
         {
           type: 'doc',
@@ -41,16 +41,20 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'properties'
+        },
+        {
+          type: 'doc',
+          id: 'relations'
         }
       ]
     },
     {
       type: 'category',
-      label: 'Connect to your backend',
+      label: '🔌 Connect to your backend',
       items: [
         {
           type: 'doc',
-          id: 'connect'
+          id: 'javascript-sdk'
         },
         {
           type: 'doc',
@@ -76,7 +80,8 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'html',
-      value: '<div class="card card--highlighted"><div class="card__header"><h6 class="title">📢 We need your Feedback</h6></div><div class="card__body"><p>Manifest is a <b>Proof of Concept</b>. We need your feedback to validate our approach and guide new feature development.</p><a class="button button--primary" href="">Take the Survey</a></div></div>'
+      value:
+        '<div class="card card--highlighted"><div class="card__header"><h6 class="title">📢 We need your Feedback</h6></div><div class="card__body"><p>Manifest is a <b>Proof of Concept</b>. We need your feedback to validate our approach and guide new feature development.</p><a class="button button--primary" href="">Take the Survey</a></div></div>'
     }
   ]
 }
