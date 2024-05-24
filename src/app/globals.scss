@@ -1,52 +1,58 @@
-$size-1: 5.61rem !default;
-$size-2: 4.209rem !default;
-$size-3: 3.157rem !default;
-$size-4: 2.369rem !default;
-$size-5: 1.777rem !default;
-$size-6: 1.333rem !default;
-$size-7: 1rem !default;
-$size-8: 0.75rem !default;
-$family-sans-serif: "Inter", sans-serif;
+@use "bulma/sass/utilities" with ($size-1: 5.61rem,
+    $size-2: 4.209rem,
+    $size-3: 3.157rem,
+    $size-4: 2.369rem,
+    $size-5: 1.777rem,
+    $size-6: 1.333rem,
+    $size-7: 1rem,
+    $size-8: 0.75rem,
+    $family-sans-serif: '"Inter", sans-serif',
+    $weight-medium: 600,
+    $border: $grey-lighter,
+    $black: #161617,
+    $darkness: #22110C, // Some titles
+    $black-bis: #0d0e0e,
+    $dark: #1a1a1c,
+    $black-ter: #26282a,
+    $grey-darker: #404046,
+    $grey-dark: #555769,
+    $grey: #7e7e7e,
+    $grey-light: #a0a0a0,
+    $grey-lighter: #ededed,
+    $light: #f1f3f5,
+    $white-ter: #f8f9fa,
+    $white-bis: #fbfcfd,
+    $light-bis: #F1F1F1, // Sheet
+    $white: #fff,
 
+    $danger: #FF5E5B,
+    $success: #2BE1B7,
+    $info: #4CC9F0,
+    $warning: #F2C79C,
+    $link: #2430F0,
+    $primary: #7209B7,
+);
 
-$black: #161617 !default;
-$darkness: $black !default; // Some titles
-$black-bis: #0d0e0e !default;
-$dark: #1a1a1c !default;
-$black-ter: #26282a !default;
-$grey-darker: #404046 !default;
-$grey-dark: #555769 !default;
-$grey: #7e7e7e !default;
-$grey-light: #a0a0a0 !default;
-$grey-lighter: #ededed !default;
-$light: #f1f3f5 !default;
-$white-ter: #f8f9fa !default;
-$white-bis: #fbfcfd !default;
-$light-bis: $white-bis !default; // Sheet
-$white: #fff !default;
+@use "bulma/sass/utilities/mixins";
+@use "bulma/sass/utilities/functions";
+@use "bulma/sass/utilities/extends";
+@use "bulma/sass/helpers" with ($title-weight: 900,
+    $content-heading-weight: 900,
+    $body-background-color: $white-ter);
 
-$input-radius: 100px !default;
-$input-border-color: $grey-light !default;
-$input-background-color: $white-ter !default;
+@use "bulma/sass/components" with ($navbar-item-hover-background-color: transparent,
+    $navbar-height: 6.4rem,
+);
+@use "bulma/sass/form" with ($input-background-color: $white-ter,
+    $input-radius: 100px,
+    $input-border-color: $grey-light,
+);
 
-$danger: #FF5E5B !default;
-$success: #2BE1B7 !default;
-$info: #4CC9F0 !default;
-$warning: #F4D58D !default;
-$link: #2430F0 !default;
-$primary: #7209B7 !default;
-$title-weight: 900 !default;
-$content-heading-weight: 900 !default;
-
-$weight-medium: 600 !default;
-
-$border: $grey-lighter !default;
-$body-background-color: $white-ter !default;
-$navbar-item-hover-background-color: transparent !default;
-
-$navbar-height: 6.4rem !default;
-
-@import "bulma/bulma";
+@forward "bulma/sass/base";
+@forward "bulma/sass/elements";
+@forward "bulma/sass/grid";
+@forward "bulma/sass/layout";
+@forward "bulma/sass/themes";
 
 .navbar-item img {
     max-height: 52px;
@@ -81,7 +87,23 @@ input[type="email"] {
 }
 
 .container:not(.is-header) {
-    @include mobile {
+    @include mixins.mobile {
         max-width: calc(100% - 1.5rem);
     }
+}
+
+body {
+    background-image: url('./../assets/images/bg-grid.svg');
+    background-repeat: repeat;
+}
+
+.has-background-glass {
+    background-color: rgba($white-ter, 0.12);
+    box-shadow: 0 1px 3px 0px rgba($dark, 0.1);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+.navbar.has-background-transparent {
+    background-color: transparent;
 }
