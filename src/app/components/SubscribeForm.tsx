@@ -34,18 +34,18 @@ const SubscribeForm: React.FC = () => {
         <h2 className="title is-5">Stay tuned ✉️</h2>
         <p>
           We are building the simplest backend in the world. Do you want to
-          embark on this adventure with us? Leave your email to stay in
-          touch and start that journey with us.
+          embark on this adventure with us? Leave your email to stay in touch
+          and start that journey with us.
         </p>
         <form onSubmit={handleSubmit}>
           <div className="is-flex is-align-items-flex-end is-justify-content-flex-start">
-            <div className='field is-fullwidth mb-0 '>
+            <div className="field is-fullwidth mb-0 ">
               <div className="field-label mr-3 has-text-left  has-text-weight-bold mb-1">
                 <label htmlFor="email">Email:</label>
               </div>
               <div className="field-body mr-3">
                 <div className="field">
-                  <p className="control">
+                  <div className="control">
                     <input
                       type="email"
                       className="input is-small"
@@ -56,11 +56,13 @@ const SubscribeForm: React.FC = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <button type="submit" className="button is-small is-dark">Subscribe</button>
+            <button type="submit" className="button is-small is-dark">
+              Subscribe
+            </button>
           </div>
         </form>
       </div>

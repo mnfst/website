@@ -1,5 +1,5 @@
 $black: #161617 !default;
-$darkness: #22110C !default; // Some titles
+$darkness: #22110c !default; // Some titles
 $black-bis: #0d0e0e !default;
 $dark: #1a1a1c !default;
 $black-ter: #26282a !default;
@@ -11,318 +11,324 @@ $grey-lighter: #ededed !default;
 $light: #f1f3f5 !default;
 $white-ter: #f8f9fa !default;
 $white-bis: #fbfcfd !default;
-$light-bis: #F1F1F1 !default; // Sheet
+$light-bis: #f1f1f1 !default; // Sheet
 $white: #fff !default;
 
-$danger: #FF5E5B !default;
-$success: #2BE1B7 !default;
-$info: #4CC9F0 !default;
-$warning: #F2C79C !default;
-$link: #2430F0 !default;
-$primary: #7209B7 !default;
+$danger: #ff5e5b !default;
+$success: #2be1b7 !default;
+$info: #4cc9f0 !default;
+$warning: #f2c79c !default;
+$link: #2430f0 !default;
+$primary: #7209b7 !default;
 $size-8: 0.75rem !default;
 $navbar-item-hover-background-color: transparent !default;
 $input-background-color: $white-ter !default;
 $input-border-color: $grey-light !default;
-$family-code: "Fira Code", "SF Mono", "Roboto Mono", "Source Code Pro", "Ubuntu Mono", monospace !default;
+$family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
+  'Ubuntu Mono', monospace !default;
 
-@use "bulma/sass/utilities" with ($size-1: 5.61rem,
-    $size-2: 4.209rem,
-    $size-3: 3.157rem,
-    $size-4: 2.369rem,
-    $size-5: 1.777rem,
-    $size-6: 1.333rem,
-    $size-7: 1rem,
+@use 'bulma/sass/utilities' with (
+  $size-1: 5.61rem,
+  $size-2: 4.209rem,
+  $size-3: 3.157rem,
+  $size-4: 2.369rem,
+  $size-5: 1.777rem,
+  $size-6: 1.333rem,
+  $size-7: 1rem,
 
-    $family-sans-serif: '"Inter", sans-serif',
-    $weight-medium: 600,
-    $border: $grey-lighter,
-
+  $family-sans-serif: '"Inter", sans-serif',
+  $weight-medium: 600,
+  $border: $grey-lighter
 );
 
-@use "bulma/sass/utilities/mixins";
-@use "bulma/sass/utilities/functions";
-@use "bulma/sass/utilities/extends";
-@use "bulma/sass/helpers";
+@use 'bulma/sass/utilities/mixins';
+@use 'bulma/sass/utilities/functions';
+@use 'bulma/sass/utilities/extends';
+@use 'bulma/sass/helpers';
 
-@use "bulma/sass/components" with ($navbar-height: 6.4rem,
+@use 'bulma/sass/components' with (
+  $navbar-height: 6.4rem
 );
-@use "bulma/sass/form" with ($input-radius: 100px,
+@use 'bulma/sass/form' with (
+  $input-radius: 100px
 );
-@use "bulma/sass/base" with ($body-background-color: $white-ter);
-@use "bulma/sass/elements" with ($title-weight: 900, $content-heading-weight: 900,
+@use 'bulma/sass/base' with (
+  $body-background-color: $white-ter
 );
-@forward "bulma/sass/grid";
-@forward "bulma/sass/layout";
-@forward "bulma/sass/themes";
+@use 'bulma/sass/elements' with (
+  $title-weight: 900,
+  $content-heading-weight: 900
+);
+@forward 'bulma/sass/grid';
+@forward 'bulma/sass/layout';
+@forward 'bulma/sass/themes';
 
 .navbar-item img {
-    max-height: 52px;
+  max-height: 52px;
 }
 
 .my-8 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .is-fullwidth {
-    width: 100%;
+  width: 100%;
 }
 
 .has-background-gradient {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="0.75"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="130" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(%23bbblurry-filter)"><ellipse rx="125" ry="52" cx="783.8145975642178" cy="49.824249826800724" fill="%232430f0ff"></ellipse><ellipse rx="125" ry="52" cx="63.723303070867246" cy="714.6869909476235" fill="%23f2c79cff"></ellipse></g></svg>');
-    background-size: cover;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="0.75"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="130" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(%23bbblurry-filter)"><ellipse rx="125" ry="52" cx="783.8145975642178" cy="49.824249826800724" fill="%232430f0ff"></ellipse><ellipse rx="125" ry="52" cx="63.723303070867246" cy="714.6869909476235" fill="%23f2c79cff"></ellipse></g></svg>');
+  background-size: cover;
 }
 
 .is-bordered {
-    border: 2px solid $dark;
+  border: 2px solid $dark;
 }
 
-input[type="email"] {
-    box-shadow: none;
+input[type='email'] {
+  box-shadow: none;
 }
 
 .title-gradient {
-    background: -webkit-linear-gradient(0deg, #{$link} 0%, #{$success} 50%, #{$warning} 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    0deg,
+    #{$link} 0%,
+    #{$success} 50%,
+    #{$warning} 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container:not(.is-header) {
-    @include mixins.mobile {
-        max-width: calc(100% - 1.5rem);
-    }
+  @include mixins.mobile {
+    max-width: calc(100% - 1.5rem);
+  }
 }
 
 body {
-    background-image: url('./assets/images/bg-grid.svg');
-    background-repeat: repeat;
+  background-image: url('/assets/images/bg-grid.svg');
+  background-repeat: repeat;
 }
 
 .has-background-glass {
-    background-color: rgba($white-ter, 0.12);
-    box-shadow: 0 1px 3px 0px rgba($dark, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+  background-color: rgba($white-ter, 0.12);
+  box-shadow: 0 1px 3px 0px rgba($dark, 0.1);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .navbar.has-background-transparent {
-    background-color: transparent;
+  background-color: transparent;
 }
-
 
 // tpyewriter
 
-
 .box {
-    --code-color: #b3bbc7;
-    --sidebar-width: 40px;
-    --sidebar-padding: 10px;
-    --header-padding: 10px 10px;
+  --code-color: #b3bbc7;
+  --sidebar-width: 40px;
+  --sidebar-padding: 10px;
+  --header-padding: 10px 10px;
 
-    &--code {
-        width: 100%;
-        background-color: $black-ter;
-        color: var(--code-color);
-        text-align: left;
+  &--code {
+    width: 100%;
+    background-color: $black-ter;
+    color: var(--code-color);
+    text-align: left;
 
-        &__head {
-            padding: var(--header-padding);
-        }
-
-        &__sidebar {
-            width: var(--sidebar-width);
-            padding-right: var(--sidebar-padding);
-            line-height: 1.589;
-            color: $grey;
-        }
-
-        &__body {
-            pre {
-                color: var(--code-color);
-            }
-        }
-
-        &__content {
-            padding-left: var(--sidebar-padding);
-
-        }
+    &__head {
+      padding: var(--header-padding);
     }
+
+    &__sidebar {
+      width: var(--sidebar-width);
+      padding-right: var(--sidebar-padding);
+      line-height: 1.589;
+      color: $grey;
+    }
+
+    &__body {
+      pre {
+        color: var(--code-color);
+      }
+    }
+
+    &__content {
+      padding-left: var(--sidebar-padding);
+    }
+  }
 }
 
 pre {
-    padding: 0;
+  padding: 0;
 }
 
 #typewriter {
-    font-family: $family-code;
+  font-family: $family-code;
 
-    &:after {
-        content: '|';
-        color: $white;
-        animation: blink 500ms linear infinite alternate;
-    }
+  &:after {
+    content: '|';
+    color: $white;
+    animation: blink 500ms linear infinite alternate;
+  }
 }
 
 @-webkit-keyframes blink {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes blink {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
-
 .npx-wrapper {
-    position: relative;
+  position: relative;
 
-    .is-copied {
-        position: absolute;
-        opacity: 0;
+  .is-copied {
+    position: absolute;
+    opacity: 0;
 
-        &.is-active {
-            @extend .slideInUp;
-        }
+    &.is-active {
+      @extend .slideInUp;
     }
+  }
 
-    .button-copy {
-        opacity: 1;
+  .button-copy {
+    opacity: 1;
 
-        &.has-been-copied {
-            @extend .slideOutUp;
-        }
+    &.has-been-copied {
+      @extend .slideOutUp;
     }
+  }
 }
 
 .button-copy,
 .is-copied {
-    display: inline-block;
-    min-width: 81px;
-    white-space: nowrap;
+  display: inline-block;
+  min-width: 81px;
+  white-space: nowrap;
 }
 
 .slideInUp {
-    -webkit-animation-name: slideInUp;
-    animation-name: slideInUp;
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes slideInUp {
-    0% {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
-        opacity: 0
-    }
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
 
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInUp {
-    0% {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
-        opacity: 0
-    }
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
 
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-
-
 .slideOutUp {
-    -webkit-animation-name: slideOutUp;
-    animation-name: slideOutUp;
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes slideOutUp {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1
-    }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 
-    100% {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 @keyframes slideOutUp {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1
-    }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 
-    100% {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 .wwt {
-    mix-blend-mode: luminosity;
-    white-space: nowrap;
+  mix-blend-mode: luminosity;
+  white-space: nowrap;
 }
 
 .install-code {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .has-icon-left {
-    --star-width: 24px;
-    --star-margin: 9px;
+  --star-width: 24px;
+  --star-margin: 9px;
 
-    span:first-child {
-        margin-right: var(--star-margin);
-        width: var(--star-width);
-    }
+  span:first-child {
+    margin-right: var(--star-margin);
+    width: var(--star-width);
+  }
 
-    span:last-child {
-        width: calc(100% - var(--star-width));
-    }
+  span:last-child {
+    width: calc(100% - var(--star-width));
+  }
 
-    .card-icon {
-        position: relative;
-        top: -2px;
-    }
+  .card-icon {
+    position: relative;
+    top: -2px;
+  }
 }

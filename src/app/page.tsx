@@ -17,7 +17,7 @@ export default function Home() {
               <div className="navbar-brand">
                 <a className="navbar-item">
                   <Image
-                    src="/logo.svg"
+                    src="/assets/images/logo.svg"
                     width={180}
                     height={52}
                     alt="logo of manifest"
@@ -72,7 +72,10 @@ export default function Home() {
                     in the world
                   </h1>
 
-                  <p className="content is-normal">Manifest is the simplest Backend-as-a-Service for rapid web application development</p>
+                  <p className="content is-normal">
+                    Manifest is the simplest Backend-as-a-Service for rapid web
+                    application development
+                  </p>
                   <InstallCLI />
                 </div>
               </div>
@@ -86,6 +89,6 @@ export default function Home() {
         </div>
         <SubscribeForm />
       </div>
-    </main >
+    </main>
   )
 }
