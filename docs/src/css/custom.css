@@ -1,0 +1,177 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --m-color-dark: #22110C;
+  --ifm-color-primary: #2430F0;
+  --ifm-color-primary-dark: #202AD2;
+  --ifm-color-primary-darker: #1B24B4;
+  --ifm-color-primary-darkest: #151B87;
+  --ifm-color-primary-light: #404AF2;
+  --ifm-color-primary-lighter: #535EF3;
+  --ifm-color-primary-lightest: #666FF5;
+  --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #555769;
+  --ifm-heading-color: #2A2A2F;
+  --ifm-footer-link-hover-color: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --m-h1-font-size: 2.027rem;
+  --m-h2-font-size: 1.802rem;
+  --m-h3-font-size: 1.602rem;
+  --m-h4-font-size: 1.424rem;
+  --m-h5-font-size: 1.266rem;
+  --m-h6-font-size: 1.125rem;
+  --m-sidebar-menu-list-item-font-size: 0.889rem;
+  --m-navbar-items-font-size: 0.889rem;
+  --m-font-size-small: 0.889rem;
+  --ifm-code-padding-vertical: 0.25rem;
+  --ifm-code-padding-horizontal: 0.5rem;
+  --ifm-code-border-radius: .25rem;
+  --m-code-background-color: #E7EBF4;
+  --m-code-border-color: #E7EBF4;
+  --m-code-color: #151B87;
+  --m-card-hilighted-border: #dadde1;
+  --m-card-hilighted-background: #E7EBF4;
+  --m-card-hilighted-color: #1B1B1D;
+}
+
+h1 code,
+h2 code,
+h3 code,
+li code,
+p code,
+table code {
+  background-color: var(--m-code-background-color);
+  border-color: var(--m-code-border-color);
+  color: var(--m-code-color);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #6971F5;
+  --ifm-color-primary-dark: #5B64F4;
+  --ifm-color-primary-darker: #4E57F3;
+  --ifm-color-primary-darkest: #404AF2;
+  --ifm-color-primary-light: #777EF6;
+  --ifm-color-primary-lighter: #9298F8;
+  --ifm-color-primary-lightest: #a6acf7;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-font-color-base: #eaeaea;
+  --ifm-navbar-background-color: #1B1B1D;
+  --docusaurus-collapse-button-bg: #1B1B1D;
+  --m-code-background-color: #4e4f63;
+  --m-code-border-color: #4e4f63;
+  --m-code-color: #E7EBF4;
+  --m-card-hilighted-border: #4e4f63;
+  --m-card-hilighted-background: #1B1B1D;
+  --m-card-hilighted-color: #E7EBF4;
+  --ifm-heading-color: #E7EBF4;
+}
+
+h1 {
+  font-size: var(--m-h1-font-size)
+}
+
+h2 {
+  font-size: var(--m-h2-font-size)
+}
+
+h3 {
+  font-size: var(--m-h3-font-size)
+}
+
+h4 {
+  font-size: var(--m-h4-font-size)
+}
+
+h5 {
+  font-size: var(--m-h5-font-size)
+}
+
+h6 {
+  font-size: var(--m-h6-font-size)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ifm-heading-color);
+}
+
+.menu .menu__link {
+  font-size: var(--m-sidebar-menu-list-item-font-size)
+}
+
+.menu__link--sublist-caret:after {
+  background-size: 1.2rem 1.2rem;
+}
+
+.navbar__link {
+  font-size: var(--m-navbar-items-font-size)
+}
+
+html[data-theme="dark"] .navbar {
+  box-shadow: 0 1px 0 0px rgb(68, 73, 80);
+}
+
+.footer.footer--dark {
+  background-color: #1B1B1D;
+  box-shadow: 0 -1px 0 0px rgb(68, 73, 80);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-footer-link-hover-color);
+}
+
+.alert {
+  border-radius: 2px;
+}
+
+.table-of-contents__link {
+  position: relative;
+}
+
+
+
+.menu__link--active:not(.menu__link--sublist):before,
+.table-of-contents__link--active:before {
+  display: inline-block;
+  background-color: var(--ifm-color-primary);
+  border-radius: 0 2px 2px 0;
+  bottom: 0;
+  content: " ";
+  top: 0;
+  position: absolute;
+  left: -16px;
+  width: 3px;
+}
+
+.table-of-contents__link + ul .table-of-contents__link--active:before {
+  left: -32px;
+}
+
+.theme-doc-markdown a,
+.theme-doc-footer a {
+  text-decoration: underline;
+}
+
+.card--highlighted {
+  position: absolute;
+  bottom: 56px;
+  left: 16px;
+  background: var(--m-card-hilighted-background);
+  border: 1px solid var(--m-card-hilighted-border);
+  width: calc(100% - 32px);
+  color: var(--m-card-hilighted-color);
+}
+
+.card--highlighted p {
+  font-size: var(--m-font-size-small)
+}

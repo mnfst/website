@@ -1,27 +1,25 @@
-# Website
+# Manifest website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Manifest website source code. View it live: https://manifest.build
+
+The website is built with [Next.js](https://nextjs.org/).
 
 ## Install
 
-Run the following command to install the dependencies:
-
 ```
 npm install
-ng serve
+npm run dev
 ```
 
-## CASE Server
+## Manifest docs
 
-Go to `/case` and run
+The documentation website is located in the `/docs` directory and built with [Docusaurus](https://docusaurus.io/).
+
+The content of the documentation itself is located in [its own repository](https://github.com/casejs/docs) and fetched with the `npm run fetch-content` command that clones it.
 
 ```
+cd docs
 npm install
-npm start
-```
-
-Then you can seed data with:
-
-```
-npm run seed
+npm run fetch-content
+npm run start
 ```

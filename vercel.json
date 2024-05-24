@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/docs/(.*)",
+      "destination": "/public/docs/$1"
+    }
+  ],
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_ENV": "production"
+    }
+  },
+  "ignoreCommand": "if [ -d docs ]; then exit 1; fi"
+}

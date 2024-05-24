@@ -1,8 +1,0 @@
-@import '../../../styles/variables/all';
-@import 'bulma/sass/utilities/mixins';
-
-.tab-content {
-    @include fullhd {
-        min-height: 456.27px;
-    }
-}
