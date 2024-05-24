@@ -193,3 +193,136 @@ pre {
         opacity: 1;
     }
 }
+
+
+.npx-wrapper {
+    position: relative;
+
+    .is-copied {
+        position: absolute;
+        opacity: 0;
+
+        &.is-active {
+            @extend .slideInUp;
+        }
+    }
+
+    .button-copy {
+        opacity: 1;
+
+        &.has-been-copied {
+            @extend .slideOutUp;
+        }
+    }
+}
+
+.button-copy,
+.is-copied {
+    display: inline-block;
+    min-width: 81px;
+    white-space: nowrap;
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.slideOutUp {
+    -webkit-animation-name: slideOutUp;
+    animation-name: slideOutUp;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideOutUp {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutUp {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.wwt {
+    mix-blend-mode: luminosity;
+    white-space: nowrap;
+}
+
+.install-code {
+    white-space: nowrap;
+}
+
+.has-icon-left {
+    --star-width: 24px;
+    --star-margin: 9px;
+
+    span:first-child {
+        margin-right: var(--star-margin);
+        width: var(--star-width);
+    }
+
+    span:last-child {
+        width: calc(100% - var(--star-width));
+    }
+
+    .card-icon {
+        position: relative;
+        top: -2px;
+    }
+}

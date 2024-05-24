@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
@@ -71,9 +72,8 @@ export default function Home() {
                     in the world
                   </h1>
 
-                  <p className="subtitle">Manifest is the simplest Backend-as-a-Service for rapid web application development</p>
-
-                  <SubscribeForm />
+                  <p className="content is-normal">Manifest is the simplest Backend-as-a-Service for rapid web application development</p>
+                  <InstallCLI />
                 </div>
               </div>
               <div className="column is-6">
@@ -84,6 +84,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <SubscribeForm />
       </div>
     </main >
   )
