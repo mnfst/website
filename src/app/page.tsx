@@ -61,7 +61,7 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="my-8">
+        <div className="section">
           <div className="container">
             <div className="columns">
               <div className="column is-6">
@@ -79,7 +79,7 @@ export default function Home() {
                   <InstallCLI />
                 </div>
               </div>
-              <div className="column is-6">
+              <div className="column is-6-tablet is-5-desktop is-offset-0-tablet is-offset-1-desktop">
                 <div className="content">
                   <LiveCodeHero />
                 </div>

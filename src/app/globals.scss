@@ -256,13 +256,14 @@ pre {
     }
 }
 
-.wwt {
-    mix-blend-mode: luminosity;
-    white-space: nowrap;
+
+.install-wrap {
+    border: 2px solid $black;
 }
 
 .install-code {
     white-space: nowrap;
+    border-right: 2px solid $black;
 }
 
 .has-icon-left {
@@ -282,6 +283,10 @@ pre {
         position: relative;
         top: -2px;
     }
+}
+
+.is-rounded {
+    border-radius: utilities.$radius;
 }
 
 .yaml-code {
