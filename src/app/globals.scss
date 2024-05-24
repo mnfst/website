@@ -1,3 +1,30 @@
+$black: #161617 !default;
+$darkness: #22110C !default; // Some titles
+$black-bis: #0d0e0e !default;
+$dark: #1a1a1c !default;
+$black-ter: #26282a !default;
+$grey-darker: #404046 !default;
+$grey-dark: #555769 !default;
+$grey: #7e7e7e !default;
+$grey-light: #a0a0a0 !default;
+$grey-lighter: #ededed !default;
+$light: #f1f3f5 !default;
+$white-ter: #f8f9fa !default;
+$white-bis: #fbfcfd !default;
+$light-bis: #F1F1F1 !default; // Sheet
+$white: #fff !default;
+
+$danger: #FF5E5B !default;
+$success: #2BE1B7 !default;
+$info: #4CC9F0 !default;
+$warning: #F2C79C !default;
+$link: #2430F0 !default;
+$primary: #7209B7 !default;
+$size-8: 0.75rem !default;
+$navbar-item-hover-background-color: transparent !default;
+$input-background-color: $white-ter !default;
+$input-border-color: $grey-light !default;
+
 @use "bulma/sass/utilities" with ($size-1: 5.61rem,
     $size-2: 4.209rem,
     $size-3: 3.157rem,
@@ -5,51 +32,25 @@
     $size-5: 1.777rem,
     $size-6: 1.333rem,
     $size-7: 1rem,
-    $size-8: 0.75rem,
+
     $family-sans-serif: '"Inter", sans-serif',
     $weight-medium: 600,
     $border: $grey-lighter,
-    $black: #161617,
-    $darkness: #22110C, // Some titles
-    $black-bis: #0d0e0e,
-    $dark: #1a1a1c,
-    $black-ter: #26282a,
-    $grey-darker: #404046,
-    $grey-dark: #555769,
-    $grey: #7e7e7e,
-    $grey-light: #a0a0a0,
-    $grey-lighter: #ededed,
-    $light: #f1f3f5,
-    $white-ter: #f8f9fa,
-    $white-bis: #fbfcfd,
-    $light-bis: #F1F1F1, // Sheet
-    $white: #fff,
 
-    $danger: #FF5E5B,
-    $success: #2BE1B7,
-    $info: #4CC9F0,
-    $warning: #F2C79C,
-    $link: #2430F0,
-    $primary: #7209B7,
 );
 
 @use "bulma/sass/utilities/mixins";
 @use "bulma/sass/utilities/functions";
 @use "bulma/sass/utilities/extends";
-@use "bulma/sass/helpers" with ($title-weight: 900,
-    $content-heading-weight: 900,
-    $body-background-color: $white-ter);
+@use "bulma/sass/helpers";
 
-@use "bulma/sass/components" with ($navbar-item-hover-background-color: transparent,
-    $navbar-height: 6.4rem,
+@use "bulma/sass/components" with ($navbar-height: 6.4rem,
 );
-@use "bulma/sass/form" with ($input-background-color: $white-ter,
-    $input-radius: 100px,
-    $input-border-color: $grey-light,
+@use "bulma/sass/form" with ($input-radius: 100px,
 );
-
-@forward "bulma/sass/base";
-@forward "bulma/sass/elements";
+@use "bulma/sass/base" with ($body-background-color: $white-ter);
+@use "bulma/sass/elements" with ($title-weight: 900, $content-heading-weight: 900,
+);
 @forward "bulma/sass/grid";
 @forward "bulma/sass/layout";
 @forward "bulma/sass/themes";
