@@ -24,6 +24,7 @@ $size-8: 0.75rem !default;
 $navbar-item-hover-background-color: transparent !default;
 $input-background-color: $white-ter !default;
 $input-border-color: $grey-light !default;
+$family-code: "Fira Code", "SF Mono", "Roboto Mono", "Source Code Pro", "Ubuntu Mono", monospace !default;
 
 @use "bulma/sass/utilities" with ($size-1: 5.61rem,
     $size-2: 4.209rem,
@@ -94,7 +95,7 @@ input[type="email"] {
 }
 
 body {
-    background-image: url('./../assets/images/bg-grid.svg');
+    background-image: url('./assets/images/bg-grid.svg');
     background-repeat: repeat;
 }
 
@@ -107,4 +108,88 @@ body {
 
 .navbar.has-background-transparent {
     background-color: transparent;
+}
+
+
+// tpyewriter
+
+
+.box {
+    --code-color: #b3bbc7;
+    --sidebar-width: 40px;
+    --sidebar-padding: 10px;
+    --header-padding: 10px 10px;
+
+    &--code {
+        width: 100%;
+        background-color: $black-ter;
+        color: var(--code-color);
+        text-align: left;
+
+        &__head {
+            padding: var(--header-padding);
+        }
+
+        &__sidebar {
+            width: var(--sidebar-width);
+            padding-right: var(--sidebar-padding);
+            line-height: 1.589;
+            color: $grey;
+        }
+
+        &__body {
+            pre {
+                color: var(--code-color);
+            }
+        }
+
+        &__content {
+            padding-left: var(--sidebar-padding);
+
+        }
+    }
+}
+
+pre {
+    padding: 0;
+}
+
+#typewriter {
+    font-family: $family-code;
+
+    &:after {
+        content: '|';
+        color: $white;
+        animation: blink 500ms linear infinite alternate;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

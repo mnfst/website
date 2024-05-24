@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
               <div className="navbar-brand">
                 <a className="navbar-item">
                   <Image
-                    src="/logo-transparent.svg"
+                    src="/logo.svg"
                     width={180}
                     height={52}
                     alt="logo of manifest"
@@ -61,107 +62,23 @@ export default function Home() {
         </div>
         <div className="my-8">
           <div className="container">
-            <div className="grid">
-              <div className="cell">Cell 1</div>
-              <div className="cell">Cell 2</div>
-            </div>
             <div className="columns">
-              <div className="column is-10-tablet is-8-widescreen is-offset-1-tablet is-offset-2-widescreen">
+              <div className="column is-6">
                 <div className="content">
-                  <h1 className="title is-3">
+                  <h1 className="title is-3 mb-5">
                     Building{' '}
                     <span className="title-gradient">the simplest backend</span>{' '}
                     in the world
                   </h1>
 
-                  <h2 className="title is-4">There are no “easy backends”</h2>
-
-                  <p>
-                    Let's imagine that you have a web app, built with React or
-                    something similar, and you need to implement a simple
-                    backend feature to make it less static.
-                  </p>
-                  <p>
-                    How would you do it ? A quick internet search and you
-                    suddenly need to learn about different databases, runtimes,
-                    infrastructure and so on.. The amount of skills and energy
-                    needed for a simple backend implementation is ridiculously
-                    high.
-                  </p>
-                  <p>
-                    If you ask that question to 10 backend developers, they will
-                    probably come up with 10 different stacks. Why ? Because
-                    there is no straightforward way to create a backend.
-                  </p>
-
-                  <h2 className="title is-4">
-                    Aren't no-code tools the solution to simplify backends ?
-                  </h2>
-
-                  <p>
-                    No-code tools are great for people that do not know how to
-                    code.
-                  </p>
-                  <p>
-                    What is the added value when you can do it faster by coding
-                    ? Not that much. Moreover all of those solutions generate an
-                    awful code that is hard to validate and maintain, especially
-                    when working with a team.
-                  </p>
-
-                  <h2 className="title is-4">
-                    Our journey to rethink the backend
-                  </h2>
-                  <p>
-                    We strongly think that the backend can be simpler and more
-                    inclusive. We also think that this can be done without a
-                    perceptible performance drop, and more importantly, without
-                    trading off our love for coding properly.
-                  </p>
-
-                  <p>Here are some statements that we believe in:</p>
-
-                  <h3 className="title is-6">Simple code over no code</h3>
-                  <p>
-                    We are looking for the simplest and more minimalist syntax
-                    possible. We do not want to trade off professionalism for
-                    simplicity.
-                  </p>
-
-                  <h3 className="title is-6">Inclusive rather than powerful</h3>
-                  <p>
-                    Making a backend easy to learn and use is the key. A perfect
-                    backend should be appealing even for frontend developers
-                    with no backend experience.
-                  </p>
-
-                  <h3 className="title is-6">Cloud-based equals lock-in</h3>
-                  <p>
-                    Even if Open Source, cloud-based apps revoke your ownership
-                    and impose vendor lock-in by design. A truly free tool
-                    should be made for your machine first.
-                  </p>
-
-                  <h2 className="title is-4">Our roadmap</h2>
-
-                  <p>
-                    ✅ <strong>Q4 2023:</strong> Identification of the problem
-                  </p>
-                  <p>
-                    ✅ <strong>Q2 2024:</strong> Poc launched
-                  </p>
-                  <p>
-                    🔲 <strong>Q3 2024:</strong> MVP launch
-                  </p>
-                  <p>
-                    🔲 <strong>Q4 2024:</strong> Product improvements based on
-                    feedback from developers
-                  </p>
-                  <p>
-                    🔲 <strong>Q1 2025:</strong> Cloud service launch
-                  </p>
+                  <p className="subtitle">Manifest is the simplest Backend-as-a-Service for rapid web application development</p>
 
                   <SubscribeForm />
+                </div>
+              </div>
+              <div className="column is-6">
+                <div className="content">
+                  <LiveCodeHero />
                 </div>
               </div>
             </div>
