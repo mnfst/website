@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import './LiveCodeHero.scss'
 
 const LiveCodeHero: React.FC = () => {
     return (
