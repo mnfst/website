@@ -26,6 +26,7 @@ $input-background-color: $white-ter !default;
 $input-border-color: $grey-light !default;
 $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
     'Ubuntu Mono', monospace !default;
+$handwriting: "Permanent Marker", cursive !default;
 
 @use 'bulma/sass/utilities' with ($size-1: 5.61rem,
     $size-2: 4.209rem,
@@ -52,6 +53,9 @@ $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
 @forward 'bulma/sass/grid';
 @forward 'bulma/sass/layout';
 @forward 'bulma/sass/themes';
+
+@import 'lineicons/web-font/lineicons.css';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=SPermanent+Marker&display=swap');
 
 .navbar-item img {
     max-height: 52px;
@@ -178,24 +182,29 @@ pre {
 .button-copy,
 .is-copied {
     display: inline-block;
-    min-width: 81px;
+    min-width: 56px;
     white-space: nowrap;
 }
 
 .slideInUp {
     -webkit-animation-name: slideInUp;
     animation-name: slideInUp;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
 @-webkit-keyframes slideInUp {
     0% {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
+        -webkit-transform: translateY(33%);
+        transform: translateY(33%);
         opacity: 0;
+    }
+
+    67% {
+        -webkit-transform: translateY(-10%);
+        transform: translateY(-10%);
     }
 
     100% {
@@ -207,9 +216,14 @@ pre {
 
 @keyframes slideInUp {
     0% {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
+        -webkit-transform: translateY(33%);
+        transform: translateY(33%);
         opacity: 0;
+    }
+
+    67% {
+        -webkit-transform: translateY(-10%);
+        transform: translateY(-10%);
     }
 
     100% {
@@ -259,6 +273,7 @@ pre {
 
 .install-wrap {
     border: 2px solid $black;
+    font-family: $family-code;
 }
 
 .install-code {
@@ -300,4 +315,10 @@ pre {
     border-radius: 8px;
     padding: 19px;
     box-sizing: border-box;
+}
+
+.info-copy {
+    font-family: $handwriting;
+    color: $link;
+    @extend .slideInUp
 }

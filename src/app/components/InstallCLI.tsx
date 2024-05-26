@@ -14,7 +14,7 @@ const InstallCLI: React.FC = () => {
 
     return (
         <div className="is-flex is-justify-content-flex-start">
-            <div className="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start npx-wrapper">
+            <div className="is-flex is-align-items-center is-justify-content-flex-start npx-wrapper">
                 <div className="is-rounded is-clipped is-flex is-full-height is-align-items-stretch p-0 has-background-dark has-text-light has-shadow-success install-wrap">
                     <span className="px-5 py-4 install-code">{command}</span>
                     <a
@@ -22,15 +22,14 @@ const InstallCLI: React.FC = () => {
                         onClick={handleCopy}
                     >
                         <span className="icon">
-                            <i className="icon icon-copy"></i>
+                            <i className="lni lni-files"></i>
                         </span>
-                        <span className="is-inline-flex is-flex-direction-column is-relative is-hidden-touch has-text-centered">
-                            <span className="button-copy">
-                                {isCopied ? 'Copied !' : 'Copy'}
-                            </span>
-                        </span>
+
                     </a>
                 </div>
+                {isCopied && (
+                    <span className="ml-4 info-copy is-size-6">Copied!</span>
+                )}
             </div>
         </div>
     )
