@@ -61,18 +61,18 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="section">
-          <div className="container">
-            <div className="columns">
+        <div >
+          <div className="container ">
+            <div className="columns is-multiline">
               <div className="column is-6">
-                <div className="content">
+                <div className="content has-background-warning-light ">
                   <h1 className="title is-3 mb-5">
                     Building{' '}
                     <span className="title-gradient">the simplest backend</span>{' '}
                     in the world
                   </h1>
 
-                  <p className="content is-normal">
+                  <p className="content has-background-warning-light  is-normal">
                     Manifest is the simplest Backend-as-a-Service for rapid web
                     application development
                   </p>
@@ -80,14 +80,17 @@ export default function Home() {
                 </div>
               </div>
               <div className="column is-6-tablet is-5-desktop is-offset-0-tablet is-offset-1-desktop">
-                <div className="content">
+                <div className="content has-background-warning-light ">
                   <LiveCodeHero />
                 </div>
+              </div>
+              <div className="column is-12">
+                <SubscribeForm />
               </div>
             </div>
           </div>
         </div>
-        <SubscribeForm />
+
       </div>
     </main>
   )
