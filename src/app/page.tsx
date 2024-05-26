@@ -80,12 +80,12 @@ export default function Home() {
                   <InstallCLI />
                 </div>
               </div>
-              <div className="column is-6-tablet is-5-desktop is-offset-0-tablet is-offset-1-desktop">
+              <div className="column is-6">
                 <div className="content  ">
                   <LiveCodeHero />
                 </div>
               </div>
-              <div className="column is-12">
+              <div className="column is-12 my-4">
                 <div className="card has-background-glass">
                   <div className="card-content has-text-centered card-content--how-it-works">
                     <div className="content">
@@ -175,6 +175,12 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
+                <div className="content has-text-centered">
+                  <h2 className="title is-2">Manifest is currently in the PoC stage. </h2>
+                  <p>   We aim to validate a new approach with this PoC. Unlike no-code/low-code solutions, we want developers to keep the joy of coding full backends easily, without sacrificing their preferred workflow.</p>
                 </div>
               </div>
               <div className="column is-12">
