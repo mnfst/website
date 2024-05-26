@@ -29,12 +29,12 @@ $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
 $handwriting: "Permanent Marker", cursive !default;
 $column-gap: 0.75rem !default;
 
-@use 'bulma/sass/utilities' with ($size-1: 5.61rem,
-    $size-2: 4.209rem,
-    $size-3: 3.157rem,
-    $size-4: 2.369rem,
-    $size-5: 1.777rem,
-    $size-6: 1.333rem,
+@use 'bulma/sass/utilities' with ($size-1: 2.986rem,
+    $size-2: 2.488rem,
+    $size-3: 2.074rem,
+    $size-4: 1.728rem,
+    $size-5: 1.44rem,
+    $size-6: 1.2rem,
     $size-7: 1rem,
 
     $family-sans-serif: '"Inter", sans-serif',
@@ -822,7 +822,7 @@ input[type='email'] {
 }
 
 .container:not(.is-header) {
-    @include mixins.mobile {
+    @include mixins.touch {
         max-width: calc(100% - 1.5rem);
     }
 }
@@ -889,6 +889,10 @@ pre {
 
 .npx-wrapper {
     position: relative;
+
+    @include mixins.mobile {
+        width: 100%;
+    }
 
     .is-copied {
         position: absolute;
@@ -1003,11 +1007,19 @@ pre {
 .install-wrap {
     border: 2px solid $black;
     font-family: $family-code;
+
+    @include mixins.mobile {
+        width: 100%;
+    }
 }
 
 .install-code {
     white-space: nowrap;
     border-right: 2px solid $black;
+
+    @include mixins.mobile {
+        width: 100%;
+    }
 }
 
 .has-icon-left {
@@ -1050,4 +1062,47 @@ pre {
     font-family: $handwriting;
     color: $link;
     @extend .slideInUp
+}
+
+.backend-list {
+    &__item {
+        gap: 5px;
+        padding: 16px 32px;
+
+        @include mixins.tablet {
+            border: 1px solid $grey-lighter;
+            background-color: $light;
+        }
+
+        &:first-child {
+            @include mixins.tablet {
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+            }
+        }
+
+        &:last-child {
+            @include mixins.tablet {
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+            }
+        }
+    }
+
+    @include mixins.mobile {
+        flex-direction: column;
+    }
+}
+
+.card-content--how-it-works {
+    @include mixins.desktop {
+        padding: 3rem;
+    }
+}
+
+.stack-list span:first-child {
+    @include mixins.mobile {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
 }
