@@ -39,23 +39,13 @@ export default function Home() {
                     Discord
                   </a>
                   <a
-                    className="navbar-item is-hidden"
+                    className="navbar-item"
                     href="https://github.com/casejs/CASE"
                     target="_blank"
                   >
                     Github
                   </a>
-                  <div className="navbar-item is-hidden">
-                    <div className="buttons">
-                      <a
-                        className="button is-small is-dark"
-                        href="https://github.com/casejs/CASE"
-                        target="_blank"
-                      >
-                        <strong>Github</strong>
-                      </a>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </nav>
@@ -63,9 +53,9 @@ export default function Home() {
         </div>
         <div className="my-6">
 
-          <div className="container">
+          <div className="container zi-1">
             <div className="columns is-multiline">
-              <div className="column is-6">
+              <div className="column is-5">
                 <div className="content is-medium  ">
 
                   <h1 className="title is-1 mb-5">
@@ -80,7 +70,7 @@ export default function Home() {
                   <InstallCLI />
                 </div>
               </div>
-              <div className="column is-6">
+              <div className="column is-6 is-offset-1">
                 <div className="content is-normal  ">
                   <LiveCodeHero />
                 </div>
@@ -180,7 +170,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
+              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd section--journey">
+                <div className="bg-shape"></div>
                 <div className="content is-normal has-text-left">
                   <h2 className="title is-2">Our journey to rethink the backend</h2>
                   <p>If you ask 10 backend developers what you should use for your app’s backend, they will probably come up with 10 different stacks. Why? Because there is no straightforward way to create a backend. One more step and you suddenly get overwhelmed with databases, runtimes, containers, infrastructure and so on.</p>
