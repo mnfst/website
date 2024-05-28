@@ -208,15 +208,8 @@ export default function Home() {
                     </div>
                     <div className="message-body">
                       We aim to validate this new approach for the backend,
-                      thanks to your feedback. Give it a try and{' '}
-                      <a
-                        className="has-text-weight-bold"
-                        href="https://forms.gle/yXLEKQGA4vdAAvGt9"
-                        target="_blank"
-                      >
-                        let us know what you think
-                      </a>{' '}
-                      filling this easy survey.
+                      thanks to your feedback. Give it a try and let us know what you think via our poll.
+
                     </div>
                   </article>
                 </div>
