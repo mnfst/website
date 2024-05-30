@@ -826,9 +826,15 @@ input[type='email'] {
     }
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     background-image: url('/assets/images/bg-grid.svg');
     background-repeat: repeat;
+
 }
 
 .has-background-glass {
@@ -1026,6 +1032,15 @@ button,
             height: 100%;
             opacity: .19;
         }
+
+        .field.has-addons .control:last-child:not(:only-child) & {
+            z-index: 4;
+
+            &:after {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
     }
 }
 
@@ -1187,9 +1202,17 @@ button,
     border-top: 1px dashed rgba($white, .2);
 }
 
-.navbar-brand img {
-    position: relative;
-    top: -5px;
+.navbar-brand {
+
+    @include mixins.touch {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img {
+        position: relative;
+        top: -5px;
+    }
 }
 
 .box-wrapper {

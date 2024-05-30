@@ -17,13 +17,32 @@ export default function Home() {
               <div className="navbar-brand">
                 <a className="navbar-item">
                   <Image
-                    src="/assets/images/logo.svg"
-                    width={180}
+                    src="/assets/images/logo-poc.svg"
+                    width={254}
                     height={52}
                     alt="logo of manifest"
                     loading="lazy"
                   />
                 </a>
+                <div className="is-flex is-hidden-desktop">
+                  <a className="navbar-item px-5" href="/docs">
+                    <i className="lni lni-empty-file is-size-6"></i>
+                  </a>
+                  <a
+                    className="navbar-item px-5"
+                    href="https://discord.gg/FepAked3W7"
+                    target="_blank"
+                  >
+                    <i className="lni lni-discord-alt  is-size-6"></i>
+                  </a>
+                  <a
+                    className="navbar-item px-5"
+                    href="https://github.com/mnfst/manifest"
+                    target="_blank"
+                  >
+                    <i className="lni lni-github-original is-size-6"></i>
+                  </a>
+                </div>
               </div>
 
               <div className="navbar-menu has-text-weight-bold">
@@ -271,7 +290,7 @@ export default function Home() {
                       <li>
                         <span className="icon-text">
                           <span className="icon">
-                            <i className="lni lni-discord is-size-6"></i>
+                            <i className="lni lni-discord-alt is-size-6"></i>
                           </span>
                           <a
                             href="https://discord.gg/FepAked3W7"
