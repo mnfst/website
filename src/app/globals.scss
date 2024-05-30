@@ -832,8 +832,8 @@ body {
 }
 
 .has-background-glass {
-    background: rgba($white, 0.62);
-    background: linear-gradient(45deg, rgba($white, 0.62) 0%, rgba($white-ter, 0.62) 100%);
+    background: rgba($white, 0.42);
+    background: linear-gradient(45deg, rgba($white, 0.42) 0%, rgba($white-ter, 0.42) 100%);
 
     box-shadow: 0 1px 3px 0px rgba($dark, 0.1);
     -webkit-backdrop-filter: blur(3px);
@@ -1004,10 +1004,36 @@ pre {
     }
 }
 
+button,
+.button {
+    outline: none;
+
+    @each $name, $pair in utilities.$colors {
+        $color: nth($pair, 1);
+
+        &.is-#{$name} {
+            box-shadow: 0 0 #0000, 0 0 #0000, 0px 0.75px 0px 0px hsla(0, 0%, 100%, .2) inset, 0px 1px 2px 0px rgba($darkness, .4), 0px 0px 0px 1px rgba($color, 1);
+        }
+
+        &:after {
+            background-image: linear-gradient(180deg, $white, rgba($white, 0));
+            content: '';
+            position: absolute;
+            border-radius: utilities.$radius;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .19;
+        }
+    }
+}
 
 .install-wrap {
     border: 2px solid $black;
     font-family: $family-code;
+
+
 
     @include mixins.mobile {
         width: 100%;
@@ -1040,6 +1066,10 @@ pre {
         position: relative;
         top: -2px;
     }
+}
+
+.card {
+    box-shadow: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset, 0px 0px 0px 1.5px rgba($grey-light, .2) inset, 0px 0px 0px 1px rgba($dark, .08), 0px 16px 32px 0px rgba($grey-dark, .08), 0px 2px 24px 0px rgba($darkness, .06);
 }
 
 .is-rounded {
