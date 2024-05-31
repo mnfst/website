@@ -786,7 +786,13 @@ $column-gap: 0.75rem !default;
 
 
 .navbar-item img {
-    max-height: 52px;
+    @include mixins.tablet {
+        max-height: 52px;
+    }
+
+    @include mixins.mobile {
+        max-height: 34px;
+    }
 }
 
 .my-8 {
@@ -828,7 +834,7 @@ input[type='email'] {
 
 html,
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 body {
@@ -1092,14 +1098,7 @@ button,
 }
 
 .yaml-code {
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
-        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
-        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
-        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
-        linear-gradient(263deg, #2430f0 0%, #2be1b7 21%, #942ffa 42%, #ff006e 66%, #ffd037 84%, #48abe0 100%);
-    border-radius: 8px;
+    border-radius: utilities.$radius;
     padding: 19px;
     box-sizing: border-box;
 }
@@ -1221,13 +1220,30 @@ button,
     }
 }
 
+.px-5-tablet {
+    @include mixins.tablet {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
 .box-wrapper {
     position: relative;
     background-color: $white;
+    border-radius: utilities.$radius;
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+        linear-gradient(263deg, #2430f0 0%, #2be1b7 21%, #942ffa 42%, #ff006e 66%, #ffd037 84%, #48abe0 100%);
+
 
 
     img {
         display: block;
+        min-height: 100%;
     }
 
     .bg-blurred {
