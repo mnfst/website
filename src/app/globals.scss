@@ -818,7 +818,7 @@ input[type='email'] {
 }
 
 .title-gradient {
-    background: -webkit-linear-gradient(0deg,
+    background: linear-gradient(to right,
         #{utilities.$link} 0%,
         #{utilities.$success} 50%,
         #{utilities.$warning} 100%);
