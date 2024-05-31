@@ -1223,6 +1223,12 @@ button,
 
 .box-wrapper {
     position: relative;
+    background-color: $white;
+
+
+    img {
+        display: block;
+    }
 
     .bg-blurred {
         position: absolute;
@@ -1241,6 +1247,32 @@ button,
         animation-fill-mode: both;
         -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
+    }
+
+    @include mixins.mobile {
+        min-height: calc((100vw - 39px) * 0.8729697);
+    }
+
+    @include mixins.tablet {
+        min-height: calc((50vw - 29px) * 0.8729697);
+    }
+
+    @include mixins.desktop {
+        $desktop-container: calc(#{utilities.$desktop - 2 * utilities.$gap});
+        $desktop-column: calc(#{$desktop-container} - 24px);
+        min-height: calc($desktop-column * .5 * 0.8729697);
+    }
+
+    @include mixins.widescreen {
+        $widescreen-container: calc(#{utilities.$widescreen - 2 * utilities.$gap});
+        $widescreen-column: calc(#{$widescreen-container} - 24px);
+        min-height: calc($widescreen-column * .5 * 0.8729697);
+    }
+
+    @include mixins.fullhd {
+        $fullhd-container: calc(#{utilities.$fullhd - 2 * utilities.$gap});
+        $fullhd-column: calc(#{$fullhd-container} - 24px);
+        min-height: calc($fullhd-column * .5 * 0.8729697);
     }
 }
 
