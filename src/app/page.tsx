@@ -16,27 +16,26 @@ export default function Home() {
             >
               <div className="navbar-brand">
                 <a className="navbar-item">
-                  <Image
+                  <img
                     src="/assets/images/logo-poc.svg"
-                    width={254}
-                    height={52}
                     alt="logo of manifest"
                     loading="lazy"
+                    className="mx-2"
                   />
                 </a>
                 <div className="is-flex is-hidden-desktop">
-                  <a className="navbar-item px-5" href="/docs">
+                  <a className="navbar-item px-5-tablet" href="/docs">
                     <i className="lni lni-empty-file is-size-6"></i>
                   </a>
                   <a
-                    className="navbar-item px-5"
+                    className="navbar-item px-5-tablet"
                     href="https://discord.gg/FepAked3W7"
                     target="_blank"
                   >
                     <i className="lni lni-discord-alt  is-size-6"></i>
                   </a>
                   <a
-                    className="navbar-item px-5"
+                    className="navbar-item px-5-tablet"
                     href="https://github.com/mnfst/manifest"
                     target="_blank"
                   >
@@ -72,7 +71,7 @@ export default function Home() {
         <div className="my-6">
           <div className="container zi-1">
             <div className="columns is-multiline">
-              <div className="column is-5">
+              <div className="column is-6-tablet is-5-desktop">
                 <div className="content is-medium  ">
                   <h1 className="title is-1 mb-5">
                     The
@@ -90,7 +89,7 @@ export default function Home() {
                   <InstallCLI />
                 </div>
               </div>
-              <div className="column is-6 is-offset-1">
+              <div className="column is-6 is-offset-0-tablet is-offset-1-desktop">
                 <div className="content is-normal  ">
                   <LiveCodeHero />
                 </div>
