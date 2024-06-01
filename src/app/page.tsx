@@ -100,7 +100,7 @@ export default function Home() {
                     <div className="content is-normal has-text-centered">
                       <h2 className="title is-2">
                         Define your data structure, get a business-ready backend
-                        will essential features:
+                        with essential features:
                       </h2>
                       <div className="backend-list is-boredered is-rounded is-flex is-align-items-center is-justify-content-center">
                         <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
@@ -226,8 +226,8 @@ export default function Home() {
                     </div>
                     <div className="message-body">
                       We aim to validate this new approach for the backend,
-                      thanks to your feedback. Give it a try and let us know what you think via our poll.
-
+                      thanks to your feedback. Give it a try and let us know
+                      what you think via our poll.
                     </div>
                   </article>
                 </div>
