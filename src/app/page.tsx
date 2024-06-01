@@ -1,166 +1,395 @@
 import Image from 'next/image'
+import InstallCLI from './components/InstallCLI'
+import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
 export default function Home() {
   return (
     <main>
       <div>
-        <div className="container is-header">
-          <nav
-            className="navbar has-background-white-ter"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <a className="navbar-item">
-                <Image
-                  src="/logo-transparent.svg"
-                  width={180}
-                  height={52}
-                  alt="logo of manifest"
-                  loading="lazy"
-                />
-              </a>
-            </div>
+        <div className="has-background-glass">
+          <div className="container is-header">
+            <nav
+              className="navbar has-background-transparent"
+              role="navigation"
+              aria-label="main navigation"
+            >
+              <div className="navbar-brand">
+                <a className="navbar-item">
+                  <img
+                    src="/assets/images/logo-poc.svg"
+                    alt="logo of manifest"
+                    loading="lazy"
+                    className="mx-2"
+                  />
+                </a>
+                <div className="is-flex is-hidden-desktop">
+                  <a className="navbar-item px-5-tablet" href="/docs">
+                    <i className="lni lni-empty-file is-size-6"></i>
+                  </a>
+                  <a
+                    className="navbar-item px-5-tablet"
+                    href="https://discord.gg/FepAked3W7"
+                    target="_blank"
+                  >
+                    <i className="lni lni-discord-alt  is-size-6"></i>
+                  </a>
+                  <a
+                    className="navbar-item px-5-tablet"
+                    href="https://github.com/mnfst/manifest"
+                    target="_blank"
+                  >
+                    <i className="lni lni-github-original is-size-6"></i>
+                  </a>
+                </div>
+              </div>
 
-            <div className="navbar-menu has-text-weight-bold">
-              <div className="navbar-end">
-                <a className="navbar-item" href="/docs">
-                  Docs
-                </a>
-                <a
-                  className="navbar-item"
-                  href="https://discord.gg/FepAked3W7"
-                  target="_blank"
-                >
-                  Discord
-                </a>
-                <a
-                  className="navbar-item is-hidden"
-                  href="https://github.com/casejs/CASE"
-                  target="_blank"
-                >
-                  Github
-                </a>
-                <div className="navbar-item is-hidden">
-                  <div className="buttons">
-                    <a
-                      className="button is-small is-dark"
-                      href="https://github.com/casejs/CASE"
-                      target="_blank"
-                    >
-                      <strong>Github</strong>
-                    </a>
+              <div className="navbar-menu has-text-weight-bold">
+                <div className="navbar-end">
+                  <a className="navbar-item" href="/docs">
+                    Docs
+                  </a>
+                  <a
+                    className="navbar-item"
+                    href="https://discord.gg/FepAked3W7"
+                    target="_blank"
+                  >
+                    Discord
+                  </a>
+                  <a
+                    className="navbar-item"
+                    href="https://github.com/mnfst/manifest"
+                    target="_blank"
+                  >
+                    Github
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div className="my-6">
+          <div className="container zi-1">
+            <div className="columns is-multiline">
+              <div className="column is-6-tablet is-5-desktop">
+                <div className="content is-medium  ">
+                  <h1 className="title is-1 mb-5">
+                    The
+                    <span className="title-gradient">
+                      {' '}
+                      simplest backend
+                    </span>{' '}
+                    you will find
+                  </h1>
+
+                  <p className="content is-normal   is-normal">
+                    Manifest is a complete backend that fits into one file of
+                    simple code.
+                  </p>
+                  <InstallCLI />
+                </div>
+              </div>
+              <div className="column is-6 is-offset-0-tablet is-offset-1-desktop">
+                <div className="content is-normal  ">
+                  <LiveCodeHero />
+                </div>
+              </div>
+              <div className="column is-12 my-4">
+                <div className="card has-background-glass">
+                  <div className="card-content is-normal has-text-centered card-content--how-it-works">
+                    <div className="content is-normal has-text-centered">
+                      <h2 className="title is-2">
+                        Define your data structure, get a business-ready backend
+                        will essential features:
+                      </h2>
+                      <div className="backend-list is-boredered is-rounded is-flex is-align-items-center is-justify-content-center">
+                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                          <span className="icon  backend-list__icon">
+                            <i className="lni lni-checkmark has-text-success"></i>
+                          </span>
+                          <span>Database</span>
+                        </span>
+
+                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                          <span className="icon  backend-list__icon">
+                            <i className="lni lni-checkmark has-text-success"></i>
+                          </span>
+                          <span>Admin panel</span>
+                        </span>
+                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                          <span className="icon  backend-list__icon">
+                            <i className="lni lni-checkmark has-text-success"></i>
+                          </span>
+                          <span>REST API</span>
+                        </span>
+                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                          <span className="icon  backend-list__icon">
+                            <i className="lni lni-checkmark has-text-success"></i>
+                          </span>
+                          <span>Javascript SDK</span>
+                        </span>
+                      </div>
+
+                      <div className="stack-list is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap is-flex-direction-column">
+                        <span>
+                          Plug-and-play with top frontend stacks through SDK or
+                          classic REST API:{' '}
+                        </span>
+                        <div className="stack-list is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap mt-4">
+                          <span title="See how to plug CASE with React">
+                            <img
+                              src="./assets/images/react.svg"
+                              alt="React logo"
+                              width="40px"
+                              className="mx-2"
+                            />
+                          </span>
+                          <span title="See how to plug CASE with Vue">
+                            <img
+                              src="./assets/images/vue.svg"
+                              alt="Vue logo"
+                              width="40px"
+                              className="mx-2"
+                            />
+                          </span>
+                          <span title="See how to plug CASE with Angular">
+                            <img
+                              src="./assets/images/angular.svg"
+                              alt="Angular logo"
+                              width="40px"
+                              className="mx-2"
+                            />
+                          </span>
+                          <span title="See how to plug CASE with Svelte">
+                            <img
+                              src="./assets/images/svelte.svg"
+                              alt="Svelte logo"
+                              width="40px"
+                              className="mx-2"
+                            />
+                          </span>
+                          <img
+                            src="./assets/images/nuxt.svg"
+                            alt="Nuxt logo"
+                            width="40px"
+                            className="mx-2"
+                          />
+                          <img
+                            src="./assets/images/nextjs.svg"
+                            alt="NextJS logo"
+                            width="70px"
+                            className="mx-2"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </nav>
-        </div>
-        <div className="my-8">
-          <div className="container">
-            <div className="columns">
-              <div className="column is-10-tablet is-8-widescreen is-offset-1-tablet is-offset-2-widescreen">
-                <div className="content">
-                  <h1 className="title is-3">
-                    Building{' '}
-                    <span className="title-gradient">the simplest backend</span>{' '}
-                    in the world
-                  </h1>
-
-                  <h2 className="title is-4">There are no “easy backends”</h2>
-
-                  <p>
-                    Let's imagine that you have a web app, built with React or
-                    something similar, and you need to implement a simple
-                    backend feature to make it less static.
-                  </p>
-                  <p>
-                    How would you do it ? A quick internet search and you
-                    suddenly need to learn about different databases, runtimes,
-                    infrastructure and so on.. The amount of skills and energy
-                    needed for a simple backend implementation is ridiculously
-                    high.
-                  </p>
-                  <p>
-                    If you ask that question to 10 backend developers, they will
-                    probably come up with 10 different stacks. Why ? Because
-                    there is no straightforward way to create a backend.
-                  </p>
-
-                  <h2 className="title is-4">
-                    Aren't no-code tools the solution to simplify backends ?
-                  </h2>
-
-                  <p>
-                    No-code tools are great for people that do not know how to
-                    code.
-                  </p>
-                  <p>
-                    What is the added value when you can do it faster by coding
-                    ? Not that much. Moreover all of those solutions generate an
-                    awful code that is hard to validate and maintain, especially
-                    when working with a team.
-                  </p>
-
-                  <h2 className="title is-4">
+              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd section--journey">
+                <div className="bg-shape"></div>
+                <div className="content is-normal has-text-left">
+                  <h2 className="title is-2">
                     Our journey to rethink the backend
                   </h2>
                   <p>
-                    We strongly think that the backend can be simpler and more
-                    inclusive. We also think that this can be done without a
-                    perceptible performance drop, and more importantly, without
-                    trading off our love for coding properly.
+                    If you ask 10 backend developers what you should use for
+                    your app’s backend, they will probably come up with 10
+                    different stacks. Why? Because there is no straightforward
+                    way to create a backend. One more step and you suddenly get
+                    overwhelmed with databases, runtimes, containers,
+                    infrastructure and so on.
                   </p>
 
-                  <p>Here are some statements that we believe in:</p>
-
-                  <h3 className="title is-6">Simple code over no code</h3>
                   <p>
-                    We are looking for the simplest and more minimalist syntax
-                    possible. We do not want to trade off professionalism for
-                    simplicity.
+                    Recently, we have seen cool Backend-as-a-Service products
+                    like Supabase or Appwrite gaining popularity as they offer a
+                    fast and reliable way to deploy backends. However, their
+                    no-code approach generates awful code difficult to follow,
+                    making apps less reliable. Moreover, using a UI is slower
+                    than coding, especially now that AI assistants are here to
+                    help you.
                   </p>
 
-                  <h3 className="title is-6">Inclusive rather than powerful</h3>
                   <p>
-                    Making a backend easy to learn and use is the key. A perfect
-                    backend should be appealing even for frontend developers
-                    with no backend experience.
+                    Finally, we strongly believe that we can eliminate the
+                    backend hassle without trading off our love for coding
+                    properly.
                   </p>
+                </div>
+              </div>
+              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd my-4">
+                <div className="content is-normal has-text-left">
+                  <article className="message is-info is-success is-bordered">
+                    <div className="message-header">
+                      <p>Manifest is currently a Proof-of-Concept (POC)</p>
+                    </div>
+                    <div className="message-body">
+                      We aim to validate this new approach for the backend,
+                      thanks to your feedback. Give it a try and let us know what you think via our poll.
 
-                  <h3 className="title is-6">Cloud-based equals lock-in</h3>
-                  <p>
-                    Even if Open Source, cloud-based apps revoke your ownership
-                    and impose vendor lock-in by design. A truly free tool
-                    should be made for your machine first.
-                  </p>
-
-                  <h2 className="title is-4">Our roadmap</h2>
-
-                  <p>
-                    ✅ <strong>Q4 2023:</strong> Identification of the problem
-                  </p>
-                  <p>
-                    ✅ <strong>Q2 2024:</strong> Poc launched
-                  </p>
-                  <p>
-                    🔲 <strong>Q3 2024:</strong> MVP launch
-                  </p>
-                  <p>
-                    🔲 <strong>Q4 2024:</strong> Product improvements based on
-                    feedback from developers
-                  </p>
-                  <p>
-                    🔲 <strong>Q1 2025:</strong> Cloud service launch
-                  </p>
-
-                  <SubscribeForm />
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
+                <div className="content is-normal has-text-left mb-4">
+                  <div className="content is-normal has-text-left">
+                    <h2 className="title is-2">Get your hands on!</h2>
+                    <ul>
+                      <li>
+                        <a href="/docs" target="_blank">
+                          Read the documentation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/mnfst/manifest"
+                          target="_blank"
+                        >
+                          Source code
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <footer className="footer has-background-black has-text-white pb-4">
+          <div className="container">
+            <div>
+              <div className="columns is-multiline">
+                <div className="column is-3">
+                  <div className="content">
+                    <p className="has-text-weight-bold is-size-6">Docs</p>
+                    <ul className="no-lst">
+                      <li>
+                        <a href="https://manifest.build/docs" target="_blank">
+                          Developer Docs
+                        </a>
+                      </li>
+                      <li>
+                        <span className="mr-2 has-text-grey">
+                          Contributor Docs
+                        </span>
+                        <span className="tag is-small is-dark">
+                          Coming soon
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="column is-3">
+                  <div className="content">
+                    <p className="has-text-weight-bold is-size-6">Community</p>
+                    <ul className="no-lst">
+                      <li>
+                        <span className="icon-text">
+                          <span className="icon">
+                            <i className="lni lni-discord-alt is-size-6"></i>
+                          </span>
+                          <a
+                            href="https://discord.gg/FepAked3W7"
+                            target="_blank"
+                          >
+                            {' '}
+                            Discord
+                          </a>
+                        </span>
+                      </li>
+                      <li>
+                        <span className="icon-text">
+                          <span className="icon">
+                            <i className="lni lni-comments-alt-2 is-size-6"></i>
+                          </span>
+                          <a
+                            href="https://github.com/mnfst/manifest/discussions"
+                            target="_blank"
+                          >
+                            Discussions
+                          </a>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="content">
+                    <p className="has-text-weight-bold is-size-6">More</p>
+                    <ul className="no-lst">
+                      <li>
+                        <span className="icon-text">
+                          <span className="icon">
+                            <i className="lni lni-github-original is-size-6"></i>
+                          </span>
+                          <a
+                            href="https://github.com/mnfst/manifest"
+                            target="_blank"
+                          >
+                            Github
+                          </a>
+                        </span>
+                      </li>
+                      <li>
+                        <span className="icon-text">
+                          <span className="icon">
+                            <i className="lni lni-heart-fill is-size-6"></i>
+                          </span>
+                          <a
+                            href="https://opencollective.com/casejs"
+                            target="_blank"
+                          >
+                            Support us
+                          </a>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="content">
+                    <p className="has-text-weight-bold is-size-6">Stay tuned</p>
+                    <p>
+                      We are building the simplest backend in the world. Do you
+                      want to embark on this adventure with us? Leave your email
+                      to stay in touch and start that journey with us.
+                    </p>
+                    <SubscribeForm />
+                  </div>
+                </div>
+                <div className="column is-12">
+                  <div className="separator"></div>
+                </div>
+                <div className="column is-6">
+                  <Image
+                    src="/assets/images/logo-light.svg"
+                    width={180}
+                    height={50}
+                    alt="logo of manifest"
+                    className="footer-logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="column is-6 has-text-right pt-5">
+                  <span>
+                    Source code licensed{' '}
+                    <a
+                      className="has-text-white is-underlined"
+                      href="https://opensource.org/license/mit"
+                      target="_blank"
+                    >
+                      MIT
+                    </a>
+                    .
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
   )

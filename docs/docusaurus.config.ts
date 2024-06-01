@@ -1,6 +1,6 @@
-import type * as Preset from '@docusaurus/preset-classic';
-import type { Config } from '@docusaurus/types';
-import { themes as prismThemes } from 'prism-react-renderer';
+import type * as Preset from '@docusaurus/preset-classic'
+import type { Config } from '@docusaurus/types'
+import { themes as prismThemes } from 'prism-react-renderer'
 
 const config: Config = {
   title: 'Manifest Docs',
@@ -40,15 +40,19 @@ const config: Config = {
 
           // Remove this to remove the "edit this page" links.
           editUrl: ({ versionDocsDirPath, docPath }) => {
-            const baseUrl = 'https://github.com/casejs/docs/blob/master/';
+            const baseUrl = 'https://github.com/casejs/docs/blob/master/'
             // Enlève 'content/' du chemin pour correspondre à la structure du repo GitHub
-            const newDocPath = docPath.replace(/^content\//, '');
-            return baseUrl + newDocPath;
-          },
+            const newDocPath = docPath.replace(/^content\//, '')
+            return baseUrl + newDocPath
+          }
         },
         blog: false,
         theme: {
           customCss: './src/css/custom.css'
+        },
+        gtag: {
+          trackingID: 'GTM-PDRQLHB',
+          anonymizeIP: true
         }
       } satisfies Preset.Options
     ]
@@ -57,6 +61,14 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    announcementBar: {
+      id: 'poc-banner',
+      content:
+        '🚀 Manifest is in PoC, and we need your feedback to validate this backend approach. Try it out and share your thoughts on our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a> or via our poll.',
+      backgroundColor: '#0a15b7',
+      textColor: '#fff',
+      isCloseable: false
+    },
     navbar: {
       logo: {
         alt: 'Manifest Logo',
@@ -65,7 +77,7 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://github.com/casejs/case',
+          href: 'https://github.com/mnfst/manifest',
           label: 'GitHub',
           position: 'right'
         }
@@ -82,8 +94,7 @@ const config: Config = {
               to: '/'
             },
             {
-              html: '<span>Contributor Docs <span class="badge badge--primary">Coming soon</span></span>',
-
+              html: '<span>Contributor Docs <span class="badge badge--primary">Coming soon</span></span>'
             }
           ]
         },
@@ -96,7 +107,7 @@ const config: Config = {
             },
             {
               label: 'Discussion',
-              href: 'https://github.com/casejs/CASE/discussions'
+              href: 'https://github.com/mnfst/manifest/discussions'
             }
           ]
         },
@@ -105,7 +116,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/casejs/CASE/'
+              href: 'https://github.com/mnfst/manifest/'
             },
             {
               label: 'manifest.build',
@@ -113,14 +124,13 @@ const config: Config = {
             }
           ]
         }
-      ],      
+      ]
     },
     docs: {
       sidebar: {
         hideable: true,
-        autoCollapseCategories: true,
-
-      },
+        autoCollapseCategories: true
+      }
     },
     prism: {
       theme: prismThemes.github,
@@ -130,4 +140,3 @@ const config: Config = {
 }
 
 export default config
-
