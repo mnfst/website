@@ -63,12 +63,12 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     metadata: [
       { name: 'og:image', content: '/img/og-image.png' },
-      { name: 'twitter:image', content: '/img/og-image.png' },
+      { name: 'twitter:image', content: '/img/og-image.png' }
     ],
     announcementBar: {
       id: 'poc-banner',
       content:
-        '🚀 Manifest is in PoC, and we need your feedback to validate this backend approach. Try it out and share your thoughts on our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a> or via our poll.',
+        '🚀 Manifest is in PoC, and we need your feedback to validate this backend approach. Try it out and share your thoughts on our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a>.',
       backgroundColor: '#0a15b7',
       textColor: '#fff',
       isCloseable: false
