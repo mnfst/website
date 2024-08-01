@@ -68,10 +68,10 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="my-6">
+        <div className="my-6 pt-3">
           <div className="container zi-1">
             <div className="columns is-multiline">
-              <div className="column is-6-tablet is-5-desktop">
+              <div className="column is-6-tablet">
                 <div className="content is-medium  ">
                   <h1 className="title is-1 mb-5">
                     The
@@ -81,18 +81,19 @@ export default function Home() {
                     </span>{' '}
                     you will find
                   </h1>
-
-                  <p className="content is-normal   is-normal">
+                </div>
+              </div>
+              <div className="column is-5-tablet is-offset-1-tablet">
+                <div className="content is-normal  mb-6 pb-2">
+                  <p>
                     Manifest is a complete backend that fits into one file of
                     simple code.
                   </p>
                   <InstallCLI />
                 </div>
               </div>
-              <div className="column is-6 is-offset-0-tablet is-offset-1-desktop">
-                <div className="content is-normal  ">
-                  <LiveCodeHero />
-                </div>
+              <div className="column is-12">
+                <LiveCodeHero />
               </div>
               <div className="column is-12 my-4">
                 <div className="card has-background-glass">

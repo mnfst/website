@@ -21,6 +21,7 @@ $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
     'Ubuntu Mono', monospace !default;
 $handwriting: "Permanent Marker", cursive !default;
 $column-gap: 0.75rem !default;
+$gap: 1.5rem !default;
 
 @use 'bulma/sass/utilities' with ($size-1: 2.986rem,
     $size-2: 2.488rem,
@@ -39,6 +40,7 @@ $column-gap: 0.75rem !default;
     $family-sans-serif: '"Inter", sans-serif',
     $weight-medium: 600,
     $border: $grey-lighter);
+    $radius: 18px;
 
 @use 'bulma/sass/utilities/mixins';
 @use 'bulma/sass/utilities/functions';
@@ -871,6 +873,26 @@ body {
 
 pre {
     padding: 0;
+    background-color: $white;
+    color: #00448C;
+}
+
+@for $i from 0 through 3 {
+    .ci#{$i} {
+    padding-left:  #{$i * 2}rem;
+    }
+}
+
+.cc-dark {
+    color: $dark;
+}
+
+.cc-sand {
+    color: #D5D4AC;
+}
+
+.cc-green {
+    color: #2A853D;
 }
 
 #typewriter {
@@ -1243,16 +1265,8 @@ button,
 .box-wrapper {
     position: relative;
     background-color: $white;
-    border-radius: utilities.$radius;
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
-        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
-        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
-        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
-        linear-gradient(263deg, #2430f0 0%, #2be1b7 21%, #942ffa 42%, #ff006e 66%, #ffd037 84%, #48abe0 100%);
-
-
+    padding: $gap;
+    border-radius: $radius;
 
     img {
         display: block;
@@ -1276,32 +1290,6 @@ button,
         animation-fill-mode: both;
         -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
-    }
-
-    @include mixins.mobile {
-        min-height: calc((100vw - 39px) * 0.8729697);
-    }
-
-    @include mixins.tablet {
-        min-height: calc((50vw - 29px) * 0.8729697);
-    }
-
-    @include mixins.desktop {
-        $desktop-container: calc(#{utilities.$desktop - 2 * utilities.$gap});
-        $desktop-column: calc(#{$desktop-container} - 24px);
-        min-height: calc($desktop-column * .5 * 0.8729697);
-    }
-
-    @include mixins.widescreen {
-        $widescreen-container: calc(#{utilities.$widescreen - 2 * utilities.$gap});
-        $widescreen-column: calc(#{$widescreen-container} - 24px);
-        min-height: calc($widescreen-column * .5 * 0.8729697);
-    }
-
-    @include mixins.fullhd {
-        $fullhd-container: calc(#{utilities.$fullhd - 2 * utilities.$gap});
-        $fullhd-column: calc(#{$fullhd-container} - 24px);
-        min-height: calc($fullhd-column * .5 * 0.8729697);
     }
 }
 
