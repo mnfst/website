@@ -95,6 +95,65 @@ export default function Home() {
               <div className="column is-12">
                 <LiveCodeHero />
               </div>
+              <div className="column is-12 has-text-centered">
+                <span className="tag is-rounded is-success mt-5"> <span>🎉 Help us grow! We're in POC and need your feedback on our</span> <a className="has-text-dark has-text-weight-bold px-1 is-underlined" href="https://discord.gg/FepAked3W7"> Discord </a> <span>to enhance Manifest.</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container-full has-background-white">
+          <div className="container mt-6">
+            <div className="columns is-multiline">
+              <div className="column is-4">
+                <div className="card has-background-white-bis is-shadowless is-fullheight">
+                  <div className="card-content">
+                    <div className="content has-text-centered">
+                    <svg width="110" height="90" viewBox="0 0 267 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path clipRule="evenodd" clipRule="evenodd" d="M66.75 67L0 0V134L66.75 67ZM133.5 67L66.75 0V67V134L133.5 67ZM200.25 67L133.5 0V67V134L200.25 67ZM200.25 67V0L267 67L200.25 134V67Z" fill="#2BE1B7"/>
+                    </svg>
+
+                      <h4 className=" mt-4">Develop 10x faster</h4>
+                      <p className="is-size-6">
+                      Manifest's simple code approach makes backend development a breeze.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="column is-4">
+                <div className="card has-background-white-bis is-shadowless is-fullheight">
+                  <div className="card-content">
+                    <div className="content has-text-centered">
+
+                    <svg width="90" height="90" viewBox="0 0 268 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path clipRule="evenodd" clipRule="evenodd" d="M267.99 133.99C267.99 133.99 269.579 72.4171 232.581 35.4189C195.583 -1.57858 134.01 0.00993423 134.01 0.00993423C134.01 0.00993423 134.001 0.327069 134 0.929324C134 0.674973 133.997 0.47149 133.996 0.321236C133.994 0.11577 133.99 0.00993423 133.99 0.00993423C133.99 0.00993423 72.4171 -1.57858 35.4189 35.4189C-1.57858 72.4171 0.00993423 133.99 0.00993423 133.99C0.00993423 133.99 61.5835 135.578 98.5806 98.5806C132.398 64.7643 133.979 10.4162 134 1.32065C134.022 10.4162 135.603 64.7643 169.419 98.5806C206.417 135.578 267.99 133.99 267.99 133.99ZM35.4189 232.581C-1.57858 195.583 0.00993423 134.01 0.00993423 134.01C0.00993423 134.01 61.5835 132.422 98.5806 169.419C132.398 203.236 133.979 257.584 134 266.68C134.022 257.584 135.603 203.236 169.419 169.419C206.417 132.422 267.99 134.01 267.99 134.01C267.99 134.01 269.579 195.583 232.581 232.581C195.583 269.578 134.01 267.99 134.01 267.99C134.01 267.99 134.001 267.672 134 267.071C133.999 267.672 133.99 267.99 133.99 267.99C133.99 267.99 72.4171 269.578 35.4189 232.581Z" fill="#F2C79C"/>
+                    </svg>
+
+                      <h4 className=" mt-4">Develop 10x faster</h4>
+                      <p className="is-size-6">
+                      Manifest's simple code approach makes backend development a breeze.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="column is-4">
+                <div className="card has-background-white-bis is-shadowless is-fullheight">
+                  <div className="card-content">
+                    <div className="content has-text-centered">
+                    <svg width="90" viewBox="0 0 267 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.00751 0C1.0025 0 0 1.33667 0 3.00751V263.992C0 265.663 1.33667 267 3.00751 267H263.992C265.663 267 267 265.663 267 263.992V3.00751C267 1.0025 265.663 0 263.992 0L3.00751 0ZM50.1252 26.0651L107.602 83.5419L50.1252 141.019L26.0651 116.959L59.4819 83.5419L26.0651 50.1252L50.1252 26.0651ZM133.667 100.25H233.917V133.667H133.667V100.25Z" fill="#2430F0"/>
+                    </svg>
+                      <h4 className=" mt-4">Develop 10x faster</h4>
+                      <p className="is-size-6">
+                      Manifest's simple code approach makes backend development a breeze.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div className="columns is-multiline">
               <div className="column is-12 my-4">
                 <div className="card has-background-glass">
                   <div className="card-content is-normal has-text-centered card-content--how-it-works">
