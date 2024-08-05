@@ -61,6 +61,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      { name: 'og:image', content: '/img/og-image.png' },
+      { name: 'twitter:image', content: '/img/og-image.png' },
+    ],
     announcementBar: {
       id: 'poc-banner',
       content:
