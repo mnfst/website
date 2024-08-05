@@ -75,6 +75,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'vue'
+        },
+        {
+          type: 'doc',
+          id: 'astro'
         }
       ]
     }

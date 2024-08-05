@@ -100,7 +100,7 @@ export default function Home() {
                     <div className="content is-normal has-text-centered">
                       <h2 className="title is-2">
                         Define your data structure, get a business-ready backend
-                        will essential features:
+                        with essential features:
                       </h2>
                       <div className="backend-list is-boredered is-rounded is-flex is-align-items-center is-justify-content-center">
                         <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
