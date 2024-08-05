@@ -40,7 +40,7 @@ const config: Config = {
 
           // Remove this to remove the "edit this page" links.
           editUrl: ({ versionDocsDirPath, docPath }) => {
-            const baseUrl = 'https://github.com/casejs/docs/blob/master/'
+            const baseUrl = 'https://github.com/mnfst/docs/blob/master/'
             // Enlève 'content/' du chemin pour correspondre à la structure du repo GitHub
             const newDocPath = docPath.replace(/^content\//, '')
             return baseUrl + newDocPath
