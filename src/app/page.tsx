@@ -96,20 +96,25 @@ export default function Home() {
                 <LiveCodeHero />
               </div>
               <div className="column is-12 has-text-centered">
-                <span className="tag is-rounded is-success mt-5"> <span>🎉 Help us grow! We're in POC and need your feedback on our</span> <a className="has-text-dark has-text-weight-bold px-1 is-underlined" href="https://discord.gg/FepAked3W7"> Discord </a> <span>to enhance Manifest.</span></span>
+                <span className="tag is-rounded is-success mt-5 is-hidden-mobile"> <span>🎉 Help us grow! We're in POC and need your feedback on our</span> <a className="has-text-dark has-text-weight-bold px-1 is-underlined" href="https://discord.gg/FepAked3W7"> Discord </a> <span>to enhance Manifest.</span></span>
+                <div className="box has-background-success mt-5 is-hidden-tablet"> 
+                  
+                    <span>🎉 Help us grow! We're in POC and need your feedback on our</span> <a className="has-text-dark has-text-weight-bold px-1 is-underlined" href="https://discord.gg/FepAked3W7"> Discord </a> <span>to enhance Manifest.</span>
+                  
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="container-full has-background-white">
-          <div className="container mt-6">
+          <div className="container py-6">
             <div className="columns is-multiline">
               <div className="column is-4">
                 <div className="card has-background-white-bis is-shadowless is-fullheight">
                   <div className="card-content">
                     <div className="content has-text-centered">
                     <svg width="110" height="90" viewBox="0 0 267 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path clipRule="evenodd" clipRule="evenodd" d="M66.75 67L0 0V134L66.75 67ZM133.5 67L66.75 0V67V134L133.5 67ZM200.25 67L133.5 0V67V134L200.25 67ZM200.25 67V0L267 67L200.25 134V67Z" fill="#2BE1B7"/>
+                      <path clipRule="evenodd"  d="M66.75 67L0 0V134L66.75 67ZM133.5 67L66.75 0V67V134L133.5 67ZM200.25 67L133.5 0V67V134L200.25 67ZM200.25 67V0L267 67L200.25 134V67Z" fill="#2BE1B7"/>
                     </svg>
 
                       <h4 className=" mt-4">Develop 10x faster</h4>
@@ -126,7 +131,7 @@ export default function Home() {
                     <div className="content has-text-centered">
 
                     <svg width="90" height="90" viewBox="0 0 268 268" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path clipRule="evenodd" clipRule="evenodd" d="M267.99 133.99C267.99 133.99 269.579 72.4171 232.581 35.4189C195.583 -1.57858 134.01 0.00993423 134.01 0.00993423C134.01 0.00993423 134.001 0.327069 134 0.929324C134 0.674973 133.997 0.47149 133.996 0.321236C133.994 0.11577 133.99 0.00993423 133.99 0.00993423C133.99 0.00993423 72.4171 -1.57858 35.4189 35.4189C-1.57858 72.4171 0.00993423 133.99 0.00993423 133.99C0.00993423 133.99 61.5835 135.578 98.5806 98.5806C132.398 64.7643 133.979 10.4162 134 1.32065C134.022 10.4162 135.603 64.7643 169.419 98.5806C206.417 135.578 267.99 133.99 267.99 133.99ZM35.4189 232.581C-1.57858 195.583 0.00993423 134.01 0.00993423 134.01C0.00993423 134.01 61.5835 132.422 98.5806 169.419C132.398 203.236 133.979 257.584 134 266.68C134.022 257.584 135.603 203.236 169.419 169.419C206.417 132.422 267.99 134.01 267.99 134.01C267.99 134.01 269.579 195.583 232.581 232.581C195.583 269.578 134.01 267.99 134.01 267.99C134.01 267.99 134.001 267.672 134 267.071C133.999 267.672 133.99 267.99 133.99 267.99C133.99 267.99 72.4171 269.578 35.4189 232.581Z" fill="#F2C79C"/>
+                    <path clipRule="evenodd"  d="M267.99 133.99C267.99 133.99 269.579 72.4171 232.581 35.4189C195.583 -1.57858 134.01 0.00993423 134.01 0.00993423C134.01 0.00993423 134.001 0.327069 134 0.929324C134 0.674973 133.997 0.47149 133.996 0.321236C133.994 0.11577 133.99 0.00993423 133.99 0.00993423C133.99 0.00993423 72.4171 -1.57858 35.4189 35.4189C-1.57858 72.4171 0.00993423 133.99 0.00993423 133.99C0.00993423 133.99 61.5835 135.578 98.5806 98.5806C132.398 64.7643 133.979 10.4162 134 1.32065C134.022 10.4162 135.603 64.7643 169.419 98.5806C206.417 135.578 267.99 133.99 267.99 133.99ZM35.4189 232.581C-1.57858 195.583 0.00993423 134.01 0.00993423 134.01C0.00993423 134.01 61.5835 132.422 98.5806 169.419C132.398 203.236 133.979 257.584 134 266.68C134.022 257.584 135.603 203.236 169.419 169.419C206.417 132.422 267.99 134.01 267.99 134.01C267.99 134.01 269.579 195.583 232.581 232.581C195.583 269.578 134.01 267.99 134.01 267.99C134.01 267.99 134.001 267.672 134 267.071C133.999 267.672 133.99 267.99 133.99 267.99C133.99 267.99 72.4171 269.578 35.4189 232.581Z" fill="#F2C79C"/>
                     </svg>
 
                       <h4 className=" mt-4">Develop 10x faster</h4>
@@ -141,9 +146,9 @@ export default function Home() {
                 <div className="card has-background-white-bis is-shadowless is-fullheight">
                   <div className="card-content">
                     <div className="content has-text-centered">
-                    <svg width="90" viewBox="0 0 267 267" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.00751 0C1.0025 0 0 1.33667 0 3.00751V263.992C0 265.663 1.33667 267 3.00751 267H263.992C265.663 267 267 265.663 267 263.992V3.00751C267 1.0025 265.663 0 263.992 0L3.00751 0ZM50.1252 26.0651L107.602 83.5419L50.1252 141.019L26.0651 116.959L59.4819 83.5419L26.0651 50.1252L50.1252 26.0651ZM133.667 100.25H233.917V133.667H133.667V100.25Z" fill="#2430F0"/>
-                    </svg>
+                      <svg width="90" viewBox="0 0 267 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.00751 0C1.0025 0 0 1.33667 0 3.00751V263.992C0 265.663 1.33667 267 3.00751 267H263.992C265.663 267 267 265.663 267 263.992V3.00751C267 1.0025 265.663 0 263.992 0L3.00751 0ZM50.1252 26.0651L107.602 83.5419L50.1252 141.019L26.0651 116.959L59.4819 83.5419L26.0651 50.1252L50.1252 26.0651ZM133.667 100.25H233.917V133.667H133.667V100.25Z" fill="#2430F0"/>
+                      </svg>
                       <h4 className=" mt-4">Develop 10x faster</h4>
                       <p className="is-size-6">
                       Manifest's simple code approach makes backend development a breeze.
@@ -152,45 +157,88 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="columns is-multiline">
+            </div>
+            <div className="columns is-multiline">
               <div className="column is-12 my-4">
-                <div className="card has-background-glass">
-                  <div className="card-content is-normal has-text-centered card-content--how-it-works">
-                    <div className="content is-normal has-text-centered">
-                      <h2 className="title is-2">
+                  <div className=" is-normal card-content--how-it-works">
+                    <div className="content is-normal has-text-centered has-text-left--mobile">
+                      <h2 className="title is-2 mb-0">
                         Define your data structure, get a business-ready backend
-                        will essential features:
+                        with essential features:
                       </h2>
-                      <div className="backend-list is-boredered is-rounded is-flex is-align-items-center is-justify-content-center">
-                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="columns is-multiline has-line-h">
+                <div className="column is-3">
+                      <div className="content backend-list__wrapper">
+                        <span className="backend-list__item">
                           <span className="icon  backend-list__icon">
                             <i className="lni lni-checkmark has-text-success"></i>
                           </span>
                           <span>Database</span>
                         </span>
-
-                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                        
+                        <p className="is-size-6">
+                        An SQLite database lightweight and serverless, ideal for embedded applications and local storage.
+                        </p>
+                      </div>
+                  
+                </div>
+                <div className="column is-3">
+                  
+                      <div className="content backend-list__wrapper">
+                        <span className="backend-list__item">
                           <span className="icon  backend-list__icon">
-                            <i className="lni lni-checkmark has-text-success"></i>
+                            <i className="lni lni-layout has-text-success"></i>
                           </span>
                           <span>Admin panel</span>
                         </span>
-                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
+                        
+                        <p className="is-size-6">
+                        Provides a ready-to-use admin panel for your admins.
+                        </p>
+                      </div>
+                  
+                </div>
+                <div className="column is-3">
+                  
+                      <div className="content backend-list__wrapper">
+                        <span className="backend-list__item">
                           <span className="icon  backend-list__icon">
-                            <i className="lni lni-checkmark has-text-success"></i>
+                            <i className="lni lni-cog has-text-success"></i>
                           </span>
                           <span>REST API</span>
                         </span>
-                        <span className="is-flex is-align-items-center is-justify-content-center is-flex-direction-row backend-list__item">
-                          <span className="icon  backend-list__icon">
-                            <i className="lni lni-checkmark has-text-success"></i>
-                          </span>
-                          <span>Javascript SDK</span>
-                        </span>
+                        
+                        <p className="is-size-6">
+                        A standardized and accessible interface for interacting with your application.
+                        </p>
                       </div>
+                  
+                </div>
+                <div className="column is-3">
+                  
+                      <div className="content backend-list__wrapper">
+                        <span className="backend-list__item">
+                          <span className="icon  backend-list__icon">
+                            <i className="lni lni-package has-text-success"></i>
+                          </span>
+                          <span><span className="is-hidden-touch">Javascript</span><span className="is-hidden-desktop">JS</span> SDK</span>
+                        </span>
+                        
+                        <p className="is-size-6">
+                        Simplifies integration for client-side development.
+                        </p>
+                      </div>
+                  
+                </div>
+              </div>
+              <div className="columns">
+                <div className="column is-12">
 
-                      <div className="stack-list is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap is-flex-direction-column">
+                      <div className="stack-list is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap is-flex-direction-column is-size-6">
                         <span>
                           Plug-and-play with top frontend stacks through SDK or
                           classic REST API:{' '}
@@ -244,79 +292,82 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd section--journey">
-                <div className="bg-shape"></div>
-                <div className="content is-normal has-text-left">
-                  <h2 className="title is-2">
-                    Our journey to rethink the backend
-                  </h2>
-                  <p>
-                    If you ask 10 backend developers what you should use for
-                    your app’s backend, they will probably come up with 10
-                    different stacks. Why? Because there is no straightforward
-                    way to create a backend. One more step and you suddenly get
-                    overwhelmed with databases, runtimes, containers,
-                    infrastructure and so on.
-                  </p>
-
-                  <p>
-                    Recently, we have seen cool Backend-as-a-Service products
-                    like Supabase or Appwrite gaining popularity as they offer a
-                    fast and reliable way to deploy backends. However, their
-                    no-code approach generates awful code difficult to follow,
-                    making apps less reliable. Moreover, using a UI is slower
-                    than coding, especially now that AI assistants are here to
-                    help you.
-                  </p>
-
-                  <p>
-                    Finally, we strongly believe that we can eliminate the
-                    backend hassle without trading off our love for coding
-                    properly.
-                  </p>
-                </div>
-              </div>
-              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd my-4">
-                <div className="content is-normal has-text-left">
-                  <article className="message is-info is-success is-bordered">
-                    <div className="message-header">
-                      <p>Manifest is currently a Proof-of-Concept (POC)</p>
-                    </div>
-                    <div className="message-body">
-                      We aim to validate this new approach for the backend,
-                      thanks to your feedback. Give it a try and let us know what you think via our poll.
-
-                    </div>
-                  </article>
-                </div>
-              </div>
-              <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
-                <div className="content is-normal has-text-left mb-4">
+                  </div>
+<div className="container-fluid has-background-white-bis">
+            <div className="container">       
+            <div className="columns is-multiline">
+                <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd section--journey">
+                  <div className="bg-shape"></div>
                   <div className="content is-normal has-text-left">
-                    <h2 className="title is-2">Get your hands on!</h2>
-                    <ul>
-                      <li>
-                        <a href="/docs" target="_blank">
-                          Read the documentation
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://github.com/mnfst/manifest"
-                          target="_blank"
-                        >
-                          Source code
-                        </a>
-                      </li>
-                    </ul>
+                    <h2 className="title is-2">
+                      Our journey to rethink the backend
+                    </h2>
+                    <p>
+                      If you ask 10 backend developers what you should use for
+                      your app’s backend, they will probably come up with 10
+                      different stacks. Why? Because there is no straightforward
+                      way to create a backend. One more step and you suddenly get
+                      overwhelmed with databases, runtimes, containers,
+                      infrastructure and so on.
+                    </p>
+
+                    <p>
+                      Recently, we have seen cool Backend-as-a-Service products
+                      like Supabase or Appwrite gaining popularity as they offer a
+                      fast and reliable way to deploy backends. However, their
+                      no-code approach generates awful code difficult to follow,
+                      making apps less reliable. Moreover, using a UI is slower
+                      than coding, especially now that AI assistants are here to
+                      help you.
+                    </p>
+
+                    <p>
+                      Finally, we strongly believe that we can eliminate the
+                      backend hassle without trading off our love for coding
+                      properly.
+                    </p>
                   </div>
                 </div>
-              </div>
+                <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd my-4">
+                  <div className="content is-normal has-text-left">
+                    <article className="message is-info is-success is-bordered">
+                      <div className="message-header">
+                        <p>Manifest is currently a Proof-of-Concept (POC)</p>
+                      </div>
+                      <div className="message-body">
+                        We aim to validate this new approach for the backend,
+                        thanks to your feedback. Give it a try and let us know what you think via our poll.
+
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
+                  <div className="content is-normal has-text-left mb-4">
+                    <div className="content is-normal has-text-left">
+                      <h2 className="title is-2">Get your hands on!</h2>
+                      <ul>
+                        <li>
+                          <a href="/docs" target="_blank">
+                            Read the documentation
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/mnfst/manifest"
+                            target="_blank"
+                          >
+                            Source code
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
+      </div>
         <footer className="footer has-background-black has-text-white pb-4">
           <div className="container">
             <div>

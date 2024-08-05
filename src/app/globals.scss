@@ -59,9 +59,6 @@ $gap: 2rem !default;
 @import 'lineicons/web-font/lineicons.css';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=SPermanent+Marker&display=swap');
 
-
-
-
 .column {
     display: block;
     flex-basis: 0;
@@ -852,6 +849,21 @@ body {
     overflow-x: hidden !important;
 }
 
+html {
+    @include mixins.mobile {
+        font-size: .7rem;
+    }
+    @include mixins.tablet {
+        font-size: .8rem;
+    }
+    @include mixins.desktop {
+        font-size: .88rem;
+    }
+    @include mixins.widescreen {
+        font-size: 1rem;
+    }
+}
+
 body {
     // background-image: url('/assets/images/bg-grid.svg');
     background-repeat: repeat;
@@ -1152,36 +1164,6 @@ button,
 .backend-list {
     margin-bottom: 2rem;
 
-    &__item {
-        gap: 5px;
-        padding: 8px 32px;
-
-        @include mixins.tablet {
-            border: 1px solid $grey-lighter;
-            background-color: $white;
-
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3) {
-                border-right: 0;
-            }
-        }
-
-        &:first-child {
-            @include mixins.tablet {
-                border-top-left-radius: 100px;
-                border-bottom-left-radius: 100px;
-            }
-        }
-
-        &:last-child {
-            @include mixins.tablet {
-                border-top-right-radius: 100px;
-                border-bottom-right-radius: 100px;
-            }
-        }
-    }
-
     @include mixins.mobile {
         flex-direction: column;
     }
@@ -1190,11 +1172,73 @@ button,
         margin-top: 2rem;
 
     }
+    &__item {
+        display: inline-flex;
+        gap: 5px;
+        padding: 7px 14px;
+        margin-bottom: $column-gap;
+        border: 1px solid $black;
+        background-color: $black-ter;
+        border-radius: 100px;
+        color: $white;
+        align-items: center;
+        
+    }
+
+    &__wrapper {
+        position: relative;
+        @include mixins.tablet {
+            text-align: center;
+            
+            &:before {
+                width: 6px;
+                height: 35px;
+                display: block;
+                position: relative;
+                content: '';
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-image: url('./../../public/assets/images/line-end.svg');
+                margin-bottom: $column-gap;
+                background-size: cover;
+            }
+        }
+    }
+
+}
+
+.has-line-h {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: $column-gap;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-image: url('./../../public/assets/images/line-h.svg');
+        @include mixins.fullhd {
+            width: calc(#{utilities.$fullhd * .75} + #{utilities.$gap * 4 * .75});
+        }
+        @include mixins.tablet {
+            width: calc(75vw - 6px);
+        }
+        @include mixins.desktop {
+            width: calc(#{utilities.$desktop - utilities.$gap} * .75 - 6px);
+        }
+        @include mixins.widescreen {
+            width: calc(#{utilities.$widescreen - utilities.$gap} * .75 - 6px);
+        }
+        @include mixins.fullhd {
+            width: calc(#{utilities.$fullhd - utilities.$gap} * .75 - 6px);
+        }
+    }
 }
 
 .card-content--how-it-works {
     @include mixins.desktop {
-        padding: 3rem;
+        padding: 0 3rem;
 
         .title {
             width: 80%;
@@ -1345,4 +1389,10 @@ button,
 
     border-radius: 820px;
     background-color: $white-ter;
+}
+
+.has-text-left--mobile {
+    @include mixins.mobile {
+        text-align: left !important;
+    }
 }
