@@ -294,38 +294,93 @@ export default function Home() {
                   </div>
                   </div>
 <div className="container-fluid has-background-white-bis">
-            <div className="container">       
+            <div className="container py-6">       
             <div className="columns is-multiline">
-                <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd section--journey">
-                  <div className="bg-shape"></div>
-                  <div className="content is-normal has-text-left">
-                    <h2 className="title is-2">
-                      Our journey to rethink the backend
-                    </h2>
+                <div className="column is-4">
+                  <div className="content is-normal">
+                    <h3 className="title is-3">
+                    Why Manifest
+                    </h3>
+                  </div>
+                </div>
+                <div className="column is-8">
+                  <div className="content is-normal">
                     <p>
-                      If you ask 10 backend developers what you should use for
-                      your app’s backend, they will probably come up with 10
-                      different stacks. Why? Because there is no straightforward
-                      way to create a backend. One more step and you suddenly get
-                      overwhelmed with databases, runtimes, containers,
-                      infrastructure and so on.
+                    Our mission is to provide a BaaS platform that effortlessly fits into your workflow, allowing you to develop backends quickly and easily, whatever your experience.
                     </p>
 
                     <p>
-                      Recently, we have seen cool Backend-as-a-Service products
-                      like Supabase or Appwrite gaining popularity as they offer a
-                      fast and reliable way to deploy backends. However, their
-                      no-code approach generates awful code difficult to follow,
-                      making apps less reliable. Moreover, using a UI is slower
-                      than coding, especially now that AI assistants are here to
-                      help you.
+                    As an <strong>open source</strong> product, We are committed to continuously improving Manifest through collaboration and community feedback, ensuring it always meets your needs.
+                    </p>
+                    <div className="fixed-grid has-2-cols">
+                      <div className="links-grid-container grid my-5 content is-small">
+                          <div  className="links-grid-item cell">
+                            <a href="#">
+                            <span  className="icon-text">
+                              <span>Source code on Github</span>
+                              <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
+                              </span>
+                            </span>
+                            </a>
+                          </div>
+                          <div  className="links-grid-item cell">
+                            <a href="#">
+                            <span  className="icon-text">
+                              <span>Join the community on Discord</span>
+                              <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
+                              </span>
+                            </span>
+                            </a>
+                          </div>
+                          <div  className="links-grid-item cell">
+                            <a href="#">
+                            <span  className="icon-text">
+                              <span>Report an issue</span>
+                              <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
+                              </span>
+                            </span>
+                            </a>
+                          </div>
+                          <div  className="links-grid-item cell">
+                            <a href="#">
+                            <span  className="icon-text">
+                              <span>Announcements</span>
+                              <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
+                              </span>
+                            </span>
+                            </a>
+                          </div>
+                          <div  className="links-grid-item cell">
+                            <a href="#">
+                            <span  className="icon-text">
+                              <span>Showcase your Manifest creation.</span>
+                              <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
+                              </span>
+                            </span>
+                            </a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-4">
+                  <div className="content is-normal">
+                    <h3 className="title is-3">
+                    Roadmap
+                    </h3>
+                  </div>
+                </div>
+                <div className="column is-8">
+                  <div className="content is-normal">
+                    <p>
+                    Since we went live with the PoC, you've shown great enthusiasm. We're now developing the product further with the community. Here are the upcoming features: 
                     </p>
 
-                    <p>
-                      Finally, we strongly believe that we can eliminate the
-                      backend hassle without trading off our love for coding
-                      properly.
-                    </p>
                   </div>
                 </div>
                 <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd my-4">

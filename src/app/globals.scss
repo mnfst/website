@@ -36,6 +36,7 @@ $gap: 2rem !default;
     $warning: #f2c79c,
     $link: #2430f0,
     $primary: #7209b7,
+    
 
     $family-sans-serif: '"Inter", sans-serif',
     $weight-medium: 600,
@@ -1273,6 +1274,11 @@ button,
             width: 100%;
         }
     }
+}
+
+.content a:not(.button)  {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 .tag.is-small {
