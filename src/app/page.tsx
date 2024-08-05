@@ -226,8 +226,8 @@ export default function Home() {
                     </div>
                     <div className="message-body">
                       We aim to validate this new approach for the backend,
-                      thanks to your feedback. Give it a try and let us know what you think via our poll.
-
+                      thanks to your feedback. Give it a try and let us know
+                      what you think via our poll.
                     </div>
                   </article>
                 </div>
@@ -271,12 +271,12 @@ export default function Home() {
                         </a>
                       </li>
                       <li>
-                        <span className="mr-2 has-text-grey">
+                        <a
+                          href="https://github.com/mnfst/manifest/blob/master/CONTRIBUTING.md"
+                          target="_blank"
+                        >
                           Contributor Docs
-                        </span>
-                        <span className="tag is-small is-dark">
-                          Coming soon
-                        </span>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -339,7 +339,7 @@ export default function Home() {
                             <i className="lni lni-heart-fill is-size-6"></i>
                           </span>
                           <a
-                            href="https://opencollective.com/casejs"
+                            href="https://opencollective.com/mnfst"
                             target="_blank"
                           >
                             Support us
