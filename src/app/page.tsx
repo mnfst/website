@@ -881,6 +881,78 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="container-fluid has-background-white">
+          <div className="py-6">
+            <div className="container">
+              <div className="columns">
+                <div className="column is-6">
+                  <div className="content is-size-6">
+                    <h3 className="title is-3">About us</h3>
+                    <p>
+                      Manifest was founded by a team passionate about
+                      development and open source. After years of developing
+                      custom software, we saw the need to simplify the backend.
+                      We hope to build an enthusiastic community that joins our
+                      journey and shares our vision: Enabling everyone to create
+                      and share innovative tools 💫.
+                    </p>
+                  </div>
+                </div>
+                <div className="column is-5 is-offset-1 is-flex is-justify-content-space-around">
+                  <div className="is-flex is-align-items-center is-justify-content-flex-start founder-card is-flex-direction-column">
+                    <Image
+                      src="/assets/images/bruno.jpg"
+                      width={160}
+                      height={160}
+                      alt="Bruno"
+                      className="is-rounded"
+                      loading="lazy"
+                    />
+
+                    <div className="content is-size-6 is-flex is-align-items-center is-justify-content-flex-start is-flex-direction-column">
+                      <span className="has-text-weight-bold">Bruno Pérez</span>
+                      <div>
+                        <i className="lni lni-github-original mx-1"></i>
+                        <i className="lni lni-twitter-original mx-1"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="is-flex is-align-items-center is-justify-content-flex-start founder-card is-flex-direction-column">
+                    <div className="content is-size-6 is-flex is-align-items-center is-justify-content-flex-start is-flex-direction-column">
+                      <span className="has-text-weight-bold">
+                        Sébastien Conejo
+                      </span>
+                      <div>
+                        <a
+                          className="ghost"
+                          href="https://github.com/SebConejo"
+                          target="_blank"
+                        >
+                          <i className="lni lni-github-original mx-1"></i>
+                        </a>
+                        <a
+                          className="ghost"
+                          href="https://www.linkedin.com/in/sebastien-conejo"
+                          target="_blank"
+                        >
+                          <i className="lni lni-linkedin-original mx-1"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <Image
+                      src="/assets/images/sebastien.jpg"
+                      width={160}
+                      height={160}
+                      alt="Bruno"
+                      className="is-rounded"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer className="footer has-background-black has-text-white pb-4">
         <div className="container">

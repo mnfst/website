@@ -1478,3 +1478,16 @@ main .content a:not(.button):not(.icon-text) {
   break-inside: avoid;
   margin-bottom: $gap;
 }
+
+.founder-card {
+  gap: $gap;
+  img {
+    transform: rotate(-3deg);
+  }
+
+  + .founder-card {
+    img {
+      transform: rotate(3deg);
+    }
+  }
+}
