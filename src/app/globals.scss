@@ -1088,7 +1088,7 @@ button,
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: .19;
+            opacity: .12;
         }
 
         .field.has-addons .control:last-child:not(:only-child) & {
@@ -1143,6 +1143,10 @@ button,
 
 .card {
     box-shadow: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset, 0px 0px 0px 1.5px rgba($grey-light, .2) inset, 0px 0px 0px 1px rgba($dark, .08), 0px 16px 32px 0px rgba($grey-dark, .08), 0px 2px 24px 0px rgba($darkness, .06);
+
+ .icon-text {
+    flex-wrap: nowrap;
+ }
 }
 
 .is-rounded {
@@ -1276,7 +1280,7 @@ button,
     }
 }
 
-.content a:not(.button)  {
+main .content a:not(.button):not(.icon-text)  {
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
@@ -1316,6 +1320,17 @@ button,
     }
 }
 
+.has-border-gradient {
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 16px, transparent 16px) 0% 0%/18px 18px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 16px, transparent 16px) 100% 0%/18px 18px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 16px, transparent 16px) 0% 100%/18px 18px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 16px, transparent 16px) 100% 100%/18px 18px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 36px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 36px) calc(100% - 4px) no-repeat,
+            linear-gradient(220deg, #2430f0 0%, #2be1b7 21%, #942ffa 42%, #ff006e 61%, #ffd037 84%, #00cecb 100%);
+border-radius: 18px;
+box-sizing: content-box;
+}
 .box-wrapper {
     position: relative;
     background-color: $white;

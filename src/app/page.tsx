@@ -5,6 +5,7 @@ import SubscribeForm from './components/SubscribeForm'
 
 export default function Home() {
   return (
+    <div>
     <main>
       <div>
         <div className="has-background-glass">
@@ -380,23 +381,114 @@ export default function Home() {
                     <p>
                     Since we went live with the PoC, you've shown great enthusiasm. We're now developing the product further with the community. Here are the upcoming features: 
                     </p>
-
                   </div>
                 </div>
-                <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd my-4">
-                  <div className="content is-normal has-text-left">
-                    <article className="message is-info is-success is-bordered">
-                      <div className="message-header">
-                        <p>Manifest is currently a Proof-of-Concept (POC)</p>
+                <div className="column is-3">
+                  <div className="card is-fullheight has-border-gradient is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                    <div className="icon-text">
+                      <div className="icon">
+                      <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
                       </div>
-                      <div className="message-body">
-                        We aim to validate this new approach for the backend,
-                        thanks to your feedback. Give it a try and let us know what you think via our poll.
-
+                      <h4>PoC Manifest</h4>
+                    </div>
+                      <p>A backend that fits into 1 yaml file. Basic concets and features.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q2 2024</span></p>
                       </div>
-                    </article>
+                    </div>
                   </div>
                 </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight has-border-gradient is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                    <div className="icon-text">
+                      <div className="icon">
+                      <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                      </div>
+                      <h4>OpenAPI Swagger UI</h4>
+                    </div>
+                      <p>Detailed API doc to help you understand and integrate with Manifest easily.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q3 2024</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                      <h4>Auth</h4>
+                      <p>Create authenticatable entities to signup and authenticate. Restrict entry points with API rules.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q3 2024</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                      <h4>Many to many relations</h4>
+                      <p>Enables data relationships with many-to-many associations.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q4 2024</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                      <h4>Hook</h4>
+                      <p>This release will allow you to add your own hooks. You will be able to create custom features like notifications and emails.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q4 2024</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                      <h4>File & image upload</h4>
+                      <p>Seamlessly upload and manage files and images, either locally or using S3.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q4 2024</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight is-shadowless">
+                    <div className="card-content p-6">
+                      <div className="content">
+                      <h4>Required fields</h4>
+                      <p>Add specific validators to your fields.</p>
+                      <p className="has-text-right has-text-grey-light is-size-6"><span>Q4 2024</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="column is-3">
+                  <div className="card is-fullheight is-shadowless has-background-white-bis">
+                    <div className="card-content p-6">
+                      <div className="content">
+                      <h4>Feature request</h4>
+                      <p>Provide feedback and ask for the next features or enhancements!
+                      </p>
+                      <p>
+                        <a href="" className="button is-dark is-small">
+                          <span>Suggest features</span>
+                          <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
+                          </a>
+                      </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="columns">
                 <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
                   <div className="content is-normal has-text-left mb-4">
                     <div className="content is-normal has-text-left">
@@ -423,140 +515,141 @@ export default function Home() {
           </div>
         </div>
       </div>
-        <footer className="footer has-background-black has-text-white pb-4">
-          <div className="container">
-            <div>
-              <div className="columns is-multiline">
-                <div className="column is-3">
-                  <div className="content">
-                    <p className="has-text-weight-bold is-size-6">Docs</p>
-                    <ul className="no-lst">
-                      <li>
-                        <a href="https://manifest.build/docs" target="_blank">
-                          Developer Docs
-                        </a>
-                      </li>
-                      <li>
-                        <span className="mr-2 has-text-grey">
-                          Contributor Docs
-                        </span>
-                        <span className="tag is-small is-dark">
-                          Coming soon
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="column is-3">
-                  <div className="content">
-                    <p className="has-text-weight-bold is-size-6">Community</p>
-                    <ul className="no-lst">
-                      <li>
-                        <span className="icon-text">
-                          <span className="icon">
-                            <i className="lni lni-discord-alt is-size-6"></i>
-                          </span>
-                          <a
-                            href="https://discord.gg/FepAked3W7"
-                            target="_blank"
-                          >
-                            {' '}
-                            Discord
+      </div>
+    </main>
+            <footer className="footer has-background-black has-text-white pb-4">
+            <div className="container">
+              <div>
+                <div className="columns is-multiline">
+                  <div className="column is-3">
+                    <div className="content">
+                      <p className="has-text-weight-bold is-size-6">Docs</p>
+                      <ul className="no-lst">
+                        <li>
+                          <a href="https://manifest.build/docs" target="_blank">
+                            Developer Docs
                           </a>
-                        </span>
-                      </li>
-                      <li>
-                        <span className="icon-text">
-                          <span className="icon">
-                            <i className="lni lni-comments-alt-2 is-size-6"></i>
+                        </li>
+                        <li>
+                          <span className="mr-2 has-text-grey">
+                            Contributor Docs
                           </span>
-                          <a
-                            href="https://github.com/mnfst/manifest/discussions"
-                            target="_blank"
-                          >
-                            Discussions
-                          </a>
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="column is-3">
-                  <div className="content">
-                    <p className="has-text-weight-bold is-size-6">More</p>
-                    <ul className="no-lst">
-                      <li>
-                        <span className="icon-text">
-                          <span className="icon">
-                            <i className="lni lni-github-original is-size-6"></i>
+                          <span className="tag is-small is-dark">
+                            Coming soon
                           </span>
-                          <a
-                            href="https://github.com/mnfst/manifest"
-                            target="_blank"
-                          >
-                            Github
-                          </a>
-                        </span>
-                      </li>
-                      <li>
-                        <span className="icon-text">
-                          <span className="icon">
-                            <i className="lni lni-heart-fill is-size-6"></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div className="column is-3">
+                    <div className="content">
+                      <p className="has-text-weight-bold is-size-6">Community</p>
+                      <ul className="no-lst">
+                        <li>
+                          <span className="icon-text">
+                            <span className="icon">
+                              <i className="lni lni-discord-alt is-size-6"></i>
+                            </span>
+                            <a
+                              href="https://discord.gg/FepAked3W7"
+                              target="_blank"
+                            >
+                              {' '}
+                              Discord
+                            </a>
                           </span>
-                          <a
-                            href="https://opencollective.com/casejs"
-                            target="_blank"
-                          >
-                            Support us
-                          </a>
-                        </span>
-                      </li>
-                    </ul>
+                        </li>
+                        <li>
+                          <span className="icon-text">
+                            <span className="icon">
+                              <i className="lni lni-comments-alt-2 is-size-6"></i>
+                            </span>
+                            <a
+                              href="https://github.com/mnfst/manifest/discussions"
+                              target="_blank"
+                            >
+                              Discussions
+                            </a>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div className="column is-3">
-                  <div className="content">
-                    <p className="has-text-weight-bold is-size-6">Stay tuned</p>
-                    <p>
-                      We are building the simplest backend in the world. Do you
-                      want to embark on this adventure with us? Leave your email
-                      to stay in touch and start that journey with us.
-                    </p>
-                    <SubscribeForm />
+                  <div className="column is-3">
+                    <div className="content">
+                      <p className="has-text-weight-bold is-size-6">More</p>
+                      <ul className="no-lst">
+                        <li>
+                          <span className="icon-text">
+                            <span className="icon">
+                              <i className="lni lni-github-original is-size-6"></i>
+                            </span>
+                            <a
+                              href="https://github.com/mnfst/manifest"
+                              target="_blank"
+                            >
+                              Github
+                            </a>
+                          </span>
+                        </li>
+                        <li>
+                          <span className="icon-text">
+                            <span className="icon">
+                              <i className="lni lni-heart-fill is-size-6"></i>
+                            </span>
+                            <a
+                              href="https://opencollective.com/casejs"
+                              target="_blank"
+                            >
+                              Support us
+                            </a>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div className="column is-12">
-                  <div className="separator"></div>
-                </div>
-                <div className="column is-6">
-                  <Image
-                    src="/assets/images/logo-light.svg"
-                    width={180}
-                    height={50}
-                    alt="logo of manifest"
-                    className="footer-logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="column is-6 has-text-right pt-5">
-                  <span>
-                    Source code licensed{' '}
-                    <a
-                      className="has-text-white is-underlined"
-                      href="https://opensource.org/license/mit"
-                      target="_blank"
-                    >
-                      MIT
-                    </a>
-                    .
-                  </span>
+                  <div className="column is-3">
+                    <div className="content">
+                      <p className="has-text-weight-bold is-size-6">Stay tuned</p>
+                      <p>
+                        We are building the simplest backend in the world. Do you
+                        want to embark on this adventure with us? Leave your email
+                        to stay in touch and start that journey with us.
+                      </p>
+                      <SubscribeForm />
+                    </div>
+                  </div>
+                  <div className="column is-12">
+                    <div className="separator"></div>
+                  </div>
+                  <div className="column is-6">
+                    <Image
+                      src="/assets/images/logo-light.svg"
+                      width={180}
+                      height={50}
+                      alt="logo of manifest"
+                      className="footer-logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="column is-6 has-text-right pt-5">
+                    <span>
+                      Source code licensed{' '}
+                      <a
+                        className="has-text-white is-underlined"
+                        href="https://opensource.org/license/mit"
+                        target="_blank"
+                      >
+                        MIT
+                      </a>
+                      .
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
+          </footer>
           </div>
-        </footer>
-      </div>
-    </main>
   )
 }
