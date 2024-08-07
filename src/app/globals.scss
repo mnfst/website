@@ -1417,3 +1417,14 @@ box-sizing: content-box;
         text-align: left !important;
     }
 }
+
+
+.newsletter-box {
+    gap: utilities.$gap;
+}
+
+
+.field.has-addons input {
+    border: 0;
+    box-shadow: 0 0 0 1px utilities.$link;
+}

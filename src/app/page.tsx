@@ -487,6 +487,18 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                <div className="column is-12 has-text-centered">
+                  <div className="is-flex is-align-items-center is-justify-content-center newsletter-box">
+                    <span  className="icon-text">
+                      <span className="icon">
+                      <i className="lni lni-envelope"></i>
+                      </span>
+                      <span>Get notified at the next milestone</span>
+                    </span>
+                    <SubscribeForm />
+
+                  </div>
+                </div>
               </div>
               <div className="columns">
                 <div className="column is-8 is-offset-2 is-6-fullhd is-offset-3-fullhd">
