@@ -2,7 +2,7 @@ $black: #161617 !default;
 $darkness: #22110c !default; // Some titles
 $black-bis: #0d0e0e !default;
 $dark: #1a1a1c !default;
-$black-ter: #26282a !default;
+$black-ter: #24292e !default;
 $grey-darker: #404046 !default;
 $grey-dark: #091580 !default;
 $grey: #7e7e7e !default;
@@ -37,13 +37,12 @@ $gap: 2rem !default;
   $warning: #f2c79c,
   $link: #2430f0,
   $primary: #7209b7,
-  $dark: #1a1a1c,
-
+  $dark: $dark,
+  $black-ter: $black-ter,
   $family-sans-serif: '"Inter", sans-serif',
   $weight-medium: 600,
   $border: $grey-lighter
 );
-$radius: 18px;
 
 @use 'bulma/sass/utilities/mixins';
 @use 'bulma/sass/utilities/functions';
@@ -1295,6 +1294,12 @@ button,
 main .content a:not(.button):not(.icon-text) {
   border-bottom-width: 1px;
   border-bottom-style: solid;
+
+  &.ghost {
+    color: inherit;
+    text-decoration: none;
+    border: 0;
+  }
 }
 
 .tag.is-small {
@@ -1361,11 +1366,18 @@ main .content a:not(.button):not(.icon-text) {
   border-radius: 18px;
   box-sizing: content-box;
 }
+
+.has-2-cols {
+  @include mixins.mobile {
+    --bulma-grid-column-count: 1;
+  }
+}
+
 .box-wrapper {
   position: relative;
   background-color: $white;
   padding: $gap;
-  border-radius: $radius;
+  border-radius: utilities.$radius-large;
 
   img {
     display: block;
@@ -1455,4 +1467,14 @@ main .content a:not(.button):not(.icon-text) {
 .field.has-addons input {
   border: 0;
   box-shadow: 0 0 0 1px utilities.$link;
+}
+
+.masonry {
+  column-count: 4;
+  column-gap: $gap;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: $gap;
 }
