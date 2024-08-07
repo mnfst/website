@@ -367,7 +367,10 @@ export default function Home() {
                     <div className="fixed-grid has-2-cols has-1-cols-mobile">
                       <div className="links-grid-container grid my-5">
                         <div className="links-grid-item cell">
-                          <a href="#">
+                          <a
+                            href="https://github.com/mnfst/manifest/"
+                            target="_blank"
+                          >
                             <span className="icon-text">
                               <span>Source code on Github</span>
                               <span className="icon">
@@ -377,7 +380,10 @@ export default function Home() {
                           </a>
                         </div>
                         <div className="links-grid-item cell">
-                          <a href="#">
+                          <a
+                            href="https://discord.gg/FepAked3W7"
+                            target="_blank"
+                          >
                             <span className="icon-text">
                               <span>Join the community on Discord</span>
                               <span className="icon">
@@ -387,7 +393,10 @@ export default function Home() {
                           </a>
                         </div>
                         <div className="links-grid-item cell">
-                          <a href="#">
+                          <a
+                            href="https://github.com/mnfst/manifest/issues/new?assignees=SebConejo&labels=bug&projects=&template=%F0%9F%90%9B-bug-report.md&title="
+                            target="_blank"
+                          >
                             <span className="icon-text">
                               <span>Report an issue</span>
                               <span className="icon">
@@ -397,7 +406,10 @@ export default function Home() {
                           </a>
                         </div>
                         <div className="links-grid-item cell">
-                          <a href="#">
+                          <a
+                            href="https://github.com/mnfst/manifest/discussions/categories/announcements"
+                            target="_blank"
+                          >
                             <span className="icon-text">
                               <span>Announcements</span>
                               <span className="icon">
@@ -407,7 +419,10 @@ export default function Home() {
                           </a>
                         </div>
                         <div className="links-grid-item cell">
-                          <a href="#">
+                          <a
+                            href="#https://github.com/mnfst/manifest/discussions/new?category=show-tell"
+                            target="_blank"
+                          >
                             <span className="icon-text">
                               <span>Showcase your Manifest creation.</span>
                               <span className="icon">
@@ -564,7 +579,11 @@ export default function Home() {
                           enhancements!
                         </p>
                         <p>
-                          <a href="" className="button is-dark is-small">
+                          <a
+                            target="_blank"
+                            href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
+                            className="button is-dark is-small"
+                          >
                             <span>Suggest features</span>
                             <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
                           </a>
@@ -912,8 +931,20 @@ export default function Home() {
                     <div className="content is-size-6 is-flex is-align-items-center is-justify-content-flex-start is-flex-direction-column">
                       <span className="has-text-weight-bold">Bruno Pérez</span>
                       <div>
-                        <i className="lni lni-github-original mx-1"></i>
-                        <i className="lni lni-twitter-original mx-1"></i>
+                        <a
+                          className="ghost"
+                          href="https://github.com/brunobuddy"
+                          target="_blank"
+                        >
+                          <i className="lni lni-github-original mx-1"></i>
+                        </a>
+                        <a
+                          className="ghost"
+                          href="https://twitter.com/Bd_Perez"
+                          target="_blank"
+                        >
+                          <i className="lni lni-twitter-original mx-1"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -1031,7 +1062,7 @@ export default function Home() {
                           <i className="lni lni-heart-fill is-size-6"></i>
                         </span>
                         <a
-                          href="https://opencollective.com/casejs"
+                          href="https://opencollective.com/manifest"
                           target="_blank"
                         >
                           Support us
