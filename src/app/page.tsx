@@ -86,7 +86,22 @@ export default function Home() {
               <div className="column is-5-tablet is-offset-1-tablet">
                 <div className="content is-normal  mb-6 pb-2">
                   <p>A backend so simple that it fits in a single YAML file</p>
+
                   <InstallCLI />
+                  <div className="mt-4">
+                    <a
+                      className="ghost is-block"
+                      href="https://stackblitz.com/fork/github/mnfst/manifest/tree/feature/demo-stackblitz/examples/main-demo?file=manifest/backend.yml"
+                      target="_blank"
+                    >
+                      <img
+                        alt="Open in StackBlitz"
+                        className="is-block"
+                        width={200}
+                        src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="column is-12">
@@ -904,27 +919,19 @@ export default function Home() {
                     Help us improve Manifest and evolve it to be useful for you.
                   </p>
                   <InstallCLI />
-                  <a
-                    href="https://stackblitz.com/fork/github/mnfst/manifest/tree/feature/demo-stackblitz/examples/main-demo?file=manifest/backend.yml"
-                    className="button is-small is-link mt-4 "
-                    target="_blank"
-                  >
-                    <svg
-                      width="116"
-                      height="116"
-                      viewBox="0 0 116 116"
-                      fill="none"
-                      className="icon-sb mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div className="mt-4">
+                    <a
+                      className="ghost"
+                      href="https://stackblitz.com/fork/github/mnfst/manifest/tree/feature/demo-stackblitz/examples/main-demo?file=manifest/backend.yml"
+                      target="_blank"
                     >
-                      <path
-                        d="M52.1738 68.5466H17.5L80.8887 0L63.8262 47.4534H98.5L35.1065 116L52.1738 68.5466Z"
-                        fill="#ffffff"
+                      <img
+                        alt="Open in StackBlitz"
+                        width={200}
+                        src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
                       />
-                    </svg>
-                    <span>Open in StackBlitz</span>
-                  </a>
-
+                    </a>
+                  </div>
                   <p className="mt-5 pt-5">
                     <a
                       href="https://manifest.build/docs/install"
