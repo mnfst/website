@@ -6,7 +6,7 @@ import SubscribeForm from './components/SubscribeForm'
 export default function Home() {
   return (
     <div>
-      <span className="notification is-success is-block has-text-centered">
+      <span className="notification is-success is-block has-text-centered mb-0">
         {' '}
         <span>
           🎉 Help us grow! We're in BETA version and need your feedback on our
@@ -82,7 +82,7 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="my-6 pt-3">
+        <div className="my-6 py-3">
           <div className="container zi-1">
             <div className="columns is-multiline">
               <div className="column is-6-tablet">
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container-full has-background-white">
-          <div className="container py-6">
+          <div className="container py-7">
             <div className="columns is-multiline">
               <div className="column is-4">
                 <div className="card has-background-white-bis is-shadowless is-fullheight">
@@ -342,7 +342,7 @@ export default function Home() {
             </div>
           </div>
           <div className="container-fluid has-background-white-bis">
-            <div className="container py-6">
+            <div className="container py-7">
               <div className="columns is-multiline">
                 <div className="column is-4">
                   <div className="content is-normal">
@@ -444,7 +444,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <hr className="mb-2" />
+                    <hr className="mb-5 mt-6" />
                   </div>
                 </div>
                 <div className="column is-4">
@@ -452,7 +452,7 @@ export default function Home() {
                     <h3 className="title is-3">Roadmap</h3>
                   </div>
                 </div>
-                <div className="column is-8">
+                <div className="column is-8 mb-6">
                   <div className="content is-normal is-aligned-to-h3">
                     <p>
                       Manifest is in BETA version and we are currently
@@ -621,17 +621,18 @@ export default function Home() {
                               Provide feedback and ask for the next features or
                               enhancements!
                             </p>
+
+                            <p>
+                              <a
+                                target="_blank"
+                                href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
+                                className="button is-dark is-small"
+                              >
+                                <span>Suggest features</span>
+                                <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
+                              </a>
+                            </p>
                           </div>
-                          <p>
-                            <a
-                              target="_blank"
-                              href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
-                              className="button is-dark is-small"
-                            >
-                              <span>Suggest features</span>
-                              <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
-                            </a>
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -653,9 +654,9 @@ export default function Home() {
           </div>
         </div>
         <div className="container-full has-background-dark has-text-white">
-          <div className="py-6 content">
+          <div className="py-7 content">
             <div className="container">
-              <h3 className="title is-3  has-text-white has-text-centered">
+              <h3 className="title is-3 mb-6 has-text-white has-text-centered">
                 Loved by developers 🤩
               </h3>
 
@@ -894,7 +895,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="py-6">
+        <div className="py-7">
           <div className="container">
             <div className="columns">
               <div className="column is-6">
@@ -930,7 +931,7 @@ export default function Home() {
                       </span>
                     </a>
                   </p>
-                  <p className="mb-6">
+                  <p className="">
                     <a
                       href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
                       target="_blank"
@@ -959,7 +960,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container-fluid has-background-white">
-          <div className="py-6">
+          <div className="py-7">
             <div className="container">
               <div className="columns">
                 <div className="column is-6">

@@ -42,14 +42,25 @@ $gap: 2rem !default;
   $black-ter: $black-ter,
   $family-sans-serif: '"Inter", sans-serif',
   $weight-medium: 600,
-  $block-spacing: 0,
   $border: $grey-lighter
 );
 
 @use 'bulma/sass/utilities/mixins';
 @use 'bulma/sass/utilities/functions';
 @use 'bulma/sass/utilities/extends';
-@use 'bulma/sass/helpers';
+@use 'bulma/sass/helpers' with (
+  $spacing-values: (
+    '0': 0,
+    '1': 0.25rem,
+    '2': 0.5rem,
+    '3': 0.75rem,
+    '4': 1rem,
+    '5': 1.5rem,
+    '6': 3rem,
+    '7': 6rem,
+    'auto': auto
+  )
+);
 
 @use 'bulma/sass/components' with (
   $navbar-height: 6.4rem
@@ -1466,7 +1477,15 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .newsletter-box {
-  gap: utilities.$gap;
+  
+  @include mixins.mobile {
+    gap: $column-gap;
+    flex-direction: column;
+  }
+  @include mixins.tablet {
+    gap: utilities.$gap;
+
+  }
 }
 
 .field.has-addons input {
@@ -1475,8 +1494,14 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .masonry {
-  column-count: 4;
   column-gap: $gap;
+
+  @include mixins.tablet {
+    column-count: 4;
+  }
+  @include mixins.mobile {
+    column-count: 2;
+  }
 }
 
 .masonry-item {
