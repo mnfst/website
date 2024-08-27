@@ -904,6 +904,27 @@ export default function Home() {
                     Help us improve Manifest and evolve it to be useful for you.
                   </p>
                   <InstallCLI />
+                  <a
+                    href="https://stackblitz.com/fork/github/mnfst/manifest/tree/feature/demo-stackblitz/examples/main-demo?file=manifest/backend.yml"
+                    className="button is-small is-link mt-4 "
+                    target="_blank"
+                  >
+                    <svg
+                      width="116"
+                      height="116"
+                      viewBox="0 0 116 116"
+                      fill="none"
+                      className="icon-sb mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M52.1738 68.5466H17.5L80.8887 0L63.8262 47.4534H98.5L35.1065 116L52.1738 68.5466Z"
+                        fill="#ffffff"
+                      />
+                    </svg>
+                    <span>Open in StackBlitz</span>
+                  </a>
+
                   <p className="mt-5 pt-5">
                     <a
                       href="https://manifest.build/docs/install"
