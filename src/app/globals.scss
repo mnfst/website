@@ -21,6 +21,7 @@ $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
   'Ubuntu Mono', monospace !default;
 $handwriting: 'Permanent Marker', cursive !default;
 $column-gap: 1rem !default;
+
 $gap: 2rem !default;
 
 @use 'bulma/sass/utilities' with (
@@ -41,6 +42,7 @@ $gap: 2rem !default;
   $black-ter: $black-ter,
   $family-sans-serif: '"Inter", sans-serif',
   $weight-medium: 600,
+  $block-spacing: 0,
   $border: $grey-lighter
 );
 
@@ -58,6 +60,8 @@ $gap: 2rem !default;
 );
 @use 'bulma/sass/elements' with (
   $title-weight: 900,
+  $notification-padding: 0.5em 2em,
+  $notification-radius: 0,
   $content-heading-weight: 900
 );
 @forward 'bulma/sass/grid';
@@ -1285,6 +1289,11 @@ button,
       width: 100%;
     }
   }
+}
+
+.is-sticky {
+  position: sticky;
+  top: 0;
 }
 
 main .content a:not(.button):not(.icon-text) {

@@ -6,6 +6,20 @@ import SubscribeForm from './components/SubscribeForm'
 export default function Home() {
   return (
     <div>
+      <span className="notification is-success is-block has-text-centered">
+        {' '}
+        <span>
+          🎉 Help us grow! We're in BETA version and need your feedback on our
+        </span>{' '}
+        <a
+          className="has-text-dark has-text-weight-bold px-1 is-underlined"
+          href="https://discord.gg/FepAked3W7"
+        >
+          {' '}
+          Discord{' '}
+        </a>{' '}
+        <span>to enhance Manifest.</span>
+      </span>
       <main>
         <div className="has-background-glass">
           <div className="container is-header">
@@ -106,35 +120,6 @@ export default function Home() {
               </div>
               <div className="column is-12">
                 <LiveCodeHero />
-              </div>
-              <div className="column is-12 has-text-centered">
-                <span className="tag is-rounded is-success mt-5 is-hidden-mobile">
-                  {' '}
-                  <span>
-                    🎉 Help us grow! We're in POC and need your feedback on our
-                  </span>{' '}
-                  <a
-                    className="has-text-dark has-text-weight-bold px-1 is-underlined"
-                    href="https://discord.gg/FepAked3W7"
-                  >
-                    {' '}
-                    Discord{' '}
-                  </a>{' '}
-                  <span>to enhance Manifest.</span>
-                </span>
-                <div className="box has-background-success mt-5 is-hidden-tablet">
-                  <span>
-                    🎉 Help us grow! We're in POC and need your feedback on our
-                  </span>{' '}
-                  <a
-                    className="has-text-dark has-text-weight-bold px-1 is-underlined"
-                    href="https://discord.gg/FepAked3W7"
-                  >
-                    {' '}
-                    Discord{' '}
-                  </a>{' '}
-                  <span>to enhance Manifest.</span>
-                </div>
               </div>
             </div>
           </div>
