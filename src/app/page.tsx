@@ -85,10 +85,7 @@ export default function Home() {
               </div>
               <div className="column is-5-tablet is-offset-1-tablet">
                 <div className="content is-normal  mb-6 pb-2">
-                  <p>
-                    Manifest is a complete backend that fits into one file of
-                    simple code.
-                  </p>
+                  <p>A backend so simple that it fits in a single YAML file</p>
                   <InstallCLI />
                 </div>
               </div>
@@ -135,6 +132,34 @@ export default function Home() {
                   <div className="card-content">
                     <div className="content has-text-centered">
                       <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 268 268"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M267.99 133.99C267.99 133.99 269.579 72.4171 232.581 35.4189C195.583 -1.57858 134.01 0.00993423 134.01 0.00993423C134.01 0.00993423 134.001 0.327069 134 0.929324C134 0.674973 133.997 0.47149 133.996 0.321236C133.994 0.11577 133.99 0.00993423 133.99 0.00993423C133.99 0.00993423 72.4171 -1.57858 35.4189 35.4189C-1.57858 72.4171 0.00993423 133.99 0.00993423 133.99C0.00993423 133.99 61.5835 135.578 98.5806 98.5806C132.398 64.7643 133.979 10.4162 134 1.32065C134.022 10.4162 135.603 64.7643 169.419 98.5806C206.417 135.578 267.99 133.99 267.99 133.99ZM35.4189 232.581C-1.57858 195.583 0.00993423 134.01 0.00993423 134.01C0.00993423 134.01 61.5835 132.422 98.5806 169.419C132.398 203.236 133.979 257.584 134 266.68C134.022 257.584 135.603 203.236 169.419 169.419C206.417 132.422 267.99 134.01 267.99 134.01C267.99 134.01 269.579 195.583 232.581 232.581C195.583 269.578 134.01 267.99 134.01 267.99C134.01 267.99 134.001 267.672 134 267.071C133.999 267.672 133.99 267.99 133.99 267.99C133.99 267.99 72.4171 269.578 35.4189 232.581Z"
+                          fill="#F2C79C"
+                        />
+                      </svg>
+
+                      <h4 className=" mt-4">Simple</h4>
+                      <p className="is-size-6">
+                        Your entire backend in{' '}
+                        <strong>a single YAML file</strong>, easy to read and
+                        version control.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="column is-4">
+                <div className="card has-background-white-bis is-shadowless is-fullheight">
+                  <div className="card-content">
+                    <div className="content has-text-centered">
+                      <svg
                         width="110"
                         height="90"
                         viewBox="0 0 267 134"
@@ -157,33 +182,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="column is-4">
-                <div className="card has-background-white-bis is-shadowless is-fullheight">
-                  <div className="card-content">
-                    <div className="content has-text-centered">
-                      <svg
-                        width="90"
-                        height="90"
-                        viewBox="0 0 268 268"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clipRule="evenodd"
-                          d="M267.99 133.99C267.99 133.99 269.579 72.4171 232.581 35.4189C195.583 -1.57858 134.01 0.00993423 134.01 0.00993423C134.01 0.00993423 134.001 0.327069 134 0.929324C134 0.674973 133.997 0.47149 133.996 0.321236C133.994 0.11577 133.99 0.00993423 133.99 0.00993423C133.99 0.00993423 72.4171 -1.57858 35.4189 35.4189C-1.57858 72.4171 0.00993423 133.99 0.00993423 133.99C0.00993423 133.99 61.5835 135.578 98.5806 98.5806C132.398 64.7643 133.979 10.4162 134 1.32065C134.022 10.4162 135.603 64.7643 169.419 98.5806C206.417 135.578 267.99 133.99 267.99 133.99ZM35.4189 232.581C-1.57858 195.583 0.00993423 134.01 0.00993423 134.01C0.00993423 134.01 61.5835 132.422 98.5806 169.419C132.398 203.236 133.979 257.584 134 266.68C134.022 257.584 135.603 203.236 169.419 169.419C206.417 132.422 267.99 134.01 267.99 134.01C267.99 134.01 269.579 195.583 232.581 232.581C195.583 269.578 134.01 267.99 134.01 267.99C134.01 267.99 134.001 267.672 134 267.071C133.999 267.672 133.99 267.99 133.99 267.99C133.99 267.99 72.4171 269.578 35.4189 232.581Z"
-                          fill="#F2C79C"
-                        />
-                      </svg>
 
-                      <h4 className=" mt-4">Develop 10x faster</h4>
-                      <p className="is-size-6">
-                        Manifest's simple code approach makes backend
-                        development a breeze.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div className="column is-4">
                 <div className="card has-background-white-bis is-shadowless is-fullheight">
                   <div className="card-content">
@@ -199,10 +198,10 @@ export default function Home() {
                           fill="#2430F0"
                         />
                       </svg>
-                      <h4 className=" mt-4">Develop 10x faster</h4>
+                      <h4 className=" mt-4">Self-hosted</h4>
                       <p className="is-size-6">
-                        Manifest's simple code approach makes backend
-                        development a breeze.
+                        Free and open source self-hosted{' '}
+                        <strong>Backend-as-a-Service</strong>. Have it your way.
                       </p>
                     </div>
                   </div>
@@ -214,8 +213,7 @@ export default function Home() {
                 <div className=" is-normal card-content--how-it-works">
                   <div className="content is-normal has-text-centered has-text-left--mobile">
                     <h2 className="title is-2 mb-0">
-                      Define your data structure, get a business-ready backend
-                      with essential features:
+                      A complete backend-as-a-service
                     </h2>
                   </div>
                 </div>
@@ -232,8 +230,8 @@ export default function Home() {
                   </span>
 
                   <p className="is-size-6">
-                    An SQLite database lightweight and serverless, ideal for
-                    embedded applications and local storage.
+                    Abstracted SQLite database to store your dynamic data. It is
+                    file-based, with nothing to pre-install or connect.
                   </p>
                 </div>
               </div>
@@ -247,7 +245,8 @@ export default function Home() {
                   </span>
 
                   <p className="is-size-6">
-                    Provides a ready-to-use admin panel for your admins.
+                    Save hours of development with Manifest admin panel for
+                    non-technical administrators.
                   </p>
                 </div>
               </div>
@@ -261,8 +260,8 @@ export default function Home() {
                   </span>
 
                   <p className="is-size-6">
-                    A standardized and accessible interface for interacting with
-                    your application.
+                    Clean and sharp REST API with OpenAPI documentation and API
+                    rules.
                   </p>
                 </div>
               </div>
@@ -279,7 +278,8 @@ export default function Home() {
                   </span>
 
                   <p className="is-size-6">
-                    Simplifies integration for client-side development.
+                    Simplify your front-end integration with Manifest SDK for
+                    your JavaScript and TypeScript projects.
                   </p>
                 </div>
               </div>
@@ -349,21 +349,32 @@ export default function Home() {
                     <h3 className="title is-3">Why Manifest</h3>
                   </div>
                 </div>
-                <div className="column is-8">
-                  <div className="content is-normal">
+                <div className="column is-8 ">
+                  <div className="content is-normal is-aligned-to-h3">
+                    <p>Let's be honest... Backends are complex.</p>
+
                     <p>
-                      Our mission is to provide a BaaS platform that
-                      effortlessly fits into your workflow, allowing you to
-                      develop backends quickly and easily, whatever your
-                      experience.
+                      Even a simple app requires many skills to build, deploy
+                      and manage.{' '}
                     </p>
 
                     <p>
-                      As an <strong>open source</strong> product, We are
-                      committed to continuously improving Manifest through
-                      collaboration and community feedback, ensuring it always
-                      meets your needs.
+                      Our mission is to allow people to{' '}
+                      <strong>create backends effortlessly</strong>, whatever
+                      their experience. Manifest can be a good pick for anyone:
+                      a developer that doesn't have the backend skills to do it
+                      otherwise, or a senior developer that knows that it is the
+                      fastest way to create a backend.
                     </p>
+
+                    <p>
+                      Manifest is a <strong>free and open source</strong>{' '}
+                      product embracing the core values of open source software
+                      development: transparency, improvement through
+                      collaboration and community feedback, and freedom of usage
+                      and modification.
+                    </p>
+
                     <div className="fixed-grid has-2-cols has-1-cols-mobile">
                       <div className="links-grid-container grid my-5">
                         <div className="links-grid-item cell">
@@ -433,6 +444,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
+                    <hr className="mb-2" />
                   </div>
                 </div>
                 <div className="column is-4">
@@ -441,153 +453,186 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="column is-8">
-                  <div className="content is-normal">
+                  <div className="content is-normal is-aligned-to-h3">
                     <p>
-                      Since we went live with the PoC, you've shown great
-                      enthusiasm. We're now developing the product further with
-                      the community. Here are the upcoming features:
+                      Manifest is in BETA version and we are currently
+                      developing the stable product version with the community.
+                      Here are the upcoming features:
                     </p>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight has-border-gradient is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <div className="icon-text">
+                              <div className="icon">
+                                <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                              </div>
+                              <h4>PoC Manifest</h4>
+                            </div>
+                            <p>
+                              A backend that fits into 1 yaml file. Basic
+                              concets and features.
+                            </p>
                           </div>
-                          <h4>PoC Manifest</h4>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q2 2024</span>
+                          </p>
                         </div>
-                        <p>
-                          A backend that fits into 1 yaml file. Basic concets
-                          and features.
-                        </p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q2 2024</span>
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight has-border-gradient is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <div className="icon-text">
+                              <div className="icon">
+                                <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                              </div>
+                              <h4>OpenAPI Swagger UI</h4>
+                            </div>
+                            <p>
+                              Detailed API doc to help you understand and
+                              integrate with Manifest easily.
+                            </p>
                           </div>
-                          <h4>OpenAPI Swagger UI</h4>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q3 2024</span>
+                          </p>
                         </div>
-                        <p>
-                          Detailed API doc to help you understand and integrate
-                          with Manifest easily.
-                        </p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q3 2024</span>
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <h4>Auth</h4>
-                        <p>
-                          Create authenticatable entities to signup and
-                          authenticate. Restrict entry points with API rules.
-                        </p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q3 2024</span>
-                        </p>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <h4>Auth</h4>
+                            <p>
+                              Create authenticatable entities to signup and
+                              authenticate. Restrict entry points with API
+                              rules.
+                            </p>
+                          </div>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q3 2024</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <h4>Many to many relations</h4>
-                        <p>
-                          Enables data relationships with many-to-many
-                          associations.
-                        </p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q4 2024</span>
-                        </p>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <h4>Many to many relations</h4>
+                            <p>
+                              Enables data relationships with many-to-many
+                              associations.
+                            </p>
+                          </div>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q4 2024</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <h4>Hook</h4>
-                        <p>
-                          This release will allow you to add your own hooks. You
-                          will be able to create custom features like
-                          notifications and emails.
-                        </p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q4 2024</span>
-                        </p>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <h4>Hook</h4>
+                            <p>
+                              This release will allow you to add your own hooks.
+                              You will be able to create custom features like
+                              notifications and emails.
+                            </p>
+                          </div>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q4 2024</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <h4>File & image upload</h4>
-                        <p>
-                          Seamlessly upload and manage files and images, either
-                          locally or using S3.
-                        </p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q4 2024</span>
-                        </p>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <h4>File & image upload</h4>
+                            <p>
+                              Seamlessly upload and manage files and images,
+                              either locally or using S3.
+                            </p>
+                          </div>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q4 2024</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <h4>Required fields</h4>
-                        <p>Add specific validators to your fields.</p>
-                        <p className="has-text-right has-text-grey-light is-size-6">
-                          <span>Q4 2024</span>
-                        </p>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <h4>Required fields</h4>
+                            <p>Add specific validators to your fields.</p>
+                          </div>
+                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                            <span>Q4 2024</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-3">
+                <div className="column is-4-tablet is-3-widescreen ">
                   <div className="card is-fullheight is-shadowless has-background-white-bis">
-                    <div className="card-content p-6">
-                      <div className="content">
-                        <h4>Feature request</h4>
-                        <p>
-                          Provide feedback and ask for the next features or
-                          enhancements!
-                        </p>
-                        <p>
-                          <a
-                            target="_blank"
-                            href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
-                            className="button is-dark is-small"
-                          >
-                            <span>Suggest features</span>
-                            <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
-                          </a>
-                        </p>
+                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                      <div className="content is-fullheight">
+                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                          <div>
+                            <h4>Feature request</h4>
+                            <p>
+                              Provide feedback and ask for the next features or
+                              enhancements!
+                            </p>
+                          </div>
+                          <p>
+                            <a
+                              target="_blank"
+                              href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
+                              className="button is-dark is-small"
+                            >
+                              <span>Suggest features</span>
+                              <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
+                            </a>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -906,18 +951,28 @@ export default function Home() {
               <div className="columns">
                 <div className="column is-6">
                   <div className="content is-size-6">
-                    <h3 className="title is-3">About us</h3>
+                    <h3 className="title is-3">Who we are</h3>
                     <p>
-                      Manifest was founded by a team passionate about
-                      development and open source. After years of developing
-                      custom software, we saw the need to simplify the backend.
-                      We hope to build an enthusiastic community that joins our
-                      journey and shares our vision: Enabling everyone to create
-                      and share innovative tools 💫.
+                      Bonjour! We are Sébastien and Bruno, 2 childhood friends
+                      from France passionate about our work. 🫶
+                    </p>
+
+                    <p>
+                      We know the backend struggle as we have been developing
+                      together for the last 13 years for top companies and
+                      organisations.
+                    </p>
+
+                    <p>
+                      Wanna get in touch? Reach any of us through our{' '}
+                      <a href="https://discord.gg/FepAked3W7" target="_blank">
+                        Discord channel
+                      </a>
+                      .
                     </p>
                   </div>
                 </div>
-                <div className="column is-5 is-offset-1 is-flex is-justify-content-space-around">
+                <div className="pic-founders column is-6-tablet is-5-desktop is-offset-1-desktop is-flex is-justify-content-space-evenly">
                   <div className="is-flex is-align-items-center is-justify-content-flex-start founder-card is-flex-direction-column">
                     <Image
                       src="/assets/images/bruno.jpg"
@@ -949,7 +1004,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="is-flex is-align-items-center is-justify-content-flex-start founder-card is-flex-direction-column">
-                    <div className="content is-size-6 is-flex is-align-items-center is-justify-content-flex-start is-flex-direction-column">
+                    <div className="content is-size-6 is-flex is-align-items-center is-justify-content-flex-start is-flex-direction-column mb-0">
                       <span className="has-text-weight-bold">
                         Sébastien Conejo
                       </span>
