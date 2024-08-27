@@ -968,10 +968,6 @@ pre {
 .npx-wrapper {
   position: relative;
 
-  @include mixins.mobile {
-    width: 100%;
-  }
-
   .is-copied {
     position: absolute;
     opacity: 0;
@@ -1480,14 +1476,26 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .founder-card {
-  gap: $gap;
-  img {
-    transform: rotate(-3deg);
-  }
+  gap: $column-gap;
+  transform: rotate(-3deg);
 
   + .founder-card {
-    img {
-      transform: rotate(3deg);
-    }
+    transform: rotate(3deg);
+  }
+}
+
+.is-aligned-to-h3 {
+  @include mixins.desktop {
+    margin-top: 9px;
+  }
+}
+
+.is-box-sizing-border-box {
+  box-sizing: border-box;
+}
+
+.pic-founders {
+  @include mixins.touch {
+    margin-top: $gap;
   }
 }
