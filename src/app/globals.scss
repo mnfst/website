@@ -1275,6 +1275,17 @@ button,
   }
 }
 
+.notification {
+  background: radial-gradient(
+    circle at 50% 120%,
+    #74ebd5,
+    #73ebd6,
+    #6debe1,
+    #5bd4ed,
+    #3e87ee,
+    #2c4cf0
+  );
+}
 .content ul.no-lst {
   margin: 0;
   padding: 0;
@@ -1477,14 +1488,12 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .newsletter-box {
-  
   @include mixins.mobile {
     gap: $column-gap;
     flex-direction: column;
   }
   @include mixins.tablet {
     gap: utilities.$gap;
-
   }
 }
 

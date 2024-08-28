@@ -342,7 +342,7 @@ export default function Home() {
             </div>
           </div>
           <div className="container-fluid has-background-white-bis">
-            <div className="container py-7">
+            <div className="container pt-7 pb-6 mb-5">
               <div className="columns is-multiline">
                 <div className="column is-4">
                   <div className="content is-normal">
@@ -639,7 +639,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="column is-12 has-text-centered">
-                  <div className="is-flex is-align-items-center is-justify-content-center newsletter-box">
+                  <div className="is-flex is-align-items-center is-justify-content-center newsletter-box mt-6">
                     <span className="icon-text">
                       <span className="icon">
                         <i className="lni lni-envelope"></i>
