@@ -341,318 +341,315 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="container-fluid has-background-white-bis">
-            <div className="container pt-7 pb-6 mb-5">
-              <div className="columns is-multiline">
-                <div className="column is-4">
-                  <div className="content is-normal">
-                    <h3 className="title is-3">Why Manifest</h3>
-                  </div>
+        </div>
+        <div className="container-fluid">
+          <div className="container pt-7 pb-6 mb-5">
+            <div className="columns is-multiline">
+              <div className="column is-4">
+                <div className="content is-normal">
+                  <h3 className="title is-3">Why Manifest</h3>
                 </div>
-                <div className="column is-8 ">
-                  <div className="content is-normal is-aligned-to-h3">
-                    <p>Let's be honest... Backends are complex.</p>
+              </div>
+              <div className="column is-8 ">
+                <div className="content is-normal is-aligned-to-h3">
+                  <p>Let's be honest... Backends are complex.</p>
 
-                    <p>
-                      Even a simple app requires many skills to build, deploy
-                      and manage.{' '}
-                    </p>
+                  <p>
+                    Even a simple app requires many skills to build, deploy and
+                    manage.{' '}
+                  </p>
 
-                    <p>
-                      Our mission is to allow people to{' '}
-                      <strong>create backends effortlessly</strong>, whatever
-                      their experience. Manifest can be a good pick for anyone:
-                      a developer that doesn't have the backend skills to do it
-                      otherwise, or a senior developer that knows that it is the
-                      fastest way to create a backend.
-                    </p>
+                  <p>
+                    Our mission is to allow people to{' '}
+                    <strong>create backends effortlessly</strong>, whatever
+                    their experience. Manifest can be a good pick for anyone: a
+                    developer that doesn't have the backend skills to do it
+                    otherwise, or a senior developer that knows that it is the
+                    fastest way to create a backend.
+                  </p>
 
-                    <p>
-                      Manifest is a <strong>free and open source</strong>{' '}
-                      product embracing the core values of open source software
-                      development: transparency, improvement through
-                      collaboration and community feedback, and freedom of usage
-                      and modification.
-                    </p>
+                  <p>
+                    Manifest is a <strong>free and open source</strong> product
+                    embracing the core values of open source software
+                    development: transparency, improvement through collaboration
+                    and community feedback, and freedom of usage and
+                    modification.
+                  </p>
 
-                    <div className="fixed-grid has-2-cols has-1-cols-mobile">
-                      <div className="links-grid-container grid my-5">
-                        <div className="links-grid-item cell">
-                          <a
-                            href="https://github.com/mnfst/manifest/"
-                            target="_blank"
-                          >
-                            <span className="icon-text">
-                              <span>Source code on Github</span>
-                              <span className="icon">
-                                <i className="lni lni-arrow-right"></i>
-                              </span>
+                  <div className="fixed-grid has-2-cols has-1-cols-mobile">
+                    <div className="links-grid-container grid my-5">
+                      <div className="links-grid-item cell">
+                        <a
+                          href="https://github.com/mnfst/manifest/"
+                          target="_blank"
+                        >
+                          <span className="icon-text">
+                            <span>Source code on Github</span>
+                            <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
                             </span>
-                          </a>
-                        </div>
-                        <div className="links-grid-item cell">
-                          <a
-                            href="https://discord.gg/FepAked3W7"
-                            target="_blank"
-                          >
-                            <span className="icon-text">
-                              <span>Join the community on Discord</span>
-                              <span className="icon">
-                                <i className="lni lni-arrow-right"></i>
-                              </span>
+                          </span>
+                        </a>
+                      </div>
+                      <div className="links-grid-item cell">
+                        <a href="https://discord.gg/FepAked3W7" target="_blank">
+                          <span className="icon-text">
+                            <span>Join the community on Discord</span>
+                            <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
                             </span>
-                          </a>
-                        </div>
-                        <div className="links-grid-item cell">
-                          <a
-                            href="https://github.com/mnfst/manifest/issues/new?assignees=SebConejo&labels=bug&projects=&template=%F0%9F%90%9B-bug-report.md&title="
-                            target="_blank"
-                          >
-                            <span className="icon-text">
-                              <span>Report an issue</span>
-                              <span className="icon">
-                                <i className="lni lni-arrow-right"></i>
-                              </span>
+                          </span>
+                        </a>
+                      </div>
+                      <div className="links-grid-item cell">
+                        <a
+                          href="https://github.com/mnfst/manifest/issues/new?assignees=SebConejo&labels=bug&projects=&template=%F0%9F%90%9B-bug-report.md&title="
+                          target="_blank"
+                        >
+                          <span className="icon-text">
+                            <span>Report an issue</span>
+                            <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
                             </span>
-                          </a>
-                        </div>
-                        <div className="links-grid-item cell">
-                          <a
-                            href="https://github.com/mnfst/manifest/discussions/categories/announcements"
-                            target="_blank"
-                          >
-                            <span className="icon-text">
-                              <span>Announcements</span>
-                              <span className="icon">
-                                <i className="lni lni-arrow-right"></i>
-                              </span>
+                          </span>
+                        </a>
+                      </div>
+                      <div className="links-grid-item cell">
+                        <a
+                          href="https://github.com/mnfst/manifest/discussions/categories/announcements"
+                          target="_blank"
+                        >
+                          <span className="icon-text">
+                            <span>Announcements</span>
+                            <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
                             </span>
-                          </a>
-                        </div>
-                        <div className="links-grid-item cell">
-                          <a
-                            href="#https://github.com/mnfst/manifest/discussions/new?category=show-tell"
-                            target="_blank"
-                          >
-                            <span className="icon-text">
-                              <span>Showcase your Manifest creation.</span>
-                              <span className="icon">
-                                <i className="lni lni-arrow-right"></i>
-                              </span>
+                          </span>
+                        </a>
+                      </div>
+                      <div className="links-grid-item cell">
+                        <a
+                          href="#https://github.com/mnfst/manifest/discussions/new?category=show-tell"
+                          target="_blank"
+                        >
+                          <span className="icon-text">
+                            <span>Showcase your Manifest creation.</span>
+                            <span className="icon">
+                              <i className="lni lni-arrow-right"></i>
                             </span>
-                          </a>
-                        </div>
+                          </span>
+                        </a>
                       </div>
                     </div>
-                    <hr className="mb-5 mt-6" />
                   </div>
+                  <hr className="mb-5 mt-6" />
                 </div>
-                <div className="column is-4">
-                  <div className="content is-normal">
-                    <h3 className="title is-3">Roadmap</h3>
-                  </div>
+              </div>
+              <div className="column is-4">
+                <div className="content is-normal">
+                  <h3 className="title is-3">Roadmap</h3>
                 </div>
-                <div className="column is-8 mb-6">
-                  <div className="content is-normal is-aligned-to-h3">
-                    <p>
-                      Manifest is in BETA version and we are currently
-                      developing the stable product version with the community.
-                      Here are the upcoming features:
-                    </p>
-                  </div>
+              </div>
+              <div className="column is-8 mb-6">
+                <div className="content is-normal is-aligned-to-h3">
+                  <p>
+                    Manifest is in BETA version and we are currently developing
+                    the stable product version with the community. Here are the
+                    upcoming features:
+                  </p>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight has-border-gradient is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <div className="icon-text">
-                              <div className="icon">
-                                <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                              </div>
-                              <h4>PoC Manifest</h4>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight has-border-gradient is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <div className="icon-text">
+                            <div className="icon">
+                              <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
                             </div>
-                            <p>
-                              A backend that fits into 1 yaml file. Basic
-                              concets and features.
-                            </p>
+                            <h4>PoC Manifest</h4>
                           </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q2 2024</span>
+                          <p>
+                            A backend that fits into 1 yaml file. Basic concets
+                            and features.
                           </p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q2 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight has-border-gradient is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <div className="icon-text">
-                              <div className="icon">
-                                <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                              </div>
-                              <h4>OpenAPI Swagger UI</h4>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight has-border-gradient is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <div className="icon-text">
+                            <div className="icon">
+                              <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
                             </div>
-                            <p>
-                              Detailed API doc to help you understand and
-                              integrate with Manifest easily.
-                            </p>
+                            <h4>OpenAPI Swagger UI</h4>
                           </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q3 2024</span>
+                          <p>
+                            Detailed API doc to help you understand and
+                            integrate with Manifest easily.
                           </p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q3 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <h4>Auth</h4>
-                            <p>
-                              Create authenticatable entities to signup and
-                              authenticate. Restrict entry points with API
-                              rules.
-                            </p>
-                          </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q3 2024</span>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>Auth</h4>
+                          <p>
+                            Create authenticatable entities to signup and
+                            authenticate. Restrict entry points with API rules.
                           </p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q3 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <h4>Many to many relations</h4>
-                            <p>
-                              Enables data relationships with many-to-many
-                              associations.
-                            </p>
-                          </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q4 2024</span>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>Many to many relations</h4>
+                          <p>
+                            Enables data relationships with many-to-many
+                            associations.
                           </p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q4 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <h4>Hook</h4>
-                            <p>
-                              This release will allow you to add your own hooks.
-                              You will be able to create custom features like
-                              notifications and emails.
-                            </p>
-                          </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q4 2024</span>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>Hook</h4>
+                          <p>
+                            This release will allow you to add your own hooks.
+                            You will be able to create custom features like
+                            notifications and emails.
                           </p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q4 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <h4>File & image upload</h4>
-                            <p>
-                              Seamlessly upload and manage files and images,
-                              either locally or using S3.
-                            </p>
-                          </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q4 2024</span>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>File & image upload</h4>
+                          <p>
+                            Seamlessly upload and manage files and images,
+                            either locally or using S3.
                           </p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q4 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight is-shadowless">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <h4>Required fields</h4>
-                            <p>Add specific validators to your fields.</p>
-                          </div>
-                          <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                            <span>Q4 2024</span>
-                          </p>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>Required fields</h4>
+                          <p>Add specific validators to your fields.</p>
                         </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q4 2024</span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-4-tablet is-3-widescreen ">
-                  <div className="card is-fullheight is-shadowless has-background-white-bis">
-                    <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                      <div className="content is-fullheight">
-                        <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                          <div>
-                            <h4>Feature request</h4>
-                            <p>
-                              Provide feedback and ask for the next features or
-                              enhancements!
-                            </p>
+              </div>
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless has-background-transparent">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>Feature request</h4>
+                          <p>
+                            Provide feedback and ask for the next features or
+                            enhancements!
+                          </p>
 
-                            <p>
-                              <a
-                                target="_blank"
-                                href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
-                                className="button is-dark is-small"
-                              >
-                                <span>Suggest features</span>
-                                <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
-                              </a>
-                            </p>
-                          </div>
+                          <p>
+                            <a
+                              target="_blank"
+                              href="https://github.com/mnfst/manifest/discussions/new?category=feature-request"
+                              className="button is-dark is-small"
+                            >
+                              <span>Suggest features</span>
+                              <i className="lni lni-arrow-right ml-2 has-text-weight-bold"></i>
+                            </a>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="column is-12 has-text-centered">
-                  <div className="is-flex is-align-items-center is-justify-content-center newsletter-box mt-6">
-                    <span className="icon-text">
-                      <span className="icon">
-                        <i className="lni lni-envelope"></i>
-                      </span>
-                      <span>Get notified at the next milestone</span>
+              </div>
+              <div className="column is-12 has-text-centered">
+                <div className="is-flex is-align-items-center is-justify-content-center newsletter-box mt-6">
+                  <span className="icon-text">
+                    <span className="icon">
+                      <i className="lni lni-envelope"></i>
                     </span>
-                    <SubscribeForm />
-                  </div>
+                    <span>Get notified at the next milestone</span>
+                  </span>
+                  <SubscribeForm />
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div className="container-full has-background-dark has-text-white">
           <div className="py-7 content">
             <div className="container">

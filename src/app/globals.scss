@@ -80,7 +80,11 @@ $gap: 2rem !default;
 @forward 'bulma/sass/themes';
 
 @import 'lineicons/web-font/lineicons.css';
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=SPermanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Permanent+Marker&display=swap');
+
+.has-background-transparent {
+  background-color: transparent;
+}
 
 .column {
   display: block;
@@ -872,6 +876,8 @@ input[type='email'] {
 
 html,
 body {
+  background-image: url('/assets/images/bg-grid.svg');
+
   overflow-x: hidden !important;
 }
 
