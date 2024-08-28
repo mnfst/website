@@ -472,7 +472,7 @@ export default function Home() {
                             <h4>PoC Manifest</h4>
                           </div>
                           <p>
-                            A backend that fits into 1 yaml file. Basic concets
+                            A backend that fits into 1 yaml file. Basic concepts
                             and features.
                           </p>
                         </div>
@@ -1065,13 +1065,13 @@ export default function Home() {
                       </a>
                     </li>
                     <li>
-                        <a
-                          href="https://github.com/mnfst/manifest/blob/master/CONTRIBUTING.md"
-                          target="_blank"
-                        >
-                          Contributor Docs
-                        </a>
-                      </li>
+                      <a
+                        href="https://github.com/mnfst/manifest/blob/master/CONTRIBUTING.md"
+                        target="_blank"
+                      >
+                        Contributor Docs
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
