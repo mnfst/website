@@ -1130,7 +1130,7 @@ export default function Home() {
                           <i className="lni lni-heart-fill is-size-6"></i>
                         </span>
                         <a
-                          href="https://opencollective.com/manifest"
+                          href="https://opencollective.com/mnfst"
                           target="_blank"
                         >
                           Support us
