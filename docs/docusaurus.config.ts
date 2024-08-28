@@ -96,6 +96,10 @@ const config: Config = {
             {
               label: 'Developer Docs',
               to: '/'
+            },
+            {
+              label: 'Contributor Docs',
+              to: 'https://github.com/mnfst/manifest/blob/master/CONTRIBUTING.md'
             }
           ]
         },
