@@ -1067,12 +1067,6 @@ export default function Home() {
                         Developer Docs
                       </a>
                     </li>
-                    <li>
-                      <span className="mr-2 has-text-grey">
-                        Contributor Docs
-                      </span>
-                      <span className="tag is-small is-dark">Coming soon</span>
-                    </li>
                   </ul>
                 </div>
               </div>
