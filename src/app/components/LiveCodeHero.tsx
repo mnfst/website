@@ -3,7 +3,7 @@ import './LiveCodeHero.scss'
 
 const LiveCodeHero: React.FC = () => {
     return (
-        <div className="box-wrapper has-background-glass">
+        <div className="box-wrapper has-background-glass has-border-gradient">
             <span className="cc-dark"><i className="lni lni-remove-file "></i> backend.yml</span>
             <pre className="mt-4">
                 <code className="javascript">

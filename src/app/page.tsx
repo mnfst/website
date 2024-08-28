@@ -82,7 +82,7 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="my-6 py-3">
+        <div className="mt-6 pt-4 mb-7">
           <div className="container zi-1">
             <div className="columns is-multiline">
               <div className="column is-6-tablet">
@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="column is-5-tablet is-offset-1-tablet">
-                <div className="content is-normal  mb-6 pb-2">
+                <div className="content is-normal  mb-6">
                   <p>A backend so simple that it fits in a single YAML file</p>
 
                   <InstallCLI />
