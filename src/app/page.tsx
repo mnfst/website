@@ -1064,6 +1064,14 @@ export default function Home() {
                         Developer Docs
                       </a>
                     </li>
+                    <li>
+                        <a
+                          href="https://github.com/mnfst/manifest/blob/master/CONTRIBUTING.md"
+                          target="_blank"
+                        >
+                          Contributor Docs
+                        </a>
+                      </li>
                   </ul>
                 </div>
               </div>
