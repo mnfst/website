@@ -15,7 +15,7 @@ npm run dev
 
 The documentation website is located in the `/docs` directory and built with [Docusaurus](https://docusaurus.io/).
 
-The content of the documentation itself is located in [its own repository](https://github.com/casejs/docs) and fetched with the `npm run fetch-content` command that clones it.
+The content of the documentation itself is located in [its own repository](https://github.com/mnfst/docs) and fetched with the `npm run fetch-content` command that clones it.
 
 ```
 cd docs
