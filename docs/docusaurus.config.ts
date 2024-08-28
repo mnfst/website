@@ -96,9 +96,6 @@ const config: Config = {
             {
               label: 'Developer Docs',
               to: '/'
-            },
-            {
-              html: '<span>Contributor Docs <span class="badge badge--primary">Coming soon</span></span>'
             }
           ]
         },
