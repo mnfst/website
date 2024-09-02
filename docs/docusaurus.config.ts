@@ -40,7 +40,7 @@ const config: Config = {
 
           // Remove this to remove the "edit this page" links.
           editUrl: ({ versionDocsDirPath, docPath }) => {
-            const baseUrl = 'https://github.com/casejs/docs/blob/master/'
+            const baseUrl = 'https://github.com/mnfst/docs/blob/master/'
             // Enlève 'content/' du chemin pour correspondre à la structure du repo GitHub
             const newDocPath = docPath.replace(/^content\//, '')
             return baseUrl + newDocPath
@@ -68,7 +68,7 @@ const config: Config = {
     announcementBar: {
       id: 'poc-banner',
       content:
-        '🚀 Manifest is in PoC, and we need your feedback to validate this backend approach. Try it out and share your thoughts on our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a>.',
+        '🚀 Manifest is in BETA version. Give it a try and let us know what you think via our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a>.',
       backgroundColor: '#0a15b7',
       textColor: '#fff',
       isCloseable: false
@@ -98,7 +98,8 @@ const config: Config = {
               to: '/'
             },
             {
-              html: '<span>Contributor Docs <span class="badge badge--primary">Coming soon</span></span>'
+              label: 'Contributor Docs',
+              to: 'https://github.com/mnfst/manifest/blob/master/CONTRIBUTING.md'
             }
           ]
         },
