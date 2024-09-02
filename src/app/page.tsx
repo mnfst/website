@@ -510,7 +510,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="column is-4-tablet is-3-widescreen ">
-                <div className="card is-fullheight is-shadowless">
+                <div className="card is-fullheight has-border-gradient is-shadowless">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
                     <div className="content is-fullheight">
                       <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -555,7 +555,7 @@ export default function Home() {
                     <div className="content is-fullheight">
                       <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                         <div>
-                          <h4>Hook</h4>
+                          <h4>Hooks</h4>
                           <p>
                             This release will allow you to add your own hooks.
                             You will be able to create custom features like
@@ -596,8 +596,8 @@ export default function Home() {
                     <div className="content is-fullheight">
                       <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                         <div>
-                          <h4>Required fields</h4>
-                          <p>Add specific validators to your fields.</p>
+                          <h4>Validation</h4>
+                          <p>Add Custom validators to your fields.</p>
                         </div>
                         <p className="has-text-right has-text-grey-light is-size-7 mt-4">
                           <span>Q4 2024</span>
