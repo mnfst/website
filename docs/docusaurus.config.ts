@@ -68,7 +68,7 @@ const config: Config = {
     announcementBar: {
       id: 'poc-banner',
       content:
-        '🚀 Manifest is in BETA version. Give it a try and let us know what you think on our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a>.',
+        '🚀 Manifest is in BETA version. Give it a try and let us know what you think via our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a>.',
       backgroundColor: '#0a15b7',
       textColor: '#fff',
       isCloseable: false
