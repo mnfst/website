@@ -45,6 +45,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'relations'
+        },
+        {
+          type: 'doc',
+          id: 'validation'
         }
       ]
     },
