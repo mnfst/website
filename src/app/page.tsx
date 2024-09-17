@@ -105,7 +105,7 @@ export default function Home() {
                   <div className="mt-4">
                     <a
                       className="ghost is-block"
-                      href="https://stackblitz.com/fork/github/mnfst/manifest/tree/feature/demo-stackblitz/examples/main-demo?file=manifest/backend.yml"
+                      href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml"
                       target="_blank"
                     >
                       <img
