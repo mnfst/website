@@ -1551,3 +1551,21 @@ main .content a:not(.button):not(.icon-text) {
 .icon-sb {
   width: 16px;
 }
+
+.backed-by-wrapper {
+  @include mixins.mobile {
+    flex-direction: column;
+
+    .backed-by-logos {
+      margin-top: 0.5rem;
+    }
+
+    .logo-hec {
+      max-width: 50%;
+    }
+
+    .logo-sf {
+      max-width: 70px;
+    }
+  }
+}
