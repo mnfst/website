@@ -82,7 +82,7 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="mt-6 pt-4 mb-7">
+        <div className="mt-6 pt-4 mb-6">
           <div className="container zi-1">
             <div className="columns is-multiline">
               <div className="column is-6-tablet">
@@ -120,6 +120,25 @@ export default function Home() {
               </div>
               <div className="column is-12">
                 <LiveCodeHero />
+              </div>
+              <div className="column is-12 has-text-centered">
+                <div className="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mt-4">
+                  <span className="is-size-7">Backed by:</span>
+                  <div className="backed-by-logos is-flex is-align-items-center is-justify-content-center">
+                    <img
+                      src="./assets/images/hec-incubateur.svg"
+                      alt="HEC Incubateur logo"
+                      width="234px"
+                      className="logo-hec mx-4"
+                    />
+                    <img
+                      src="./assets/images/station-f-logo.svg"
+                      alt="Station F logo"
+                      width="99px"
+                      className="logo-sf mx-4 mb-2"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -529,6 +548,25 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              {/* Valid */}
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>Validation</h4>
+                          <p>Add Custom validators to your fields.</p>
+                        </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q4 2024</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Many */}
               <div className="column is-4-tablet is-3-widescreen ">
                 <div className="card is-fullheight is-shadowless">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
@@ -590,23 +628,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="column is-4-tablet is-3-widescreen ">
-                <div className="card is-fullheight is-shadowless">
-                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                    <div className="content is-fullheight">
-                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                        <div>
-                          <h4>Validation</h4>
-                          <p>Add Custom validators to your fields.</p>
-                        </div>
-                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                          <span>Q4 2024</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <div className="column is-4-tablet is-3-widescreen ">
                 <div className="card is-fullheight is-shadowless has-background-transparent">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
