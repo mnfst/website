@@ -1556,6 +1556,9 @@ main .content a:not(.button):not(.icon-text) {
   @include mixins.mobile {
     flex-direction: column;
 
+    .idf-sf {
+      margin-top: 1rem;
+    }
     .backed-by-logos {
       margin-top: 0.5rem;
     }
