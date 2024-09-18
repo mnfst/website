@@ -8,5 +8,5 @@
     "statusBarItem.remoteForeground": "#e7e7e7"
   },
   "peacock.color": "#2e38fe",
-  "cSpell.words": ["hotjar"]
+  "cSpell.words": ["authenticable", "hotjar", "signup"]
 }

@@ -105,7 +105,7 @@ export default function Home() {
                   <div className="mt-4">
                     <a
                       className="ghost is-block"
-                      href="https://stackblitz.com/fork/github/mnfst/manifest/tree/feature/demo-stackblitz/examples/main-demo?file=manifest/backend.yml"
+                      href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml"
                       target="_blank"
                     >
                       <img
@@ -124,6 +124,12 @@ export default function Home() {
               <div className="column is-12 has-text-centered">
                 <div className="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mt-4">
                   <span className="is-size-7">Backed by:</span>
+                  <img
+                    src="./assets/images/idf-logo.svg"
+                    alt="IDF logo"
+                    width="130px"
+                    className="idf-sf mx-4 mb-2"
+                  />
                   <div className="backed-by-logos is-flex is-align-items-center is-justify-content-center">
                     <img
                       src="./assets/images/hec-incubateur.svg"

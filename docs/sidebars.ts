@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '📄 Create your backend',
+      label: '📦 Entities and Properties',
       items: [
         {
           type: 'doc',
@@ -45,6 +45,20 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'relations'
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: '🔒 Auth and Access Control',
+      items: [
+        {
+          type: 'doc',
+          id: 'authentication'
+        },
+        {
+          type: 'doc',
+          id: 'policies'
         }
       ]
     },
