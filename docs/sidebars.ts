@@ -28,12 +28,8 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '📦 Entities and Properties',
+      label: '📦 Your data',
       items: [
-        {
-          type: 'doc',
-          id: 'manifest-file'
-        },
         {
           type: 'doc',
           id: 'entities'
