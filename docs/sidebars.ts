@@ -76,6 +76,16 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'upload'
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: '🎓 Tutorials',
+      items: [
+        {
+          type: 'doc',
           id: 'react'
         },
         {
