@@ -1339,6 +1339,10 @@ main .content a:not(.button):not(.icon-text) {
   font-size: $size-8;
 }
 
+.tag--title {
+  position: relative;
+  bottom: 2px;
+}
 .footer-logo {
   position: relative;
   margin: auto;
