@@ -556,7 +556,7 @@ export default function Home() {
               </div>
               {/* Valid */}
               <div className="column is-4-tablet is-3-widescreen ">
-                <div className="card is-fullheight is-shadowless">
+                <div className="card is-fullheight has-border-gradient is-shadowless">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
                     <div className="content is-fullheight">
                       <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -574,7 +574,7 @@ export default function Home() {
               </div>
               {/* Many */}
               <div className="column is-4-tablet is-3-widescreen ">
-                <div className="card is-fullheight is-shadowless">
+                <div className="card is-fullheight has-border-gradient is-shadowless">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
                     <div className="content is-fullheight">
                       <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -594,28 +594,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="column is-4-tablet is-3-widescreen ">
-                <div className="card is-fullheight is-shadowless">
-                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
-                    <div className="content is-fullheight">
-                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
-                        <div>
-                          <h4>Hooks</h4>
-                          <p>
-                            This release will allow you to add your own hooks.
-                            You will be able to create custom features like
-                            notifications and emails.
-                          </p>
-                        </div>
-                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                          <span>Q4 2024</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="column is-4-tablet is-3-widescreen ">
-                <div className="card is-fullheight is-shadowless">
+                <div className="card is-fullheight has-border-gradient is-shadowless">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
                     <div className="content is-fullheight">
                       <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -634,7 +613,32 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
+              <div className="column is-4-tablet is-3-widescreen ">
+                <div className="card is-fullheight is-shadowless">
+                  <div className="card-content p-6 is-box-sizing-border-box is-fullheight">
+                    <div className="content is-fullheight">
+                      <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                        <div>
+                          <h4>
+                            Hooks{' '}
+                            <span className="tag is-dark is-small tag--title">
+                              Coming soon
+                            </span>
+                          </h4>
+                          <p>
+                            This release will allow you to add your own hooks.
+                            You will be able to create custom features like
+                            notifications and emails.
+                          </p>
+                        </div>
+                        <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                          <span>Q4 2024</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="column is-4-tablet is-3-widescreen ">
                 <div className="card is-fullheight is-shadowless has-background-transparent">
                   <div className="card-content p-6 is-box-sizing-border-box is-fullheight">

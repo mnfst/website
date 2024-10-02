@@ -28,12 +28,8 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '📦 Entities and Properties',
+      label: '📦 Your data',
       items: [
-        {
-          type: 'doc',
-          id: 'manifest-file'
-        },
         {
           type: 'doc',
           id: 'entities'
@@ -45,6 +41,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'relations'
+        },
+        {
+          type: 'doc',
+          id: 'validation'
         }
       ]
     },
@@ -74,6 +74,16 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'rest-api'
         },
+        {
+          type: 'doc',
+          id: 'upload'
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: '🎓 Tutorials',
+      items: [
         {
           type: 'doc',
           id: 'react'
