@@ -731,27 +731,59 @@ export default function Home() {
                         <a
                           className="has-text-white"
                           target="_blank"
-                          href="https://news.ycombinator.com/item?id=40551318"
+                          href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
                         >
-                          @kiwicopple
+                          @permarad
                         </a>
                         <a
-                          href="https://news.ycombinator.com/item?id=40551318"
+                          href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
                           target="_blank"
                           className="ghost"
                         >
                           <Image
-                            src="/assets/images/yc.svg"
+                            src="/assets/images/reddit.svg"
                             width={24}
                             height={24}
-                            alt="on Hackernews"
+                            alt="on Reddit"
                             loading="lazy"
                           />
                         </a>
                       </div>
                       <p className="has-text-white">
-                        Congrats on shipping, this looks nice and well
-                        thought-out.
+                        kudos, this is very cool. i thought pocketbase was
+                        simple. this is very very simple. I love simple.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="masonry-item card has-background-black-ter is-shadowless">
+                  <div className="card-content">
+                    <div className="content">
+                      <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                        <a
+                          className="has-text-white"
+                          target="_blank"
+                          href="https://discord.com/channels/457912077277855764/1293155391513034802"
+                        >
+                          @Revan
+                        </a>
+                        <a
+                          href="https://discord.com/channels/457912077277855764/1293155391513034802"
+                          target="_blank"
+                          className="ghost"
+                        >
+                          <Image
+                            src="/assets/images/discord.svg"
+                            width={24}
+                            height={24}
+                            alt="on Discord"
+                            loading="lazy"
+                          />
+                        </a>
+                      </div>
+                      <p className="has-text-white">
+                        Wow I've never heard of manifest before now, it looks
+                        fascinating
                       </p>
                     </div>
                   </div>
@@ -790,7 +822,40 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
+                <div className="masonry-item card has-background-black-ter is-shadowless">
+                  <div className="card-content">
+                    <div className="content">
+                      <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                        <a
+                          className="has-text-white"
+                          target="_blank"
+                          href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                        >
+                          @huevoverde
+                        </a>
+                        <a
+                          href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                          target="_blank"
+                          className="ghost"
+                        >
+                          <Image
+                            src="/assets/images/reddit.svg"
+                            width={24}
+                            height={24}
+                            alt="on Reddit"
+                            loading="lazy"
+                          />
+                        </a>
+                      </div>
+                      <p className="has-text-white">
+                        It works! I like this a lot. I've been leaning into
+                        Pocketbase because it is easy and fairly complete with
+                        what I need. This is easier and more complete. Are you
+                        modeling this after something that exists already?
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 <div className="masonry-item card has-background-black-ter is-shadowless">
                   <div className="card-content">
                     <div className="content">
@@ -825,6 +890,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="masonry-item card has-background-black-ter is-shadowless">
                   <div className="card-content">
                     <div className="content">
@@ -845,7 +911,7 @@ export default function Home() {
                             src="/assets/images/discord.svg"
                             width={24}
                             height={24}
-                            alt="on Hackernews"
+                            alt="on Discord"
                             loading="lazy"
                           />
                         </a>
@@ -916,6 +982,70 @@ export default function Home() {
                       <p className="has-text-white">
                         Hello! Just started trying out Manifest for a personal
                         React project. Love the idea!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="masonry-item card has-background-black-ter is-shadowless">
+                  <div className="card-content">
+                    <div className="content">
+                      <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                        <a
+                          className="has-text-white"
+                          target="_blank"
+                          href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                        >
+                          @A_Norse_Dude
+                        </a>
+                        <a
+                          href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                          target="_blank"
+                          className="ghost"
+                        >
+                          <Image
+                            src="/assets/images/reddit.svg"
+                            width={24}
+                            height={24}
+                            alt="on Reddit"
+                            loading="lazy"
+                          />
+                        </a>
+                      </div>
+                      <p className="has-text-white">
+                        This seems nice! I will def. follow this, and jump on
+                        the bandwagon then you are out of beta 😎
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="masonry-item card has-background-black-ter is-shadowless">
+                  <div className="card-content">
+                    <div className="content">
+                      <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                        <a
+                          className="has-text-white"
+                          target="_blank"
+                          href="https://news.ycombinator.com/item?id=40551318"
+                        >
+                          @kiwicopple
+                        </a>
+                        <a
+                          href="https://news.ycombinator.com/item?id=40551318"
+                          target="_blank"
+                          className="ghost"
+                        >
+                          <Image
+                            src="/assets/images/yc.svg"
+                            width={24}
+                            height={24}
+                            alt="on Hackernews"
+                            loading="lazy"
+                          />
+                        </a>
+                      </div>
+                      <p className="has-text-white">
+                        Congrats on shipping, this looks nice and well
+                        thought-out.
                       </p>
                     </div>
                   </div>
