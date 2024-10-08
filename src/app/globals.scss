@@ -1525,6 +1525,10 @@ main .content a:not(.button):not(.icon-text) {
 .masonry-item {
   break-inside: avoid;
   margin-bottom: $gap;
+
+  img {
+    display: block;
+  }
 }
 
 .founder-card {
