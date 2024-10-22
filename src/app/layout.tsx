@@ -58,7 +58,7 @@ export default function RootLayout({
               aria-label="main navigation"
             >
               <div className="navbar-brand">
-                <a className="navbar-item">
+                <a className="navbar-item" href="/">
                   <img
                     src="/assets/images/logo-poc.svg"
                     alt="logo of manifest"
@@ -206,9 +206,7 @@ export default function RootLayout({
                           <span className="icon">
                             <i className="lni lni-arrow-right is-size-6"></i>
                           </span>
-                          <a href="/assets" target="_blank">
-                            Brand assets
-                          </a>
+                          <a href="/assets">Brand assets</a>
                         </span>
                       </li>
                     </ul>
