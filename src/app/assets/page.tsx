@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 
 // Métadonnées spécifiques à la page press-assets
 export const metadata: Metadata = {
-  title: 'Press Assets - Manifest',
-  description: 'Get Manifest Brand assets here.'
+  title: 'Brand assets - Manifest',
+  description: 'Get Manifest brand assets here.'
   // Autres métadonnées spécifiques
 }
 
@@ -15,7 +15,7 @@ export default function PressAssetsPage() {
           <div className="columns is-multiline">
             <div className="column is-8 is-offset-2">
               <div className="content">
-                <h1>Press assets</h1>
+                <h1>Brand assets</h1>
               </div>
             </div>
             <div className="column is-8 is-offset-2">
@@ -50,7 +50,7 @@ export default function PressAssetsPage() {
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                         <img
                           src="./assets/images/logotype-white.svg"
-                          alt="Dark Logo Manifest"
+                          alt="White logotype Manifest"
                           className="logo-presentation"
                         />
 
@@ -84,7 +84,7 @@ export default function PressAssetsPage() {
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                         <img
                           src="./assets/images/logotype-dark.svg"
-                          alt="Dark Logo Manifest"
+                          alt="Dark logotype Manifest"
                           className="logo-presentation"
                         />
                         <p className="buttons download-buttons">
@@ -123,7 +123,7 @@ export default function PressAssetsPage() {
                   <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                     <img
                       src="./assets/images/logotype/co-brand.svg"
-                      alt="Dark Logo Manifest"
+                      alt="co-brand logotype Manifest"
                       className="logo-presentation"
                     />
                   </div>
@@ -178,7 +178,7 @@ export default function PressAssetsPage() {
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                         <img
                           src="./assets/images/logomark/logo.svg"
-                          alt="Dark Logo Manifest"
+                          alt="Dark Logomark Manifest"
                           className="logo-presentation"
                         />
                         <p className="buttons download-buttons">
@@ -213,7 +213,7 @@ export default function PressAssetsPage() {
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                         <img
                           src="./assets/images/logomark/logo.svg"
-                          alt="Dark Logo Manifest"
+                          alt="Sand logomark Manifest"
                           className="logo-presentation"
                         />
                         <p className="buttons download-buttons">
@@ -248,7 +248,7 @@ export default function PressAssetsPage() {
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                         <img
                           src="./assets/images/logomark/logo.svg"
-                          alt="Dark Logo Manifest"
+                          alt="White logomark Manifest"
                           className="logo-presentation"
                         />
                         <p className="buttons download-buttons">
@@ -287,7 +287,7 @@ export default function PressAssetsPage() {
                   <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                     <img
                       src="./assets/images/logomark/co-brand.svg"
-                      alt="Dark Logo Manifest"
+                      alt="Co-brand logomark Manifest"
                       className="logo-presentation logo-presentation--small"
                     />
                   </div>

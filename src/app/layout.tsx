@@ -207,7 +207,7 @@ export default function RootLayout({
                             <i className="lni lni-arrow-right is-size-6"></i>
                           </span>
                           <a href="/assets" target="_blank">
-                            Press assets
+                            Brand assets
                           </a>
                         </span>
                       </li>
