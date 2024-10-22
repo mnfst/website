@@ -137,7 +137,6 @@ export default function PressAssetsPage() {
                   possible.
                 </p>
                 <div className="columns is-multiline">
-                  {/* Transparent Logo */}
                   <div className="column is-6">
                     <div className="card has-background-white-bis  is-shadowless">
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
@@ -172,7 +171,7 @@ export default function PressAssetsPage() {
                       </div>
                     </div>
                   </div>
-                  {/* Dark Logo */}
+
                   <div className="column is-6">
                     <div className="card has-background-dark is-shadowless">
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
@@ -207,7 +206,6 @@ export default function PressAssetsPage() {
                     </div>
                   </div>
 
-                  {/* Sand Logo */}
                   <div className="column is-6">
                     <div className="card has-background-warning-light is-shadowless">
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
@@ -242,7 +240,6 @@ export default function PressAssetsPage() {
                     </div>
                   </div>
 
-                  {/* White Logo */}
                   <div className="column is-6">
                     <div className="card has-background-white is-shadowless">
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
