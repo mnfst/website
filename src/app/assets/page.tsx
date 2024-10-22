@@ -46,7 +46,7 @@ export default function PressAssetsPage() {
                 </p>
                 <div className="columns">
                   <div className="column is-6">
-                    <div className="card has-background-light is-shadowless">
+                    <div className="card has-background-white is-shadowless">
                       <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
                         <img
                           src="./assets/images/logotype-white.svg"
@@ -111,6 +111,21 @@ export default function PressAssetsPage() {
                         </p>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <h2>Co-branding logotypes</h2>
+                <p>
+                  The spacing around the Manifest logo is determined by its
+                  design. Unless specified by partner brands, all logos should
+                  be treated as a balanced collection of shapes.
+                </p>
+                <div className="card has-background-white is-shadowless">
+                  <div className="is-flex is-align-items-center is-justify-content-center is-fullheight logotype-wrapper is-relative">
+                    <img
+                      src="./assets/images/co-brand.svg"
+                      alt="Dark Logo Manifest"
+                      className="logotype-presentation"
+                    />
                   </div>
                 </div>
               </div>
