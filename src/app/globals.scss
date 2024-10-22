@@ -1578,3 +1578,20 @@ main .content a:not(.button):not(.icon-text) {
     }
   }
 }
+
+.logotype-wrapper {
+  min-block-size: 20rem;
+  .logo-presentation {
+    max-width: 66%;
+
+    &--small {
+      max-height: 126px;
+    }
+  }
+}
+
+.download-buttons {
+  position: absolute;
+  bottom: $column-gap;
+  left: $column-gap;
+}
