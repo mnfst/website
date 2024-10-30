@@ -14,7 +14,7 @@ const sidebars: SidebarsConfig = {
   docSidebar: [
     {
       type: 'category',
-      label: '🚀 Getting started',
+      label: '🏁 Getting started',
       items: [
         {
           type: 'doc',
@@ -82,7 +82,33 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🎓 Tutorials',
+      label: '🚀 Deploy',
+      items: [
+        {
+          type: 'doc',
+          id: 'deploy'
+        },
+        {
+          type: 'doc',
+          id: 'deploy-digital-ocean'
+        },
+        {
+          type: 'doc',
+          id: 'deploy-fly-io'
+        },
+        {
+          type: 'doc',
+          id: 'deploy-render-com'
+        },
+        {
+          type: 'doc',
+          id: 'deploy-heroku'
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: '🎓 Quick starts',
       items: [
         {
           type: 'doc',
