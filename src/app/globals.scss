@@ -63,7 +63,7 @@ $gap: 2rem !default;
 );
 
 @use 'bulma/sass/components' with (
-  $navbar-height: 6.4rem
+  $navbar-height: 4.4rem
 );
 @use 'bulma/sass/form';
 @use 'bulma/sass/base' with (
@@ -75,6 +75,7 @@ $gap: 2rem !default;
   $notification-radius: 0,
   $content-heading-weight: 900
 );
+
 @forward 'bulma/sass/grid';
 @forward 'bulma/sass/layout';
 @forward 'bulma/sass/themes';
@@ -806,13 +807,23 @@ $gap: 2rem !default;
   }
 }
 
-.navbar-item img {
-  @include mixins.tablet {
-    max-height: 52px;
-  }
+.navbar {
+  border-bottom: 1px solid utilities.$border;
+}
 
-  @include mixins.mobile {
-    max-height: 34px;
+.navbar-item {
+  &:hover {
+    background-color: transparent;
+    color: $black;
+  }
+  img {
+    @include mixins.tablet {
+      max-height: 52px;
+    }
+
+    @include mixins.mobile {
+      max-height: 34px;
+    }
   }
 }
 
@@ -906,10 +917,8 @@ body {
     rgba($white, 0.42) 0%,
     rgba($white-ter, 0.42) 100%
   );
-
-  box-shadow: 0 1px 3px 0px rgba($dark, 0.1);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: saturate(175%) blur(6px);
+  backdrop-filter: saturate(175%) blur(6px);
 }
 
 .navbar.has-background-transparent {
@@ -1279,7 +1288,7 @@ button,
   }
 }
 
-.notification {
+.is-gradiant {
   background: radial-gradient(
     circle at 50% 120%,
     #74ebd5,

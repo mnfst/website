@@ -30,12 +30,12 @@ const RootLayout: React.FC<{
   children: React.ReactNode
 }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className="has-navbar-fixed-top">
       <body className={inter.className}>
-        <span className="notification is-success is-block has-text-centered mb-0">
+        <span className="notification is-dark has-text-white is-block has-text-centered mb-0">
           🎉 Help us grow! We're in BETA version and need your feedback on our{' '}
           <a
-            className="has-text-dark has-text-weight-bold px-1 is-underlined"
+            className="has-text-white has-text-weight-bold px-1 is-underlined"
             href="https://discord.gg/FepAked3W7"
           >
             Discord
