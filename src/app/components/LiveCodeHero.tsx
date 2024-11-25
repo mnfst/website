@@ -1,7 +1,13 @@
 'use client'
 
 import React, { useState } from 'react'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml'
+
 import './LiveCodeHero.scss'
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+SyntaxHighlighter.registerLanguage('yaml', yaml)
 
 const LiveCodeHero: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -9,7 +15,28 @@ const LiveCodeHero: React.FC = () => {
   const tabs = [
     {
       label: 'Data models',
-      content: 'test 1'
+      content: `# manifest/backend.yml
+name: Healthcare application 🏥
+
+entities:
+  Doctor 👩🏾‍⚕️:
+    properties:
+      - fullName
+      - avatar
+      - { name: price, type: money, options: { currency: EUR } }
+    belongsTo:
+      - City
+
+  Patient 🤒:
+    properties:
+      - fullName
+      - { name: birthdate, type: date }
+    belongsTo:
+      - Doctor
+
+  City 🌍:
+    properties:
+      - name`
     },
     {
       label: 'Auth',
@@ -25,25 +52,30 @@ const LiveCodeHero: React.FC = () => {
     }
   ]
 
+  function handleTabClick(index: number) {
+    console.log('handleTabClick', index)
+    setActiveTab(index)
+  }
+
   return (
     <div>
       {/* Tab Headers */}
       <div style={{ display: 'flex', borderBottom: '2px solid #ccc' }}>
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
+        {tabs.map((tab, i) => (
+          <span
+            key={i}
+            onClick={() => handleTabClick(i)}
             style={{
               padding: '10px 20px',
               cursor: 'pointer',
               border: 'none',
-              borderBottom: activeTab === index ? '3px solid #0070f3' : 'none',
+              borderBottom: activeTab === i ? '3px solid #0070f3' : 'none',
               backgroundColor: 'transparent',
-              fontWeight: activeTab === index ? 'bold' : 'normal'
+              fontWeight: activeTab === i ? 'bold' : 'normal'
             }}
           >
             {tab.label}
-          </button>
+          </span>
         ))}
       </div>
 
@@ -56,7 +88,10 @@ const LiveCodeHero: React.FC = () => {
           color: 'white'
         }}
       >
-        {tabs[activeTab].content}
+        {/* TODO: Chose style: https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/HEAD/AVAILABLE_STYLES_PRISM.MD */}
+        <SyntaxHighlighter language="yaml" style={oneDark}>
+          {tabs[activeTab].content}
+        </SyntaxHighlighter>
       </div>
     </div>
   )
