@@ -13,6 +13,7 @@ $white-ter: #f8f9fa !default;
 $white-bis: #fbfcfd !default;
 $light-bis: #f1f1f1 !default; // Sheet
 $white: #fff !default;
+$size-0: 3.5832rem !default;
 $size-8: 0.75rem !default;
 $navbar-item-hover-background-color: transparent !default;
 $input-background-color: $white-ter !default;
@@ -812,7 +813,8 @@ $gap: 2rem !default;
 }
 
 .navbar-item {
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparent;
     color: $black;
   }
@@ -928,6 +930,12 @@ body {
 .is-fullheight {
   height: 100%;
 }
+
+.is-0,
+.title.is-0 {
+  font-size: $size-0;
+}
+
 pre {
   padding: 0;
   background-color: transparent;
@@ -1603,4 +1611,12 @@ main .content a:not(.button):not(.icon-text) {
   position: absolute;
   bottom: $column-gap;
   left: $column-gap;
+}
+
+.box-main-cta {
+  gap: 1rem;
+
+  @include mixins.mobile {
+    flex-direction: column;
+  }
 }

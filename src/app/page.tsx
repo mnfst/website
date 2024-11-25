@@ -7,36 +7,28 @@ export default function Home() {
   return (
     <div>
       <div className="mt-6 pt-4 mb-6">
-        <div className="container zi-1">
+        <div className="container zi-1 has-text-centered">
           <div className="columns is-multiline">
-            <div className="column is-6-tablet">
-              <div className="content is-medium  ">
-                <h1 className="title is-1 mb-5">
+            <div className="column is-10 is-offset-1">
+              <div className="content">
+                <h1 className="title is-0">
                   The
                   <span className="title-gradient"> simplest backend</span> you
                   will find
                 </h1>
+                <p>A backend so simple that it fits in a single YAML file</p>
               </div>
             </div>
-            <div className="column is-5-tablet is-offset-1-tablet">
-              <div className="content is-normal  mb-6">
-                <p>A backend so simple that it fits in a single YAML file</p>
-
+            <div className="column is-6-tablet is-offset-3">
+              <div className="content is-normal  mb-6 is-flex is-align-items-center is-justify-content-center box-main-cta">
                 <InstallCLI />
-                <div className="mt-4">
-                  <a
-                    className="ghost is-block"
-                    href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml"
-                    target="_blank"
-                  >
-                    <img
-                      alt="Open in StackBlitz"
-                      className="is-block"
-                      width={200}
-                      src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
-                    />
-                  </a>
-                </div>
+                <a
+                  className="button is-light"
+                  href="/docs/install"
+                  target="_blank"
+                >
+                  Get started
+                </a>
               </div>
             </div>
             <div className="column is-12">

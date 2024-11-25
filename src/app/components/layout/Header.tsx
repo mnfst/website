@@ -24,6 +24,14 @@ const Header = () => {
               <i className="lni lni-empty-file is-size-6 is-hidden-desktop"></i>
             </a>
             <a
+              className="navbar-item px-5-tablet is-hidden-mobile"
+              href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml"
+              target="_blank"
+            >
+              <span className="is-hidden-touch">Playground</span>
+              <i className="lni lni-empty-file is-size-6 is-hidden-desktop"></i>
+            </a>
+            <a
               className="navbar-item px-5-tablet is-hidden-desktop"
               href="https://discord.gg/FepAked3W7"
               target="_blank"
