@@ -22,8 +22,10 @@ $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
   'Ubuntu Mono', monospace !default;
 $handwriting: 'Permanent Marker', cursive !default;
 $column-gap: 1rem !default;
-
 $gap: 2rem !default;
+$is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
+  0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
+  0px 0px 0px 1px rgba($dark, 0.08) !default;
 
 @use 'bulma/sass/utilities' with (
   $size-1: 2.986rem,
@@ -64,7 +66,8 @@ $gap: 2rem !default;
 );
 
 @use 'bulma/sass/components' with (
-  $navbar-height: 4.4rem
+  $navbar-height: 4.4rem,
+  $card-radius: 0rem
 );
 @use 'bulma/sass/form';
 @use 'bulma/sass/base' with (
@@ -844,7 +847,7 @@ $gap: 2rem !default;
 }
 
 .is-bordered {
-  border: 2px solid $dark;
+  box-shadow: $is-bordered;
 }
 
 input[type='email'] {
@@ -1187,11 +1190,22 @@ button,
 }
 
 .card {
-  box-shadow: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
-    0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
-    0px 0px 0px 1px rgba($dark, 0.08), 0px 16px 32px 0px rgba($grey-dark, 0.08),
+  box-shadow: 0px 16px 32px 0px rgba($grey-dark, 0.08),
     0px 2px 24px 0px rgba($darkness, 0.06);
 
+  &.is-bordered {
+    &.is-shadowless {
+      box-shadow: $is-bordered !important;
+    }
+
+    &:not(.is-shadowless) {
+      box-shadow: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
+        0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
+        0px 0px 0px 1px rgba($dark, 0.08),
+        0px 16px 32px 0px rgba($grey-dark, 0.08),
+        0px 2px 24px 0px rgba($darkness, 0.06);
+    }
+  }
   .icon-text {
     flex-wrap: nowrap;
   }
