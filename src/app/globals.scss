@@ -43,9 +43,9 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
   $primary: #7209b7,
   $dark: $dark,
   $black-ter: $black-ter,
-  $family-sans-serif: '"Inter", sans-serif',
   $weight-medium: 600,
-  $border: $grey-lighter
+  $border: $grey-lighter,
+  $family-sans-serif: "'Inter', sans-serif"
 );
 
 @use 'bulma/sass/utilities/mixins';
@@ -85,7 +85,7 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
 @forward 'bulma/sass/themes';
 
 @import 'lineicons/web-font/lineicons.css';
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .has-background-transparent {
   background-color: transparent;

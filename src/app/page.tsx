@@ -1,8 +1,8 @@
 import Image from 'next/image'
+import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
-import { FAQ } from './components/FAQ'
 
 export default function Home() {
   return (
@@ -12,12 +12,14 @@ export default function Home() {
           <div className="columns is-multiline">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <h1 className="title is-0">
+                <h1 className="title is-0 mb-5">
                   The
                   <span className="title-gradient"> simplest backend</span> you
                   will find
                 </h1>
-                <p>A backend so simple that it fits in a single YAML file</p>
+                <p className="subtitle">
+                  A backend so simple that it fits in a single YAML file
+                </p>
               </div>
             </div>
             <div className="column is-6-tablet is-offset-3">
