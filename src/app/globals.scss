@@ -1777,3 +1777,24 @@ main .content a:not(.button):not(.icon-text) {
     flex-direction: row-reverse;
   }
 }
+
+.has-milkyway {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    pointer-events: none;
+    background: linear-gradient(
+      0deg,
+      rgba(utilities.$white, 1) 0%,
+      rgba(utilities.$white, 0) 31%,
+      rgba(utilities.$white, 0) 100%
+    );
+  }
+}

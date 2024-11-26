@@ -128,7 +128,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container py-6">
+        <div className="container pt-6">
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-12 has-text-centered">
               <div className="card has-strokes has-background-white-bis is-shadowless py-4">
@@ -703,6 +703,376 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="container-full has-background-white">
+        <div className="py-6 content">
+          <div className="container">
+            <h3 className="title is-3 mb-6  has-text-centered">
+              Loved by developers 🤩
+            </h3>
+
+            <div className="masonry has-milkyway">
+              <div className="masonry-item card has-background-white-bis is-shadowless is-bordered">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://news.ycombinator.com/item?id=40545925"
+                      >
+                        @alextheterrible
+                      </a>
+                      <a
+                        href="https://news.ycombinator.com/item?id=40545925"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/yc.svg"
+                          width={24}
+                          height={24}
+                          alt="on Hackernews"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Nice. I'll be watching this. Buddy and I are currently
+                      building an app on Pocketbase and are thoroughly enjoying
+                      it. I like your idea of starting from a config file rather
+                      than a UI.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
+                      >
+                        @permarad
+                      </a>
+                      <a
+                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/reddit.svg"
+                          width={24}
+                          height={24}
+                          alt="on Reddit"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      kudos, this is very cool. i thought pocketbase was simple.
+                      this is very very simple. I love simple.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://discord.com/channels/457912077277855764/1293155391513034802"
+                      >
+                        @Revan
+                      </a>
+                      <a
+                        href="https://discord.com/channels/457912077277855764/1293155391513034802"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/discord.svg"
+                          width={24}
+                          height={24}
+                          alt="on Discord"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Wow I've never heard of manifest before now, it looks
+                      fascinating
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://news.ycombinator.com/item?id=40549087"
+                      >
+                        @dhuan_
+                      </a>
+                      <a
+                        href="https://news.ycombinator.com/item?id=40549087"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/yc.svg"
+                          width={24}
+                          height={24}
+                          alt="on Hackernews"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Hey very useful app, I'll be watching this. I once wanted
+                      to set up backend apps during automated CI jobs in order
+                      to facilitate e2e tests and ended up making a utility kind
+                      of similar - but yours truly goes beyond.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                      >
+                        @huevoverde
+                      </a>
+                      <a
+                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/reddit.svg"
+                          width={24}
+                          height={24}
+                          alt="on Reddit"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      It works! I like this a lot. I've been leaning into
+                      Pocketbase because it is easy and fairly complete with
+                      what I need. This is easier and more complete. Are you
+                      modeling this after something that exists already?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://news.ycombinator.com/item?id=40545873"
+                      >
+                        @chrsig
+                      </a>
+                      <a
+                        href="https://news.ycombinator.com/item?id=40545873"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/yc.svg"
+                          width={24}
+                          height={24}
+                          alt="on Hackernews"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      I really appreciate the simplicity of the DSL presented.
+                      I'm curious how you see the project evolving as you add
+                      those things. How do you see it differentiating itself
+                      from rails or django?
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
+                      >
+                        @LatoReset
+                      </a>
+                      <a
+                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/discord.svg"
+                          width={24}
+                          height={24}
+                          alt="on Discord"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      i was trying manifest today and work fine, is very simple,
+                      i would use in a project without doubt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
+                      >
+                        @Coquet
+                      </a>
+                      <a
+                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/discord.svg"
+                          width={24}
+                          height={24}
+                          alt="on Hackernews"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>I love it so far. The simplicity is awesome.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
+                      >
+                        @Ranti
+                      </a>
+                      <a
+                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/discord.svg"
+                          width={24}
+                          height={24}
+                          alt="on Hackernews"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Hello! Just started trying out Manifest for a personal
+                      React project. Love the idea!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                      >
+                        @A_Norse_Dude
+                      </a>
+                      <a
+                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/reddit.svg"
+                          width={24}
+                          height={24}
+                          alt="on Reddit"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      This seems nice! I will def. follow this, and jump on the
+                      bandwagon then you are out of beta 😎
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="masonry-item card has-background-white-bis is-shadowless">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                      <a
+                        className="has-text-dark"
+                        target="_blank"
+                        href="https://news.ycombinator.com/item?id=40551318"
+                      >
+                        @kiwicopple
+                      </a>
+                      <a
+                        href="https://news.ycombinator.com/item?id=40551318"
+                        target="_blank"
+                        className="ghost"
+                      >
+                        <Image
+                          src="/assets/images/yc.svg"
+                          width={24}
+                          height={24}
+                          alt="on Hackernews"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Congrats on shipping, this looks nice and well
+                      thought-out.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="container-fluid">
         <div className="container pt-7 pb-6 mb-5">
@@ -1012,379 +1382,6 @@ export default function Home() {
                   <span>Get notified at the next milestone</span>
                 </span>
                 <SubscribeForm />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container-full has-background-dark has-text-white">
-        <div className="py-7 content">
-          <div className="container">
-            <h3 className="title is-3 mb-6 has-text-white has-text-centered">
-              Loved by developers 🤩
-            </h3>
-
-            <div className="masonry">
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://news.ycombinator.com/item?id=40545925"
-                      >
-                        @alextheterrible
-                      </a>
-                      <a
-                        href="https://news.ycombinator.com/item?id=40545925"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/yc.svg"
-                          width={24}
-                          height={24}
-                          alt="on Hackernews"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      Nice. I'll be watching this. Buddy and I are currently
-                      building an app on Pocketbase and are thoroughly enjoying
-                      it. I like your idea of starting from a config file rather
-                      than a UI.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
-                      >
-                        @permarad
-                      </a>
-                      <a
-                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/reddit.svg"
-                          width={24}
-                          height={24}
-                          alt="on Reddit"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      kudos, this is very cool. i thought pocketbase was simple.
-                      this is very very simple. I love simple.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://discord.com/channels/457912077277855764/1293155391513034802"
-                      >
-                        @Revan
-                      </a>
-                      <a
-                        href="https://discord.com/channels/457912077277855764/1293155391513034802"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/discord.svg"
-                          width={24}
-                          height={24}
-                          alt="on Discord"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      Wow I've never heard of manifest before now, it looks
-                      fascinating
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://news.ycombinator.com/item?id=40549087"
-                      >
-                        @dhuan_
-                      </a>
-                      <a
-                        href="https://news.ycombinator.com/item?id=40549087"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/yc.svg"
-                          width={24}
-                          height={24}
-                          alt="on Hackernews"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      Hey very useful app, I'll be watching this. I once wanted
-                      to set up backend apps during automated CI jobs in order
-                      to facilitate e2e tests and ended up making a utility kind
-                      of similar - but yours truly goes beyond.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                      >
-                        @huevoverde
-                      </a>
-                      <a
-                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/reddit.svg"
-                          width={24}
-                          height={24}
-                          alt="on Reddit"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      It works! I like this a lot. I've been leaning into
-                      Pocketbase because it is easy and fairly complete with
-                      what I need. This is easier and more complete. Are you
-                      modeling this after something that exists already?
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://news.ycombinator.com/item?id=40545873"
-                      >
-                        @chrsig
-                      </a>
-                      <a
-                        href="https://news.ycombinator.com/item?id=40545873"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/yc.svg"
-                          width={24}
-                          height={24}
-                          alt="on Hackernews"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      I really appreciate the simplicity of the DSL presented.
-                      I'm curious how you see the project evolving as you add
-                      those things. How do you see it differentiating itself
-                      from rails or django?
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
-                      >
-                        @LatoReset
-                      </a>
-                      <a
-                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/discord.svg"
-                          width={24}
-                          height={24}
-                          alt="on Discord"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      i was trying manifest today and work fine, is very simple,
-                      i would use in a project without doubt.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
-                      >
-                        @Coquet
-                      </a>
-                      <a
-                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/discord.svg"
-                          width={24}
-                          height={24}
-                          alt="on Hackernews"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      I love it so far. The simplicity is awesome.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
-                      >
-                        @Ranti
-                      </a>
-                      <a
-                        href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/discord.svg"
-                          width={24}
-                          height={24}
-                          alt="on Hackernews"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      Hello! Just started trying out Manifest for a personal
-                      React project. Love the idea!
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                      >
-                        @A_Norse_Dude
-                      </a>
-                      <a
-                        href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/reddit.svg"
-                          width={24}
-                          height={24}
-                          alt="on Reddit"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      This seems nice! I will def. follow this, and jump on the
-                      bandwagon then you are out of beta 😎
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="masonry-item card has-background-black-ter is-shadowless">
-                <div className="card-content">
-                  <div className="content">
-                    <div className="is-flex is-align-items-center is-justify-content-space-between mb-4">
-                      <a
-                        className="has-text-white"
-                        target="_blank"
-                        href="https://news.ycombinator.com/item?id=40551318"
-                      >
-                        @kiwicopple
-                      </a>
-                      <a
-                        href="https://news.ycombinator.com/item?id=40551318"
-                        target="_blank"
-                        className="ghost"
-                      >
-                        <Image
-                          src="/assets/images/yc.svg"
-                          width={24}
-                          height={24}
-                          alt="on Hackernews"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <p className="has-text-white">
-                      Congrats on shipping, this looks nice and well
-                      thought-out.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
