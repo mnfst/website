@@ -67,7 +67,8 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
 
 @use 'bulma/sass/components' with (
   $navbar-height: 4.4rem,
-  $card-radius: 0rem
+  $card-radius: 0rem,
+  $card-content-padding: 2rem
 );
 @use 'bulma/sass/form';
 @use 'bulma/sass/base' with (
@@ -934,7 +935,6 @@ body {
   height: 100%;
 }
 
-.is-0,
 .title.is-0 {
   font-size: $size-0;
 }
@@ -1205,6 +1205,14 @@ button,
         0px 0px 0px 1px rgba($dark, 0.08),
         0px 16px 32px 0px rgba($grey-dark, 0.08),
         0px 2px 24px 0px rgba($darkness, 0.06);
+    }
+  }
+  &.has-strokes {
+    border: 0.5px solid utilities.$border;
+
+    &.is-shadowless {
+      box-shadow: 0 0.5px 0 1px utilities.$white inset,
+        0 0.5px 0 1px utilities.$white !important;
     }
   }
   .icon-text {
@@ -1633,5 +1641,66 @@ main .content a:not(.button):not(.icon-text) {
 
   @include mixins.mobile {
     flex-direction: column;
+  }
+}
+
+.is-gapless {
+  > .column:not(:last-child) {
+    .has-strokes {
+      border-bottom: 0;
+    }
+  }
+}
+
+.stack-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: utilities.$gap;
+}
+
+.stack-grid-row {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: utilities.$gap;
+}
+
+.stack-grid-row:nth-child(1) {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stack-grid-row:nth-child(2) {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.stack-grid-row:nth-child(3) {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stack-grid-item {
+  width: #{$gap * 1.5};
+  height: #{$gap * 1.5};
+
+  @include mixins.fullhd {
+    width: #{$gap * 2};
+    height: #{$gap * 2};
+  }
+}
+
+.stack-grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@include mixins.touch {
+  .stack-grid-row:nth-child(1),
+  .stack-grid-row:nth-child(3) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stack-grid-row:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

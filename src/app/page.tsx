@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container zi-1 has-text-centered">
           <div className="columns is-multiline">
             <div className="column is-10 is-offset-1">
-              <div className="content">
+              <div className="content is-normal">
                 <h1 className="title is-0 mb-5">
                   The
                   <span className="title-gradient"> simplest backend</span> you
@@ -37,126 +37,26 @@ export default function Home() {
             <div className="column is-12">
               <LiveCodeHero />
             </div>
-            <div className="column is-12 has-text-centered">
-              <div className="card is-bordered is-shadowless py-4">
-                <div className="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mt-4">
-                  <span className="is-size-7">Backed by:</span>
-                  <img
-                    src="./assets/images/idf-logo.svg"
-                    alt="IDF logo"
-                    width="130px"
-                    className="idf-sf mx-4 mb-2"
-                  />
-                  <div className="backed-by-logos is-flex is-align-items-center is-justify-content-center">
-                    <img
-                      src="./assets/images/hec-incubateur.svg"
-                      alt="HEC Incubateur logo"
-                      width="234px"
-                      className="logo-hec mx-4"
-                    />
-                    <img
-                      src="./assets/images/station-f-logo.svg"
-                      alt="Station F logo"
-                      width="99px"
-                      className="logo-sf mx-4 mb-2"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
       <div className="container-full has-background-white">
-        <div className="container py-7">
+        <div className="container py-6">
           <div className="columns is-multiline">
-            <div className="column is-4">
-              <div className="card has-background-white-bis is-shadowless is-fullheight">
-                <div className="card-content">
-                  <div className="content has-text-centered">
-                    <svg
-                      width="90"
-                      height="90"
-                      viewBox="0 0 268 268"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clipRule="evenodd"
-                        d="M267.99 133.99C267.99 133.99 269.579 72.4171 232.581 35.4189C195.583 -1.57858 134.01 0.00993423 134.01 0.00993423C134.01 0.00993423 134.001 0.327069 134 0.929324C134 0.674973 133.997 0.47149 133.996 0.321236C133.994 0.11577 133.99 0.00993423 133.99 0.00993423C133.99 0.00993423 72.4171 -1.57858 35.4189 35.4189C-1.57858 72.4171 0.00993423 133.99 0.00993423 133.99C0.00993423 133.99 61.5835 135.578 98.5806 98.5806C132.398 64.7643 133.979 10.4162 134 1.32065C134.022 10.4162 135.603 64.7643 169.419 98.5806C206.417 135.578 267.99 133.99 267.99 133.99ZM35.4189 232.581C-1.57858 195.583 0.00993423 134.01 0.00993423 134.01C0.00993423 134.01 61.5835 132.422 98.5806 169.419C132.398 203.236 133.979 257.584 134 266.68C134.022 257.584 135.603 203.236 169.419 169.419C206.417 132.422 267.99 134.01 267.99 134.01C267.99 134.01 269.579 195.583 232.581 232.581C195.583 269.578 134.01 267.99 134.01 267.99C134.01 267.99 134.001 267.672 134 267.071C133.999 267.672 133.99 267.99 133.99 267.99C133.99 267.99 72.4171 269.578 35.4189 232.581Z"
-                        fill="#F2C79C"
-                      />
-                    </svg>
-
-                    <h4 className=" mt-4">Simple</h4>
-                    <p className="is-size-6">
-                      Your entire backend in <strong>a single YAML file</strong>
-                      , easy to read and version control.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="column is-4">
-              <div className="card has-background-white-bis is-shadowless is-fullheight">
-                <div className="card-content">
-                  <div className="content has-text-centered">
-                    <svg
-                      width="110"
-                      height="90"
-                      viewBox="0 0 267 134"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clipRule="evenodd"
-                        d="M66.75 67L0 0V134L66.75 67ZM133.5 67L66.75 0V67V134L133.5 67ZM200.25 67L133.5 0V67V134L200.25 67ZM200.25 67V0L267 67L200.25 134V67Z"
-                        fill="#2BE1B7"
-                      />
-                    </svg>
-
-                    <h4 className=" mt-4">Develop 10x faster</h4>
-                    <p className="is-size-6">
-                      Manifest's simple code approach makes backend development
-                      a breeze.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="column is-4">
-              <div className="card has-background-white-bis is-shadowless is-fullheight">
-                <div className="card-content">
-                  <div className="content has-text-centered">
-                    <svg
-                      width="90"
-                      viewBox="0 0 267 267"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M3.00751 0C1.0025 0 0 1.33667 0 3.00751V263.992C0 265.663 1.33667 267 3.00751 267H263.992C265.663 267 267 265.663 267 263.992V3.00751C267 1.0025 265.663 0 263.992 0L3.00751 0ZM50.1252 26.0651L107.602 83.5419L50.1252 141.019L26.0651 116.959L59.4819 83.5419L26.0651 50.1252L50.1252 26.0651ZM133.667 100.25H233.917V133.667H133.667V100.25Z"
-                        fill="#2430F0"
-                      />
-                    </svg>
-                    <h4 className=" mt-4">Self-hosted</h4>
-                    <p className="is-size-6">
-                      Free and open source self-hosted{' '}
-                      <strong>Backend-as-a-Service</strong>. Have it your way.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="columns is-multiline">
-            <div className="column is-12 my-4">
+            <div className="column is-8 is-offset-2 my-4">
               <div className=" is-normal card-content--how-it-works">
-                <div className="content is-normal has-text-centered has-text-left--mobile">
-                  <h2 className="title is-2 mb-0">
-                    A complete backend-as-a-service
-                  </h2>
+                <div className="content is-normal has-text-centered has-text-left--mobile mt-4">
+                  <h2>Zero-config backend-as-a-service, within your IDE.</h2>
+                  <p>
+                    Let's forget about the "from scratch" vs "low-code/no-code"
+                    debate.{' '}
+                  </p>
+                  <p>
+                    Manifest approach brings you the best of both worlds: A
+                    hassle-free backend packed with built-in features that fits
+                    right into your IDE, just like any other file in your
+                    codebase.
+                  </p>
                 </div>
               </div>
             </div>
@@ -226,64 +126,209 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="columns">
-            <div className="column is-12">
-              <div className="stack-list is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap is-flex-direction-column is-size-6">
-                <span>
-                  Plug-and-play with top frontend stacks through SDK or classic
-                  REST API:{' '}
-                </span>
-                <div className="stack-list is-flex is-align-items-center is-justify-content-center is-flex-wrap-wrap mt-4">
-                  <span title="See how to plug CASE with React">
-                    <img
-                      src="./assets/images/react.svg"
-                      alt="React logo"
-                      width="40px"
-                      className="mx-2"
-                    />
-                  </span>
-                  <span title="See how to plug CASE with Vue">
-                    <img
-                      src="./assets/images/vue.svg"
-                      alt="Vue logo"
-                      width="40px"
-                      className="mx-2"
-                    />
-                  </span>
-                  <span title="See how to plug CASE with Angular">
-                    <img
-                      src="./assets/images/angular.svg"
-                      alt="Angular logo"
-                      width="40px"
-                      className="mx-2"
-                    />
-                  </span>
-                  <span title="See how to plug CASE with Svelte">
-                    <img
-                      src="./assets/images/svelte.svg"
-                      alt="Svelte logo"
-                      width="40px"
-                      className="mx-2"
-                    />
-                  </span>
+          <div className="columns is-gapless is-multiline">
+            <div className="column is-12 has-text-centered">
+              <div className="card has-strokes has-background-white-bis is-shadowless py-4">
+                <div className="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mt-4">
+                  <span className="is-size-7">Backed by:</span>
                   <img
-                    src="./assets/images/nuxt.svg"
-                    alt="Nuxt logo"
-                    width="40px"
-                    className="mx-2"
+                    src="./assets/images/idf-logo.svg"
+                    alt="IDF logo"
+                    width="130px"
+                    className="idf-sf mx-4 mb-2"
                   />
-                  <img
-                    src="./assets/images/nextjs.svg"
-                    alt="NextJS logo"
-                    width="70px"
-                    className="mx-2"
-                  />
+                  <div className="backed-by-logos is-flex is-align-items-center is-justify-content-center">
+                    <img
+                      src="./assets/images/hec-incubateur.svg"
+                      alt="HEC Incubateur logo"
+                      width="234px"
+                      className="logo-hec mx-4"
+                    />
+                    <img
+                      src="./assets/images/station-f-logo.svg"
+                      alt="Station F logo"
+                      width="99px"
+                      className="logo-sf mx-4 mb-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-12 has-text-centered">
+              <div className="card has-strokes is-shadowless py-4">
+                <div className="card-content">
+                  <div className="content">
+                    <div className="columns">
+                      <div className="column is-6 is-offset-3">
+                        <h2>
+                          Everything is about delivering the right product
+                        </h2>
+                        <p>
+                          It does not matter if you are junior or senior
+                          developer, if you code in JS, PHP or Python. You can
+                          be frontend, backend or fullstack, a mobile developer,
+                          indie hacker or devsigner. If you know that everything
+                          is about delivering the right product, Manifest is for
+                          you.{' '}
+                        </p>
+                        <p>
+                          Manifest focuses on shipping a solid product in the
+                          minimal amount of time, reducing the learning curve as
+                          much as possible. The rest is in your hands.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
+                <div className="card-content">
+                  <div className="content">
+                    <h2>Connect to any frontend</h2>
+                    <p>
+                      Plug-and-play with all frontend stacks and mobile stacks
+                      through our JS SDK or REST API. Adding a backend to a
+                      website or an app to make it dynamic has never been that
+                      easy.
+                    </p>
+                    <p>Yes, you can do SSG and SSR too.</p>
+                    <p className="mb-2">
+                      <a href="">
+                        <span className="icon-text">
+                          <span>See the JS SDK documentation</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
+                    <p>
+                      <a href="">
+                        <span className="icon-text">
+                          <span>Use the REST API</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless py-7 is-flex is-align-items-center is-justify-content-center">
+                <div className="stack-grid-container">
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-svelte.svg"
+                        alt="Svelte"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img src="./assets/images/stack/logo-vue.svg" alt="Vue" />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-preact.svg"
+                        alt="Preact"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-touch">
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                      />
+                    </div>
+                  </div>
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-nextjs.svg"
+                        alt="Next.js"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-nuxtjs.svg"
+                        alt="Nuxt.js"
+                      />
+                    </div>
+
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-react.svg"
+                        alt="React"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-astro.svg"
+                        alt="Astro"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-blitz.svg"
+                        alt="Blitz"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-remix.svg"
+                        alt="Remix"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-flutter.svg"
+                        alt="Flutter"
+                      />
+                    </div>
+                  </div>
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item is-hidden-touch">
+                      <img
+                        src="./assets/images/stack/logo-flutter.svg"
+                        alt="Flutter"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-swift.svg"
+                        alt="Swift"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-ionic.svg"
+                        alt="Ionic"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-meteor.svg"
+                        alt="Meteor"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="container-fluid">
         <div className="container pt-7 pb-6 mb-5">
           <div className="columns is-multiline">
