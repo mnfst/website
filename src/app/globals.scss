@@ -1236,9 +1236,17 @@ button,
 }
 
 .info-copy {
-  font-family: $handwriting;
+  position: absolute;
   color: utilities.$link;
   @extend .slideInUp;
+  @include mixins.tablet {
+    bottom: -34px;
+    right: 0;
+  }
+  @include mixins.mobile {
+    bottom: 12px;
+    right: -55px;
+  }
 }
 
 .backend-list {
@@ -1755,12 +1763,19 @@ main .content a:not(.button):not(.icon-text) {
       width: 220px;
     }
   }
-}
 
-.hosting-grid-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+  @include mixins.mobile {
+    width: 110px;
+    .hosting-grid-row:nth-child(2) & {
+      width: 150px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 .card--media {
