@@ -1214,6 +1214,11 @@ button,
       box-shadow: 0 0.5px 0 1px utilities.$white inset,
         0 0.5px 0 1px utilities.$white !important;
     }
+    &--gradient {
+      background: linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+          calc(100% - 2px) no-repeat,
+        linear-gradient(0deg, transparent 0%, utilities.$border 100%);
+    }
   }
   .icon-text {
     flex-wrap: nowrap;
@@ -1645,7 +1650,7 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .is-gapless {
-  > .column:not(:last-child) {
+  &:not(:last-child) > .column {
     .has-strokes {
       border-bottom: 0;
     }
@@ -1682,6 +1687,11 @@ main .content a:not(.button):not(.icon-text) {
   width: #{$gap * 1.5};
   height: #{$gap * 1.5};
 
+  @include mixins.mobile {
+    width: #{$gap * 2};
+    height: #{$gap * 2};
+  }
+
   @include mixins.fullhd {
     width: #{$gap * 2};
     height: #{$gap * 2};
@@ -1702,5 +1712,68 @@ main .content a:not(.button):not(.icon-text) {
 
   .stack-grid-row:nth-child(2) {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hosting-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: utilities.$gap;
+}
+
+.hosting-grid-row {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: utilities.$gap;
+
+  &:nth-child(1) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &:nth-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &:nth-child(3) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hosting-grid-item {
+  display: flex;
+  width: 120px;
+  .hosting-grid-row:nth-child(2) & {
+    width: 177px;
+  }
+
+  @include mixins.fullhd {
+    width: 177px;
+    height: auto;
+    .hosting-grid-row:nth-child(2) & {
+      width: 220px;
+    }
+  }
+}
+
+.hosting-grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card--media {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  @include mixins.mobile {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.is-flex-direction-row-reverse-tablet {
+  @include mixins.tablet {
+    flex-direction: row-reverse;
   }
 }

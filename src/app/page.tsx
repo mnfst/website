@@ -10,15 +10,16 @@ export default function Home() {
       <div className="mt-6 pt-4 mb-6">
         <div className="container zi-1 has-text-centered">
           <div className="columns is-multiline">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-8 is-offset-2">
               <div className="content is-normal">
                 <h1 className="title is-0 mb-5">
-                  The
-                  <span className="title-gradient"> simplest backend</span> you
-                  will find
+                  Meet the
+                  <span className="title-gradient"> 1-file backend </span>
                 </h1>
                 <p className="subtitle">
-                  A backend so simple that it fits in a single YAML file
+                  Manifest is a complete backend that fits into a single YAML
+                  file. Cut the learning curve and ship very quickly without
+                  trading-off coding standards and best practices.
                 </p>
               </div>
             </div>
@@ -126,7 +127,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="columns is-gapless is-multiline">
+        </div>
+        <div className="container py-6">
+          <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-12 has-text-centered">
               <div className="card has-strokes has-background-white-bis is-shadowless py-4">
                 <div className="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mt-4">
@@ -182,6 +185,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
                 <div className="card-content">
@@ -218,9 +223,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="column is-6">
-              <div className="card is-fullheight has-strokes is-shadowless py-7 is-flex is-align-items-center is-justify-content-center">
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
                 <div className="stack-grid-container">
                   <div className="stack-grid-row">
                     <div className="stack-grid-item">
@@ -321,6 +325,377 @@ export default function Home() {
                         alt="Meteor"
                       />
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="columns is-gapless is-multiline mb-0 is-flex-direction-row-reverse-tablet">
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
+                <div className="card-content">
+                  <div className="content">
+                    <h2>Looking for an admin panel ?</h2>
+                    <p>
+                      You just saved some days of development because we have
+                      one for you.
+                    </p>
+                    <p>
+                      Manifest admin panel is non-technical so you can give it
+                      to your customers and app administrators without the fear
+                      that they will break anything. Obviously if it does not
+                      fit you can always bring your own.
+                    </p>
+                    <p className="mb-2">
+                      <a href="">
+                        <span className="icon-text">
+                          <span>See Admin Panel live demo</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
+                    <p>
+                      <a href="">
+                        <span className="icon-text">
+                          <span>Use the REST API</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
+                <div className="stack-grid-container">
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-svelte.svg"
+                        alt="Svelte"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img src="./assets/images/stack/logo-vue.svg" alt="Vue" />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-preact.svg"
+                        alt="Preact"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-touch">
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                      />
+                    </div>
+                  </div>
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-nextjs.svg"
+                        alt="Next.js"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-nuxtjs.svg"
+                        alt="Nuxt.js"
+                      />
+                    </div>
+
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-react.svg"
+                        alt="React"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-astro.svg"
+                        alt="Astro"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-blitz.svg"
+                        alt="Blitz"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-remix.svg"
+                        alt="Remix"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-flutter.svg"
+                        alt="Flutter"
+                      />
+                    </div>
+                  </div>
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item is-hidden-touch">
+                      <img
+                        src="./assets/images/stack/logo-flutter.svg"
+                        alt="Flutter"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-swift.svg"
+                        alt="Swift"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-ionic.svg"
+                        alt="Ionic"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-meteor.svg"
+                        alt="Meteor"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="columns is-gapless is-multiline mb-0">
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
+                <div className="card-content">
+                  <div className="content">
+                    <h2>Self hosted</h2>
+                    <p>
+                      Manifest is a free and open-source Backend-as-a-Service
+                      that you can use anywhere.
+                    </p>
+                    <p>
+                      Enjoy Manifest on your way: no lock-in, and keep your data
+                      private.
+                    </p>
+                    <p className="mb-2">
+                      <a href="">
+                        <span className="icon-text">
+                          <span>See deployment guides</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
+                <div className="hosting-grid-container">
+                  <div className="hosting-grid-row">
+                    <div className="hosting-grid-item">
+                      <img
+                        src="./assets/images/hosting/logo-render.svg"
+                        alt="Render"
+                      />
+                    </div>
+                    <div className="hosting-grid-item">
+                      <img
+                        src="./assets/images/hosting/logo-fly.svg"
+                        alt="Fly.io"
+                      />
+                    </div>
+                  </div>
+                  <div className="hosting-grid-row">
+                    <div className="hosting-grid-item">
+                      <img
+                        src="./assets/images/hosting/logo-digitalocean.svg"
+                        alt="Digital Ocean"
+                      />
+                    </div>
+                  </div>
+                  <div className="hosting-grid-row">
+                    <div className="hosting-grid-item">
+                      <img
+                        src="./assets/images/hosting/logo-heroku.svg"
+                        alt="Heroku"
+                      />
+                    </div>
+                    <div className="hosting-grid-item">
+                      <img
+                        src="./assets/images/hosting/logo-docker.svg"
+                        alt="Docker"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="columns is-gapless is-multiline mb-0 is-flex-direction-row-reverse-tablet">
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
+                <div className="card-content">
+                  <div className="content">
+                    <h2>Keep your way of doing</h2>
+                    <p>
+                      Manifest integrates perfectly with your project, just like
+                      any other file in your codebase.
+                    </p>
+                    <p>
+                      Keep it your way: work from your IDE, use testing,
+                      environments, AI assistants and leverage source control
+                      features like committing and branching.
+                    </p>
+                    <p className="mb-2">
+                      <a href="">
+                        <span className="icon-text">
+                          <span>Try Manifest on Stackblitz</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-6">
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
+                <div className="stack-grid-container">
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-svelte.svg"
+                        alt="Svelte"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img src="./assets/images/stack/logo-vue.svg" alt="Vue" />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-preact.svg"
+                        alt="Preact"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-touch">
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                      />
+                    </div>
+                  </div>
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-nextjs.svg"
+                        alt="Next.js"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-nuxtjs.svg"
+                        alt="Nuxt.js"
+                      />
+                    </div>
+
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-react.svg"
+                        alt="React"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-astro.svg"
+                        alt="Astro"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-blitz.svg"
+                        alt="Blitz"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-remix.svg"
+                        alt="Remix"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                      />
+                    </div>
+                    <div className="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-flutter.svg"
+                        alt="Flutter"
+                      />
+                    </div>
+                  </div>
+                  <div className="stack-grid-row">
+                    <div className="stack-grid-item is-hidden-touch">
+                      <img
+                        src="./assets/images/stack/logo-flutter.svg"
+                        alt="Flutter"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-swift.svg"
+                        alt="Swift"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-ionic.svg"
+                        alt="Ionic"
+                      />
+                    </div>
+                    <div className="stack-grid-item">
+                      <img
+                        src="./assets/images/stack/logo-meteor.svg"
+                        alt="Meteor"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="columns is-gapless is-multiline mb-0">
+            <div className="column is-12">
+              <div className="card has-strokes--gradient is-shadowless py-4">
+                <div className="card-content">
+                  <div className="content">
+                    <h3>manifest /ˈmanɪfɛst/</h3>
+                    <p>clear or obvious to the eye or mind.</p>
+                    <p>
+                      Our goal is to allow people to create backend
+                      effortlessly. Empowering anyone to create and share great
+                      digital products.
+                    </p>
                   </div>
                 </div>
               </div>
