@@ -1118,6 +1118,7 @@ pre {
 
 button,
 .button {
+  position: relative;
   outline: none;
 
   @each $name, $pair in utilities.$colors {
