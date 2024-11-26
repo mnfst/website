@@ -2,6 +2,7 @@ import Image from 'next/image'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
+import { FAQ } from './components/FAQ'
 
 export default function Home() {
   return (
@@ -1029,6 +1030,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="container-fluid has-background-white">
         <div className="py-7">
           <div className="container">
@@ -1122,6 +1124,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container-fluid ">
+        <FAQ />
       </div>
     </div>
   )
