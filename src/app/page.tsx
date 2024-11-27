@@ -1072,43 +1072,45 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="columns">
-          <div className="column">
-            <div className="card">
-              <div className="card-content">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-9">
-                      <h2>Join Manifest community</h2>
-                      <p>You are enthusiast about Manifest ? So are we !</p>
-                      <p>
-                        Join our growing community to give your feedback,
-                        suggest features and share some love.
-                      </p>
-                      <div className="buttons">
-                        <div className="button is-primary is-light is-small">
-                          <span className="icon">
-                            <i className="fa-brands fa-discord"></i>
-                          </span>
-                          <span>Join the community on Discord</span>
-                        </div>
-                        <div className="button is-light is-small">
-                          <span className="icon">
-                            <i className="fab fa-github"></i>
-                          </span>
-                          <span>Star Manifest on Github</span>
-                        </div>
-                        <div className="button is-info is-light is-small">
-                          <span className="icon">
-                            <i className="fa-regular fa-heart"></i>
-                          </span>
-                          <span>Sponsor Manifest</span>
+
+        <div className="container">
+          <div className="columns">
+            <div className="column">
+              <div className="wheel"></div>
+              <div className="wheel"></div>
+              <div className="card has-border-gradient card--community is-shadowless">
+                <div className="card-content py-7">
+                  <div className="content">
+                    <div className="columns">
+                      <div className="column is-9">
+                        <h2>Join Manifest community</h2>
+                        <p>You are enthusiast about Manifest ? So are we !</p>
+                        <p>
+                          Join our growing community to give your feedback,
+                          suggest features and share some love.
+                        </p>
+                        <div className="buttons mt-5">
+                          <div className="button is-white  is-small">
+                            <span className="icon has-text-link">
+                              <i className="fa-brands fa-discord"></i>
+                            </span>
+                            <span>Join the community on Discord</span>
+                          </div>
+                          <div className="button is-white is-small">
+                            <span className="icon">
+                              <i className="fab fa-github"></i>
+                            </span>
+                            <span>Star Manifest on Github</span>
+                          </div>
+                          <div className="button is-white  is-small">
+                            <span className="icon has-text-info">
+                              <i className="fa-regular fa-heart"></i>
+                            </span>
+                            <span>Sponsor Manifest</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="column"></div>
                   </div>
                 </div>
               </div>
@@ -1116,7 +1118,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="container-fluid">
         <div className="container pt-7 pb-6 mb-5">
           <div className="columns is-multiline">

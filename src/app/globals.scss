@@ -1229,6 +1229,44 @@ button,
   .icon-text {
     flex-wrap: nowrap;
   }
+
+  &--community {
+    position: relative;
+    .card-content {
+      @include mixins.tablet {
+        background-image: url('/assets/images/community.png');
+        background-size: contain;
+      }
+      @include mixins.mobile {
+        background-image: url('/assets/images/community-mobile.png');
+        background-size: cover;
+      }
+      background-repeat: no-repeat;
+      background-position: right center;
+      border-radius: 10px;
+    }
+  }
+}
+
+.wheel {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  width: 375px;
+  height: calc(100% - #{$gap});
+  background: url('/assets/images/wheel-small.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &:first-child {
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  &:nth-child(2) {
+    right: 0;
+    transform: translateX(50%) translateY(-50%) rotate(180deg);
+  }
 }
 
 .is-rounded {
@@ -1434,20 +1472,20 @@ main .content a:not(.button):not(.icon-text) {
   background: radial-gradient(
         circle at 100% 100%,
         #ffffff 0,
-        #ffffff 16px,
-        transparent 16px
+        #ffffff 7px,
+        transparent 7px
       )
-      0% 0%/18px 18px no-repeat,
-    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 16px, transparent 16px)
-      100% 0%/18px 18px no-repeat,
-    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 16px, transparent 16px)
-      0% 100%/18px 18px no-repeat,
-    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 16px, transparent 16px)
-      100% 100%/18px 18px no-repeat,
-    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
-      calc(100% - 36px) no-repeat,
-    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 36px)
-      calc(100% - 4px) no-repeat,
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
     linear-gradient(
       220deg,
       #2430f0 0%,
@@ -1457,7 +1495,8 @@ main .content a:not(.button):not(.icon-text) {
       #ffd037 84%,
       #00cecb 100%
     );
-  border-radius: 18px;
+  padding: 1px;
+  border-radius: 8px;
   box-sizing: content-box;
 }
 
