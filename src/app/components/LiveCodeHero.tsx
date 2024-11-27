@@ -150,7 +150,53 @@ properties:
       {/* Tab Content: editor */}
       <div className="ui-ide is-fullwidth is-bordered">
         <div className="ide">
-          <div className="sidebar"></div>
+          <div className="sidebar has-text-grey-lighter">
+            <div className="sidebar__title">
+              <span>explorer</span>
+              <i className="fa-solid fa-ellipsis"></i>
+            </div>
+            <div className="explorer-item is-small">
+              <i className="fa-solid fa-chevron-right"></i>
+              <span className="is-uppercase ">My-project</span>
+            </div>
+            <div className="explorer-item level-2 has-2-children is-parent ">
+              <i className="fa-solid fa-chevron-down"></i>
+              <i className="lni lni-folder"></i>
+              <span className="">manifest</span>
+            </div>
+            <div className="explorer-item level-3">
+              <i className="fa-solid fa-database has-text-info"></i>
+              <span className="">backend.db</span>
+            </div>
+            <div className="explorer-item level-3 is-active">
+              <i className="fa-solid fa-exclamation has-text-primary-light is-italic"></i>
+              <span className="">backend.yml</span>
+            </div>
+            <div className="explorer-item is-parent level-2">
+              <i className="fa-solid fa-chevron-right"></i>
+              <i className="lni lni-folder"></i>
+              <span className="">node_modules</span>
+            </div>
+            <div className="explorer-item level-2">
+              <i className="fa-solid fa-gear has-text-grey-light"></i>
+              <span className="">.env</span>
+            </div>
+            <div className="explorer-item level-2">
+              <i className="fa-brands fa-git-alt has-text-danger"></i>
+              <span className="">.gitignore</span>
+            </div>
+            <div className="explorer-item level-2">
+              <i className="has-text-info is-regular has-text-warning">
+                {' '}
+                &#123;&#125;
+              </i>
+              <span className="">package.json</span>
+            </div>
+            <div className="explorer-item level-2">
+              <i className="fa-solid fa-circle-info"></i>
+              <span className="">README.md</span>
+            </div>
+          </div>
           <div className="editor-container">
             <div className="tab-template">
               <div className="tab-ide">

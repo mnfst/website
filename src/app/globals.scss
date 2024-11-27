@@ -1914,7 +1914,7 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .ui-ide {
-  min-height: 500px;
+  min-height: 536px;
   background-color: #011628;
   padding: 1px;
 }
@@ -1924,6 +1924,34 @@ main .content a:not(.button):not(.icon-text) {
   flex: 1 0 0;
   align-self: stretch;
   width: 100%;
+
+  .sidebar {
+    display: flex;
+    width: 221px;
+    height: 536px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: #252526;
+
+    @include mixins.touch {
+      display: none;
+    }
+
+    .sidebar__title {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      display: flex;
+      height: 40px;
+      padding: 8px 12px 8px 20px;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+      gap: 10px;
+      font-size: 11px;
+    }
+  }
 }
 .tab-template {
   display: flex;
@@ -1972,4 +2000,61 @@ main .content a:not(.button):not(.icon-text) {
   color: #808080;
   padding-top: 14.08px;
   padding-bottom: 14.08px;
+}
+.explorer-item {
+  display: flex;
+  height: 22px;
+  padding: 3px 12px 2px 12px;
+  font-size: 12px;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+
+  &.is-active {
+    background-color: #252486;
+  }
+
+  i {
+    min-width: 12px;
+  }
+
+  .fa-circle-info {
+    color: #3794ff;
+  }
+
+  &.is-small {
+    span {
+      font-size: 10px;
+    }
+  }
+
+  &.level-2 {
+    padding-left: 1.5rem;
+    &:not(.is-parent) i {
+      margin-left: 20px;
+    }
+  }
+
+  &.level-3 {
+    padding-left: 3.5rem;
+  }
+}
+
+.has-2-children {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 1px;
+    height: calc(100% * 2);
+    background-color: $grey;
+  }
+  &.level-2 {
+    &:before {
+      left: 26.5px;
+    }
+  }
 }
