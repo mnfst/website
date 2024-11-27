@@ -1069,8 +1069,6 @@ export default function Home() {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <div className="wheel"></div>
-              <div className="wheel"></div>
               <div className="card has-border-gradient card--community is-shadowless">
                 <div className="card-content py-7">
                   <div className="content">

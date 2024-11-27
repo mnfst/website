@@ -945,13 +945,6 @@ body {
   font-size: $size-0;
 }
 
-pre {
-  padding: 0;
-  background-color: transparent;
-  line-height: 1.6;
-  color: #00448c;
-}
-
 @for $i from 0 through 3 {
   .ci#{$i} {
     padding-left: #{$i * 2}rem;
@@ -1906,4 +1899,77 @@ main .content a:not(.button):not(.icon-text) {
   .faq-answer p {
     margin: 0;
   }
+}
+
+.tab-list {
+  .tab {
+    &:not(:first-child) {
+      margin-left: $column-gap;
+    }
+  }
+
+  .tag {
+    cursor: pointer;
+  }
+}
+
+.ui-ide {
+  min-height: 500px;
+  background-color: #011628;
+  padding: 1px;
+}
+.ide {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  width: 100%;
+}
+.tab-template {
+  display: flex;
+  width: 100%;
+  padding-right: 12px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background-color: #252526;
+}
+.editor-container {
+  width: 100%;
+}
+.editor-template {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tab-ide {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 8px 12px;
+  gap: 10px;
+  color: $white;
+  background-color: #011628;
+}
+
+.line-numbers {
+  width: 67px;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  line-height: 21.1px;
+  font-size: 12px;
+  color: #808080;
+  padding-top: 14.08px;
+  padding-bottom: 14.08px;
 }

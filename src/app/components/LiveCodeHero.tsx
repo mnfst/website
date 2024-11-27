@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml'
 
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import './LiveCodeHero.scss'
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 SyntaxHighlighter.registerLanguage('yaml', yaml)
 
@@ -133,38 +133,74 @@ properties:
   return (
     <div>
       {/* Tab Headers */}
-      <div style={{ display: 'flex', borderBottom: '2px solid #ccc' }}>
+      <div className="card is-shadowless is-bordered p-4 tab-list is-flex is-align-items-flex-start mb-0">
         {tabs.map((tab, i) => (
-          <span
-            key={i}
-            onClick={() => handleTabClick(i)}
-            style={{
-              padding: '10px 20px',
-              cursor: 'pointer',
-              border: 'none',
-              borderBottom: activeTab === i ? '3px solid #0070f3' : 'none',
-              backgroundColor: 'transparent',
-              fontWeight: activeTab === i ? 'bold' : 'normal'
-            }}
-          >
-            {tab.label}
+          <span key={i} onClick={() => handleTabClick(i)} className="tab">
+            <span
+              className={`tag is-rounded  ${
+                activeTab === i ? 'is-white-bis' : 'is-white'
+              }`}
+            >
+              {tab.label}
+            </span>
           </span>
         ))}
       </div>
 
       {/* Tab Content: editor */}
-      <div
-        style={{
-          height: 640,
-          width: 1136,
-          backgroundColor: 'black',
-          color: 'white'
-        }}
-      >
-        {/* TODO: Chose style: https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/HEAD/AVAILABLE_STYLES_PRISM.MD */}
-        <SyntaxHighlighter language="yaml" style={oneDark}>
-          {displayedContent}
-        </SyntaxHighlighter>
+      <div className="ui-ide is-fullwidth is-bordered">
+        <div className="ide">
+          <div className="sidebar"></div>
+          <div className="editor-container">
+            <div className="tab-template">
+              <div className="tab-ide">
+                <i className="fa-solid fa-exclamation has-text-primary-light is-italic"></i>
+                <span>backend.yml</span>
+                <span>manifest/backend.yml</span>
+                <i className="fa-solid fa-xmark"></i>
+              </div>
+              <div className="toolbar has-text-grey">
+                <i className="fa-solid fa-code-compare"></i>
+                <i className="fa-solid fa-table-columns"></i>
+                <i className="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <div className="editor-template">
+              <div className="line-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+                <span>20</span>
+              </div>
+              <div className="code">
+                {/* TODO: Chose style: https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/HEAD/AVAILABLE_STYLES_PRISM.MD */}
+                <SyntaxHighlighter
+                  language="yaml"
+                  style={nightOwl}
+                  className="mt-0"
+                >
+                  {displayedContent}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
