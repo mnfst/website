@@ -1883,6 +1883,16 @@ main .content a:not(.button):not(.icon-text) {
   }
 
   .faq-answer {
-    padding: 0 $gap $gap;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    p {
+      padding: 0 $gap $gap;
+    }
+  }
+
+  .faq-answer p {
+    margin: 0;
   }
 }
