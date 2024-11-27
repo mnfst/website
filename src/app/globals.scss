@@ -12,6 +12,8 @@ $light: #f1f3f5 !default;
 $white-ter: #f8f9fa !default;
 $white-bis: #fbfcfd !default;
 $light-bis: #f1f1f1 !default; // Sheet
+$pink: #fff !default;
+$pink-light: #fff !default;
 $white: #fff !default;
 $size-0: 3.5832rem !default;
 $size-8: 0.75rem !default;
@@ -37,7 +39,7 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
   $size-7: 1rem,
   $danger: #ff5e5b,
   $success: #2be1b7,
-  $info: #4cc9f0,
+  $info: #e12bb0,
   $warning: #f2c79c,
   $link: #2430f0,
   $primary: #7209b7,
@@ -85,8 +87,12 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
 @forward 'bulma/sass/layout';
 @forward 'bulma/sass/themes';
 
-@import 'lineicons/web-font/lineicons.css';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'lineicons/web-font/lineicons.css';
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
 
 .has-background-transparent {
   background-color: transparent;
