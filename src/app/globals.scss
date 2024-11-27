@@ -1604,7 +1604,7 @@ main .content a:not(.button):not(.icon-text) {
 
 .field.has-addons input {
   border: 0;
-  box-shadow: 0 0 0 1px utilities.$link;
+  box-shadow: 0 0 0 1px utilities.$border;
 }
 
 .masonry {
@@ -1844,10 +1844,10 @@ main .content a:not(.button):not(.icon-text) {
   &:after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
     display: inline-block;
     pointer-events: none;
     background: linear-gradient(
@@ -1856,5 +1856,20 @@ main .content a:not(.button):not(.icon-text) {
       rgba(utilities.$white, 0) 31%,
       rgba(utilities.$white, 0) 100%
     );
+  }
+}
+.roadmap {
+  h4 {
+    @include mixins.widescreen-only {
+      font-size: 1.125em;
+    }
+  }
+  .is-feature-request {
+    .card-content {
+      @include mixins.widescreen {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 }
