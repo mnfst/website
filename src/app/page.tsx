@@ -554,7 +554,10 @@ export default function Home() {
                       features like committing and branching.
                     </p>
                     <p className="mb-2">
-                      <a href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml">
+                      <a
+                        href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml"
+                        target="_blank"
+                      >
                         <span className="icon-text">
                           <span>Try Manifest on Stackblitz</span>
                           <span className="icon">
