@@ -1873,3 +1873,16 @@ main .content a:not(.button):not(.icon-text) {
     }
   }
 }
+
+.faq-item {
+  a.faq-question {
+    border-bottom-color: utilities.$white-bis;
+    width: 100%;
+    padding: $gap;
+    cursor: pointer;
+  }
+
+  .faq-answer {
+    padding: 0 $gap $gap;
+  }
+}

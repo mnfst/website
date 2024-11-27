@@ -1119,7 +1119,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container-fluid has-background-white roadmap">
-        <div className="container pt-7 pb-7 mb-5">
+        <div className="container py-7">
           <div className="columns is-multiline">
             <div className="column is-4">
               <div className="content is-normal">
@@ -1260,7 +1260,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid has-bakground-white">
+      <div className="container-fluid has-background-white">
         <div className="container">
           <div className="columns">
             <div className="column is-8 is-offset-2">
