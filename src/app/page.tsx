@@ -200,7 +200,7 @@ export default function Home() {
                     </p>
                     <p>Yes, you can do SSG and SSR too.</p>
                     <p className="mb-2">
-                      <a href="">
+                      <a href="/docs/javascript-sdk">
                         <span className="icon-text">
                           <span>See the JS SDK documentation</span>
                           <span className="icon">
@@ -210,7 +210,7 @@ export default function Home() {
                       </a>
                     </p>
                     <p>
-                      <a href="">
+                      <a href="/docs/rest-api">
                         <span className="icon-text">
                           <span>Use the REST API</span>
                           <span className="icon">
@@ -346,20 +346,10 @@ export default function Home() {
                       that they will break anything. Obviously if it does not
                       fit you can always bring your own.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 is-hidden">
                       <a href="">
                         <span className="icon-text">
                           <span>See Admin Panel live demo</span>
-                          <span className="icon">
-                            <i className="lni lni-arrow-right"></i>
-                          </span>
-                        </span>
-                      </a>
-                    </p>
-                    <p>
-                      <a href="">
-                        <span className="icon-text">
-                          <span>Use the REST API</span>
                           <span className="icon">
                             <i className="lni lni-arrow-right"></i>
                           </span>
@@ -492,7 +482,7 @@ export default function Home() {
                       private.
                     </p>
                     <p className="mb-2">
-                      <a href="">
+                      <a href="/docs/deploy">
                         <span className="icon-text">
                           <span>See deployment guides</span>
                           <span className="icon">
@@ -564,7 +554,7 @@ export default function Home() {
                       features like committing and branching.
                     </p>
                     <p className="mb-2">
-                      <a href="">
+                      <a href="https://stackblitz.com/fork/github/mnfst/manifest/tree/master/examples/main-demo?file=manifest/backend.yml">
                         <span className="icon-text">
                           <span>Try Manifest on Stackblitz</span>
                           <span className="icon">
@@ -1090,24 +1080,36 @@ export default function Home() {
                           suggest features and share some love.
                         </p>
                         <div className="buttons mt-5">
-                          <div className="button is-white  is-small">
+                          <a
+                            className="button is-white  is-small"
+                            href="https://discord.gg/FepAked3W7"
+                            target="_blank"
+                          >
                             <span className="icon has-text-link">
                               <i className="fa-brands fa-discord"></i>
                             </span>
                             <span>Join the community on Discord</span>
-                          </div>
-                          <div className="button is-white is-small">
+                          </a>
+                          <a
+                            className="button is-white is-small"
+                            href="https://github.com/mnfst/manifest"
+                            target="_blank"
+                          >
                             <span className="icon">
                               <i className="fab fa-github"></i>
                             </span>
                             <span>Star Manifest on Github</span>
-                          </div>
-                          <div className="button is-white  is-small">
+                          </a>
+                          <a
+                            className="button is-white  is-small"
+                            href="https://opencollective.com/mnfst"
+                            target="_blank"
+                          >
                             <span className="icon has-text-info">
                               <i className="fa-regular fa-heart"></i>
                             </span>
                             <span>Sponsor Manifest</span>
-                          </div>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1269,9 +1271,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid has-background-white">
-        <div className="container">
-          <div className="columns">
+      <div className="container-fluid has-background-white is-relative">
+        <div className="has-background-wheel"></div>
+        <div className="container py-7">
+          <div className="columns is-multiline">
             <div className="column is-8 is-offset-2">
               <div className="content is-normal has-text-centered">
                 <img src="./assets/images/logo-peacock.svg" alt="" />
@@ -1285,15 +1288,30 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-6-tablet is-offset-3">
-              <div className="content is-normal  mb-6 is-flex is-align-items-center is-justify-content-center box-main-cta">
+              <div className="content is-normal  is-flex is-align-items-center is-justify-content-center box-main-cta is-flex-direction-column">
                 <InstallCLI />
-                <a
-                  className="button is-light"
-                  href="/docs/install"
-                  target="_blank"
-                >
-                  Get started
-                </a>
+                <div className="content is-normal  mb-5 is-flex is-align-items-center is-justify-content-center box-main-cta">
+                  <a
+                    className="button is-white is-small"
+                    href="/docs/install"
+                    target="_blank"
+                  >
+                    <span className="icon">
+                      <i className="far fa-file-lines"></i>
+                    </span>
+                    <span>Documentation</span>
+                  </a>
+                  <a
+                    className="button is-white is-small"
+                    href="https://github.com/mnfst/manifest"
+                    target="_blank"
+                  >
+                    <span className="icon">
+                      <i className="fab fa-github"></i>
+                    </span>
+                    <span> Github</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
