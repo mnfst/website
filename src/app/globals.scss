@@ -31,12 +31,15 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
   0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
   0px 0px 0px 1px rgba($dark, 0.08) !default;
 $livecode-tab-height: 35px !default;
-$livecode-height: 505px !default;
-$livecode-height-mobile: 365px !default;
+$livecode-height: 515px !default;
 $livecode-sidebar-height: #{$livecode-height + $livecode-tab-height} !default;
+$livecode-py: 1em !default;
+$livecode-height-mobile: 365px !default;
 $livecode-sidebar-height-mobile: #{$livecode-height-mobile +
   $livecode-tab-height} !default;
-$livecode-py: 1em !default;
+$livecode-height-tablet: 437px !default;
+$livecode-sidebar-height-tablet: #{$livecode-height-tablet +
+  $livecode-tab-height} !default;
 
 @use 'bulma/sass/utilities' with (
   $size-1: 2.986rem,
@@ -1963,11 +1966,14 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .ui-ide {
-  min-height: $livecode-sidebar-height;
+  min-height: $livecode-sidebar-height-tablet;
   background-color: #011628;
   padding: 1px;
   @include mixins.mobile {
     min-height: $livecode-sidebar-height-mobile;
+  }
+  @include mixins.desktop {
+    min-height: $livecode-sidebar-height;
   }
 }
 .ide {
@@ -1986,12 +1992,13 @@ main .content a:not(.button):not(.icon-text) {
     align-self: stretch;
     background-color: #252526;
 
-    @include mixins.mobile {
-      height: $livecode-sidebar-height-mobile;
-    }
-
     @include mixins.touch {
       display: none;
+      height: $livecode-sidebar-height-tablet;
+    }
+
+    @include mixins.mobile {
+      height: $livecode-sidebar-height-mobile;
     }
 
     .sidebar__title {
@@ -2009,19 +2016,27 @@ main .content a:not(.button):not(.icon-text) {
     }
   }
   .code {
-    height: $livecode-height;
     width: 100%;
     font-size: 0.9em;
     line-height: 1.5;
-    overflow: auto;
+    height: $livecode-height-tablet;
 
     @include mixins.mobile {
       height: $livecode-height-mobile;
+      overflow: auto;
     }
-    pre {
+
+    @include mixins.desktop {
       height: $livecode-height;
+    }
+
+    pre {
+      height: $livecode-height-tablet;
       @include mixins.mobile {
         height: $livecode-height-mobile;
+      }
+      @include mixins.desktop {
+        height: $livecode-height;
       }
     }
   }
@@ -2061,7 +2076,6 @@ main .content a:not(.button):not(.icon-text) {
 
 .line-numbers {
   width: 67px;
-  height: $livecode-height;
   flex-shrink: 0;
   display: flex;
   align-self: stretch;
@@ -2074,8 +2088,12 @@ main .content a:not(.button):not(.icon-text) {
   color: #808080;
   padding-top: $livecode-py;
   padding-bottom: $livecode-py;
+  height: $livecode-height-tablet;
   @include mixins.mobile {
     height: $livecode-height-mobile;
+  }
+  @include mixins.desktop {
+    height: $livecode-height;
   }
 }
 .explorer-item {
