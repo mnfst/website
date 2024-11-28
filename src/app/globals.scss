@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $black: #161617 !default;
 $darkness: #22110c !default; // Some titles
 $black-bis: #0d0e0e !default;
@@ -1267,23 +1269,40 @@ button,
     transform: translateX(50%) translateY(-50%) rotate(180deg);
   }
 }
-
+.has-blurred-bg {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('/assets/images/blurred-background.png');
+  z-index: -2;
+  width: 150%;
+  opacity: 0.5;
+  background-size: contain;
+}
 .has-background-wheel {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/wheel.svg');
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: auto;
-
+  .is-bottom-cta & {
+    background-image: url('/assets/images/wheel.svg');
+    background-size: contain;
+    left: 0;
+  }
   .is-hero & {
     background-image: url('/assets/images/wheel-white-ter.svg');
-    z-index: -2;
+    z-index: -3;
     width: 120%;
-    transform: translateX(-10%);
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: auto;
   }
 }
 
@@ -1291,10 +1310,10 @@ button,
   content: '';
   position: absolute;
   display: inline-block;
-  bottom: 0;
+  bottom: -1px;
   left: 50%;
   width: 100vw;
-  height: #{$livecode-height * 0.5};
+  height: calc(#{$livecode-height} * 0.5 + #{$livecode-tab-height});
   background-color: $white;
   z-index: -1;
   transform: translateX(-50%);
@@ -1984,6 +2003,11 @@ main .content a:not(.button):not(.icon-text) {
     width: 100%;
     font-size: 0.9em;
     line-height: 1.5;
+    overflow: auto;
+
+    pre {
+      height: $livecode-height;
+    }
   }
 }
 .tab-template {

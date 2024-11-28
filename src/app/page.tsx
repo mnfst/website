@@ -38,6 +38,7 @@ export default function Home() {
               </div>
               <div className="column is-12">
                 <div className="has-background-wheel"></div>
+                <div className="has-blurred-bg"></div>
                 <div className="hero-bg"></div>
                 <LiveCodeHero />
               </div>
@@ -1276,7 +1277,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid has-background-white is-relative">
+      <div className="container-fluid has-background-white is-relative is-bottom-cta">
         <div className="has-background-wheel"></div>
         <div className="container py-7">
           <div className="columns is-multiline">
