@@ -32,7 +32,10 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
   0px 0px 0px 1px rgba($dark, 0.08) !default;
 $livecode-tab-height: 35px !default;
 $livecode-height: 505px !default;
+$livecode-height-mobile: 365px !default;
 $livecode-sidebar-height: #{$livecode-height + $livecode-tab-height} !default;
+$livecode-sidebar-height-mobile: #{$livecode-height-mobile +
+  $livecode-tab-height} !default;
 $livecode-py: 1em !default;
 
 @use 'bulma/sass/utilities' with (
@@ -1963,6 +1966,9 @@ main .content a:not(.button):not(.icon-text) {
   min-height: $livecode-sidebar-height;
   background-color: #011628;
   padding: 1px;
+  @include mixins.mobile {
+    min-height: $livecode-sidebar-height-mobile;
+  }
 }
 .ide {
   display: flex;
@@ -1979,6 +1985,10 @@ main .content a:not(.button):not(.icon-text) {
     align-items: flex-start;
     align-self: stretch;
     background-color: #252526;
+
+    @include mixins.mobile {
+      height: $livecode-sidebar-height-mobile;
+    }
 
     @include mixins.touch {
       display: none;
@@ -2005,8 +2015,14 @@ main .content a:not(.button):not(.icon-text) {
     line-height: 1.5;
     overflow: auto;
 
+    @include mixins.mobile {
+      height: $livecode-height-mobile;
+    }
     pre {
       height: $livecode-height;
+      @include mixins.mobile {
+        height: $livecode-height-mobile;
+      }
     }
   }
 }
@@ -2058,6 +2074,9 @@ main .content a:not(.button):not(.icon-text) {
   color: #808080;
   padding-top: $livecode-py;
   padding-bottom: $livecode-py;
+  @include mixins.mobile {
+    height: $livecode-height-mobile;
+  }
 }
 .explorer-item {
   display: flex;
