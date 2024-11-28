@@ -233,6 +233,8 @@ properties:
                 <span>18</span>
                 <span>19</span>
                 <span>20</span>
+                <span>21</span>
+                <span>22</span>
               </div>
               <div className="code">
                 {/* TODO: Chose style: https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/HEAD/AVAILABLE_STYLES_PRISM.MD */}

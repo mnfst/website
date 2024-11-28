@@ -28,6 +28,10 @@ $gap: 2rem !default;
 $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
   0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
   0px 0px 0px 1px rgba($dark, 0.08) !default;
+$livecode-tab-height: 35px !default;
+$livecode-height: 505px !default;
+$livecode-sidebar-height: #{$livecode-height + $livecode-tab-height} !default;
+$livecode-py: 1em !default;
 
 @use 'bulma/sass/utilities' with (
   $size-1: 2.986rem,
@@ -848,6 +852,9 @@ $is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
   width: 100%;
 }
 
+.notification {
+  z-index: 9;
+}
 .has-background-gradient {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="0.75"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="130" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(%23bbblurry-filter)"><ellipse rx="125" ry="52" cx="783.8145975642178" cy="49.824249826800724" fill="%232430f0ff"></ellipse><ellipse rx="125" ry="52" cx="63.723303070867246" cy="714.6869909476235" fill="%23f2c79cff"></ellipse></g></svg>');
   background-size: cover;
@@ -1267,10 +1274,30 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/assets/images/wheel.svg');
+  background-image: url('/assets/images/wheel.svg');
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain;
+  background-size: auto;
+
+  .is-hero & {
+    background-image: url('/assets/images/wheel-white-ter.svg');
+    z-index: -2;
+    width: 120%;
+    transform: translateX(-10%);
+  }
+}
+
+.hero-bg {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: #{$livecode-height * 0.5};
+  background-color: $white;
+  z-index: -1;
+  transform: translateX(-50%);
 }
 
 .is-rounded {
@@ -1326,7 +1353,7 @@ button,
 
       &:before {
         width: 6px;
-        height: 35px;
+        height: $livecode-tab-height;
         display: block;
         position: relative;
         content: '';
@@ -1914,7 +1941,7 @@ main .content a:not(.button):not(.icon-text) {
 }
 
 .ui-ide {
-  min-height: 536px;
+  min-height: $livecode-sidebar-height;
   background-color: #011628;
   padding: 1px;
 }
@@ -1928,7 +1955,7 @@ main .content a:not(.button):not(.icon-text) {
   .sidebar {
     display: flex;
     width: 221px;
-    height: 536px;
+    height: $livecode-sidebar-height;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
@@ -1951,6 +1978,12 @@ main .content a:not(.button):not(.icon-text) {
       gap: 10px;
       font-size: 11px;
     }
+  }
+  .code {
+    height: $livecode-height;
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 1.5;
   }
 }
 .tab-template {
@@ -1988,18 +2021,19 @@ main .content a:not(.button):not(.icon-text) {
 
 .line-numbers {
   width: 67px;
-  height: 100%;
+  height: $livecode-height;
   flex-shrink: 0;
   display: flex;
   align-self: stretch;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  line-height: 21.1px;
-  font-size: 12px;
+  line-height: 1.5;
+  font-size: 0.9em;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   color: #808080;
-  padding-top: 14.08px;
-  padding-bottom: 14.08px;
+  padding-top: $livecode-py;
+  padding-bottom: $livecode-py;
 }
 .explorer-item {
   display: flex;

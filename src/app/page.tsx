@@ -7,36 +7,40 @@ import SubscribeForm from './components/SubscribeForm'
 export default function Home() {
   return (
     <div>
-      <div className="mt-6 pt-4 mb-6">
-        <div className="container zi-1 has-text-centered">
-          <div className="columns is-multiline">
-            <div className="column is-8 is-offset-2">
-              <div className="content is-normal">
-                <h1 className="title is-0 mb-5">
-                  Meet the
-                  <span className="title-gradient"> 1-file backend </span>
-                </h1>
-                <p className="subtitle">
-                  Manifest is a complete backend that fits into a single YAML
-                  file. Cut the learning curve and ship very quickly without
-                  trading-off coding standards and best practices.
-                </p>
+      <div className="mt-6 pt-4">
+        <div className="container-fluid is-hero">
+          <div className="container zi-1 has-text-centered">
+            <div className="columns is-multiline">
+              <div className="column is-8 is-offset-2">
+                <div className="content is-normal">
+                  <h1 className="title is-0 mb-5">
+                    Meet the
+                    <span className="title-gradient"> 1-file backend </span>
+                  </h1>
+                  <p className="subtitle">
+                    Manifest is a complete backend that fits into a single YAML
+                    file. Cut the learning curve and ship very quickly without
+                    trading-off coding standards and best practices.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="column is-6-tablet is-offset-3">
-              <div className="content is-normal  mb-6 is-flex is-align-items-center is-justify-content-center box-main-cta">
-                <InstallCLI />
-                <a
-                  className="button is-light"
-                  href="/docs/install"
-                  target="_blank"
-                >
-                  Get started
-                </a>
+              <div className="column is-6-tablet is-offset-3">
+                <div className="content is-normal  mb-6 is-flex is-align-items-center is-justify-content-center box-main-cta">
+                  <InstallCLI />
+                  <a
+                    className="button is-light"
+                    href="/docs/install"
+                    target="_blank"
+                  >
+                    Get started
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="column is-12">
-              <LiveCodeHero />
+              <div className="column is-12">
+                <div className="has-background-wheel"></div>
+                <div className="hero-bg"></div>
+                <LiveCodeHero />
+              </div>
             </div>
           </div>
         </div>
