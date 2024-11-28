@@ -52,7 +52,7 @@ export default function Home() {
             <div className="column is-8 is-offset-2 my-4">
               <div className=" is-normal card-content--how-it-works">
                 <div className="content is-normal has-text-centered has-text-left--mobile mt-4">
-                  <h2>Zero-config backend-as-a-service, within your IDE.</h2>
+                  <h2>Zero-config backend-as-a-service, within your IDE</h2>
                   <p>
                     Let's forget about the "from scratch" vs "low-code/no-code"
                     debate.{' '}
@@ -78,8 +78,7 @@ export default function Home() {
                 </span>
 
                 <p className="is-size-6">
-                  Abstracted SQLite database to store your dynamic data. It is
-                  file-based, with nothing to pre-install or connect.
+                  Built-in persistent database to store data
                 </p>
               </div>
             </div>
@@ -93,8 +92,7 @@ export default function Home() {
                 </span>
 
                 <p className="is-size-6">
-                  Save hours of development with Manifest admin panel for
-                  non-technical administrators.
+                  Ready-to-use back-office dashboard for admins
                 </p>
               </div>
             </div>
@@ -108,8 +106,7 @@ export default function Home() {
                 </span>
 
                 <p className="is-size-6">
-                  Clean and sharp REST API with OpenAPI documentation and API
-                  rules.
+                  Instant CRUD endpoints with Swagger doc
                 </p>
               </div>
             </div>
@@ -117,17 +114,13 @@ export default function Home() {
               <div className="content backend-list__wrapper">
                 <span className="backend-list__item">
                   <span className="icon  backend-list__icon">
-                    <i className="lni lni-package has-text-success"></i>
+                    <i className="lni lni-cloud-download has-text-success"></i>
                   </span>
-                  <span>
-                    <span className="is-hidden-touch">Javascript</span>
-                    <span className="is-hidden-desktop">JS</span> SDK
-                  </span>
+                  <span>File storage</span>
                 </span>
 
                 <p className="is-size-6">
-                  Simplify your front-end integration with Manifest SDK for your
-                  JavaScript and TypeScript projects.
+                  Store user files. Resize and optiize images
                 </p>
               </div>
             </div>
@@ -199,11 +192,14 @@ export default function Home() {
                     <h2>Connect to any frontend</h2>
                     <p>
                       Plug-and-play with all frontend stacks and mobile stacks
-                      through our JS SDK or REST API. Adding a backend to a
-                      website or an app to make it dynamic has never been that
-                      easy.
+                      through our <strong>JS SDK</strong> or{' '}
+                      <strong>REST API</strong>. Adding a backend to a website
+                      or an app to make it dynamic has never been that easy.
                     </p>
-                    <p>Yes, you can do SSG and SSR too.</p>
+                    <p>
+                      Yes, you can do <strong>SSG</strong> and{' '}
+                      <strong>SSR</strong> too.
+                    </p>
                     <p className="mb-2">
                       <a href="/docs/javascript-sdk">
                         <span className="icon-text">
@@ -346,10 +342,10 @@ export default function Home() {
                       one for you.
                     </p>
                     <p>
-                      Manifest admin panel is non-technical so you can give it
-                      to your customers and app administrators without the fear
-                      that they will break anything. Obviously if it does not
-                      fit you can always bring your own.
+                      Manifest admin panel is <strong>non-technical</strong> so
+                      you can give it to your customers and app administrators
+                      without the fear that they will break anything. Obviously
+                      if it does not fit you can always bring your own.
                     </p>
                     <p className="mb-2 is-hidden">
                       <a href="">
@@ -684,7 +680,7 @@ export default function Home() {
           </div>
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-12">
-              <div className="card has-strokes--gradient is-shadowless py-4">
+              <div className="card is-shadowless py-4">
                 <div className="card-content">
                   <div className="content">
                     <h3>manifest /ˈmanɪfɛst/</h3>
