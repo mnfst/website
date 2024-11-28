@@ -1,10 +1,25 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (video) {
+      video.muted = true
+      video.play().catch((err) => {
+        console.error('Autoplay failed:', err)
+      })
+    }
+  }, [])
+
   return (
     <div>
       <div className="mt-6 pt-4">
@@ -36,7 +51,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="column is-12">
+              <div className="column is-12 pb-0">
                 <div className="has-background-wheel"></div>
                 <div className="has-blurred-bg"></div>
                 <div className="hero-bg has-border-top"></div>
@@ -49,9 +64,9 @@ export default function Home() {
       <div className="container-full has-background-white">
         <div className="container py-6">
           <div className="columns is-multiline">
-            <div className="column is-8 is-offset-2 my-4">
+            <div className="column is-8 is-offset-2 mb-4 mt-5">
               <div className=" is-normal card-content--how-it-works">
-                <div className="content is-normal has-text-centered has-text-left--mobile mt-4">
+                <div className="content is-normal has-text-centered has-text-left--mobile mt-4 zi-1">
                   <h2>Zero-config backend-as-a-service, within your IDE</h2>
                   <p>
                     Let's forget about the "from scratch" vs "low-code/no-code"
@@ -67,7 +82,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="columns is-multiline has-line-h">
+          <div className="columns is-multiline has-line-h has-line-v">
             <div className="column is-3">
               <div className="content backend-list__wrapper">
                 <span className="backend-list__item">
@@ -364,108 +379,26 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-6">
-              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
-                <div className="stack-grid-container">
-                  <div className="stack-grid-row">
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-svelte.svg"
-                        alt="Svelte"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img src="./assets/images/stack/logo-vue.svg" alt="Vue" />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-preact.svg"
-                        alt="Preact"
-                      />
-                    </div>
-                    <div className="stack-grid-item is-hidden-touch">
-                      <img
-                        src="./assets/images/stack/logo-angular.svg"
-                        alt="Angular"
-                      />
-                    </div>
-                  </div>
-                  <div className="stack-grid-row">
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-nextjs.svg"
-                        alt="Next.js"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-nuxtjs.svg"
-                        alt="Nuxt.js"
-                      />
-                    </div>
-
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-react.svg"
-                        alt="React"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-astro.svg"
-                        alt="Astro"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-blitz.svg"
-                        alt="Blitz"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-remix.svg"
-                        alt="Remix"
-                      />
-                    </div>
-                    <div className="stack-grid-item is-hidden-desktop">
-                      <img
-                        src="./assets/images/stack/logo-angular.svg"
-                        alt="Angular"
-                      />
-                    </div>
-                    <div className="stack-grid-item is-hidden-desktop">
-                      <img
-                        src="./assets/images/stack/logo-flutter.svg"
-                        alt="Flutter"
-                      />
-                    </div>
-                  </div>
-                  <div className="stack-grid-row">
-                    <div className="stack-grid-item is-hidden-touch">
-                      <img
-                        src="./assets/images/stack/logo-flutter.svg"
-                        alt="Flutter"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-swift.svg"
-                        alt="Swift"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-ionic.svg"
-                        alt="Ionic"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-meteor.svg"
-                        alt="Meteor"
-                      />
-                    </div>
-                  </div>
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0">
+                <div className="video-wrapper is-flex is-align-items-flex-end is-justify-content-center">
+                  <video
+                    autoPlay
+                    loop
+                    poster="./assets/images/dashboard-login.svg"
+                  >
+                    <source
+                      src="./assets/images/videos/dashboard-login.webm"
+                      type="video/webm"
+                    />
+                    <source
+                      src="./assets/images/videos/dashboard-login.mp4"
+                      type="video/mp4"
+                    />
+                    <source
+                      src="./assets/images/videos/dashboard-login.ogg"
+                      type="video/ogg"
+                    />
+                  </video>
                 </div>
               </div>
             </div>
@@ -574,109 +507,11 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-6">
-              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
-                <div className="stack-grid-container">
-                  <div className="stack-grid-row">
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-svelte.svg"
-                        alt="Svelte"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img src="./assets/images/stack/logo-vue.svg" alt="Vue" />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-preact.svg"
-                        alt="Preact"
-                      />
-                    </div>
-                    <div className="stack-grid-item is-hidden-touch">
-                      <img
-                        src="./assets/images/stack/logo-angular.svg"
-                        alt="Angular"
-                      />
-                    </div>
-                  </div>
-                  <div className="stack-grid-row">
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-nextjs.svg"
-                        alt="Next.js"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-nuxtjs.svg"
-                        alt="Nuxt.js"
-                      />
-                    </div>
-
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-react.svg"
-                        alt="React"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-astro.svg"
-                        alt="Astro"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-blitz.svg"
-                        alt="Blitz"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-remix.svg"
-                        alt="Remix"
-                      />
-                    </div>
-                    <div className="stack-grid-item is-hidden-desktop">
-                      <img
-                        src="./assets/images/stack/logo-angular.svg"
-                        alt="Angular"
-                      />
-                    </div>
-                    <div className="stack-grid-item is-hidden-desktop">
-                      <img
-                        src="./assets/images/stack/logo-flutter.svg"
-                        alt="Flutter"
-                      />
-                    </div>
-                  </div>
-                  <div className="stack-grid-row">
-                    <div className="stack-grid-item is-hidden-touch">
-                      <img
-                        src="./assets/images/stack/logo-flutter.svg"
-                        alt="Flutter"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-swift.svg"
-                        alt="Swift"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-ionic.svg"
-                        alt="Ionic"
-                      />
-                    </div>
-                    <div className="stack-grid-item">
-                      <img
-                        src="./assets/images/stack/logo-meteor.svg"
-                        alt="Meteor"
-                      />
-                    </div>
-                  </div>
-                </div>
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0">
+                <img
+                  src="./assets/images/stackblitz-demo.svg"
+                  alt=" manifest demo on stackblitz"
+                />
               </div>
             </div>
           </div>

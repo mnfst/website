@@ -1422,6 +1422,22 @@ button,
   }
 }
 
+.has-line-v {
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 500px;
+    width: 1px;
+    background-image: url('/assets/images/line-v.svg');
+    background-repeat: repeat;
+    background-position: bottom center;
+    bottom: calc(100% - 16px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .card-content--how-it-works {
   @include mixins.desktop {
     padding: 0 3rem;
@@ -2158,4 +2174,16 @@ main .content a:not(.button):not(.icon-text) {
 .has-border-top {
   border-top: 1px solid utilities.$border;
   box-shadow: 0 1px 0 1px utilities.$white inset;
+}
+
+.zi-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.video-wrapper {
+  video {
+    position: relative;
+    top: 1px;
+  }
 }
