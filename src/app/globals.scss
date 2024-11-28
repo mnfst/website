@@ -1450,7 +1450,7 @@ button,
 
   a {
     position: relative;
-    color: $white;
+    color: $dark;
 
     &:before {
       position: absolute;
@@ -1459,7 +1459,7 @@ button,
       transition: all 0.12s ease-in-out;
       bottom: 0;
       left: 0;
-      background-color: $white;
+      background-color: $dark;
       height: 1px;
       width: 0;
     }
@@ -2152,4 +2152,9 @@ main .content a:not(.button):not(.icon-text) {
       left: 26.5px;
     }
   }
+}
+
+.has-border-top {
+  border-top: 1px solid utilities.$border;
+  box-shadow: 0 1px 0 1px utilities.$white inset;
 }

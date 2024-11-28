@@ -4,7 +4,7 @@ import SubscribeForm from '../SubscribeForm'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer has-background-black has-text-white pb-4">
+    <footer className="footer has-background-white-bis has-text-dark pb-4 has-border-top">
       <div className="container">
         <div>
           <div className="columns is-multiline">
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="column is-6">
               <Image
-                src="/assets/images/logo-light.svg"
+                src="/assets/images/logo-transparent.svg"
                 width={180}
                 height={50}
                 alt="logo of manifest"
@@ -125,11 +125,11 @@ const Footer: React.FC = () => {
                 loading="lazy"
               />
             </div>
-            <div className="column is-6 has-text-right pt-5">
+            <div className="column is-6 has-text-right is-align-items-center is-flex is-justify-content-flex-end">
               <span>
                 Source code licensed{' '}
                 <a
-                  className="has-text-white is-underlined"
+                  className=" is-underlined"
                   href="https://opensource.org/license/mit"
                   target="_blank"
                 >

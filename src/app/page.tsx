@@ -39,7 +39,7 @@ export default function Home() {
               <div className="column is-12">
                 <div className="has-background-wheel"></div>
                 <div className="has-blurred-bg"></div>
-                <div className="hero-bg"></div>
+                <div className="hero-bg has-border-top"></div>
                 <LiveCodeHero />
               </div>
             </div>
