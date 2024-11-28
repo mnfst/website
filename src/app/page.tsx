@@ -517,7 +517,7 @@ export default function Home() {
           </div>
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-12">
-              <div className="card is-shadowless py-4">
+              <div className="card has-strokes--gradient is-shadowless py-4">
                 <div className="card-content">
                   <div className="content">
                     <h3>manifest /ˈmanɪfɛst/</h3>
