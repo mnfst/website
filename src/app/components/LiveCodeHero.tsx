@@ -16,7 +16,7 @@ const LiveCodeHero: React.FC = () => {
 
   const tabs = [
     {
-      label: 'Data models',
+      label: 'Collections',
       content: `name: Pokemon app 🐣
 
 entities:
@@ -35,32 +35,52 @@ entities:
   Trainer 🧑‍🎤:
     properties:
       - name
-      - { name: isChampion, type: boolean}`
+      - { name: isChampion, type: boolean }`
+    },
+    {
+      label: 'Singles',
+      content: `name: Corporate website 🌐
+
+entities:
+  Homepage:
+    single: true
+    properties:
+      - { name: title, type: string }
+      - { name: description, type: richText }
+      - { name: coverImage, type: image }
+
+  Footer:
+    single: true
+    properties:
+      - { name: githubLink, type: link }
+      - { name: linkedinLink, type: link }
+      - { name: copyright, type: string }
+      `
     },
     {
       label: 'Auth',
       content: `name: Invoice Management System 🗂️
 
-  entities:
-    User 👩🏻‍💼:
-        authenticable: true
+entities:
+  User 👩🏻‍💼:
+    authenticable: true
 
-    Accountant 👔:
-        authenticable: true
+  Accountant 👔:
+    authenticable: true
 
-    Invoice 🧾:
-        properties:
-        - number
-        - { name: amount, type: money, options: { currency: "EUR" } }
-        policies:
-            create:
-                - { access: restricted, allow: Accountant }
-            read:
-                - { access: restricted, allow: [Accountant, User] }
-            update:
-                - access: admin
-            delete:
-                - access: forbidden`
+  Invoice 🧾:
+    properties:
+      - number
+      - { name: amount, type: money, options: { currency: "EUR" } }
+    policies:
+      create:
+        - { access: restricted, allow: Accountant }
+      read:
+        - { access: restricted, allow: [Accountant, User] }
+      update:
+        - access: admin
+      delete:
+        - access: forbidden`
     },
     {
       label: 'Validation',
@@ -81,24 +101,24 @@ entities:
       content: `name: Job recruitment app 💼
 
 entities:
-UserProfile 👤:
-properties:
-- name
-- { name: email, type: email }
-- { name: linkedIn profile, type: link }
-- { name: resume, type: file }
-- {
-  name: profilePicture,
-  type: image,
-  options:
-    {
-      sizes:
-        {
-          standard: { height: 256, width: 256 },
-          thumbnail: { height: 64, width: 64 },
-        },
-    },
-}`
+  UserProfile 👤:
+    properties:
+      - name
+      - { name: email, type: email }
+      - { name: linkedIn profile, type: link }
+      - { name: resume, type: file }
+      - {
+          name: profilePicture,
+          type: image,
+          options:
+            {
+              sizes:
+                {
+                  standard: { height: 256, width: 256 },
+                  thumbnail: { height: 64, width: 64 },
+                },
+            },
+        }`
     }
   ]
 
