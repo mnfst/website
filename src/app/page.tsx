@@ -1049,10 +1049,8 @@ export default function Home() {
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Custom server</h4>
-                        <p>
-                          Custom server to create endpoints and add custom logic
-                        </p>
+                        <h4>Custom logic</h4>
+                        <p>Create endpoints and your own custom logic</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
                         <span>Q1 2025</span>
