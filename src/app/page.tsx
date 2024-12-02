@@ -171,7 +171,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-12 has-text-centered">
-              <div className="card has-strokes is-shadowless py-6">
+              <div className="card has-strokes--gradient is-shadowless py-6">
                 <div className="card-content">
                   <div className="content">
                     <div className="columns is-multiline">
@@ -515,27 +515,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="columns is-gapless is-multiline mb-0">
-            <div className="column is-12">
-              <div className="card has-strokes--gradient is-shadowless py-4">
-                <div className="card-content">
-                  <div className="content">
-                    <h3>manifest /ˈmanɪfɛst/</h3>
-                    <p>clear or obvious to the eye or mind.</p>
-                    <p>
-                      Our goal is to allow people to create backend
-                      effortlessly. Empowering anyone to create and share great
-                      digital products.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="container-full has-background-white">
-        <div className="py-6 content">
+        <div className="pb-6 pt-7 content">
           <div className="container">
             <h3 className="title is-3 mb-6  has-text-centered">
               Loved by developers 🤩

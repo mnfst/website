@@ -32,16 +32,6 @@ const RootLayout: React.FC<{
   return (
     <html lang="en" data-theme="light" className="has-navbar-fixed-top">
       <body className={inter.className}>
-        <span className="notification is-dark has-text-white is-block has-text-centered mb-0">
-          🎉 Help us grow! We're in BETA version and need your feedback on our{' '}
-          <a
-            className="has-text-white has-text-weight-bold px-1 is-underlined"
-            href="https://discord.gg/FepAked3W7"
-          >
-            Discord
-          </a>{' '}
-          to enhance Manifest.
-        </span>
         <Header />
         <main>{children}</main>
         <Footer />
