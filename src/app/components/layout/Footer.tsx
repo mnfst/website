@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                       <span className="icon">
                         <i className="lni lni-arrow-right is-size-6"></i>
                       </span>
-                      <a href="/assets">Brand assets</a>
+                      <a href="/brand-assets">Brand assets</a>
                     </span>
                   </li>
                 </ul>
@@ -105,9 +105,8 @@ const Footer: React.FC = () => {
               <div className="content">
                 <p className="has-text-weight-bold is-size-6">Stay tuned</p>
                 <p>
-                  We are building the simplest backend in the world. Do you want
-                  to embark on this adventure with us? Leave your email to stay
-                  in touch and start that journey with us.
+                  Manifest goal is to make backend development hassle-free.
+                  Leave your email to stay in touch.
                 </p>
                 <SubscribeForm />
               </div>
