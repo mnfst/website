@@ -1,6 +1,6 @@
 'use client'
-import { useEffect } from 'react'
 import sdk, { VM } from '@stackblitz/sdk'
+import { useEffect } from 'react'
 
 import './playground.scss'
 
@@ -24,15 +24,19 @@ export default function Playground() {
 
   return (
     <div>
-      <div className="columns">
-        <div className="column">
-          <h1 className="title is-1">Playground</h1>
-        </div>
-      </div>
+      <div className="mt-6 pt-4">
+        <div className="container">
+          <div className="columns">
+            <div className="column">
+              <h1 className="title is-1">Playground</h1>
+            </div>
+          </div>
 
-      <div className="columns">
-        <div className="column">
-          <div id="embed-editor"></div>
+          <div className="columns">
+            <div className="column">
+              <div id="embed-editor"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
