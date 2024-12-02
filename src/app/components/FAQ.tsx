@@ -36,7 +36,7 @@ export const FAQ: React.FC = () => {
     {
       question: 'What is behind the magic?',
       answer:
-        'Good sense and common top stacks: the current version runs on NodeJS, Express and NestJS. The Database is SQLite, using TypeORM and JS-YAML to go convert your YAML into a DB structure.'
+        'Good sense and ordinary popular stacks: the current version runs on NodeJS, Express and NestJS. We use JSON Schema to validate the YAML file, JS-YAML to parse it and TypeORM to map it into a SQLite database.'
     }
   ]
 
