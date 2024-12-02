@@ -171,16 +171,16 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-12 has-text-centered">
-              <div className="card has-strokes is-shadowless py-4">
+              <div className="card has-strokes is-shadowless py-6">
                 <div className="card-content">
                   <div className="content">
                     <div className="columns is-multiline">
-                      <div className="column is-12">
+                      <div className="column is-12 pb-0">
                         <h2>
                           Everything is about delivering the right product
                         </h2>
                       </div>
-                      <div className="column is-6 is-offset-3">
+                      <div className="column is-6 pt-0 is-offset-3">
                         <p>
                           It does not matter if you are junior or senior
                           developer, if you code in JS, PHP or Python. You can
