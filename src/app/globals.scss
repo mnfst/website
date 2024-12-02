@@ -1340,13 +1340,24 @@ button,
   position: absolute;
   color: utilities.$link;
   @extend .slideInUp;
-  @include mixins.tablet {
-    bottom: -34px;
-    right: 0;
-  }
+
+  bottom: 31%;
+  right: 55px;
+  z-index: 99;
+  font-weight: bold;
+  font-size: 11px !important;
+
   @include mixins.mobile {
-    bottom: 12px;
-    right: -55px;
+    right: 48px;
+  }
+
+  @include mixins.desktop {
+    bottom: 34%;
+    right: 61px;
+  }
+  @include mixins.widescreen {
+    bottom: 38%;
+    right: 68px;
   }
 }
 

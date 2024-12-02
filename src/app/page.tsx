@@ -1091,52 +1091,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid has-background-white is-relative is-bottom-cta">
-        <div className="has-background-wheel"></div>
-        <div className="container py-7">
-          <div className="columns is-multiline">
-            <div className="column is-8 is-offset-2">
-              <div className="content is-normal has-text-centered">
-                <img src="./assets/images/logo-peacock.svg" alt="" />
-                <h3 className="title is-3 mt-4">
-                  Start building with Manifest
-                </h3>
-                <p>
-                  Your frontend needs a backend? Set it up in minutes and you’re
-                  good to go!
-                </p>
-              </div>
-            </div>
-            <div className="column is-6-tablet is-offset-3">
-              <div className="content is-normal  is-flex is-align-items-center is-justify-content-center box-main-cta is-flex-direction-column">
-                <InstallCLI />
-                <div className="content is-normal  mb-5 is-flex is-align-items-center is-justify-content-center box-main-cta">
-                  <a
-                    className="button is-white is-small"
-                    href="/docs/install"
-                    target="_blank"
-                  >
-                    <span className="icon">
-                      <i className="far fa-file-lines"></i>
-                    </span>
-                    <span>Documentation</span>
-                  </a>
-                  <a
-                    className="button is-white is-small"
-                    href="https://github.com/mnfst/manifest"
-                    target="_blank"
-                  >
-                    <span className="icon">
-                      <i className="fab fa-github"></i>
-                    </span>
-                    <span> Github</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }
