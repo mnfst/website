@@ -28,7 +28,9 @@ export default function Playground() {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <h1 className="title is-1">Playground</h1>
+              <div className="content">
+                <h1>Playground</h1>
+              </div>
             </div>
           </div>
           <div className="columns">

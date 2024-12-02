@@ -248,21 +248,28 @@ export default function Home() {
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-svelte.svg"
+                        title="Svelte logo"
                         alt="Svelte"
                       />
                     </div>
                     <div className="stack-grid-item">
-                      <img src="./assets/images/stack/logo-vue.svg" alt="Vue" />
+                      <img
+                        src="./assets/images/stack/logo-vue.svg"
+                        title="Vue logo"
+                        alt="Vue"
+                      />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-preact.svg"
+                        title="Preact logo"
                         alt="Preact"
                       />
                     </div>
                     <div className="stack-grid-item is-hidden-touch">
                       <img
                         src="./assets/images/stack/logo-angular.svg"
+                        title="Angular logo"
                         alt="Angular"
                       />
                     </div>
@@ -271,12 +278,14 @@ export default function Home() {
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-nextjs.svg"
+                        title="Next logo"
                         alt="Next.js"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-nuxtjs.svg"
+                        title="Nuxt logo"
                         alt="Nuxt.js"
                       />
                     </div>
@@ -284,36 +293,42 @@ export default function Home() {
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-react.svg"
+                        title="React logo"
                         alt="React"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-astro.svg"
+                        title="Astro logo"
                         alt="Astro"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-blitz.svg"
+                        title="Blitz logo"
                         alt="Blitz"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-remix.svg"
+                        title="Remix logo"
                         alt="Remix"
                       />
                     </div>
                     <div className="stack-grid-item is-hidden-desktop">
                       <img
                         src="./assets/images/stack/logo-angular.svg"
+                        title="Angular logo"
                         alt="Angular"
                       />
                     </div>
                     <div className="stack-grid-item is-hidden-desktop">
                       <img
                         src="./assets/images/stack/logo-flutter.svg"
+                        title="Flutter logo"
                         alt="Flutter"
                       />
                     </div>
@@ -322,24 +337,28 @@ export default function Home() {
                     <div className="stack-grid-item is-hidden-touch">
                       <img
                         src="./assets/images/stack/logo-flutter.svg"
+                        title="Flutter logo"
                         alt="Flutter"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-swift.svg"
+                        title="Swift logo"
                         alt="Swift"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-ionic.svg"
+                        title="Ionic logo"
                         alt="Ionic"
                       />
                     </div>
                     <div className="stack-grid-item">
                       <img
                         src="./assets/images/stack/logo-meteor.svg"
+                        title="Meteor logo"
                         alt="Meteor"
                       />
                     </div>
@@ -439,12 +458,14 @@ export default function Home() {
                       <img
                         src="./assets/images/hosting/logo-render.svg"
                         alt="Render"
+                        title="Render logo"
                       />
                     </div>
                     <div className="hosting-grid-item">
                       <img
                         src="./assets/images/hosting/logo-fly.svg"
                         alt="Fly.io"
+                        title="Fly.io logo"
                       />
                     </div>
                   </div>
@@ -453,6 +474,7 @@ export default function Home() {
                       <img
                         src="./assets/images/hosting/logo-digitalocean.svg"
                         alt="Digital Ocean"
+                        title="Digital Ocean logo"
                       />
                     </div>
                   </div>
@@ -461,12 +483,14 @@ export default function Home() {
                       <img
                         src="./assets/images/hosting/logo-heroku.svg"
                         alt="Heroku"
+                        title="Heroku logo"
                       />
                     </div>
                     <div className="hosting-grid-item">
                       <img
                         src="./assets/images/hosting/logo-docker.svg"
                         alt="Docker"
+                        title="Docker logo"
                       />
                     </div>
                   </div>
@@ -511,6 +535,7 @@ export default function Home() {
                 <img
                   src="./assets/images/stackblitz-demo.svg"
                   alt=" manifest demo on stackblitz"
+                  title="Manifest demo on stackblitz"
                 />
               </div>
             </div>
