@@ -26,7 +26,11 @@ const InstallCLI: React.FC = () => {
             </span>
           </a>
         </div>
-        {isCopied && <span className="ml-4 info-copy is-size-6">Copied!</span>}
+        {isCopied && (
+          <span className="ml-4 info-copy is-size-6 has-text-success">
+            <i className="fa-solid fa-check"></i>
+          </span>
+        )}
       </div>
     </div>
   )
