@@ -28,10 +28,8 @@ const SubscribeForm: React.FC = () => {
   }
 
   return (
-
     <form onSubmit={handleSubmit}>
       <div className="is-flex is-align-items-flex-end is-justify-content-flex-start">
-
         <div className="field has-addons is-fullwidth">
           <div className="control is-fullwidth">
             <input
@@ -46,8 +44,8 @@ const SubscribeForm: React.FC = () => {
             />
           </div>
           <div className="control">
-            <button className="button is-link">
-              <span className='icon'>
+            <button className="button is-dark">
+              <span className="icon">
                 <i className="lni lni-arrow-right"></i>
               </span>
             </button>
@@ -55,7 +53,6 @@ const SubscribeForm: React.FC = () => {
         </div>
       </div>
     </form>
-
   )
 }
 
