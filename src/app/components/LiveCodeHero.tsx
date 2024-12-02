@@ -197,6 +197,11 @@ entities:
               <i className="lni lni-folder"></i>
               <span className="">node_modules</span>
             </div>
+            <div className="explorer-item is-parent level-2">
+              <i className="fa-solid fa-chevron-right"></i>
+              <i className="lni lni-folder"></i>
+              <span className="">frontend</span>
+            </div>
             <div className="explorer-item level-2">
               <i className="fa-solid fa-gear has-text-grey-light"></i>
               <span className="">.env</span>

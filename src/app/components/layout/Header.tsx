@@ -19,15 +19,16 @@ const Header = () => {
             />
           </a>
           <div className="is-flex">
-            <a className="navbar-item px-5-tablet" href="/docs" target="_blank">
-              <span className="is-hidden-touch">Documentation</span>
-              <i className="lni lni-empty-file is-size-6 is-hidden-desktop"></i>
-            </a>
             <a
               className="navbar-item px-5-tablet is-hidden-mobile"
               href="/playground"
             >
               <span className="is-hidden-touch">Playground</span>
+              <i className="fa-solid fa-bolt is-size-6 is-hidden-desktop"></i>
+            </a>
+            <a className="navbar-item px-5-tablet" href="/docs" target="_blank">
+              <span className="is-hidden-touch mr-2">Documentation</span>
+              <i className="fa-solid fa-arrow-up-right-from-square content is-small is-hidden-touch mb-0"></i>
               <i className="lni lni-empty-file is-size-6 is-hidden-desktop"></i>
             </a>
             <a
