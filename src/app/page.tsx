@@ -87,7 +87,7 @@ export default function Home() {
               <div className="content backend-list__wrapper">
                 <span className="backend-list__item">
                   <span className="icon  backend-list__icon">
-                    <i className="lni lni-checkmark has-text-success"></i>
+                    <i className="lni lni-database-2 has-text-success"></i>
                   </span>
                   <span>Database</span>
                 </span>
