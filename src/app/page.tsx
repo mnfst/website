@@ -38,8 +38,7 @@ export default function Home() {
                   </h1>
                   <p className="subtitle">
                     Manifest micro-backend powers websites, apps and directories
-                    around the world giving a full CMS experience with 1 YAML
-                    file only.
+                    around the world with 1 YAML file only.
                   </p>
                 </div>
               </div>
@@ -79,8 +78,8 @@ export default function Home() {
                     CMS features.
                   </p>
                   <p>
-                    Oversized platforms result in unnecessary costs, complexity
-                    and hassle for your team and your customers.
+                    Using such oversized solutions lead to unnecessary costs,
+                    complexity and hassle for your team and your customers.
                   </p>
                   <p>
                     Manifest allows you to develop 10x faster integrating
@@ -112,7 +111,7 @@ export default function Home() {
                   <span className="icon  backend-list__icon">
                     <i className="lni lni-layout has-text-success"></i>
                   </span>
-                  <span>Admin panel</span>
+                  <span>Admin Panel</span>
                 </span>
 
                 <p className="is-size-6">
@@ -130,7 +129,7 @@ export default function Home() {
                 </span>
 
                 <p className="is-size-6">
-                  Instant CRUD endpoints with Swagger doc
+                  Instant CRUD endpoints and OPEN API doc (Swagger)
                 </p>
               </div>
             </div>
@@ -140,7 +139,7 @@ export default function Home() {
                   <span className="icon  backend-list__icon">
                     <i className="lni lni-cloud-download has-text-success"></i>
                   </span>
-                  <span>File storage</span>
+                  <span>File Storage</span>
                 </span>
 
                 <p className="is-size-6">

@@ -25,7 +25,7 @@ export const FAQ: React.FC = () => {
     {
       question: 'Is Manifest for me?',
       answer:
-        't does not matter if you are junior or senior developer, if you code in JS, PHP or Python. You can be frontend, backend or fullstack, a mobile developer, indie hacker or devsigner. If you know a bit of software development, you will have no problem using Manifest.'
+        'It does not matter if you are junior or senior developer, if you code in JS, PHP or Python. You can be frontend, backend or fullstack, a mobile developer, indie hacker or devsigner. If you know a bit of software development, you will have no problem using Manifest.'
     },
     {
       question: 'Can I use Manifest in production?',
