@@ -1030,14 +1030,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="column is-4-tablet is-one-fifth-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless ">
+              <div className="card is-fullheight is-bordered is-shadowless">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Realtime</h4>
-                        <p>Realtime subscriptions for instant messaging</p>
+                        <h4>Custom logic</h4>
+                        <p>Create endpoints and add your own custom logic</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
                         <span>Q1 2025</span>
@@ -1047,15 +1048,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* Valid */}
             <div className="column is-4-tablet is-one-fifth-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless">
+              <div className="card is-fullheight is-bordered is-shadowless ">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Custom logic</h4>
-                        <p>Create endpoints and your own custom logic</p>
+                        <h4>Webhooks</h4>
+                        <p>Notify third-party platforms on defined events</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
                         <span>Q1 2025</span>
