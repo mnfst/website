@@ -14,19 +14,18 @@ export const FAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: 'Is Manifest a framework?',
-      answer:
-        'No, Manifest is a self-hostable Backend-as-a-Service (BaaS). It is a service that enables developers to easily build a backend, providing the essential building blocks to get started.'
+      question: 'What is a headless CMS ?',
+      answer: `A classical CMS manages the backend and the frontend part. A Headless CMS removes the frontend so you are free to use your own one, using an API to connect to it. Manifest also covers the "back-office" / "admin panel" as it can be seen as part of the "backend"`
     },
     {
-      question: 'Is Manifest full-stack?',
+      question: 'Is Manifest a low-code / no-code tool ?',
       answer:
-        'No, you will still need to develop your frontend. Manifest covers the backend of your app/website only (considering the built-in admin panel as part of the backend/back-office).'
+        "No. It just works like just any other file in your codebase. It's code, simple code."
     },
     {
       question: 'Is Manifest for me?',
       answer:
-        'If you know a bit of software development, whatever your programming language is, you will have no problem using Manifest.'
+        'It does not matter if you are junior or senior developer, if you code in JS, PHP or Python. You can be frontend, backend or fullstack, a mobile developer, indie hacker or devsigner. If you know a bit of software development, you will have no problem using Manifest.'
     },
     {
       question: 'Can I use Manifest in production?',
