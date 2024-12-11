@@ -8,15 +8,15 @@ import './globals.scss'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Manifest - A Whole Backend That Fits Into 1 YAML file',
+  title: 'Manifest - The 1-file Headless CMS',
   description:
-    'Complete Backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
+    'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
   openGraph: {
     type: 'website',
     url: 'https://manifest.build',
-    title: 'A Whole Backend That Fits Into 1 YAML file',
+    title: 'Manifest - The 1-file Headless CMS',
     description:
-      'Complete Backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
+      'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
     siteName: 'Manifest',
     images: [
       {
