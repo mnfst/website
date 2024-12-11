@@ -162,6 +162,12 @@ export default function Home() {
                       className="logo-sf mx-4 mb-2"
                     />
                   </div>
+                  <img
+                    src="./assets/images/inria-logo.svg"
+                    alt="Inria Startup Studio logo"
+                    width="100px"
+                    className="inria-logo mx-4 mb-3"
+                  />
                 </div>
               </div>
             </div>
