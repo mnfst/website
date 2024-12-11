@@ -29,13 +29,17 @@ export default function Home() {
               <div className="column is-8 is-offset-2">
                 <div className="content is-normal">
                   <h1 className="title is-0 mb-5">
-                    Meet the
-                    <span className="title-gradient"> 1-file backend </span>
+                    The
+                    <span className="title-gradient">
+                      {' '}
+                      1-file Headless CMS{' '}
+                    </span>{' '}
+                    for your front-end
                   </h1>
                   <p className="subtitle">
-                    Manifest is a complete backend that fits into a single YAML
-                    file. Cut the learning curve and ship very quickly without
-                    trading-off coding standards and best practices.
+                    Manifest micro-backend powers websites, apps and directories
+                    around the world giving a full CMS experience with 1 YAML
+                    file only.
                   </p>
                 </div>
               </div>
@@ -67,16 +71,21 @@ export default function Home() {
             <div className="column is-8 is-offset-2 mb-4 mt-5">
               <div className=" is-normal card-content--how-it-works">
                 <div className="content is-normal has-text-centered has-text-left--mobile mt-4 zi-1">
-                  <h2>Zero-config backend-as-a-service, within your IDE</h2>
+                  <h2>
+                    Why pay for the whole cow if you just need a glass of milk?
+                  </h2>
                   <p>
-                    Let's forget about the "from scratch" vs "low-code/no-code"
-                    debate.{' '}
+                    80% of CMS-powered websites and apps only use the most basic
+                    CMS features.
                   </p>
                   <p>
-                    Manifest approach brings you the best of both worlds: A
-                    hassle-free backend packed with built-in features that fits
-                    right into your IDE, just like any other file in your
-                    codebase.
+                    Oversized platforms result in unnecessary costs, complexity
+                    and hassle for your team and your customers.
+                  </p>
+                  <p>
+                    Manifest allows you to develop 10x faster integrating
+                    smoothly in your stack and bringing you only the essentials
+                    features.
                   </p>
                 </div>
               </div>
@@ -135,7 +144,7 @@ export default function Home() {
                 </span>
 
                 <p className="is-size-6">
-                  Store user files. Resize and optiize images
+                  Store user files. Resize and optimize images
                 </p>
               </div>
             </div>
@@ -177,22 +186,20 @@ export default function Home() {
                     <div className="columns is-multiline">
                       <div className="column is-12 pb-0">
                         <h2>
-                          Everything is about delivering the right product
+                          A complete backend that fits into a single YAML file
                         </h2>
                       </div>
                       <div className="column is-6 pt-0 is-offset-3">
                         <p>
-                          It does not matter if you are junior or senior
-                          developer, if you code in JS, PHP or Python. You can
-                          be frontend, backend or fullstack, a mobile developer,
-                          indie hacker or devsigner. If you know that everything
-                          is about delivering the right product, Manifest is for
-                          you.{' '}
+                          Adding a backend to your app can be tricky. Even for a
+                          simple requirement, you step into a whole new world
+                          and quickly feel overwhelmed by the many concepts you
+                          need to understand.
                         </p>
                         <p>
-                          Manifest focuses on shipping a solid product in the
-                          minimal amount of time, reducing the learning curve as
-                          much as possible. The rest is in your hands.
+                          Manifest aims to cut the learning curve and ship very
+                          quickly without trading-off your coding standards and
+                          best practices.
                         </p>
                       </div>
                     </div>
@@ -206,7 +213,7 @@ export default function Home() {
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
                 <div className="card-content">
                   <div className="content">
-                    <h2>Connect to any frontend</h2>
+                    <h2>Connect any frontend</h2>
                     <p>
                       Plug-and-play with all frontend stacks and mobile stacks
                       through our <strong>JS SDK</strong> or{' '}
@@ -372,26 +379,16 @@ export default function Home() {
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
                 <div className="card-content">
                   <div className="content">
-                    <h2>Looking for an admin panel ?</h2>
+                    <h2>World class admin panel</h2>
                     <p>
-                      You just saved some days of development because we have
-                      one for you.
+                      The Manifest admin panel stands toe-to-toe with the admin
+                      panels of heavyweight solutions.
                     </p>
                     <p>
-                      Manifest admin panel is <strong>non-technical</strong> so
-                      you can give it to your customers and app administrators
-                      without the fear that they will break anything. Obviously
-                      if it does not fit you can always bring your own.
-                    </p>
-                    <p className="mb-2 is-hidden">
-                      <a href="">
-                        <span className="icon-text">
-                          <span>See Admin Panel live demo</span>
-                          <span className="icon">
-                            <i className="lni lni-arrow-right"></i>
-                          </span>
-                        </span>
-                      </a>
+                      It is simple, elegant, and most importantly{' '}
+                      <strong>non-technical</strong> so you can give it to your
+                      customers and app administrators without the fear that
+                      they will break anything.
                     </p>
                   </div>
                 </div>
