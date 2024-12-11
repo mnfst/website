@@ -1,25 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
 import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (video) {
-      video.muted = true
-      video.play().catch((err) => {
-        console.error('Autoplay failed:', err)
-      })
-    }
-  }, [])
-
   return (
     <div>
       <div className="mt-6 pt-4">
@@ -29,13 +16,16 @@ export default function Home() {
               <div className="column is-8 is-offset-2">
                 <div className="content is-normal">
                   <h1 className="title is-0 mb-5">
-                    Meet the
-                    <span className="title-gradient"> 1-file backend </span>
+                    The
+                    <span className="title-gradient">
+                      {' '}
+                      1-file Headless CMS{' '}
+                    </span>{' '}
+                    for your front-end
                   </h1>
                   <p className="subtitle">
-                    Manifest is a complete backend that fits into a single YAML
-                    file. Cut the learning curve and ship very quickly without
-                    trading-off coding standards and best practices.
+                    Manifest micro-backend powers websites, apps and directories
+                    around the world with 1 YAML file only.
                   </p>
                 </div>
               </div>
@@ -67,16 +57,21 @@ export default function Home() {
             <div className="column is-8 is-offset-2 mb-4 mt-5">
               <div className=" is-normal card-content--how-it-works">
                 <div className="content is-normal has-text-centered has-text-left--mobile mt-4 zi-1">
-                  <h2>Zero-config backend-as-a-service, within your IDE</h2>
+                  <h2>
+                    Why pay for the whole cow if you just need a glass of milk?
+                  </h2>
                   <p>
-                    Let's forget about the "from scratch" vs "low-code/no-code"
-                    debate.{' '}
+                    80% of CMS-powered websites and apps only use the most basic
+                    CMS features.
                   </p>
                   <p>
-                    Manifest approach brings you the best of both worlds: A
-                    hassle-free backend packed with built-in features that fits
-                    right into your IDE, just like any other file in your
-                    codebase.
+                    Using such oversized solutions lead to unnecessary costs,
+                    complexity and hassle for your team and your customers.
+                  </p>
+                  <p>
+                    Manifest allows you to develop 10x faster integrating
+                    smoothly in your stack and bringing you only the essentials
+                    features.
                   </p>
                 </div>
               </div>
@@ -87,7 +82,7 @@ export default function Home() {
               <div className="content backend-list__wrapper">
                 <span className="backend-list__item">
                   <span className="icon  backend-list__icon">
-                    <i className="lni lni-checkmark has-text-success"></i>
+                    <i className="lni lni-database has-text-success"></i>
                   </span>
                   <span>Database</span>
                 </span>
@@ -103,7 +98,7 @@ export default function Home() {
                   <span className="icon  backend-list__icon">
                     <i className="lni lni-layout has-text-success"></i>
                   </span>
-                  <span>Admin panel</span>
+                  <span>Admin Panel</span>
                 </span>
 
                 <p className="is-size-6">
@@ -121,7 +116,7 @@ export default function Home() {
                 </span>
 
                 <p className="is-size-6">
-                  Instant CRUD endpoints with Swagger doc
+                  Instant CRUD endpoints and OPEN API doc (Swagger)
                 </p>
               </div>
             </div>
@@ -131,11 +126,11 @@ export default function Home() {
                   <span className="icon  backend-list__icon">
                     <i className="lni lni-cloud-download has-text-success"></i>
                   </span>
-                  <span>File storage</span>
+                  <span>File Storage</span>
                 </span>
 
                 <p className="is-size-6">
-                  Store user files. Resize and optiize images
+                  Store user files. Resize and optimize images
                 </p>
               </div>
             </div>
@@ -173,26 +168,24 @@ export default function Home() {
             <div className="column is-12 has-text-centered">
               <div className="card has-strokes--gradient is-shadowless py-6">
                 <div className="card-content">
-                  <div className="content">
+                  <div className="content is-normal">
                     <div className="columns is-multiline">
                       <div className="column is-12 pb-0">
                         <h2>
-                          Everything is about delivering the right product
+                          A complete backend that fits into a single YAML file
                         </h2>
                       </div>
                       <div className="column is-6 pt-0 is-offset-3">
                         <p>
-                          It does not matter if you are junior or senior
-                          developer, if you code in JS, PHP or Python. You can
-                          be frontend, backend or fullstack, a mobile developer,
-                          indie hacker or devsigner. If you know that everything
-                          is about delivering the right product, Manifest is for
-                          you.{' '}
+                          Adding a backend to your app can be tricky. Even for a
+                          simple requirement, you step into a whole new world
+                          and quickly feel overwhelmed by the many concepts you
+                          need to understand.
                         </p>
                         <p>
-                          Manifest focuses on shipping a solid product in the
-                          minimal amount of time, reducing the learning curve as
-                          much as possible. The rest is in your hands.
+                          Manifest aims to cut the learning curve and ship very
+                          quickly without trading-off your coding standards and
+                          best practices.
                         </p>
                       </div>
                     </div>
@@ -204,8 +197,8 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
-                <div className="card-content">
-                  <div className="content">
+                <div className="card-content p-64">
+                  <div className="content is-normal">
                     <h2>Connect to any frontend</h2>
                     <p>
                       Plug-and-play with all frontend stacks and mobile stacks
@@ -370,28 +363,18 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0 is-flex-direction-row-reverse-tablet">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
-                <div className="card-content">
-                  <div className="content">
-                    <h2>Looking for an admin panel ?</h2>
+                <div className="card-content p-64">
+                  <div className="content is-normal">
+                    <h2>World class admin panel</h2>
                     <p>
-                      You just saved some days of development because we have
-                      one for you.
+                      The Manifest admin panel stands toe-to-toe with the admin
+                      panels of heavyweight solutions.
                     </p>
                     <p>
-                      Manifest admin panel is <strong>non-technical</strong> so
-                      you can give it to your customers and app administrators
-                      without the fear that they will break anything. Obviously
-                      if it does not fit you can always bring your own.
-                    </p>
-                    <p className="mb-2 is-hidden">
-                      <a href="">
-                        <span className="icon-text">
-                          <span>See Admin Panel live demo</span>
-                          <span className="icon">
-                            <i className="lni lni-arrow-right"></i>
-                          </span>
-                        </span>
-                      </a>
+                      It is simple, elegant, and most importantly{' '}
+                      <strong>non-technical</strong> so you can give it to your
+                      customers and app administrators without the fear that
+                      they will break anything.
                     </p>
                   </div>
                 </div>
@@ -399,25 +382,12 @@ export default function Home() {
             </div>
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0">
-                <div className="video-wrapper is-flex is-align-items-flex-end is-justify-content-center">
-                  <video
-                    autoPlay
-                    loop
-                    poster="./assets/images/dashboard-login.svg"
-                  >
-                    <source
-                      src="./assets/images/videos/dashboard-login.webm"
-                      type="video/webm"
-                    />
-                    <source
-                      src="./assets/images/videos/dashboard-login.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="./assets/images/videos/dashboard-login.ogg"
-                      type="video/ogg"
-                    />
-                  </video>
+                <div className="card-content pb-0 is-fullheight is-flex is-justify-content-flex-end has-background-pearl">
+                  <img
+                    src="./assets/images/adminpanel.gif"
+                    alt="Manifest admin panel"
+                    className="is-object-fit-contain is-object-position-bottom"
+                  />
                 </div>
               </div>
             </div>
@@ -425,8 +395,8 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
-                <div className="card-content">
-                  <div className="content">
+                <div className="card-content p-64">
+                  <div className="content is-normal">
                     <h2>Self hosted</h2>
                     <p>
                       Manifest is a free and open-source Backend-as-a-Service
@@ -451,7 +421,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-6">
-              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center has-background-pearl">
                 <div className="hosting-grid-container">
                   <div className="hosting-grid-row">
                     <div className="hosting-grid-item">
@@ -501,8 +471,8 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0 is-flex-direction-row-reverse-tablet">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
-                <div className="card-content">
-                  <div className="content">
+                <div className="card-content p-64">
+                  <div className="content is-normal">
                     <h2>Keep your way of doing</h2>
                     <p>
                       Manifest integrates perfectly with your project, just like
@@ -536,6 +506,7 @@ export default function Home() {
                   src="./assets/images/stackblitz-demo.svg"
                   alt=" manifest demo on stackblitz"
                   title="Manifest demo on stackblitz"
+                  className="is-object-fit-cover is-object-position-left  "
                 />
               </div>
             </div>
@@ -917,7 +888,7 @@ export default function Home() {
             <div className="column">
               <div className="card has-border-gradient card--community is-shadowless">
                 <div className="card-content py-7">
-                  <div className="content">
+                  <div className="content is-normal">
                     <div className="columns">
                       <div className="column is-9">
                         <h2>Join Manifest community</h2>
@@ -1033,14 +1004,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="column is-4-tablet is-one-fifth-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless ">
+              <div className="card is-fullheight is-bordered is-shadowless">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Realtime</h4>
-                        <p>Realtime subscriptions for instant messaging</p>
+                        <h4>Custom logic</h4>
+                        <p>Create endpoints and add your own custom logic</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
                         <span>Q1 2025</span>
@@ -1050,15 +1022,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* Valid */}
             <div className="column is-4-tablet is-one-fifth-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless">
+              <div className="card is-fullheight is-bordered is-shadowless ">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Custom logic</h4>
-                        <p>Create endpoints and your own custom logic</p>
+                        <h4>Webhooks</h4>
+                        <p>Notify third-party platforms on defined events</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
                         <span>Q1 2025</span>
