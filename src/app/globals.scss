@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $black: #161617 !default;
 $darkness: #22110c !default; // Some titles
 $black-bis: #0d0e0e !default;
@@ -12,7 +14,10 @@ $light: #f1f3f5 !default;
 $white-ter: #f8f9fa !default;
 $white-bis: #fbfcfd !default;
 $light-bis: #f1f1f1 !default; // Sheet
+$pink: #fff !default;
+$pink-light: #fff !default;
 $white: #fff !default;
+$size-0: 3.5832rem !default;
 $size-8: 0.75rem !default;
 $navbar-item-hover-background-color: transparent !default;
 $input-background-color: $white-ter !default;
@@ -21,8 +26,20 @@ $family-code: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Source Code Pro',
   'Ubuntu Mono', monospace !default;
 $handwriting: 'Permanent Marker', cursive !default;
 $column-gap: 1rem !default;
-
 $gap: 2rem !default;
+$is-bordered: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
+  0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
+  0px 0px 0px 1px rgba($dark, 0.08) !default;
+$livecode-tab-height: 35px !default;
+$livecode-height: 515px !default;
+$livecode-sidebar-height: #{$livecode-height + $livecode-tab-height} !default;
+$livecode-py: 1em !default;
+$livecode-height-mobile: 365px !default;
+$livecode-sidebar-height-mobile: #{$livecode-height-mobile +
+  $livecode-tab-height} !default;
+$livecode-height-tablet: 437px !default;
+$livecode-sidebar-height-tablet: #{$livecode-height-tablet +
+  $livecode-tab-height} !default;
 
 @use 'bulma/sass/utilities' with (
   $size-1: 2.986rem,
@@ -34,15 +51,15 @@ $gap: 2rem !default;
   $size-7: 1rem,
   $danger: #ff5e5b,
   $success: #2be1b7,
-  $info: #4cc9f0,
+  $info: #e12bb0,
   $warning: #f2c79c,
   $link: #2430f0,
   $primary: #7209b7,
   $dark: $dark,
   $black-ter: $black-ter,
-  $family-sans-serif: '"Inter", sans-serif',
   $weight-medium: 600,
-  $border: $grey-lighter
+  $border: $grey-lighter,
+  $family-sans-serif: "'Inter', sans-serif"
 );
 
 @use 'bulma/sass/utilities/mixins';
@@ -63,7 +80,9 @@ $gap: 2rem !default;
 );
 
 @use 'bulma/sass/components' with (
-  $navbar-height: 6.4rem
+  $navbar-height: 4.4rem,
+  $card-radius: 0rem,
+  $card-content-padding: 2rem
 );
 @use 'bulma/sass/form';
 @use 'bulma/sass/base' with (
@@ -75,12 +94,17 @@ $gap: 2rem !default;
   $notification-radius: 0,
   $content-heading-weight: 900
 );
+
 @forward 'bulma/sass/grid';
 @forward 'bulma/sass/layout';
 @forward 'bulma/sass/themes';
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'lineicons/web-font/lineicons.css';
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Permanent+Marker&display=swap');
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
 
 .has-background-transparent {
   background-color: transparent;
@@ -806,13 +830,24 @@ $gap: 2rem !default;
   }
 }
 
-.navbar-item img {
-  @include mixins.tablet {
-    max-height: 52px;
-  }
+.navbar {
+  border-bottom: 1px solid utilities.$border;
+}
 
-  @include mixins.mobile {
-    max-height: 34px;
+.navbar-item {
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $black;
+  }
+  img {
+    @include mixins.tablet {
+      max-height: 52px;
+    }
+
+    @include mixins.mobile {
+      max-height: 34px;
+    }
   }
 }
 
@@ -825,13 +860,16 @@ $gap: 2rem !default;
   width: 100%;
 }
 
+.notification {
+  z-index: 9;
+}
 .has-background-gradient {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="0.75"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="130" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(%23bbblurry-filter)"><ellipse rx="125" ry="52" cx="783.8145975642178" cy="49.824249826800724" fill="%232430f0ff"></ellipse><ellipse rx="125" ry="52" cx="63.723303070867246" cy="714.6869909476235" fill="%23f2c79cff"></ellipse></g></svg>');
   background-size: cover;
 }
 
 .is-bordered {
-  border: 2px solid $dark;
+  box-shadow: $is-bordered;
 }
 
 input[type='email'] {
@@ -906,10 +944,8 @@ body {
     rgba($white, 0.42) 0%,
     rgba($white-ter, 0.42) 100%
   );
-
-  box-shadow: 0 1px 3px 0px rgba($dark, 0.1);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: saturate(175%) blur(6px);
+  backdrop-filter: saturate(175%) blur(6px);
 }
 
 .navbar.has-background-transparent {
@@ -919,11 +955,9 @@ body {
 .is-fullheight {
   height: 100%;
 }
-pre {
-  padding: 0;
-  background-color: transparent;
-  line-height: 1.6;
-  color: #00448c;
+
+.title.is-0 {
+  font-size: $size-0;
 }
 
 @for $i from 0 through 3 {
@@ -1098,6 +1132,7 @@ pre {
 
 button,
 .button {
+  position: relative;
   outline: none;
 
   @each $name, $pair in utilities.$colors {
@@ -1170,14 +1205,125 @@ button,
 }
 
 .card {
-  box-shadow: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
-    0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
-    0px 0px 0px 1px rgba($dark, 0.08), 0px 16px 32px 0px rgba($grey-dark, 0.08),
+  box-shadow: 0px 16px 32px 0px rgba($grey-dark, 0.08),
     0px 2px 24px 0px rgba($darkness, 0.06);
 
+  &.is-bordered {
+    &.is-shadowless {
+      box-shadow: $is-bordered !important;
+    }
+
+    &:not(.is-shadowless) {
+      box-shadow: 0 0 $white, 0 0 $white, 0px 0px 0px 1px #fff inset,
+        0px 0px 0px 1.5px rgba($grey-light, 0.2) inset,
+        0px 0px 0px 1px rgba($dark, 0.08),
+        0px 16px 32px 0px rgba($grey-dark, 0.08),
+        0px 2px 24px 0px rgba($darkness, 0.06);
+    }
+  }
+  &.has-strokes {
+    border: 0.5px solid utilities.$border;
+
+    &.is-shadowless {
+      box-shadow: 0 0.5px 0 1px utilities.$white inset,
+        0 0.5px 0 1px utilities.$white !important;
+    }
+    &--gradient {
+      background: linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+          calc(100% - 2px) no-repeat,
+        linear-gradient(0deg, transparent 0%, utilities.$border 100%);
+    }
+  }
   .icon-text {
     flex-wrap: nowrap;
   }
+
+  &--community {
+    position: relative;
+    .card-content {
+      @include mixins.tablet {
+        background-image: url('/assets/images/community.png');
+        background-size: contain;
+      }
+      @include mixins.mobile {
+        background-image: url('/assets/images/community-mobile.png');
+        background-size: cover;
+      }
+      background-repeat: no-repeat;
+      background-position: right center;
+      border-radius: 10px;
+    }
+  }
+}
+
+.wheel {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  width: 375px;
+  height: calc(100% - #{$gap});
+  background: url('/assets/images/wheel-small.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &:first-child {
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  &:nth-child(2) {
+    right: 0;
+    transform: translateX(50%) translateY(-50%) rotate(180deg);
+  }
+}
+.has-blurred-bg {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('/assets/images/blurred-background.png');
+  z-index: -2;
+  width: 150%;
+  opacity: 0.65;
+  mix-blend-mode: multiply;
+  background-size: contain;
+}
+.has-background-wheel {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  .is-bottom-cta & {
+    background-image: url('/assets/images/wheel.svg');
+    background-size: contain;
+    left: 0;
+  }
+  .is-hero & {
+    background-image: url('/assets/images/wheel-white-ter.svg');
+    z-index: -3;
+    width: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: auto;
+  }
+}
+
+.hero-bg {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: -1px;
+  left: 50%;
+  width: 100vw;
+  height: calc(#{$livecode-height} * 0.5 + #{$livecode-tab-height});
+  background-color: $white;
+  z-index: -1;
+  transform: translateX(-50%);
 }
 
 .is-rounded {
@@ -1191,9 +1337,28 @@ button,
 }
 
 .info-copy {
-  font-family: $handwriting;
+  position: absolute;
   color: utilities.$link;
   @extend .slideInUp;
+
+  bottom: 31%;
+  right: 55px;
+  z-index: 99;
+  font-weight: bold;
+  font-size: 11px !important;
+
+  @include mixins.mobile {
+    right: 48px;
+  }
+
+  @include mixins.desktop {
+    bottom: 34%;
+    right: 61px;
+  }
+  @include mixins.widescreen {
+    bottom: 38%;
+    right: 68px;
+  }
 }
 
 .backend-list {
@@ -1225,7 +1390,7 @@ button,
 
       &:before {
         width: 6px;
-        height: 35px;
+        height: $livecode-tab-height;
         display: block;
         position: relative;
         content: '';
@@ -1268,6 +1433,22 @@ button,
   }
 }
 
+.has-line-v {
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 500px;
+    width: 1px;
+    background-image: url('/assets/images/line-v.svg');
+    background-repeat: repeat;
+    background-position: bottom center;
+    bottom: calc(100% - 16px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .card-content--how-it-works {
   @include mixins.desktop {
     padding: 0 3rem;
@@ -1279,7 +1460,7 @@ button,
   }
 }
 
-.notification {
+.is-gradiant {
   background: radial-gradient(
     circle at 50% 120%,
     #74ebd5,
@@ -1297,7 +1478,7 @@ button,
 
   a {
     position: relative;
-    color: $white;
+    color: $dark;
 
     &:before {
       position: absolute;
@@ -1306,7 +1487,7 @@ button,
       transition: all 0.12s ease-in-out;
       bottom: 0;
       left: 0;
-      background-color: $white;
+      background-color: $dark;
       height: 1px;
       width: 0;
     }
@@ -1375,20 +1556,20 @@ main .content a:not(.button):not(.icon-text) {
   background: radial-gradient(
         circle at 100% 100%,
         #ffffff 0,
-        #ffffff 16px,
-        transparent 16px
+        #ffffff 7px,
+        transparent 7px
       )
-      0% 0%/18px 18px no-repeat,
-    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 16px, transparent 16px)
-      100% 0%/18px 18px no-repeat,
-    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 16px, transparent 16px)
-      0% 100%/18px 18px no-repeat,
-    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 16px, transparent 16px)
-      100% 100%/18px 18px no-repeat,
-    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
-      calc(100% - 36px) no-repeat,
-    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 36px)
-      calc(100% - 4px) no-repeat,
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
     linear-gradient(
       220deg,
       #2430f0 0%,
@@ -1398,7 +1579,8 @@ main .content a:not(.button):not(.icon-text) {
       #ffd037 84%,
       #00cecb 100%
     );
-  border-radius: 18px;
+  padding: 1px;
+  border-radius: 8px;
   box-sizing: content-box;
 }
 
@@ -1506,7 +1688,7 @@ main .content a:not(.button):not(.icon-text) {
 
 .field.has-addons input {
   border: 0;
-  box-shadow: 0 0 0 1px utilities.$link;
+  box-shadow: 0 0 0 1px utilities.$border;
 }
 
 .masonry {
@@ -1594,4 +1776,428 @@ main .content a:not(.button):not(.icon-text) {
   position: absolute;
   bottom: $column-gap;
   left: $column-gap;
+}
+
+.box-main-cta {
+  gap: 1rem;
+
+  @include mixins.mobile {
+    flex-direction: column;
+  }
+}
+
+.is-gapless {
+  &:not(:last-child) > .column {
+    .has-strokes {
+      border-bottom: 0;
+    }
+  }
+}
+
+.stack-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: utilities.$gap;
+}
+
+.stack-grid-row {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: utilities.$gap;
+}
+
+.stack-grid-row:nth-child(1) {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stack-grid-row:nth-child(2) {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.stack-grid-row:nth-child(3) {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stack-grid-item {
+  width: #{$gap * 1.5};
+  height: #{$gap * 1.5};
+
+  @include mixins.mobile {
+    width: #{$gap * 2};
+    height: #{$gap * 2};
+  }
+
+  @include mixins.fullhd {
+    width: #{$gap * 2};
+    height: #{$gap * 2};
+  }
+}
+
+.stack-grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@include mixins.touch {
+  .stack-grid-row:nth-child(1),
+  .stack-grid-row:nth-child(3) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stack-grid-row:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hosting-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: utilities.$gap;
+}
+
+.hosting-grid-row {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: utilities.$gap;
+
+  &:nth-child(1) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &:nth-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &:nth-child(3) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hosting-grid-item {
+  display: flex;
+  width: 120px;
+  .hosting-grid-row:nth-child(2) & {
+    width: 177px;
+  }
+
+  @include mixins.fullhd {
+    width: 177px;
+    height: auto;
+    .hosting-grid-row:nth-child(2) & {
+      width: 220px;
+    }
+  }
+
+  @include mixins.mobile {
+    width: 110px;
+    .hosting-grid-row:nth-child(2) & {
+      width: 150px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.card--media {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  @include mixins.mobile {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.is-flex-direction-row-reverse-tablet {
+  @include mixins.tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.has-milkyway {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    display: inline-block;
+    pointer-events: none;
+    background: linear-gradient(
+      0deg,
+      rgba(utilities.$white, 1) 0%,
+      rgba(utilities.$white, 0) 31%,
+      rgba(utilities.$white, 0) 100%
+    );
+  }
+}
+.roadmap {
+  h4 {
+    @include mixins.widescreen-only {
+      font-size: 1.125em;
+    }
+  }
+  .is-feature-request {
+    .card-content {
+      @include mixins.widescreen {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.faq-item {
+  a.faq-question {
+    border-bottom-color: utilities.$white-bis;
+    width: 100%;
+    padding: $gap;
+    cursor: pointer;
+  }
+
+  .faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    p {
+      padding: 0 $gap $gap;
+    }
+  }
+
+  .faq-answer p {
+    margin: 0;
+  }
+}
+
+.tab-list {
+  .tab {
+    &:not(:first-child) {
+      margin-left: $column-gap;
+    }
+  }
+
+  .tag {
+    cursor: pointer;
+  }
+}
+
+.ui-ide {
+  min-height: $livecode-sidebar-height-tablet;
+  background-color: #011628;
+  padding: 1px;
+  @include mixins.mobile {
+    min-height: $livecode-sidebar-height-mobile;
+  }
+  @include mixins.desktop {
+    min-height: $livecode-sidebar-height;
+  }
+}
+.ide {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  width: 100%;
+
+  .sidebar {
+    display: flex;
+    width: 221px;
+    height: $livecode-sidebar-height;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: #252526;
+
+    @include mixins.touch {
+      display: none;
+      height: $livecode-sidebar-height-tablet;
+    }
+
+    @include mixins.mobile {
+      height: $livecode-sidebar-height-mobile;
+    }
+
+    .sidebar__title {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      display: flex;
+      height: 40px;
+      padding: 8px 12px 8px 20px;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+      gap: 10px;
+      font-size: 11px;
+    }
+  }
+  .code {
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 1.5;
+    height: $livecode-height-tablet;
+
+    @include mixins.mobile {
+      height: $livecode-height-mobile;
+      overflow: auto;
+    }
+
+    @include mixins.desktop {
+      height: $livecode-height;
+    }
+
+    pre {
+      height: $livecode-height-tablet;
+      @include mixins.mobile {
+        height: $livecode-height-mobile;
+      }
+      @include mixins.desktop {
+        height: $livecode-height;
+      }
+    }
+  }
+}
+.tab-template {
+  display: flex;
+  width: 100%;
+  padding-right: 12px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background-color: #252526;
+}
+.editor-container {
+  width: 100%;
+}
+.editor-template {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tab-ide {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 8px 12px;
+  gap: 10px;
+  color: $white;
+  background-color: #011628;
+}
+
+.line-numbers {
+  width: 67px;
+  flex-shrink: 0;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  line-height: 1.5;
+  font-size: 0.9em;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  color: #808080;
+  padding-top: $livecode-py;
+  padding-bottom: $livecode-py;
+  height: $livecode-height-tablet;
+  @include mixins.mobile {
+    height: $livecode-height-mobile;
+  }
+  @include mixins.desktop {
+    height: $livecode-height;
+  }
+}
+.explorer-item {
+  display: flex;
+  height: 22px;
+  padding: 3px 12px 2px 12px;
+  font-size: 12px;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+
+  &.is-active {
+    background-color: #252486;
+  }
+
+  i {
+    min-width: 12px;
+  }
+
+  .fa-circle-info {
+    color: #3794ff;
+  }
+
+  &.is-small {
+    span {
+      font-size: 10px;
+    }
+  }
+
+  &.level-2 {
+    padding-left: 1.5rem;
+    &:not(.is-parent) i {
+      margin-left: 20px;
+    }
+  }
+
+  &.level-3 {
+    padding-left: 3.5rem;
+  }
+}
+
+.has-2-children {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 1px;
+    height: calc(100% * 2);
+    background-color: $grey;
+  }
+  &.level-2 {
+    &:before {
+      left: 26.5px;
+    }
+  }
+}
+
+.has-border-top {
+  border-top: 1px solid utilities.$border;
+  box-shadow: 0 1px 0 1px utilities.$white inset;
+}
+
+.zi-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.video-wrapper {
+  video {
+    position: relative;
+    top: 1px;
+  }
+}
+#embed-editor {
+  background-color: utilities.$white-bis;
 }
