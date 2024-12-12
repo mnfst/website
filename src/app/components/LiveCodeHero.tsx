@@ -58,6 +58,29 @@ entities:
       `
     },
     {
+      label: 'Relations',
+      content: `name: Basketball League 🏀
+
+entities:
+  Player 🤾:
+    properties:
+      - name
+    belongsTo:
+      - Team
+
+  Team 👥:
+    properties:
+      - name
+
+  Fixture 🏟️:
+    properties:
+      - { name: homeScore, type: number }
+      - { name: awayScore, type: number }
+    belongsTo:
+      - { name: homeTeam, entity: Team }
+      - { name: awayTeam, entity: Team }`
+    },
+    {
       label: 'Auth',
       content: `name: Invoice Management System 🗂️
 
