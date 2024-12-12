@@ -948,6 +948,10 @@ body {
   backdrop-filter: saturate(175%) blur(6px);
 }
 
+.p-64 {
+  padding: 64px;
+}
+
 .navbar.has-background-transparent {
   background-color: transparent;
 }
@@ -1291,6 +1295,9 @@ button,
   mix-blend-mode: multiply;
   background-size: contain;
 }
+.has-background-pearl {
+  background-color: #fdfbfd;
+}
 .has-background-wheel {
   position: absolute;
   top: 0;
@@ -1514,7 +1521,8 @@ main .content a:not(.button):not(.icon-text) {
   }
 }
 
-.tag.is-small {
+.tag.is-small,
+.is-size-8 {
   font-size: $size-8;
 }
 
@@ -1757,6 +1765,9 @@ main .content a:not(.button):not(.icon-text) {
 
     .logo-sf {
       max-width: 70px;
+    }
+    .inria-logo {
+      margin-top: 0.5rem;
     }
   }
 }
@@ -2200,4 +2211,22 @@ main .content a:not(.button):not(.icon-text) {
 }
 #embed-editor {
   background-color: utilities.$white-bis;
+}
+
+.is-object-fit-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.is-object-fit-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.is-object-position-left {
+  object-position: left;
+}
+
+.is-object-position-bottom {
+  object-position: bottom;
 }

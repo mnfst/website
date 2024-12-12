@@ -1,25 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
 import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (video) {
-      video.muted = true
-      video.play().catch((err) => {
-        console.error('Autoplay failed:', err)
-      })
-    }
-  }, [])
-
   return (
     <div>
       <div className="mt-6 pt-4">
@@ -175,13 +162,19 @@ export default function Home() {
                       className="logo-sf mx-4 mb-2"
                     />
                   </div>
+                  <img
+                    src="./assets/images/inria-logo.svg"
+                    alt="Inria Startup Studio logo"
+                    width="100px"
+                    className="inria-logo mx-4 mb-3"
+                  />
                 </div>
               </div>
             </div>
             <div className="column is-12 has-text-centered">
               <div className="card has-strokes--gradient is-shadowless py-6">
                 <div className="card-content">
-                  <div className="content">
+                  <div className="content is-normal">
                     <div className="columns is-multiline">
                       <div className="column is-12 pb-0">
                         <h2>
@@ -210,9 +203,9 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
-                <div className="card-content">
-                  <div className="content">
-                    <h2>Connect any frontend</h2>
+                <div className="card-content p-64">
+                  <div className="content is-normal">
+                    <h2>Connect to any frontend</h2>
                     <p>
                       Plug-and-play with all frontend stacks and mobile stacks
                       through our <strong>JS SDK</strong> or{' '}
@@ -376,8 +369,8 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0 is-flex-direction-row-reverse-tablet">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
-                <div className="card-content">
-                  <div className="content">
+                <div className="card-content p-64">
+                  <div className="content is-normal">
                     <h2>World class admin panel</h2>
                     <p>
                       The Manifest admin panel stands toe-to-toe with the admin
@@ -395,25 +388,12 @@ export default function Home() {
             </div>
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0">
-                <div className="video-wrapper is-flex is-align-items-flex-end is-justify-content-center">
-                  <video
-                    autoPlay
-                    loop
-                    poster="./assets/images/dashboard-login.svg"
-                  >
-                    <source
-                      src="./assets/images/videos/dashboard-login.webm"
-                      type="video/webm"
-                    />
-                    <source
-                      src="./assets/images/videos/dashboard-login.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="./assets/images/videos/dashboard-login.ogg"
-                      type="video/ogg"
-                    />
-                  </video>
+                <div className="card-content pb-0 is-fullheight is-flex is-justify-content-flex-end has-background-pearl">
+                  <img
+                    src="./assets/images/adminpanel.gif"
+                    alt="Manifest admin panel"
+                    className="is-object-fit-contain is-object-position-bottom"
+                  />
                 </div>
               </div>
             </div>
@@ -421,8 +401,8 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-center">
-                <div className="card-content">
-                  <div className="content">
+                <div className="card-content p-64">
+                  <div className="content is-normal">
                     <h2>Self hosted</h2>
                     <p>
                       Manifest is a free and open-source Backend-as-a-Service
@@ -447,7 +427,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-6">
-              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center">
+              <div className="card is-fullheight has-strokes is-shadowless card--media is-flex is-align-items-center is-justify-content-center has-background-pearl">
                 <div className="hosting-grid-container">
                   <div className="hosting-grid-row">
                     <div className="hosting-grid-item">
@@ -497,8 +477,8 @@ export default function Home() {
           <div className="columns is-gapless is-multiline mb-0 is-flex-direction-row-reverse-tablet">
             <div className="column is-6">
               <div className="card is-fullheight has-strokes is-shadowless py-4 is-flex is-align-items-center is-justify-content-flex-start">
-                <div className="card-content">
-                  <div className="content">
+                <div className="card-content p-64">
+                  <div className="content is-normal">
                     <h2>Keep your way of doing</h2>
                     <p>
                       Manifest integrates perfectly with your project, just like
@@ -532,6 +512,7 @@ export default function Home() {
                   src="./assets/images/stackblitz-demo.svg"
                   alt=" manifest demo on stackblitz"
                   title="Manifest demo on stackblitz"
+                  className="is-object-fit-cover is-object-position-left  "
                 />
               </div>
             </div>
@@ -913,7 +894,7 @@ export default function Home() {
             <div className="column">
               <div className="card has-border-gradient card--community is-shadowless">
                 <div className="card-content py-7">
-                  <div className="content">
+                  <div className="content is-normal">
                     <div className="columns">
                       <div className="column is-9">
                         <h2>Join Manifest community</h2>

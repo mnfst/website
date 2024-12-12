@@ -250,7 +250,9 @@ entities:
               <div className="tab-ide">
                 <i className="fa-solid fa-exclamation has-text-primary-light is-italic"></i>
                 <span>backend.yml</span>
-                <span>manifest/backend.yml</span>
+                <span className="is-size-8 pt-1 has-text-grey-light">
+                  manifest/backend.yml
+                </span>
                 <i className="fa-solid fa-xmark"></i>
               </div>
               <div className="toolbar has-text-grey">
