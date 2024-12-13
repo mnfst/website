@@ -12,9 +12,9 @@ SyntaxHighlighter.registerLanguage('yaml', yaml)
 const LiveCodeHero: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0)
   const [displayedContent, setDisplayedContent] = useState('')
-  const [animationIndex, setAnimationIndex] = useState(0) //
+  const [animationIndex, setAnimationIndex] = useState(0)
 
-  const tabs = [
+  const tabs: { label: string; content: string; demoUrl: string }[] = [
     {
       label: 'Collections',
       content: `name: Pokemon app 🐣
@@ -35,7 +35,8 @@ entities:
   Trainer 🧑‍🎤:
     properties:
       - name
-      - { name: isChampion, type: boolean }`
+      - { name: isChampion, type: boolean }`,
+      demoUrl: 'https://demo-collections.manifest.build'
     },
     {
       label: 'Singles',
@@ -55,7 +56,8 @@ entities:
       - { name: githubLink, type: link }
       - { name: linkedinLink, type: link }
       - { name: copyright, type: string }
-      `
+      `,
+      demoUrl: 'https://demo-singles.manifest.build'
     },
     {
       label: 'Auth',
@@ -80,7 +82,8 @@ entities:
       update:
         - access: admin
       delete:
-        - access: forbidden`
+        - access: forbidden`,
+      demoUrl: 'https://demo-auth.manifest.build'
     },
     {
       label: 'Validation',
@@ -94,7 +97,8 @@ entities:
       - { name: subscriptionDate, type: date }
     validation:
       name: { minLength: 3 }
-      email: { required: true, contains: "@company.com" }`
+      email: { required: true, contains: "@company.com" }`,
+      demoUrl: 'https://demo-validation.manifest.build'
     },
     {
       label: 'Storage',
@@ -118,15 +122,16 @@ entities:
                   thumbnail: { height: 64, width: 64 },
                 },
             },
-        }`
+        }`,
+      demoUrl: 'https://demo-storage.manifest.build'
     }
   ]
 
-  const handleTabClick = (index: number) => {
+  const goToTab = (index: number) => {
     setTimeout(() => {
       setActiveTab(index)
       setAnimationIndex(0)
-      setDisplayedContent(''), 0
+      setDisplayedContent('')
     })
   }
 
@@ -155,7 +160,7 @@ entities:
       {/* Tab Headers */}
       <div className="card is-shadowless is-bordered p-4 tab-list is-flex is-align-items-flex-start mb-0">
         {tabs.map((tab, i) => (
-          <span key={i} onClick={() => handleTabClick(i)} className="tab">
+          <span key={i} onClick={() => goToTab(i)} className="tab">
             <span
               className={`tag is-rounded  ${
                 activeTab === i ? 'is-white-bis' : 'is-white'
@@ -264,7 +269,6 @@ entities:
                 <span>22</span>
               </div>
               <div className="code">
-                {/* TODO: Chose style: https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/HEAD/AVAILABLE_STYLES_PRISM.MD */}
                 <SyntaxHighlighter
                   language="yaml"
                   style={nightOwl}
@@ -272,6 +276,22 @@ entities:
                 >
                   {displayedContent}
                 </SyntaxHighlighter>
+              </div>
+              <div className="buttons">
+                <a
+                  className="button is-small is-rounded is-primary"
+                  href={tabs[activeTab].demoUrl}
+                  target="_blank"
+                >
+                  Demo admin panel
+                </a>
+                <a
+                  className="button is-small is-rounded is-light"
+                  href={tabs[activeTab].demoUrl + '/api'}
+                  target="_blank"
+                >
+                  Demo REST API doc
+                </a>
               </div>
             </div>
           </div>
