@@ -80,7 +80,8 @@ entities:
       - { name: awayScore, type: number }
     belongsTo:
       - { name: homeTeam, entity: Team }
-      - { name: awayTeam, entity: Team }`
+      - { name: awayTeam, entity: Team }`,
+      demoUrl: 'https://demo-relations.manifest.build'
     },
     {
       label: 'Auth',
