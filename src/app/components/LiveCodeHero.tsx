@@ -291,7 +291,7 @@ entities:
                   href={tabs[activeTab].demoUrl + '/api'}
                   target="_blank"
                 >
-                  <i className="fa-solid fa-cloud-arrow-down"></i>
+                  <i className="fa-solid fa-cloud-arrow-down mr-2"></i>
                   <span>REST API doc</span>
                 </a>
               </div>
