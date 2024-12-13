@@ -277,20 +277,22 @@ entities:
                   {displayedContent}
                 </SyntaxHighlighter>
               </div>
-              <div className="buttons">
+              <div className="buttons buttons--demo">
                 <a
-                  className="button is-small is-rounded is-primary"
+                  className="button is-small is-light is-outlined"
                   href={tabs[activeTab].demoUrl}
                   target="_blank"
                 >
-                  Demo admin panel
+                  <i className="fa-solid fa-table-columns mr-2"></i>
+                  <span>Admin panel live demo</span>
                 </a>
                 <a
-                  className="button is-small is-rounded is-light"
+                  className="button is-small is-light is-outlined"
                   href={tabs[activeTab].demoUrl + '/api'}
                   target="_blank"
                 >
-                  Demo REST API doc
+                  <i className="fa-solid fa-cloud-arrow-down"></i>
+                  <span>REST API doc</span>
                 </a>
               </div>
             </div>
