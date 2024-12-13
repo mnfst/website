@@ -48,6 +48,11 @@ const RootLayout: React.FC<{
     <html lang="en" data-theme="light" className="has-navbar-fixed-top">
       <body className={inter.className}>
         <Head>
+          <Script
+            id="cookieyes"
+            type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/d8a8f8d74309d7ede1458cdf/script.js"
+          ></Script>
           <title>{String(metadata.title) ?? 'Default Title'}</title>
           <meta
             name="description"
@@ -81,11 +86,6 @@ const RootLayout: React.FC<{
             }
           />
           <HotjarSnippet />
-          <Script
-            id="cookieyes"
-            type="text/javascript"
-            src="https://cdn-cookieyes.com/client_data/d8a8f8d74309d7ede1458cdf/script.js"
-          ></Script>
         </Head>
         <Header />
         <main>{children}</main>
