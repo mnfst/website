@@ -382,6 +382,19 @@ export default function Home() {
                       customers and app administrators without the fear that
                       they will break anything.
                     </p>
+                    <p>
+                      <a
+                        href="https://demo-collections.manifest.build"
+                        target="_blank"
+                      >
+                        <span className="icon-text">
+                          <span>See the admin panel online demo</span>
+                          <span className="icon">
+                            <i className="lni lni-arrow-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
