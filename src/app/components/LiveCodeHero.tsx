@@ -301,22 +301,26 @@ entities:
                 </SyntaxHighlighter>
               </div>
               <div className="buttons buttons--demo">
-                <a
-                  className="button is-small is-light is-outlined"
-                  href={tabs[activeTab].demoUrl}
-                  target="_blank"
-                >
-                  <i className="fa-solid fa-table-columns mr-2"></i>
-                  <span>Admin panel live demo</span>
-                </a>
-                <a
-                  className="button is-small is-light is-outlined"
-                  href={tabs[activeTab].demoUrl + '/api'}
-                  target="_blank"
-                >
-                  <i className="fa-solid fa-cloud-arrow-down mr-2"></i>
-                  <span>REST API doc</span>
-                </a>
+                {tabs[activeTab] && ( // Vérifie que tabs[activeTab] n'est pas undefined
+                  <>
+                    <a
+                      className="button is-small is-light is-outlined"
+                      href={tabs[activeTab].demoUrl}
+                      target="_blank"
+                    >
+                      <i className="fa-solid fa-table-columns mr-2"></i>
+                      <span>Admin panel live demo</span>
+                    </a>
+                    <a
+                      className="button is-small is-light is-outlined"
+                      href={`${tabs[activeTab].demoUrl}/api`}
+                      target="_blank"
+                    >
+                      <i className="fa-solid fa-cloud-arrow-down mr-2"></i>
+                      <span>REST API doc</span>
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           </div>
