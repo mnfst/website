@@ -19,9 +19,9 @@ export default function Home() {
                     The
                     <span className="title-gradient">
                       {' '}
-                      1-file Headless CMS{' '}
+                      1-file Micro-backend{' '}
                     </span>{' '}
-                    for your front-end
+                    for your frontend
                   </h1>
                   <p className="subtitle">
                     Manifest micro-backend powers websites, apps and directories
@@ -57,22 +57,7 @@ export default function Home() {
             <div className="column is-8 is-offset-2 mb-4 mt-5">
               <div className=" is-normal card-content--how-it-works">
                 <div className="content is-normal has-text-centered has-text-left--mobile mt-4 zi-1">
-                  <h2>
-                    Why pay for the whole cow if you just need a glass of milk?
-                  </h2>
-                  <p>
-                    80% of CMS-powered websites and apps only use the most basic
-                    CMS features.
-                  </p>
-                  <p>
-                    Using such oversized solutions lead to unnecessary costs,
-                    complexity and hassle for your team and your customers.
-                  </p>
-                  <p>
-                    Manifest allows you to develop 10x faster integrating
-                    smoothly in your stack and bringing you only the essentials
-                    features.
-                  </p>
+                  <h2>A hassle-free backend with essential features</h2>
                 </div>
               </div>
             </div>
