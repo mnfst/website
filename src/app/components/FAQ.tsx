@@ -14,10 +14,6 @@ export const FAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: 'What is a headless CMS ?',
-      answer: `A classical CMS manages the backend and the frontend part. A Headless CMS removes the frontend so you are free to use your own one, using an API to connect to it. Manifest also covers the "back-office" / "admin panel" as it can be seen as part of the "backend"`
-    },
-    {
       question: 'Is Manifest a low-code / no-code tool ?',
       answer:
         "No. It just works like just any other file in your codebase. It's code, simple code."

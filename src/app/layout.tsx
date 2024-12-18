@@ -22,13 +22,13 @@ interface Metadata extends NextMetadata {
 }
 
 export const metadata: Metadata = {
-  title: 'Manifest - The 1-file Headless CMS',
+  title: 'Manifest - The 1-file Micro-backend',
   description:
     'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
   openGraph: {
     type: 'website',
     url: 'https://manifest.build',
-    title: 'Manifest - The 1-file Headless CMS',
+    title: 'Manifest - The 1-file Micro-backend',
     description:
       'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
     siteName: 'Manifest',
