@@ -44,7 +44,7 @@ const SubscribeForm: React.FC = () => {
             />
           </div>
           <div className="control">
-            <button className="button is-dark">
+            <button className="button is-white">
               <span className="icon">
                 <i className="lni lni-arrow-right"></i>
               </span>

@@ -1068,15 +1068,31 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="column is-12 has-text-centered">
-              <div className="is-flex is-align-items-center is-justify-content-center newsletter-box mt-5">
-                <span className="icon-text">
-                  <span className="icon">
-                    <i className="lni lni-envelope"></i>
-                  </span>
-                  <span>Get notified at the next milestone</span>
-                </span>
-                <SubscribeForm />
+            <div className="column" id="cta-cloud">
+              <div className="card has-border-gradient card--getnotified is-shadowless mt-6">
+                <div className="card-content py-7 has-text-white">
+                  <div className="content is-normal">
+                    <div className="columns">
+                      <div className="column is-6 is-offset-3 has-text-centered is-align-items-center is-flex is-flex-wrap-wrap is-justify-content-center">
+                        <img
+                          src="./assets/images/logo-manifest-cloud-light.svg"
+                          alt="Manifest Cloud logo"
+                          width={222}
+                        />
+                        <h2 className="has-text-white mt-4">
+                          Deploy your backend in 1-click
+                        </h2>
+                        <p>
+                          Join the waitlist now to be the first to discover{' '}
+                          <b className="has-text-white">Manifest Cloud</b>.
+                        </p>
+                        <div className="small-control">
+                          <SubscribeForm />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
