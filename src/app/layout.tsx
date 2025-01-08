@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata as NextMetadata } from 'next'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
@@ -88,7 +89,10 @@ const RootLayout: React.FC<{
           <HotjarSnippet />
         </Head>
         <Header />
-        <main>{children}</main>
+        <main>
+          {children}
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>
