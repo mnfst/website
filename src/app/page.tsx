@@ -1,10 +1,15 @@
 'use client'
 
+import { track } from '@vercel/analytics/server'
 import Image from 'next/image'
 import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
+
+track('Install')
+track('Star')
+track('Sponsor')
 
 export default function Home() {
   return (
@@ -36,6 +41,9 @@ export default function Home() {
                     className="button is-light"
                     href="/docs/install"
                     target="_blank"
+                    onClick={() => {
+                      track('Install')
+                    }}
                   >
                     Get started
                   </a>
@@ -916,6 +924,9 @@ export default function Home() {
                             className="button is-white is-small"
                             href="https://github.com/mnfst/manifest"
                             target="_blank"
+                            onClick={() => {
+                              track('Star')
+                            }}
                           >
                             <span className="icon">
                               <i className="fab fa-github"></i>
@@ -926,6 +937,9 @@ export default function Home() {
                             className="button is-white  is-small"
                             href="https://opencollective.com/mnfst"
                             target="_blank"
+                            onClick={() => {
+                              track('Sponsor')
+                            }}
                           >
                             <span className="icon has-text-info">
                               <i className="fa-regular fa-heart"></i>
