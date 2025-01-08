@@ -1,4 +1,8 @@
 // components/Header.js
+'use client'
+import { track } from '@vercel/analytics/server'
+
+track('Install')
 
 const Header = () => {
   return (
@@ -69,6 +73,9 @@ const Header = () => {
                 className="button is-small is-link"
                 href="/docs/install"
                 target="_blank"
+                onClick={() => {
+                  track('Install')
+                }}
               >
                 Get started
               </a>

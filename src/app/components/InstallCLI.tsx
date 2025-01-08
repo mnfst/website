@@ -1,7 +1,11 @@
 'use client'
 import './InstallCLI.scss'
 
+import { track } from '@vercel/analytics/server'
 import React, { useState } from 'react'
+
+// Track the copy event
+track('Copy')
 
 const InstallCLI: React.FC = () => {
   const [isCopied, setIsCopied] = useState(false)
@@ -19,7 +23,10 @@ const InstallCLI: React.FC = () => {
           <span className="px-5 py-4 install-code">{command}</span>
           <a
             className="icon-text has-background-grey-darker px-4 py-2 is-flex is-align-items-center has-text-white is-relative"
-            onClick={handleCopy}
+            onClick={() => {
+              track('Signup')
+              handleCopy()
+            }}
           >
             <span className="icon">
               <i className="lni lni-files"></i>
