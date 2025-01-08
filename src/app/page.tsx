@@ -7,10 +7,6 @@ import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
 
-track('Install')
-track('Star')
-track('Sponsor')
-
 export default function Home() {
   return (
     <div>

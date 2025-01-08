@@ -4,9 +4,6 @@ import './InstallCLI.scss'
 import { track } from '@vercel/analytics/server'
 import React, { useState } from 'react'
 
-// Track the copy event
-track('Copy')
-
 const InstallCLI: React.FC = () => {
   const [isCopied, setIsCopied] = useState(false)
   const command = 'npx add-manifest'
