@@ -2,8 +2,6 @@
 'use client'
 import { track } from '@vercel/analytics/server'
 
-track('Install')
-
 const Header = () => {
   return (
     <nav
