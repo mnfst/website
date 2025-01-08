@@ -1,6 +1,6 @@
 'use client'
 
-import { track } from '@vercel/analytics/server'
+import { track } from '@vercel/analytics'
 import Image from 'next/image'
 import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'

@@ -1,6 +1,6 @@
 // components/Header.js
 'use client'
-import { track } from '@vercel/analytics/server'
+import { track } from '@vercel/analytics'
 
 const Header = () => {
   return (

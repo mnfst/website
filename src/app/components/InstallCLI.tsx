@@ -1,7 +1,7 @@
 'use client'
 import './InstallCLI.scss'
 
-import { track } from '@vercel/analytics/server'
+import { track } from '@vercel/analytics'
 import React, { useState } from 'react'
 
 const InstallCLI: React.FC = () => {
