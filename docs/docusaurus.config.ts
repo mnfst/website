@@ -49,10 +49,6 @@ const config: Config = {
         blog: false,
         theme: {
           customCss: './src/css/custom.css'
-        },
-        gtag: {
-          trackingID: 'GTM-PDRQLHB',
-          anonymizeIP: true
         }
       } satisfies Preset.Options
     ]
@@ -141,7 +137,16 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['http', 'json', 'docker', 'tsx']
-    }
+    },
+    plugins: [
+      [
+        'vercel-analytics',
+        {
+          debug: true,
+          mode: 'auto'
+        }
+      ]
+    ]
   } satisfies Preset.ThemeConfig
 }
 
