@@ -152,11 +152,10 @@ const Footer: React.FC = () => {
               </div>
               <div className="column is-3">
                 <div className="content">
-                  <p className="has-text-weight-bold is-size-6">Stay tuned</p>
-                  <p>
-                    Manifest goal is to make backend development hassle-free.
-                    Leave your email to stay in touch.
+                  <p className="has-text-weight-bold is-size-6">
+                    1-click deploy
                   </p>
+                  <p>Join the waitlist</p>
                   <SubscribeForm />
                 </div>
               </div>
