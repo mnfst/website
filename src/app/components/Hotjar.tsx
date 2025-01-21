@@ -4,9 +4,8 @@ import React from 'react'
 
 const HotjarSnippet: React.FC = () => {
   return (
-    <div>
-      <Script id="hotjar-snippet">
-        {`
+    <Script id="hotjar-snippet">
+      {`
             (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                 h._hjSettings={hjid:${HOTJAR_ID},hjsv:6};
@@ -16,8 +15,7 @@ const HotjarSnippet: React.FC = () => {
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
           `}
-      </Script>
-    </div>
+    </Script>
   )
 }
 

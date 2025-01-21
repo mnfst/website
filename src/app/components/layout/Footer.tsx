@@ -12,7 +12,12 @@ const Footer: React.FC = () => {
           <div className="columns is-multiline">
             <div className="column is-8 is-offset-2">
               <div className="content is-normal has-text-centered">
-                <img src="./assets/images/logo-peacock.svg" alt="" />
+                <Image
+                  src="./assets/images/logo-peacock.svg"
+                  width={64}
+                  height={98}
+                  alt="Manifest logo"
+                />
                 <h3 className="title is-3 mt-4">
                   Start building with Manifest
                 </h3>
@@ -164,7 +169,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="column is-6">
                 <Image
-                  src="/assets/images/logo-transparent.svg"
+                  src="./assets/images/logo-transparent.svg"
                   width={180}
                   height={50}
                   alt="logo of manifest"
