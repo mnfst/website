@@ -77,6 +77,11 @@ const config: Config = {
       },
       items: [
         {
+          href: 'https://discord.gg/FepAked3W7',
+          label: 'Discord',
+          position: 'right'
+        },
+        {
           href: 'https://github.com/mnfst/manifest',
           label: 'GitHub',
           position: 'right'
