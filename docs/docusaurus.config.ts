@@ -150,6 +150,14 @@ const config: Config = {
           debug: true,
           mode: 'auto'
         }
+      ],
+      [
+        'posthog-docusaurus',
+        {
+          apiKey: 'phc_mF1SRUhtr11263wyrsGfsRqqAmUH1RXQZqRbSp4WyIz',
+          appUrl: 'https://eu.i.posthog.com',
+          enableInDevelopment: false
+        }
       ]
     ]
   } satisfies Preset.ThemeConfig
