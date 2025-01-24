@@ -77,6 +77,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'upload'
+        },
+        {
+          type: 'doc',
+          id: 'webhooks'
         }
       ]
     },
