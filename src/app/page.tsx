@@ -166,21 +166,14 @@ export default function Home() {
                   <div className="content is-normal">
                     <div className="columns is-multiline">
                       <div className="column is-12 pb-0">
-                        <h2>
-                          A complete backend that fits into a single YAML file
-                        </h2>
+                        <h2>No bloat, no hassle, just simplicity.</h2>
                       </div>
                       <div className="column is-6 pt-0 is-offset-3">
                         <p>
-                          Adding a backend to your app can be tricky. Even for a
-                          simple requirement, you step into a whole new world
-                          and quickly feel overwhelmed by the many concepts you
-                          need to understand.
-                        </p>
-                        <p>
-                          Manifest aims to cut the learning curve and ship very
-                          quickly without trading-off your coding standards and
-                          best practices.
+                          Manifest lets you build and deploy a backend as easily
+                          as creating a GitHub repo. Start fast, develop
+                          effortlessly, and focus on your frontend with
+                          simplicity.
                         </p>
                       </div>
                     </div>
