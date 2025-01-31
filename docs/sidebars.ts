@@ -64,6 +64,20 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🧩 Logic',
+      items: [
+        {
+          type: 'doc',
+          id: 'endpoints'
+        },
+        {
+          type: 'doc',
+          id: 'webhooks'
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: '🔌 Connect to your backend',
       items: [
         {
@@ -77,10 +91,6 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'upload'
-        },
-        {
-          type: 'doc',
-          id: 'webhooks'
         }
       ]
     },
