@@ -166,7 +166,7 @@ export default function Home() {
                   <div className="content is-normal">
                     <div className="columns is-multiline">
                       <div className="column is-12 pb-0">
-                        <h2>No bloat, no hassle, just simplicity.</h2>
+                        <h2>No bloat, no clutter, just simplicity.</h2>
                       </div>
                       <div className="column is-6 pt-0 is-offset-3">
                         <p>
