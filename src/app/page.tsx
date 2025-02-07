@@ -25,8 +25,18 @@ export default function Home() {
                     for your frontend
                   </h1>
                   <p className="subtitle">
-                    Manifest micro-backend powers websites, apps and directories
-                    around the world with 1 YAML file only.
+                    Manifest is an{' '}
+                    <strong className="has-text-weight-heavy">
+                      AI-friendly
+                    </strong>{' '}
+                    micro-backend that powers
+                    <strong className="has-text-weight-heavy"> websites</strong>
+                    , <strong className="has-text-weight-heavy">apps</strong>,
+                    and{' '}
+                    <strong className="has-text-weight-heavy">
+                      directories
+                    </strong>{' '}
+                    with just one YAML file.
                   </p>
                 </div>
               </div>
@@ -480,9 +490,13 @@ export default function Home() {
                       any other file in your codebase.
                     </p>
                     <p>
-                      Keep it your way: work from your IDE, use testing,
-                      environments, AI assistants and leverage source control
-                      features like committing and branching.
+                      Keep it your way: use your IDE, testing, environments and
+                      leverage source control features like committing.
+                    </p>
+                    <p>
+                      Its <strong>AI-friendly</strong> approach ensures highly
+                      reliable code generation, enhancing productivity without
+                      compromise.
                     </p>
                     <p className="mb-2">
                       <a
