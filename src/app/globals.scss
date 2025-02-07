@@ -2252,3 +2252,7 @@ main .content a:not(.button):not(.icon-text) {
   right: calc(#{$gap} + 1px);
   bottom: calc(#{$gap} + 1px);
 }
+
+.has-text-weight-heavy {
+  font-weight: 800 !important;
+}
