@@ -962,7 +962,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="column is-4-tablet is-one-fifth-widescreen ">
+            <div className="column is-4-tablet is-3-widescreen ">
               <div className="card is-fullheight is-bordered is-shadowless">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
@@ -987,7 +987,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="column is-4-tablet is-one-fifth-widescreen ">
+            <div className="column is-4-tablet is-3-widescreen ">
               <div className="card is-fullheight is-bordered is-shadowless">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
@@ -1012,13 +1012,18 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="column is-4-tablet is-one-fifth-widescreen ">
+            <div className="column is-4-tablet is-3-widescreen ">
               <div className="card is-fullheight is-bordered is-shadowless">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Custom logic</h4>
+                        <div className="icon-text">
+                          <div className="icon">
+                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                          </div>
+                          <h4>Custom logic</h4>
+                        </div>
                         <p>Create endpoints and add your own custom logic</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
@@ -1029,13 +1034,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="column is-4-tablet is-one-fifth-widescreen ">
+            <div className="column is-4-tablet is-3-widescreen ">
               <div className="card is-fullheight is-bordered is-shadowless ">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>Webhooks</h4>
+                        <div className="icon-text">
+                          <div className="icon">
+                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                          </div>
+                          <h4>Webhooks</h4>
+                        </div>
                         <p>Notify third-party platforms on defined events</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
@@ -1046,7 +1056,48 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="column is-4-tablet is-one-fifth-widescreen is-feature-request">
+            <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless ">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
+                        <h4>Persistent data on prod</h4>
+                        <p>
+                          Keep data persistent on prod, including assets. No
+                          resets, no loss.
+                        </p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless ">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
+                        <h4>CRON tasks</h4>
+                        <p>
+                          Schedule automated actions at set intervals (e.g.,
+                          hourly, daily). Useful for cleanups, notifications, or
+                          data syncs.
+                        </p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-4-tablet is-3-widescreen is-feature-request">
               <div className="card is-fullheight is-shadowless">
                 <div className="card-content is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
@@ -1071,7 +1122,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="column" id="cta-cloud">
+            <div className="column is-12" id="cta-cloud">
               <div className="card has-border-gradient card--getnotified is-shadowless mt-6">
                 <div className="card-content py-7 has-text-white">
                   <div className="content is-normal">
