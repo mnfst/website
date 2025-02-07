@@ -9,13 +9,14 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'https://manifest.build',
+
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'manifest', // Usually your GitHub org/user name.
+  organizationName: 'mnfst', // Usually your GitHub org/user name.
   projectName: 'manifest', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -77,6 +78,11 @@ const config: Config = {
       },
       items: [
         {
+          href: 'https://discord.gg/FepAked3W7',
+          label: 'Discord',
+          position: 'right'
+        },
+        {
           href: 'https://github.com/mnfst/manifest',
           label: 'GitHub',
           position: 'right'
@@ -137,17 +143,25 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['http', 'json', 'docker', 'tsx']
-    },
-    plugins: [
-      [
-        'vercel-analytics',
-        {
-          debug: true,
-          mode: 'auto'
-        }
-      ]
+    }
+  } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      '@docusaurus/plugin-vercel-analytics',
+      {
+        mode: 'auto'
+      }
+    ],
+    [
+      'posthog-docusaurus',
+      {
+        apiKey: 'phc_mF1SRUhtr11263wyrsGfsRqqAmUH1RXQZqRbSp4WyIz',
+        appUrl: 'https://eu.i.posthog.com',
+        enableInDevelopment: false
+      }
     ]
-  } satisfies Preset.ThemeConfig
+  ]
 }
 
 export default config

@@ -20,7 +20,7 @@ export default function Home() {
                     The
                     <span className="title-gradient">
                       {' '}
-                      1-file Micro-backend{' '}
+                      1-file micro-backend{' '}
                     </span>{' '}
                     for your frontend
                   </h1>
