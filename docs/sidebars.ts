@@ -23,6 +23,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'install'
+        },
+        {
+          type: 'doc',
+          id: 'config'
         }
       ]
     },
