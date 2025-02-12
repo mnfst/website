@@ -1,7 +1,13 @@
 {
-  // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "moduleResolution": "node", // Ensures aliases are correctly resolved
+    "allowJs": true, // Allows importing JavaScript files if needed
+    "resolveJsonModule": true, // Enables importing JSON files
+    "noEmit": true // Prevents TypeScript from emitting compiled files
   }
 }

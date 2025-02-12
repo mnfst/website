@@ -1456,6 +1456,10 @@ button,
   }
 }
 
+.has-text-decoration-none {
+  text-decoration: none;
+}
+
 .has-line-v {
   &:after {
     content: '';
