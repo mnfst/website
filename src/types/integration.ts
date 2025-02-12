@@ -12,7 +12,6 @@ export interface Integration {
   website: string
   relatedLinks?: {
     title: string
-    description: string
     href: string
   }[]
 }

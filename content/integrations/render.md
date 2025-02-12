@@ -3,19 +3,16 @@ title: Deploy Manifest on Render
 name: Render
 excerpt: Cloud hosting for modern applications and static websites.
 coverImage: https://manifest.build/assets/images/logo-poc.svg
-logo: https://manifest.build/assets/images/logo-poc.svg
+logo: https://manifest.build/assets/images/integrations/render.svg
 slug: render
 type: deployment
 website: render.com
 relatedLinks:
   - title: Database Security Guide
-    description: Learn best practices for securing your Neon database
     href: /guides/database-security
   - title: Performance Optimization
-    description: Tips and tricks for optimizing your database performance
     href: /guides/performance
   - title: Backup Strategies
-    description: Understanding backup and recovery options
     href: /guides/backups
 ---
 

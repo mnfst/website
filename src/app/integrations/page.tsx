@@ -51,15 +51,15 @@ export default async function IntegrationsPage() {
                     href={`/integrations/${integration.slug}`}
                     className="box"
                   >
-                    <Card className="box">
+                    <Card className="is-shadowless">
                       <CardHeader>
                         <div className="mb-4">
-                          <figure className="image is-48x48">
+                          <figure className="image is-64x64">
                             <Image
                               src={integration.logo}
                               alt={`${integration.title} logo`}
-                              width={48}
-                              height={48}
+                              width={64}
+                              height={64}
                               className="rounded"
                             />
                           </figure>
