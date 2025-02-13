@@ -2,8 +2,8 @@
 title: Deploy Manifest on Render
 name: Render
 excerpt: Cloud hosting for modern applications and static websites.
-coverImage: https://manifest.build/assets/images/logo-poc.svg
-logo: https://manifest.build/assets/images/integrations/render.svg
+coverImage: /assets/images/integrations/covers/integration-manifest-render.svg
+logo: /assets/images/integrations/render.svg
 slug: render
 type: deployment
 website: render.com

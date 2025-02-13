@@ -6,8 +6,8 @@ import Link from 'next/link'
 import path from 'path'
 import {
   Card,
+  CardContent,
   CardDescription,
-  CardHeader,
   CardTitle
 } from '../components/Card'
 
@@ -47,26 +47,24 @@ export default async function IntegrationsPage() {
             <div className="columns is-multiline">
               {typeIntegrations.map((integration) => (
                 <div key={integration.slug} className="column is-one-third">
-                  <Link
-                    href={`/integrations/${integration.slug}`}
-                    className="box"
-                  >
-                    <Card className="is-shadowless">
-                      <CardHeader>
-                        <div className="mb-4">
+                  <Link href={`/integrations/${integration.slug}`}>
+                    <Card className="card is-fullheight is-shadowless card--integration">
+                      <CardContent>
+                        <div className="is-flex is-align-items-flex-start is-justify-content-space-between mb-4">
                           <figure className="image is-64x64">
                             <Image
                               src={integration.logo}
                               alt={`${integration.title} logo`}
                               width={64}
                               height={64}
-                              className="rounded"
+                              className="is-curved"
                             />
                           </figure>
+                          <i className="lni lni-arrow-right is-size-5"></i>
                         </div>
                         <CardTitle>{integration.name}</CardTitle>
                         <CardDescription>{integration.excerpt}</CardDescription>
-                      </CardHeader>
+                      </CardContent>
                     </Card>
                   </Link>
                 </div>

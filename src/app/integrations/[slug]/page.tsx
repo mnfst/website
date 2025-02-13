@@ -1,7 +1,6 @@
 import { Integration } from '@/types/integration'
 import fs from 'fs'
 import matter from 'gray-matter'
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import path from 'path'
@@ -57,26 +56,26 @@ export default async function IntegrationPage({
       <div className="container">
         <div className="columns is-multiline">
           <div className="column is-8 is-offset-2">
-            <a href="/integrations" className="button is-ghost">
-              <span className="icon is-small has-text-decoration-none">
+            <a
+              href="/integrations"
+              className="content is-small mb-6 icon-text is-flex is-align-items-center is-justify-flex-start"
+            >
+              <span className="icon is-small has-text-decoration-none mr-1">
                 <i className="lni lni-arrow-left is-size-6" />
               </span>
               <span className="has-text-decoration-none">
                 Back to integrations
               </span>
             </a>
+            <h1 className="title is-1 has-text-centered mb-6">
+              {integration.title}
+            </h1>
+            <div className="card is-shadowless is-bordered">
+              <figure className="image">
+                <img src={integration.coverImage} alt={integration.title} />
+              </figure>
+            </div>
 
-            <figure className="image is-16by9">
-              <Image
-                src={integration.coverImage}
-                alt={integration.title}
-                width={1200}
-                height={400}
-                className="rounded"
-              />
-            </figure>
-
-            <h1 className="title is-2 has-text-center">{integration.title}</h1>
             <p className="subtitle is-5">{integration.type}</p>
 
             <div>
