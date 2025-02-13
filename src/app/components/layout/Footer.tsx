@@ -178,6 +178,10 @@ const Footer: React.FC = () => {
                 />
               </div>
               <div className="column is-6 has-text-right is-align-items-center is-flex is-justify-content-flex-end">
+                <a className=" is-underlined" href="/privacy">
+                  Privacy policy
+                </a>
+                <span className="mx-4 has-text-grey-lighter">•</span>
                 <span>
                   Source code licensed{' '}
                   <a
