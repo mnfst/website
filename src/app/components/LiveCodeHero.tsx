@@ -14,7 +14,7 @@ const LiveCodeHero: React.FC = () => {
   const [displayedContent, setDisplayedContent] = useState('')
   const [animationIndex, setAnimationIndex] = useState(0)
 
-  const tabs: { label: string; content: string; demoUrl: string }[] = [
+  const tabs: { label: string; content: string; demoUrl?: string }[] = [
     {
       label: 'Collections',
       content: `name: Pokemon app 🐣
@@ -148,6 +148,30 @@ entities:
             },
         }`,
       demoUrl: 'https://demo-storage.manifest.build'
+    },
+    {
+      label: 'Webhooks',
+      content: `name: HR Management System 🏢
+
+entities:
+  
+  Employee:
+    properties:
+      - name: string
+      - position: string
+    hooks:
+      beforeCreate:
+        - { url: 'https://api.example.com/webhooks/employee-onboarding' }
+
+  Contract:
+    properties:
+      - title: string
+      - startDate: date
+      - endDate: date
+    hooks:
+      afterDelete:
+        - { url: 'https://api.example.com/webhooks/contract-termination' }
+        - { url: 'https://api.example.com/webhooks/revoke-access', method: 'PATCH'`
     }
   ]
 
@@ -302,7 +326,7 @@ entities:
                 </SyntaxHighlighter>
               </div>
               <div className="buttons buttons--demo">
-                {tabs[activeTab] && ( // Vérifie que tabs[activeTab] n'est pas undefined
+                {tabs[activeTab]?.demoUrl && ( // Vérifie que demoUrl existe bien
                   <>
                     <a
                       className="button is-small is-light is-outlined"
