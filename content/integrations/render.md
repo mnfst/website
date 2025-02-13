@@ -16,8 +16,6 @@ relatedLinks:
     href: /guides/backups
 ---
 
-# Deploy Manifest on Render.com
-
 [Render](https://render.com) is a popular cloud provider that enables developers to ship apps without hassle.
 
 ### Create a "start" script for production
@@ -56,8 +54,6 @@ Click on "Deploy web service" to launch the deployment.
 
 🎉 That's it! Your app should be available in a few minutes at the domain ending in onrender.com.
 
-> :::tip
+> 💡 TIP
 >
 > If you want to activate health checks, go to the "Health Checks" section and replace `/healthz` with `/api/health`
->
-> :::

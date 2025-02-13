@@ -55,7 +55,7 @@ export default async function IntegrationPage({
     <div className="section">
       <div className="container">
         <div className="columns is-multiline">
-          <div className="column is-8 is-offset-2">
+          <div className="column is-12">
             <a
               href="/integrations"
               className="content is-small mb-6 icon-text is-flex is-align-items-center is-justify-flex-start"
@@ -67,49 +67,61 @@ export default async function IntegrationPage({
                 Back to integrations
               </span>
             </a>
-            <h1 className="title is-1 has-text-centered mb-6">
-              {integration.title}
-            </h1>
-            <div className="card is-shadowless is-bordered">
-              <figure className="image">
-                <img src={integration.coverImage} alt={integration.title} />
-              </figure>
-            </div>
-
-            <p className="subtitle is-5">{integration.type}</p>
-
-            <div>
-              <ReactMarkdown>{content}</ReactMarkdown>
-            </div>
-            {integration.relatedLinks &&
-              integration.relatedLinks.length > 0 && (
-                <div className="columns is-multiline">
-                  <div className="column is-12">
-                    <h2 className="text-2xl font-bold mb-6">
-                      Related Resources
-                    </h2>
+          </div>
+          <div className="column is-8 is-offset-2">
+            <div className="content">
+              <div className="columns is-multiline">
+                <div className="column is-12">
+                  <h1 className="title is-1 has-text-centered mb-6">
+                    {integration.title}
+                  </h1>
+                  <div className="card is-shadowless is-bordered">
+                    <figure className="image">
+                      <img
+                        src={integration.coverImage}
+                        alt={integration.title}
+                      />
+                    </figure>
                   </div>
-                  {integration.relatedLinks.map((link, index) => (
-                    <Link
-                      key={index}
-                      href={link.href}
-                      className={`column is-fullheight ${
-                        index === integration.relatedLinks!.length - 1 &&
-                        integration.relatedLinks!.length % 2 === 1
-                          ? 'is-12'
-                          : ''
-                      }`}
-                    >
-                      <div className="card is-fullheight">
-                        <div className="card-content is-fullheight">
-                          <h3 className="title is-4">{link.title}</h3>
-                          <p>{link.description}</p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
+                  <div>
+                    <ReactMarkdown>{content}</ReactMarkdown>
+                  </div>
                 </div>
-              )}
+              </div>
+              {integration.relatedLinks &&
+                integration.relatedLinks.length > 0 && (
+                  <div className="columns is-multiline">
+                    <div className="column is-12">
+                      <h2 className="text-2xl font-bold mt-4">
+                        Related Resources
+                      </h2>
+                    </div>
+                    {integration.relatedLinks.map((link, index) => (
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className={`column is-fullheight ghost ${
+                          index === integration.relatedLinks!.length - 1 &&
+                          integration.relatedLinks!.length % 2 === 1
+                            ? 'is-12'
+                            : ''
+                        }`}
+                      >
+                        <div className="card is-fullheight is-shadowless is-bordered">
+                          <div className="card-content is-fullheight">
+                            <span className="icon-text has-text-link">
+                              <span className="icon">
+                                <i className="lni lni-arrow-right"></i>
+                              </span>
+                              <span>{link.title}</span>
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+            </div>
           </div>
         </div>
       </div>
