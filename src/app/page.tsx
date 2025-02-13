@@ -1103,8 +1103,9 @@ export default function Home() {
                       <div>
                         <h4>S3 Storage</h4>
                         <p>
-                          Use a PostgreSQL database for scalable and reliable
-                          data storage.
+                          Safely store files in an S3-compatible storage. Easily
+                          attach media to your database records and retrieve
+                          them.
                         </p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
