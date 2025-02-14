@@ -157,21 +157,21 @@ entities:
   
   Employee:
     properties:
-      - name: string
-      - position: string
+      - name
+      - position
     hooks:
       beforeCreate:
-        - { url: 'https://api.example.com/webhooks/employee-onboarding' }
+        - { url: 'https://my-webhook.com/' }
 
   Contract:
     properties:
-      - title: string
-      - startDate: date
-      - endDate: date
+      - title
+      - {name: startDate, type: date}
+      - {name: endDate, type: date}
     hooks:
       afterDelete:
-        - { url: 'https://api.example.com/webhooks/contract-termination' }
-        - { url: 'https://api.example.com/webhooks/revoke-access', method: 'PATCH'`
+        - { url: 'https://another-webhook.com' }
+        - { url: 'https://my-webhook.com', method: 'PATCH' }`
     }
   ]
 
