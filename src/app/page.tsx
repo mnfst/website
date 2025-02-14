@@ -1076,6 +1076,52 @@ export default function Home() {
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
+                        <div className="icon-text">
+                          <div className="icon">
+                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                          </div>
+                          <h4>Postgres</h4>
+                        </div>
+                        <p>
+                          Leverage the most popular open-source relational
+                          database for scalable and reliable data storage.
+                        </p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless ">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
+                        <h4>S3 Storage</h4>
+                        <p>
+                          Safely store files in an S3-compatible storage. Easily
+                          attach media to your database records and retrieve
+                          them.
+                        </p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless ">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
                         <h4>CRON tasks</h4>
                         <p>
                           Schedule automated actions at set intervals (e.g.,
@@ -1084,7 +1130,7 @@ export default function Home() {
                         </p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
-                        <span>Q1 2025</span>
+                        <span>Q2 2025</span>
                       </p>
                     </div>
                   </div>
