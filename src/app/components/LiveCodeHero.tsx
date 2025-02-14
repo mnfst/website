@@ -170,7 +170,10 @@ entities:
       - {name: endDate, type: date}
     hooks:
       afterDelete:
-        - { url: 'https://another-webhook.com' }
+        - { 
+            url: 'https://another-webhook.com',
+            headers: { authorization: 'Bearer \${API_KEY}' }
+          }
         - { url: 'https://my-webhook.com', method: 'PATCH' }`
     }
   ]
