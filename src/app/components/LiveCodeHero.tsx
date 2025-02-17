@@ -162,13 +162,6 @@ entities:
     hooks:
       beforeCreate:
         - { url: 'https://my-webhook.com/' }
-
-  Contract:
-    properties:
-      - title
-      - {name: startDate, type: date}
-      - {name: endDate, type: date}
-    hooks:
       afterDelete:
         - { 
             url: 'https://another-webhook.com',
