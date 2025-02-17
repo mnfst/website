@@ -162,19 +162,30 @@ entities:
     hooks:
       beforeCreate:
         - { url: 'https://my-webhook.com/' }
-
-  Contract:
-    properties:
-      - title
-      - {name: startDate, type: date}
-      - {name: endDate, type: date}
-    hooks:
       afterDelete:
         - { 
             url: 'https://another-webhook.com',
             headers: { authorization: 'Bearer \${API_KEY}' }
           }
         - { url: 'https://my-webhook.com', method: 'PATCH' }`
+    },
+    {
+      label: 'Endpoints',
+      content: `name: Task Management Application
+
+entities:
+  Task:
+    properties:
+      - title
+      - description
+      - { name: isCompleted, type: boolean }
+      - { name: upvotes, type: number }
+
+endpoints:
+  upvoteTask:
+    path: /tasks/:id/upvote
+    method: POST
+    handler: upvoteTask`
     }
   ]
 
