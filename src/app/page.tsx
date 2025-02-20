@@ -15,14 +15,25 @@ export default function Home() {
           <div className="container zi-1 has-text-centered">
             <div className="columns is-multiline">
               <div className="column is-8 is-offset-2">
+                <span className="tag is-rounded is-bordered">
+                  📢 <strong className="mx-1"> Current Work: </strong>
+                  <a
+                    className="ghost"
+                    href="https://github.com/mnfst/manifest/pull/316"
+                    target="_blank"
+                  >
+                    S3 storage
+                  </a>
+                </span>
+              </div>
+              <div className="column is-8 is-offset-2">
                 <div className="content is-normal">
                   <h1 className="title is-0 mb-5">
-                    The
+                    Meet the
                     <span className="title-gradient">
                       {' '}
-                      1-file Micro-backend{' '}
+                      1-file micro-backend{' '}
                     </span>{' '}
-                    for your frontend
                   </h1>
                   <p className="subtitle">
                     Manifest is an{' '}
