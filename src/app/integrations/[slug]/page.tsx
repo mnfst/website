@@ -1,10 +1,24 @@
 import { Integration } from '@/types/integration'
 import fs from 'fs'
 import matter from 'gray-matter'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import path from 'path'
 import ReactMarkdown from 'react-markdown'
+
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const { data: integration } = await getIntegrationContent(params.slug)
+  return {
+    title: `${integration.title}`,
+    description: `${integration.excerpt}`
+    // Autres métadonnées spécifiques
+  }
+}
 
 async function getIntegrations() {
   const integrationsDirectory = path.join(process.cwd(), 'content/integrations')
@@ -72,19 +86,21 @@ export default async function IntegrationPage({
             <div className="content">
               <div className="columns is-multiline">
                 <div className="column is-12">
-                  <h1 className="title is-1 has-text-centered mb-6">
-                    {integration.title}
-                  </h1>
-                  <div className="card is-shadowless is-bordered">
-                    <figure className="image">
-                      <img
-                        src={integration.coverImage}
-                        alt={integration.title}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <ReactMarkdown>{content}</ReactMarkdown>
+                  <div className="content">
+                    <h1 className="title is-1 has-text-centered mb-6">
+                      {integration.title}
+                    </h1>
+                    <div className="card is-shadowless is-bordered">
+                      <figure className="image">
+                        <img
+                          src={integration.coverImage}
+                          alt={integration.title}
+                        />
+                      </figure>
+                    </div>
+                    <div>
+                      <ReactMarkdown>{content}</ReactMarkdown>
+                    </div>
                   </div>
                 </div>
               </div>

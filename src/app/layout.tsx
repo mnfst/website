@@ -25,7 +25,7 @@ interface Metadata extends NextMetadata {
   }
 }
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Manifest - Meet the 1-file micro-backend',
   description:
     'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
@@ -56,29 +56,6 @@ const RootLayout: React.FC<{
           type="text/javascript"
           src="https://cdn-cookieyes.com/client_data/d8a8f8d74309d7ede1458cdf/script.js"
         ></Script>
-        <title>{String(metadata.title) ?? 'Default Title'}</title>
-        <meta
-          name="description"
-          content={metadata.description ?? 'Default description'}
-        />
-        <meta property="og:type" content={metadata.openGraph?.type} />
-        <meta property="og:url" content={metadata.openGraph?.url?.toString()} />
-        <meta property="og:title" content={String(metadata.openGraph?.title)} />
-        <meta
-          property="og:description"
-          content={metadata.description ?? undefined}
-        />
-        <meta property="og:site_name" content={metadata.openGraph?.siteName} />
-        <meta
-          property="og:image"
-          content={
-            Array.isArray(metadata.openGraph?.images) &&
-            metadata.openGraph.images[0] &&
-            'url' in metadata.openGraph.images[0]
-              ? metadata.openGraph.images[0].url.toString()
-              : ''
-          }
-        />
         <HotjarSnippet />
       </head>
       <body className={inter.className}>

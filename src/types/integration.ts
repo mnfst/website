@@ -1,4 +1,4 @@
-export type IntegrationType = 'deployment' | 'DBaaS' | 'Storage service'
+export type IntegrationType = 'Deployment' | 'DBaaS' | 'Storage service'
 
 export interface Integration {
   title: string

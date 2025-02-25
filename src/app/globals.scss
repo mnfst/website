@@ -2375,3 +2375,7 @@ main .content a:not(.button):not(.icon-text) {
 .is-curved {
   border-radius: $curved;
 }
+
+.content li + li {
+  margin-top: 0.5em;
+}
