@@ -125,6 +125,11 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
+      type: 'doc',
+      label: '🪣 Storage',
+      id: 's3-storage'
+    },
+    {
       type: 'category',
       label: '🎓 Quick starts',
       items: [
