@@ -1,6 +1,7 @@
 import { Integration } from '@/types/integration'
 import fs from 'fs'
 import matter from 'gray-matter'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import path from 'path'
@@ -10,6 +11,13 @@ import {
   CardDescription,
   CardTitle
 } from '../components/Card'
+
+// Métadonnées spécifiques à la page press-assets
+export const metadata: Metadata = {
+  title: 'Integrations - Manifest',
+  description:
+    'Manifest integrates with many of your favorite third-party services.'
+}
 
 async function getIntegrations() {
   const integrationsDirectory = path.join(process.cwd(), 'content/integrations')

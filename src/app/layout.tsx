@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 
 import Script from 'next/script'
 import React from 'react'
-import HotjarSnippet from './components/Hotjar'
 import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
 import PostHogPageView from './PostHogPageView'
@@ -49,14 +48,20 @@ const RootLayout: React.FC<{
   children: React.ReactNode
 }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="light" className="has-navbar-fixed-top">
+    <html
+      lang="en"
+      data-theme="light"
+      className="has-navbar-fixed-top"
+      suppressHydrationWarning
+    >
       <head>
-        <Script
-          id="cookieyes"
-          type="text/javascript"
-          src="https://cdn-cookieyes.com/client_data/d8a8f8d74309d7ede1458cdf/script.js"
-        ></Script>
-        <HotjarSnippet />
+        {process.env.NODE_ENV === 'production' && (
+          <Script
+            id="cookieyes"
+            type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/d8a8f8d74309d7ede1458cdf/script.js"
+          ></Script>
+        )}
       </head>
       <body className={inter.className}>
         <Header />

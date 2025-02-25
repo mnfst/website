@@ -16,7 +16,6 @@ export async function generateMetadata({
   return {
     title: `${integration.title}`,
     description: `${integration.excerpt}`
-    // Autres métadonnées spécifiques
   }
 }
 
