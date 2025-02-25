@@ -89,7 +89,7 @@ Manifest's default backend includes a `home content` entity with a property of t
 3. Choose your permissions. For this tutorial, I clicked `All Permissions (Bucket & Objects)`
 4. Give this access key a name (e.g., `access-key-full-access`) and click **Create access key**
 
-![Digital ocean : Bucket access](/public/assets/images/integrations/content/bucket-settings.png)
+![Digital ocean : Bucket access](/assets/images/integrations/content/bucket-settings.png)
 
 5. Copy your **Access Key ID** and **secret key**.
 
