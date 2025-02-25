@@ -23,6 +23,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'install'
+        },
+        {
+          type: 'doc',
+          id: 'config'
         }
       ]
     },
@@ -119,6 +123,11 @@ const sidebars: SidebarsConfig = {
           id: 'deploy-heroku'
         }
       ]
+    },
+    {
+      type: 'doc',
+      label: '🪣 Storage',
+      id: 's3-storage'
     },
     {
       type: 'category',

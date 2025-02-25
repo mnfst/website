@@ -7,8 +7,8 @@ import React from 'react'
 import HotjarSnippet from './components/Hotjar'
 import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
-import { PostHogProvider } from './providers'
 import PostHogPageView from './PostHogPageView'
+import { PostHogProvider } from './providers'
 
 import './globals.scss'
 
@@ -26,13 +26,13 @@ interface Metadata extends NextMetadata {
 }
 
 export const metadata: Metadata = {
-  title: 'Manifest - The 1-file Micro-backend',
+  title: 'Manifest - Meet the 1-file micro-backend',
   description:
     'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
   openGraph: {
     type: 'website',
     url: 'https://manifest.build',
-    title: 'Manifest - The 1-file Micro-backend',
+    title: 'Manifest - Meet the 1-file micro-backend',
     description:
       'Instant Micro-backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
     siteName: 'Manifest',
