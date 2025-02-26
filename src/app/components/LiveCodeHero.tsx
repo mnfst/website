@@ -213,7 +213,7 @@ endpoints:
       setDisplayedContent(
         (prev) => prev + content.slice(animationIndex, nextIndex + 1)
       )
-      setAnimationIndex(nextIndex + 1)
+      setAnimationIndex(nextIndex + 1) //
     }
   }, [animationIndex, activeTab])
 
