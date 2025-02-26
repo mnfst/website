@@ -175,11 +175,11 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
   @for $i from 1 through 12 {
     .columns.is-mobile > &.is-#{$i} {
       flex: none;
-      width: percentage($i / 12);
+      width: percentage(math.div($i, 12));
     }
 
     .columns.is-mobile > &.is-offset-#{$i} {
-      margin-left: percentage($i / 12);
+      margin-left: percentage(math.div($i, 12));
     }
   }
 
@@ -278,11 +278,11 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
     @for $i from 1 through 12 {
       &.is-#{$i}-mobile {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage(math.div($i, 12));
       }
 
       &.is-offset-#{$i}-mobile {
-        margin: percentage($i / 12);
+        margin: percentage(math.div($i, 12));
       }
     }
   }
@@ -403,12 +403,12 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
       &.is-#{$i},
       &.is-#{$i}-tablet {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage(math.div($i, 12));
       }
 
       &.is-offset-#{$i},
       &.is-offset-#{$i}-tablet {
-        margin-left: percentage($i / 12);
+        margin-left: percentage(math.div($i, 12));
       }
     }
   }
@@ -508,11 +508,11 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
     @for $i from 1 through 12 {
       &.is-#{$i}-touch {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage(math.div($i, 12));
       }
 
       &.is-offset-#{$i}-touch {
-        margin-left: percentage($i / 12);
+        margin-left: percentage(math.div($i, 12));
       }
     }
   }
@@ -612,11 +612,11 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
     @for $i from 1 through 12 {
       &.is-#{$i}-desktop {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage(math.div($i, 12));
       }
 
       &.is-offset-#{$i}-desktop {
-        margin-left: percentage($i / 12);
+        margin-left: percentage(math.div($i, 12));
       }
     }
   }
@@ -716,11 +716,11 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
     @for $i from 1 through 12 {
       &.is-#{$i}-widescreen {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage(math.div($i, 12));
       }
 
       &.is-offset-#{$i}-widescreen {
-        margin-left: percentage($i / 12);
+        margin-left: percentage(math.div($i, 12));
       }
     }
   }
@@ -820,11 +820,11 @@ $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
     @for $i from 1 through 12 {
       &.is-#{$i}-fullhd {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage(math.div($i, 12));
       }
 
       &.is-offset-#{$i}-fullhd {
-        margin-left: percentage($i / 12);
+        margin-left: percentage(math.div($i, 12));
       }
     }
   }
