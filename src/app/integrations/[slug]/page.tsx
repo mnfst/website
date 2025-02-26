@@ -1,5 +1,3 @@
-'use server'
-
 import { Integration } from '@/types/integration'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -14,7 +12,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug } = params
   const { data: integration } = await getIntegrationContent(slug)
   return {
     title: `${integration.title}`,
@@ -59,7 +57,7 @@ export default async function IntegrationPage({
 }: {
   params: { slug: string }
 }) {
-  const { slug } = await params
+  const { slug } = params
   const { content, data: integration } = await getIntegrationContent(slug)
 
   if (!integration) {
