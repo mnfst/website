@@ -16,10 +16,10 @@ export default function Home() {
             <div className="columns is-multiline">
               <div className="column is-8 is-offset-2">
                 <span className="tag is-rounded is-bordered">
-                  📢 <strong className="mx-1"> Current Work: </strong>
+                  📢 <strong className="mx-1"> Latest feature: </strong>
                   <a
                     className="ghost"
-                    href="https://github.com/mnfst/manifest/pull/316"
+                    href="https://manifest.build/docs/s3-storage"
                     target="_blank"
                   >
                     S3 storage
@@ -1112,7 +1112,12 @@ export default function Home() {
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>S3 Storage</h4>
+                        <div className="icon-text">
+                          <div className="icon">
+                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                          </div>
+                          <h4>S3 storage</h4>
+                        </div>
                         <p>
                           Safely store files in an S3-compatible storage. Easily
                           attach media to your database records and retrieve
