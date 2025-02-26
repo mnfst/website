@@ -12,7 +12,7 @@ import {
   CardTitle
 } from '../components/Card'
 
-// Métadonnées spécifiques à la page press-assets
+// Brand assets page metadata.
 export const metadata: Metadata = {
   title: 'Integrations - Manifest',
   description:
