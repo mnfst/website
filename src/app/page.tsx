@@ -988,7 +988,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless">
+              <div className="card is-fullheight is-bordered is-shadowless has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -1013,7 +1013,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -1038,7 +1038,7 @@ export default function Home() {
             </div>
 
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -1060,7 +1060,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless ">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -1082,7 +1082,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless ">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
@@ -1096,6 +1096,32 @@ export default function Home() {
                         <p>
                           Leverage the most popular open-source relational
                           database for scalable and reliable data storage.
+                        </p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
+                        <div className="icon-text">
+                          <div className="icon">
+                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
+                          </div>
+                          <h4>Middlewares</h4>
+                        </div>
+                        <p>
+                          Modify data, call APIs, and trigger events before or
+                          after any database operation.
                         </p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
