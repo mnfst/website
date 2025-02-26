@@ -7,11 +7,12 @@ import { notFound } from 'next/navigation'
 import path from 'path'
 import ReactMarkdown from 'react-markdown'
 
-export async function generateMetadata({
-  params
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ slug: string }>
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { slug } = params
   const { data: integration } = await getIntegrationContent(slug)
   return {
@@ -52,11 +53,12 @@ async function getIntegrationContent(slug: string) {
   return { content, data: data as Integration }
 }
 
-export default async function IntegrationPage({
-  params
-}: {
-  params: { slug: string }
-}) {
+export default async function IntegrationPage(
+  props: {
+    params: Promise<{ slug: string }>
+  }
+) {
+  const params = await props.params;
   const { slug } = params
   const { content, data: integration } = await getIntegrationContent(slug)
 
