@@ -16,13 +16,13 @@ export default function Home() {
             <div className="columns is-multiline">
               <div className="column is-8 is-offset-2">
                 <span className="tag is-rounded is-bordered">
-                  📢 <strong className="mx-1"> Latest feature: </strong>
+                  📢 <strong className="mx-1"> Next feature: </strong>
                   <a
                     className="ghost"
-                    href="https://manifest.build/docs/s3-storage"
+                    href="https://github.com/mnfst/manifest/pull/336"
                     target="_blank"
                   >
-                    S3 storage
+                    Default values
                   </a>
                 </span>
               </div>
@@ -988,16 +988,16 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>Rich text editor</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">
+                            Rich text editor
+                          </h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>
                           Rich text editor to create stylized HTML from the
@@ -1013,16 +1013,16 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>Single-type model</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">
+                            Single-type model
+                          </h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>
                           A convenient data model that can only have one record
@@ -1038,16 +1038,16 @@ export default function Home() {
             </div>
 
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>Custom logic</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">
+                            Custom logic
+                          </h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>Create endpoints and add your own custom logic</p>
                       </div>
@@ -1060,16 +1060,14 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>Webhooks</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">Webhooks</h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>Notify third-party platforms on defined events</p>
                       </div>
@@ -1082,16 +1080,14 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>Postgres</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">Postgres</h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>
                           Leverage the most popular open-source relational
@@ -1108,16 +1104,14 @@ export default function Home() {
             </div>
 
             <div className="column is-4-tablet is-3-widescreen">
-              <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless  has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>Middlewares</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">Middlewares</h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>
                           Modify data, call APIs, and trigger events before or
@@ -1133,16 +1127,14 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless has-background-success-light">
+              <div className="card is-fullheight is-bordered is-shadowless has-background-white">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <div className="icon-text">
-                          <div className="icon">
-                            <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1"></i>
-                          </div>
-                          <h4>S3 storage</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">S3 storage</h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
                         <p>
                           Safely store files in an S3-compatible storage. Easily

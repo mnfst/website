@@ -46,11 +46,11 @@ Before getting started, ensure you have the following:
 - **npm** (included with Node.js installation) or **yarn** as a package manager
 - An active AWS account. If you don’t have one, sign up on the AWS registration page. A credit card is required to open one. AWS offers a 12-month free trial to test out the Amazon S3 bucket with 5GB of free storage.
 
-## Set Up Manifest
+## Set up Manifest
 
 If you haven't installed Manifest yet, follow these steps:
 
-### 1. Install the Manifest CLI
+### 1. Install Manifest
 
 Execute the following command in your terminal from the root of your project:
 
@@ -59,6 +59,8 @@ npx add-manifest@latest
 ```
 
 This will generate a manifest/backend.yml file and install the necessary dependencies.
+
+### 2. Run Manifest
 
 After that, launch the backend locally:
 
