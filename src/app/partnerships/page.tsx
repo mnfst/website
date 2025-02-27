@@ -285,6 +285,9 @@ export default function PressAssetsPage() {
                   can ensure Manifest keeps evolving while staying true to its
                   core principles.
                 </p>
+                <div className="has-text-centered is-size-5 mt-6 has-text-weight-bold">
+                  Thank you ❤️
+                </div>
               </div>
             </div>
           </div>

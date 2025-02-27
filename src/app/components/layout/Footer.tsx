@@ -147,20 +147,15 @@ const Footer: React.FC = () => {
                     <li>
                       <span className="icon-text">
                         <span className="icon">
-                          <i className="lni lni-hand-shake is-size-6"></i>
+                          <i className="lni lni-heart-fill is-size-6"></i>
                         </span>
-                        <a
-                          href="https://opencollective.com/mnfst"
-                          target="_blank"
-                        >
-                          Become a partner
-                        </a>
+                        <a href="/partnerships">Become a partner</a>
                       </span>
                     </li>
                     <li>
                       <span className="icon-text">
                         <span className="icon">
-                          <i className="lni lni-arrow-right is-size-6"></i>
+                          <i className="lni lni-image is-size-6"></i>
                         </span>
                         <a href="/brand-assets">Brand assets</a>
                       </span>
