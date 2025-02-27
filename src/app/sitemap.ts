@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date().toISOString(),
       changeFrequency: 'yearly',
       priority: 0.7
+    },
+    {
+      url: 'https://manifest.build/integrations/digital-ocean-spaces',
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'yearly',
+      priority: 0.7
     }
   ]
 }
