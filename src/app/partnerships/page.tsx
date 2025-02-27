@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sponsors - Manifest',
-  description: 'Become an Official Manifest Partner'
+  title: 'Partnerships - Manifest',
+  description: 'Become an official Manifest Partner'
 }
 
 export default function PressAssetsPage() {
