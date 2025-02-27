@@ -16,13 +16,13 @@ export default function Home() {
             <div className="columns is-multiline">
               <div className="column is-8 is-offset-2">
                 <span className="tag is-rounded is-bordered">
-                  📢 <strong className="mx-1"> Latest feature: </strong>
+                  📢 <strong className="mx-1"> Next feature: </strong>
                   <a
                     className="ghost"
-                    href="https://manifest.build/docs/s3-storage"
+                    href="https://github.com/mnfst/manifest/pull/336"
                     target="_blank"
                   >
-                    S3 storage
+                    Default values
                   </a>
                 </span>
               </div>

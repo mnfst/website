@@ -50,7 +50,7 @@ Before getting started, ensure you have the following:
 
 If you haven't installed Manifest yet, follow these steps:
 
-### 1. Install the Manifest CLI
+### 1. Install Manifest
 
 From the root of your project, run the following command in your terminal:
 
@@ -59,6 +59,8 @@ npx add-manifest@latest
 ```
 
 This will generate a `backend.yml` file and install all the necessary dependencies.
+
+### 2. Run Manifest
 
 After that, you can launch the backend locally:
 
