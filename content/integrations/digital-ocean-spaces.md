@@ -46,7 +46,7 @@ Before getting started, ensure you have the following:
 - **npm** (included with Node.js installation) or **yarn** as a package manager
 - A DigitalOcean account. You can [sign up here](https://cloud.digitalocean.com/registrations/new)
 
-## Set Up Manifest
+## Set up Manifest
 
 If you haven't installed Manifest yet, follow these steps:
 

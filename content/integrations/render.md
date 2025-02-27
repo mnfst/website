@@ -8,12 +8,12 @@ slug: render
 type: Deployment
 website: render.com
 relatedLinks:
-  - title: Database Security Guide
-    href: /guides/database-security
-  - title: Performance Optimization
-    href: /guides/performance
-  - title: Backup Strategies
-    href: /guides/backups
+  - title: 🚀 Deploy Manifest on production
+    href: /docs/deploy
+  - title: 🪣 S3 Storage documentation
+    href: /docs/s3-storage
+  - title: 📂 File and Image upload
+    href: /docs/upload
 ---
 
 > ⚠️ warning
@@ -46,11 +46,11 @@ Before getting started, ensure you have the following:
 - **npm** (included with Node.js installation) or **yarn** as a package manager
 - A Render account. If you don’t have one, sign up on the [Render registration page](https://render.com).
 
-## Set Up Manifest
+## Set up Manifest
 
 If you haven't installed Manifest yet, follow these steps:
 
-### Install Manifest
+### 1. Install Manifest
 
 Run the following command in your terminal from the root of your project:
 
@@ -60,9 +60,9 @@ npx add-manifest@latest
 
 This will generate a manifest/backend.yml file and install the necessary dependencies.
 
-### 1. Run Manifest
+### 2. Run Manifest
 
-Then, launch the backend locally:
+Before setting up for production, let’s first see how our backend behaves locally. To do that, run:
 
 ```bash
 npm run manifest
@@ -70,9 +70,7 @@ npm run manifest
 
 Once running, you can access the Admin panel at [http://localhost:1111](http://localhost:1111) (admin@manifest.build / admin) and use the REST API at [http://localhost:1111/api](http://localhost:1111/api).
 
-![Manifest : default yaml backend](/assets/images/integrations/content/default-backend-yaml-file.png)
-
-### Create a "start" script for production
+### 3. Create a "start" script for production
 
 The `npm run manifest` script should only be used for **development** as it watches file changes.
 
@@ -85,19 +83,21 @@ Go back to your codebase and open the `package.json` file and add a new **start*
 }
 ```
 
-## Link the source provider
+## Setup render
+
+Deploying your Manifest backend on Render is quick and easy. Follow these steps to get started.
+
+### 1. Link the source provider
 
 Log in your Render account. If you don't have an account, create one on [render.com](https://render.com).
 
 From the dashboard, click "**Create a new web service**" to get started.
 
-![Render: add new web service](/assets/images/integrations/content/render-new-web-service.png)
-
-In our example, we are deploying a backend on a GitHub repository, but you can also deploy from GitLab or BitBucket.
+In our example, we are deploying a backend on a **GitHub** repository, but you can also deploy from **GitLab** or **BitBucket**.
 
 Choose the correct repository and click on "**Connect**" to continue.
 
-## Configure your app
+### 2. Configure your app
 
 The following screen will display a form with some fields that you have to configure:
 
@@ -106,7 +106,7 @@ The following screen will display a form with some fields that you have to confi
 - **Start command**: The value should be `node node_modules/manifest/dist/manifest/src/main.js`
 - **Environment variables**: Add the 2 environment variables: `TOKEN_SECRET_KEY` (which you can generate at https://jwtsecret.com/generate) and `NODE_ENV=production`.
 
-Click on "Deploy web service" to launch the deployment.
+Click on "**Deploy web service**" to launch the deployment.
 
 🎉 That's it! Your app should be available in a few minutes at the domain ending in onrender.com.
 
