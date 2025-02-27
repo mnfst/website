@@ -1107,7 +1107,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="column is-4-tablet is-3-widescreen ">
+            <div className="column is-4-tablet is-3-widescreen">
               <div className="card is-fullheight is-bordered is-shadowless  has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
@@ -1133,7 +1133,7 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
-              <div className="card is-fullheight is-bordered is-shadowless ">
+              <div className="card is-fullheight is-bordered is-shadowless has-background-success-light">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
