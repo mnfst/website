@@ -15,11 +15,13 @@
     "@stackblitz/sdk": "^1.11.0",
     "@vercel/analytics": "^1.4.1",
     "bulma": "^1.0.1",
+    "gray-matter": "^4.0.3",
     "lineicons": "^1.0.3",
     "next": "15.1.5",
     "posthog-js": "^1.207.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.3",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.77.2"
   },
