@@ -1249,7 +1249,7 @@ export default function Home() {
             <div className="column is-8 is-offset-2 content">
               <h2 className="mt-4">
                 Manifest is a free and open-source project, proudly supported by
-                amazing sponsors ❤️.
+                amazing partners ❤️.
               </h2>
             </div>
             <div className="column is-12">

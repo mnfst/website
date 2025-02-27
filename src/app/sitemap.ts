@@ -49,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date().toISOString(),
       changeFrequency: 'yearly',
       priority: 0.6
+    },
+    {
+      url: 'https://manifest.build/sponsors',
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'yearly',
+      priority: 0.6
     }
   ]
 }
