@@ -26,7 +26,7 @@ export default function PressAssetsPage() {
                   We are open to partnerships that{' '}
                   <strong>benefit the Manifest community</strong> and help us
                   grow the ecosystem. Here are a few ways to partner with us in
-                  addition to <a href="/sponsors">becoming a sponsor</a>:
+                  addition to <a href="/sponsors">becoming a sponsor</a> ❤️:
                 </p>
 
                 <h3>Development & integration</h3>
@@ -47,13 +47,9 @@ export default function PressAssetsPage() {
                   <strong>We welcome contributions</strong> and can facilitate
                   funding for key improvements.
                 </p>
-                <p>
-                  📩 <strong>Contact us</strong> to discuss your project and
-                  shape the future of Manifest together!
-                </p>
                 <a
                   href="mailto:partners@manifest.build?subject=Integration Partnership&body=Hi Manifest team,%0D%0A%0D%0AWe'd love to explore a possible integration between Manifest and [Your Product/Service]. Could we discuss how to make this happen?%0D%0A%0D%0AHere's a quick overview of our product:%0D%0A[Brief description]%0D%0A%0D%0ALooking forward to your thoughts!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]"
-                  className="button is-dark is-small"
+                  className=""
                 >
                   Discuss an integration
                 </a>
@@ -65,10 +61,7 @@ export default function PressAssetsPage() {
                   <strong> showcase your work</strong> through articles, case
                   studies, or events.
                 </p>
-                <a
-                  href="mailto:partners@manifest.build?subject=Co-Marketing Opportunity&body=Hi Manifest team,%0D%0A%0D%0AI'm interested in a co-marketing partnership with Manifest. We'd love to collaborate on [article, event, case study, etc.].%0D%0A%0D%0AHere's an idea of what we had in mind:%0D%0A[Brief description]%0D%0A%0D%0ALet me know if this sounds interesting!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]"
-                  className="button is-dark is-small"
-                >
+                <a href="mailto:partners@manifest.build?subject=Co-Marketing Opportunity&body=Hi Manifest team,%0D%0A%0D%0AI'm interested in a co-marketing partnership with Manifest. We'd love to collaborate on [article, event, case study, etc.].%0D%0A%0D%0AHere's an idea of what we had in mind:%0D%0A[Brief description]%0D%0A%0D%0ALet me know if this sounds interesting!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]">
                   Explore Co-marketing
                 </a>
 
@@ -83,10 +76,7 @@ export default function PressAssetsPage() {
                   as an innovative adopter.
                 </p>
                 <p>
-                  <a
-                    href="mailto:partners@manifest.build?subject=Case Study Interview Request&body=Hi Manifest team,%0D%0A%0D%0AWe've used Manifest for [describe your use case] and would love to share our experience in a case study. Let us know if you'd be interested in interviewing us!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]"
-                    className="button is-dark is-small"
-                  >
+                  <a href="mailto:partners@manifest.build?subject=Case Study Interview Request&body=Hi Manifest team,%0D%0A%0D%0AWe've used Manifest for [describe your use case] and would love to share our experience in a case study. Let us know if you'd be interested in interviewing us!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]">
                     Share your case study
                   </a>
                 </p>
@@ -97,11 +87,8 @@ export default function PressAssetsPage() {
                   <strong>guest appearances</strong> on podcasts or live streams
                   covering Manifest or related topics.
                 </p>
-                <a
-                  href="mailto:partners@manifest.build?subject=Podcast/Live Stream Collaboration&body=Hi Manifest team,%0D%0A%0D%0AI run [Podcast/YouTube Channel] and would love to have a conversation with your team about Manifest. Would you be interested in joining an episode?%0D%0A%0D%0ALooking forward to your thoughts!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Show]"
-                  className="button is-dark is-small"
-                >
-                  Invite us a to podcast
+                <a href="mailto:partners@manifest.build?subject=Podcast/Live Stream Collaboration&body=Hi Manifest team,%0D%0A%0D%0AI run [Podcast/YouTube Channel] and would love to have a conversation with your team about Manifest. Would you be interested in joining an episode?%0D%0A%0D%0ALooking forward to your thoughts!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Show]">
+                  Invite us to a podcast
                 </a>
 
                 <h3>Third-party guides</h3>
@@ -119,10 +106,7 @@ export default function PressAssetsPage() {
                   <strong>well-crafted integration guide</strong> that
                   simplifies adoption.
                 </p>
-                <a
-                  href="mailto:partners@manifest.build?subject=Third-Party Guide Proposal&body=Hi Manifest team,%0D%0A%0D%0AWe'd like to create an official guide on how to use [Your Service] with Manifest. Can we discuss the process and funding options?%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]"
-                  className="button is-dark is-small"
-                >
+                <a href="mailto:partners@manifest.build?subject=Third-Party Guide Proposal&body=Hi Manifest team,%0D%0A%0D%0AWe'd like to create an official guide on how to use [Your Service] with Manifest. Can we discuss the process and funding options?%0D%0A%0D%0ABest,%0D%0A[Your Name]%0A[Your Company]">
                   Propose a guide
                 </a>
               </div>
