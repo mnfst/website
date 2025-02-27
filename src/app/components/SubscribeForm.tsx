@@ -8,7 +8,7 @@ const SubscribeForm: React.FC = () => {
     event.preventDefault()
 
     const response = await fetch(
-      'https://api.manifest.build/api/dynamic/emails',
+      'https://next-api.manifest.build/api/collections/waiting-users',
       {
         method: 'POST',
         headers: {

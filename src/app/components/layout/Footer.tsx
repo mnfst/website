@@ -90,6 +90,19 @@ const Footer: React.FC = () => {
                     <li>
                       <span className="icon-text">
                         <span className="icon">
+                          <i className="lni lni-github-original is-size-6"></i>
+                        </span>
+                        <a
+                          href="https://github.com/mnfst/manifest"
+                          target="_blank"
+                        >
+                          Github
+                        </a>
+                      </span>
+                    </li>
+                    <li>
+                      <span className="icon-text">
+                        <span className="icon">
                           <i className="lni lni-discord-alt is-size-6"></i>
                         </span>
                         <a href="https://discord.gg/FepAked3W7" target="_blank">
@@ -111,6 +124,14 @@ const Footer: React.FC = () => {
                         </a>
                       </span>
                     </li>
+                    <li>
+                      <span className="icon-text">
+                        <span className="icon">
+                          <i className="lni lni-heart-fill is-size-6"></i>
+                        </span>
+                        <a href="/sponsors">Sponsor Manifest</a>
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -118,40 +139,6 @@ const Footer: React.FC = () => {
                 <div className="content">
                   <p className="has-text-weight-bold is-size-6">More</p>
                   <ul className="no-lst">
-                    <li>
-                      <span className="icon-text">
-                        <span className="icon">
-                          <i className="lni lni-github-original is-size-6"></i>
-                        </span>
-                        <a
-                          href="https://github.com/mnfst/manifest"
-                          target="_blank"
-                        >
-                          Github
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="icon-text">
-                        <span className="icon">
-                          <i className="lni lni-heart-fill is-size-6"></i>
-                        </span>
-                        <a
-                          href="https://opencollective.com/mnfst"
-                          target="_blank"
-                        >
-                          Support us
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="icon-text">
-                        <span className="icon">
-                          <i className="lni lni-heart-fill is-size-6"></i>
-                        </span>
-                        <a href="/partnerships">Become a partner</a>
-                      </span>
-                    </li>
                     <li>
                       <span className="icon-text">
                         <span className="icon">
@@ -166,6 +153,14 @@ const Footer: React.FC = () => {
                           <i className="lni lni-image is-size-6"></i>
                         </span>
                         <a href="/brand-assets">Brand assets</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span className="icon-text">
+                        <span className="icon">
+                          <i className="lni lni-handshake is-size-6"></i>
+                        </span>
+                        <a href="/partnerships">Partner with us</a>
                       </span>
                     </li>
                   </ul>
