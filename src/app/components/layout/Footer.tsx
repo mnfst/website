@@ -147,9 +147,9 @@ const Footer: React.FC = () => {
                     <li>
                       <span className="icon-text">
                         <span className="icon">
-                          <i className="lni lni-arrow-right is-size-6"></i>
+                          <i className="lni lni-heart-fill is-size-6"></i>
                         </span>
-                        <a href="/brand-assets">Brand assets</a>
+                        <a href="/partnerships">Become a partner</a>
                       </span>
                     </li>
                     <li>
@@ -158,6 +158,14 @@ const Footer: React.FC = () => {
                           <i className="lni lni-plug is-size-6"></i>
                         </span>
                         <a href="/integrations">Integrations</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span className="icon-text">
+                        <span className="icon">
+                          <i className="lni lni-image is-size-6"></i>
+                        </span>
+                        <a href="/brand-assets">Brand assets</a>
                       </span>
                     </li>
                   </ul>
