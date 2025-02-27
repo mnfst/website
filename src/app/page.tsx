@@ -1243,6 +1243,44 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="container-fluid has-background-white">
+        <div className="container py-7">
+          <div className="columns is-multiline has-text-centered">
+            <div className="column is-8 is-offset-2 content">
+              <h2 className="mt-4">
+                Manifest is a free and open-source project, proudly supported by
+                amazing sponsors ❤️.
+              </h2>
+            </div>
+            <div className="column is-12">
+              <div className="partner-list is-flex is-align-items-center is-justify-content-center mt-4 is-flex-wrap-wrap">
+                <a
+                  href="https://www.lambdatest.com/"
+                  target="_blank"
+                  className="partner-item is-flex is-align-items-center is-justify-content-center"
+                >
+                  <img
+                    src="./assets/images/logo-lambdatest.svg"
+                    alt="lambdatest logo"
+                    width="130px"
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.kreezalid.com/"
+                  className="partner-item is-flex is-align-items-center is-justify-content-center"
+                >
+                  <img
+                    src="./assets/images/kreezalid-logo.png"
+                    alt="Feature logo"
+                    width="130px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

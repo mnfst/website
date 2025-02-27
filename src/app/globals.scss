@@ -1885,6 +1885,34 @@ main .content a:not(.button):not(.icon-text) {
     }
   }
 }
+.partner-list {
+}
+
+.partner-item {
+  height: 190px;
+  padding: 1rem;
+  margin-top: -1px;
+  border-top: 1px solid utilities.$border;
+  border-right: 1px solid utilities.$border;
+  border-bottom: 1px solid utilities.$border;
+
+  @include mixins.mobile {
+    width: 50%;
+
+    &:nth-child(odd) {
+      border-left: 1px solid utilities.$border;
+    }
+  }
+  @include mixins.tablet {
+    width: 25%;
+    &:first-child {
+      border-left: 1px solid utilities.$border;
+    }
+  }
+  @include mixins.desktop {
+    width: 20%;
+  }
+}
 
 .logotype-wrapper {
   min-block-size: 20rem;
