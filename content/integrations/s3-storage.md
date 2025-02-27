@@ -5,7 +5,7 @@ excerpt: Learn how to store and access files with Amazon S3 for your Manifest ba
 coverImage: /assets/images/integrations/covers/integration-manifest-amazon-s3-storage.svg
 logo: /assets/images/integrations/aws.svg
 slug: s3-storage
-type: S3 storage
+type: Storage
 website: https://aws.amazon.com/fr/s3/
 relatedLinks:
   - title: 🪣 S3 Storage documentation

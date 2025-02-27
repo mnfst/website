@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 
-// Métadonnées spécifiques à la page press-assets
 export const metadata: Metadata = {
   title: 'Brand assets - Manifest',
   description: 'Get Manifest brand assets here.'
-  // Autres métadonnées spécifiques
 }
 
 export default function PressAssetsPage() {

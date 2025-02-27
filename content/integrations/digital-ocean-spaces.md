@@ -5,10 +5,10 @@ excerpt: Learn how to store and access files with DigitalOcean Spaces (S3-Compat
 coverImage: /assets/images/integrations/covers/integration-manifest-digital-ocean-spaces.svg
 logo: /assets/images/integrations/digital-ocean.svg
 slug: digital-ocean-spaces
-type: S3 storage
+type: Storage
 website: https://www.digitalocean.com/products/spaces
 relatedLinks:
-  - title: 🪣 S3 Storage documentation
+  - title: 🪣 Storage documentation
     href: /docs/s3-storage
   - title: 📂 File and Image upload
     href: /docs/upload

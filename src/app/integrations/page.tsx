@@ -12,7 +12,6 @@ import {
   CardTitle
 } from '../components/Card'
 
-// Brand assets page metadata.
 export const metadata: Metadata = {
   title: 'Integrations - Manifest',
   description:

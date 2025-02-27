@@ -200,7 +200,6 @@ endpoints:
   useEffect(() => {
     const content = tabs[activeTab]?.content || ''
 
-    // Skip spaces.
     const nextIndex = (() => {
       let index = animationIndex
       while (index < content.length && content[index] === ' ') {
@@ -340,7 +339,7 @@ endpoints:
                 </SyntaxHighlighter>
               </div>
               <div className="buttons buttons--demo">
-                {tabs[activeTab]?.demoUrl && ( // Vérifie que demoUrl existe bien
+                {tabs[activeTab]?.demoUrl && (
                   <>
                     <a
                       className="button is-small is-light is-outlined"
