@@ -160,6 +160,14 @@ const Footer: React.FC = () => {
                         <a href="/brand-assets">Brand assets</a>
                       </span>
                     </li>
+                    <li>
+                      <span className="icon-text">
+                        <span className="icon">
+                          <i className="lni lni-plug is-size-6"></i>
+                        </span>
+                        <a href="/integrations">Integrations</a>
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>

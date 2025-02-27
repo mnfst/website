@@ -40,6 +40,7 @@ $livecode-sidebar-height-mobile: #{$livecode-height-mobile +
 $livecode-height-tablet: 437px !default;
 $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
   $livecode-tab-height} !default;
+$curved: 15px !default;
 
 @use 'bulma/sass/utilities' with (
   $size-1: 2.986rem,
@@ -933,7 +934,6 @@ html {
 }
 
 body {
-  // background-image: url('/assets/images/bg-grid.svg');
   background-repeat: repeat;
 }
 
@@ -1456,19 +1456,11 @@ button,
   }
 }
 
-.has-line-v {
-  &:after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    height: 500px;
-    width: 1px;
-    background-image: url('/assets/images/line-v.svg');
-    background-repeat: repeat;
-    background-position: bottom center;
-    bottom: calc(100% - 16px);
-    left: 50%;
-    transform: translateX(-50%);
+.has-text-decoration-none {
+  text-decoration: none;
+  &:hover,
+  .button.is-ghost:hover & {
+    text-decoration: none;
   }
 }
 
@@ -1575,7 +1567,46 @@ main .content a:not(.button):not(.icon-text) {
     padding-left: 1.5rem;
   }
 }
+@mixin border-gradient($border-radius: 8px, $padding: 1px) {
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 7px,
+        transparent 7px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
+    linear-gradient(
+      220deg,
+      #2430f0 0%,
+      #2be1b7 21%,
+      #942ffa 42%,
+      #ff006e 61%,
+      #ffd037 84%,
+      #00cecb 100%
+    );
 
+  padding: $padding;
+  border-radius: $border-radius;
+  box-sizing: content-box;
+}
+
+.has-border-gradient {
+  @include border-gradient;
+
+  &.is-over-background-white-ter {
+    border: 1px solid $white-ter;
+  }
+}
 .has-border-gradient {
   background: radial-gradient(
         circle at 100% 100%,
@@ -1606,6 +1637,73 @@ main .content a:not(.button):not(.icon-text) {
   padding: 1px;
   border-radius: 8px;
   box-sizing: content-box;
+}
+
+.card--integration {
+  padding: 1px;
+  border-radius: 9px;
+  box-sizing: content-box;
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 7px,
+        transparent 7px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
+    linear-gradient(
+      220deg,
+      #dedede 0%,
+      #dedede 21%,
+      #dedede 42%,
+      #dedede 61%,
+      #dedede 84%,
+      #dedede 100%
+    );
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: radial-gradient(
+          circle at 100% 100%,
+          #ffffff 0,
+          #ffffff 7px,
+          transparent 7px
+        )
+        0% 0%/8px 8px no-repeat,
+      radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+        100% 0%/8px 8px no-repeat,
+      radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+        0% 100%/8px 8px no-repeat,
+      radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px)
+        100% 100%/8px 8px no-repeat,
+      linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+        calc(100% - 16px) no-repeat,
+      linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+        calc(100% - 2px) no-repeat,
+      linear-gradient(
+        220deg,
+        #2430f0 0%,
+        #2be1b7 21%,
+        #942ffa 42%,
+        #ff006e 61%,
+        #ffd037 84%,
+        #00cecb 100%
+      );
+
+    .title {
+      color: utilities.$link;
+      translate: all 0.3s ease-in-out;
+    }
+  }
 }
 
 .has-2-cols {
@@ -2255,4 +2353,12 @@ main .content a:not(.button):not(.icon-text) {
 
 .has-text-weight-heavy {
   font-weight: 800 !important;
+}
+
+.is-curved {
+  border-radius: $curved;
+}
+
+.content li + li {
+  margin-top: 0.5em;
 }
