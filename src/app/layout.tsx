@@ -55,6 +55,7 @@ const RootLayout: React.FC<{
       suppressHydrationWarning
     >
       <head>
+        <meta name="algolia-site-verification" content="F0C1A2DB3E7FC100" />
         {process.env.NODE_ENV === 'production' && (
           <Script
             id="cookieyes"

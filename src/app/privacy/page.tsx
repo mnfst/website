@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Privacy policy - Manifest',
   description:
-    '<meta name="description" content="Read our Privacy Policy to understand how we collect, use, and protect your data on Manifest.'
+    'Read our Privacy Policy to understand how we collect, use, and protect your data on Manifest.'
 }
 export default function PrivacyPolicy() {
   return (
