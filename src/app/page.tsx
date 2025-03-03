@@ -19,10 +19,10 @@ export default function Home() {
                   📢 <strong className="mx-1"> Next feature: </strong>
                   <a
                     className="ghost"
-                    href="https://github.com/mnfst/manifest/pull/336"
+                    href="https://github.com/mnfst/manifest/pull/349"
                     target="_blank"
                   >
-                    Default values
+                    MySQL 🐘
                   </a>
                 </span>
               </div>
@@ -1151,6 +1151,48 @@ export default function Home() {
               </div>
             </div>
             <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless has-background-white">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">
+                            Defautl values
+                          </h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
+                        </div>
+                        <p>
+                          Allows setting a predefined value for a field when no
+                          value is provided.
+                        </p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-4-tablet is-3-widescreen ">
+              <div className="card is-fullheight is-bordered is-shadowless ">
+                <div className="card-content  is-box-sizing-border-box is-fullheight">
+                  <div className="content is-fullheight">
+                    <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
+                      <div>
+                        <h4>MySQL</h4>
+                        <p>Support for MySQL as a database option.</p>
+                      </div>
+                      <p className="has-text-right has-text-grey-light is-size-7 mt-4">
+                        <span>Q1 2025</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="column is-4-tablet is-3-widescreen ">
               <div className="card is-fullheight is-bordered is-shadowless ">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
@@ -1171,6 +1213,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="column is-4-tablet is-3-widescreen is-feature-request">
               <div className="card is-fullheight is-shadowless">
                 <div className="card-content is-box-sizing-border-box is-fullheight">
