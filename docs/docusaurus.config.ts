@@ -143,6 +143,11 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['http', 'json', 'docker', 'tsx']
+    },
+    algolia: {
+      appId: 'MCG7GTHDOM',
+      apiKey: '6d5d813495047b8f8c1ff2c1511ee326',
+      indexName: 'manifest'
     }
   } satisfies Preset.ThemeConfig,
 
