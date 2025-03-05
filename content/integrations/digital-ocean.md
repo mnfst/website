@@ -25,7 +25,7 @@ You will set up a Manifest project, configure it for deployment, and then deploy
 
 ## What is Manifest?
 
-[Manifest](/) is a streamlined Backend-as-a-Service designed to accelerate your development process. With Manifest, you can define your entire backend architecture in a single, intuitive YAML file. This approach not only simplifies setup but also provides a foundation for data management, storage solutions, and business logic. By abstracting the complexities of traditional backend development, Manifest enables developers to focus on building innovative features and delivering projects more swiftly.
+[Manifest](/) is a lightweight Backend-as-a-Service that speeds up backend development. With just one clear and concise YAML file, you can define your entire backend structure effortlessly. This simplifies configuration while offering robust solutions for data management, storage, and business logic. By eliminating the usual backend complexities, Manifest lets developers concentrate on creating features and shipping projects faster.
 
 ## What is DigitalOcean?
 
