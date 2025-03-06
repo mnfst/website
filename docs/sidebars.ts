@@ -112,19 +112,22 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'deploy-digital-ocean'
+          id: 'deploy-heroku'
         },
         {
           type: 'doc',
           id: 'deploy-fly-io'
         },
         {
-          type: 'doc',
-          id: 'deploy-render-com'
+          type: 'link',
+          label: 'Deploy Manifest on DigitalOcean',
+          href: 'https://manifest.build/integrations/digital-ocean'
         },
+
         {
-          type: 'doc',
-          id: 'deploy-heroku'
+          type: 'link',
+          label: 'Deploy Manifest on Render',
+          href: 'https://manifest.build/integrations/render'
         }
       ]
     },
