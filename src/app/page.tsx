@@ -19,10 +19,10 @@ export default function Home() {
                   📢 <strong className="mx-1"> Next feature: </strong>
                   <a
                     className="ghost"
-                    href="https://github.com/mnfst/manifest/pull/349"
+                    href="https://github.com/mnfst/manifest/issues/341"
                     target="_blank"
                   >
-                    MySQL 🐘
+                    CRON tasks 🕒
                   </a>
                 </span>
               </div>
@@ -1158,7 +1158,7 @@ export default function Home() {
                       <div>
                         <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
                           <h4 className="has-text-success mb-0">
-                            Defautl values
+                            Default values
                           </h4>
                           <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
@@ -1181,7 +1181,10 @@ export default function Home() {
                   <div className="content is-fullheight">
                     <div className="is-flex is-flex-direction-column is-justify-content-space-between is-fullheight">
                       <div>
-                        <h4>MySQL</h4>
+                        <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
+                          <h4 className="has-text-success mb-0">MySQL </h4>
+                          <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
+                        </div>
                         <p>Support for MySQL as a database option.</p>
                       </div>
                       <p className="has-text-right has-text-grey-light is-size-7 mt-4">
