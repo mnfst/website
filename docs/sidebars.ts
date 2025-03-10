@@ -117,17 +117,6 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'deploy-fly-io'
-        },
-        {
-          type: 'link',
-          label: 'Deploy Manifest on DigitalOcean',
-          href: 'https://manifest.build/integrations/digital-ocean'
-        },
-
-        {
-          type: 'link',
-          label: 'Deploy Manifest on Render',
-          href: 'https://manifest.build/integrations/render'
         }
       ]
     },
