@@ -1158,7 +1158,7 @@ export default function Home() {
                       <div>
                         <div className="is-flex is-align-items-flex-center is-justify-content-space-between mb-3">
                           <h4 className="has-text-success mb-0">
-                            Defautl values
+                            Default values
                           </h4>
                           <i className="lni lni-checkmark-circle has-text-weight-bold has-text-success is-size-6 mr-1 is-align-items-center is-flex is-justify-content-center"></i>
                         </div>
