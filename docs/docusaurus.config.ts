@@ -160,32 +160,28 @@ const config: Config = {
       {
         redirects: [
           {
-            from: '/docs/install',
-            to: '/docs'
+            from: '/install',
+            to: '/'
           },
           {
-            from: '/docs/config',
-            to: '/docs'
+            from: '/properties',
+            to: '/entities'
           },
           {
-            from: '/docs/properties',
-            to: '/docs/entities'
+            from: '/relations',
+            to: '/entities'
           },
           {
-            from: '/docs/relations',
-            to: '/docs/entities'
+            from: '/policies',
+            to: '/authentication'
           },
           {
-            from: '/docs/policies',
-            to: '/docs/auth'
+            from: '/javascript-sdk',
+            to: '/crud'
           },
           {
-            from: '/docs/javascript-sdk',
-            to: '/docs/crud'
-          },
-          {
-            from: '/docs/rest-api',
-            to: '/docs/crud'
+            from: '/rest-api',
+            to: '/crud'
           }
         ]
       }

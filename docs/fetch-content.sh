@@ -12,4 +12,4 @@ fi
 rm -rf content
 
 # Clone the repository into the 'content' directory with the specified branch
-git clone --depth 1 --branch "$BRANCH" https://github.com/mnfst/docs.git content
+git clone --depth 1 --branch user-centric https://github.com/mnfst/docs.git content
