@@ -156,6 +156,41 @@ const config: Config = {
 
   plugins: [
     [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs/install',
+            to: '/docs'
+          },
+          {
+            from: '/docs/config',
+            to: '/docs'
+          },
+          {
+            from: '/docs/properties',
+            to: '/docs/entities'
+          },
+          {
+            from: '/docs/relations',
+            to: '/docs/entities'
+          },
+          {
+            from: '/docs/policies',
+            to: '/docs/auth'
+          },
+          {
+            from: '/docs/javascript-sdk',
+            to: '/docs/crud'
+          },
+          {
+            from: '/docs/rest-api',
+            to: '/docs/crud'
+          }
+        ]
+      }
+    ],
+    [
       '@docusaurus/plugin-vercel-analytics',
       {
         mode: 'auto'
