@@ -112,19 +112,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'deploy-digital-ocean'
+          id: 'deploy-heroku'
         },
         {
           type: 'doc',
           id: 'deploy-fly-io'
-        },
-        {
-          type: 'doc',
-          id: 'deploy-render-com'
-        },
-        {
-          type: 'doc',
-          id: 'deploy-heroku'
         }
       ]
     },
