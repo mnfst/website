@@ -57,6 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7
     },
     {
+      url: 'https://manifest.build/integrations/fly-io',
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'yearly',
+      priority: 0.7
+    },
+    {
       url: 'https://manifest.build/partnerships',
       lastModified: new Date().toISOString(),
       changeFrequency: 'yearly',

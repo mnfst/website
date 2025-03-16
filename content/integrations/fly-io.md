@@ -1,12 +1,12 @@
 ---
 title: Deploy Manifest on Fly.io
-name: Fly
+name: Fly.io
 excerpt: Global application hosting with low latency and automatic scaling.
 coverImage: /assets/images/integrations/covers/integration-manifest-fly-io.svg
 logo: /assets/images/integrations/fly-io.svg
-slug: render
+slug: fly-io
 type: Deployment
-website: render.com
+website: https://fly.io/
 relatedLinks:
   - title: 🚀 Deploy Manifest on production
     href: /docs/deploy
@@ -19,17 +19,17 @@ relatedLinks:
 > ⚠️ warning
 > This guide does not ensure persistent data for the database and the storage.
 
-In this tutorial, We will guide you through deploying your Manifest backend on Render, a popular cloud provider.
+In this tutorial, we will guide you through deploying your Manifest backend on Fly.io, a cloud provider focused on simplicity and speed.
 
-You will set up a Manifest project, configure it for deployment, and then deploy it on Render. By the end of this tutorial, you should have your Manifest backend running on Render.
+You will set up a Manifest project, configure it for deployment, and then deploy it on Fly.io. By the end of this tutorial, you should have your Manifest backend running on Fly.io.
 
 ## What is Manifest?
 
-[Manifest](/) is a streamlined Backend-as-a-Service designed to accelerate your development process. With Manifest, you can define your entire backend architecture in a single, intuitive YAML file. This approach not only simplifies setup but also provides a foundation for data management, storage solutions, and business logic. By abstracting the complexities of traditional backend development, Manifest enables developers to focus on building innovative features and delivering projects more swiftly.
+[Manifest](/) is a lightweight Backend-as-a-Service that speeds up backend development. With just one clear and concise YAML file, you can define your entire backend effortlessly. This simplifies configuration while offering solutions for data management, storage, and business logic. By eliminating the usual backend complexities, Manifest lets developers concentrate on shipping projects faster.
 
-## What is Render?
+## What is Fly.io?
 
-[Render](https://render.com) is a cloud provider that enables developers to ship apps without hassle. It offers scalable and easy-to-use services for deploying web applications, databases, and more.
+[Fly.io](https://fly.io/) is a developer-friendly cloud provider that focuses on fast deployments and a global reach. Fly.io enables you to run applications and databases in regions near your audience for lower latency and better performance.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Before getting started, ensure you have the following:
 
 - [Node.js](https://nodejs.org/en/) version 18.x (LTS versions)
 - **npm** (included with Node.js installation) or **yarn** as a package manager
-- A Render account. If you don’t have one, sign up on the [Render registration page](https://render.com).
+- A Fly.io account. If you don’t have one, sign up on the [Fly.io registration page](https://fly.io/app/sign-up).
 
 ## Set up Manifest
 
@@ -74,7 +74,7 @@ Once running, you can access the Admin panel at [http://localhost:1111](http://l
 
 The `npm run manifest` script should only be used for **development** as it watches file changes.
 
-Go back to your codebase and open the `package.json` file and add a new **start** script on the scripts list with the value `node node_modules/manifest/dist/manifest/src/main.js` as following:
+Open the `package.json` file in your codebase and insert a new start script within the scripts list, setting its value to `node node_modules/manifest/dist/manifest/src/main.js` as demonstrated below.
 
 ```json title="package.json"
 "scripts": {
@@ -83,33 +83,28 @@ Go back to your codebase and open the `package.json` file and add a new **start*
 }
 ```
 
-## Setup render
+## Setup Fly.io
 
-Deploying your Manifest backend on Render is quick and easy. Follow these steps to get started.
+Deploying your Manifest backend on Fly.io is straightforward and efficient. Follow these steps to get started.
 
-### 1. Link the source provider
+### 1. Create a new app on Fly.io
 
-Log in your Render account. If you don't have an account, create one on [render.com](https://render.com).
+Sign in to [Fly.io](https://fly.io/) to access your dashboard. Then, click `Launch an app` to start the process.
 
-From the dashboard, click "**Create a new web service**" to get started.
+In our example we are deploying a Manifest backend hosted in [GitHub](https://github.com/). You can also connect to your codebase using the [Fly.io CLI](https://fly.io/docs/flyctl/install/). After configuring your GitHub integration with Fly.io, select the repository and click on `Deploy repository` to launch the deployment.
 
-In our example, we are deploying a backend on a **GitHub** repository, but you can also deploy from **GitLab** or **BitBucket**.
-
-Choose the correct repository and click on "**Connect**" to continue.
+![Fly.io new app](/assets/images/integrations/content/fly1.png)
 
 ### 2. Configure your app
 
-The following screen will display a form with some fields that you have to configure:
+The next screen will allow you to configure the app to make it work as you want. Here are the settings that you can or must update (in UI order):
 
-- **Region (optional):** Choose the closest region to your users
-- **Build command**: Enter `npm install`
-- **Start command**: The value should be `node node_modules/manifest/dist/manifest/src/main.js`
-- **Environment variables**: Add the 2 environment variables: `TOKEN_SECRET_KEY` (which you can generate at https://jwtsecret.com/generate) and `NODE_ENV=production`.
+- **Basics (optional)**: Choose your app's name
+- **Region (optional):** Choose the region closest to where your audience is
+- **Network**: Set the internal port to `1111` to match the default Manifest port.
+- **CPU & Memory (optional)**: Manifest can run on the **1 CPU** and **512 MB** VM Memory on small/medium projects. The default size is a bit bigger, you can replace it by a smaller one if you want.
+- **Secrets**: Add the 2 secrets: `TOKEN_SECRET_KEY` (which you can generate at [JWTSecret.com](https://jwtsecret.com/generate)) and `NODE_ENV=production`.
 
-Click on "**Deploy web service**" to launch the deployment.
+Validate the config and Fly.io will build the image and deploy.
 
-🎉 That's it! Your app should be available in a few minutes at the domain ending in onrender.com.
-
-> 💡 TIP
->
-> If you want to activate health checks, go to the "Health Checks" section and replace `/healthz` with `/api/health`
+🎉 That's it! Click on `View app` to see it.

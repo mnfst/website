@@ -6,7 +6,7 @@ coverImage: /assets/images/integrations/covers/integration-manifest-render.svg
 logo: /assets/images/integrations/render.svg
 slug: render
 type: Deployment
-website: render.com
+website: https://render.com/
 relatedLinks:
   - title: 🚀 Deploy Manifest on production
     href: /docs/deploy
