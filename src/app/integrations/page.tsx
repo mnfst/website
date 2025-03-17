@@ -64,7 +64,6 @@ export default async function IntegrationsPage() {
                               alt={`${integration.title} logo`}
                               width={64}
                               height={64}
-                              className="is-curved"
                             />
                           </figure>
                           <i className="lni lni-arrow-right is-size-5"></i>
