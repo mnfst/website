@@ -219,7 +219,8 @@ endpoints:
   return (
     <div>
       {/* Tab Headers */}
-      <div className="card is-shadowless is-bordered p-4 tab-list is-flex is-align-items-flex-start mb-0">
+      <div className="card is-shadowless is-bordered p-4 tab-list is-flex is-align-items-flex-start mb-0"
+        style={{ overflowX: "auto", whiteSpace: "nowrap", display: "flex" }}>
         {tabs.map((tab, i) => (
           <span key={i} onClick={() => goToTab(i)} className="tab">
             <span
