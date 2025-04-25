@@ -18,13 +18,13 @@ export default function Home() {
             <div className="columns is-multiline">
               <div className="column is-8 is-offset-2">
                 <span className="tag is-rounded is-bordered">
-                  📢 <strong className="mx-1"> Next feature: </strong>
+                  ⚡️ <strong className="mx-1">New in: </strong>
                   <a
                     className="ghost"
-                    href="https://github.com/mnfst/manifest/issues/341"
+                    href="https://manifest.build/docs/config#database"
                     target="_blank"
                   >
-                    CRON tasks 🕒
+                    MySQL / MariaDB
                   </a>
                 </span>
               </div>
@@ -38,11 +38,7 @@ export default function Home() {
                     </span>{' '}
                   </h1>
                   <p className="subtitle">
-                    Manifest is an{' '}
-                    <strong className="has-text-weight-heavy">
-                      AI-friendly
-                    </strong>{' '}
-                    micro-backend that powers
+                    Manifest is a micro-backend that powers
                     <strong className="has-text-weight-heavy"> websites</strong>
                     , <strong className="has-text-weight-heavy">apps</strong>,
                     and{' '}
@@ -507,9 +503,9 @@ export default function Home() {
                       leverage source control features like committing.
                     </p>
                     <p>
-                      Its <strong>AI-friendly</strong> approach ensures highly
-                      reliable code generation, enhancing productivity without
-                      compromise.
+                      Its lightweight and portable approach makes it easy to
+                      integrate anywhere: AI builders, cloud editors or in your
+                      own tools
                     </p>
                     <p className="mb-2">
                       <a
@@ -1203,7 +1199,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="column is-4-tablet is-3-widescreen ">
+            {/* <div className="column is-4-tablet is-3-widescreen ">
               <div className="card is-fullheight is-bordered is-shadowless ">
                 <div className="card-content  is-box-sizing-border-box is-fullheight">
                   <div className="content is-fullheight">
@@ -1223,7 +1219,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="column is-4-tablet is-3-widescreen is-feature-request">
               <div className="card is-fullheight is-shadowless">
