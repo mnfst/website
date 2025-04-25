@@ -2395,3 +2395,9 @@ main .content a:not(.button):not(.icon-text) {
   margin-top: -11px;
   margin-bottom: 24px;
 }
+
+.mastodon-embed .edit-indicator__content,
+.reply-indicator__content,
+.status__content {
+  font-size: 12px;
+}

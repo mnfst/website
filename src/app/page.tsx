@@ -2,9 +2,11 @@
 
 import { track } from '@vercel/analytics'
 import Image from 'next/image'
+import BlueskyEmbed from './components/BlueSkyEmbed'
 import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
+import MastodonEmbed from './components/MastodonEmbed'
 import SubscribeForm from './components/SubscribeForm'
 import TwitterEmbed from './components/TwitterEmbed'
 
@@ -751,7 +753,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
+              <div className="masonry-item bluesky-embed">
+                <BlueskyEmbed />
+              </div>
               <div className="masonry-item card has-background-white-bis is-shadowless is-bordered">
                 <div className="card-content">
                   <div className="content">
@@ -876,6 +880,11 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+              </div>
+              <div className="masonry-item mastodon-embed">
+                <MastodonEmbed
+                  embedHtml={`<blockquote class="mastodon-embed" data-embed-url="https://social.numerique.gouv.fr/@codegouvfr/114182441610976817/embed" style="background: #FCF8FF; border-radius: 8px; border: 1px solid #C9C4DA; margin: 0; max-width: 540px; min-width: 270px; overflow: hidden; padding: 0;"> <a href="https://social.numerique.gouv.fr/@codegouvfr/114182441610976817" target="_blank" style="align-items: center; color: #1C1A25; display: flex; flex-direction: column; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Roboto, sans-serif; font-size: 14px; justify-content: center; letter-spacing: 0.25px; line-height: 20px; padding: 24px; text-decoration: none;"> ... </a> </blockquote>`}
+                />
               </div>
               <div className="masonry-item card has-background-white-bis is-shadowless is-bordered">
                 <div className="card-content">
