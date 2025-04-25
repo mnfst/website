@@ -6,6 +6,7 @@ import { FAQ } from './components/FAQ'
 import InstallCLI from './components/InstallCLI'
 import LiveCodeHero from './components/LiveCodeHero'
 import SubscribeForm from './components/SubscribeForm'
+import TwitterEmbed from './components/TwitterEmbed'
 
 export default function Home() {
   return (
@@ -547,6 +548,9 @@ export default function Home() {
             </h3>
 
             <div className="masonry has-milkyway">
+              <div className="masonry-item twitter-embed">
+                <TwitterEmbed />
+              </div>
               <div className="masonry-item card has-background-white-bis is-shadowless is-bordered">
                 <div className="card-content">
                   <div className="content">
