@@ -6,7 +6,7 @@ coverImage: /assets/images/integrations/covers/integration-manifest-heroku.svg
 logo: /assets/images/integrations/heroku.svg
 slug: heroku
 type: Deployment
-website: https://www.heroku.com/
+website: https://www.heroku.com
 relatedLinks:
   - title: 🚀 Deploy Manifest on production
     href: /docs/deploy
@@ -29,7 +29,7 @@ You will set up a Manifest project, configure it for deployment, and deploy it o
 
 ## What is Fly.io?
 
-[Heroku](https://www.heroku.com/) is a cloud platform that allows developers to build, run, and operate applications entirely in the cloud. It offers a streamlined experience for deploying, managing, and scaling applications.
+[Heroku](https://www.heroku.com) is a cloud platform that allows developers to build, run, and operate applications entirely in the cloud. It offers a streamlined experience for deploying, managing, and scaling applications.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Before getting started, ensure you have the following:
 
 - [Node.js](https://nodejs.org/en/) version 18.x (LTS versions)
 - **npm** (included with Node.js installation) or **yarn** as a package manager
-- A Heroku account. If you don’t have one, sign up on the [Heroku registration page](https://signup.heroku.com/).
+- A Heroku account. If you don’t have one, sign up on the [Heroku registration page](https://signup.heroku.com).
 
 ## Set up Manifest
 
@@ -89,7 +89,7 @@ Deploying your Manifest backend on Heroku is straightforward and efficient. Foll
 
 ### 1. Link to the source provider
 
-Sign in to your [Heroku](https://heroku.com/) account or create a new one.
+Sign in to your [Heroku](https://heroku.com) account or create a new one.
 
 You can click on the "New" button and then "Create a new app" to get started. Choose the app name and the region that is closest to your users and click on "Create app".
 
