@@ -32,6 +32,10 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'access'
+        },
+        {
+          type: 'doc',
           id: 'validation'
         }
       ]
