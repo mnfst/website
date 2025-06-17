@@ -29,7 +29,7 @@
                 hidden: selectedFaqIndex !== index
               }"
             >
-              <p>{{ faqItem.answer }}</p>
+              <p *ngFor="let paragraph of faqItem.answer">{{ paragraph }}</p>
             </div>
           </div>
         </div>
