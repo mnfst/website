@@ -7,11 +7,12 @@ import {
   PLATFORM_ID
 } from '@angular/core'
 import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
+import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgClass, WaitingListFormComponent],
+  imports: [NgFor, NgClass, WaitingListFormComponent, CopyButtonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
