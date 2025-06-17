@@ -1,8 +1,6 @@
-# Manifest website
+# Manifest Website
 
-Manifest website source code. View it live: https://manifest.build
-
-The website is built with [Next.js](https://nextjs.org/).
+This repository contains the Manifest platform which will include the different web items of Manifest like the website.
 
 ## Install
 

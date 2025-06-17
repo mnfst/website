@@ -1,0 +1,35 @@
+<div>
+  <div class="section">
+    <div class="container zi-1">
+      <h1 class="title is-2 mb-6">Integrations</h1>
+      <div class="mb-6">
+        <div class="columns is-multiline">
+          <div class="column is-12">
+            <div class="title is-4 mb-4">Storage</div>
+          </div>
+          <div
+            class="column is-4"
+            *ngFor="let integration of storageIntegrations"
+          >
+            <app-integration-card [integration]="integration">
+            </app-integration-card>
+          </div>
+        </div>
+      </div>
+      <div class="mb-6">
+        <div class="columns is-multiline">
+          <div class="column is-12">
+            <div class="title is-4 mb-4">Deployment</div>
+          </div>
+          <div
+            class="column is-4"
+            *ngFor="let integration of deploymentIntegrations"
+          >
+            <app-integration-card [integration]="integration">
+            </app-integration-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
