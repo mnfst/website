@@ -1,12 +1,26 @@
 {
   "workbench.colorCustomizations": {
-    "sash.hoverBorder": "#6168fe",
-    "statusBar.background": "#2e38fe",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#6168fe",
-    "statusBarItem.remoteBackground": "#2e38fe",
-    "statusBarItem.remoteForeground": "#e7e7e7"
+    "activityBar.activeBackground": "#ffb3d9",
+    "activityBar.background": "#ffb3d9",
+    "activityBar.foreground": "#2d1b2e",
+    "activityBar.inactiveForeground": "#2d1b2e99",
+    "activityBarBadge.background": "#ff66c4",
+    "activityBarBadge.foreground": "#ffffff",
+    "commandCenter.border": "#2d1b2e99",
+    "sash.hoverBorder": "#ffb3d9",
+    "statusBar.background": "#ff80cc",
+    "statusBar.foreground": "#2d1b2e",
+    "statusBarItem.hoverBackground": "#ff4db8",
+    "statusBarItem.remoteBackground": "#ff80cc",
+    "statusBarItem.remoteForeground": "#2d1b2e",
+    "titleBar.activeBackground": "#ff80cc",
+    "titleBar.activeForeground": "#2d1b2e",
+    "titleBar.inactiveBackground": "#ff80cc99",
+    "titleBar.inactiveForeground": "#2d1b2e99"
   },
-  "peacock.color": "#2e38fe",
+  "peacock.color": "#ff80cc",
+  "material-icon-theme.files.associations": {
+    "*.routes.server.ts": "routing"
+  },
   "cSpell.words": ["authenticable", "hotjar", "signup"]
 }

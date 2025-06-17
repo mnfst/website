@@ -1,0 +1,1096 @@
+<div>
+  <div class="mt-6 pt-4">
+    <div class="container-fluid is-hero">
+      <div class="container zi-1 has-text-centered">
+        <div class="columns is-multiline">
+          <div class="column is-8 is-offset-2">
+            <span class="tag is-rounded is-bordered">
+              📢 <strong class="mx-1"> New: </strong>
+              <a
+                class="ghost"
+                href="https://github.com/mnfst/manifest/releases/tag/manifest%404.12.0"
+                target="_blank"
+              >
+                UUID identification 🏷️
+              </a>
+            </span>
+          </div>
+          <div class="column is-8 is-offset-2">
+            <div class="content is-normal">
+              <h1 class="title is-0 mb-5">
+                The backend for
+                <span class="title-gradient">AI code editors</span>
+              </h1>
+              <p class="subtitle">
+                Manifest is an open source backend that fits perfectly in modern
+                workflow.
+              </p>
+            </div>
+          </div>
+          <div class="column is-12 pb-0 has-bh-wheel">
+            <div class="column is-12">
+              <div class="column is-6 is-offset-3 mb-4">
+                <!-- <app-copy-button></app-copy-button> -->
+                <div
+                  class="is-flex is-align-items-center is-justify-content-center p-4"
+                >
+                  <a
+                    href="https://manifest.build/docs"
+                    class="button is-dark is-small m-2"
+                  >
+                    <span>Get started</span>
+                  </a>
+                  <a
+                    href="https://github.com/mnfst/manifest"
+                    target="_blank"
+                    class="button is-white is-small has-icon m-2"
+                  >
+                    <div class="icon">
+                      <i class="fa fa-star has-text-warning"></i>
+                    </div>
+                    <span>Give a star</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-4 container-p-custom">
+      <div class="section is-medium is-gradient-type-1 is-radius show-code p-6">
+        <div
+          class="img-stack is-flex is-align-items-center is-justify-content-center"
+        >
+          <img
+            src="./assets/images/yaml.svg"
+            alt="yaml-example"
+            class="bg-image"
+          />
+          <img
+            src="./assets/images/prompt.svg"
+            alt="example prompt using manifest on Cursor"
+            class="fg-image"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-full">
+    <div class="container pt-6 pb-7">
+      <div class="columns is-gapless is-multiline mb-0">
+        <div class="column is-12 has-text-centered">
+          <div
+            class="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mb-6"
+          >
+            <span class="is-size-7">Backed by:</span>
+            <img
+              src="./assets/images/idf-logo.svg"
+              alt="IDF logo"
+              width="130px"
+              class="idf-sf mx-4 mb-2"
+            />
+            <div
+              class="backed-by-logos is-flex is-align-items-center is-justify-content-center"
+            >
+              <img
+                src="./assets/images/hec-incubateur.svg"
+                alt="HEC Incubateur logo"
+                width="234px"
+                class="logo-hec mx-4"
+              />
+              <img
+                src="./assets/images/station-f-logo.svg"
+                alt="Station F logo"
+                width="99px"
+                class="logo-sf mx-4 mb-2"
+              />
+            </div>
+            <img
+              src="./assets/images/inria-logo.svg"
+              alt="Inria Startup Studio logo"
+              width="100px"
+              class="inria-logo mx-4 mb-3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="card is-fullheight is-radius is-shadowless p-64">
+        <div class="card-content">
+          <div class="columns is-multiline mb-0">
+            <div class="column is-4">
+              <div class="content is-normal is-fullheight">
+                <div
+                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+                >
+                  <div class="card-content-top">
+                    <h2 class="title is-4">
+                      A complete backend that fits in 1 file of code
+                    </h2>
+                    <p class="">
+                      Get <span class="tag is-link is-light">data</span>,
+                      <span class="tag is-link is-light">logic</span>,
+                      <span class="tag is-link is-light">storage</span> with
+                      essential features like <strong>auth</strong> and
+                      <strong>custom logic</strong>, plus an
+                      <span class="tag is-link is-light">admin panel</span>.
+                    </p>
+                  </div>
+                  <div class="card-content-bottom">
+                    <div class="mb-4">
+                      <ng-container *ngFor="let feature of featuresA">
+                        <span class="icon-text is-fullwidth is-size-7">
+                          <span class="icon">
+                            <i class="fas fa-check has-text-success"></i>
+                          </span>
+                          <span>{{ feature }}</span>
+                        </span>
+                      </ng-container>
+                    </div>
+                    <p class="mb-2">
+                      <a
+                        href="https://manifest.build/docs"
+                        target="_blank"
+                        class="button is-dark is-very-small"
+                      >
+                        <span class="icon">
+                          <i class="lni lni-arrow-right"></i>
+                        </span>
+                        <span>Get started</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-7 is-offset-1">
+              <div
+                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center p-0"
+              >
+                <div class="image-stack-container" (click)="swapImages()">
+                  <img
+                    *ngFor="let img of orderedImages"
+                    [src]="img.src"
+                    [ngClass]="[img.class, 'image-stack']"
+                    alt="admin image"
+                    draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card is-fullheight is-radius is-shadowless p-64">
+        <div class="card-content">
+          <div class="columns is-multiline mb-0">
+            <div class="column is-4">
+              <div class="content is-normal is-fullheight">
+                <div
+                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+                >
+                  <div class="card-content-top">
+                    <h2 class="title is-4">
+                      A backend that your LLM will love
+                    </h2>
+                    <p>
+                      LLMs and vibe-coding tools are great when generating
+                      front-end code but struggle when it comes to backend
+                      logic. Manifest is the missing piece.
+                    </p>
+                  </div>
+                  <div class="card-content-bottom">
+                    <div class="mb-4">
+                      <ng-container *ngFor="let feature of featuresB">
+                        <span class="icon-text is-fullwidth is-size-7">
+                          <span class="icon">
+                            <i class="fas fa-check has-text-success"></i>
+                          </span>
+                          <span>{{ feature }}</span>
+                        </span>
+                      </ng-container>
+                    </div>
+                    <p class="mb-2">
+                      <a
+                        href="https://manifest.build/docs"
+                        target="_blank"
+                        class="button is-dark is-very-small"
+                      >
+                        <span class="icon">
+                          <i class="fa fa-play"></i>
+                        </span>
+                        <span>Get started</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-7 is-offset-1">
+              <div
+                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0"
+              >
+                <div class="stack-grid-container">
+                  <div class="stack-grid-row">
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-windsurf.svg"
+                        title="Svelte logo"
+                        alt="Svelte"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-cursor.svg"
+                        title="Vue logo"
+                        alt="Vue"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-copilot.svg"
+                        title="Preact logo"
+                        alt="Preact"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-z.svg"
+                        title="Zed logo"
+                        alt="Zed"
+                      />
+                    </div>
+                  </div>
+                  <div class="stack-grid-row">
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-jetbrain.svg"
+                        title="Jetbrains AI logo"
+                        alt="Jetbrains AI"
+                      />
+                    </div>
+
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-trae.svg"
+                        title="Trae logo"
+                        alt="Trae"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-vsc.svg"
+                        title="vsc logo"
+                        alt="vscode"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-continue.svg"
+                        title="Continue logo"
+                        alt="Continue"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-deepseek.svg"
+                        title="Deepseek logo"
+                        alt="Deepseek"
+                      />
+                    </div>
+
+                    <div class="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-openai.svg"
+                        title="chatGPT logo"
+                        alt="chatGPT"
+                      />
+                    </div>
+                    <div class="stack-grid-item is-hidden-desktop">
+                      <img
+                        src="./assets/images/stack/logo-openai.svg"
+                        title="Chat GPT logo"
+                        alt="Chat GPT"
+                      />
+                    </div>
+                  </div>
+                  <div class="stack-grid-row">
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-claude.svg"
+                        title="claude logo"
+                        alt="Claude code"
+                      />
+                    </div>
+
+                    <div
+                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-replit.svg"
+                        title="replit logo"
+                        alt="replit"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-bolt.svg"
+                        title="bolt logo"
+                        alt="bolt"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-lovable.svg"
+                        title="lovable logo"
+                        alt="lovable"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="content">
+        <h2 class="title is-3 mt-6">Features</h2>
+      </div>
+      <div class="columns is-multiline">
+        <div class="column is-5">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Instant CRUD</h3>
+                  <p>
+                    Instantly create, read, update, and delete data with
+                    Manifest.
+                  </p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>15+ real world data types</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>REST API or JS SDK</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Multiple databases</h3>
+                  <p>Choose the database that fits your needs.</p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>PostgreSQL</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>MySQL / MariaDB</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>SQLite</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-3">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Custom endpoints</h3>
+                  <p>Add your own logic with custom endpoints and webhooks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Simplified auth</h3>
+                  <p>
+                    Turning any entity into an authenticated user is as simple
+                    as adding a <code>authenticable: true</code> line to your
+                    backend file.
+                  </p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>Role Based Access Control (RBAC)</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>Ownership-based access control</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>CRUD policies</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Admin panel</h3>
+                  <p>Built-in non-technical admin panel to manage your data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Storage</h3>
+                  <p>Upload any kind of file to your backend storage.</p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>Image resize</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>S3 compatibility</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full has-background-white">
+      <div class="container py-7">
+        <h3 class="title is-3 mb-6 has-text-centered">
+          Loved by developers 🤩
+        </h3>
+
+        <div class="masonry has-milkyway">
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://news.ycombinator.com/item?id=40545925"
+                  >
+                    &#64;alextheterrible
+                  </a>
+                  <a
+                    href="https://news.ycombinator.com/item?id=40545925"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/yc.svg"
+                      width="24"
+                      height="24"
+                      alt="on Hackernews"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  Nice. I'll be watching this. Buddy and I are currently
+                  building an app on Pocketbase and are thoroughly enjoying it.
+                  I like your idea of starting from a config file rather than a
+                  UI.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
+                  >
+                    &#64;permarad
+                  </a>
+                  <a
+                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/reddit.svg"
+                      width="24"
+                      height="24"
+                      alt="on Reddit"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  kudos, this is very cool. i thought pocketbase was simple.
+                  this is very very simple. I love simple.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://discord.com/channels/457912077277855764/1293155391513034802"
+                  >
+                    &#64;Revan
+                  </a>
+                  <a
+                    href="https://discord.com/channels/457912077277855764/1293155391513034802"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/discord.svg"
+                      width="24"
+                      height="24"
+                      alt="on Discord"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  Wow I've never heard of manifest before now, it looks
+                  fascinating
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://news.ycombinator.com/item?id=40549087"
+                  >
+                    &#64;dhuan_
+                  </a>
+                  <a
+                    href="https://news.ycombinator.com/item?id=40549087"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/yc.svg"
+                      width="24"
+                      height="24"
+                      alt="on Hackernews"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  Hey very useful app, I'll be watching this. I once wanted to
+                  set up backend apps during automated CI jobs in order to
+                  facilitate e2e tests and ended up making a utility kind of
+                  similar - but yours truly goes beyond.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                  >
+                    &#64;huevoverde
+                  </a>
+                  <a
+                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/reddit.svg"
+                      width="24"
+                      height="24"
+                      alt="on Reddit"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  It works! I like this a lot. I've been leaning into Pocketbase
+                  because it is easy and fairly complete with what I need. This
+                  is easier and more complete. Are you modeling this after
+                  something that exists already?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://news.ycombinator.com/item?id=40545873"
+                  >
+                    &#64;chrsig
+                  </a>
+                  <a
+                    href="https://news.ycombinator.com/item?id=40545873"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/yc.svg"
+                      width="24"
+                      height="24"
+                      alt="on Hackernews"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  I really appreciate the simplicity of the DSL presented. I'm
+                  curious how you see the project evolving as you add those
+                  things. How do you see it differentiating itself from rails or
+                  django?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
+                  >
+                    &#64;LatoReset
+                  </a>
+                  <a
+                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/discord.svg"
+                      width="24"
+                      height="24"
+                      alt="on Discord"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  i was trying manifest today and work fine, is very simple, i
+                  would use in a project without doubt.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
+                  >
+                    &#64;Coquet
+                  </a>
+                  <a
+                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/discord.svg"
+                      width="24"
+                      height="24"
+                      alt="on Hackernews"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>I love it so far. The simplicity is awesome.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
+                  >
+                    &#64;Ranti
+                  </a>
+                  <a
+                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/discord.svg"
+                      width="24"
+                      height="24"
+                      alt="on Hackernews"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  Hello! Just started trying out Manifest for a personal React
+                  project. Love the idea!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                  >
+                    &#64;A_Norse_Dude
+                  </a>
+                  <a
+                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/reddit.svg"
+                      width="24"
+                      height="24"
+                      alt="on Reddit"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  This seems nice! I will def. follow this, and jump on the
+                  bandwagon then you are out of beta 😎
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
+                >
+                  <a
+                    class="has-text-dark"
+                    target="_blank"
+                    href="https://news.ycombinator.com/item?id=40551318"
+                  >
+                    &#64;kiwicopple
+                  </a>
+                  <a
+                    href="https://news.ycombinator.com/item?id=40551318"
+                    target="_blank"
+                    class="ghost"
+                  >
+                    <img
+                      src="./assets/images/yc.svg"
+                      width="24"
+                      height="24"
+                      alt="on Hackernews"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <p>
+                  Congrats on shipping, this looks nice and well thought-out.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div
+                class="card has-border-gradient card--community is-shadowless"
+              >
+                <div class="card-content py-7">
+                  <div class="content is-normal">
+                    <div class="columns">
+                      <div class="column is-9">
+                        <h2>Join Manifest community</h2>
+                        <p>You are enthusiast about Manifest ? So are we !</p>
+                        <p>
+                          Join our growing community to give your feedback,
+                          suggest features and share some love.
+                        </p>
+                        <div class="buttons mt-5">
+                          <a
+                            class="button is-white is-small"
+                            href="https://discord.gg/FepAked3W7"
+                            target="_blank"
+                          >
+                            <span class="icon has-text-link">
+                              <i class="fa-brands fa-discord"></i>
+                            </span>
+                            <span>Join the community on Discord</span>
+                          </a>
+                          <a
+                            class="button is-white is-small"
+                            href="https://github.com/mnfst/manifest"
+                            target="_blank"
+                          >
+                            <span class="icon">
+                              <i class="fa fa-star has-text-warning"></i>
+                            </span>
+                            <span>Star us on Github</span>
+                          </a>
+                          <a
+                            class="button is-white is-small"
+                            href="https://github.com/sponsors/mnfst"
+                            target="_blank"
+                          >
+                            <span class="icon has-text-info">
+                              <i class="fa-regular fa-heart"></i>
+                            </span>
+                            <span>Sponsor Manifest</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid has-background-white">
+      <div class="container pb-6">
+        <div class="columns">
+          <div class="column is-12" id="cta-cloud">
+            <div
+              class="card has-border-gradient card--getnotified is-shadowless mt-6"
+            >
+              <div class="card-content py-7 has-text-white">
+                <div class="content is-normal">
+                  <div class="columns">
+                    <div
+                      class="column is-6 is-offset-3 has-text-centered is-align-items-center is-flex is-flex-wrap-wrap is-justify-content-center"
+                    >
+                      <img
+                        src="./assets/images/logo-manifest-cloud-light.svg"
+                        alt="Manifest Cloud logo"
+                        width="222"
+                      />
+                      <h2 class="has-text-white mt-4">
+                        Deploy your backend in 1-click
+                      </h2>
+                      <p>
+                        Join the waitlist now to be the first to discover
+                        <b class="has-text-white">Manifest Cloud</b>.
+                      </p>
+                      <div class="small-control">
+                        <app-waiting-list-form></app-waiting-list-form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-multiline has-text-centered">
+          <div class="column is-8 is-offset-2 content">
+            <h2 class="mt-4">
+              Manifest is a free and open-source project, proudly supported by
+              amazing partners ❤️.
+            </h2>
+          </div>
+          <div class="column is-12">
+            <div
+              class="partner-list is-flex is-align-items-center is-justify-content-center mt-4 is-flex-wrap-wrap"
+            >
+              <a
+                href="https://www.lambdatest.com/"
+                target="_blank"
+                class="partner-item is-flex is-align-items-center is-justify-content-center"
+              >
+                <img
+                  src="./assets/images/logo-lambdatest.svg"
+                  alt="lambdatest logo"
+                  width="130px"
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.kreezalid.com/"
+                class="partner-item is-flex is-align-items-center is-justify-content-center"
+              >
+                <img
+                  src="./assets/images/kreezalid-logo.png"
+                  alt="Feature logo"
+                  width="130px"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
