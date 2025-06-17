@@ -20,7 +20,7 @@
   },
   "workspaces": [
     "client",
-    "server"
+    "docs"
   ],
   "packageManager": "npm@10.7.0"
 }
