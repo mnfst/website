@@ -1,5 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
+import { Component, OnInit } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
 import { FooterComponent } from './common/partials/footer/footer.component'
 import { HeaderComponent } from './common/partials/header/header.component'
@@ -13,14 +12,9 @@ import { SeoService } from './common/services/seo.service'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private seoService: SeoService,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  constructor(private seoService: SeoService) {}
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.seoService.init()
-    }
+    this.seoService.init()
   }
 }
