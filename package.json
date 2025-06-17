@@ -1,33 +1,26 @@
 {
-  "name": "website",
-  "version": "0.1.0",
-  "private": true,
+  "name": "manifest-platform",
+  "version": "0.0.1",
+  "description": "Manifest platform",
   "scripts": {
-    "dev": "next dev",
-    "build": "npm run build-docs && next build",
-    "build-docs": "cd docs && npm install && npm run build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "turbo run dev",
+    "build": "turbo run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnfst/platform.git"
+  },
+  "author": "Manifest",
+  "bugs": {
+    "url": "https://github.com/mnfst/platform/issues"
+  },
+  "homepage": "https://github.com/mnfst/platform#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.1",
-    "@next/third-parties": "^15.1.5",
-    "@stackblitz/sdk": "^1.11.0",
-    "@vercel/analytics": "^1.4.1",
-    "bulma": "^1.0.1",
-    "lineicons": "^1.0.3",
-    "next": "15.1.5",
-    "posthog-js": "^1.207.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-syntax-highlighter": "^15.6.1",
-    "sass": "^1.77.2"
+    "turbo": "^2.4.4"
   },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/react-syntax-highlighter": "^15.5.13",
-    "typescript": "^5"
-  }
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "packageManager": "npm@10.7.0"
 }

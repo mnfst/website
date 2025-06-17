@@ -1,0 +1,65 @@
+<div class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <a
+          [routerLink]="['/integrations']"
+          class="content is-small mb-6 icon-text is-flex is-align-items-center is-justify-flex-start"
+        >
+          <i class="lni lni-arrow-left is-size-6"></i>
+          <span class="has-text-decoration-none"> Back to Integrations </span>
+        </a>
+      </div>
+      <div class="column is-8 is-offset-2" *ngIf="integration">
+        <div class="columns is-multiline">
+          <div class="column is-12">
+            <div class="content">
+              <h1 class="title is-1 has-text-centered mb-6">
+                {{ integration.title }}
+              </h1>
+              <div class="card is-shadowless is-bordered">
+                <figure class="image">
+                  <img
+                    [src]="integration.cover"
+                    alt="{{ integration.title }}"
+                    class="image"
+                  />
+                </figure>
+              </div>
+              <div>
+                <div [innerHTML]="integration.htmlContent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12 content">
+            <h2 class="mt-4 mb-0">Related resources</h2>
+          </div>
+          <a
+            *ngFor="let resource of integration.relatedResources; let i = index"
+            [href]="resource.link"
+            class="column is-fullheight ghost"
+            target="_blank"
+            [ngClass]="{
+              'is-12':
+                i === integration.relatedResources.length - 1 &&
+                integration.relatedResources.length % 2 === 1
+            }"
+          >
+            <div class="card is-fullheight is-shadowless is-bordered">
+              <div class="card-content is-fullheight">
+                <span class="icon-text has-text-link">
+                  <span class="icon">
+                    <i class="lni lni-arrow-right"></i>
+                  </span>
+                  <span>
+                    {{ resource.anchor }}
+                  </span>
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

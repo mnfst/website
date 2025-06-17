@@ -1,0 +1,39 @@
+<div class="container-fluid mt-6 pt-4 mb-6">
+  <div class="container zi-1">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h2 class="title is-2">FAQ</h2>
+
+          <div
+            *ngFor="let faqItem of faqItems; let index = index"
+            class="card is-shadowless faq-item mb-4 has-background-white"
+          >
+            <a
+              (click)="toggleFaq(index)"
+              class="faq-question has-text-dark is-flex is-justify-content-space-between is-align-items-center"
+            >
+              <h4 class="mb-0">{{ faqItem.question }}</h4>
+              <i
+                class="lni"
+                [ngClass]="{
+                  'lni-chevron-up': selectedFaqIndex === index,
+                  'lni-chevron-down': selectedFaqIndex !== index
+                }"
+              ></i>
+            </a>
+            <div
+              class="faq-answer"
+              [ngClass]="{
+                visible: selectedFaqIndex === index,
+                hidden: selectedFaqIndex !== index
+              }"
+            >
+              <p>{{ faqItem.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

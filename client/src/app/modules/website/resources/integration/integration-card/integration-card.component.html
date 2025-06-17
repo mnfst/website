@@ -1,0 +1,22 @@
+<a [routerLink]="['/integrations', integration.slug]">
+  <div class="card is-fullheight is-shadowless card--integration">
+    <div class="card-content">
+      <div
+        class="is-flex is-align-items-flex-start is-justify-content-space-between mb-4"
+      >
+        <figure class="image is-64x64">
+          <img
+            [src]="integration.logo"
+            alt="{{ integration.title }}"
+            class="image"
+            width="64"
+            height="64"
+          />
+        </figure>
+        <i class="lni lni-arrow-right is-size-5"></i>
+      </div>
+      <h3 class="title is-5 mb-2">{{ integration.name }}</h3>
+      <p class="content">{{ integration.excerpt }}</p>
+    </div>
+  </div>
+</a>

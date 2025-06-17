@@ -13,22 +13,14 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs'
 const sidebars: SidebarsConfig = {
   docSidebar: [
     {
-      type: 'category',
-      label: '🏁 Getting started',
-      items: [
-        {
-          type: 'doc',
-          id: 'introduction'
-        },
-        {
-          type: 'doc',
-          id: 'install'
-        }
-      ]
+      type: 'doc',
+      id: 'get-started'
     },
     {
       type: 'category',
-      label: '📦 Your data',
+      label: 'Data',
+      collapsed: false,
+      collapsible: false,
       items: [
         {
           type: 'doc',
@@ -36,11 +28,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'properties'
+          id: 'crud'
         },
         {
           type: 'doc',
-          id: 'relations'
+          id: 'access'
         },
         {
           type: 'doc',
@@ -50,7 +42,9 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🔒 Auth and Access Control',
+      label: 'Logic',
+      collapsed: false,
+      collapsible: false,
       items: [
         {
           type: 'doc',
@@ -58,71 +52,55 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'policies'
-        }
-      ]
-    },
-    {
-      type: 'category',
-      label: '🧩 Logic',
-      items: [
-        {
-          type: 'doc',
           id: 'endpoints'
         },
         {
           type: 'doc',
           id: 'webhooks'
+        },
+        {
+          type: 'doc',
+          id: 'middlewares'
         }
       ]
     },
     {
       type: 'category',
-      label: '🔌 Connect to your backend',
+      label: 'Storage',
+      collapsed: false,
+      collapsible: false,
       items: [
-        {
-          type: 'doc',
-          id: 'javascript-sdk'
-        },
-        {
-          type: 'doc',
-          id: 'rest-api'
-        },
         {
           type: 'doc',
           id: 'upload'
+        },
+        {
+          type: 'doc',
+          id: 's3-storage'
         }
       ]
     },
+
     {
       type: 'category',
-      label: '🚀 Deploy',
+      label: 'Self hosting',
+      collapsed: false,
+      collapsible: false,
       items: [
         {
           type: 'doc',
-          id: 'deploy'
+          id: 'config'
         },
         {
           type: 'doc',
-          id: 'deploy-digital-ocean'
-        },
-        {
-          type: 'doc',
-          id: 'deploy-fly-io'
-        },
-        {
-          type: 'doc',
-          id: 'deploy-render-com'
-        },
-        {
-          type: 'doc',
-          id: 'deploy-heroku'
+          id: 'deploy',
+          label: 'Deploy'
         }
       ]
     },
     {
       type: 'category',
-      label: '🎓 Quick starts',
+      label: 'Guides',
       items: [
         {
           type: 'doc',
