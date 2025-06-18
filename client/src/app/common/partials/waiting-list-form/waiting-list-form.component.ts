@@ -32,7 +32,7 @@ export class WaitingListFormComponent {
     }
     firstValueFrom(
       this.http.post(
-        `${environment.websiteApiUrl}/api/collections/waiting-list`,
+        `${environment.websiteApiUrl}/api/collections/waiting-users`,
         this.form.value
       )
     )
