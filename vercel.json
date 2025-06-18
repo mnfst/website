@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/docs/(.*)",
-      "destination": "/docs/$1"
+      "destination": "https://website-docs-ten.vercel.app/$1"
     }
   ]
 }
