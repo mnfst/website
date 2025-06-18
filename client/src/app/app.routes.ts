@@ -16,11 +16,11 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       seo: {
-        title: 'Manifest - The 1-file Micro-Backend',
+        title: 'Manifest - The backend for AI code editors',
         description:
-          'Instant Micro-Backend with Admin Panel, REST API, Auth, Storage and more. All in one YAML file.',
+          'A backend made for AI-powered coding with auth, storage, logic and all the essentials',
         keywords:
-          'backend, micro-backend, manifest, admin panel, rest api, auth, storage',
+          'backend, micro-backend, AI-powered editor, backend for LLMs, AI coding tools backend, backend for vibe coding, backend for modern workflows, manifest, admin panel, rest api, auth, storage',
         canonicalUrl: environment.baseUrl,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
