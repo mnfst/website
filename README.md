@@ -1,6 +1,6 @@
 # Manifest Website
 
-This repository contains the Manifest platform which will include the different web items of Manifest like the website.
+This repository contains the Manifest platform which will include the different web items of Manifest like the website and the logic part of the Doc (not the content).
 
 ## Install
 

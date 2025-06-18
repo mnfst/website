@@ -1,5 +1,4 @@
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
+import { Injectable } from '@angular/core'
 import { Meta, Title } from '@angular/platform-browser'
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router'
 import { filter, map, mergeMap } from 'rxjs/operators'
@@ -12,8 +11,7 @@ export class SeoService {
     private meta: Meta,
     private title: Title,
     private router: Router,
-    private activatedRoute: ActivatedRoute,
-    @Inject(PLATFORM_ID) private platformId: Object
+    private activatedRoute: ActivatedRoute
   ) {}
 
   /**
@@ -62,21 +60,7 @@ export class SeoService {
    * @param url - The canonical URL (optional - uses current URL if not specified)
    */
   setCanonicalUrl(url?: string) {
-    if (!isPlatformBrowser(this.platformId)) {
-      return // Skip DOM manipulation during SSR
-    }
-
-    const canonicalUrl = url || this.router.url
-    const link: HTMLLinkElement = document.createElement('link')
-    link.setAttribute('rel', 'canonical')
-    link.setAttribute('href', canonicalUrl)
-
-    const existingLink = document.querySelector('link[rel="canonical"]')
-    if (existingLink) {
-      existingLink.remove()
-    }
-
-    document.head.appendChild(link)
+    this.meta.updateTag({ rel: 'canonical', href: url }, 'rel="canonical"')
   }
 
   /**
