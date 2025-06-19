@@ -966,7 +966,12 @@ body {
 }
 
 .p-64 {
-  padding: 64px;
+  @include mixins.touch {
+    padding: 0;
+  }
+  @include mixins.desktop {
+    padding: 64px;
+  }
 }
 
 .navbar.has-background-transparent {
@@ -2017,15 +2022,15 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
 }
 
 .stack-grid-row:nth-child(1) {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.stack-grid-row:nth-child(2) {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.stack-grid-row:nth-child(3) {
+.stack-grid-row:nth-child(2) {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.stack-grid-row:nth-child(3) {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .stack-grid-item {
@@ -2049,13 +2054,9 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
   display: block;
 }
 
-@include mixins.touch {
+@include mixins.mobile {
   .stack-grid-row:nth-child(1),
   .stack-grid-row:nth-child(3) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .stack-grid-row:nth-child(2) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -2772,7 +2773,10 @@ html.is-sticky {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   @include mixins.mobile {
     border-radius: 5px;
-    width: 66%;
+    left: -12px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
   @include mixins.tablet {
     width: 64%;
@@ -2790,7 +2794,10 @@ html.is-sticky {
 
   @include mixins.mobile {
     border-radius: 5px;
-    width: 42%;
+    position: absolute;
+    right: -24px;
+    left: unset;
+    width: 55%;
   }
   @include mixins.tablet {
     width: 40%;
