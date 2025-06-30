@@ -52,7 +52,7 @@ In this tutorial, we will show you how to configure Amazon S3 as the storage pro
 <p>Execute the following command in your terminal from the root of your project:</p>
 <pre><code class="lang-bash">npx <span class="hljs-keyword">add</span><span class="bash">-manifest@latest</span>
 </code></pre>
-<p>This will generate a manifest/backend.yml file and install the necessary dependencies.</p>
+<p>This will generate a manifest.yml file and install the necessary dependencies.</p>
 <h3 id="2-run-manifest">2. Run Manifest</h3>
 <p>After that, launch the backend locally:</p>
 <pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> manifest</span>
@@ -259,7 +259,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <p>Run the following command in your terminal from the root of your project:</p>
 <pre><code class="lang-bash">npx <span class="hljs-keyword">add</span><span class="bash">-manifest@latest</span>
 </code></pre>
-<p>This will generate a manifest/backend.yml file and install the necessary dependencies.</p>
+<p>This will generate a manifest.yml file and install the necessary dependencies.</p>
 <h3 id="2-run-manifest">2. Run Manifest</h3>
 <p>Before setting up for production, let’s first see how our backend behaves locally. To do that, run:</p>
 <pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> manifest</span>
@@ -349,7 +349,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <p>From the root of your project, run the following command in your terminal:</p>
 <pre><code class="lang-bash">npx <span class="hljs-keyword">add</span><span class="bash">-manifest@latest</span>
 </code></pre>
-<p>This will generate a <code>backend.yml</code> file and install all the necessary dependencies.</p>
+<p>This will generate a <code>manifest.yml</code> file and install all the necessary dependencies.</p>
 <h3 id="2-run-manifest">2. Run Manifest</h3>
 <p>After that, you can launch the backend locally:</p>
 <pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> manifest</span>
@@ -471,9 +471,9 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <p>Run the following command in your terminal from the root of your project:</p>
 <pre><code class="lang-bash">npx <span class="hljs-keyword">add</span><span class="bash">-manifest@latest</span>
 </code></pre>
-<p>This will generate a manifest/backend.yml file and install the necessary dependencies.</p>
+<p>This will generate a manifest.yml file and install the necessary dependencies.</p>
 <h3 id="2-run-manifest">2. Run Manifest</h3>
-<p>Before setting up for production, let’s first see how our backend behaves locally. To do that, run:</p>
+<p>Before setting up for production, let's first see how our backend behaves locally. To do that, run:</p>
 <pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> manifest</span>
 </code></pre>
 <p>Once running, you can access the Admin panel at <a href="http://localhost:1111">http://localhost:1111</a> (admin@manifest.build / admin) and use the REST API at <a href="http://localhost:1111/api">http://localhost:1111/api</a>.</p>
@@ -558,9 +558,9 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <p>Run the following command in your terminal from the root of your project:</p>
 <pre><code class="lang-bash">npx <span class="hljs-keyword">add</span><span class="bash">-manifest@latest</span>
 </code></pre>
-<p>This will generate a manifest/backend.yml file and install the necessary dependencies.</p>
+<p>This will generate a manifest.yml file and install the necessary dependencies.</p>
 <h3 id="2-run-manifest">2. Run Manifest</h3>
-<p>Before setting up for production, let’s first see how our backend behaves locally. To do that, run:</p>
+<p>Before setting up for production, let's first see how our backend behaves locally. To do that, run:</p>
 <pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> manifest</span>
 </code></pre>
 <p>Once running, you can access the Admin panel at <a href="http://localhost:1111">http://localhost:1111</a> (admin@manifest.build / admin) and use the REST API at <a href="http://localhost:1111/api">http://localhost:1111/api</a>.</p>
@@ -652,9 +652,9 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <p>Run the following command in your terminal from the root of your project:</p>
 <pre><code class="lang-bash">npx <span class="hljs-keyword">add</span><span class="bash">-manifest@latest</span>
 </code></pre>
-<p>This will generate a manifest/backend.yml file and install the necessary dependencies.</p>
+<p>This will generate a manifest.yml file and install the necessary dependencies.</p>
 <h3 id="2-run-manifest">2. Run Manifest</h3>
-<p>Before setting up for production, let’s first see how our backend behaves locally. To do that, run:</p>
+<p>Before setting up for production, let's first see how our backend behaves locally. To do that, run:</p>
 <pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> manifest</span>
 </code></pre>
 <p>Once running, you can access the Admin panel at <a href="http://localhost:1111">http://localhost:1111</a> (admin@manifest.build / admin) and use the REST API at <a href="http://localhost:1111/api">http://localhost:1111/api</a>.</p>
