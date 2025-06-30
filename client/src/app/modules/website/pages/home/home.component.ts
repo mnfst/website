@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   featuresA = ['Easy to validate', 'Secure by default', 'Ship insanely fast']
   featuresB = [
     'Integrated: No need for third-party service',
-    'Minimal token usage',
-    'OpenAPI documentation'
+    'OpenAPI doc and types generation',
+    'Minimal token usage'
   ]
   featuresC = [
     'Zero-config',
