@@ -9,6 +9,7 @@ import { PrivacyPolicyComponent } from './modules/website/pages/privacy-policy/p
 import { SponsorComponent } from './modules/website/pages/sponsor/sponsor.component'
 import { IntegrationDetailComponent } from './modules/website/resources/integration/integration-detail/integration-detail.component'
 import { IntegrationListComponent } from './modules/website/resources/integration/integration-list/integration-list.component'
+import { integrations } from './modules/website/resources/integration/integrations.content'
 
 export const routes: Routes = [
   {
@@ -97,10 +98,23 @@ export const routes: Routes = [
       }
     }
   },
-  {
-    path: 'integrations/:slug',
-    component: IntegrationDetailComponent
-  },
+  ...integrations.map((integration) => ({
+    path: `integrations/${integration.slug}`,
+    component: IntegrationDetailComponent,
+    data: {
+      integration,
+      seo: {
+        title: `${integration.title} - Manifest`,
+        description: integration.excerpt,
+        keywords: `${integration.title}, manifest, integration`,
+        canonicalUrl: `${environment.baseUrl}/integrations/${integration.slug}`,
+        og: {
+          image: `${environment.baseUrl}${integration.cover}`,
+          type: 'website'
+        }
+      }
+    }
+  })),
   {
     path: 'sponsors',
     component: SponsorComponent,

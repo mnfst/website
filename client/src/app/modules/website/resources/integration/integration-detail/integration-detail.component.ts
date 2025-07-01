@@ -1,10 +1,7 @@
 import { CommonModule, NgFor, NgIf } from '@angular/common'
 import { Component } from '@angular/core'
 import { ActivatedRoute, Router, RouterLink } from '@angular/router'
-import { environment } from '../../../../../../environments/environment'
-import { SeoService } from '../../../../../common/services/seo.service'
 import { Integration } from '../../../../../types/integration.interface'
-import { integrations } from '../integrations.content'
 
 @Component({
   selector: 'app-integration-detail',
@@ -14,31 +11,14 @@ import { integrations } from '../integrations.content'
 })
 export class IntegrationDetailComponent {
   integration: Integration | undefined
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private seoService: SeoService
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      const slug = params['slug']
-      this.integration = integrations.find((i) => i.slug === slug)
-
+    this.activatedRoute.data.subscribe((data) => {
+      this.integration = data['integration']
       if (!this.integration) {
         this.router.navigate(['/404'])
       }
-
-      this.seoService.updateMetadata({
-        title: `${this.integration.title} - Manifest`,
-        description: this.integration.excerpt,
-        keywords: `${this.integration.title}, manifest, integration`,
-        canonicalUrl: `${environment.baseUrl}/integrations/${this.integration.slug}`,
-        og: {
-          image: `${environment.baseUrl}${this.integration.cover}`,
-          type: 'website'
-        }
-      })
     })
   }
 }
