@@ -145,8 +145,9 @@ export const routes: Routes = [
     data: {
       seo: {
         title: 'FAQ - Manifest',
-        description: 'Frequently asked questions about Manifest',
-        keywords: 'brand assets, logos, manifest',
+        description:
+          'Frequently asked questions about Manifest (FAQ). Manifest is a backend made for AI-powered coding with auth, storage, logic and all the essentials.',
+        keywords: 'faq, frequently asked questions, manifest',
         canonicalUrl: `${environment.baseUrl}/faq`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,

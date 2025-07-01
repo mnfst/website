@@ -202,7 +202,7 @@ Once the user is created:</p>
 </code></pre>
 <p>Or inline code like <code>var foo = &#39;bar&#39;;</code>.</p>
 <p>Or an image of bears</p>
-<p><img src="http://placebear.com/200/200" alt="bears"></p>
+<p><img src="https://placebear.com/200/200" alt="bears"></p>
 <p>The end ...</p>
 
     `
@@ -286,7 +286,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <li><strong>Region (optional):</strong> Choose the closest region to your users</li>
 <li><strong>Build command</strong>: Enter <code>npm install</code></li>
 <li><strong>Start command</strong>: The value should be <code>node node_modules/manifest/dist/manifest/src/main.js</code></li>
-<li><strong>Environment variables</strong>: Add the 2 environment variables: <code>TOKEN_SECRET_KEY</code> (which you can generate at <a href="https://jwtsecret.com/generate">https://jwtsecret.com/generate</a>) and <code>NODE_ENV=production</code>.</li>
+<li><strong>Environment variables</strong>: Add the 2 environment variables: <code>TOKEN_SECRET_KEY</code> (which you can generate at <a href="https://jwtsecrets.com">https://jwtsecrets.com</a>) and <code>NODE_ENV=production</code>.</li>
 </ul>
 <p>Click on &quot;<strong>Deploy web service</strong>&quot; to launch the deployment.</p>
 <p>🎉 That&#39;s it! Your app should be available in a few minutes at the domain ending in on render.com.</p>
@@ -498,7 +498,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <li><strong>Region (optional):</strong> Choose the region closest to where your audience is</li>
 <li><strong>Network</strong>: Set the internal port to <code>1111</code> to match the default Manifest port.</li>
 <li><strong>CPU &amp; Memory (optional)</strong>: Manifest can run on the <strong>1 CPU</strong> and <strong>512 MB</strong> VM Memory on small/medium projects. The default size is a bit bigger, you can replace it by a smaller one if you want.</li>
-<li><strong>Secrets</strong>: Add the 2 secrets: <code>TOKEN_SECRET_KEY</code> (which you can generate at <a href="https://jwtsecret.com/generate">JWTSecret.com</a>) and <code>NODE_ENV=production</code>.</li>
+<li><strong>Secrets</strong>: Add the 2 secrets: <code>TOKEN_SECRET_KEY</code> (which you can generate at <a href="https://jwtsecrets.com">JWTSecret.com</a>) and <code>NODE_ENV=production</code>.</li>
 </ul>
 <p>Validate the config and Fly.io will build the image and deploy.</p>
 <p>🎉 That&#39;s it! Click on <code>View app</code> to see it.</p>
@@ -591,7 +591,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 </ul>
 <p>Then you can click on &quot;<strong>Next</strong>&quot;.</p>
 <h3 id="set-environment-variables">Set environment variables</h3>
-<p>Click on your app name&#39;s &quot;<strong>Edit</strong>&quot; button and add the 2 environment variables: <code>TOKEN_SECRET_KEY</code> (you can generate one with <a href="https://jwtsecret.com/generate">JWTSecret.com</a>) and <code>NODE_ENV=production</code>.</p>
+<p>Click on your app name&#39;s &quot;<strong>Edit</strong>&quot; button and add the 2 environment variables: <code>TOKEN_SECRET_KEY</code> (you can generate one with <a href="https://jwtsecrets.com">JWTSecret.com</a>) and <code>NODE_ENV=production</code>.</p>
 <p><img src="/assets/images/integrations/content/do3.png" alt="DigitalOcean environment variable settings"></p>
 <h2 id="deploy">Deploy</h2>
 <p>The last step lets you choose your app name and region where you should select the location that is closest to your users. After the recap you are good to go. Click on <strong>Create resources</strong> to launch the build.</p>
@@ -679,7 +679,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <p>A message will indicate that your app is ready, and a link to view it will appear. However, we still have some configuration to make it work.</p>
 </blockquote>
 <h3 id="2-add-environment-variables">2. Add environment variables</h3>
-<p>Go to the <code>Settings</code> tab and click on &quot;Reveal Config Vars&quot; in the &quot;Config Vars&quot; section. Then add the 2 environment variables: <code>TOKEN_SECRET_KEY</code> (which you can generate at <a href="https://jwtsecret.com/generate">https://jwtsecret.com/generate</a>) and <code>NODE_ENV=production</code>.</p>
+<p>Go to the <code>Settings</code> tab and click on &quot;Reveal Config Vars&quot; in the &quot;Config Vars&quot; section. Then add the 2 environment variables: <code>TOKEN_SECRET_KEY</code> (which you can generate at <a href="https://jwtsecrets.com">https://jwtsecrets.com</a>) and <code>NODE_ENV=production</code>.</p>
 <p>🎉 That&#39;s it! Now you can click on <code>Open app</code> to see it!</p>
 `
   }
