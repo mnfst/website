@@ -25,7 +25,8 @@ export const routes: Routes = [
         canonicalUrl: environment.baseUrl,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: environment.baseUrl
         }
       }
     }
@@ -42,7 +43,8 @@ export const routes: Routes = [
         canonicalUrl: `${environment.baseUrl}/brand-assets`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/brand-assets`
         }
       }
     }
@@ -58,7 +60,8 @@ export const routes: Routes = [
         canonicalUrl: `${environment.baseUrl}/partnerships`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/partnerships`
         }
       }
     }
@@ -72,10 +75,11 @@ export const routes: Routes = [
         description:
           'Read our Privacy Policy to understand how we collect, use, and protect your data on Manifest.',
         keywords: 'privacy policy, manifest, data handling',
-        canonicalUrl: `${environment.baseUrl}/privacy-policy`,
+        canonicalUrl: `${environment.baseUrl}/privacy`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/privacy`
         }
       }
     }
@@ -93,7 +97,8 @@ export const routes: Routes = [
         canonicalUrl: `${environment.baseUrl}/integrations`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/integrations`
         }
       }
     }
@@ -110,7 +115,8 @@ export const routes: Routes = [
         canonicalUrl: `${environment.baseUrl}/integrations/${integration.slug}`,
         og: {
           image: `${environment.baseUrl}${integration.cover}`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/integrations/${integration.slug}`
         }
       }
     }
@@ -127,23 +133,8 @@ export const routes: Routes = [
         canonicalUrl: `${environment.baseUrl}/sponsors`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
-        }
-      }
-    }
-  },
-  {
-    path: '404',
-    component: Error404Component,
-    data: {
-      seo: {
-        title: '404 Page Not Found - Manifest',
-        description: 'The page you are looking for does not exist.',
-        keywords: '404, page not found, manifest',
-        canonicalUrl: `${environment.baseUrl}/404`,
-        og: {
-          image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/sponsors`
         }
       }
     }
@@ -159,7 +150,25 @@ export const routes: Routes = [
         canonicalUrl: `${environment.baseUrl}/faq`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
-          type: 'website'
+          type: 'website',
+          url: `${environment.baseUrl}/faq`
+        }
+      }
+    }
+  },
+  {
+    path: '404',
+    component: Error404Component,
+    data: {
+      seo: {
+        title: '404 Page Not Found - Manifest',
+        description: 'The page you are looking for does not exist.',
+        keywords: '404, page not found, manifest',
+        canonicalUrl: `${environment.baseUrl}/404`,
+        og: {
+          image: `${environment.baseUrl}/assets/images/og-image.png`,
+          type: 'website',
+          url: `${environment.baseUrl}/404`
         }
       }
     }
