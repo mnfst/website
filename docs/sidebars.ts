@@ -83,13 +83,17 @@ const sidebars: SidebarsConfig = {
 
     {
       type: 'category',
-      label: 'Self hosting',
+      label: 'Settings',
       collapsed: false,
       collapsible: false,
       items: [
         {
           type: 'doc',
           id: 'config'
+        },
+        {
+          type: 'doc',
+          id: 'ai-editor-rules'
         },
         {
           type: 'doc',
