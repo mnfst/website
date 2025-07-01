@@ -86,9 +86,11 @@ export class SeoService {
     if (config.image) {
       this.meta.updateTag({ property: 'og:image', content: config.image })
     }
+
     if (config.url) {
       this.meta.updateTag({ property: 'og:url', content: config.url })
     }
+
     if (config.type) {
       this.meta.updateTag({ property: 'og:type', content: config.type })
     }

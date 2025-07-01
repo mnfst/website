@@ -38,7 +38,7 @@ In this tutorial, we will show you how to configure Amazon S3 as the storage pro
 <ul>
 <li><a href="https://nodejs.org/en/learn/getting-started/introduction-to-nodejs">Node.js</a></li>
 <li>Basic understanding of AWS and cloud services</li>
-<li>Manifest: Follow the <a href="/docs/install">installation documentation</a> to familiarize yourself with Manifest.</li>
+<li>Manifest: Follow the <a href="/docs">installation documentation</a> to familiarize yourself with Manifest.</li>
 </ul>
 <p><strong>Software Requirements:</strong></p>
 <ul>
@@ -335,7 +335,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
 <ul>
 <li><a href="https://nodejs.org/en/learn/getting-started/introduction-to-nodejs">Node.js</a></li>
 <li>Basic understanding of cloud storage services</li>
-<li>Manifest: Follow the <a href="/docs/install">installation documentation</a> to familiarize yourself with Manifest.</li>
+<li>Manifest: Follow the <a href="/docs">installation documentation</a> to familiarize yourself with Manifest.</li>
 </ul>
 <p><strong>Software Requirements:</strong></p>
 <ul>
