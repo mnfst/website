@@ -107,7 +107,6 @@ import { Component, Input, OnInit } from '@angular/core'
   `
 })
 export class CopyButtonComponent implements OnInit {
-  @Input() projectName: string
   @Input() backendFilePath: string
 
   assistants: string[] = ['cursor', 'copilot', 'windsurf', 'none']
@@ -122,7 +121,7 @@ export class CopyButtonComponent implements OnInit {
   }
 
   generateCommand() {
-    this.command = `yarn create manifest ${this.projectName || 'my-project'}${
+    this.command = `npm create manifest@latest ${
       this.selectedAssistant !== 'none' ? ' --' + this.selectedAssistant : ''
     }${this.backendFilePath ? ' --backendFile=' + this.backendFilePath : ''}`
   }
