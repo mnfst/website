@@ -95,6 +95,10 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'deploy',
           label: 'Deploy'
+        },
+        {
+          type: 'doc',
+          id: 'security'
         }
       ]
     },
@@ -104,23 +108,28 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'react'
+          id: 'react',
+          label: 'Quick start with React'
         },
         {
           type: 'doc',
-          id: 'svelte'
+          id: 'svelte',
+          label: 'Quick start with Svelte'
         },
         {
           type: 'doc',
-          id: 'angular'
+          id: 'angular',
+          label: 'Quick start with Angular'
         },
         {
           type: 'doc',
-          id: 'vue'
+          id: 'vue',
+          label: 'Quick start with Vue'
         },
         {
           type: 'doc',
-          id: 'astro'
+          id: 'astro',
+          label: 'Quick start with Astro'
         }
       ]
     }
