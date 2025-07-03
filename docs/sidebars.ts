@@ -93,7 +93,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'manifest-rules'
+          id: 'manifest-ai-rules'
         },
         {
           type: 'doc',
