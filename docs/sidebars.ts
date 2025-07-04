@@ -93,7 +93,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'manifest-ai-rules'
+          id: 'llm-rules'
         },
         {
           type: 'doc',
