@@ -121,7 +121,7 @@ export class CopyButtonComponent implements OnInit {
   }
 
   generateCommand() {
-    this.command = `npx create manifest@latest ${
+    this.command = `npx create-manifest@latest ${
       this.selectedAssistant !== 'none' ? ' --' + this.selectedAssistant : ''
     }${this.backendFilePath ? ' --backendFile=' + this.backendFilePath : ''}`
   }
