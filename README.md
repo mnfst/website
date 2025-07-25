@@ -18,6 +18,6 @@ The content of the documentation itself is located in [its own repository](https
 ```
 cd docs
 npm install
-npm run fetch-content
+npm run fetch-content # or `npm run fetch-content $BRANCH$`
 npm run start
 ```
