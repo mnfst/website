@@ -37,6 +37,11 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'validation'
+        },
+        {
+          type: 'doc',
+          id: 'groups',
+          label: 'Groups'
         }
       ]
     },
