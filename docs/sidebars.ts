@@ -94,11 +94,13 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'config'
+          id: 'config',
+          label: 'Environment'
         },
         {
           type: 'doc',
-          id: 'llm-rules'
+          id: 'llm-rules',
+          label: 'Build with AI'
         },
         {
           type: 'doc',
@@ -108,6 +110,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'security'
+        },
+        {
+          type: 'doc',
+          id: 'telemetry'
         }
       ]
     },
