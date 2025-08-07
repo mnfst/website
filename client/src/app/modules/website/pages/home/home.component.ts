@@ -7,12 +7,19 @@ import {
   PLATFORM_ID
 } from '@angular/core'
 import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
+import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
 import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgClass, WaitingListFormComponent, CopyButtonComponent],
+  imports: [
+    NgFor,
+    NgClass,
+    WaitingListFormComponent,
+    CopyButtonComponent,
+    LiveCodeHeroComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

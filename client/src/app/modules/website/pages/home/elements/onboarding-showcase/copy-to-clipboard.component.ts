@@ -10,49 +10,7 @@ import { Component, Input, OnInit } from '@angular/core'
     <div
       class="is-flex is-justify-content-space-between is-flex-direction-column has-background-blurred p-2"
     >
-      <div class="is-flex is-align-items-flex-start mb-0">
-        <div class="tab mr-2" *ngFor="let assistant of assistants">
-          <span
-            class="tag tag--ide is-clickable px-4"
-            (click)="selectedAssistant = assistant; generateCommand()"
-            [ngClass]="
-              assistant === selectedAssistant ? 'is-active' : 'is-white'
-            "
-          >
-            <ng-container [ngSwitch]="assistant">
-              <ng-container *ngSwitchCase="'none'">
-                <span class="icon is-small mr-1">
-                  <i class="fa fa-code"></i>
-                </span>
-                Terminal
-              </ng-container>
-              <ng-container *ngSwitchCase="'cursor'">
-                <img
-                  src="/assets/images/logo-cursor.svg"
-                  alt="Cursor"
-                  width="94"
-                />
-              </ng-container>
-              <ng-container *ngSwitchCase="'copilot'">
-                <img
-                  src="/assets/images/logo-copilot.svg"
-                  alt="Copilot"
-                  width="150"
-                />
-              </ng-container>
-              <ng-container *ngSwitchCase="'windsurf'">
-                <img
-                  src="/assets/images/logo-windsurf.svg"
-                  alt="Windsurf"
-                  width="104"
-                />
-              </ng-container>
-            </ng-container>
-          </span>
-        </div>
-      </div>
-
-      <div class="is-flex is-justify-content-flex-start mt-2 is-fullwidth">
+      <div class="is-flex is-justify-content-flex-start is-fullwidth">
         <div
           class="is-flex is-align-items-center is-justify-content-flex-start npx-wrapper is-fullwidth"
         >

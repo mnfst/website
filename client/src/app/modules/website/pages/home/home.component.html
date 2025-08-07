@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="column is-12 pb-0 has-bh-wheel">
-            <div class="column is-12">
+            <div class="columns">
               <div class="column is-6 is-offset-3 mb-4">
                 <app-copy-button></app-copy-button>
                 <div
@@ -64,28 +64,9 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="py-4 container-p-custom">
-      <div class="section is-medium is-gradient-type-1 is-radius show-code p-6">
-        <div
-          class="img-stack is-flex is-align-items-center is-justify-content-center"
-        >
-          <img
-            src="./assets/images/yaml.svg"
-            alt="yaml-example"
-            class="bg-image"
-            width="522"
-            height="337"
-          />
-          <img
-            src="./assets/images/prompt.svg"
-            alt="example prompt using manifest on Cursor"
-            class="fg-image"
-            width="384"
-            height="489"
-          />
+          <div class="column is-8 is-offset-2">
+            <app-live-code-hero></app-live-code-hero>
+          </div>
         </div>
       </div>
     </div>
@@ -130,6 +111,187 @@
               height="29.19"
               class="inria-logo mx-4 mb-3"
             />
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="content">
+        <h2 class="title is-3 mt-6">Features</h2>
+      </div>
+      <div class="columns is-multiline">
+        <div class="column is-5">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Instant CRUD</h3>
+                  <p>
+                    Instantly create, read, update, and delete data with
+                    Manifest.
+                  </p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>15+ real world data types</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>REST API or JS SDK</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Multiple databases</h3>
+                  <p>Choose the database that fits your needs.</p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>PostgreSQL</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>MySQL / MariaDB</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>SQLite</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-3">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Custom endpoints</h3>
+                  <p>Add your own logic with custom endpoints and webhooks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Simplified auth</h3>
+                  <p>
+                    Turning any entity into an authenticated user is as simple
+                    as adding a <code>authenticable: true</code> line to your
+                    backend file.
+                  </p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>Role Based Access Control (RBAC)</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>Ownership-based access control</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>CRUD policies</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Self hosted</h3>
+                  <p>Manifest is a free open source software.</p>
+
+                  <p>Host it on any server that can run NodeJS.</p>
+
+                  <p class="mb-2">
+                    <a
+                      href="https://manifest.build/docs/deploy"
+                      target="_blank"
+                      class="button is-dark is-very-small"
+                    >
+                      <span class="icon">
+                        <i class="fa fa-arrow-right is-size-7"></i>
+                      </span>
+                      <span>See deployment doc</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-fullheight is-radius is-shadowless card--feature">
+            <div class="card-content is-fullheight">
+              <div
+                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+              >
+                <div class="card-content-top content is-normal">
+                  <h3 class="title is-6">Storage</h3>
+                  <p>Upload any kind of file to your backend storage.</p>
+                </div>
+                <div class="card-content-bottom">
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>Image resize</span>
+                  </span>
+                  <span class="icon-text is-fullwidth is-size-7">
+                    <span class="icon">
+                      <i class="fas fa-check has-text-success"></i>
+                    </span>
+                    <span>S3 compatibility</span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -420,187 +582,6 @@
                       />
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Features -->
-      <div class="content">
-        <h2 class="title is-3 mt-6">Features</h2>
-      </div>
-      <div class="columns is-multiline">
-        <div class="column is-5">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Instant CRUD</h3>
-                  <p>
-                    Instantly create, read, update, and delete data with
-                    Manifest.
-                  </p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>15+ real world data types</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>REST API or JS SDK</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Multiple databases</h3>
-                  <p>Choose the database that fits your needs.</p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>PostgreSQL</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>MySQL / MariaDB</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>SQLite</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Custom endpoints</h3>
-                  <p>Add your own logic with custom endpoints and webhooks.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Simplified auth</h3>
-                  <p>
-                    Turning any entity into an authenticated user is as simple
-                    as adding a <code>authenticable: true</code> line to your
-                    backend file.
-                  </p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>Role Based Access Control (RBAC)</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>Ownership-based access control</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>CRUD policies</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Self hosted</h3>
-                  <p>Manifest is a free open source software.</p>
-
-                  <p>Host it on any server that can run NodeJS.</p>
-
-                  <p class="mb-2">
-                    <a
-                      href="https://manifest.build/docs/deploy"
-                      target="_blank"
-                      class="button is-dark is-very-small"
-                    >
-                      <span class="icon">
-                        <i class="fa fa-arrow-right is-size-7"></i>
-                      </span>
-                      <span>See deployment doc</span>
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Storage</h3>
-                  <p>Upload any kind of file to your backend storage.</p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>Image resize</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>S3 compatibility</span>
-                  </span>
                 </div>
               </div>
             </div>
