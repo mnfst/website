@@ -20,6 +20,12 @@ import { Component, Input, OnInit } from '@angular/core'
             "
           >
             <ng-container [ngSwitch]="assistant">
+              <ng-container *ngSwitchCase="'none'">
+                <span class="icon is-small mr-1">
+                  <i class="fa fa-code"></i>
+                </span>
+                Terminal
+              </ng-container>
               <ng-container *ngSwitchCase="'cursor'">
                 <img
                   src="/assets/images/logo-cursor.svg"
@@ -40,13 +46,6 @@ import { Component, Input, OnInit } from '@angular/core'
                   alt="Windsurf"
                   width="104"
                 />
-              </ng-container>
-
-              <ng-container *ngSwitchCase="'none'">
-                <span class="icon is-small mr-1">
-                  <i class="fa fa-code"></i>
-                </span>
-                Terminal
               </ng-container>
             </ng-container>
           </span>
@@ -109,9 +108,9 @@ import { Component, Input, OnInit } from '@angular/core'
 export class CopyButtonComponent implements OnInit {
   @Input() backendFilePath: string
 
-  assistants: string[] = ['cursor', 'copilot', 'windsurf', 'none']
+  assistants: string[] = ['none', 'cursor', 'copilot', 'windsurf']
 
-  selectedAssistant: string = 'cursor'
+  selectedAssistant: string = 'none'
 
   command: string
   copied = false
