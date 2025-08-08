@@ -29,7 +29,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "../node_modules/highlight.js/styles/idea.css",
+              "src/styles.scss"
+            ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
