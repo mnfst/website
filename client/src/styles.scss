@@ -38,7 +38,7 @@ $livecode-py: 1em !default;
 $livecode-height-mobile: 365px !default;
 $livecode-sidebar-height-mobile: #{$livecode-height-mobile +
   $livecode-tab-height} !default;
-$livecode-height-tablet: 437px !default;
+$livecode-height-tablet: auto !default;
 $livecode-sidebar-height-tablet: #{$livecode-height-tablet +
   $livecode-tab-height} !default;
 $curved: 15px !default;
@@ -2014,18 +2014,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
   justify-content: center;
   align-items: center;
   gap: utilities.$gap;
-}
-
-.stack-grid-row:nth-child(1) {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.stack-grid-row:nth-child(2) {
   grid-template-columns: repeat(4, 1fr);
-}
-
-.stack-grid-row:nth-child(3) {
-  grid-template-columns: repeat(5, 1fr);
 }
 
 .stack-grid-item {

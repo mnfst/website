@@ -24,17 +24,9 @@ import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clip
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  featuresA = ['Easy to validate', 'Secure by default', 'Ship insanely fast']
-  featuresB = [
-    'Integrated: No need for third-party service',
-    'OpenAPI doc and types generation',
-    'Minimal token usage'
-  ]
-  featuresC = [
-    'Zero-config',
-    'ready in seconds',
-    'Manage multiple instances with ease'
-  ]
+  featuresA = ['Ship insanely fast']
+  featuresB = ['Easy to validate', 'Minimal token usage']
+  featuresC = ['Integrates anywhere']
 
   images = [
     './assets/images/example-yaml-code.svg',

@@ -15,9 +15,8 @@ hljs.registerLanguage('yaml', yaml)
 export class LiveCodeHeroComponent implements AfterViewInit {
   @ViewChild('codeBlock', { static: false }) codeBlock!: ElementRef<HTMLElement>
 
-  yamlCode: string = `name: Pokemon app 🐣
+  yamlCode: string = `name: Contact Form Submission Backend
 
-name: Contact Form Submission Backend
 entities:
   Contact:
     properties:
