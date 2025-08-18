@@ -1,20 +1,20 @@
 {
-  "name": "manifest-platform",
+  "name": "manifest-website",
   "version": "0.0.1",
-  "description": "Manifest platform",
+  "description": "Manifest website",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mnfst/platform.git"
+    "url": "git+https://github.com/mnfst/website.git"
   },
   "author": "Manifest",
   "bugs": {
-    "url": "https://github.com/mnfst/platform/issues"
+    "url": "https://github.com/mnfst/website/issues"
   },
-  "homepage": "https://github.com/mnfst/platform#readme",
+  "homepage": "https://github.com/mnfst/website#readme",
   "dependencies": {
     "turbo": "^2.4.4"
   },
