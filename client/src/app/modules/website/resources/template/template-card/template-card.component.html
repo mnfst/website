@@ -1,1 +1,58 @@
-<p>template-card works!</p>
+<a class="is-link-on-hover">
+  <div
+    class="card is-fullheight is-radius is-shadowless"
+    [ngClass]="{
+      'has-background-dark has-text-light': theme === 'dark',
+      'has-background-white-bis has-text-darker': theme === 'light'
+    }"
+  >
+    <div class="card-content is-fullheight">
+      <div
+        class="content is-flex is-fullheight is-flex-direction-column is-justify-content-space-between"
+      >
+        <div>
+          <h3 class="title is-6 mb-2">
+            <a
+              class="ghost"
+              [routerLink]="['/templates', template?.slug]"
+              [ngClass]="{
+                ' has-text-light': theme === 'dark',
+                ' has-text-dark': theme === 'light'
+              }"
+              >{{ template?.name }}</a
+            >
+          </h3>
+          <p class="mb-3">{{ template?.excerpt }}</p>
+        </div>
+        <div
+          class="is-flex is-align-items-center is-justify-content-space-between is-size-8"
+        >
+          <div
+            class="avatar is-flex is-align-items-center is-justify-content-flex-start"
+          >
+            <figure class="image is-32x32 mr-2">
+              <img
+                class="is-rounded is-bordered"
+                src="{{ template?.gitHubAvatar }}"
+                alt="{{ template?.gitHubOwner }}"
+              />
+            </figure>
+            <a
+              class="is-quiet"
+              href="https://github.com/{{ template?.gitHubOwner }}"
+              target="_blank"
+              >By {{ template?.gitHubOwner }}</a
+            >
+          </div>
+          <!-- TODO: implement views 
+     <span class="icon-text">
+        <span class="icon">
+            <i class="lni lni-eye"></i>
+        </span>
+        <span>{{ template?.views }} views</span>
+    </span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

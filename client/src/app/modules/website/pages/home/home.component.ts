@@ -7,6 +7,9 @@ import {
   PLATFORM_ID
 } from '@angular/core'
 import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
+import { Template } from '../../../../types/template.interface'
+import { TemplateCardComponent } from '../../resources/template/template-card/template-card.component'
+import { templates } from '../../resources/template/templates.content'
 import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
 import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
 
@@ -18,7 +21,8 @@ import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clip
     NgClass,
     WaitingListFormComponent,
     CopyButtonComponent,
-    LiveCodeHeroComponent
+    LiveCodeHeroComponent,
+    TemplateCardComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -27,6 +31,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   featuresA = ['Ship insanely fast']
   featuresB = ['Easy to validate', 'Minimal token usage']
   featuresC = ['Integrates anywhere']
+
+  templates: Template[] = templates
 
   images = [
     './assets/images/example-yaml-code.svg',
