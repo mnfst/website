@@ -45,14 +45,12 @@ export class TemplateDetailComponent implements AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    // 1) Cas "comme les intégrations" (route statique générée via templates.map): data.template
     const dataTemplate = this.activatedRoute.snapshot.data['template'] as
       | Template
       | undefined
     if (dataTemplate) {
       this.template = dataTemplate
     } else {
-      // 2) Cas route dynamique: templates/:slug
       const slug = this.activatedRoute.snapshot.params['slug']
       if (slug) {
         const found = templates.find((t) => t.slug === slug)
@@ -60,13 +58,11 @@ export class TemplateDetailComponent implements AfterViewInit {
       }
     }
 
-    // Toujours rien ? -> 404
     if (!this.template) {
       this.router.navigate(['/404'])
       return
     }
 
-    // SEO
     this.seoService.updateMetadata({
       title: `${this.template.name} - Manifest`,
       description: this.template.excerpt,
@@ -75,7 +71,6 @@ export class TemplateDetailComponent implements AfterViewInit {
       og: { image: `${environment.baseUrl}/assets/images/og-image.png` }
     })
 
-    // OpenAPI → endpoints
     const apiDocPaths: any = (this.template as any).apiDoc?.paths
     if (apiDocPaths) {
       this.endpoints = Object.entries(apiDocPaths).flatMap(
@@ -114,10 +109,19 @@ export class TemplateDetailComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Applique highlight.js à tous les <code #codeBlock>
-    // (Assure-toi que tes blocs HTML utilisent bien #codeBlock et contiennent le code en texte)
     this.codeBlocks.forEach((block) => {
-      hljs.highlightElement(block.nativeElement)
+      const el = block.nativeElement
+      // Ajoute les classes nécessaires pour appliquer le thème
+      if (!el.classList.contains('hljs')) {
+        el.classList.add('hljs')
+      }
+      if (
+        !el.classList.contains('language-yaml') &&
+        !el.classList.contains('language-javascript')
+      ) {
+        el.classList.add('language-yaml') // fallback
+      }
+      hljs.highlightElement(el)
     })
   }
 }

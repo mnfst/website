@@ -128,7 +128,7 @@
                 <div class="content" *ngIf="selectedTab === 'code'">
                   <div class="ui-ide is-fullwidth is-bordered">
                     <div class="ide">
-                      <div class="sidebar has-text-grey-lighter">
+                      <div class="sidebar has-text-grey-dark">
                         <div class="sidebar__title">
                           <span>explorer</span>
                           <i class="fa-solid fa-ellipsis"></i>
@@ -142,7 +142,7 @@
                           }"
                         >
                           <i
-                            class="fa-solid fa-exclamation has-text-primary-light is-italic"
+                            class="fa-solid fa-exclamation has-text-primary is-italic"
                           ></i>
                           <span class="">manifest.yml</span>
                         </div>
@@ -153,7 +153,7 @@
                             class="explorer-item level-2 has-1-children is-parent"
                           >
                             <i class="fa-solid fa-chevron-down"></i>
-                            <i class="lni lni-folder"></i>
+                            <i class="fa fa-folder has-text-grey-light"></i>
                             <span class="">handlers</span>
                           </div>
                           <div
@@ -166,7 +166,7 @@
                               let handler of template.repo.content.handlers
                             "
                           >
-                            <i class="lni lni-javascript"></i>
+                            <i class="lni lni-javascript has-text-warning"></i>
                             <span class="">{{ handler.name }}</span>
                           </div>
                         </ng-container>
@@ -192,7 +192,7 @@
                                 "
                               >
                                 <pre
-                                  class="pre mt-0"
+                                  class="pre mt-0 p-0"
                                   *ngIf="selectedFile === handler.name"
                                 >
                                 <code #codeBlock class="hljs language-javascript has-text-left is-size-7">{{ handler.content }}</code>

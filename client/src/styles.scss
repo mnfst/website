@@ -2192,7 +2192,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
 }
 .ui-ide {
   min-height: $livecode-sidebar-height-tablet;
-  background-color: #011628;
+  background-color: $white-bis;
   padding: 1px;
   @include mixins.mobile {
     min-height: $livecode-sidebar-height-mobile;
@@ -2219,7 +2219,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    background-color: #252526;
+    background-color: $white-bis;
 
     @include mixins.touch {
       display: none;
@@ -2397,7 +2397,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
   align-self: stretch;
 
   &.is-active {
-    background-color: #252486;
+    background-color: #dfdfff;
   }
 
   i {
