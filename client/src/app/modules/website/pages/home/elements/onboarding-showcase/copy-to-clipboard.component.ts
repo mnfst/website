@@ -1,6 +1,6 @@
 // copy-button.component.ts
 import { CommonModule } from '@angular/common'
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'app-copy-button',
@@ -63,28 +63,13 @@ import { Component, Input, OnInit } from '@angular/core'
     </div>
   `
 })
-export class CopyButtonComponent implements OnInit {
+export class CopyButtonComponent {
   @Input() backendFilePath: string
 
-  assistants: string[] = ['none', 'cursor', 'copilot', 'windsurf']
-
-  selectedAssistant: string = 'none'
-
-  command: string
+  command: string = 'npx create-manifest@latest'
   copied = false
 
-  ngOnInit(): void {
-    this.generateCommand()
-  }
-
-  generateCommand() {
-    this.command = `npx create-manifest@latest ${
-      this.selectedAssistant !== 'none' ? ' --' + this.selectedAssistant : ''
-    }${this.backendFilePath ? ' --backendFile=' + this.backendFilePath : ''}`
-  }
-
   copyToClipboard() {
-    // Use the Clipboard API
     navigator.clipboard.writeText(this.command).then(() => {
       this.showCopiedState()
     })
