@@ -10,6 +10,7 @@ import { SponsorComponent } from './modules/website/pages/sponsor/sponsor.compon
 import { IntegrationDetailComponent } from './modules/website/resources/integration/integration-detail/integration-detail.component'
 import { IntegrationListComponent } from './modules/website/resources/integration/integration-list/integration-list.component'
 import { integrations } from './modules/website/resources/integration/integrations.content'
+import { TemplateListComponent } from './modules/website/resources/template/template-list/template-list.component'
 
 export const routes: Routes = [
   {
@@ -174,6 +175,24 @@ export const routes: Routes = [
       }
     }
   },
+  {
+    path: 'templates',
+    component: TemplateListComponent,
+    data: {
+      seo: {
+        title: 'Templates - Manifest',
+        description: 'Use backend templates for your frontend project.',
+        keywords: 'templates, manifest, starter kits',
+        canonicalUrl: `${environment.baseUrl}/templates`,
+        og: {
+          image: `${environment.baseUrl}/assets/images/og-image.png`,
+          type: 'website',
+          url: `${environment.baseUrl}/templates`
+        }
+      }
+    }
+  },
+
   {
     path: '**',
     redirectTo: '404'

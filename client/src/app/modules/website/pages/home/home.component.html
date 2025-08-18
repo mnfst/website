@@ -677,12 +677,23 @@
         <div class="columns is-multiline mb-0">
           <div class="column is-12">
             <div class="columns is-multiline">
-              <div class="column is-4" *ngFor="let template of templates">
+              <div
+                class="column is-4"
+                *ngFor="let template of featuredTemplates"
+              >
                 <app-template-card
                   [template]="template"
                   theme="dark"
                 ></app-template-card>
               </div>
+            </div>
+          </div>
+
+          <div class="column is-4 is-offset-4">
+            <div class="has-text-centered">
+              <a href="/templates" class="button is-white is-small"
+                >View all templates</a
+              >
             </div>
           </div>
         </div>

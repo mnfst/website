@@ -1,4 +1,4 @@
-<a class="is-link-on-hover">
+<a class="ghost">
   <div
     class="card is-fullheight is-radius is-shadowless"
     [ngClass]="{
@@ -11,21 +11,11 @@
         class="content is-flex is-fullheight is-flex-direction-column is-justify-content-space-between"
       >
         <div>
-          <h3 class="title is-6 mb-2">
-            <a
-              class="ghost"
-              [routerLink]="['/templates', template?.slug]"
-              [ngClass]="{
-                ' has-text-light': theme === 'dark',
-                ' has-text-dark': theme === 'light'
-              }"
-              >{{ template?.name }}</a
-            >
-          </h3>
+          <h3 class="title is-6 mb-2 has-text-light">{{ template?.name }}</h3>
           <p class="mb-3">{{ template?.excerpt }}</p>
         </div>
         <div
-          class="is-flex is-align-items-center is-justify-content-space-between is-size-8"
+          class="is-flex is-align-items-center is-justify-content-flex-start is-size-8"
         >
           <div
             class="avatar is-flex is-align-items-center is-justify-content-flex-start"
@@ -41,16 +31,9 @@
               class="is-quiet"
               href="https://github.com/{{ template?.gitHubOwner }}"
               target="_blank"
-              >By {{ template?.gitHubOwner }}</a
-            >
+              >By {{ template?.gitHubOwner }}
+            </a>
           </div>
-          <!-- TODO: implement views 
-     <span class="icon-text">
-        <span class="icon">
-            <i class="lni lni-eye"></i>
-        </span>
-        <span>{{ template?.views }} views</span>
-    </span> -->
         </div>
       </div>
     </div>

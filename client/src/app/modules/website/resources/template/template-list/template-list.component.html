@@ -1,1 +1,28 @@
-<p>template-list works!</p>
+<div class="hero">
+  <div class="hero-body has-background-bis has-border-bottom">
+    <div class="container">
+      <h1 class="title is-2">Backend Templates</h1>
+      <p>
+        Jumpstart your full-stack development with ready-to-use backend
+        templates.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="section has-background-white pt-5">
+  <div class="container mt-1">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <div class="columns">
+          <div class="column is-12">
+            <div class="columns is-multiline">
+              <div class="column is-3" *ngFor="let template of templates">
+                <app-template-card [template]="template"></app-template-card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

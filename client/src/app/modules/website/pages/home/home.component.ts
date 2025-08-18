@@ -33,6 +33,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   featuresC = ['Integrates anywhere']
 
   templates: Template[] = templates
+  featured?: boolean
+
+  get featuredTemplates(): Template[] {
+    return this.templates.slice(0, 3)
+  }
 
   images = [
     './assets/images/example-yaml-code.svg',
