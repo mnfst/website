@@ -10,7 +10,9 @@ import { SponsorComponent } from './modules/website/pages/sponsor/sponsor.compon
 import { IntegrationDetailComponent } from './modules/website/resources/integration/integration-detail/integration-detail.component'
 import { IntegrationListComponent } from './modules/website/resources/integration/integration-list/integration-list.component'
 import { integrations } from './modules/website/resources/integration/integrations.content'
+import { TemplateDetailComponent } from './modules/website/resources/template/template-detail/template-detail.component'
 import { TemplateListComponent } from './modules/website/resources/template/template-list/template-list.component'
+import { templates } from './modules/website/resources/template/templates.content'
 
 export const routes: Routes = [
   {
@@ -85,7 +87,6 @@ export const routes: Routes = [
       }
     }
   },
-
   {
     path: 'integrations',
     component: IntegrationListComponent,
@@ -192,7 +193,24 @@ export const routes: Routes = [
       }
     }
   },
-
+  ...templates.map((template) => ({
+    path: `templates/${template.slug}`,
+    component: TemplateDetailComponent,
+    data: {
+      template,
+      seo: {
+        title: `${template.name} - Manifest`,
+        description: template.excerpt,
+        keywords: `${template.name}, manifest, template`,
+        canonicalUrl: `${environment.baseUrl}/templates/${template.slug}`,
+        og: {
+          image: `${environment.baseUrl}/assets/images/og-image.png`,
+          type: 'website',
+          url: `${environment.baseUrl}/templates/${template.slug}`
+        }
+      }
+    }
+  })),
   {
     path: '**',
     redirectTo: '404'

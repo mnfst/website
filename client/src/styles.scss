@@ -39,8 +39,7 @@ $livecode-height-mobile: 365px !default;
 $livecode-sidebar-height-mobile: #{$livecode-height-mobile +
   $livecode-tab-height} !default;
 $livecode-height-tablet: auto !default;
-$livecode-sidebar-height-tablet: #{$livecode-height-tablet +
-  $livecode-tab-height} !default;
+$livecode-sidebar-height-tablet: auto !default;
 $curved: 15px !default;
 
 @use 'bulma/sass/utilities' with (
@@ -2216,7 +2215,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
   .sidebar {
     display: flex;
     width: 221px;
-    height: $livecode-sidebar-height;
+    height: 100%;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
@@ -2224,11 +2223,13 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
 
     @include mixins.touch {
       display: none;
-      height: $livecode-sidebar-height-tablet;
+      min-height: $livecode-sidebar-height-tablet;
+      height: 100%;
     }
 
     @include mixins.mobile {
-      height: $livecode-sidebar-height-mobile;
+      min-height: $livecode-sidebar-height-mobile;
+      height: 100%;
     }
 
     .backend-editor & {
@@ -2263,22 +2264,31 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
     }
 
     @include mixins.mobile {
-      height: $livecode-height-mobile;
+      min-height: $livecode-height-mobile;
+      height: auto;
       overflow: auto;
     }
 
     @include mixins.desktop {
-      height: $livecode-height;
+      min-height: $livecode-height;
+      height: auto;
     }
 
     pre {
-      height: $livecode-height-tablet;
+      min-height: $livecode-height-tablet;
+      height: auto;
+      display: flex;
       @include mixins.mobile {
-        height: $livecode-height-mobile;
+        min-height: $livecode-height-mobile;
+        height: auto;
       }
       @include mixins.desktop {
-        height: $livecode-height;
+        min-height: $livecode-height;
+        height: auto;
       }
+    }
+    code {
+      width: 100%;
     }
   }
 }
@@ -2298,11 +2308,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
 }
 .editor-container {
   width: 100%;
-
-  .editor-container {
-    height: 100%;
-    min-height: 100%;
-  }
+  overflow-x: auto;
 }
 .simple-ide-window {
   .code {
@@ -2369,12 +2375,15 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
   color: #808080;
   padding-top: $livecode-py;
   padding-bottom: $livecode-py;
-  height: $livecode-height-tablet;
+  min-height: $livecode-height-tablet;
+  height: auto;
   @include mixins.mobile {
-    height: $livecode-height-mobile;
+    min-height: $livecode-height-mobile;
+    height: auto;
   }
   @include mixins.desktop {
-    height: $livecode-height;
+    min-height: $livecode-height;
+    height: auto;
   }
 }
 .explorer-item {

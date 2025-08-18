@@ -1,1 +1,313 @@
-<p>template-detail works!</p>
+<div class="hero" *ngIf="template">
+  <div class="hero-body has-background-bis has-border-bottom">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-12">
+          <a
+            [routerLink]="['/templates']"
+            class="content is-small mb-5 icon-text is-flex is-align-items-center is-justify-flex-start"
+          >
+            <span class="icon is-small has-text-decoration-none mr-1">
+              <i class="lni lni-arrow-left is-size-6"> </i>
+            </span>
+            <span class="has-text-decoration-none"> Back to templates </span>
+          </a>
+          <h1 class="title is-2">{{ template.name }}</h1>
+          <p class="content is-normal">{{ template.excerpt }}</p>
+
+          <div class="tags">
+            <div
+              class="tag is-bordered is-white"
+              *ngFor="let useCase of template.useCases"
+            >
+              <span
+                [ngClass]="'type-' + useCase.toLowerCase().split(' ').join('-')"
+              >
+                {{ useCase }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-full has-background-white mt-3" *ngIf="template">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-12">
+        <div class="has-background-white-bis">
+          <!-- Source code-->
+          <div class="columns is-gapless is-multiline tpl-wrapper">
+            <div class="column is-12">
+              <div class="tabs mb-0">
+                <div
+                  class="tpl-tabs card has-background-white-bis is-shadowless is-fullwidth p-4 tab-list is-flex is-align-items-flex-start mb-0"
+                >
+                  <div class="tab">
+                    <span
+                      (click)="selectedTab = 'db'"
+                      [ngClass]="{
+                        'is-white': selectedTab === 'db',
+                        'is-white-bis': selectedTab !== 'db'
+                      }"
+                      class="tag is-rounded"
+                      >Database</span
+                    >
+                  </div>
+                  <div class="tab">
+                    <span
+                      (click)="selectedTab = 'api'"
+                      [ngClass]="{
+                        'is-white': selectedTab === 'api',
+                        'is-white-bis': selectedTab !== 'api'
+                      }"
+                      class="tag is-rounded"
+                      >API</span
+                    >
+                  </div>
+                  <div class="tab">
+                    <span
+                      (click)="selectedTab = 'code'"
+                      [ngClass]="{
+                        'is-white': selectedTab === 'code',
+                        'is-white-bis': selectedTab !== 'code'
+                      }"
+                      class="tag is-rounded"
+                      >Code</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-9">
+              <div class="tpl-content">
+                <div class="content" *ngIf="selectedTab === 'db'">
+                  <img src="./assets/images/templates/{{ template.diagram }}" />
+                </div>
+                <div class="content" *ngIf="selectedTab === 'api'">
+                  <div class="m-5">
+                    <div class="select mb-5">
+                      <select
+                        name=""
+                        id=""
+                        class="select is-small"
+                        (change)="filterEndpoints($event.target)"
+                      >
+                        <option value="Public">Public endpoints</option>
+                        <option value="Admin">Admin endpoints</option>
+                        <option value="">All endpoints</option>
+                      </select>
+                    </div>
+
+                    <ng-container *ngFor="let endpoint of filteredEndpoints">
+                      <div>
+                        <div
+                          class="content is-flex is-align-items-flex-start is-justify-content-flfex-start mb-2"
+                        >
+                          <span class="tag is-small is-dark mr-3">{{
+                            endpoint.method
+                          }}</span>
+                          <div>
+                            <p class="has-text-weight-bold">
+                              {{ endpoint.path }} - {{ endpoint.summary }}
+                              <span
+                                class="tag is-disabled"
+                                *ngIf="endpoint.auth"
+                                >🔒 {{ endpoint.auth }}</span
+                              >
+                            </p>
+                          </div>
+                        </div>
+                        <p>{{ endpoint.description }}</p>
+                        <hr />
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="content" *ngIf="selectedTab === 'code'">
+                  <div class="ui-ide is-fullwidth is-bordered">
+                    <div class="ide">
+                      <div class="sidebar has-text-grey-lighter">
+                        <div class="sidebar__title">
+                          <span>explorer</span>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+
+                        <div
+                          class="explorer-item level-2 is-clickable"
+                          (click)="selectedFile = 'manifest.yml'"
+                          [ngClass]="{
+                            'is-active': selectedFile === 'manifest.yml'
+                          }"
+                        >
+                          <i
+                            class="fa-solid fa-exclamation has-text-primary-light is-italic"
+                          ></i>
+                          <span class="">manifest.yml</span>
+                        </div>
+                        <ng-container
+                          *ngIf="template.repo.content.handlers?.length > 0"
+                        >
+                          <div
+                            class="explorer-item level-2 has-1-children is-parent"
+                          >
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <i class="lni lni-folder"></i>
+                            <span class="">handlers</span>
+                          </div>
+                          <div
+                            class="explorer-item level-3 is-clickable"
+                            (click)="selectedFile = handler.name"
+                            [ngClass]="{
+                              'is-active': selectedFile === handler.name
+                            }"
+                            *ngFor="
+                              let handler of template.repo.content.handlers
+                            "
+                          >
+                            <i class="lni lni-javascript"></i>
+                            <span class="">{{ handler.name }}</span>
+                          </div>
+                        </ng-container>
+                      </div>
+                      <div class="editor-container">
+                        <div class="editor-template">
+                          <div class="code">
+                            <!-- manifest.yml -->
+
+                            <ng-container
+                              *ngIf="selectedFile === 'manifest.yml'"
+                            >
+                              <pre class="pre mt-0 p-0">
+                                <code #codeBlock class="hljs language-yaml has-text-left is-size-7">{{ template.repo.content.manifestFileContent }}</code>
+                                </pre>
+                            </ng-container>
+
+                            <!-- handlers -->
+                            <ng-container #handlerBlocks>
+                              <ng-container
+                                *ngFor="
+                                  let handler of template.repo.content.handlers
+                                "
+                              >
+                                <pre
+                                  class="pre mt-0"
+                                  *ngIf="selectedFile === handler.name"
+                                >
+                                <code #codeBlock class="hljs language-javascript has-text-left is-size-7">{{ handler.content }}</code>
+                              </pre>
+                              </ng-container>
+                            </ng-container>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="m-5 content">
+                  <h2 class="title is-4">Overview</h2>
+                  <div [innerHTML]="template.description"></div>
+                  <ng-container *ngFor="let faq of faqContent">
+                    <h2 class="title is-4">{{ faq.question }}</h2>
+                    <p>{{ faq.answer }}</p>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+            <div class="column is-3" *ngIf="template.repo">
+              <div class="tpl-sidebar p-5">
+                <div class="content">
+                  <div class="mb-5">
+                    <a
+                      href="https://github.com/new?template_name={{
+                        template.repo.name
+                      }}&template_owner={{ template.repo.owner.login }}"
+                      class="button is-fullwidth is-dark is-small"
+                      target="_blank"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Use this template</span>
+                    </a>
+                  </div>
+                  <ng-container *ngIf="template.features?.length > 0">
+                    <p>
+                      <strong>Features:</strong>
+                    </p>
+                    <div class="tags">
+                      <div
+                        class="tag is-white is-rounded"
+                        *ngFor="let feature of template.features"
+                      >
+                        {{ feature }}
+                      </div>
+                    </div>
+                    <hr />
+                  </ng-container>
+                  <p>
+                    <strong>Version:</strong>
+                  </p>
+                  <p>
+                    {{
+                      template.repo.content.packageJsonContent.templateVersion
+                    }}
+                  </p>
+                  <hr />
+                  <p><strong>Author</strong>:</p>
+
+                  <a
+                    [href]="template.repo.owner.profileUrl"
+                    target="_blank"
+                    class="avatar is-flex is-align-items-center is-justify-content-flex-start has-text-dark is-ghost"
+                  >
+                    <figure class="image is-32x32">
+                      <img
+                        [src]="template.repo.owner.avatar"
+                        alt="Avatar"
+                        class="avatar is-rounded"
+                      />
+                    </figure>
+                    <span class="content is-small ml-2"
+                      >&#64;{{ template.repo.owner.login }}</span
+                    >
+                  </a>
+                  <hr />
+
+                  <p><strong>Dependencies</strong><br /></p>
+                  <div
+                    *ngFor="
+                      let dependency of template.repo.content.packageJsonContent
+                        .dependencies
+                    "
+                  >
+                    <a
+                      href="https://www.npmjs.com/package/{{ dependency.name }}"
+                      target="_blank"
+                      >{{ dependency.name }}</a
+                    >
+                    : {{ dependency.version }}
+                  </div>
+                  <hr />
+                  <ng-container *ngIf="template.tags?.length > 0">
+                    <p><strong>Tags:</strong></p>
+                    <div class="tags">
+                      <div
+                        class="tag is-white-bis"
+                        *ngFor="let tag of template.tags"
+                      >
+                        {{ tag }}
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
