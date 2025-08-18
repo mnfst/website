@@ -21,19 +21,31 @@
           <div class="column is-8 is-offset-2">
             <div class="content is-normal">
               <h1 class="title is-0 mb-5">
-                The backend for
-                <span class="title-gradient">AI code editors</span>
+                <span class="title-gradient">1-file backend </span> to ship fast
               </h1>
               <p class="subtitle">
                 Manifest is an
-                <strong>Open Source, portable backend</strong> that fits into 1
-                YAML file. Easy for both humans and LLMs to generate and
-                validate.
+                <strong>open source, portable backend</strong> with
+                <span class="">data</span>, <span class="">storage</span>,
+                <span class="">logic</span>,
+                <span class="">auth</span>
+
+                and
+                <span class="">admin UI</span>
+                to ship
+                <strong
+                  class="tag is-primary is-large has-text-primary is-light"
+                  >Prototypes</strong
+                >
+                and
+                <strong class="tag is-info is-large has-text-info is-light"
+                  >MVPs</strong
+                >.
               </p>
             </div>
           </div>
           <div class="column is-12 pb-0 has-bh-wheel">
-            <div class="column is-12">
+            <div class="columns">
               <div class="column is-6 is-offset-3 mb-4">
                 <app-copy-button></app-copy-button>
                 <div
@@ -59,34 +71,15 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="py-4 container-p-custom">
-      <div class="section is-medium is-gradient-type-1 is-radius show-code p-6">
-        <div
-          class="img-stack is-flex is-align-items-center is-justify-content-center"
-        >
-          <img
-            src="./assets/images/yaml.svg"
-            alt="yaml-example"
-            class="bg-image"
-            width="522"
-            height="337"
-          />
-          <img
-            src="./assets/images/prompt.svg"
-            alt="example prompt using manifest on Cursor"
-            class="fg-image"
-            width="384"
-            height="489"
-          />
+          <div class="column is-8 is-offset-2">
+            <app-live-code-hero></app-live-code-hero>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container-full">
-    <div class="container pt-6 pb-7">
+    <div class="container pt-6">
       <div class="columns is-gapless is-multiline mb-0">
         <div class="column is-12 has-text-centered">
           <div
@@ -129,302 +122,9 @@
         </div>
       </div>
 
-      <div class="card is-fullheight is-radius is-shadowless p-64">
-        <div class="card-content">
-          <div class="columns is-multiline mb-0">
-            <div class="column is-4">
-              <div class="content is-normal is-fullheight">
-                <div
-                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-                >
-                  <div class="card-content-top">
-                    <h2 class="title is-4">
-                      A complete backend that fits in 1 file of code
-                    </h2>
-                    <p class="">
-                      A complete backend with
-                      <span class="tag is-link is-light">data</span>,
-                      <span class="tag is-link is-light">logic</span> and
-                      <span class="tag is-link is-light">storage</span>.
-                    </p>
-                    <p>
-                      Manifest comes with essential features like
-                      <strong>auth</strong> and <strong>custom logic</strong>,
-                      and a built-in <strong>admin panel</strong>.
-                    </p>
-                  </div>
-                  <div class="card-content-bottom">
-                    <div class="mb-4">
-                      <ng-container *ngFor="let feature of featuresA">
-                        <span class="icon-text is-fullwidth is-size-7">
-                          <span class="icon">
-                            <i class="fas fa-check has-text-success"></i>
-                          </span>
-                          <span>{{ feature }}</span>
-                        </span>
-                      </ng-container>
-                    </div>
-                    <p class="mb-2">
-                      <a
-                        href="https://manifest.build/docs"
-                        target="_blank"
-                        class="button is-dark is-very-small"
-                      >
-                        <span class="icon">
-                          <i class="fa fa-arrow-right is-size-7"></i>
-                        </span>
-                        <span>Get started</span>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-7 is-offset-1">
-              <div
-                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center p-0"
-              >
-                <div class="image-stack-container" (click)="swapImages()">
-                  <img
-                    *ngFor="let img of orderedImages"
-                    [src]="img.src"
-                    [ngClass]="[img.class, 'image-stack']"
-                    alt="admin image"
-                    draggable="false"
-                    width="654"
-                    height="352.42"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card is-fullheight is-radius is-shadowless p-64">
-        <div class="card-content">
-          <div class="columns is-multiline mb-0">
-            <div class="column is-4">
-              <div class="content is-normal is-fullheight">
-                <div
-                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-                >
-                  <div class="card-content-top">
-                    <h2 class="title is-4">Feed your LLM with context</h2>
-                    <p>
-                      LLMs and vibe-coding tools often
-                      <strong>struggle</strong> when it comes to backend logic.
-                    </p>
-                    <p>
-                      Manifest empowers AI assistants by being integrated with
-                      your codebase and generating the context they need.
-                    </p>
-                  </div>
-                  <div class="card-content-bottom">
-                    <div class="mb-4">
-                      <ng-container *ngFor="let feature of featuresB">
-                        <span class="icon-text is-fullwidth is-size-7">
-                          <span class="icon">
-                            <i class="fas fa-check has-text-success"></i>
-                          </span>
-                          <span>{{ feature }}</span>
-                        </span>
-                      </ng-container>
-                    </div>
-                    <p class="mb-2">
-                      <a
-                        href="https://manifest.build/docs"
-                        target="_blank"
-                        class="button is-dark is-very-small"
-                      >
-                        <span class="icon">
-                          <i class="fa fa-play"></i>
-                        </span>
-                        <span>Get started</span>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-7 is-offset-1">
-              <div
-                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0"
-              >
-                <div class="stack-grid-container">
-                  <div class="stack-grid-row">
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-windsurf.svg"
-                        title="Svelte logo"
-                        alt="Svelte"
-                        width="48"
-                        height="28.07"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-cursor.svg"
-                        title="Vue logo"
-                        alt="Vue"
-                        width="48"
-                        height="48"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-copilot.svg"
-                        title="Preact logo"
-                        alt="Preact"
-                        width="48"
-                        height="40"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0 is-hidden-mobile"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-z.svg"
-                        title="Zed logo"
-                        alt="Zed"
-                        width="48"
-                        height="48"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-jetbrain.svg"
-                        title="Jetbrains AI logo"
-                        alt="Jetbrains AI"
-                        width="48"
-                        height="48"
-                      />
-                    </div>
-                  </div>
-                  <div class="stack-grid-row">
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-trae.svg"
-                        title="Trae logo"
-                        alt="Trae"
-                        width="48"
-                        height="47.11"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-vsc.svg"
-                        title="vsc logo"
-                        alt="vscode"
-                        width="48"
-                        height="48"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-continue.svg"
-                        title="Continue logo"
-                        alt="Continue"
-                        width="48"
-                        height="45.23"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-deepseek.svg"
-                        title="Deepseek logo"
-                        alt="Deepseek"
-                        width="48"
-                        height="34.66"
-                      />
-                    </div>
-                  </div>
-                  <div class="stack-grid-row">
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-openai.svg"
-                        title="chatGPT logo"
-                        alt="chatGPT"
-                        width="48"
-                        height="48"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-claude.svg"
-                        title="claude logo"
-                        alt="Claude code"
-                        width="48"
-                        height="48"
-                      />
-                    </div>
-
-                    <div
-                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0 is-hidden-mobile"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-replit.svg"
-                        title="replit logo"
-                        alt="replit"
-                        width="40"
-                        height="49.09"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-bolt.svg"
-                        title="bolt logo"
-                        alt="bolt"
-                        width="40"
-                        height="50.23"
-                      />
-                    </div>
-                    <div
-                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0"
-                    >
-                      <img
-                        src="./assets/images/stack/logo-lovable.svg"
-                        title="lovable logo"
-                        alt="lovable"
-                        width="40"
-                        height="41.53"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Features -->
       <div class="content">
-        <h2 class="title is-3 mt-6">Features</h2>
+        <h2 class="title is-3 mt-0">Features</h2>
       </div>
       <div class="columns is-multiline">
         <div class="column is-5">
@@ -563,7 +263,7 @@
                       class="button is-dark is-very-small"
                     >
                       <span class="icon">
-                        <i class="fa fa-arrow-right is-size-7"></i>
+                        <i class="fa fa-arrow-right is-size-8"></i>
                       </span>
                       <span>See deployment doc</span>
                     </a>
@@ -596,6 +296,364 @@
                     </span>
                     <span>S3 compatibility</span>
                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card is-fullheight is-radius is-shadowless p-64 has-background-white-bis"
+      >
+        <div class="card-content">
+          <div class="columns is-multiline mb-0">
+            <div class="column is-4">
+              <div class="content is-normal is-fullheight">
+                <div
+                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+                >
+                  <div class="card-content-top">
+                    <h2 class="title is-4">Setup in seconds</h2>
+                    <p class="">A backend that takes 1 file and 0 friction.</p>
+                    <p>
+                      Manifest comes with essential features like
+                      <span class="tag is-link is-light">auth</span>,
+                      <span class="tag is-link is-light">custom logic</span>,
+                      and a built-in
+                      <span class="tag is-link is-light">admin panel</span>.
+                    </p>
+                  </div>
+                  <div class="card-content-bottom">
+                    <div class="mb-4">
+                      <ng-container *ngFor="let feature of featuresA">
+                        <span class="icon-text is-fullwidth is-size-7">
+                          <span class="icon">
+                            <i class="fas fa-check has-text-success"></i>
+                          </span>
+                          <span>{{ feature }}</span>
+                        </span>
+                      </ng-container>
+                    </div>
+                    <p class="mb-2">
+                      <a
+                        href="https://manifest.build/docs"
+                        target="_blank"
+                        class="button is-dark is-very-small"
+                      >
+                        <span class="icon">
+                          <i class="fa fa-arrow-right is-size-8"></i>
+                        </span>
+                        <span>Get started</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-7 is-offset-1">
+              <div
+                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center p-0"
+              >
+                <div class="image-stack-container" (click)="swapImages()">
+                  <img
+                    *ngFor="let img of orderedImages"
+                    [src]="img.src"
+                    [ngClass]="[img.class, 'image-stack']"
+                    alt="admin image"
+                    draggable="false"
+                    width="654"
+                    height="352.42"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card is-fullheight is-radius is-shadowless p-64 has-background-white-bis"
+      >
+        <div class="card-content">
+          <div class="columns is-multiline mb-0">
+            <div class="column is-4">
+              <div class="content is-normal is-fullheight">
+                <div
+                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+                >
+                  <div class="card-content-top">
+                    <h2 class="title is-4">LLMs love Manifest</h2>
+                    <p>
+                      A backend in plain YAML that generates OpenAPI docs and
+                      types is crystal clear for LLMs so they deliver the code
+                      you want.
+                    </p>
+                  </div>
+                  <div class="card-content-bottom">
+                    <div class="mb-4">
+                      <ng-container *ngFor="let feature of featuresB">
+                        <span class="icon-text is-fullwidth is-size-7">
+                          <span class="icon">
+                            <i class="fas fa-check has-text-success"></i>
+                          </span>
+                          <span>{{ feature }}</span>
+                        </span>
+                      </ng-container>
+                    </div>
+                    <p class="mb-2">
+                      <a
+                        href="https://manifest.build/docs/llm-rules"
+                        target="_blank"
+                        class="button is-dark is-very-small"
+                      >
+                        <span class="icon">
+                          <i class="fa fa-arrow-right is-size-8"></i>
+                        </span>
+                        <span>Get started</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-7 is-offset-1">
+              <div
+                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center py-0 is-radius"
+              >
+                <div class="stack-grid-container py-6">
+                  <div class="stack-grid-row">
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-windsurf.svg"
+                        title="Svelte logo"
+                        alt="Svelte"
+                        width="48"
+                        height="28.07"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-cursor.svg"
+                        title="Vue logo"
+                        alt="Vue"
+                        width="48"
+                        height="48"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-copilot.svg"
+                        title="Preact logo"
+                        alt="Preact"
+                        width="48"
+                        height="40"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0 is-hidden-mobile"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-z.svg"
+                        title="Zed logo"
+                        alt="Zed"
+                        width="48"
+                        height="48"
+                      />
+                    </div>
+                  </div>
+                  <div class="stack-grid-row">
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-trae.svg"
+                        title="Trae logo"
+                        alt="Trae"
+                        width="48"
+                        height="47.11"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-vsc.svg"
+                        title="vsc logo"
+                        alt="vscode"
+                        width="48"
+                        height="48"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-continue.svg"
+                        title="Continue logo"
+                        alt="Continue"
+                        width="48"
+                        height="45.23"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-deepseek.svg"
+                        title="Deepseek logo"
+                        alt="Deepseek"
+                        width="48"
+                        height="34.66"
+                      />
+                    </div>
+                  </div>
+                  <div class="stack-grid-row">
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-openai.svg"
+                        title="chatGPT logo"
+                        alt="chatGPT"
+                        width="48"
+                        height="48"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-claude.svg"
+                        title="claude logo"
+                        alt="Claude code"
+                        width="48"
+                        height="48"
+                      />
+                    </div>
+
+                    <div
+                      class="stack-grid-item box is-radius p-3 is-flex is-align-items-center is-justify-content-center m-0 is-hidden-mobile"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-replit.svg"
+                        title="replit logo"
+                        alt="replit"
+                        width="40"
+                        height="49.09"
+                      />
+                    </div>
+                    <div
+                      class="stack-grid-item box is-radius p-2 is-flex is-align-items-center is-justify-content-center m-0"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-jetbrain.svg"
+                        title="Jetbrains AI logo"
+                        alt="Jetbrains AI"
+                        width="48"
+                        height="48"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card is-fullheight is-radius is-shadowless p-64 has-background-white-bis"
+      >
+        <div class="card-content">
+          <div class="columns is-multiline mb-0">
+            <div class="column is-4">
+              <div class="content is-normal is-fullheight">
+                <div
+                  class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
+                >
+                  <div class="card-content-top">
+                    <h2 class="title is-4">100% protable</h2>
+                    <p>
+                      Drop Manifest into any codebase. It’s just a simple npm
+                      package you install and it works with any frontend stack.
+                    </p>
+                    <div
+                      class="is-flex is-align-items-center is-justify-content-flex-start has-gap-1 frontend-stack"
+                    >
+                      <img
+                        src="./assets/images/stack/logo-angular.svg"
+                        alt="Angular"
+                        width="24"
+                        height="24"
+                      />
+                      <img
+                        src="./assets/images/stack/logo-svelte.svg"
+                        alt="Svelte"
+                        width="24"
+                        height="24"
+                      />
+                      <img
+                        src="./assets/images/stack/logo-react.svg"
+                        alt="React"
+                        width="24"
+                        height="24"
+                      />
+                      <img
+                        src="./assets/images/stack/logo-vue.svg"
+                        alt="Vue"
+                        width="24"
+                        height="24"
+                      />
+                    </div>
+                  </div>
+                  <div class="card-content-bottom">
+                    <div class="mb-4">
+                      <ng-container *ngFor="let feature of featuresC">
+                        <span class="icon-text is-fullwidth is-size-7">
+                          <span class="icon">
+                            <i class="fas fa-check has-text-success"></i>
+                          </span>
+                          <span>{{ feature }}</span>
+                        </span>
+                      </ng-container>
+                    </div>
+                    <p class="mb-2">
+                      <a
+                        href="https://manifest.new"
+                        target="_blank"
+                        class="button is-dark is-very-small"
+                      >
+                        <span class="icon">
+                          <i class="fa fa-arrow-right is-size-8"></i>
+                        </span>
+                        <span>Try in StackBlitz</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-7 is-offset-1">
+              <div
+                class="card is-fullheight is-shadowless card--media is-flex is-align-items-center is-justify-content-center p-0 is-radius"
+              >
+                <div
+                  class="is-flex is-align-items-center is-justify-content-center"
+                >
+                  <img
+                    src="./assets/images/portable.svg"
+                    alt="project folder"
+                    draggable="false"
+                    width="400"
+                  />
                 </div>
               </div>
             </div>
@@ -1125,16 +1183,6 @@
                             </span>
                             <span>Star us on Github</span>
                           </a>
-                          <a
-                            class="button is-white is-small"
-                            href="https://github.com/sponsors/mnfst"
-                            target="_blank"
-                          >
-                            <span class="icon has-text-info">
-                              <i class="fa-regular fa-heart"></i>
-                            </span>
-                            <span>Sponsor Manifest</span>
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -1167,11 +1215,11 @@
                         height="41.76"
                       />
                       <h2 class="has-text-white mt-4">
-                        Deploy your backend in 1-click
+                        Your backend instantly in production
                       </h2>
                       <p>
                         Join the waitlist now to be the first to discover
-                        <b class="has-text-white">Manifest Cloud</b>.
+                        Manifest Cloud.
                       </p>
                       <div class="small-control">
                         <app-waiting-list-form></app-waiting-list-form>

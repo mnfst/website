@@ -61,6 +61,9 @@
     aspect-ratio: 2019 / 1088;
   }
 }
+.has-gap-1 {
+  gap: 1rem;
+}
 .has-gap-3 {
   gap: 3rem;
 }
@@ -96,4 +99,8 @@
 
 .card--feature {
   min-height: 255px;
+}
+
+.frontend-stack {
+  filter: grayscale(100%);
 }

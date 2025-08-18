@@ -17,9 +17,9 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       seo: {
-        title: 'Manifest - The backend for AI code editors',
+        title: 'Manifest - 1-File Backend for Developers that Ship Fast',
         description:
-          'A backend made for AI-powered coding with auth, storage, logic and all the essentials',
+          'Manifest is an Open Source Portable Backend that fits into a Single YAML file. It includes key features like Auth, Storage, CRUD, Endpoints...',
         keywords:
           'backend, micro-backend, AI-powered editor, backend for LLMs, AI coding tools backend, backend for vibe coding, backend for modern workflows, manifest, admin panel, rest api, auth, storage',
         canonicalUrl: environment.baseUrl,

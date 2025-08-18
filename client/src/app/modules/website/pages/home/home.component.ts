@@ -7,27 +7,26 @@ import {
   PLATFORM_ID
 } from '@angular/core'
 import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
+import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
 import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgClass, WaitingListFormComponent, CopyButtonComponent],
+  imports: [
+    NgFor,
+    NgClass,
+    WaitingListFormComponent,
+    CopyButtonComponent,
+    LiveCodeHeroComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  featuresA = ['Easy to validate', 'Secure by default', 'Ship insanely fast']
-  featuresB = [
-    'Integrated: No need for third-party service',
-    'OpenAPI doc and types generation',
-    'Minimal token usage'
-  ]
-  featuresC = [
-    'Zero-config',
-    'ready in seconds',
-    'Manage multiple instances with ease'
-  ]
+  featuresA = ['Ship insanely fast']
+  featuresB = ['Easy to validate', 'Minimal token usage']
+  featuresC = ['Integrates anywhere']
 
   images = [
     './assets/images/example-yaml-code.svg',
