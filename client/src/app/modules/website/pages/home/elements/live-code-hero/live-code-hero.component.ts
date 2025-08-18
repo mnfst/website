@@ -21,14 +21,9 @@ entities:
   Contact:
     properties:
       - { name: firstName, type: string }
-      - { name: lastName, type: string }
-      - { name: email, type: email }
+      - { name: lastName, type: string, validation: { maxLength: 50} }
+      - { name: email, type: email, validation: { required: true } }
       - { name: message, type: text }
-    validation:
-      firstName: { required: true, maxLength: 50 }
-      lastName: { required: true, maxLength: 50 }
-      email: { required: true }
-      message: { required: true, maxLength: 500 }
     policies:
       create:
         - access: public
