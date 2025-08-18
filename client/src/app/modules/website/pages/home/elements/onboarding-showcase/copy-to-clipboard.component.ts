@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core'
           >
             <i class="px-4 fa fa-chevron-right is-size-8"></i>
             <span
-              class="py-4 install-code is-fullwidth is-flex is-align-items-flex-start"
+              class="py-4 install-code is-fullwidth is-flex is-align-items-flex-start pr-4"
               >{{ command }}</span
             >
             <a
