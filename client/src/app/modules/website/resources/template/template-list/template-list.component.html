@@ -3,8 +3,9 @@
     <div class="container">
       <h1 class="title is-2">Backend Templates</h1>
       <p>
-        Jumpstart your full-stack development with ready-to-use backend
-        templates.
+        Templates are ready-to-use 1-file backends. They give you a working
+        backend so you can focus on the frontend and deliver your MVPs in no
+        time.
       </p>
     </div>
   </div>
@@ -17,7 +18,10 @@
           <div class="column is-12">
             <div class="columns is-multiline">
               <div class="column is-3" *ngFor="let template of templates">
-                <app-template-card [template]="template"></app-template-card>
+                <app-template-card
+                  [template]="template"
+                  theme="light"
+                ></app-template-card>
               </div>
             </div>
           </div>
