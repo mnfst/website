@@ -108,31 +108,20 @@ export class TemplateDetailComponent implements AfterViewInit {
     }
   }
 
-  private applyHighlight(): void {
-    if (!this.codeBlocks) return
+  ngAfterViewInit(): void {
     this.codeBlocks.forEach((block) => {
       const el = block.nativeElement
-      const code = el.innerText.trim()
-      const lang = el.classList.contains('language-javascript')
-        ? 'javascript'
-        : 'yaml'
-      const result = hljs.highlight(code, { language: lang })
-      el.innerHTML = result.value
-      el.classList.add('hljs', `language-${lang}`)
+      // Ajoute les classes nécessaires pour appliquer le thème
+      if (!el.classList.contains('hljs')) {
+        el.classList.add('hljs')
+      }
+      if (
+        !el.classList.contains('language-yaml') &&
+        !el.classList.contains('language-javascript')
+      ) {
+        el.classList.add('language-yaml') // fallback
+      }
+      hljs.highlightElement(el)
     })
-  }
-
-  ngAfterViewInit(): void {
-    this.applyHighlight()
-  }
-
-  onTabChange(tab: 'db' | 'api' | 'code') {
-    this.selectedTab = tab
-    setTimeout(() => this.applyHighlight())
-  }
-
-  onFileChange(file: string) {
-    this.selectedFile = file
-    setTimeout(() => this.applyHighlight())
   }
 }
