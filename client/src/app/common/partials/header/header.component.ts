@@ -1,5 +1,12 @@
 // src/app/common/partials/header/header.component.ts
-import { AfterViewInit, Component, Renderer2 } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
+import {
+  AfterViewInit,
+  Component,
+  inject,
+  PLATFORM_ID,
+  Renderer2
+} from '@angular/core'
 
 @Component({
   selector: 'app-header',
@@ -10,6 +17,8 @@ export class HeaderComponent implements AfterViewInit {
   private static scriptInjected = false
 
   constructor(private renderer: Renderer2) {}
+
+  isBrowser = isPlatformBrowser(inject(PLATFORM_ID))
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') {

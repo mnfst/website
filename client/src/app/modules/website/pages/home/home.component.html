@@ -677,15 +677,14 @@
         <div class="columns is-multiline mb-0">
           <div class="column is-12">
             <div class="columns is-multiline">
-              <div
-                class="column is-4"
-                *ngFor="let template of featuredTemplates"
-              >
+              @for (template of featuredTemplates; track template.id) {
+              <div class="column is-4">
                 <app-template-card
                   [template]="template"
                   theme="dark"
                 ></app-template-card>
               </div>
+              }
             </div>
           </div>
 

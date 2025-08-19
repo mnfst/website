@@ -21,12 +21,14 @@
         <div class="columns">
           <div class="column is-12">
             <div class="columns is-multiline">
-              <div class="column is-3" *ngFor="let template of templates">
+              @for (template of templates; track template.id) {
+              <div class="column is-3">
                 <app-template-card
                   [template]="template"
                   theme="light"
                 ></app-template-card>
               </div>
+              }
             </div>
           </div>
         </div>
