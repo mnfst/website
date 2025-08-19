@@ -1,4 +1,5 @@
-<div class="hero" *ngIf="template">
+@if (template) {
+<div class="hero">
   <div class="hero-body has-background-bis has-border-bottom">
     <div class="container">
       <div class="columns">
@@ -14,25 +15,24 @@
           </a>
           <h1 class="title is-2">{{ template.name }}</h1>
           <p class="content is-normal">{{ template.excerpt }}</p>
-
           <div class="tags">
-            <div
-              class="tag is-bordered is-white"
-              *ngFor="let useCase of template.useCases"
-            >
+            @for (useCase of template.useCases; track useCase) {
+            <div class="tag is-bordered is-white">
               <span
                 [ngClass]="'type-' + useCase.toLowerCase().split(' ').join('-')"
               >
-                {{ useCase }}</span
-              >
+                {{ useCase }}
+              </span>
             </div>
+            }
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container-full has-background-white mt-3" *ngIf="template">
+} @if (template) {
+<div class="container-full has-background-white mt-3">
   <div class="container">
     <div class="columns">
       <div class="column is-12">
@@ -82,10 +82,15 @@
             </div>
             <div class="column is-9">
               <div class="tpl-content">
-                <div class="content" *ngIf="selectedTab === 'db'">
-                  <img src="./assets/images/templates/{{ template.diagram }}" />
+                @if (selectedTab === 'db') {
+                <div class="content mb-0">
+                  <img
+                    class="is-block"
+                    src="./assets/images/templates/{{ template.diagram }}"
+                  />
                 </div>
-                <div class="content" *ngIf="selectedTab === 'api'">
+                } @if (selectedTab === 'api') {
+                <div class="content mb-0">
                   <div class="m-5">
                     <div class="select mb-5">
                       <select
@@ -99,33 +104,33 @@
                         <option value="">All endpoints</option>
                       </select>
                     </div>
-
-                    <ng-container *ngFor="let endpoint of filteredEndpoints">
-                      <div>
-                        <div
-                          class="content is-flex is-align-items-flex-start is-justify-content-flfex-start mb-2"
-                        >
-                          <span class="tag is-small is-dark mr-3">{{
-                            endpoint.method
-                          }}</span>
-                          <div>
-                            <p class="has-text-weight-bold">
-                              {{ endpoint.path }} - {{ endpoint.summary }}
-                              <span
-                                class="tag is-disabled"
-                                *ngIf="endpoint.auth"
-                                >🔒 {{ endpoint.auth }}</span
-                              >
-                            </p>
-                          </div>
+                    @for (endpoint of filteredEndpoints; track endpoint) {
+                    <div>
+                      <div
+                        class="content is-flex is-align-items-flex-start is-justify-content-flfex-start mb-2"
+                      >
+                        <span class="tag is-small is-dark mr-3">{{
+                          endpoint.method
+                        }}</span>
+                        <div>
+                          <p class="has-text-weight-bold">
+                            {{ endpoint.path }} - {{ endpoint.summary }}
+                            @if (endpoint.auth) {
+                            <span class="tag is-disabled"
+                              >🔒 {{ endpoint.auth }}</span
+                            >
+                            }
+                          </p>
                         </div>
-                        <p>{{ endpoint.description }}</p>
-                        <hr />
                       </div>
-                    </ng-container>
+                      <p>{{ endpoint.description }}</p>
+                      <hr />
+                    </div>
+                    }
                   </div>
                 </div>
-                <div class="content" *ngIf="selectedTab === 'code'">
+                } @if (selectedTab === 'code') {
+                <div class="content mb-0">
                   <div class="ui-ide is-fullwidth is-bordered">
                     <div class="ide">
                       <div class="sidebar has-text-grey-dark">
@@ -133,7 +138,6 @@
                           <span>explorer</span>
                           <i class="fa-solid fa-ellipsis"></i>
                         </div>
-
                         <div
                           class="explorer-item level-2 is-clickable"
                           (click)="selectedFile = 'manifest.yml'"
@@ -146,58 +150,46 @@
                           ></i>
                           <span class="">manifest.yml</span>
                         </div>
-                        <ng-container
-                          *ngIf="template.repo.content.handlers?.length > 0"
+                        @if (template.repo.content.handlers?.length > 0) {
+                        <div
+                          class="explorer-item level-2 has-1-children is-parent"
                         >
-                          <div
-                            class="explorer-item level-2 has-1-children is-parent"
-                          >
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <i class="fa fa-folder has-text-grey-light"></i>
-                            <span class="">handlers</span>
-                          </div>
-                          <div
-                            class="explorer-item level-3 is-clickable"
-                            (click)="selectedFile = handler.name"
-                            [ngClass]="{
-                              'is-active': selectedFile === handler.name
-                            }"
-                            *ngFor="
-                              let handler of template.repo.content.handlers
-                            "
-                          >
-                            <i class="lni lni-javascript has-text-warning"></i>
-                            <span class="">{{ handler.name }}</span>
-                          </div>
-                        </ng-container>
+                          <i class="fa-solid fa-chevron-down"></i>
+                          <i class="fa fa-folder has-text-grey-light"></i>
+                          <span class="">handlers</span>
+                        </div>
+                        @for (handler of template.repo.content.handlers; track
+                        handler.name) {
+                        <div
+                          class="explorer-item level-3 is-clickable"
+                          (click)="selectedFile = handler.name"
+                          [ngClass]="{
+                            'is-active': selectedFile === handler.name
+                          }"
+                        >
+                          <i class="lni lni-javascript has-text-warning"></i>
+                          <span class="">{{ handler.name }}</span>
+                        </div>
+                        } }
                       </div>
                       <div class="editor-container">
                         <div class="editor-template">
                           <div class="code">
                             <!-- manifest.yml -->
-
-                            <ng-container
-                              *ngIf="selectedFile === 'manifest.yml'"
-                            >
-                              <pre class="pre mt-0 p-0">
-                                <code #codeBlock class="hljs language-yaml has-text-left is-size-7">{{ template.repo.content.manifestFileContent }}</code>
-                                </pre>
-                            </ng-container>
-
+                            @if (selectedFile === 'manifest.yml') {
+                            <pre class="pre mt-0 p-0">
+                                        <code #codeBlock class="hljs language-yaml has-text-left is-size-7">{{ template.repo.content.manifestFileContent }}</code>
+                                    </pre>
+                            }
                             <!-- handlers -->
                             <ng-container #handlerBlocks>
-                              <ng-container
-                                *ngFor="
-                                  let handler of template.repo.content.handlers
-                                "
-                              >
-                                <pre
-                                  class="pre mt-0 p-0"
-                                  *ngIf="selectedFile === handler.name"
-                                >
-                                <code #codeBlock class="hljs language-javascript has-text-left is-size-7">{{ handler.content }}</code>
-                              </pre>
-                              </ng-container>
+                              @for (handler of template.repo.content.handlers;
+                              track handler.name) { @if (selectedFile ===
+                              handler.name) {
+                              <pre class="pre mt-0 p-0">
+                                            <code #codeBlock class="hljs language-javascript has-text-left is-size-7">{{ handler.content }}</code>
+                                        </pre>
+                              } }
                             </ng-container>
                           </div>
                         </div>
@@ -205,18 +197,21 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="m-5 content">
-                  <h2 class="title is-4">Overview</h2>
-                  <div [innerHTML]="template.description"></div>
-                  <ng-container *ngFor="let faq of faqContent">
+                }
+                <div class="tpl-inline-content">
+                  <div class="m-5 content">
+                    <h2 class="title is-4">Overview</h2>
+                    <div [innerHTML]="template.description"></div>
+                    @for (faq of faqContent; track faq.question) {
                     <h2 class="title is-4">{{ faq.question }}</h2>
                     <p>{{ faq.answer }}</p>
-                  </ng-container>
+                    }
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="column is-3" *ngIf="template.repo">
+            @if (template.repo) {
+            <div class="column is-3">
               <div class="tpl-sidebar p-5">
                 <div class="content">
                   <div class="mb-5">
@@ -233,29 +228,30 @@
                       <span>Use this template</span>
                     </a>
                   </div>
-                  <ng-container *ngIf="template.features?.length > 0">
-                    <p>
-                      <strong>Features:</strong>
-                    </p>
-                    <div class="tags">
-                      <div
-                        class="tag is-light is-rounded"
-                        [ngClass]="
-                          feature.toLowerCase() === 'storage'
-                            ? 'is-danger'
-                            : feature.toLowerCase() === 'endpoints'
-                            ? 'is-info'
-                            : feature.toLowerCase() === 'auth'
-                            ? 'is-warning'
-                            : 'is-success'
-                        "
-                        *ngFor="let feature of template.features"
-                      >
-                        {{ feature }}
-                      </div>
+                  @if (template.features?.length > 0) {
+                  <p>
+                    <strong>Features:</strong>
+                  </p>
+                  <div class="tags">
+                    @for (feature of template.features; track feature) {
+                    <div
+                      class="tag is-light is-rounded"
+                      [ngClass]="
+                        feature.toLowerCase() === 'storage'
+                          ? 'is-danger'
+                          : feature.toLowerCase() === 'endpoints'
+                          ? 'is-info'
+                          : feature.toLowerCase() === 'auth'
+                          ? 'is-warning'
+                          : 'is-success'
+                      "
+                    >
+                      {{ feature }}
                     </div>
-                    <hr />
-                  </ng-container>
+                    }
+                  </div>
+                  <hr />
+                  }
                   <p>
                     <strong>Version:</strong>
                   </p>
@@ -266,7 +262,6 @@
                   </p>
                   <hr />
                   <p><strong>Author</strong>:</p>
-
                   <a
                     [href]="template.repo.owner.profileUrl"
                     target="_blank"
@@ -284,14 +279,11 @@
                     >
                   </a>
                   <hr />
-
                   <p><strong>Dependencies</strong><br /></p>
-                  <div
-                    *ngFor="
-                      let dependency of template.repo.content.packageJsonContent
-                        .dependencies
-                    "
-                  >
+                  @for (dependency of
+                  template.repo.content.packageJsonContent.dependencies; track
+                  dependency.name) {
+                  <div>
                     <a
                       href="https://www.npmjs.com/package/{{ dependency.name }}"
                       target="_blank"
@@ -299,24 +291,26 @@
                     >
                     : {{ dependency.version }}
                   </div>
+                  }
                   <hr />
-                  <ng-container *ngIf="template.tags?.length > 0">
-                    <p><strong>Tags:</strong></p>
-                    <div class="tags">
-                      <div
-                        class="tag is-white-bis"
-                        *ngFor="let tag of template.tags"
-                      >
-                        {{ tag }}
-                      </div>
+                  @if (template.tags?.length > 0) {
+                  <p><strong>Tags:</strong></p>
+                  <div class="tags">
+                    @for (tag of template.tags; track tag) {
+                    <div class="tag is-white-bis">
+                      {{ tag }}
                     </div>
-                  </ng-container>
+                    }
+                  </div>
+                  }
                 </div>
               </div>
             </div>
+            }
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+}

@@ -2568,14 +2568,23 @@ pre {
   border-right: 1px solid utilities.$border;
   border-left: 1px solid utilities.$border;
   border-top: 1px solid utilities.$white;
+  height: 100%;
 }
 
 .tpl-sidebar {
   border-left: 1px solid utilities.$white;
   border-top: 1px solid utilities.$white;
   border-right: 1px solid utilities.$border;
+  height: 100%;
   @include mixins.desktop {
   }
+}
+
+.tpl-inline-content {
+  border-top: 1px solid utilities.$border;
+}
+.tpl-wrapper {
+  border-bottom: 1px solid utilities.$border;
 }
 
 //  editor

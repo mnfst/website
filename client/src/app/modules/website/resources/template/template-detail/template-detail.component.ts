@@ -1,4 +1,4 @@
-import { NgClass, NgFor, NgIf } from '@angular/common'
+import { NgClass } from '@angular/common'
 import {
   AfterViewInit,
   Component,
@@ -23,7 +23,7 @@ hljs.registerLanguage('javascript', javascript)
 @Component({
   selector: 'app-template-detail',
   standalone: true,
-  imports: [NgIf, NgFor, NgClass, RouterLink],
+  imports: [NgClass, RouterLink],
   templateUrl: './template-detail.component.html',
   styleUrls: ['./template-detail.component.scss']
 })
