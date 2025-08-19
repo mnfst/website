@@ -20,6 +20,13 @@ import { templateDetailFAQContent } from './template-detail-faq.content'
 hljs.registerLanguage('yaml', yaml)
 hljs.registerLanguage('javascript', javascript)
 
+// Add Handler interface
+interface Handler {
+  name: string
+  content: string
+  highlightedContent?: string
+}
+
 @Component({
   selector: 'app-template-detail',
   standalone: true,
@@ -37,6 +44,8 @@ export class TemplateDetailComponent implements AfterViewInit {
 
   endpoints: Endpoint[] = []
   filteredEndpoints: Endpoint[] = []
+
+  highlightedManifestContent = ''
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -93,6 +102,23 @@ export class TemplateDetailComponent implements AfterViewInit {
       )
       this.filterEndpoints({ value: 'Public' })
     }
+
+    // Highlight manifest content for display
+    if (this.template?.repo?.content?.manifestFileContent) {
+      this.highlightedManifestContent = hljs.highlight(
+        this.template.repo.content.manifestFileContent,
+        { language: 'yaml' }
+      ).value
+    }
+
+    // Highlight handler code for display
+    if (this.template?.repo?.content?.handlers?.length) {
+      ;(this.template.repo.content.handlers as Handler[]).forEach((handler) => {
+        handler.highlightedContent = hljs.highlight(handler.content || '', {
+          language: 'javascript'
+        }).value
+      })
+    }
   }
 
   filterEndpoints(eventTarget: any) {
@@ -111,7 +137,7 @@ export class TemplateDetailComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.codeBlocks.forEach((block) => {
       const el = block.nativeElement
-      // Ajoute les classes nécessaires pour appliquer le thème
+
       if (!el.classList.contains('hljs')) {
         el.classList.add('hljs')
       }

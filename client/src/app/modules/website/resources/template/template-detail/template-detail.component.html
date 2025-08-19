@@ -178,7 +178,7 @@
                             <!-- manifest.yml -->
                             @if (selectedFile === 'manifest.yml') {
                             <pre class="pre mt-0 p-0">
-                                        <code #codeBlock class="hljs language-yaml has-text-left is-size-7">{{ template.repo.content.manifestFileContent }}</code>
+                                        <code #codeBlock class="hljs language-yaml has-text-left is-size-7" [innerHTML]="highlightedManifestContent"></code>
                                     </pre>
                             }
                             <!-- handlers -->
@@ -187,8 +187,8 @@
                               track handler.name) { @if (selectedFile ===
                               handler.name) {
                               <pre class="pre mt-0 p-0">
-                                            <code #codeBlock class="hljs language-javascript has-text-left is-size-7">{{ handler.content }}</code>
-                                        </pre>
+                                    <code #codeBlock class="hljs language-javascript has-text-left is-size-7" [innerHTML]="$any(handler).highlightedContent"></code>
+                                </pre>
                               } }
                             </ng-container>
                           </div>
