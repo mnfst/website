@@ -6,8 +6,8 @@
           <h1 class="title is-2">Backend Templates</h1>
           <p>
             Templates are ready-to-use 1-file backends. They give you a working
-            backend so you can focus on the frontend and deliver your MVPs in no
-            time.
+            backend so you can <strong>focus on the frontend</strong> and
+            <strong>deliver your MVPs</strong> in no time.
           </p>
         </div>
       </div>
@@ -17,33 +17,29 @@
 <div class="section has-background-white pt-5">
   <div class="container mt-1">
     <div class="columns is-multiline">
-      <div class="column is-12">
-        <div class="columns">
-          <div class="column is-12">
-            <div class="columns is-multiline">
-              @if (loading) {
-              <div class="column is-4">
-                <div class="skeleton-block"></div>
-              </div>
-              <div class="column is-4">
-                <div class="skeleton-block"></div>
-              </div>
-              <div class="column is-4">
-                <div class="skeleton-block"></div>
-              </div>
-              } @else { @for (template of templates; track template.id; let idx
-              = $index) {
-              <div class="column is-4">
-                <app-template-card
-                  [template]="template"
-                  theme="light"
-                ></app-template-card>
-              </div>
-              } }
-            </div>
-          </div>
-        </div>
+      @if (loading) {
+      <div class="column is-4">
+        <div class="skeleton-block"></div>
       </div>
+      <div class="column is-4">
+        <div class="skeleton-block"></div>
+      </div>
+      <div class="column is-4">
+        <div class="skeleton-block"></div>
+      </div>
+      } @else if (templates.length > 0) { @for (template of templates; track
+      template.id; let idx = $index) {
+      <div class="column is-4">
+        <app-template-card
+          [template]="template"
+          theme="light"
+        ></app-template-card>
+      </div>
+      } } @else {
+      <div class="column is-12">
+        <p>No templates found</p>
+      </div>
+      }
     </div>
   </div>
 </div>
