@@ -239,7 +239,16 @@
                     </p>
                     <div class="tags">
                       <div
-                        class="tag is-white is-rounded"
+                        class="tag is-light is-rounded"
+                        [ngClass]="
+                          feature.toLowerCase() === 'storage'
+                            ? 'is-danger'
+                            : feature.toLowerCase() === 'endpoints'
+                            ? 'is-info'
+                            : feature.toLowerCase() === 'auth'
+                            ? 'is-warning'
+                            : 'is-success'
+                        "
                         *ngFor="let feature of template.features"
                       >
                         {{ feature }}
@@ -261,7 +270,7 @@
                   <a
                     [href]="template.repo.owner.profileUrl"
                     target="_blank"
-                    class="avatar is-flex is-align-items-center is-justify-content-flex-start has-text-dark is-ghost"
+                    class="avatar is-flex is-align-items-center is-justify-content-flex-start has-text-dark ghost"
                   >
                     <figure class="image is-32x32">
                       <img
