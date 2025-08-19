@@ -180,7 +180,8 @@
                               *ngIf="selectedFile === 'manifest.yml'"
                             >
                               <pre class="pre mt-0 p-0">
-                                <code #codeBlock class="hljs language-yaml has-text-left is-size-7">{{ template.repo.content.manifestFileContent }}</code>
+                                <code #codeBlock class="hljs language-yaml has-text-left is-size-7"
+                                >{{ template.repo.content.manifestFileContent }}</code>
                                 </pre>
                             </ng-container>
 
@@ -195,7 +196,7 @@
                                   class="pre mt-0 p-0"
                                   *ngIf="selectedFile === handler.name"
                                 >
-                                <code #codeBlock class="hljs language-javascript has-text-left is-size-7">{{ handler.content }}</code>
+                                <code #codeBlock class="hljs language-javascript has-text-left is-size-7" >{{ handler.content }}</code>
                               </pre>
                               </ng-container>
                             </ng-container>
