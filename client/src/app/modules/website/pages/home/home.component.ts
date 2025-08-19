@@ -32,7 +32,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   featuresB = ['Easy to validate', 'Minimal token usage']
   featuresC = ['Integrates anywhere']
 
-  templates: Template[] = templates
+  templates: Template[] = []
+  loading = true
   featured?: boolean
 
   get featuredTemplates(): Template[] {
@@ -62,6 +63,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       this.startAutoSwap()
     }
+    setTimeout(() => {
+      this.templates = templates
+      this.loading = false
+    }, 600) // Simulate loading delay
   }
 
   ngOnDestroy() {
