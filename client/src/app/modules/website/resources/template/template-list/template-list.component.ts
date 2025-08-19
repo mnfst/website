@@ -10,5 +10,7 @@ import { templates } from '../templates.content'
   styleUrl: './template-list.component.scss'
 })
 export class TemplateListComponent {
-  templates: Template[] = templates
+  templates: Template[] = Array.from(
+    new Map(templates.map((t) => [t.id, t])).values()
+  )
 }

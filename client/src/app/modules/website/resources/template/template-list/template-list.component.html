@@ -21,8 +21,9 @@
         <div class="columns">
           <div class="column is-12">
             <div class="columns is-multiline">
-              @for (template of templates; track template.id) {
-              <div class="column is-3">
+              @for (template of templates; track template.id; let idx = $index)
+              {
+              <div class="column is-4">
                 <app-template-card
                   [template]="template"
                   theme="light"
