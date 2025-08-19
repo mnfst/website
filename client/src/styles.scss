@@ -47,6 +47,7 @@
   $card-content-padding: 2rem
 );
 @use 'bulma/sass/form';
+@use 'bulma/sass/base/skeleton';
 @use 'bulma/sass/base' with (
   $body-background-color: #f8f9fa
 );
@@ -107,6 +108,10 @@ $curved: 15px !default;
 
 // Now import Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --bulma-skeleton-block-min-height: 213px;
+}
 
 .has-background-transparent {
   background-color: transparent;
