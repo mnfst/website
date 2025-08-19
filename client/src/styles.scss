@@ -60,6 +60,9 @@
 @forward 'bulma/sass/layout';
 @forward 'bulma/sass/themes';
 
+// Set $pre-background before any Bulma code that uses it
+$pre-background: transparent;
+
 // Now variable declarations
 $black: #161617 !default;
 $darkness: #22110c !default; // Some titles
@@ -2203,6 +2206,9 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
     background-color: #1e1e1e;
   }
 }
+pre {
+  background-color: $pre-background;
+}
 .ide {
   display: flex;
   align-items: flex-start;
@@ -2276,6 +2282,7 @@ main .content a:not(.button):not(.icon-text):not(.faq-question) {
       min-height: $livecode-height-tablet;
       height: auto;
       display: flex;
+
       @include mixins.mobile {
         min-height: $livecode-height-mobile;
         height: auto;

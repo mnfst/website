@@ -36,7 +36,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   featured?: boolean
 
   get featuredTemplates(): Template[] {
-    return this.templates.slice(0, 1)
+    const seen = new Set<number>()
+    return this.templates
+      .filter((t) => {
+        if (seen.has(t.id)) return false
+        seen.add(t.id)
+        return true
+      })
+      .slice(0, 3)
   }
 
   images = [
