@@ -1,6 +1,66 @@
 @use 'sass:math';
 @use 'sass:list';
+@use 'lineicons/dist/lineicons.css' as *;
+@use '@fortawesome/fontawesome-free/scss/fontawesome.scss' as *;
+@use '@fortawesome/fontawesome-free/scss/brands.scss' as *;
+@use '@fortawesome/fontawesome-free/scss/regular.scss' as *;
+@use '@fortawesome/fontawesome-free/scss/solid.scss' as *;
+@use 'bulma/sass/utilities' with (
+  $size-1: 2.986rem,
+  $size-2: 2.488rem,
+  $size-3: 2.074rem,
+  $size-4: 1.728rem,
+  $size-5: 1.44rem,
+  $size-6: 1.2rem,
+  $size-7: 1rem,
+  $danger: #ff5e5b,
+  $success: #2be1b7,
+  $info: #e12bb0,
+  $warning: #f2c79c,
+  $link: #2430f0,
+  $primary: #7209b7,
+  $dark: #1a1a1c,
+  $black-ter: #24292e,
+  $weight-medium: 600,
+  $border: #dadadb,
+  $family-sans-serif: "'Inter', sans-serif"
+);
+@use 'bulma/sass/utilities/mixins';
+@use 'bulma/sass/utilities/functions';
+@use 'bulma/sass/utilities/extends';
+@use 'bulma/sass/helpers' with (
+  $spacing-values: (
+    '0': 0,
+    '1': 0.25rem,
+    '2': 0.5rem,
+    '3': 0.75rem,
+    '4': 1rem,
+    '5': 1.5rem,
+    '6': 3rem,
+    '7': 6rem,
+    'auto': auto
+  )
+);
+@use 'bulma/sass/components' with (
+  $navbar-height: 4.4rem,
+  $card-radius: 0rem,
+  $card-content-padding: 2rem
+);
+@use 'bulma/sass/form';
+@use 'bulma/sass/base' with (
+  $body-background-color: #f8f9fa
+);
+@use 'bulma/sass/elements' with (
+  $title-weight: 900,
+  $notification-padding: 0.5em 2em,
+  $notification-radius: 0,
+  $content-heading-weight: 900
+);
+@forward 'bulma/sass/grid';
+@forward 'bulma/sass/layout';
+@forward 'bulma/sass/themes';
 
+// Now variable declarations
 $black: #161617 !default;
 $darkness: #22110c !default; // Some titles
 $black-bis: #0d0e0e !default;
@@ -42,70 +102,8 @@ $livecode-height-tablet: auto !default;
 $livecode-sidebar-height-tablet: auto !default;
 $curved: 15px !default;
 
-@use 'bulma/sass/utilities' with (
-  $size-1: 2.986rem,
-  $size-2: 2.488rem,
-  $size-3: 2.074rem,
-  $size-4: 1.728rem,
-  $size-5: 1.44rem,
-  $size-6: 1.2rem,
-  $size-7: 1rem,
-  $danger: #ff5e5b,
-  $success: #2be1b7,
-  $info: #e12bb0,
-  $warning: #f2c79c,
-  $link: #2430f0,
-  $primary: #7209b7,
-  $dark: $dark,
-  $black-ter: $black-ter,
-  $weight-medium: 600,
-  $border: $grey-lighter,
-  $family-sans-serif: "'Inter', sans-serif"
-);
-
-@use 'bulma/sass/utilities/mixins';
-@use 'bulma/sass/utilities/functions';
-@use 'bulma/sass/utilities/extends';
-@use 'bulma/sass/helpers' with (
-  $spacing-values: (
-    '0': 0,
-    '1': 0.25rem,
-    '2': 0.5rem,
-    '3': 0.75rem,
-    '4': 1rem,
-    '5': 1.5rem,
-    '6': 3rem,
-    '7': 6rem,
-    'auto': auto
-  )
-);
-
-@use 'bulma/sass/components' with (
-  $navbar-height: 4.4rem,
-  $card-radius: 0rem,
-  $card-content-padding: 2rem
-);
-@use 'bulma/sass/form';
-@use 'bulma/sass/base' with (
-  $body-background-color: $white-ter
-);
-@use 'bulma/sass/elements' with (
-  $title-weight: 900,
-  $notification-padding: 0.5em 2em,
-  $notification-radius: 0,
-  $content-heading-weight: 900
-);
-
-@forward 'bulma/sass/grid';
-@forward 'bulma/sass/layout';
-@forward 'bulma/sass/themes';
-
+// Now import Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import 'lineicons/dist/lineicons.css';
-@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '@fortawesome/fontawesome-free/scss/brands.scss';
-@import '@fortawesome/fontawesome-free/scss/regular.scss';
-@import '@fortawesome/fontawesome-free/scss/solid.scss';
 
 .has-background-transparent {
   background-color: transparent;
