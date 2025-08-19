@@ -229,7 +229,7 @@
                     </a>
                   </div>
                   @if (template.features?.length > 0) {
-                  <p>
+                  <p class="mb-2">
                     <strong>Features:</strong>
                   </p>
                   <div class="tags">
@@ -252,7 +252,7 @@
                   </div>
                   <hr />
                   }
-                  <p>
+                  <p class="mb-2">
                     <strong>Version:</strong>
                   </p>
                   <p>
@@ -261,7 +261,7 @@
                     }}
                   </p>
                   <hr />
-                  <p><strong>Author</strong>:</p>
+                  <p class="mb-2"><strong>Author</strong>:</p>
                   <a
                     [href]="template.repo.owner.profileUrl"
                     target="_blank"
@@ -279,7 +279,7 @@
                     >
                   </a>
                   <hr />
-                  <p><strong>Dependencies</strong><br /></p>
+                  <p class="mb-2"><strong>Dependencies</strong><br /></p>
                   @for (dependency of
                   template.repo.content.packageJsonContent.dependencies; track
                   dependency.name) {
@@ -294,7 +294,7 @@
                   }
                   <hr />
                   @if (template.tags?.length > 0) {
-                  <p><strong>Tags:</strong></p>
+                  <p class="mb-2"><strong>Tags:</strong></p>
                   <div class="tags">
                     @for (tag of template.tags; track tag) {
                     <div class="tag is-white-bis">
