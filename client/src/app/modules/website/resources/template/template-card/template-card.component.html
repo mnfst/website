@@ -20,6 +20,29 @@
           >
             {{ template?.name }}
           </h3>
+          @if (template?.features?.length > 0) {
+          <div class="tags mb-2 are-small">
+            @for (feature of template.features; track feature) {
+            <span
+              class="tag is-light is-rounded is-small"
+              [ngClass]="
+                feature.toLowerCase() === 'storage'
+                  ? 'is-danger'
+                  : feature.toLowerCase() === 'endpoints'
+                  ? 'is-info'
+                  : feature.toLowerCase() === 'email validation'
+                  ? 'is-primary'
+                  : feature.toLowerCase() === 'validation'
+                  ? 'is-link'
+                  : feature.toLowerCase() === 'auth'
+                  ? 'is-warning'
+                  : 'is-success'
+              "
+              >{{ feature }}</span
+            >
+            }
+          </div>
+          }
           <p class="mb-3">{{ template?.excerpt }}</p>
         </div>
         <div
