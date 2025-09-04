@@ -25,7 +25,12 @@ import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clip
 })
 export class HomeComponent implements OnInit, OnDestroy {
   featuresA = ['Ship insanely fast']
-  featuresB = ['Easy to validate', 'Minimal token usage']
+  featuresB = [
+    'Easy to validate',
+    'Minimal token usage',
+    'YAML OpenAPI spec',
+    'TypeScript types'
+  ]
   featuresC = ['Integrates anywhere']
 
   images = [
