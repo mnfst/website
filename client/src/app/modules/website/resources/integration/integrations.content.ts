@@ -300,7 +300,7 @@ This guide does not ensure persistent data for the database and the storage.</p>
   {
     title: 'Upload media to DigitalOcean Spaces with Manifest',
     name: 'Digital Ocean Spaces',
-    slug: 'dropbox',
+    slug: 'digital-ocean-spaces',
     excerpt:
       'Learn how to store and access files with DigitalOcean Spaces (S3-Compatible Object Storage) for your Manifest backend.',
     cover:
