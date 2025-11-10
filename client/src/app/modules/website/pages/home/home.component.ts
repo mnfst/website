@@ -1,29 +1,37 @@
-import { isPlatformBrowser, NgClass, NgFor } from '@angular/common'
+import { NgClass, NgFor, NgIf } from '@angular/common'
 import {
   Component,
+  DOCUMENT,
+  ElementRef,
   Inject,
   OnDestroy,
   OnInit,
-  PLATFORM_ID
+  ViewChild
 } from '@angular/core'
 import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
 import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
 import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
+import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
+import { environment } from '../../../../../environments/environment'
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     NgFor,
+    NgIf,
     NgClass,
     WaitingListFormComponent,
     CopyButtonComponent,
-    LiveCodeHeroComponent
+    LiveCodeHeroComponent,
+    SurveyModalComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild('promptInput') promptInput: ElementRef<HTMLTextAreaElement>
+
   featuresA = ['Ship insanely fast']
   featuresB = [
     'Easy to validate',
@@ -39,16 +47,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     './assets/images/admin.svg',
     './assets/images/doc-api.svg'
   ]
+  isSurveyModalVisible = false
 
   swapIndex = 0
   private autoSwapInterval: any
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.startAutoSwap()
-    }
+    // if (isPlatformBrowser(this.platformId)) {
+    //   this.startAutoSwap()
+    // }
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.promptInput.nativeElement.focus()
+    }, 0)
   }
 
   ngOnDestroy() {
@@ -82,5 +97,23 @@ export class HomeComponent implements OnInit, OnDestroy {
         class: imageClass
       }
     })
+  }
+
+  showSurveyModal() {
+    console.log('Showing survey modal')
+    this.isSurveyModalVisible = true
+  }
+
+  onClose(isSurveySubmitted: boolean) {
+    this.isSurveyModalVisible = false
+    if (isSurveySubmitted) {
+      const params = new URLSearchParams({
+        prompt: this.promptInput.nativeElement.value
+      })
+
+      this.document.location.href = `${environment.vibeCodingToolUrl}?${params}`
+    } else {
+      console.log('Survey modal was closed without submission')
+    }
   }
 }

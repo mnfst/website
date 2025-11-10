@@ -18,6 +18,13 @@
               <h1 class="title is-0 mb-5">
                 <span class="title-gradient">1-file backend </span> to ship fast
               </h1>
+
+              <textarea name="" id="" class="textarea" #promptInput></textarea>
+
+              <button class="button is-primary" (click)="showSurveyModal()">
+                Submit
+              </button>
+
               <p class="subtitle">
                 Manifest is an
                 <strong>open source, portable backend</strong> with
@@ -1266,3 +1273,6 @@
     </div>
   </div>
 </div>
+
+<app-survey-modal *ngIf="isSurveyModalVisible" (close)="onClose($event)">
+</app-survey-modal>
