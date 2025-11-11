@@ -38,6 +38,16 @@
                 </button>
               </form>
 
+              <ul class="tags are-normal is-justify-content-center mt-0">
+                <li
+                  class="tag is-normal is-white is-hoverable is-bordered"
+                  *ngFor="let suggestion of suggestions"
+                  (click)="chooseSuggestion(suggestion)"
+                >
+                  {{ suggestion }}
+                </li>
+              </ul>
+
               <p class="subtitle">
                 Manifest is an
                 <strong>open source, portable backend</strong> with

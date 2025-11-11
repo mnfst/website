@@ -40,6 +40,16 @@ import { HttpClient } from '@angular/common/http'
 export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('promptInput') promptInput: ElementRef<HTMLTextAreaElement>
 
+  suggestions: string[] = [
+    '%% Update that list',
+    'The backend of the Pokedex',
+    'A contact form API',
+    'The backend of my portfolio website',
+    'A backend for a VC company',
+    'The backend of a dating app',
+    'A WordPress clone'
+  ]
+
   featuresA = ['Ship insanely fast']
   featuresB = [
     'Easy to validate',
@@ -113,6 +123,11 @@ export class HomeComponent implements OnInit, OnDestroy {
         class: imageClass
       }
     })
+  }
+
+  chooseSuggestion(suggestion: string) {
+    this.form.patchValue({ prompt: suggestion })
+    this.showSurveyModal()
   }
 
   showSurveyModal() {
