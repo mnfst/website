@@ -127,7 +127,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   chooseSuggestion(suggestion: string) {
     this.form.patchValue({ prompt: suggestion })
-    this.showSurveyModal()
+    setTimeout(() => {
+      this.showSurveyModal()
+    }, 200) // Slight delay to see the value update.
   }
 
   showSurveyModal() {
@@ -155,7 +157,9 @@ export class HomeComponent implements OnInit, OnDestroy {
             p: response.id.toString() // project id
           })
 
-          this.document.location.href = `${environment.vibeCodingToolUrl}?${params}`
+          this.document.location.href = `${
+            environment.vibeCodingToolUrl
+          }?${params.toString()}`
         },
         error: (error) => {
           this.loading = false
