@@ -127,16 +127,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.loading = true
     this.http
-      .post(`${environment.cloudApiUrl}/projects`, {
+      .post<{ id: number }>(`${environment.cloudApiUrl}/projects`, {
         creatorName: formData.name,
         creatorEmail: formData.email,
         initialPrompt: this.form.value.prompt
       })
       .subscribe({
-        next: (response: any) => {
+        next: (response: { id: number }) => {
           this.loading = false
           const params = new URLSearchParams({
-            prompt: this.promptInput.nativeElement.value
+            prompt: this.promptInput.nativeElement.value,
+            p: response.id.toString() // project id
           })
 
           this.document.location.href = `${environment.vibeCodingToolUrl}?${params}`
