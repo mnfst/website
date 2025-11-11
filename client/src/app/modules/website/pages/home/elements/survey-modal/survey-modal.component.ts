@@ -1,47 +1,38 @@
-import { HttpClient } from '@angular/common/http'
 import { Component, EventEmitter, OnInit, Output } from '@angular/core'
-import { environment } from '../../../../../../../environments/environment'
-import { FormGroup } from '@angular/forms'
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms'
 
 @Component({
   selector: 'app-survey-modal',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './survey-modal.component.html',
   styleUrl: './survey-modal.component.scss'
 })
 export class SurveyModalComponent implements OnInit {
-  @Output() close: EventEmitter<boolean> = new EventEmitter<boolean>()
+  @Output() close: EventEmitter<{ name: string; email: string }> =
+    new EventEmitter<{ name: string; email: string }>()
 
   form: FormGroup
-  loading = false
-
-  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      /* TODO: form controls */
+      name: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email])
     })
   }
 
   onClose() {
-    this.close.emit(false /* Indicate modal is closed */)
+    this.close.emit(null)
   }
 
   submit() {
-    this.loading = true
-    this.http
-      .post(`${environment.apiSurveyUrl}/survey`, this.form.value)
-      .subscribe({
-        complete: () => {
-          this.loading = false
-          this.close.emit(true /* Indicate modal is closed after submission */)
-        },
-        error: (error) => {
-          this.loading = false
-          // Handle error (e.g., show a notification)
-          console.error('Survey submission failed', error)
-          this.close.emit(true /* Indicate modal is closed despite error */)
-        }
-      })
+    if (this.form.invalid) {
+      return
+    }
+    this.close.emit(this.form.value)
   }
 }

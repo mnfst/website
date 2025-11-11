@@ -19,11 +19,24 @@
                 <span class="title-gradient">1-file backend </span> to ship fast
               </h1>
 
-              <textarea name="" id="" class="textarea" #promptInput></textarea>
+              <form [formGroup]="form">
+                <textarea
+                  name="prompt-input"
+                  id="prompt-input"
+                  class="textarea"
+                  formControlName="prompt"
+                  #promptInput
+                ></textarea>
 
-              <button class="button is-primary" (click)="showSurveyModal()">
-                Submit
-              </button>
+                <button
+                  class="button is-primary"
+                  [ngClass]="{ 'is-loading': loading }"
+                  (click)="showSurveyModal()"
+                  [disabled]="!form.value['prompt'].length"
+                >
+                  Submit
+                </button>
+              </form>
 
               <p class="subtitle">
                 Manifest is an

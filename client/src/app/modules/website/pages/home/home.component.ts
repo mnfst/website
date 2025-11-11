@@ -12,7 +12,14 @@ import { WaitingListFormComponent } from '../../../../common/partials/waiting-li
 import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
 import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
 import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms'
 import { environment } from '../../../../../environments/environment'
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-home',
@@ -24,7 +31,8 @@ import { environment } from '../../../../../environments/environment'
     WaitingListFormComponent,
     CopyButtonComponent,
     LiveCodeHeroComponent,
-    SurveyModalComponent
+    SurveyModalComponent,
+    ReactiveFormsModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -48,16 +56,24 @@ export class HomeComponent implements OnInit, OnDestroy {
     './assets/images/doc-api.svg'
   ]
   isSurveyModalVisible = false
+  form: FormGroup
+  loading: boolean = false
 
   swapIndex = 0
   private autoSwapInterval: any
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private http: HttpClient
+  ) {}
 
   ngOnInit() {
     // if (isPlatformBrowser(this.platformId)) {
     //   this.startAutoSwap()
     // }
+    this.form = new FormGroup({
+      prompt: new FormControl('', Validators.required)
+    })
   }
 
   ngAfterViewInit(): void {
@@ -100,20 +116,38 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   showSurveyModal() {
-    console.log('Showing survey modal')
     this.isSurveyModalVisible = true
   }
 
-  onClose(isSurveySubmitted: boolean) {
+  onClose(formData: { name: string; email: string } | null) {
     this.isSurveyModalVisible = false
-    if (isSurveySubmitted) {
-      const params = new URLSearchParams({
-        prompt: this.promptInput.nativeElement.value
-      })
-
-      this.document.location.href = `${environment.vibeCodingToolUrl}?${params}`
-    } else {
-      console.log('Survey modal was closed without submission')
+    if (!formData) {
+      return
     }
+
+    this.loading = true
+    this.http
+      .post(`${environment.cloudApiUrl}/projects`, {
+        creatorName: formData.name,
+        creatorEmail: formData.email,
+        initialPrompt: this.form.value.prompt
+      })
+      .subscribe({
+        next: (response: any) => {
+          this.loading = false
+          const params = new URLSearchParams({
+            prompt: this.promptInput.nativeElement.value
+          })
+
+          this.document.location.href = `${environment.vibeCodingToolUrl}?${params}`
+        },
+        error: (error) => {
+          this.loading = false
+          console.error('Error creating project', error)
+          alert(
+            'There was an error creating your project. Please try again later.'
+          )
+        }
+      })
   }
 }

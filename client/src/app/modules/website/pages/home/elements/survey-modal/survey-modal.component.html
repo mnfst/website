@@ -6,27 +6,39 @@
       <div class="box">
         <h1 class="title is-4">Survey</h1>
         <p>We would love to hear your feedback!</p>
-        <form>
+        <form [formGroup]="form">
           <div class="field">
-            <label class="label">How did you find out about Manifest?</label>
+            <label class="label">Full Name</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Your answer" />
+              <input
+                class="input"
+                type="text"
+                placeholder="Your full name"
+                formControlName="name"
+              />
             </div>
           </div>
 
           <div class="field">
-            <label class="label">What features would you like to see?</label>
+            <label class="label">Email</label>
             <div class="control">
-              <textarea
-                class="textarea"
-                placeholder="Your suggestions"
-              ></textarea>
+              <input
+                class="input"
+                type="email"
+                placeholder="Your email"
+                formControlName="email"
+              />
             </div>
           </div>
 
           <div class="field is-grouped is-grouped-right">
             <div class="control">
-              <button type="button" class="button is-link" (click)="submit()">
+              <button
+                type="button"
+                class="button is-link"
+                [disabled]="form.invalid"
+                (click)="submit()"
+              >
                 Submit
               </button>
             </div>
