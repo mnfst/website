@@ -2697,6 +2697,26 @@ html.is-sticky {
     bottom: 8px;
     border-radius: 5px;
   }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 15px 30px rgba(36, 48, 240, 0.1),
+      /* #2430f0 */ 0 10px 20px rgba(43, 225, 183, 0.08),
+      /* #2be1b7 */ 0 6px 12px rgba(148, 47, 250, 0.06),
+      /* #942ffa */ 0 4px 8px rgba(255, 0, 110, 0.05),
+      /* #ff006e */ 0 2px 6px rgba(255, 208, 55, 0.04),
+      /* #ffd037 */ 0 1px 4px rgba(0, 206, 203, 0.03); /* #00cecb */
+    border-radius: 16px;
+    padding: 2rem;
+    color: #fff; /* optional, for text contrast */
+    pointer-events: none;
+    box-sizing: border-box;
+  }
 }
 
 .button.is-very-small {

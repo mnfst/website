@@ -1,4 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common'
+import { HttpClient } from '@angular/common/http'
 import {
   Component,
   DOCUMENT,
@@ -8,10 +9,6 @@ import {
   OnInit,
   ViewChild
 } from '@angular/core'
-import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
-import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
-import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
-import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
 import {
   FormControl,
   FormGroup,
@@ -19,7 +16,10 @@ import {
   Validators
 } from '@angular/forms'
 import { environment } from '../../../../../environments/environment'
-import { HttpClient } from '@angular/common/http'
+import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
+import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
+import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
+import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
 
 @Component({
   selector: 'app-home',
@@ -41,13 +41,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('promptInput') promptInput: ElementRef<HTMLTextAreaElement>
 
   suggestions: string[] = [
-    '%% Update that list',
-    'The backend of the Pokedex',
-    'A contact form API',
-    'The backend of my portfolio website',
-    'A backend for a VC company',
-    'The backend of a dating app',
-    'A WordPress clone'
+    'CRM to track leads and deals',
+    'Task tracker with team assignments',
+    'Internal dashboard for sales metrics',
+    'Contact form API',
+    'Customer support ticket system',
+    'Backend of a dating app',
+    'Inventory management tool'
   ]
 
   featuresA = ['Ship insanely fast']

@@ -1,108 +1,64 @@
 <div>
-  <div class="mt-6 pt-4">
-    <div class="container-fluid is-hero">
+  <section class="hero is-fullheight is-relative">
+    <div class="hero-body">
       <div class="container zi-1 has-text-centered">
         <div class="columns is-multiline">
-          <div class="column is-8 is-offset-2">
-            <span class="tag has-border-gradient px-3">
-              <span class="mx-1"
-                >⚡ Want to see an instant demo on your browser?
-                <a class="ghost" href="https://manifest.new" target="_blank">
-                  See Manifest in StackBlitz!
-                </a>
-              </span>
-            </span>
-          </div>
-          <div class="column is-8 is-offset-2">
+          <div class="column is-12">
             <div class="content is-normal">
               <h1 class="title is-0 mb-5">
-                <span class="title-gradient">1-file backend </span> to ship fast
+                Production-ready backends
+                <span class="title-gradient">in minutes</span>
               </h1>
-
-              <form [formGroup]="form">
-                <textarea
-                  name="prompt-input"
-                  id="prompt-input"
-                  class="textarea"
-                  formControlName="prompt"
-                  #promptInput
-                ></textarea>
-
-                <button
-                  class="button is-primary"
-                  [ngClass]="{ 'is-loading': loading }"
-                  (click)="showSurveyModal()"
-                  [disabled]="!form.value['prompt'].length"
-                >
-                  Submit
-                </button>
-              </form>
-
-              <ul class="tags are-normal is-justify-content-center mt-0">
-                <li
-                  class="tag is-normal is-white is-hoverable is-bordered"
-                  *ngFor="let suggestion of suggestions"
-                  (click)="chooseSuggestion(suggestion)"
-                >
-                  {{ suggestion }}
-                </li>
-              </ul>
-
-              <p class="subtitle">
-                Manifest is an
-                <strong>open source, portable backend</strong> with
-                <span class="">data</span>, <span class="">storage</span>,
-                <span class="">logic</span>,
-                <span class="">auth</span>
-
-                and
-                <span class="">admin UI</span>
-                to ship
-                <strong
-                  class="tag is-primary is-large has-text-primary is-light"
-                  >Prototypes</strong
-                >
-                and
-                <strong class="tag is-info is-large has-text-info is-light"
-                  >MVPs</strong
-                >.
-              </p>
             </div>
-          </div>
-          <div class="column is-12 pb-0 has-bh-wheel">
-            <div class="columns">
-              <div class="column is-6 is-offset-3 mb-4">
-                <app-copy-button></app-copy-button>
-                <div
-                  class="is-flex is-align-items-center is-justify-content-center p-4"
-                >
-                  <a
-                    href="https://manifest.build/docs"
-                    class="button is-dark is-small m-2"
-                  >
-                    <span>Get started</span>
-                  </a>
-                  <a
-                    href="https://github.com/mnfst/manifest"
-                    target="_blank"
-                    class="button is-white is-small has-icon m-2"
-                  >
-                    <div class="icon">
-                      <i class="fa fa-star has-text-warning"></i>
+            <div
+              class="column is-8 is-6-widescreen is-offset-2 is-offset-3-widescreen"
+            >
+              <div class="content is-normal">
+                <div class="prompt-container is-fullwidth">
+                  <form [formGroup]="form">
+                    <div
+                      class="control control--llm is-small has-border-gradient"
+                    >
+                      <textarea
+                        name="prompt-input"
+                        id="prompt-input"
+                        class="textarea has-fixed-size is-small"
+                        formControlName="prompt"
+                        #promptInput
+                      ></textarea>
+
+                      <button
+                        class="button is-dark send is-very-small"
+                        [ngClass]="{ 'is-loading': loading }"
+                        (click)="showSurveyModal()"
+                        [disabled]="!form.value['prompt'].length"
+                      >
+                        <span class="icon">
+                          <i
+                            class="fa-solid fa-arrow-up mt-1"
+                            style="margin-top: 2px"
+                          ></i>
+                        </span>
+                      </button>
                     </div>
-                    <span>Give a star</span>
-                  </a>
+                  </form>
                 </div>
+                <ul class="tags are-normal is-justify-content-center mt-4">
+                  <li
+                    class="tag is-small is-link is-light is-hoverable is-bordered m-0"
+                    *ngFor="let suggestion of suggestions"
+                    (click)="chooseSuggestion(suggestion)"
+                  >
+                    {{ suggestion }}
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-          <div class="column is-8 is-offset-2">
-            <app-live-code-hero></app-live-code-hero>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div class="container-full">
     <div class="container pt-6">
       <div class="columns is-gapless is-multiline mb-0">
@@ -1295,7 +1251,7 @@
       </div>
     </div>
   </div>
-</div>
 
-<app-survey-modal *ngIf="isSurveyModalVisible" (close)="onClose($event)">
-</app-survey-modal>
+  <app-survey-modal *ngIf="isSurveyModalVisible" (close)="onClose($event)">
+  </app-survey-modal>
+</div>

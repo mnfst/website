@@ -104,3 +104,23 @@
 .frontend-stack {
   filter: grayscale(100%);
 }
+
+.prompt-container {
+  position: relative;
+  display: inline-block;
+  padding: 6px; /* thickness of the “glass” border */
+  border-radius: 12px; /* rounded corners */
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(8px); /* blur elements behind */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+}
+
+.textarea {
+  border-width: 1px;
+  border-radius: 7px;
+}
+
+ul.tags {
+  position: relative;
+  z-index: 9;
+}
