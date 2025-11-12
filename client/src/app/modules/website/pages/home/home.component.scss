@@ -148,3 +148,160 @@ ul.tags {
     background-position: center center;
   }
 }
+
+.icon-pb {
+  width: 32px;
+  height: 32px;
+}
+
+.pearl-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  border-radius: 8px; /* slightly rounded corners */
+
+  /* pearl-like soft gradient background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(235, 240, 255, 0.3) 50%,
+    /* soft blue hint */ rgba(245, 235, 255, 0.3) 70%,
+    /* soft purple hint */ rgba(255, 255, 255, 0.98) 100%
+  );
+
+  /* subtle border to show separation */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* very discreet */
+
+  /* for icon engraved feel */
+  text-align: center;
+}
+
+.pearl-square svg {
+  width: 36px;
+  height: 36px;
+  color: #111; /* dark color for the icon */
+
+  /* optional text-shadow to appear engraved */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.advantages {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  gap: 1.5rem; /* espace entre les spans */
+  margin-top: 0.5rem; /* petit espace sous le titre */
+  font-weight: 500; /* optionnel, un peu plus visible */
+  font-size: 1rem; /* optionnel, ajuste selon ton design */
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 72px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 7px,
+        transparent 7px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
+    linear-gradient(
+      220deg,
+      #2430f0 0%,
+      #2be1b7 21%,
+      #942ffa 42%,
+      #ff006e 61%,
+      #ffd037 84%,
+      #00cecb 100%
+    );
+  z-index: 0;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  color: #2e333d;
+  border-radius: 8px; /* slightly rounded corners */
+
+  /* pearl-like soft gradient background */
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 7px,
+        transparent 7px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
+    linear-gradient(
+      220deg,
+      #2430f0 0%,
+      #2be1b7 21%,
+      #942ffa 42%,
+      #ff006e 61%,
+      #ffd037 84%,
+      #00cecb 100%
+    );
+}
