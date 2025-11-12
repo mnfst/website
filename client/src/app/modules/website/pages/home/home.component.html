@@ -1,5 +1,5 @@
 <div>
-  <section class="hero is-fullheight is-relative">
+  <section class="hero is-medium is-relative">
     <div class="hero-body">
       <div class="container zi-1 has-text-centered">
         <div class="columns is-multiline">
@@ -24,6 +24,7 @@
                         id="prompt-input"
                         class="textarea has-fixed-size is-small"
                         formControlName="prompt"
+                        placeholder="Ask Manifest to generate the backend you want for…"
                         #promptInput
                       ></textarea>
 
@@ -43,7 +44,7 @@
                     </div>
                   </form>
                 </div>
-                <ul class="tags are-normal is-justify-content-center mt-4">
+                <ul class="tags are-normal is-justify-content-center mt-4 pt-5">
                   <li
                     class="tag is-small is-link is-light is-hoverable is-bordered m-0"
                     *ngFor="let suggestion of suggestions"
@@ -61,48 +62,6 @@
   </section>
   <div class="container-full">
     <div class="container pt-6">
-      <div class="columns is-gapless is-multiline mb-0">
-        <div class="column is-12 has-text-centered">
-          <div
-            class="backed-by-wrapper is-flex is-align-items-center is-justify-content-center mb-6"
-          >
-            <span class="is-size-7">Backed by:</span>
-            <img
-              src="./assets/images/idf-logo.svg"
-              alt="IDF logo"
-              width="130px"
-              height="29.55"
-              class="idf-sf mx-4 mb-2"
-            />
-            <div
-              class="backed-by-logos is-flex is-align-items-center is-justify-content-center"
-            >
-              <img
-                src="./assets/images/hec-incubateur.svg"
-                alt="HEC Incubateur logo"
-                width="234px"
-                height="82.13"
-                class="logo-hec mx-4"
-              />
-              <img
-                src="./assets/images/station-f-logo.svg"
-                alt="Station F logo"
-                width="99px"
-                height="17.75"
-                class="logo-sf mx-4 mb-2"
-              />
-            </div>
-            <img
-              src="./assets/images/inria-logo.svg"
-              alt="Inria Startup Studio logo"
-              width="100px"
-              height="29.19"
-              class="inria-logo mx-4 mb-3"
-            />
-          </div>
-        </div>
-      </div>
-
       <!-- Features -->
       <div class="content">
         <h2 class="title is-3 mt-0">Features</h2>

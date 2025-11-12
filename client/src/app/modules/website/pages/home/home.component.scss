@@ -120,6 +120,10 @@
   border-width: 1px;
   border-radius: 7px;
   min-height: 168px;
+  font-size: 14px;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 ul.tags {
