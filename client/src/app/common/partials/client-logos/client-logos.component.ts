@@ -11,44 +11,109 @@ import { Component } from '@angular/core'
 export class ClientLogosComponent {
   clientLogos = [
     {
-      name: 'Google',
-      src: './assets/images/clients/google.svg',
-      alt: 'Google'
+      name: '3M',
+      src: './assets/images/user-comps/3m.svg',
+      alt: '3M'
+    },
+    {
+      name: 'Algolia',
+      src: './assets/images/user-comps/algolia.svg',
+      alt: 'Algolia'
+    },
+    {
+      name: 'Alice & Bob',
+      src: './assets/images/user-comps/aliceetbob.svg',
+      alt: 'Alice & Bob'
+    },
+    {
+      name: 'Automattic',
+      src: './assets/images/user-comps/automattic.svg',
+      alt: 'Automattic'
+    },
+    {
+      name: 'AWS',
+      src: './assets/images/user-comps/aws.svg',
+      alt: 'AWS'
+    },
+    {
+      name: 'Booking',
+      src: './assets/images/user-comps/booking.svg',
+      alt: 'Booking'
+    },
+    {
+      name: 'Capgemini',
+      src: './assets/images/user-comps/capgemini.svg',
+      alt: 'Capgemini'
+    },
+    {
+      name: 'Doctolib',
+      src: './assets/images/user-comps/doctolib.svg',
+      alt: 'Doctolib'
+    },
+    {
+      name: 'Epic',
+      src: './assets/images/user-comps/epic.svg',
+      alt: 'Epic'
+    },
+    {
+      name: 'Grafana',
+      src: './assets/images/user-comps/grafana.svg',
+      alt: 'Grafana'
+    },
+    {
+      name: 'Hitachi',
+      src: './assets/images/user-comps/hitachi.svg',
+      alt: 'Hitachi'
+    },
+    {
+      name: 'IKEA',
+      src: './assets/images/user-comps/ikea.svg',
+      alt: 'IKEA'
+    },
+    {
+      name: 'JPMorgan',
+      src: './assets/images/user-comps/jpm.svg',
+      alt: 'JPMorgan'
     },
     {
       name: 'Microsoft',
-      src: './assets/images/clients/microsoft.svg',
+      src: './assets/images/user-comps/microsoft.svg',
       alt: 'Microsoft'
     },
     {
-      name: 'Amazon',
-      src: './assets/images/clients/amazon.svg',
-      alt: 'Amazon'
+      name: 'Mozilla',
+      src: './assets/images/user-comps/mozilla.svg',
+      alt: 'Mozilla'
     },
     {
-      name: 'Meta',
-      src: './assets/images/clients/meta.svg',
-      alt: 'Meta'
+      name: 'Nintendo',
+      src: './assets/images/user-comps/nintendo.svg',
+      alt: 'Nintendo'
     },
     {
-      name: 'Apple',
-      src: './assets/images/clients/apple.svg',
-      alt: 'Apple'
+      name: 'Reddit',
+      src: './assets/images/user-comps/reddit.svg',
+      alt: 'Reddit'
     },
     {
-      name: 'Netflix',
-      src: './assets/images/clients/netflix.svg',
-      alt: 'Netflix'
+      name: 'Red Hat',
+      src: './assets/images/user-comps/redhat.svg',
+      alt: 'Red Hat'
     },
     {
-      name: 'Spotify',
-      src: './assets/images/clients/spotify.svg',
-      alt: 'Spotify'
+      name: 'Sanofi',
+      src: './assets/images/user-comps/sanofi.svg',
+      alt: 'Sanofi'
     },
     {
-      name: 'Airbnb',
-      src: './assets/images/clients/airbnb.svg',
-      alt: 'Airbnb'
+      name: 'SAP',
+      src: './assets/images/user-comps/sap.svg',
+      alt: 'SAP'
+    },
+    {
+      name: 'Southwest Airlines',
+      src: './assets/images/user-comps/southwest-airlines.svg',
+      alt: 'Southwest Airlines'
     }
   ]
 }
