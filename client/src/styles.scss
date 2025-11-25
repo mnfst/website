@@ -1072,6 +1072,109 @@ body {
   white-space: nowrap;
 }
 
+// Enhanced hover effects for interactive elements
+.hero-mcp {
+  .button.is-dark:hover {
+    background-color: #0d0e0e;
+    border-color: #0d0e0e;
+  }
+}
+
+// Gradient animated button
+.button.is-gradient-animated {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    #f2c79c 0%,
+    #29e1b7 20%,
+    #2530f0 50%,
+    #f2c79c 100%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  border: none;
+  color: white;
+  font-weight: 600;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // Base gentle animation
+  animation: gradientFlowDefault 9s ease-in-out infinite;
+
+  // Overlay for smooth hover transition
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      #f2c79c 0%,
+      #29e1b7 30%,
+      #2530f0 60%,
+      #f2c79c 100%
+    );
+    background-size: 300% 300%;
+    background-position: 60% 50%;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: gradientFlowHover 8s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  // Hover state with smooth transition
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+  }
+}
+
+// Smooth animations
+@keyframes gradientFlowDefault {
+  0%,
+  100% {
+    background-position: 30% 50%;
+  }
+  25% {
+    background-position: 15% 55%;
+  }
+  50% {
+    background-position: 30% 50%;
+  }
+  75% {
+    background-position: 15% 45%;
+  }
+}
+
+@keyframes gradientFlowHover {
+  0%,
+  100% {
+    background-position: 60% 50%;
+  }
+  25% {
+    background-position: 80% 60%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 80% 40%;
+  }
+}
+
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
