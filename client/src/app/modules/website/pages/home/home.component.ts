@@ -67,6 +67,24 @@ export class HomeComponent implements OnInit, OnDestroy {
     './assets/images/admin.svg',
     './assets/images/doc-api.svg'
   ]
+
+  partnerLogos = [
+    {
+      name: 'logo-berkeley',
+      src: './assets/images/logo-berkeley.svg',
+      alt: 'logo-berkeley'
+    },
+    {
+      name: 'Inria',
+      src: './assets/images/inria-logo.svg',
+      alt: 'inria'
+    },
+    {
+      name: 'hec',
+      src: './assets/images/hec-incubateur.svg',
+      alt: 'hec'
+    }
+  ]
   isSurveyModalVisible = false
   form: FormGroup
   loading: boolean = false

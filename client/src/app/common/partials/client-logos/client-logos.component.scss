@@ -1,0 +1,116 @@
+.client-logos {
+  width: 100%;
+  margin-top: 2rem;
+  
+  &__header {
+    margin-bottom: 1rem;
+    text-align: left;
+    
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  
+  &__label {
+    font-size: 0.75rem; // $size-8
+    color: #7e7e7e; // $grey
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  
+  &__container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    
+    // Fade edges for smooth appearance
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #f8f9fa, transparent);
+    }
+    
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #f8f9fa, transparent);
+    }
+  }
+  
+  &__track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+    
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 1.5rem;
+    
+    @media (max-width: 768px) {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  &__logo {
+    height: 28px;
+    width: auto;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    
+    &:hover {
+      opacity: 0.8;
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+      height: 24px;
+    }
+  }
+}
+
+// Animation for infinite scroll
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .client-logos {
+    &__container {
+      &::before,
+      &::after {
+        width: 15px;
+      }
+    }
+    
+    &__track {
+      animation-duration: 25s; // Slightly faster on mobile
+    }
+  }
+}

@@ -305,3 +305,53 @@ ul.tags {
       #00cecb 100%
     );
 }
+
+// Backed by section
+.backed-by {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+  
+  &__label {
+    font-size: 0.875rem;
+    color: #7e7e7e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    
+    @media (max-width: 768px) {
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  &__logo {
+    height: 24px;
+    width: auto;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+    
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+    
+    @media (max-width: 768px) {
+      height: 20px;
+    }
+  }
+}

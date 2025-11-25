@@ -1,0 +1,30 @@
+<div class="client-logos">
+  <div class="client-logos__header">
+    <span class="client-logos__label">Starred by devs from</span>
+  </div>
+  <div class="client-logos__container">
+    <div class="client-logos__track">
+      <div class="client-logos__logos">
+        <img 
+          *ngFor="let logo of clientLogos" 
+          [src]="logo.src" 
+          [alt]="logo.alt"
+          [title]="logo.name"
+          class="client-logos__logo"
+          loading="lazy"
+        >
+      </div>
+      <!-- Duplicate for seamless infinite scroll -->
+      <div class="client-logos__logos" aria-hidden="true">
+        <img 
+          *ngFor="let logo of clientLogos" 
+          [src]="logo.src" 
+          [alt]="logo.alt"
+          [title]="logo.name"
+          class="client-logos__logo"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</div>

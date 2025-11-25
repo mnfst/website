@@ -8,4 +8,8 @@ import { WaitingListFormComponent } from '../waiting-list-form/waiting-list-form
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {}
+export class FooterComponent {
+  onGetDemo(): void {
+    window.open('https://calendly.com/sebastien-manifest/30min', '_blank')
+  }
+}

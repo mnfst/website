@@ -13,22 +13,17 @@
             MCP servers to integrate AI Agents 10x faster
           </p>
           <div class="hero-mcp__actions">
-            <button class="button is-dark is-small" (click)="onGetDemo()">
-              Book a demo
-            </button>
-          </div>
-          <div class="hero-mcp__partners">
-            <span class="hero-mcp__partners-label">Backed by</span>
-            <div class="hero-mcp__partner-logos">
-              <img
-                *ngFor="let logo of partnerLogos"
-                [src]="logo.src"
-                [alt]="logo.alt"
-                [title]="logo.name"
-                loading="lazy"
-              />
+            <div class="is-flex is-align-items-center has-gap-3 mb-7">
+              <button
+                class="button is-dark is-small mr-5"
+                (click)="onGetDemo()"
+              >
+                Book a demo
+              </button>
+              <app-waiting-list-form></app-waiting-list-form>
             </div>
           </div>
+          <app-client-logos></app-client-logos>
         </div>
       </div>
 

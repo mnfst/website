@@ -4,10 +4,11 @@
     <!--  Problem we want to solve -->
     <div class="container my-7">
       <div class="columns is-multiline">
-        <div class="column is-6 is-offset-3 has-text-centered">
+        <div class="column is-8 is-offset-2 has-text-centered">
           <div class="content is-normal">
             <h2>
-              Integrating AI agents is time-consuming when the database is raw
+              Integrating AI agents is time-consuming <br />
+              when the database is raw
             </h2>
           </div>
         </div>
@@ -162,7 +163,7 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="title is-5">Built-in security and access control</h3>
+              <h3 class="title is-5">Security and access control</h3>
               <p>
                 Configure granular permissions and access through an intuitive
                 interface.
@@ -232,6 +233,27 @@
             Your MCP server is production-ready. Connect as many agents as you
             need.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backed by section -->
+  <div class="container-full has-background-white-ter">
+    <div class="container py-6">
+      <div class="has-text-centered">
+        <div class="backed-by">
+          <span class="backed-by__label">Backed by</span>
+          <div class="backed-by__logos">
+            <img
+              *ngFor="let logo of partnerLogos"
+              [src]="logo.src"
+              [alt]="logo.alt"
+              [title]="logo.name"
+              class="backed-by__logo"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
