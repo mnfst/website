@@ -1,4 +1,4 @@
-import { NgClass, NgFor, NgIf } from '@angular/common'
+import { NgFor, NgIf } from '@angular/common'
 import { HttpClient } from '@angular/common/http'
 import {
   Component,
@@ -16,11 +16,8 @@ import {
   Validators
 } from '@angular/forms'
 import { environment } from '../../../../../environments/environment'
-import { WaitingListFormComponent } from '../../../../common/partials/waiting-list-form/waiting-list-form.component'
-import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
-import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
-import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
 import { McpHeroComponent } from './elements/mcp-hero/mcp-hero.component'
+import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
 
 @Component({
   selector: 'app-home',
@@ -28,10 +25,6 @@ import { McpHeroComponent } from './elements/mcp-hero/mcp-hero.component'
   imports: [
     NgFor,
     NgIf,
-    NgClass,
-    WaitingListFormComponent,
-    CopyButtonComponent,
-    LiveCodeHeroComponent,
     SurveyModalComponent,
     McpHeroComponent,
     ReactiveFormsModule
@@ -40,7 +33,8 @@ import { McpHeroComponent } from './elements/mcp-hero/mcp-hero.component'
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  @ViewChild('promptInput') promptInput: ElementRef<HTMLTextAreaElement>
+  @ViewChild('promptInput', { static: false })
+  promptInput?: ElementRef<HTMLTextAreaElement>
 
   suggestions: string[] = [
     'CRM to track leads and deals',
@@ -85,6 +79,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       alt: 'hec'
     }
   ]
+
   isSurveyModalVisible = false
   form: FormGroup
   loading: boolean = false
@@ -98,9 +93,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // if (isPlatformBrowser(this.platformId)) {
-    //   this.startAutoSwap()
-    // }
     this.form = new FormGroup({
       prompt: new FormControl('', Validators.required)
     })
@@ -108,7 +100,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.promptInput.nativeElement.focus()
+      if (this.promptInput?.nativeElement) {
+        this.promptInput.nativeElement.focus()
+      }
     }, 0)
   }
 
@@ -149,7 +143,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.form.patchValue({ prompt: suggestion })
     setTimeout(() => {
       this.showSurveyModal()
-    }, 200) // Slight delay to see the value update.
+    }, 200)
   }
 
   showSurveyModal() {
@@ -173,8 +167,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         next: (response: { id: number }) => {
           this.loading = false
           const params = new URLSearchParams({
-            prompt: this.promptInput.nativeElement.value,
-            p: response.id.toString() // project id
+            prompt: this.promptInput?.nativeElement?.value || '',
+            p: response.id.toString()
           })
 
           this.document.location.href = `${

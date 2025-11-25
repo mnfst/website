@@ -228,3 +228,121 @@
 }
 
 // Enhanced hover effects for interactive elements
+.hero-mcp {
+  .button.is-dark:hover {
+    background-color: #0d0e0e;
+    border-color: #0d0e0e;
+  }
+}
+
+// Gradient animated button
+.button.is-gradient-animated {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f2c79c 0%, #29e1b7 50%, #2530f0 100%);
+  background-size: 200% 200%;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 1;
+  
+  // Base gradient animation
+  animation: gradientMove 4s ease-in-out infinite;
+  
+  // Pseudo-elements for floating shapes
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: -1;
+  }
+  
+  // Yellow blob
+  &::before {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(242, 199, 156, 0.8) 0%, transparent 70%);
+    top: -15px;
+    left: -15px;
+  }
+  
+  // Green blob  
+  &::after {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, rgba(41, 225, 183, 0.7) 0%, transparent 70%);
+    bottom: -12px;
+    right: -12px;
+  }
+  
+  // Blue blob (using a different approach with box-shadow)
+  &:hover::before {
+    opacity: 1;
+    transform: translate(40px, 20px) scale(1.2);
+    animation: floatYellow 2s ease-in-out infinite;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+    transform: translate(-30px, -15px) scale(1.1);
+    animation: floatGreen 2.5s ease-in-out infinite;
+  }
+  
+  // Create blue blob on hover using box-shadow
+  &:hover {
+    box-shadow: 
+      inset -20px 10px 20px rgba(37, 48, 240, 0.3),
+      inset 15px -15px 25px rgba(41, 225, 183, 0.2),
+      inset -10px -20px 30px rgba(242, 199, 156, 0.2);
+    animation: gradientMoveHover 1.5s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Keyframe animations
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientMoveHover {
+  0%, 100% {
+    background-position: 0% 30%;
+  }
+  33% {
+    background-position: 70% 80%;
+  }
+  66% {
+    background-position: 30% 20%;
+  }
+}
+
+@keyframes floatYellow {
+  0%, 100% {
+    transform: translate(40px, 20px) scale(1.2);
+  }
+  50% {
+    transform: translate(60px, 10px) scale(1.4);
+  }
+}
+
+@keyframes floatGreen {
+  0%, 100% {
+    transform: translate(-30px, -15px) scale(1.1);
+  }
+  50% {
+    transform: translate(-50px, -5px) scale(1.3);
+  }
+}
