@@ -64,9 +64,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   partnerLogos = [
     {
-      name: 'logo-berkeley',
-      src: './assets/images/logo-berkeley.svg',
-      alt: 'logo-berkeley'
+      name: 'logo-skydeck',
+      src: './assets/images/logo-skydeck.svg',
+      alt: 'logo-skydeck'
     },
     {
       name: 'Inria',
