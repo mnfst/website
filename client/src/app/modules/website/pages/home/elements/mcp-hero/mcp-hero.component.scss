@@ -207,7 +207,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
-  animation: gradientShift 8s ease-in-out infinite;
+  animation: gradientShift 6s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
@@ -239,110 +239,93 @@
 .button.is-gradient-animated {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #f2c79c 0%, #29e1b7 50%, #2530f0 100%);
-  background-size: 200% 200%;
+  background: linear-gradient(
+    45deg,
+    #f2c79c 0%,
+    #29e1b7 30%,
+    #2530f0 60%,
+    #f2c79c 100%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 50%;
   border: none;
   color: white;
   font-weight: 600;
-  transition: all 0.3s ease;
   z-index: 1;
-  
-  // Base gradient animation
-  animation: gradientMove 4s ease-in-out infinite;
-  
-  // Pseudo-elements for floating shapes
-  &::before,
-  &::after {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // Base gentle animation
+  animation: gradientFlowDefault 9s ease-in-out infinite;
+
+  // Overlay for smooth hover transition
+  &::before {
     content: '';
     position: absolute;
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      #f2c79c 0%,
+      #29e1b7 30%,
+      #2530f0 60%,
+      #f2c79c 100%
+    );
+    background-size: 300% 300%;
+    background-position: 60% 50%;
     opacity: 0;
-    transition: all 0.6s ease;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: gradientFlowHover 8s ease-in-out infinite;
     z-index: -1;
   }
-  
-  // Yellow blob
-  &::before {
-    width: 30px;
-    height: 30px;
-    background: radial-gradient(circle, rgba(242, 199, 156, 0.8) 0%, transparent 70%);
-    top: -15px;
-    left: -15px;
-  }
-  
-  // Green blob  
-  &::after {
-    width: 25px;
-    height: 25px;
-    background: radial-gradient(circle, rgba(41, 225, 183, 0.7) 0%, transparent 70%);
-    bottom: -12px;
-    right: -12px;
-  }
-  
-  // Blue blob (using a different approach with box-shadow)
-  &:hover::before {
-    opacity: 1;
-    transform: translate(40px, 20px) scale(1.2);
-    animation: floatYellow 2s ease-in-out infinite;
-  }
-  
-  &:hover::after {
-    opacity: 1;
-    transform: translate(-30px, -15px) scale(1.1);
-    animation: floatGreen 2.5s ease-in-out infinite;
-  }
-  
-  // Create blue blob on hover using box-shadow
+
+  // Hover state with smooth transition
   &:hover {
-    box-shadow: 
-      inset -20px 10px 20px rgba(37, 48, 240, 0.3),
-      inset 15px -15px 25px rgba(41, 225, 183, 0.2),
-      inset -10px -20px 30px rgba(242, 199, 156, 0.2);
-    animation: gradientMoveHover 1.5s ease-in-out infinite;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      opacity: 1;
+    }
   }
-  
+
   &:active {
     transform: translateY(0);
+    transition: transform 0.1s ease;
   }
 }
 
-// Keyframe animations
-@keyframes gradientMove {
-  0%, 100% {
+// Smooth animations
+@keyframes gradientFlowDefault {
+  0%,
+  100% {
     background-position: 0% 50%;
+  }
+  25% {
+    background-position: 15% 55%;
+  }
+  50% {
+    background-position: 30% 50%;
+  }
+  75% {
+    background-position: 15% 45%;
+  }
+}
+
+@keyframes gradientFlowHover {
+  0%,
+  100% {
+    background-position: 60% 50%;
+  }
+  25% {
+    background-position: 80% 60%;
   }
   50% {
     background-position: 100% 50%;
   }
-}
-
-@keyframes gradientMoveHover {
-  0%, 100% {
-    background-position: 0% 30%;
-  }
-  33% {
-    background-position: 70% 80%;
-  }
-  66% {
-    background-position: 30% 20%;
-  }
-}
-
-@keyframes floatYellow {
-  0%, 100% {
-    transform: translate(40px, 20px) scale(1.2);
-  }
-  50% {
-    transform: translate(60px, 10px) scale(1.4);
-  }
-}
-
-@keyframes floatGreen {
-  0%, 100% {
-    transform: translate(-30px, -15px) scale(1.1);
-  }
-  50% {
-    transform: translate(-50px, -5px) scale(1.3);
+  75% {
+    background-position: 80% 40%;
   }
 }
