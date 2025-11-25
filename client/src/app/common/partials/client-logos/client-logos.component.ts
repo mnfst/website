@@ -46,11 +46,6 @@ export class ClientLogosComponent {
       alt: 'Capgemini'
     },
     {
-      name: 'Doctolib',
-      src: './assets/images/user-comps/doctolib.svg',
-      alt: 'Doctolib'
-    },
-    {
       name: 'Epic',
       src: './assets/images/user-comps/epic.svg',
       alt: 'Epic'
