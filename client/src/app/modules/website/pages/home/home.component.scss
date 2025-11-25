@@ -171,12 +171,25 @@ ul.tags {
     /* soft blue hint */ rgba(245, 235, 255, 0.3) 70%,
     /* soft purple hint */ rgba(255, 255, 255, 0.98) 100%
   );
+  border: 1px solid rgba(225, 41, 148, 0.1);
 
-  /* subtle border to show separation */
-  border: 1px solid rgba(0, 0, 0, 0.05); /* very discreet */
+  &--alt {
+    /* pearl-like soft gradient background with positive green tint */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(41, 225, 183, 0.08) 25%,
+      /* very light green hint */ rgba(235, 255, 245, 0.4) 50%,
+      /* soft green-tinted white */ rgba(41, 225, 183, 0.12) 75%,
+      /* slightly stronger green hint */ rgba(255, 255, 255, 0.98) 100%
+    );
 
-  /* for icon engraved feel */
-  text-align: center;
+    /* subtle border with green tint to show separation */
+    border: 1px solid rgba(41, 225, 183, 0.1);
+
+    /* for icon engraved feel */
+    text-align: center;
+  }
 }
 
 .pearl-square svg {
@@ -186,6 +199,13 @@ ul.tags {
 
   /* optional text-shadow to appear engraved */
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pearl-square--alt svg {
+  color: #00b894; /* bolder green for positive icons */
+
+  /* enhanced text-shadow for green icons */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 -1px 0 rgba(0, 184, 148, 0.2);
 }
 
 .advantages {
