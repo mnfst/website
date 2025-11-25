@@ -1,72 +1,14 @@
 <div>
-  <section class="hero is-fullheight is-relative">
-    <div class="hero-body">
-      <div class="container zi-1 has-text-centered">
-        <div class="columns is-multiline">
-          <div class="column is-12">
-            <div class="content is-normal">
-              <h1 class="title is-0 mb-5">
-                Production-ready backends
-                <span class="title-gradient">in minutes</span>
-              </h1>
-            </div>
-            <div
-              class="column is-8 is-6-widescreen is-offset-2 is-offset-3-widescreen"
-            >
-              <div class="content is-normal">
-                <div class="prompt-container is-fullwidth">
-                  <form [formGroup]="form">
-                    <div
-                      class="control control--llm is-small has-border-gradient"
-                    >
-                      <textarea
-                        name="prompt-input"
-                        id="prompt-input"
-                        class="textarea has-fixed-size is-small"
-                        formControlName="prompt"
-                        placeholder="Ask Manifest to generate the backend you want for…"
-                        #promptInput
-                      ></textarea>
-
-                      <button
-                        class="button is-dark send is-very-small"
-                        [ngClass]="{ 'is-loading': loading }"
-                        (click)="showSurveyModal()"
-                        [disabled]="!form.value['prompt'].length"
-                      >
-                        <span class="icon">
-                          <i
-                            class="fa-solid fa-arrow-up mt-1"
-                            style="margin-top: 2px"
-                          ></i>
-                        </span>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <ul class="tags are-normal is-justify-content-center mt-4 pt-5">
-                  <li
-                    class="tag is-small is-link is-light is-hoverable is-bordered m-0"
-                    *ngFor="let suggestion of suggestions"
-                    (click)="chooseSuggestion(suggestion)"
-                  >
-                    {{ suggestion }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-mcp-hero></app-mcp-hero>
   <div class="container-full">
     <!--  Problem we want to solve -->
     <div class="container my-7">
       <div class="columns is-multiline">
         <div class="column is-6 is-offset-3 has-text-centered">
           <div class="content is-normal">
-            <h2>Backend development should not slow down your growth</h2>
+            <h2>
+              Integrating AI agents is time-consuming when the database is raw
+            </h2>
           </div>
         </div>
         <div class="column is-4 has-text-centered">
@@ -87,10 +29,12 @@
                 />
               </svg>
             </div>
-            <h3 class="title is-5">Building backends takes weeks</h3>
+            <h3 class="title is-5">Repetitive integration work</h3>
             <p>
-              Custom development is too slow when you need to ship yesterday and
-              the backlog keeps growing.
+              Every new AI agent needs another custom database connector.
+              Different auth, different query layer, different maintenance
+              burden. You're solving the same problem over and over instead of
+              shipping features.
             </p>
           </div>
         </div>
@@ -112,12 +56,12 @@
                 />
               </svg>
             </div>
-            <h3 class="title is-5">
-              Current AI tools create security nightmares
-            </h3>
+            <h3 class="title is-5">Security vulnerabilities</h3>
             <p>
-              AI-generated code has security flaws, is hard to validate, and
-              creates maintenance headaches you can't risk in production.
+              Row-level permissions, field filtering, role-based access.
+              Building this from scratch means every edge case is your
+              responsibility. Miss one scenario and an AI agent queries customer
+              data it shouldn't see.
             </p>
           </div>
         </div>
@@ -144,11 +88,11 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="title is-5">Endless requests from non-tech teams</h3>
+            <h3 class="title is-5">Legacy database complexity</h3>
             <p>
-              Marketing needs data. Ops wants dashboards. Sales demands reports.
-              You're buried in internal tool requests when velocity matters
-              most.
+              Undocumented schemas, messy structures, unclear
+              relationships.Hours wasted mapping what your database actually
+              does before integration starts.
             </p>
           </div>
         </div>
@@ -157,16 +101,104 @@
     <div class="container">
       <div class="card is-fullheight is-radius is-shadowless card--feature p-7">
         <div class="columns is-multiline">
-          <div class="column is-10 is-offset-1 has-text-centered">
+          <div class="column is-8 is-offset-2 has-text-centered">
             <div class="content is-normal">
-              <h2>Start building backends that don't slow you down</h2>
+              <h2>
+                From database to production-ready
+                <span class="title-gradient">MCP server</span>
+              </h2>
             </div>
           </div>
-          <div class="column is-12 has-text-centered">
-            <div class="advantages">
-              <span>✅ No setup</span>
-              <span>✅ 0 security flaw</span>
-              <span>✅ Ship 10x faster</span>
+          <div class="column is-4 has-text-centered">
+            <div class="content is-normal">
+              <div class="pearl-square">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <line x1="16" y1="13" x2="16" y2="21"></line>
+                  <line x1="8" y1="13" x2="8" y2="21"></line>
+                  <line x1="12" y1="15" x2="12" y2="23"></line>
+                  <path
+                    d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="title is-5">Build once, use with any AI agent</h3>
+              <p>
+                Manifest generates MCP tools from your database. Expose them to
+                any agent you want.
+              </p>
+            </div>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <div class="content is-normal">
+              <div class="pearl-square">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <line x1="16" y1="13" x2="16" y2="21"></line>
+                  <line x1="8" y1="13" x2="8" y2="21"></line>
+                  <line x1="12" y1="15" x2="12" y2="23"></line>
+                  <path
+                    d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="title is-5">Built-in security and access control</h3>
+              <p>
+                Configure granular permissions and access through an intuitive
+                interface.
+              </p>
+            </div>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <div class="content is-normal">
+              <div class="pearl-square">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <line x1="16" y1="13" x2="16" y2="21"></line>
+                  <line x1="8" y1="13" x2="8" y2="21"></line>
+                  <line x1="12" y1="15" x2="12" y2="23"></line>
+                  <path
+                    d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="title is-5">
+                From messy database to clean MCP server
+              </h3>
+              <p>
+                Manifest turns your messy database into a documented MCP server
+                with working tools.
+              </p>
             </div>
           </div>
         </div>
@@ -178,643 +210,28 @@
           <div class="number">
             <span>1</span>
           </div>
-          <h4 class="title is-6 mt-5">Prompt your backend</h4>
+          <h4 class="title is-6 mt-5">Connect your database</h4>
           <p class="text">
-            Describe what you need in plain language. Manifest generates a
-            complete, production-ready backend with auth, database, APIs, custom
-            logic, and an admin panel.
+            Link your PostgreSQL, MySQL, Oracle DB, or other database to
+            Manifest.
           </p>
         </div>
         <div class="step">
           <div class="number">2</div>
-          <h4 class="title is-6 mt-5">Edit with ease</h4>
+          <h4 class="title is-6 mt-5">Set up your MCP server</h4>
           <p class="text">
-            Iterate and improve with chat or editing a YAML file.
+            Select what data to pull from your database and configure
+            authentication and permissions. Create and test the tools your
+            agents will use.
           </p>
         </div>
         <div class="step">
           <div class="number">3</div>
-          <h4 class="title is-6 mt-5">One-click to deploy and connect</h4>
+          <h4 class="title is-6 mt-5">Connect AI agents to your MCP server</h4>
           <p class="text">
-            Ship your backend and connect it anywhere: frontend frameworks,
-            LLMs, Power BI, n8n...
+            Your MCP server is production-ready. Connect as many agents as you
+            need.
           </p>
-        </div>
-        <div class="step">
-          <div class="number">4</div>
-          <h4 class="title is-6 mt-5">Manage data</h4>
-          <p class="text">
-            An admin panel lets non-technical teams manage their data
-            themselves.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--  Features -->
-    <div class="container pt-6 pb-7">
-      <div class="content">
-        <h2 class="title is-3 mt-0">Features</h2>
-      </div>
-      <div class="columns is-multiline">
-        <div class="column is-3">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Instant CRUD</h3>
-                  <p>
-                    Instantly create, read, update, and delete data with
-                    Manifest.
-                  </p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>15+ real world data types</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>REST API or JS SDK</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-3">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Simplified auth</h3>
-                  <p>
-                    Turning any entity into an authenticated user is as simple
-                    as adding a <code>authenticable: true</code> line to your
-                    backend file.
-                  </p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>Role Based Access Control (RBAC)</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>Ownership-based access control</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>CRUD policies</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-3">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Storage</h3>
-                  <p>Upload any kind of file to your backend storage.</p>
-                </div>
-                <div class="card-content-bottom">
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>Image resize</span>
-                  </span>
-                  <span class="icon-text is-fullwidth is-size-7">
-                    <span class="icon">
-                      <i class="fas fa-check has-text-success"></i>
-                    </span>
-                    <span>S3 compatibility</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-3">
-          <div class="card is-fullheight is-radius is-shadowless card--feature">
-            <div class="card-content is-fullheight">
-              <div
-                class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-space-between is-fullheight has-gap-3"
-              >
-                <div class="card-content-top content is-normal">
-                  <h3 class="title is-6">Custom endpoints</h3>
-                  <p>Add your own logic with custom endpoints and webhooks.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Loved by devs -->
-    <div class="container-full has-background-white">
-      <div class="container py-7">
-        <h3 class="title is-3 mb-6 has-text-centered">
-          Loved by developers 🤩
-        </h3>
-
-        <div class="masonry has-milkyway">
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://dev.to/rajesh_patel_68e5dd6c9a4f/comment/2p7e9"
-                  >
-                    &#64;Rajesh Patel
-                  </a>
-                  <a
-                    href="https://dev.to/rajesh_patel_68e5dd6c9a4f/comment/2p7e9"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/devto.svg"
-                      width="24"
-                      height="24"
-                      alt="on dev.to"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  The backend has always been the least “vibe-friendly” part of
-                  AI-assisted coding, and you’ve clearly nailed the friction
-                  points with both legacy frameworks and cloud BaaS tools like
-                  Supabase.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://news.ycombinator.com/item?id=40545925"
-                  >
-                    &#64;alextheterrible
-                  </a>
-                  <a
-                    href="https://news.ycombinator.com/item?id=40545925"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/yc.svg"
-                      width="24"
-                      height="24"
-                      alt="on Hackernews"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  Nice. I'll be watching this. Buddy and I are currently
-                  building an app on Pocketbase and are thoroughly enjoying it.
-                  I like your idea of starting from a config file rather than a
-                  UI.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
-                  >
-                    &#64;permarad
-                  </a>
-                  <a
-                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqww79x/"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/reddit.svg"
-                      width="24"
-                      height="24"
-                      alt="on Reddit"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  kudos, this is very cool. i thought pocketbase was simple.
-                  this is very very simple. I love simple.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://discord.com/channels/457912077277855764/1293155391513034802"
-                  >
-                    &#64;Revan
-                  </a>
-                  <a
-                    href="https://discord.com/channels/457912077277855764/1293155391513034802"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/discord.svg"
-                      width="24"
-                      height="24"
-                      alt="on Discord"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  Wow I've never heard of manifest before now, it looks
-                  fascinating
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://news.ycombinator.com/item?id=40549087"
-                  >
-                    &#64;dhuan_
-                  </a>
-                  <a
-                    href="https://news.ycombinator.com/item?id=40549087"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/yc.svg"
-                      width="24"
-                      height="24"
-                      alt="on Hackernews"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  Hey very useful app, I'll be watching this. I once wanted to
-                  set up backend apps during automated CI jobs in order to
-                  facilitate e2e tests and ended up making a utility kind of
-                  similar - but yours truly goes beyond.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                  >
-                    &#64;huevoverde
-                  </a>
-                  <a
-                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqxms20/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/reddit.svg"
-                      width="24"
-                      height="24"
-                      alt="on Reddit"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  It works! I like this a lot. I've been leaning into Pocketbase
-                  because it is easy and fairly complete with what I need. This
-                  is easier and more complete. Are you modeling this after
-                  something that exists already?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://news.ycombinator.com/item?id=40545873"
-                  >
-                    &#64;chrsig
-                  </a>
-                  <a
-                    href="https://news.ycombinator.com/item?id=40545873"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/yc.svg"
-                      width="24"
-                      height="24"
-                      alt="on Hackernews"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  I really appreciate the simplicity of the DSL presented. I'm
-                  curious how you see the project evolving as you add those
-                  things. How do you see it differentiating itself from rails or
-                  django?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://dev.to/dotallio/comment/2p6ni"
-                  >
-                    &#64;Dotallio
-                  </a>
-                  <a
-                    href="https://dev.to/dotallio/comment/2p6ni"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/devto.svg"
-                      width="24"
-                      height="24"
-                      alt="on dev.to"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  Really like how Manifest keeps everything in a single YAML -
-                  makes rapid AI iteration and checking so much easier for me.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
-                  >
-                    &#64;LatoReset
-                  </a>
-                  <a
-                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1246482163193352215"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/discord.svg"
-                      width="24"
-                      height="24"
-                      alt="on Discord"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  i was trying manifest today and work fine, is very simple, i
-                  would use in a project without doubt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
-                  >
-                    &#64;Coquet
-                  </a>
-                  <a
-                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1251228008644083772"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/discord.svg"
-                      width="24"
-                      height="24"
-                      alt="on Hackernews"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>I love it so far. The simplicity is awesome.</p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
-                  >
-                    &#64;Ranti
-                  </a>
-                  <a
-                    href="https://discord.com/channels/1089907785178812499/1098161123938807808/1252672178088972409"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/discord.svg"
-                      width="24"
-                      height="24"
-                      alt="on Hackernews"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  Hello! Just started trying out Manifest for a personal React
-                  project. Love the idea!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                  >
-                    &#64;A_Norse_Dude
-                  </a>
-                  <a
-                    href="https://www.reddit.com/r/sveltejs/comments/1fyv1k4/comment/lqx12e1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/reddit.svg"
-                      width="24"
-                      height="24"
-                      alt="on Reddit"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  This seems nice! I will def. follow this, and jump on the
-                  bandwagon then you are out of beta 😎
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="masonry-item card has-background-white-bis is-shadowless is-bordered"
-          >
-            <div class="card-content">
-              <div class="content">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between mb-4"
-                >
-                  <a
-                    class="has-text-dark"
-                    target="_blank"
-                    href="https://news.ycombinator.com/item?id=40551318"
-                  >
-                    &#64;kiwicopple
-                  </a>
-                  <a
-                    href="https://news.ycombinator.com/item?id=40551318"
-                    target="_blank"
-                    class="ghost"
-                  >
-                    <img
-                      src="./assets/images/yc.svg"
-                      width="24"
-                      height="24"
-                      alt="on Hackernews"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <p>
-                  Congrats on shipping, this looks nice and well thought-out.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

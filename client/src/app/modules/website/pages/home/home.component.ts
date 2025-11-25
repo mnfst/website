@@ -20,6 +20,7 @@ import { WaitingListFormComponent } from '../../../../common/partials/waiting-li
 import { LiveCodeHeroComponent } from './elements/live-code-hero/live-code-hero.component'
 import { CopyButtonComponent } from './elements/onboarding-showcase/copy-to-clipboard.component'
 import { SurveyModalComponent } from './elements/survey-modal/survey-modal.component'
+import { McpHeroComponent } from './elements/mcp-hero/mcp-hero.component'
 
 @Component({
   selector: 'app-home',
@@ -32,6 +33,7 @@ import { SurveyModalComponent } from './elements/survey-modal/survey-modal.compo
     CopyButtonComponent,
     LiveCodeHeroComponent,
     SurveyModalComponent,
+    McpHeroComponent,
     ReactiveFormsModule
   ],
   templateUrl: './home.component.html',
