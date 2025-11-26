@@ -226,3 +226,11 @@
     flex-direction: column-reverse;
   }
 }
+
+// Enhanced hover effects for interactive elements
+.hero-mcp {
+  .button.is-dark:hover {
+    background-color: #0d0e0e;
+    border-color: #0d0e0e;
+  }
+}
