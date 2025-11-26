@@ -75,6 +75,7 @@ const config: Config = {
       textColor: '#fff',
       isCloseable: false
     },
+
     navbar: {
       logo: {
         alt: 'Manifest Logo',
