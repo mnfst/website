@@ -1,0 +1,40 @@
+<section class="hero-mcp">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <!-- Content Column -->
+      <div class="column is-5">
+        <div class="hero-mcp__content">
+          <h1 class="title is-2 mb-4">
+            Turn your data into an <br />
+            <span class="title-gradient">MCP server</span> in minutes
+          </h1>
+          <p class="is-size-6 mb-5 pb-2">
+            Manifest is an Open Source tool that turns databases into secure MCP
+            servers to integrate AI Agents 10x faster
+          </p>
+          <div class="hero-mcp__actions">
+            <div class="is-flex is-align-items-center has-gap-3 mb-7">
+              <button
+                class="button is-gradient-animated is-small mr-5"
+                (click)="onGetDemo()"
+              >
+                Book a demo
+              </button>
+            </div>
+          </div>
+          <app-client-logos></app-client-logos>
+        </div>
+      </div>
+
+      <!-- Visual Column -->
+      <div class="column is-7">
+        <div class="hero-mcp__visual">
+          <div class="hero-mcp__diagram-shape"></div>
+          <div class="diagram-wrapp">
+            <app-diagram></app-diagram>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

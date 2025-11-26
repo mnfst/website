@@ -6,11 +6,12 @@ import {
   ReactiveFormsModule,
   Validators
 } from '@angular/forms'
-import { environment } from '../../../../environments/environment'
 import { firstValueFrom } from 'rxjs'
+import { environment } from '../../../../environments/environment'
 
 @Component({
   selector: 'app-waiting-list-form',
+  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './waiting-list-form.component.html',
   styleUrl: './waiting-list-form.component.scss'

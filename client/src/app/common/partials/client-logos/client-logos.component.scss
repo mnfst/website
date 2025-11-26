@@ -1,0 +1,151 @@
+.client-logos {
+  width: 100%;
+  margin-top: 2rem;
+
+  &__header {
+    margin-bottom: 1rem;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__label {
+    font-size: 0.75rem; // $size-8
+    color: #7e7e7e; // $grey
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  &__container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    // Fade edges for smooth appearance
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #f8f9fa, transparent);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #f8f9fa, transparent);
+    }
+  }
+
+  &__track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 45s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 1.5rem;
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  &__logo {
+    height: 20px;
+    max-width: 100px;
+    width: auto;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    flex-shrink: 0;
+
+    // Square logos (AWS, 3M, IKEA)
+    &--square {
+      height: 32px;
+      width: 32px;
+      object-fit: contain;
+
+      @media (max-width: 768px) {
+        height: 28px;
+        width: 28px;
+      }
+    }
+
+    // Wide logos (Automattic, Southwest Airlines)
+    &--wide {
+      height: 20px;
+      max-width: 80px;
+
+      @media (max-width: 768px) {
+        height: 18px;
+        min-width: 70px;
+      }
+    }
+
+    // Tall logos (Microsoft, JPMorgan)
+    &--tall {
+      height: 36px;
+
+      @media (max-width: 768px) {
+        height: 32px;
+      }
+    }
+
+    // Small logos (Reddit, Mozilla)
+    &--small {
+      height: 24px;
+
+      @media (max-width: 768px) {
+        height: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      height: 24px;
+    }
+  }
+}
+
+// Animation for infinite scroll
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .client-logos {
+    &__container {
+      &::before,
+      &::after {
+        width: 15px;
+      }
+    }
+
+    &__track {
+      animation-duration: 35s; // Slightly faster on mobile
+    }
+  }
+}

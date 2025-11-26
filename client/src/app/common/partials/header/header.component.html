@@ -18,18 +18,11 @@
       </a>
       <div class="is-flex">
         <a
-          class="navbar-item px-5-tablet is-hidden-desktop"
+          class="navbar-item px- 5-tablet is-hidden-desktop"
           href="https://discord.gg/FepAked3W7"
           target="_blank"
         >
           <i class="fab fa-discord is-size-6"></i>
-        </a>
-        <a
-          class="navbar-item px-5-tablet is-hidden-desktop"
-          href="https://github.com/mnfst/manifest"
-          target="_blank"
-        >
-          <i class="fab fa-github is-size-6"></i>
         </a>
         <a
           class="navbar-item px-5-tablet is-hidden-desktop"
@@ -43,6 +36,18 @@
 
     <div class="navbar-menu has-text-weight-bold">
       <div class="navbar-end">
+        <div class="navbar-item">
+          <a
+            class="is-small has-text-dark"
+            href="https://github.com/mnfst/manifest"
+            target="_blank"
+          >
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>{{ githubStars }}</span>
+          </a>
+        </div>
         <a
           class="navbar-item"
           href="https://discord.gg/FepAked3W7"
@@ -53,7 +58,7 @@
         <div class="navbar-item pt-4">
           <!-- Place this tag where you want the button to render. -->
           <!-- Place this tag where you want the button to render. -->
-          <a
+          <!-- <a
             class="github-button"
             href="https://github.com/mnfst/manifest"
             data-color-scheme="no-preference: light; light: light; dark: dark;"
@@ -61,15 +66,11 @@
             data-show-count="true"
             aria-label="Star mnfst/manifest on GitHub"
             >Star</a
-          >
+          > -->
         </div>
         <div class="navbar-item">
-          <a
-            class="button is-small is-dark"
-            href="https://manifest.build/docs/"
-            target="_blank"
-          >
-            Get started
+          <a class="button is-gradient-animated is-small" (click)="onGetDemo()">
+            Book a demo
           </a>
         </div>
       </div>

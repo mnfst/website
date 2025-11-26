@@ -1,39 +1,50 @@
 // src/app/common/partials/header/header.component.ts
-import { AfterViewInit, Component, Renderer2 } from '@angular/core'
+import { Component, Renderer2, OnInit, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent implements OnInit {
   private static scriptInjected = false
+  githubStars = 'Star'
 
-  constructor(private renderer: Renderer2) {}
+  constructor(
+    private renderer: Renderer2,
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
-  ngAfterViewInit(): void {
-    if (typeof window === 'undefined') {
-      return
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.fetchGitHubStars()
     }
+  }
 
-    const win = window as any
+  private fetchGitHubStars(): void {
+    this.http.get<any>('https://api.github.com/repos/mnfst/manifest')
+      .subscribe({
+        next: (response) => {
+          const stars = response.stargazers_count
+          this.githubStars = `${this.formatStarCount(stars)}`
+        },
+        error: () => {
+          this.githubStars = 'Star'
+        }
+      })
+  }
 
-    const renderButtons = () => {
-      if (win.GitHubButton?.render) {
-        win.GitHubButton.render()
-      }
+  private formatStarCount(count: number): string {
+    if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}k`
     }
+    return count.toString()
+  }
 
-    if (!HeaderComponent.scriptInjected) {
-      const s = this.renderer.createElement('script')
-      s.src = 'https://buttons.github.io/buttons.js'
-      s.async = true
-      s.defer = true
-      s.onload = () => renderButtons()
-      this.renderer.appendChild(document.body, s)
-      HeaderComponent.scriptInjected = true
-    } else {
-      renderButtons()
-    }
+  onGetDemo(): void {
+    window.open('https://calendly.com/sebastien-manifest/30min', '_blank')
   }
 }

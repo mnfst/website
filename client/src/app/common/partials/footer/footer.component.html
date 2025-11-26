@@ -3,39 +3,42 @@
     <div class="has-background-wheel"></div>
     <div class="container py-7">
       <div class="columns is-multiline">
-        <div class="column is-8 is-offset-2">
-          <div class="content is-normal has-text-centered">
-            <img
-              src="./assets/images/logo-peacock.svg"
-              width="64"
-              height="98"
-              alt="Manifest logo"
-            />
-            <h3 class="title is-3 mt-4">Start building with Manifest</h3>
-            <p>Need your MVP up and running in minutes? Start now!</p>
-          </div>
-        </div>
-        <div class="column is-6-tablet is-offset-3">
-          <div
-            class="content is-normal is-flex is-align-items-center is-justify-content-center box-main-cta is-flex-direction-column"
-          >
-            <app-copy-button></app-copy-button>
-            <div
-              class="content is-normal mb-5 is-flex is-align-items-center is-justify-content-center box-main-cta"
-            >
-              <a class="button is-dark is-small" href="/docs" target="_blank">
-                <span>Get started</span>
-              </a>
-              <a
-                class="button is-white is-small"
-                href="https://github.com/mnfst/manifest"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fa fa-star has-text-warning"></i>
-                </span>
-                <span>Give a star</span>
-              </a>
+        <div class="column is-10 is-offset-1">
+          <div class="content is-small has-text-centered">
+            <div class="card is-radius is-shadowless card--cta">
+              <div class="card-body p-7">
+                <div class="px-4">
+                  <div
+                    class="content is-small is-flex is-align-items-center is-justify-content-center box-main-cta is-flex-direction-column px-5"
+                  >
+                    <img
+                      src="./assets/images/logo-peacock.svg"
+                      width="64"
+                      height="98"
+                      alt="Manifest logo"
+                    />
+                    <h3 class="title is-3 mt-4">Join the Manifest journey</h3>
+                    <h4 class="title is-5 mb-1">
+                      Let's build your use case together
+                    </h4>
+                    <p>
+                      Tired of months-long integration projects? Book a demo and
+                      see how Manifest reduces database-to-agent setup from
+                      weeks to minutes.
+                    </p>
+
+                    <div class="is-flex is-align-items-center has-gap-3">
+                      <button
+                        class="button is-gradient-animated is-small mr-5"
+                        (click)="onGetDemo()"
+                      >
+                        Book a demo
+                      </button>
+                      <app-waiting-list-form></app-waiting-list-form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -43,15 +46,56 @@
     </div>
   </div>
   <footer
-    class="footer has-background-white-bis has-text-dark pb-4 has-border-top"
+    class="footer has-background-white-bis has-text-dark pb-6 has-border-top"
   >
     <div class="container">
       <div>
         <div class="columns is-multiline">
           <div class="column is-3">
             <div class="content">
-              <p class="has-text-weight-bold is-size-6">resources</p>
-              <ul class="no-lst">
+              <img
+                src="./assets/images/logo-transparent.svg"
+                width="180"
+                height="50"
+                alt="logo of manifest"
+                class="footer-logo"
+                loading="lazy"
+              />
+
+              <div class="is-flex is-align-items-center mt-4" style="gap: 12px">
+                <a
+                  class="has-text-dark"
+                  href="https://github.com/mnfst/manifest"
+                  target="_blank"
+                >
+                  <i class="fab fa-github is-size-6"></i>
+                </a>
+                <a
+                  class="has-text-dark"
+                  href="https://discord.gg/FepAked3W7"
+                  target="_blank"
+                >
+                  <i class="fab fa-discord is-size-6"></i>
+                </a>
+                <a
+                  class="has-text-dark"
+                  href="https://www.linkedin.com/company/manifest-backend"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin is-size-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="content">
+              <p
+                class="has-text-weight-bold is-size-7"
+                style="margin-top: 20px"
+              >
+                Resources
+              </p>
+              <ul class="no-lst is-size-8">
                 <li>
                   <a href="https://manifest.build/docs" target="_blank">
                     Developer Docs
@@ -65,41 +109,23 @@
                     Contributor Docs
                   </a>
                 </li>
-                <li>
-                  <a href="/faq">FAQ</a>
-                </li>
               </ul>
             </div>
           </div>
 
           <div class="column is-3">
             <div class="content">
-              <p class="has-text-weight-bold is-size-6">Community</p>
-              <ul class="no-lst">
+              <p
+                class="has-text-weight-bold is-size-7"
+                style="margin-top: 20px"
+              >
+                Community
+              </p>
+              <ul class="no-lst is-size-8">
                 <li>
                   <span class="icon-text">
                     <span class="icon">
-                      <i class="fab fa-github is-size-6"></i>
-                    </span>
-                    <a href="https://github.com/mnfst/manifest" target="_blank">
-                      GitHub
-                    </a>
-                  </span>
-                </li>
-                <li>
-                  <span class="icon-text">
-                    <span class="icon">
-                      <i class="fab fa-discord is-size-6"></i>
-                    </span>
-                    <a href="https://discord.gg/FepAked3W7" target="_blank">
-                      Discord
-                    </a>
-                  </span>
-                </li>
-                <li>
-                  <span class="icon-text">
-                    <span class="icon">
-                      <i class="fa-regular fa-comments is-size-6"></i>
+                      <i class="fa-regular fa-comments is-size-8"></i>
                     </span>
                     <a
                       href="https://github.com/mnfst/manifest/discussions"
@@ -114,30 +140,15 @@
                 <li>
                   <span class="icon-text">
                     <span class="icon">
-                      <i class="fa-regular fa-heart is-size-6"></i>
+                      <i class="fa-regular fa-heart is-size-8"></i>
                     </span>
                     <a href="/sponsors">Sponsor Manifest</a>
                   </span>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div class="content">
-              <p class="has-text-weight-bold is-size-6">More</p>
-              <ul class="no-lst">
                 <li>
                   <span class="icon-text">
                     <span class="icon">
-                      <i class="fa-solid fa-plug is-size-6"></i>
-                    </span>
-                    <a href="/integrations">Integrations</a>
-                  </span>
-                </li>
-                <li>
-                  <span class="icon-text">
-                    <span class="icon">
-                      <i class="fa-regular fa-image is-size-6"></i>
+                      <i class="fa-regular fa-image is-size-8"></i>
                     </span>
                     <a href="/brand-assets">Brand assets</a>
                   </span>
@@ -145,7 +156,7 @@
                 <li>
                   <span class="icon-text">
                     <span class="icon">
-                      <i class="fa-regular fa-handshake is-size-6"></i>
+                      <i class="fa-regular fa-handshake is-size-8"></i>
                     </span>
                     <a href="/partnerships">Partner with us</a>
                   </span>
@@ -155,39 +166,23 @@
           </div>
           <div class="column is-3">
             <div class="content">
-              <p class="has-text-weight-bold is-size-6">Manifest Cloud</p>
-              <p>Subscribe to the waitlist to know when it is out.</p>
-              <app-waiting-list-form></app-waiting-list-form>
-            </div>
-          </div>
-          <div class="column is-12">
-            <div class="separator"></div>
-          </div>
-          <div class="column is-6">
-            <img
-              src="./assets/images/logo-transparent.svg"
-              width="180"
-              height="50"
-              alt="logo of manifest"
-              class="footer-logo"
-              loading="lazy"
-            />
-          </div>
-          <div
-            class="column is-6 has-text-right is-align-items-center is-flex is-justify-content-flex-end"
-          >
-            <a class="is-underlined" href="/privacy"> Privacy policy </a>
-            <span class="mx-4 has-text-grey-lighter">•</span>
-            <span>
-              Source code licensed
-              <a
-                class="is-underlined"
-                href="https://opensource.org/license/mit"
-                target="_blank"
+              <p
+                class="has-text-weight-bold is-size-7"
+                style="margin-top: 20px"
               >
-                MIT
-              </a>
-            </span>
+                Legal
+              </p>
+              <ul class="no-lst is-size-8">
+                <li>
+                  <a href="/privacy" target="_blank"> Privacy Policy </a>
+                </li>
+                <li>
+                  <a href="https://opensource.org/license/mit" target="_blank">
+                    MIT License
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
