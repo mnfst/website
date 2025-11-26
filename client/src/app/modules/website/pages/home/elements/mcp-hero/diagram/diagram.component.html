@@ -8,6 +8,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
   <path
+    id="path1"
     d="M138 55C150.973 55 161.49 65.5166 161.49 78.4895L161.491 153C161.491 166.255 172.236 177 185.491 177H210"
     stroke="url(#paint0_linear_5809_19785)"
     stroke-miterlimit="1.30541"
@@ -16,6 +17,7 @@
     stroke-dasharray="3 4"
   />
   <path
+    id="path2"
     d="M60 97H137.49C150.744 97 161.49 107.745 161.49 121L161.49 153C161.49 166.255 172.235 177 185.49 177H209.999"
     stroke="url(#paint1_linear_5809_19785)"
     stroke-miterlimit="1.30541"
@@ -24,6 +26,7 @@
     stroke-dasharray="3 4"
   />
   <path
+    id="path3"
     d="M60 257H137.49C150.745 257 161.49 246.255 161.49 233L161.49 201C161.491 187.745 172.236 177 185.49 177H210"
     stroke="url(#paint2_linear_5809_19785)"
     stroke-miterlimit="1.30541"
@@ -32,6 +35,7 @@
     stroke-dasharray="3 4"
   />
   <path
+    id="path4"
     d="M138 128.5C150.973 128.5 161.49 139.016 161.491 151.989L161.491 153.001C161.491 166.256 172.236 177 185.491 177H210.001"
     stroke="url(#paint3_linear_5809_19785)"
     stroke-miterlimit="1.30541"
@@ -40,6 +44,7 @@
     stroke-dasharray="3 4"
   />
   <path
+    id="path5"
     d="M138 225.5C150.973 225.5 161.49 214.984 161.49 202.011L161.49 200.999C161.491 187.744 172.236 177 185.49 177H210"
     stroke="url(#paint4_linear_5809_19785)"
     stroke-miterlimit="1.30541"
@@ -48,6 +53,7 @@
     stroke-dasharray="3 4"
   />
   <path
+    id="path6"
     d="M137 296.5H137.795C151.05 296.5 161.795 285.754 161.795 272.499L161.793 201.001C161.793 187.746 172.538 177 185.793 177H212.999"
     stroke="url(#paint5_linear_5809_19785)"
     stroke-miterlimit="1.30541"
@@ -55,6 +61,29 @@
     stroke-linejoin="round"
     stroke-dasharray="3 4"
   />
+  
+  <!-- Lightning-like dots with shadows and rapid blinking -->
+  <circle r="3" fill="#FF4444" filter="url(#lightning)">
+    <animateMotion dur="3s" repeatCount="indefinite">
+      <mpath href="#path1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.1;1;0.3;1;0.1" dur="0.4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle r="3" fill="#FF4444" filter="url(#lightning)">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1s">
+      <mpath href="#path3"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.1;1;0.3;1;0.1" dur="0.4s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  
+  <circle r="3" fill="#FF4444" filter="url(#lightning)">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="2s">
+      <mpath href="#path5"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.1;1;0.3;1;0.1" dur="0.4s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+
   <rect x="207" y="148" width="82" height="59" rx="6" fill="white" />
   <rect
     x="207.5"
@@ -875,6 +904,21 @@
     />
   </g>
   <defs>
+    <!-- Lightning-like glow filter with shadow -->
+    <filter id="lightning" x="-100%" y="-100%" width="300%" height="300%">
+      <!-- Shadow -->
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.4"/>
+      <!-- Inner glow -->
+      <feGaussianBlur stdDeviation="3" result="innerGlow"/>
+      <!-- Outer bright glow -->
+      <feGaussianBlur stdDeviation="6" result="outerGlow"/>
+      <feMerge> 
+        <feMergeNode in="outerGlow"/>
+        <feMergeNode in="innerGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
     <clipPath id="bgblur_1_5809_19785_clip_path" transform="translate(-291 33)">
       <rect x="332" y="8" width="185" height="338" rx="7" />
     </clipPath>
