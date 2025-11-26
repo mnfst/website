@@ -70,7 +70,7 @@ const config: Config = {
     announcementBar: {
       id: 'poc-banner',
       content:
-        '📙 Manifest Doc is a work-in-progress. Having trouble finding something ? Let us know on our <a href="https://discord.gg/FepAked3W7" target="_blank"> Discord</a>.',
+        '📢 Manifest is evolving. We\'re launching a new product focused on MCP server generation for AI agents. Current docs remain available, and we\'ll share migration info soon. <a href="https://manifest.build" target="_blank">Learn more</a>',
       backgroundColor: '#0a15b7',
       textColor: '#fff',
       isCloseable: false
