@@ -71,7 +71,7 @@ const config: Config = {
       id: 'poc-banner',
       content:
         '📢 Manifest is evolving. We\'re launching a new product focused on MCP server generation for AI agents. Current docs remain available, and we\'ll share migration info soon. <a href="https://manifest.build" target="_blank">Learn more</a>',
-      backgroundColor: '#0a15b7',
+      backgroundColor: '#942FFA',
       textColor: '#fff',
       isCloseable: false
     },
