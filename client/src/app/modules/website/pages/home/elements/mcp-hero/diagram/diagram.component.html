@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 650" class="chat-animation" [class.slot-clicked]="selectedSlotId">
   <defs>
     <style>
-      /* Dark ChatGPT theme with light app cards */
-      .chat-bg { fill: #212121; }
-      .header-bg { fill: #212121; }
-      .user-msg-bg { fill: #2f2f2f; }
+      /* Light ChatGPT theme with light app cards */
+      .chat-bg { fill: #ffffff; }
+      .header-bg { fill: #ffffff; }
+      .user-msg-bg { fill: #f4f4f4; }
       .card-bg { fill: #ffffff; }
-      .text-light { fill: #ececec; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .text-dim { fill: #9a9a9a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .text-dark { fill: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-light { fill: #0D0D0D; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-dim { fill: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-dark { fill: #0D0D0D; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-gray { fill: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .time-slot { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
       .time-slot-text { fill: #1d4ed8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .input-bg { fill: #2f2f2f; }
+      .input-bg { fill: #f4f4f4; }
 
       /* ===== PHASE 1: MESSAGE ANIMATION (0s - 6s) ===== */
 
       /* 1. Send button activation - starts at 2s */
       .send-button-circle {
-        fill: #3b3b3b;
+        fill: #e5e5e5;
         animation: buttonActivate 0.3s ease-out 2s forwards;
       }
 
       .send-button-arrow {
-        stroke: #6b6b6b;
+        stroke: #b4b4b4;
         animation: arrowActivate 0.3s ease-out 2s forwards;
       }
 
@@ -52,7 +52,7 @@
       }
 
       .thinking-dot {
-        fill: #9a9a9a;
+        fill: #0D0D0D;
         animation: dotPulse 1.5s ease-in-out infinite;
       }
 
@@ -201,13 +201,13 @@
       }
 
       @keyframes buttonActivate {
-        from { fill: #3b3b3b; }
-        to { fill: #ffffff; }
+        from { fill: #e5e5e5; }
+        to { fill: #0D0D0D; }
       }
 
       @keyframes arrowActivate {
-        from { stroke: #6b6b6b; }
-        to { stroke: #212121; }
+        from { stroke: #b4b4b4; }
+        to { stroke: #ffffff; }
       }
 
       @keyframes messageAppear {
@@ -279,14 +279,14 @@
     <rect class="header-bg" x="0" y="12" width="700" height="38"/>
 
     <!-- ChatGPT text -->
-    <text fill="#ffffff" x="20" y="30" font-size="16" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ChatGPT</text>
+    <text fill="#0D0D0D" x="20" y="30" font-size="16" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ChatGPT</text>
 
     <!-- Model selector -->
-    <text fill="#9a9a9a" x="95" y="30" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">4o</text>
-    <path d="M115 23l4 4 4-4" stroke="#9a9a9a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text fill="#6b7280" x="95" y="30" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">4o</text>
+    <path d="M115 23l4 4 4-4" stroke="#6b7280" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
     <!-- Header divider -->
-    <line x1="0" y1="50" x2="700" y2="50" stroke="#3b3b3b" stroke-width="1"/>
+    <line x1="0" y1="50" x2="700" y2="50" stroke="#e5e5e5" stroke-width="1"/>
   </g>
 
   <!-- ===== SCROLLABLE CONTENT (Phases 1-2) ===== -->
@@ -294,7 +294,7 @@
     <!-- User message bubble (animated - flies up from input) -->
     <g class="user-message">
       <rect class="user-msg-bg" x="270" y="70" width="410" height="44" rx="20"/>
-      <text fill="#ececec" x="290" y="98" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
+      <text fill="#0D0D0D" x="290" y="98" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
     </g>
 
     <!-- Thinking loader (single pulsing dot) -->
@@ -304,13 +304,13 @@
 
     <!-- Assistant response text -->
     <g class="assistant-response">
-      <text fill="#ececec" x="20" y="185" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">I found several doctors with availability this evening.</text>
-      <text fill="#9a9a9a" x="20" y="208" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Here are your options:</text>
+      <text fill="#0D0D0D" x="20" y="185" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">I found several doctors with availability this evening.</text>
+      <text fill="#6b7280" x="20" y="208" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Here are your options:</text>
     </g>
 
     <!-- Brand title -->
     <g class="ui-container">
-      <text fill="#ececec" x="20" y="245" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Options from </text>
+      <text fill="#0D0D0D" x="20" y="245" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Options from </text>
       <text fill="#0596DE" x="118" y="245" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HealthSync</text>
     </g>
 
@@ -411,7 +411,7 @@
   <g class="confirmation-screen">
     <!-- Assistant confirmation message -->
     <g class="confirm-header">
-      <text fill="#ececec" x="20" y="85" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Great choice! Here's your appointment summary:</text>
+      <text fill="#0D0D0D" x="20" y="85" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Great choice! Here's your appointment summary:</text>
     </g>
 
     <!-- Appointment Summary Card -->
@@ -460,7 +460,7 @@
 
     <!-- Question: Have you consulted this doctor before? -->
     <g class="confirm-question">
-      <text fill="#ececec" x="20" y="320" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Have you consulted this doctor before?</text>
+      <text fill="#0D0D0D" x="20" y="320" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Have you consulted this doctor before?</text>
 
       <!-- Yes button -->
       <rect fill="#ffffff" x="280" y="302" width="70" height="32" rx="6" stroke="#c9d9e8" stroke-width="1"/>
@@ -482,8 +482,8 @@
       <!-- Info icon -->
       <circle fill="#e0f2fe" cx="30" cy="430" r="10"/>
       <text fill="#0596DE" x="30" y="434" text-anchor="middle" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">i</text>
-      <text fill="#9a9a9a" x="48" y="434" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">By confirming this appointment, </text>
-      <text fill="#ececec" x="230" y="434" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">you commit to attending.</text>
+      <text fill="#6b7280" x="48" y="434" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">By confirming this appointment, </text>
+      <text fill="#0D0D0D" x="230" y="434" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">you commit to attending.</text>
     </g>
   </g>
 
@@ -492,11 +492,11 @@
   <rect class="input-bg" x="20" y="600" width="660" height="40" rx="20"/>
 
   <!-- Placeholder text (hidden initially, shown after send) -->
-  <text fill="#6b6b6b" class="placeholder-text" x="60" y="626" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Message ChatGPT</text>
+  <text fill="#9ca3af" class="placeholder-text" x="60" y="626" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Message ChatGPT</text>
 
   <!-- Input text (shown for 2 seconds, then hidden) -->
   <g class="typing-text-input">
-    <text fill="#ececec" x="60" y="626" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
+    <text fill="#0D0D0D" x="60" y="626" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
   </g>
 
   <!-- Send button -->
@@ -505,5 +505,5 @@
 
   <!-- Attach icon -->
   <circle fill="transparent" cx="40" cy="620" r="12"/>
-  <path d="M40 614v12M34 620h12" stroke="#6b6b6b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M40 614v12M34 620h12" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
 </svg>
