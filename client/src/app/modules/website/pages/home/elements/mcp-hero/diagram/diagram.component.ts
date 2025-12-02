@@ -6,4 +6,12 @@ import { Component } from '@angular/core'
   templateUrl: './diagram.component.html',
   styleUrl: './diagram.component.scss'
 })
-export class DiagramComponent {}
+export class DiagramComponent {
+  isSlotSelected = false
+
+  onSlotClick(): void {
+    if (!this.isSlotSelected) {
+      this.isSlotSelected = true
+    }
+  }
+}
