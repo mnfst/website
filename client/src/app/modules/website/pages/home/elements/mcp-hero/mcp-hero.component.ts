@@ -10,9 +10,4 @@ import { DiagramComponent } from './diagram/diagram.component'
   templateUrl: './mcp-hero.component.html',
   styleUrls: ['./mcp-hero.component.scss']
 })
-export class McpHeroComponent {
-
-  onGetDemo(): void {
-    window.open('https://calendly.com/sebastien-manifest/30min', '_blank')
-  }
-}
+export class McpHeroComponent {}
