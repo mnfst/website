@@ -290,6 +290,51 @@
   background-size: 200% 200%;
 }
 
+// Rotating words animation
+.rotating-words {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+
+  .action {
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    animation: rotateWord 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+    // 6 words, 2s each = 12s total cycle
+    &:nth-child(1) { animation-delay: 0s; }
+    &:nth-child(2) { animation-delay: 2s; }
+    &:nth-child(3) { animation-delay: 4s; }
+    &:nth-child(4) { animation-delay: 6s; }
+    &:nth-child(5) { animation-delay: 8s; }
+    &:nth-child(6) { animation-delay: 10s; }
+
+    // First word visible by default to set container width
+    &:first-child {
+      position: relative;
+    }
+  }
+}
+
+@keyframes rotateWord {
+  0%, 2% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  4%, 14% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  16%, 100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
 @keyframes gradientShift {
   0%,
   100% {

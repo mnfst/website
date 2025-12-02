@@ -1,28 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" class="chat-animation" [class.slot-clicked]="selectedSlotId">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 650" class="chat-animation" [class.slot-clicked]="selectedSlotId">
   <defs>
     <style>
-      /* Theme colors */
+      /* Dark ChatGPT theme with light app cards */
       .chat-bg { fill: #212121; }
-      .user-msg-bg { fill: #ececec; }
+      .header-bg { fill: #212121; }
+      .user-msg-bg { fill: #2f2f2f; }
       .card-bg { fill: #ffffff; }
-      .text-white { fill: #ececec; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .text-white-dim { fill: #b4b4b4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-light { fill: #ececec; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-dim { fill: #9a9a9a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-dark { fill: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-gray { fill: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .time-slot { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
       .time-slot-text { fill: #1d4ed8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .input-bg { fill: #ffffff; }
+      .input-bg { fill: #2f2f2f; }
 
       /* ===== PHASE 1: MESSAGE ANIMATION (0s - 6s) ===== */
 
       /* 1. Send button activation - starts at 2s */
       .send-button-circle {
-        fill: #ececec;
+        fill: #3b3b3b;
         animation: buttonActivate 0.3s ease-out 2s forwards;
       }
 
       .send-button-arrow {
-        stroke: #6b7280;
+        stroke: #6b6b6b;
         animation: arrowActivate 0.3s ease-out 2s forwards;
       }
 
@@ -51,7 +52,7 @@
       }
 
       .thinking-dot {
-        fill: #6b7280;
+        fill: #9a9a9a;
         animation: dotPulse 1.5s ease-in-out infinite;
       }
 
@@ -199,19 +200,14 @@
         to { opacity: 0; }
       }
 
-      @keyframes cursorBlink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-
       @keyframes buttonActivate {
-        from { fill: #ececec; }
-        to { fill: #0d0d0d; }
+        from { fill: #3b3b3b; }
+        to { fill: #ffffff; }
       }
 
       @keyframes arrowActivate {
-        from { stroke: #6b7280; }
-        to { stroke: #ffffff; }
+        from { stroke: #6b6b6b; }
+        to { stroke: #212121; }
       }
 
       @keyframes messageAppear {
@@ -257,146 +253,156 @@
       }
     </style>
 
-    <!-- Shadow filter for cards -->
-    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/>
-    </filter>
-
-    <!-- Subtle border-like shadow for input -->
-    <filter id="inputShadow" x="-2%" y="-5%" width="104%" height="115%">
-      <feDropShadow dx="0" dy="0" stdDeviation="1" flood-opacity="0.12"/>
-    </filter>
-
     <!-- Circular clip paths for avatars -->
     <clipPath id="avatar1Clip">
-      <circle cx="62" cy="255" r="26"/>
+      <circle cx="62" cy="305" r="26"/>
     </clipPath>
     <clipPath id="avatar2Clip">
-      <circle cx="62" cy="345" r="26"/>
+      <circle cx="62" cy="395" r="26"/>
     </clipPath>
     <clipPath id="avatar3Clip">
-      <circle cx="62" cy="435" r="26"/>
+      <circle cx="62" cy="485" r="26"/>
     </clipPath>
     <!-- Avatar clip for confirmation screen -->
     <clipPath id="confirmAvatarClip">
-      <circle cx="62" cy="145" r="26"/>
+      <circle cx="62" cy="195" r="26"/>
     </clipPath>
   </defs>
+
+  <!-- ===== DARK BACKGROUND ===== -->
+  <rect class="chat-bg" x="0" y="0" width="700" height="650" rx="12"/>
+
+  <!-- ===== HEADER ===== -->
+  <g class="header">
+    <!-- Header background -->
+    <rect class="header-bg" x="0" y="0" width="700" height="50" rx="12"/>
+    <rect class="header-bg" x="0" y="12" width="700" height="38"/>
+
+    <!-- ChatGPT text -->
+    <text fill="#ffffff" x="20" y="30" font-size="16" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ChatGPT</text>
+
+    <!-- Model selector -->
+    <text fill="#9a9a9a" x="95" y="30" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">4o</text>
+    <path d="M115 23l4 4 4-4" stroke="#9a9a9a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Header divider -->
+    <line x1="0" y1="50" x2="700" y2="50" stroke="#3b3b3b" stroke-width="1"/>
+  </g>
 
   <!-- ===== SCROLLABLE CONTENT (Phases 1-2) ===== -->
   <g class="scrollable-content">
     <!-- User message bubble (animated - flies up from input) -->
     <g class="user-message">
-      <rect class="user-msg-bg" x="270" y="20" width="410" height="44" rx="20"/>
-      <text class="text-dark" x="290" y="48" font-size="15">Book me a doctor appointment for this evening</text>
+      <rect class="user-msg-bg" x="270" y="70" width="410" height="44" rx="20"/>
+      <text fill="#ececec" x="290" y="98" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
     </g>
 
     <!-- Thinking loader (single pulsing dot) -->
     <g class="thinking-loader">
-      <circle class="thinking-dot" cx="36" cy="140" r="6"/>
+      <circle class="thinking-dot" cx="36" cy="190" r="6"/>
     </g>
 
     <!-- Assistant response text -->
     <g class="assistant-response">
-      <text fill="#0d0d0d" x="20" y="135" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">I found several doctors with availability this evening.</text>
-      <text fill="#6b7280" x="20" y="158" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Here are your options:</text>
+      <text fill="#ececec" x="20" y="185" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">I found several doctors with availability this evening.</text>
+      <text fill="#9a9a9a" x="20" y="208" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Here are your options:</text>
     </g>
 
     <!-- Brand title -->
     <g class="ui-container">
-      <text fill="#0d0d0d" x="20" y="195" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Options from </text>
-      <text fill="#0596DE" x="118" y="195" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HealthSync</text>
+      <text fill="#ececec" x="20" y="245" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Options from </text>
+      <text fill="#0596DE" x="118" y="245" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HealthSync</text>
     </g>
 
     <!-- Doctor Card 1 -->
     <g class="doctor-card-1">
-      <rect fill="#ffffff" x="20" y="215" width="660" height="80" rx="8" stroke="#c9d9e8" stroke-width="1"/>
+      <rect fill="#ffffff" x="20" y="265" width="660" height="80" rx="8" stroke="#c9d9e8" stroke-width="1"/>
 
       <!-- Avatar with photo -->
-      <image href="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" x="36" y="229" width="52" height="52" clip-path="url(#avatar1Clip)" preserveAspectRatio="xMidYMid slice"/>
+      <image href="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" x="36" y="279" width="52" height="52" clip-path="url(#avatar1Clip)" preserveAspectRatio="xMidYMid slice"/>
 
       <!-- Video camera icon badge -->
-      <circle fill="#2563eb" cx="80" cy="273" r="10"/>
-      <rect fill="#ffffff" x="73" y="270" width="9" height="6" rx="1"/>
-      <path d="M82 271l4-2v8l-4-2z" fill="#ffffff"/>
+      <circle fill="#2563eb" cx="80" cy="323" r="10"/>
+      <rect fill="#ffffff" x="73" y="320" width="9" height="6" rx="1"/>
+      <path d="M82 321l4-2v8l-4-2z" fill="#ffffff"/>
 
       <!-- Doctor info -->
-      <text class="text-dark" x="107" y="245" font-size="15" font-weight="600">Dr. Sarah Martin</text>
-      <text class="text-gray" x="107" y="265" font-size="13">General Practitioner</text>
-      <text fill="#9ca3af" x="107" y="282" font-size="12">0.3 km away</text>
+      <text fill="#1a1a1a" x="107" y="295" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dr. Sarah Martin</text>
+      <text fill="#6b7280" x="107" y="315" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">General Practitioner</text>
+      <text fill="#9ca3af" x="107" y="332" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">0.3 km away</text>
 
       <!-- Time slots -->
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-1'" (click)="onSlotClick('slot-1')">
-        <rect class="time-slot" x="448" y="235" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="478" y="257" text-anchor="middle" font-size="13" font-weight="500">18:30</text>
+        <rect class="time-slot" x="448" y="285" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="478" y="307" text-anchor="middle" font-size="13" font-weight="500">18:30</text>
       </g>
 
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-2'" (click)="onSlotClick('slot-2')">
-        <rect class="time-slot" x="516" y="235" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="546" y="257" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
+        <rect class="time-slot" x="516" y="285" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="546" y="307" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
       </g>
 
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-3'" (click)="onSlotClick('slot-3')">
-        <rect class="time-slot" x="584" y="235" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="614" y="257" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
+        <rect class="time-slot" x="584" y="285" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="614" y="307" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
       </g>
     </g>
 
     <!-- Doctor Card 2 -->
     <g class="doctor-card-2">
-      <rect fill="#ffffff" x="20" y="305" width="660" height="80" rx="8" stroke="#c9d9e8" stroke-width="1"/>
+      <rect fill="#ffffff" x="20" y="355" width="660" height="80" rx="8" stroke="#c9d9e8" stroke-width="1"/>
 
       <!-- Avatar with photo -->
-      <image href="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face" x="36" y="319" width="52" height="52" clip-path="url(#avatar2Clip)" preserveAspectRatio="xMidYMid slice"/>
+      <image href="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face" x="36" y="369" width="52" height="52" clip-path="url(#avatar2Clip)" preserveAspectRatio="xMidYMid slice"/>
 
       <!-- Doctor info -->
-      <text class="text-dark" x="107" y="335" font-size="15" font-weight="600">Dr. James Chen</text>
-      <text class="text-gray" x="107" y="355" font-size="13">General Practitioner</text>
-      <text fill="#9ca3af" x="107" y="372" font-size="12">0.8 km away</text>
+      <text fill="#1a1a1a" x="107" y="385" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dr. James Chen</text>
+      <text fill="#6b7280" x="107" y="405" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">General Practitioner</text>
+      <text fill="#9ca3af" x="107" y="422" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">0.8 km away</text>
 
       <!-- Time slots -->
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-4'" (click)="onSlotClick('slot-4')">
-        <rect class="time-slot" x="448" y="325" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="478" y="347" text-anchor="middle" font-size="13" font-weight="500">18:45</text>
+        <rect class="time-slot" x="448" y="375" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="478" y="397" text-anchor="middle" font-size="13" font-weight="500">18:45</text>
       </g>
 
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-5'" (click)="onSlotClick('slot-5')">
-        <rect class="time-slot" x="516" y="325" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="546" y="347" text-anchor="middle" font-size="13" font-weight="500">19:15</text>
+        <rect class="time-slot" x="516" y="375" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="546" y="397" text-anchor="middle" font-size="13" font-weight="500">19:15</text>
       </g>
 
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-6'" (click)="onSlotClick('slot-6')">
-        <rect class="time-slot" x="584" y="325" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="614" y="347" text-anchor="middle" font-size="13" font-weight="500">20:00</text>
+        <rect class="time-slot" x="584" y="375" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="614" y="397" text-anchor="middle" font-size="13" font-weight="500">20:00</text>
       </g>
     </g>
 
     <!-- Doctor Card 3 -->
     <g class="doctor-card-3">
-      <rect fill="#ffffff" x="20" y="395" width="660" height="80" rx="8" stroke="#c9d9e8" stroke-width="1"/>
+      <rect fill="#ffffff" x="20" y="445" width="660" height="80" rx="8" stroke="#c9d9e8" stroke-width="1"/>
 
       <!-- Avatar with photo -->
-      <image href="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop&crop=face" x="36" y="409" width="52" height="52" clip-path="url(#avatar3Clip)" preserveAspectRatio="xMidYMid slice"/>
+      <image href="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop&crop=face" x="36" y="459" width="52" height="52" clip-path="url(#avatar3Clip)" preserveAspectRatio="xMidYMid slice"/>
 
       <!-- Doctor info -->
-      <text class="text-dark" x="107" y="425" font-size="15" font-weight="600">Dr. Emma Petit</text>
-      <text class="text-gray" x="107" y="445" font-size="13">General Practitioner</text>
-      <text fill="#9ca3af" x="107" y="462" font-size="12">1.2 km away</text>
+      <text fill="#1a1a1a" x="107" y="475" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dr. Emma Petit</text>
+      <text fill="#6b7280" x="107" y="495" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">General Practitioner</text>
+      <text fill="#9ca3af" x="107" y="512" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">1.2 km away</text>
 
       <!-- Time slots -->
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-7'" (click)="onSlotClick('slot-7')">
-        <rect class="time-slot" x="448" y="415" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="478" y="437" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
+        <rect class="time-slot" x="448" y="465" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="478" y="487" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
       </g>
 
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-8'" (click)="onSlotClick('slot-8')">
-        <rect class="time-slot" x="516" y="415" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="546" y="437" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
+        <rect class="time-slot" x="516" y="465" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="546" y="487" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
       </g>
 
       <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-9'" (click)="onSlotClick('slot-9')">
-        <rect class="time-slot" x="584" y="415" width="60" height="34" rx="8"/>
-        <text class="time-slot-text" x="614" y="437" text-anchor="middle" font-size="13" font-weight="500">20:15</text>
+        <rect class="time-slot" x="584" y="465" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="614" y="487" text-anchor="middle" font-size="13" font-weight="500">20:15</text>
       </g>
     </g>
   </g>
@@ -405,99 +411,99 @@
   <g class="confirmation-screen">
     <!-- Assistant confirmation message -->
     <g class="confirm-header">
-      <text fill="#0d0d0d" x="20" y="35" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Great choice! Here's your appointment summary:</text>
+      <text fill="#ececec" x="20" y="85" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Great choice! Here's your appointment summary:</text>
     </g>
 
     <!-- Appointment Summary Card -->
     <g class="confirm-card">
-      <rect fill="#ffffff" x="20" y="55" width="660" height="180" rx="8" stroke="#c9d9e8" stroke-width="1"/>
+      <rect fill="#ffffff" x="20" y="105" width="660" height="180" rx="8" stroke="#c9d9e8" stroke-width="1"/>
 
       <!-- Date/Time Header with blue background -->
-      <rect fill="#0596DE" x="20" y="55" width="660" height="45" rx="8"/>
-      <rect fill="#0596DE" x="20" y="85" width="660" height="15"/>
+      <rect fill="#0596DE" x="20" y="105" width="660" height="45" rx="8"/>
+      <rect fill="#0596DE" x="20" y="135" width="660" height="15"/>
 
       <!-- Calendar icon -->
-      <rect fill="none" stroke="#ffffff" stroke-width="1.5" x="40" y="67" width="18" height="18" rx="3"/>
-      <line x1="40" y1="72" x2="58" y2="72" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="45" y1="64" x2="45" y2="69" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="53" y1="64" x2="53" y2="69" stroke="#ffffff" stroke-width="1.5"/>
+      <rect fill="none" stroke="#ffffff" stroke-width="1.5" x="40" y="117" width="18" height="18" rx="3"/>
+      <line x1="40" y1="122" x2="58" y2="122" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="45" y1="114" x2="45" y2="119" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="53" y1="114" x2="53" y2="119" stroke="#ffffff" stroke-width="1.5"/>
 
       <!-- Date text -->
-      <text fill="#ffffff" x="68" y="82" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Thursday, December 11</text>
+      <text fill="#ffffff" x="68" y="132" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Thursday, December 11</text>
 
       <!-- Clock icon -->
-      <circle fill="none" stroke="#ffffff" stroke-width="1.5" cx="250" cy="77" r="9"/>
-      <line x1="250" y1="77" x2="250" y2="72" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="250" y1="77" x2="254" y2="79" stroke="#ffffff" stroke-width="1.5"/>
+      <circle fill="none" stroke="#ffffff" stroke-width="1.5" cx="250" cy="127" r="9"/>
+      <line x1="250" y1="127" x2="250" y2="122" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="250" y1="127" x2="254" y2="129" stroke="#ffffff" stroke-width="1.5"/>
 
       <!-- Time text -->
-      <text fill="#ffffff" x="268" y="82" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">18:30</text>
+      <text fill="#ffffff" x="268" y="132" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">18:30</text>
 
       <!-- Doctor info section -->
-      <image href="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" x="36" y="119" width="52" height="52" clip-path="url(#confirmAvatarClip)" preserveAspectRatio="xMidYMid slice"/>
+      <image href="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" x="36" y="169" width="52" height="52" clip-path="url(#confirmAvatarClip)" preserveAspectRatio="xMidYMid slice"/>
 
-      <text class="text-dark" x="107" y="140" font-size="15" font-weight="600">Dr. Sarah Martin</text>
-      <text class="text-gray" x="107" y="160" font-size="13">General Practitioner</text>
+      <text fill="#1a1a1a" x="107" y="190" font-size="15" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dr. Sarah Martin</text>
+      <text fill="#6b7280" x="107" y="210" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">General Practitioner</text>
 
       <!-- Appointment details -->
-      <text fill="#0d0d0d" x="40" y="200" font-size="13" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Your appointment details</text>
+      <text fill="#1a1a1a" x="40" y="250" font-size="13" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Your appointment details</text>
 
       <!-- Location icon -->
-      <circle fill="none" stroke="#6b7280" stroke-width="1.2" cx="48" cy="218" r="5"/>
-      <circle fill="#6b7280" cx="48" cy="217" r="2"/>
-      <text fill="#6b7280" x="60" y="222" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">123 Medical Center, Suite 400</text>
+      <circle fill="none" stroke="#6b7280" stroke-width="1.2" cx="48" cy="268" r="5"/>
+      <circle fill="#6b7280" cx="48" cy="267" r="2"/>
+      <text fill="#6b7280" x="60" y="272" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">123 Medical Center, Suite 400</text>
 
       <!-- Consultation type icon -->
-      <rect fill="none" stroke="#6b7280" stroke-width="1.2" x="303" y="212" width="10" height="10" rx="2"/>
-      <text fill="#6b7280" x="320" y="222" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">General consultation</text>
+      <rect fill="none" stroke="#6b7280" stroke-width="1.2" x="303" y="262" width="10" height="10" rx="2"/>
+      <text fill="#6b7280" x="320" y="272" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">General consultation</text>
     </g>
 
     <!-- Question: Have you consulted this doctor before? -->
     <g class="confirm-question">
-      <text fill="#0d0d0d" x="20" y="270" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Have you consulted this doctor before?</text>
+      <text fill="#ececec" x="20" y="320" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Have you consulted this doctor before?</text>
 
       <!-- Yes button -->
-      <rect fill="#ffffff" x="280" y="252" width="70" height="32" rx="6" stroke="#c9d9e8" stroke-width="1"/>
-      <text fill="#0d0d0d" x="315" y="273" text-anchor="middle" font-size="13" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Yes</text>
+      <rect fill="#ffffff" x="280" y="302" width="70" height="32" rx="6" stroke="#c9d9e8" stroke-width="1"/>
+      <text fill="#1a1a1a" x="315" y="323" text-anchor="middle" font-size="13" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Yes</text>
 
       <!-- No button -->
-      <rect fill="#ffffff" x="360" y="252" width="70" height="32" rx="6" stroke="#c9d9e8" stroke-width="1"/>
-      <text fill="#0d0d0d" x="395" y="273" text-anchor="middle" font-size="13" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">No</text>
+      <rect fill="#ffffff" x="360" y="302" width="70" height="32" rx="6" stroke="#c9d9e8" stroke-width="1"/>
+      <text fill="#1a1a1a" x="395" y="323" text-anchor="middle" font-size="13" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">No</text>
     </g>
 
     <!-- Confirm Appointment Button -->
     <g class="confirm-button">
-      <rect fill="#0596DE" x="20" y="300" width="660" height="50" rx="8"/>
-      <text fill="#ffffff" x="350" y="332" text-anchor="middle" font-size="16" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CONFIRM APPOINTMENT</text>
+      <rect fill="#0596DE" x="20" y="350" width="660" height="50" rx="8"/>
+      <text fill="#ffffff" x="350" y="382" text-anchor="middle" font-size="16" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CONFIRM APPOINTMENT</text>
     </g>
 
     <!-- Disclaimer -->
     <g class="confirm-disclaimer">
       <!-- Info icon -->
-      <circle fill="#e0f2fe" cx="30" y="380" r="10"/>
-      <text fill="#0596DE" x="30" y="384" text-anchor="middle" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">i</text>
-      <text fill="#6b7280" x="48" y="384" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">By confirming this appointment, </text>
-      <text fill="#0d0d0d" x="230" y="384" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">you commit to attending.</text>
+      <circle fill="#e0f2fe" cx="30" cy="430" r="10"/>
+      <text fill="#0596DE" x="30" y="434" text-anchor="middle" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">i</text>
+      <text fill="#9a9a9a" x="48" y="434" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">By confirming this appointment, </text>
+      <text fill="#ececec" x="230" y="434" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">you commit to attending.</text>
     </g>
   </g>
 
   <!-- ===== INPUT AREA (Always visible) ===== -->
   <!-- Input area at bottom -->
-  <rect class="input-bg" x="20" y="550" width="660" height="40" rx="20" filter="url(#inputShadow)"/>
+  <rect class="input-bg" x="20" y="600" width="660" height="40" rx="20"/>
 
   <!-- Placeholder text (hidden initially, shown after send) -->
-  <text fill="#9ca3af" class="placeholder-text" x="60" y="576" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Ask anything</text>
+  <text fill="#6b6b6b" class="placeholder-text" x="60" y="626" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Message ChatGPT</text>
 
   <!-- Input text (shown for 2 seconds, then hidden) -->
   <g class="typing-text-input">
-    <text fill="#0d0d0d" x="60" y="576" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
+    <text fill="#ececec" x="60" y="626" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Book me a doctor appointment for this evening</text>
   </g>
 
   <!-- Send button -->
-  <circle class="send-button-circle" cx="660" cy="570" r="14"/>
-  <path class="send-button-arrow" d="M660 576v-12M656 568l4-4 4 4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="send-button-circle" cx="660" cy="620" r="14"/>
+  <path class="send-button-arrow" d="M660 626v-12M656 618l4-4 4 4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- Plus icon -->
-  <circle fill="#424242" cx="40" cy="570" r="12"/>
-  <path d="M40 565v10M35 570h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Attach icon -->
+  <circle fill="transparent" cx="40" cy="620" r="12"/>
+  <path d="M40 614v12M34 620h12" stroke="#6b6b6b" stroke-width="2" stroke-linecap="round"/>
 </svg>
