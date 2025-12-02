@@ -7,62 +7,188 @@
       .chat-header { fill: #212121; }
       .user-msg-bg { fill: #2f2f2f; }
       .assistant-msg-bg { fill: transparent; }
-      .doctolib-card { fill: #ffffff; }
+      .card-bg { fill: #ffffff; }
       .text-white { fill: #ececec; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-white-dim { fill: #b4b4b4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-dark { fill: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-gray { fill: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .time-slot { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
-      .time-slot:hover { fill: #dbeafe; }
       .time-slot-text { fill: #1d4ed8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .avatar-bg-1 { fill: #fecaca; }
       .avatar-bg-2 { fill: #bbf7d0; }
       .avatar-bg-3 { fill: #bfdbfe; }
       .avatar-text { fill: #374151; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; }
       .sidebar-item { fill: #212121; }
-      .sidebar-item:hover { fill: #2f2f2f; }
       .gpt-icon { fill: #ececec; }
       .input-bg { fill: #2f2f2f; }
       .divider { stroke: #2f2f2f; stroke-width: 1; }
 
-      /* User message animation */
+      /* ===== ANIMATION SEQUENCE ===== */
+
+      /* 1. Typing animation - each letter appears one by one */
+      .typing-char {
+        opacity: 0;
+        animation: charAppear 0.05s ease-out forwards;
+      }
+
+      .typing-cursor {
+        opacity: 1;
+        animation: cursorBlink 0.5s ease-in-out infinite, cursorMove 1.9s linear 0.3s forwards, fadeOut 0.2s ease-out 2.4s forwards;
+      }
+
+      /* Cursor moves to follow each character position - last char at 544, cursor ends at ~552 */
+      @keyframes cursorMove {
+        to { transform: translateX(362px); }
+      }
+
+      @keyframes charAppear {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      /* Letter timing - 38 characters, ~50ms each = 1.9s total */
+      .char-1 { animation-delay: 0.3s; }
+      .char-2 { animation-delay: 0.35s; }
+      .char-3 { animation-delay: 0.4s; }
+      .char-4 { animation-delay: 0.45s; }
+      .char-5 { animation-delay: 0.5s; }
+      .char-6 { animation-delay: 0.55s; }
+      .char-7 { animation-delay: 0.6s; }
+      .char-8 { animation-delay: 0.65s; }
+      .char-9 { animation-delay: 0.7s; }
+      .char-10 { animation-delay: 0.75s; }
+      .char-11 { animation-delay: 0.8s; }
+      .char-12 { animation-delay: 0.85s; }
+      .char-13 { animation-delay: 0.9s; }
+      .char-14 { animation-delay: 0.95s; }
+      .char-15 { animation-delay: 1s; }
+      .char-16 { animation-delay: 1.05s; }
+      .char-17 { animation-delay: 1.1s; }
+      .char-18 { animation-delay: 1.15s; }
+      .char-19 { animation-delay: 1.2s; }
+      .char-20 { animation-delay: 1.25s; }
+      .char-21 { animation-delay: 1.3s; }
+      .char-22 { animation-delay: 1.35s; }
+      .char-23 { animation-delay: 1.4s; }
+      .char-24 { animation-delay: 1.45s; }
+      .char-25 { animation-delay: 1.5s; }
+      .char-26 { animation-delay: 1.55s; }
+      .char-27 { animation-delay: 1.6s; }
+      .char-28 { animation-delay: 1.65s; }
+      .char-29 { animation-delay: 1.7s; }
+      .char-30 { animation-delay: 1.75s; }
+      .char-31 { animation-delay: 1.8s; }
+      .char-32 { animation-delay: 1.85s; }
+      .char-33 { animation-delay: 1.9s; }
+      .char-34 { animation-delay: 1.95s; }
+      .char-35 { animation-delay: 2s; }
+      .char-36 { animation-delay: 2.05s; }
+      .char-37 { animation-delay: 2.1s; }
+      .char-38 { animation-delay: 2.15s; }
+
+      /* 2. Send button activation */
+      .send-button-circle {
+        fill: #676767;
+        animation: buttonActivate 0.3s ease-out 2.4s forwards;
+      }
+
+      .send-button-arrow {
+        stroke: #424242;
+        animation: arrowActivate 0.3s ease-out 2.4s forwards;
+      }
+
+      /* 3. Input field clears, message appears */
+      .typing-text-input {
+        opacity: 1;
+        animation: fadeOut 0.2s ease-out 2.8s forwards;
+      }
+
+      .placeholder-text {
+        opacity: 0;
+        animation: fadeIn 0.2s ease-out 3s forwards;
+      }
+
+      /* 4. User message appears (flies up from input) */
       .user-message {
         opacity: 0;
-        animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+        transform: translateY(480px);
+        animation: messageAppear 0.5s cubic-bezier(0.16, 1, 0.3, 1) 3s forwards;
       }
 
-      /* Assistant text animation */
+      /* 5. Thinking loader - single pulsing dot */
+      .thinking-loader {
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out 3.6s forwards, fadeOut 0.3s ease-out 5.3s forwards;
+      }
+
+      .thinking-dot {
+        fill: #424242;
+        animation: dotPulse 1.5s ease-in-out infinite;
+      }
+
+      /* 6. Assistant response appears */
       .assistant-response {
         opacity: 0;
-        animation: fadeIn 0.5s ease-out 1.2s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 5.6s forwards;
       }
 
-      /* Doctolib UI animation */
+      /* 7. UI container */
       .agentic-ui {
         opacity: 0;
-        animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+        animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 6.1s forwards;
       }
 
-      /* Doctor cards stagger animation */
+      /* 8. Doctor cards stagger */
       .doctor-card-1 {
         opacity: 0;
-        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.3s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 6.6s forwards;
       }
       .doctor-card-2 {
         opacity: 0;
-        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 6.8s forwards;
       }
       .doctor-card-3 {
         opacity: 0;
-        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.7s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 7s forwards;
       }
 
-      /* Typing indicator */
-      .typing-dot {
-        animation: typingBounce 1.4s ease-in-out infinite;
+      /* ===== KEYFRAMES ===== */
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
-      .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-      .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+
+      @keyframes cursorBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      @keyframes buttonActivate {
+        from { fill: #676767; }
+        to { fill: #ffffff; }
+      }
+
+      @keyframes arrowActivate {
+        from { stroke: #424242; }
+        to { stroke: #212121; }
+      }
+
+      @keyframes messageAppear {
+        from {
+          opacity: 0;
+          transform: translateY(480px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
       @keyframes fadeSlideUp {
         from {
@@ -73,11 +199,6 @@
           opacity: 1;
           transform: translateY(0);
         }
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
       }
 
       @keyframes scaleIn {
@@ -91,9 +212,13 @@
         }
       }
 
-      @keyframes typingBounce {
-        0%, 60%, 100% { transform: translateY(0); }
-        30% { transform: translateY(-4px); }
+      @keyframes dotPulse {
+        0%, 100% {
+          r: 5;
+        }
+        50% {
+          r: 8;
+        }
       }
     </style>
 
@@ -106,6 +231,17 @@
     <filter id="inputShadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
     </filter>
+
+    <!-- Circular clip paths for avatars -->
+    <clipPath id="avatar1Clip">
+      <circle cx="200" cy="337" r="26"/>
+    </clipPath>
+    <clipPath id="avatar2Clip">
+      <circle cx="200" cy="432" r="26"/>
+    </clipPath>
+    <clipPath id="avatar3Clip">
+      <circle cx="200" cy="527" r="26"/>
+    </clipPath>
   </defs>
 
   <!-- Main chat window background -->
@@ -116,11 +252,9 @@
   <rect class="chat-sidebar" x="12" y="0" width="58" height="700"/>
 
   <!-- Sidebar icons -->
-  <!-- New chat icon -->
   <rect class="sidebar-item" x="12" y="16" width="46" height="46" rx="8"/>
   <path d="M35 32h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z" fill="#b4b4b4"/>
 
-  <!-- Chat history items -->
   <rect class="sidebar-item" x="12" y="72" width="46" height="46" rx="8"/>
   <rect fill="#4b5563" x="22" y="88" width="26" height="3" rx="1.5"/>
   <rect fill="#4b5563" x="22" y="95" width="18" height="3" rx="1.5"/>
@@ -149,46 +283,46 @@
   <!-- Divider under header -->
   <line class="divider" x1="70" y1="56" x2="900" y2="56"/>
 
-  <!-- User message (aligned right with UI card) -->
+  <!-- User message (animated - flies up from input) -->
   <g class="user-message">
-    <!-- Message bubble - right edge aligned with card (760) -->
     <rect class="user-msg-bg" x="400" y="90" width="360" height="44" rx="20"/>
-    <text class="text-white" x="420" y="118" font-size="15">Book me a doctor appointment for tonight</text>
+    <text class="text-white" x="420" y="118" font-size="15">Book me a doctor appointment for this evening</text>
+  </g>
+
+  <!-- Thinking loader (single pulsing dot) -->
+  <g class="thinking-loader">
+    <circle class="thinking-dot" cx="156" cy="176" r="6"/>
   </g>
 
   <!-- Assistant response (aligned left with UI card at x=140) -->
   <g class="assistant-response">
-    <!-- Response text -->
-    <text class="text-white" x="140" y="175" font-size="15">I found several doctors with availability tonight.</text>
+    <text class="text-white" x="140" y="175" font-size="15">I found several doctors with availability this evening.</text>
     <text class="text-white-dim" x="140" y="198" font-size="14">Here are your options:</text>
   </g>
 
-  <!-- Agentic UI - Doctor Booking Interface -->
+  <!-- UI - Doctor Booking Interface -->
   <g class="agentic-ui">
-    <rect class="doctolib-card" x="140" y="230" width="620" height="340" rx="16" filter="url(#cardShadow)"/>
+    <rect class="card-bg" x="140" y="230" width="620" height="340" rx="16" filter="url(#cardShadow)"/>
 
-    <!-- Card header -->
-    <rect fill="#f8fafc" x="140" y="230" width="620" height="50" rx="16"/>
-    <rect fill="#f8fafc" x="140" y="260" width="620" height="20"/>
-    <line stroke="#e2e8f0" stroke-width="1" x1="140" y1="280" x2="760" y2="280"/>
+    <!-- Card header - Blue background -->
+    <rect fill="#0596DE" x="140" y="230" width="620" height="50" rx="16"/>
+    <rect fill="#0596DE" x="140" y="260" width="620" height="20"/>
 
-    <!-- Header content -->
-    <text class="text-dark" x="170" y="262" font-size="15" font-weight="600">Available Appointments</text>
-    <rect fill="#dcfce7" x="640" y="245" width="90" height="24" rx="12"/>
-    <text fill="#15803d" x="660" y="262" font-size="12" font-weight="500">Tonight</text>
+    <!-- Header text -->
+    <text fill="#ffffff" x="170" y="262" font-size="18" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Find a doctor</text>
   </g>
 
   <!-- Doctor Card 1 -->
   <g class="doctor-card-1">
     <rect fill="#ffffff" x="156" y="295" width="588" height="85" rx="12" stroke="#f1f5f9" stroke-width="1"/>
 
-    <!-- Avatar -->
-    <circle class="avatar-bg-1" cx="200" cy="337" r="26"/>
-    <text class="avatar-text" x="200" y="343" text-anchor="middle" font-size="13">SM</text>
+    <!-- Avatar with photo -->
+    <image href="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" x="174" y="311" width="52" height="52" clip-path="url(#avatar1Clip)" preserveAspectRatio="xMidYMid slice"/>
 
-    <!-- Video icon badge -->
+    <!-- Video camera icon badge -->
     <circle fill="#2563eb" cx="218" cy="355" r="10"/>
-    <path d="M214 352v6l5-3z" fill="#ffffff"/>
+    <rect fill="#ffffff" x="211" y="352" width="9" height="6" rx="1"/>
+    <path d="M220 353l4-2v8l-4-2z" fill="#ffffff"/>
 
     <!-- Doctor info -->
     <text class="text-dark" x="245" y="325" font-size="15" font-weight="600">Dr. Sarah Martin</text>
@@ -210,9 +344,8 @@
   <g class="doctor-card-2">
     <rect fill="#ffffff" x="156" y="390" width="588" height="85" rx="12" stroke="#f1f5f9" stroke-width="1"/>
 
-    <!-- Avatar -->
-    <circle class="avatar-bg-2" cx="200" cy="432" r="26"/>
-    <text class="avatar-text" x="200" y="438" text-anchor="middle" font-size="13">JC</text>
+    <!-- Avatar with photo -->
+    <image href="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face" x="174" y="406" width="52" height="52" clip-path="url(#avatar2Clip)" preserveAspectRatio="xMidYMid slice"/>
 
     <!-- Doctor info -->
     <text class="text-dark" x="245" y="420" font-size="15" font-weight="600">Dr. James Chen</text>
@@ -234,18 +367,13 @@
   <g class="doctor-card-3">
     <rect fill="#ffffff" x="156" y="485" width="588" height="85" rx="12" stroke="#f1f5f9" stroke-width="1"/>
 
-    <!-- Avatar -->
-    <circle class="avatar-bg-3" cx="200" cy="527" r="26"/>
-    <text class="avatar-text" x="200" y="533" text-anchor="middle" font-size="13">EP</text>
+    <!-- Avatar with photo -->
+    <image href="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop&crop=face" x="174" y="501" width="52" height="52" clip-path="url(#avatar3Clip)" preserveAspectRatio="xMidYMid slice"/>
 
     <!-- Doctor info -->
     <text class="text-dark" x="245" y="515" font-size="15" font-weight="600">Dr. Emma Petit</text>
     <text class="text-gray" x="245" y="535" font-size="13">General Practitioner</text>
     <text fill="#9ca3af" x="245" y="552" font-size="12">1.2 km away</text>
-
-    <!-- Rating -->
-    <path fill="#fbbf24" d="M385 508l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/>
-    <text fill="#6b7280" x="398" y="518" font-size="12">4.7</text>
 
     <!-- Time slots -->
     <rect class="time-slot" x="540" y="502" width="60" height="34" rx="8"/>
@@ -258,13 +386,25 @@
     <text class="time-slot-text" x="706" y="524" text-anchor="middle" font-size="13" font-weight="500">20:15</text>
   </g>
 
-  <!-- Input area at bottom (aligned with UI card: x=140 to x=760, width=620) -->
+  <!-- Input area at bottom -->
   <rect class="input-bg" x="140" y="620" width="620" height="52" rx="26" filter="url(#inputShadow)"/>
-  <text class="text-white-dim" x="190" y="652" font-size="14">Ask anything</text>
 
-  <!-- Send button (white with dark up arrow) -->
-  <circle fill="#ffffff" cx="726" cy="646" r="16"/>
-  <path d="M726 652v-12M722 644l4-4 4 4" stroke="#212121" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Placeholder text (hidden initially, shown after send) -->
+  <text class="text-white-dim placeholder-text" x="190" y="652" font-size="14">Ask anything</text>
+
+  <!-- Typing text (shown initially, hidden after send) -->
+  <!-- "Book me a doctor appointment for this evening" - 38 letters, spaces are gaps between words -->
+  <g class="typing-text-input">
+    <text class="text-white" y="652" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      <tspan class="typing-char char-1" x="190">B</tspan><tspan class="typing-char char-2" x="198">o</tspan><tspan class="typing-char char-3" x="206">o</tspan><tspan class="typing-char char-4" x="214">k</tspan><tspan class="typing-char char-5" x="226">m</tspan><tspan class="typing-char char-6" x="237">e</tspan><tspan class="typing-char char-7" x="249">a</tspan><tspan class="typing-char char-8" x="261">d</tspan><tspan class="typing-char char-9" x="271">o</tspan><tspan class="typing-char char-10" x="281">c</tspan><tspan class="typing-char char-11" x="290">t</tspan><tspan class="typing-char char-12" x="298">o</tspan><tspan class="typing-char char-13" x="308">r</tspan><tspan class="typing-char char-14" x="320">a</tspan><tspan class="typing-char char-15" x="329">p</tspan><tspan class="typing-char char-16" x="338">p</tspan><tspan class="typing-char char-17" x="347">o</tspan><tspan class="typing-char char-18" x="357">i</tspan><tspan class="typing-char char-19" x="363">n</tspan><tspan class="typing-char char-20" x="373">t</tspan><tspan class="typing-char char-21" x="381">m</tspan><tspan class="typing-char char-22" x="394">e</tspan><tspan class="typing-char char-23" x="403">n</tspan><tspan class="typing-char char-24" x="413">t</tspan><tspan class="typing-char char-25" x="425">f</tspan><tspan class="typing-char char-26" x="432">o</tspan><tspan class="typing-char char-27" x="442">r</tspan><tspan class="typing-char char-28" x="454">t</tspan><tspan class="typing-char char-29" x="462">h</tspan><tspan class="typing-char char-30" x="472">i</tspan><tspan class="typing-char char-31" x="478">s</tspan><tspan class="typing-char char-32" x="490">e</tspan><tspan class="typing-char char-33" x="499">v</tspan><tspan class="typing-char char-34" x="509">e</tspan><tspan class="typing-char char-35" x="518">n</tspan><tspan class="typing-char char-36" x="528">i</tspan><tspan class="typing-char char-37" x="534">n</tspan><tspan class="typing-char char-38" x="544">g</tspan>
+    </text>
+    <!-- Typing cursor -->
+    <rect class="typing-cursor" x="190" y="638" width="2" height="18" fill="#ececec"/>
+  </g>
+
+  <!-- Send button (activates when ready) -->
+  <circle class="send-button-circle" cx="726" cy="646" r="16"/>
+  <path class="send-button-arrow" d="M726 652v-12M722 644l4-4 4 4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Plus icon -->
   <circle fill="#424242" cx="166" cy="646" r="14"/>
