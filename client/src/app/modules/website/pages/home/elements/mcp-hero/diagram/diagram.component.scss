@@ -1,7 +1,17 @@
 svg.chat-animation {
-  max-width: 100%;
-  height: auto;
   width: 100%;
+  height: auto;
+  min-height: 500px;
   border-radius: 16px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  @media (min-width: 1024px) {
+    min-height: 600px;
+  }
+
+  @media (min-width: 1200px) {
+    min-height: 650px;
+  }
 }

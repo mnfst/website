@@ -1,65 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" class="chat-animation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" class="chat-animation">
   <defs>
     <style>
+      /* ChatGPT-like dark theme */
       .chat-bg { fill: #212121; }
-      .user-msg { fill: #2563eb; }
-      .assistant-msg { fill: #343541; }
+      .chat-sidebar { fill: #171717; }
+      .chat-header { fill: #212121; }
+      .user-msg-bg { fill: #2f2f2f; }
+      .assistant-msg-bg { fill: transparent; }
       .doctolib-card { fill: #ffffff; }
-      .text-white { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-white { fill: #ececec; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .text-white-dim { fill: #b4b4b4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-dark { fill: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       .text-gray { fill: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .time-slot { fill: #dbeafe; }
-      .time-slot-text { fill: #2563eb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .avatar-bg { fill: #e5e7eb; }
-      .avatar-text { fill: #4b5563; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; }
+      .time-slot { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .time-slot:hover { fill: #dbeafe; }
+      .time-slot-text { fill: #1d4ed8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .avatar-bg-1 { fill: #fecaca; }
+      .avatar-bg-2 { fill: #bbf7d0; }
+      .avatar-bg-3 { fill: #bfdbfe; }
+      .avatar-text { fill: #374151; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; }
+      .sidebar-item { fill: #212121; }
+      .sidebar-item:hover { fill: #2f2f2f; }
+      .gpt-icon { fill: #ececec; }
+      .input-bg { fill: #2f2f2f; }
+      .divider { stroke: #2f2f2f; stroke-width: 1; }
 
       /* User message animation */
       .user-message {
         opacity: 0;
-        animation: fadeSlideIn 0.5s ease-out 0.3s forwards;
+        animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
       }
 
       /* Assistant text animation */
-      .assistant-text {
+      .assistant-response {
         opacity: 0;
-        animation: fadeIn 0.4s ease-out 1s forwards;
+        animation: fadeIn 0.5s ease-out 1.2s forwards;
       }
 
       /* Doctolib UI animation */
-      .doctolib-ui {
+      .agentic-ui {
         opacity: 0;
-        animation: scaleIn 0.5s ease-out 1.5s forwards;
+        animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
       }
 
       /* Doctor cards stagger animation */
       .doctor-card-1 {
         opacity: 0;
-        animation: fadeSlideInCard 0.4s ease-out 2s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.3s forwards;
       }
       .doctor-card-2 {
         opacity: 0;
-        animation: fadeSlideInCard 0.4s ease-out 2.2s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards;
       }
       .doctor-card-3 {
         opacity: 0;
-        animation: fadeSlideInCard 0.4s ease-out 2.4s forwards;
+        animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.7s forwards;
       }
 
-      @keyframes fadeSlideIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      /* Typing indicator */
+      .typing-dot {
+        animation: typingBounce 1.4s ease-in-out infinite;
       }
+      .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+      .typing-dot:nth-child(3) { animation-delay: 0.4s; }
 
-      @keyframes fadeSlideInCard {
+      @keyframes fadeSlideUp {
         from {
           opacity: 0;
-          transform: translateY(10px);
+          transform: translateY(16px);
         }
         to {
           opacity: 1;
@@ -75,120 +83,194 @@
       @keyframes scaleIn {
         from {
           opacity: 0;
-          transform: scale(0.95);
+          transform: scale(0.96);
         }
         to {
           opacity: 1;
           transform: scale(1);
         }
       }
+
+      @keyframes typingBounce {
+        0%, 60%, 100% { transform: translateY(0); }
+        30% { transform: translateY(-4px); }
+      }
     </style>
 
     <!-- Shadow filter for cards -->
-    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/>
+    </filter>
+
+    <!-- Subtle inner shadow for input -->
+    <filter id="inputShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
     </filter>
   </defs>
 
-  <!-- Chat window background -->
-  <rect class="chat-bg" x="40" y="20" width="720" height="560" rx="16"/>
+  <!-- Main chat window background -->
+  <rect class="chat-bg" x="0" y="0" width="900" height="700" rx="12"/>
 
-  <!-- Chat header -->
-  <rect fill="#2d2d2d" x="40" y="20" width="720" height="50" rx="16"/>
-  <rect fill="#2d2d2d" x="40" y="50" width="720" height="20"/>
-  <circle fill="#ff5f57" cx="70" cy="45" r="6"/>
-  <circle fill="#ffbd2e" cx="90" cy="45" r="6"/>
-  <circle fill="#28ca41" cx="110" cy="45" r="6"/>
-  <text class="text-white" x="400" y="50" text-anchor="middle" font-size="14" font-weight="500">ChatGPT</text>
+  <!-- Sidebar -->
+  <rect class="chat-sidebar" x="0" y="0" width="70" height="700" rx="12"/>
+  <rect class="chat-sidebar" x="12" y="0" width="58" height="700"/>
 
-  <!-- User message -->
+  <!-- Sidebar icons -->
+  <!-- New chat icon -->
+  <rect class="sidebar-item" x="12" y="16" width="46" height="46" rx="8"/>
+  <path d="M35 32h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z" fill="#b4b4b4"/>
+
+  <!-- Chat history items -->
+  <rect class="sidebar-item" x="12" y="72" width="46" height="46" rx="8"/>
+  <rect fill="#4b5563" x="22" y="88" width="26" height="3" rx="1.5"/>
+  <rect fill="#4b5563" x="22" y="95" width="18" height="3" rx="1.5"/>
+
+  <rect class="sidebar-item" x="12" y="128" width="46" height="46" rx="8"/>
+  <rect fill="#4b5563" x="22" y="144" width="26" height="3" rx="1.5"/>
+  <rect fill="#4b5563" x="22" y="151" width="20" height="3" rx="1.5"/>
+
+  <!-- Divider line -->
+  <line class="divider" x1="70" y1="0" x2="70" y2="700"/>
+
+  <!-- Chat header area -->
+  <rect class="chat-header" x="70" y="0" width="830" height="56"/>
+
+  <!-- Model selector -->
+  <text class="text-white" x="100" y="35" font-size="15" font-weight="600">ChatGPT</text>
+  <path d="M168 32l4 4 4-4" stroke="#b4b4b4" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Header icons (right side) -->
+  <circle fill="none" stroke="#6b7280" stroke-width="1.5" cx="820" cy="28" r="12"/>
+  <path d="M816 28h8M820 24v8" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+
+  <circle fill="none" stroke="#6b7280" stroke-width="1.5" cx="860" cy="28" r="12"/>
+  <circle fill="#6b7280" cx="860" cy="28" r="4"/>
+
+  <!-- Divider under header -->
+  <line class="divider" x1="70" y1="56" x2="900" y2="56"/>
+
+  <!-- User message (aligned right with UI card) -->
   <g class="user-message">
-    <rect class="user-msg" x="320" y="100" width="420" height="50" rx="12"/>
-    <text class="text-white" x="340" y="130" font-size="14">Book me a doctor appointment for tonight</text>
+    <!-- Message bubble - right edge aligned with card (760) -->
+    <rect class="user-msg-bg" x="400" y="90" width="360" height="44" rx="20"/>
+    <text class="text-white" x="420" y="118" font-size="15">Book me a doctor appointment for tonight</text>
   </g>
 
-  <!-- Assistant response -->
-  <g class="assistant-text">
-    <rect class="assistant-msg" x="60" y="170" width="320" height="40" rx="12"/>
-    <text class="text-white" x="80" y="195" font-size="13">Here are available doctors near you:</text>
+  <!-- Assistant response (aligned left with UI card at x=140) -->
+  <g class="assistant-response">
+    <!-- Response text -->
+    <text class="text-white" x="140" y="175" font-size="15">I found several doctors with availability tonight.</text>
+    <text class="text-white-dim" x="140" y="198" font-size="14">Here are your options:</text>
   </g>
 
-  <!-- Doctolib UI Container -->
-  <g class="doctolib-ui">
-    <rect class="doctolib-card" x="60" y="225" width="680" height="330" rx="12" filter="url(#cardShadow)"/>
+  <!-- Agentic UI - Doctor Booking Interface -->
+  <g class="agentic-ui">
+    <rect class="doctolib-card" x="140" y="230" width="620" height="340" rx="16" filter="url(#cardShadow)"/>
 
-    <!-- Header -->
-    <rect fill="#2563eb" x="60" y="225" width="680" height="45" rx="12"/>
-    <rect fill="#2563eb" x="60" y="255" width="680" height="15"/>
-    <text class="text-white" x="80" y="253" font-size="14" font-weight="600">Available Appointments - Tonight</text>
+    <!-- Card header -->
+    <rect fill="#f8fafc" x="140" y="230" width="620" height="50" rx="16"/>
+    <rect fill="#f8fafc" x="140" y="260" width="620" height="20"/>
+    <line stroke="#e2e8f0" stroke-width="1" x1="140" y1="280" x2="760" y2="280"/>
+
+    <!-- Header content -->
+    <text class="text-dark" x="170" y="262" font-size="15" font-weight="600">Available Appointments</text>
+    <rect fill="#dcfce7" x="640" y="245" width="90" height="24" rx="12"/>
+    <text fill="#15803d" x="660" y="262" font-size="12" font-weight="500">Tonight</text>
   </g>
 
   <!-- Doctor Card 1 -->
   <g class="doctor-card-1">
-    <rect fill="#f9fafb" x="75" y="285" width="650" height="80" rx="8"/>
+    <rect fill="#ffffff" x="156" y="295" width="588" height="85" rx="12" stroke="#f1f5f9" stroke-width="1"/>
 
     <!-- Avatar -->
-    <circle class="avatar-bg" cx="120" cy="325" r="25"/>
-    <text class="avatar-text" x="120" y="331" text-anchor="middle" font-size="14">SM</text>
+    <circle class="avatar-bg-1" cx="200" cy="337" r="26"/>
+    <text class="avatar-text" x="200" y="343" text-anchor="middle" font-size="13">SM</text>
 
     <!-- Doctor info -->
-    <text class="text-dark" x="160" y="315" font-size="14" font-weight="600">Dr. Sarah Martin</text>
-    <text class="text-gray" x="160" y="335" font-size="12">General Practitioner</text>
+    <text class="text-dark" x="245" y="325" font-size="15" font-weight="600">Dr. Sarah Martin</text>
+    <text class="text-gray" x="245" y="345" font-size="13">General Practitioner</text>
+    <text fill="#9ca3af" x="245" y="362" font-size="12">0.3 km away</text>
+
+    <!-- Rating -->
+    <path fill="#fbbf24" d="M385 318l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/>
+    <text fill="#6b7280" x="398" y="328" font-size="12">4.9</text>
 
     <!-- Time slots -->
-    <rect class="time-slot" x="480" y="305" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="510" y="325" text-anchor="middle" font-size="12" font-weight="500">18:30</text>
+    <rect class="time-slot" x="540" y="312" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="570" y="334" text-anchor="middle" font-size="13" font-weight="500">18:30</text>
 
-    <rect class="time-slot" x="550" y="305" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="580" y="325" text-anchor="middle" font-size="12" font-weight="500">19:00</text>
+    <rect class="time-slot" x="608" y="312" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="638" y="334" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
 
-    <rect class="time-slot" x="620" y="305" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="650" y="325" text-anchor="middle" font-size="12" font-weight="500">19:30</text>
+    <rect class="time-slot" x="676" y="312" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="706" y="334" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
   </g>
 
   <!-- Doctor Card 2 -->
   <g class="doctor-card-2">
-    <rect fill="#f9fafb" x="75" y="375" width="650" height="80" rx="8"/>
+    <rect fill="#ffffff" x="156" y="390" width="588" height="85" rx="12" stroke="#f1f5f9" stroke-width="1"/>
 
     <!-- Avatar -->
-    <circle class="avatar-bg" cx="120" cy="415" r="25"/>
-    <text class="avatar-text" x="120" y="421" text-anchor="middle" font-size="14">JC</text>
+    <circle class="avatar-bg-2" cx="200" cy="432" r="26"/>
+    <text class="avatar-text" x="200" y="438" text-anchor="middle" font-size="13">JC</text>
 
     <!-- Doctor info -->
-    <text class="text-dark" x="160" y="405" font-size="14" font-weight="600">Dr. James Chen</text>
-    <text class="text-gray" x="160" y="425" font-size="12">General Practitioner</text>
+    <text class="text-dark" x="245" y="420" font-size="15" font-weight="600">Dr. James Chen</text>
+    <text class="text-gray" x="245" y="440" font-size="13">General Practitioner</text>
+    <text fill="#9ca3af" x="245" y="457" font-size="12">0.8 km away</text>
+
+    <!-- Rating -->
+    <path fill="#fbbf24" d="M385 413l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/>
+    <text fill="#6b7280" x="398" y="423" font-size="12">4.8</text>
 
     <!-- Time slots -->
-    <rect class="time-slot" x="480" y="395" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="510" y="415" text-anchor="middle" font-size="12" font-weight="500">18:30</text>
+    <rect class="time-slot" x="540" y="407" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="570" y="429" text-anchor="middle" font-size="13" font-weight="500">18:45</text>
 
-    <rect class="time-slot" x="550" y="395" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="580" y="415" text-anchor="middle" font-size="12" font-weight="500">19:15</text>
+    <rect class="time-slot" x="608" y="407" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="638" y="429" text-anchor="middle" font-size="13" font-weight="500">19:15</text>
 
-    <rect class="time-slot" x="620" y="395" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="650" y="415" text-anchor="middle" font-size="12" font-weight="500">20:00</text>
+    <rect class="time-slot" x="676" y="407" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="706" y="429" text-anchor="middle" font-size="13" font-weight="500">20:00</text>
   </g>
 
   <!-- Doctor Card 3 -->
   <g class="doctor-card-3">
-    <rect fill="#f9fafb" x="75" y="465" width="650" height="80" rx="8"/>
+    <rect fill="#ffffff" x="156" y="485" width="588" height="85" rx="12" stroke="#f1f5f9" stroke-width="1"/>
 
     <!-- Avatar -->
-    <circle class="avatar-bg" cx="120" cy="505" r="25"/>
-    <text class="avatar-text" x="120" y="511" text-anchor="middle" font-size="14">EP</text>
+    <circle class="avatar-bg-3" cx="200" cy="527" r="26"/>
+    <text class="avatar-text" x="200" y="533" text-anchor="middle" font-size="13">EP</text>
 
     <!-- Doctor info -->
-    <text class="text-dark" x="160" y="495" font-size="14" font-weight="600">Dr. Emma Petit</text>
-    <text class="text-gray" x="160" y="515" font-size="12">General Practitioner</text>
+    <text class="text-dark" x="245" y="515" font-size="15" font-weight="600">Dr. Emma Petit</text>
+    <text class="text-gray" x="245" y="535" font-size="13">General Practitioner</text>
+    <text fill="#9ca3af" x="245" y="552" font-size="12">1.2 km away</text>
+
+    <!-- Rating -->
+    <path fill="#fbbf24" d="M385 508l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/>
+    <text fill="#6b7280" x="398" y="518" font-size="12">4.7</text>
 
     <!-- Time slots -->
-    <rect class="time-slot" x="480" y="485" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="510" y="505" text-anchor="middle" font-size="12" font-weight="500">18:45</text>
+    <rect class="time-slot" x="540" y="502" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="570" y="524" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
 
-    <rect class="time-slot" x="550" y="485" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="580" y="505" text-anchor="middle" font-size="12" font-weight="500">19:30</text>
+    <rect class="time-slot" x="608" y="502" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="638" y="524" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
 
-    <rect class="time-slot" x="620" y="485" width="60" height="30" rx="6"/>
-    <text class="time-slot-text" x="650" y="505" text-anchor="middle" font-size="12" font-weight="500">20:15</text>
+    <rect class="time-slot" x="676" y="502" width="60" height="34" rx="8"/>
+    <text class="time-slot-text" x="706" y="524" text-anchor="middle" font-size="13" font-weight="500">20:15</text>
   </g>
+
+  <!-- Input area at bottom (aligned with UI card: x=140 to x=760, width=620) -->
+  <rect class="input-bg" x="140" y="620" width="620" height="52" rx="26" filter="url(#inputShadow)"/>
+  <text class="text-white-dim" x="190" y="652" font-size="14">Ask anything</text>
+
+  <!-- Send button (white with dark up arrow) -->
+  <circle fill="#ffffff" cx="726" cy="646" r="16"/>
+  <path d="M726 652v-12M722 644l4-4 4 4" stroke="#212121" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Plus icon -->
+  <circle fill="#424242" cx="166" cy="646" r="14"/>
+  <path d="M166 640v12M160 646h12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
 </svg>
