@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" class="chat-animation" [class.slot-clicked]="isSlotSelected">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" class="chat-animation" [class.slot-clicked]="selectedSlotId">
   <defs>
     <style>
       /* Theme colors */
@@ -82,11 +82,11 @@
       }
 
       /* ===== TIME SLOTS - Clickable ===== */
-      .time-slot, .selected-slot {
+      .time-slot {
         cursor: pointer;
         transition: fill 0.2s ease, stroke 0.2s ease;
       }
-      .time-slot-text, .selected-slot-text {
+      .time-slot-text {
         cursor: pointer;
         transition: fill 0.2s ease;
       }
@@ -95,34 +95,22 @@
       }
 
       /* Hover state */
-      .clickable-slot:hover .time-slot,
-      .clickable-slot:hover .selected-slot {
+      .clickable-slot:hover .time-slot {
         fill: #1d4ed8;
         stroke: #1d4ed8;
       }
-      .clickable-slot:hover .time-slot-text,
-      .clickable-slot:hover .selected-slot-text {
+      .clickable-slot:hover .time-slot-text {
         fill: #ffffff;
       }
 
       /* ===== PHASE 2: TIME SLOT SELECTION (on click) ===== */
-      .slot-clicked .selected-slot {
+      /* Selected slot styling - applied via Angular class binding */
+      .slot-active .time-slot {
         fill: #1d4ed8;
         stroke: #1d4ed8;
       }
-      .slot-clicked .selected-slot-text {
+      .slot-active .time-slot-text {
         fill: #ffffff;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      }
-
-      /* Default state for selected slot before click */
-      .selected-slot {
-        fill: #eff6ff;
-        stroke: #bfdbfe;
-      }
-      .selected-slot-text {
-        fill: #1d4ed8;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       }
 
       /* ===== PHASE 3: SCROLL UP & FADE OUT (on click) ===== */
@@ -337,18 +325,18 @@
       <text class="text-gray" x="107" y="265" font-size="13">General Practitioner</text>
       <text fill="#9ca3af" x="107" y="282" font-size="12">0.3 km away</text>
 
-      <!-- Time slots - First one is selected -->
-      <g class="clickable-slot" (click)="onSlotClick()">
-        <rect class="selected-slot" x="448" y="235" width="60" height="34" rx="8"/>
-        <text class="selected-slot-text" x="478" y="257" text-anchor="middle" font-size="13" font-weight="500">18:30</text>
+      <!-- Time slots -->
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-1'" (click)="onSlotClick('slot-1')">
+        <rect class="time-slot" x="448" y="235" width="60" height="34" rx="8"/>
+        <text class="time-slot-text" x="478" y="257" text-anchor="middle" font-size="13" font-weight="500">18:30</text>
       </g>
 
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-2'" (click)="onSlotClick('slot-2')">
         <rect class="time-slot" x="516" y="235" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="546" y="257" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
       </g>
 
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-3'" (click)="onSlotClick('slot-3')">
         <rect class="time-slot" x="584" y="235" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="614" y="257" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
       </g>
@@ -367,17 +355,17 @@
       <text fill="#9ca3af" x="107" y="372" font-size="12">0.8 km away</text>
 
       <!-- Time slots -->
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-4'" (click)="onSlotClick('slot-4')">
         <rect class="time-slot" x="448" y="325" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="478" y="347" text-anchor="middle" font-size="13" font-weight="500">18:45</text>
       </g>
 
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-5'" (click)="onSlotClick('slot-5')">
         <rect class="time-slot" x="516" y="325" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="546" y="347" text-anchor="middle" font-size="13" font-weight="500">19:15</text>
       </g>
 
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-6'" (click)="onSlotClick('slot-6')">
         <rect class="time-slot" x="584" y="325" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="614" y="347" text-anchor="middle" font-size="13" font-weight="500">20:00</text>
       </g>
@@ -396,17 +384,17 @@
       <text fill="#9ca3af" x="107" y="462" font-size="12">1.2 km away</text>
 
       <!-- Time slots -->
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-7'" (click)="onSlotClick('slot-7')">
         <rect class="time-slot" x="448" y="415" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="478" y="437" text-anchor="middle" font-size="13" font-weight="500">19:00</text>
       </g>
 
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-8'" (click)="onSlotClick('slot-8')">
         <rect class="time-slot" x="516" y="415" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="546" y="437" text-anchor="middle" font-size="13" font-weight="500">19:30</text>
       </g>
 
-      <g class="clickable-slot" (click)="onSlotClick()">
+      <g class="clickable-slot" [class.slot-active]="selectedSlotId === 'slot-9'" (click)="onSlotClick('slot-9')">
         <rect class="time-slot" x="584" y="415" width="60" height="34" rx="8"/>
         <text class="time-slot-text" x="614" y="437" text-anchor="middle" font-size="13" font-weight="500">20:15</text>
       </g>

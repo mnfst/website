@@ -7,11 +7,11 @@ import { Component } from '@angular/core'
   styleUrl: './diagram.component.scss'
 })
 export class DiagramComponent {
-  isSlotSelected = false
+  selectedSlotId: string | null = null
 
-  onSlotClick(): void {
-    if (!this.isSlotSelected) {
-      this.isSlotSelected = true
+  onSlotClick(slotId: string): void {
+    if (!this.selectedSlotId) {
+      this.selectedSlotId = slotId
     }
   }
 }
