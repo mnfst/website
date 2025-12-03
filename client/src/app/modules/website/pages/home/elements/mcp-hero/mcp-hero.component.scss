@@ -1,7 +1,7 @@
 @use 'sass:color';
 
 .hero-mcp {
-  padding: 4rem 0;
+  padding: 0;
   background: #f8f9fa;
   border-top: 1px solid #dadadb;
   position: relative;
@@ -303,15 +303,24 @@
     left: 0;
     top: 0;
     white-space: nowrap;
-    animation: rotateWord 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: rotateWord 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 
-    // 6 words, 2s each = 12s total cycle
-    &:nth-child(1) { animation-delay: 0s; }
-    &:nth-child(2) { animation-delay: 2s; }
-    &:nth-child(3) { animation-delay: 4s; }
-    &:nth-child(4) { animation-delay: 6s; }
-    &:nth-child(5) { animation-delay: 8s; }
-    &:nth-child(6) { animation-delay: 10s; }
+    // 5 words, 2s each = 10s total cycle
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      animation-delay: 2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 4s;
+    }
+    &:nth-child(4) {
+      animation-delay: 6s;
+    }
+    &:nth-child(5) {
+      animation-delay: 8s;
+    }
 
     // First word visible by default to set container width
     &:first-child {
@@ -321,15 +330,20 @@
 }
 
 @keyframes rotateWord {
-  0%, 2% {
+  // Enter: 0% -> 2% (0.2s)
+  0% {
     opacity: 0;
     transform: translateY(50%);
   }
-  4%, 14% {
+  // Visible: 2% -> 18% (1.6s)
+  2%,
+  18% {
     opacity: 1;
     transform: translateY(0);
   }
-  16%, 100% {
+  // Exit: 18% -> 20% (0.2s) - next word starts entering at 20%
+  20%,
+  100% {
     opacity: 0;
     transform: translateY(-50%);
   }
