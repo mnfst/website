@@ -267,6 +267,10 @@
     <clipPath id="confirmAvatarClip">
       <circle cx="62" cy="195" r="26"/>
     </clipPath>
+    <!-- Clip for main content area (below header, above input) -->
+    <clipPath id="contentClip">
+      <rect x="0" y="50" width="700" height="550"/>
+    </clipPath>
   </defs>
 
   <!-- ===== DARK BACKGROUND ===== -->
@@ -289,6 +293,8 @@
     <line x1="0" y1="50" x2="700" y2="50" stroke="#e5e5e5" stroke-width="1"/>
   </g>
 
+  <!-- ===== CLIPPED CONTENT AREA (prevents overflow into header) ===== -->
+  <g clip-path="url(#contentClip)">
   <!-- ===== SCROLLABLE CONTENT (Phases 1-2) ===== -->
   <g class="scrollable-content">
     <!-- User message bubble (animated - flies up from input) -->
@@ -485,6 +491,7 @@
       <text fill="#6b7280" x="48" y="434" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">By confirming this appointment, </text>
       <text fill="#0D0D0D" x="230" y="434" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">you commit to attending.</text>
     </g>
+  </g>
   </g>
 
   <!-- ===== INPUT AREA (Always visible) ===== -->
