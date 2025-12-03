@@ -6,6 +6,7 @@
   border-top: 1px solid #dadadb;
   position: relative;
   overflow: hidden;
+  min-height: calc(100vh - 359px);
 
   &__visual {
     position: relative;
