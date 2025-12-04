@@ -17,11 +17,11 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       seo: {
-        title: 'Manifest - 1-File Backend for Developers that Ship Fast',
+        title: 'Manifest - Agentic UI for ChatGPT and Claude',
         description:
-          'Manifest is an Open Source Portable Backend that fits into a Single YAML file. It includes key features like Auth, Storage, CRUD, Endpoints...',
+          'Build branded Agentic UIs that render natively inside ChatGPT and Claude. Ship once, reach every AI assistant. Track what converts. Own the customer relationship.',
         keywords:
-          'backend, micro-backend, AI-powered editor, backend for LLMs, AI coding tools backend, backend for vibe coding, backend for modern workflows, manifest, admin panel, rest api, auth, storage',
+          'Agentic UI, mcm-ui, AI-powered, MCP UI, AI aissitant, UI for AI assistant, UI for ChatGPT, manifest, UI for Claude, UI for Gemini, brand, chatgpt integration, claude integration, gemini integration, ai channel, ai customer relationship, ai marketing, ai engagement',
         canonicalUrl: environment.baseUrl,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
@@ -93,7 +93,7 @@ export const routes: Routes = [
         title: 'Integrations - Manifest',
         description:
           'Manifest integrates with many of your favorite third-party services.',
-        keywords: 'integrations, manifest, backend enhancements',
+        keywords: 'integrations, manifest, third-party services',
         canonicalUrl: `${environment.baseUrl}/integrations`,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
@@ -128,7 +128,7 @@ export const routes: Routes = [
       seo: {
         title: 'Sponsors - Manifest',
         description:
-          'Become a sponsor of Manifest and help us build the future of backend development.',
+          'Become a sponsor of Manifest and help us build the best Agentic UI tool for AI assistants.',
         keywords: 'sponsors, manifest, support open source',
         canonicalUrl: `${environment.baseUrl}/sponsors`,
         og: {
@@ -146,7 +146,7 @@ export const routes: Routes = [
       seo: {
         title: 'FAQ - Manifest',
         description:
-          'Frequently asked questions about Manifest (FAQ). Manifest is a backend made for AI-powered coding with auth, storage, logic and all the essentials.',
+          'Frequently asked questions about Manifest (FAQ). Manifest helps brands appear inside ChatGPT and Claude with their own UI.',
         keywords: 'faq, frequently asked questions, manifest',
         canonicalUrl: `${environment.baseUrl}/faq`,
         og: {

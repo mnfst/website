@@ -13,54 +13,58 @@ export class FaqComponent {
 
   faqItems: { question: string; answer: string[] }[] = [
     {
-      question: 'Is Manifest a low-code / no-code tool ?',
+      question: 'What is an Agentic UI?',
       answer: [
-        "No. It just works like just any other file in your codebase. It's code, simple code."
+        'An Agentic UI is a branded, interactive interface that appears inside AI assistants like ChatGPT or Claude when they perform actions on behalf of users.',
+        'Instead of generic text responses, your customers see your product with your design, your UX, and your conversion flow — directly in the conversation.'
       ]
     },
     {
-      question: 'How is Manifest different from other BaaS?',
+      question: 'Why do I need an Agentic UI?',
       answer: [
-        'Most BaaS platforms are no-code tools working with a dashboard to manage your backend. Manifest gives you a single file you can generate, edit and version like any other part of your codebase.',
-        'You stay in your editor. You do not have to deal with bloated UI, setup steps or custom platform rules.',
-        'Manifest is open source, easy to validate, and designed to fit naturally into AI-assisted workflows. It provides full control, minimal complexity, and no lock-in.'
+        'Consumer behavior is shifting. People increasingly ask AI assistants to book, compare, and buy for them instead of opening apps or searching Google.',
+        "If your brand isn't present in these conversations, you become invisible, just another generic recommendation. You also lose all data on customer intent, conversion, and churn."
+      ]
+    },
+    {
+      question: 'Which AI assistants does Manifest support?',
+      answer: [
+        'Manifest is cross-platform compatible, so your Agentic UI works wherever your customers interact with AI.'
+      ]
+    },
+    {
+      question: 'What kind of analytics do I get?',
+      answer: [
+        'Manifest provides conversion analytics specific to AI conversations: impressions, click-through, checkout completion, and drop-off points.',
+        'You get the same visibility you expect from your app or website.'
+      ]
+    },
+    {
+      question: 'How is Manifest different from building in-house?',
+      answer: [
+        'Building in-house requires hiring MCP specialists, months of development, and ongoing maintenance as protocols evolve.',
+        'Manifest gets you live in weeks with analytics included — so your engineering team stays focused on your core product.'
+      ]
+    },
+    {
+      question:
+        'How is Manifest different from the Agentic Commerce Protocol (ACP)?',
+      answer: [
+        "ACP is a protocol, a standard you implement yourself. Manifest is a platform. We handle the complexity of MCP, external apps, and cross-platform rendering so you don't have to.",
+        'ACP is also commerce-focused. Manifest works for other areas as healthtech, fintech and so on.'
       ]
     },
     {
       question: 'Is Manifest for me?',
       answer: [
-        'It does not matter if you are junior or senior developer, if you code in JS, PHP or Python. You can be frontend, backend or fullstack, a mobile developer, indie hacker or devsigner. If you know a bit of software development, you will have no problem using Manifest.'
+        'Manifest is built for tech-forward companies with high transaction volume and strong brand identity.',
+        'If your customers interact with you frequently and your brand matters, Manifest is for you.'
       ]
     },
     {
-      question: 'Can I use Manifest with AI tools like Cursor or Copilot?',
+      question: 'How do I get started?',
       answer: [
-        'Yes. Manifest is designed for AI-assisted workflows. Its syntax and structure are easy for LLMs to generate and edit, which makes it perfect for vibe coding or AI-generated projects.'
-      ]
-    },
-    {
-      question: 'Can I use Manifest without any AI tool?',
-      answer: [
-        'Absolutely. You can write and maintain your backend manually like any other code file. Manifest works without AI tools, but it fits perfectly into AI-assisted workflows.'
-      ]
-    },
-    {
-      question: 'Can I self-host Manifest?',
-      answer: [
-        'Yes. You can run Manifest locally or deploy it wherever you want. There is no dependency on any hosted service.'
-      ]
-    },
-    {
-      question: 'Can I use Manifest in production?',
-      answer: [
-        'Manifest is currently in BETA, you can use it at your own risk. It is stable enough to power small projects, prototypes and MVPs but we do not recommend to use it on critical platforms.'
-      ]
-    },
-    {
-      question: 'What is behind the magic?',
-      answer: [
-        'Manifest is based on a small set of clear and composable concepts. It removes repetitive code, avoids complexity, and includes the core features every backend needs by default.',
-        'Under the hood, it uses popular technologies that developers already trust. The current version runs on Node.js, Express, and NestJS. We use JSON Schema to validate the YAML file, js-yaml to parse it, and TypeORM to map it into a SQLite database.'
+        "We're onboarding pilot partners now. Reach out and we'll help you to build your first Agentic UI, from API to live in AI assistants."
       ]
     }
   ]
