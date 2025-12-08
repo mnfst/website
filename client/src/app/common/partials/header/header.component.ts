@@ -1,16 +1,18 @@
 // src/app/common/partials/header/header.component.ts
 import { Component, Renderer2, OnInit, Inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
+import { isPlatformBrowser, CommonModule } from '@angular/common'
 import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   private static scriptInjected = false
-  githubStars = 'Star'
+  githubStars = '3.2k'
 
   constructor(
     private renderer: Renderer2,
@@ -25,18 +27,16 @@ export class HeaderComponent implements OnInit {
   }
 
   private fetchGitHubStars(): void {
-    console.log('Fetching GitHub stars...')
     this.http.get<any>('https://api.github.com/repos/mnfst/manifest')
       .subscribe({
         next: (response) => {
-          console.log('GitHub API response:', response)
           const stars = response.stargazers_count
-          console.log('Stars count:', stars)
-          this.githubStars = `${this.formatStarCount(stars)}`
+          if (stars) {
+            this.githubStars = this.formatStarCount(stars)
+          }
         },
-        error: (err) => {
-          console.error('GitHub API error:', err)
-          this.githubStars = 'Star'
+        error: () => {
+          // Keep fallback value
         }
       })
   }
