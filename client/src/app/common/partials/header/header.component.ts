@@ -25,13 +25,17 @@ export class HeaderComponent implements OnInit {
   }
 
   private fetchGitHubStars(): void {
+    console.log('Fetching GitHub stars...')
     this.http.get<any>('https://api.github.com/repos/mnfst/manifest')
       .subscribe({
         next: (response) => {
+          console.log('GitHub API response:', response)
           const stars = response.stargazers_count
+          console.log('Stars count:', stars)
           this.githubStars = `${this.formatStarCount(stars)}`
         },
-        error: () => {
+        error: (err) => {
+          console.error('GitHub API error:', err)
           this.githubStars = 'Star'
         }
       })
