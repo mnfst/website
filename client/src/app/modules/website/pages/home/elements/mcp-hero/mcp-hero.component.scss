@@ -426,6 +426,13 @@
   }
 }
 
+// Mobile column direction for backers
+.is-flex-direction-column-mobile {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
 // Responsive adjustments for floating shapes
 @media (max-width: 768px) {
   .hero-mcp {
@@ -449,5 +456,11 @@
       right: 25%;
       filter: blur(35px);
     }
+  }
+}
+
+.inria-logo {
+  @media (min-width: 768px) {
+    padding-bottom: 15px;
   }
 }

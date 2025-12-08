@@ -1,16 +1,18 @@
 // src/app/common/partials/header/header.component.ts
 import { Component, Renderer2, OnInit, Inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
+import { isPlatformBrowser, CommonModule } from '@angular/common'
 import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   private static scriptInjected = false
-  githubStars = 'Star'
+  githubStars = '3.2k'
 
   constructor(
     private renderer: Renderer2,
@@ -29,10 +31,12 @@ export class HeaderComponent implements OnInit {
       .subscribe({
         next: (response) => {
           const stars = response.stargazers_count
-          this.githubStars = `${this.formatStarCount(stars)}`
+          if (stars) {
+            this.githubStars = this.formatStarCount(stars)
+          }
         },
         error: () => {
-          this.githubStars = 'Star'
+          // Keep fallback value
         }
       })
   }
