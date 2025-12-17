@@ -17,11 +17,11 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       seo: {
-        title: 'Manifest - Agentic UI for ChatGPT and Claude',
+        title: 'Manifest - ChatGPT App builder for Brands',
         description:
-          'Build branded Agentic UIs that render natively inside ChatGPT and Claude. Ship once, reach every AI assistant. Track what converts. Own the customer relationship.',
+          'Build Apps that render natively inside ChatGPT and Claude. Ship once, reach every AI assistant. Track what converts. Own the customer relationship.',
         keywords:
-          'Agentic UI, mcm-ui, AI-powered, MCP UI, AI aissitant, UI for AI assistant, UI for ChatGPT, manifest, UI for Claude, UI for Gemini, brand, chatgpt integration, claude integration, gemini integration, ai channel, ai customer relationship, ai marketing, ai engagement',
+          'Agentic UI, mcm-ui, AI-powered, MCP UI, MCP Apps, Apps, AI aissitant, UI for AI assistant, UI for ChatGPT, manifest, UI for Claude, UI for Gemini, brand, chatgpt integration, claude integration, gemini integration, ai channel, ai customer relationship, ai marketing, ai engagement',
         canonicalUrl: environment.baseUrl,
         og: {
           image: `${environment.baseUrl}/assets/images/og-image.png`,
