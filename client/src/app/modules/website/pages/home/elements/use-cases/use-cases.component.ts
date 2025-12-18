@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Component } from '@angular/core'
 import { ClientLogosComponent } from '../../../../../../common/partials/client-logos/client-logos.component'
 
 interface ChatMessage {
@@ -113,7 +113,8 @@ export class UseCasesComponent {
       messages: [
         {
           role: 'user',
-          content: 'We have a shipment delay from Shanghai. What orders are affected?'
+          content:
+            'We have a shipment delay from Shanghai. What orders are affected?'
         },
         {
           role: 'assistant',
@@ -122,7 +123,8 @@ export class UseCasesComponent {
         },
         {
           role: 'user',
-          content: 'Yes, notify customers and get air freight quotes for the 3 large orders'
+          content:
+            'Yes, notify customers and get air freight quotes for the 3 large orders'
         },
         {
           role: 'assistant',
@@ -139,7 +141,8 @@ export class UseCasesComponent {
       messages: [
         {
           role: 'user',
-          content: "There's a spike in error rates on the payment service. What's happening?"
+          content:
+            "There's a spike in error rates on the payment service. What's happening?"
         },
         {
           role: 'assistant',
@@ -165,12 +168,13 @@ export class UseCasesComponent {
       messages: [
         {
           role: 'user',
-          content: "Customer says they were charged twice for their subscription. Account ID: 8847"
+          content:
+            'Customer says they were charged twice for their subscription. Account ID: 8847'
         },
         {
           role: 'assistant',
           content:
-            "I found the issue for account #8847 (jane.smith@email.com). There were indeed 2 charges on Nov 15:\n\n• $49.00 at 10:23 AM - Annual renewal (legitimate)\n• $49.00 at 10:24 AM - Duplicate charge (system error)\n\nThis was caused by a payment retry during a brief gateway timeout. I can process a refund of $49.00 right now. Should I proceed?"
+            'I found the issue for account #8847 (jane.smith@email.com). There were indeed 2 charges on Nov 15:\n\n• $49.00 at 10:23 AM - Annual renewal (legitimate)\n• $49.00 at 10:24 AM - Duplicate charge (system error)\n\nThis was caused by a payment retry during a brief gateway timeout. I can process a refund of $49.00 right now. Should I proceed?'
         },
         {
           role: 'user',
@@ -185,13 +189,14 @@ export class UseCasesComponent {
     },
     {
       id: 'growth',
-      label: 'Growth & Analytics',
+      label: 'Growth ',
       icon: '📈',
       excerpt: 'Analyze acquisition channels and optimize conversions.',
       messages: [
         {
           role: 'user',
-          content: 'What are our top performing acquisition channels this month?'
+          content:
+            'What are our top performing acquisition channels this month?'
         },
         {
           role: 'assistant',
@@ -205,7 +210,7 @@ export class UseCasesComponent {
         {
           role: 'assistant',
           content:
-            "Referral analysis complete. Key drivers:\n\n• New in-app share feature launched Oct 15 → 3x more shares\n• Power users (top 10%) driving 67% of referrals\n• Average referral converts 2.3x faster than paid\n\nRecommendations to scale:\n1. Increase referral reward from $10 to $20 (projected +35% referrals)\n2. Launch tiered rewards for power referrers\n3. Add referral prompt after key milestones\n\nWant me to draft an A/B test plan for the reward increase?"
+            'Referral analysis complete. Key drivers:\n\n• New in-app share feature launched Oct 15 → 3x more shares\n• Power users (top 10%) driving 67% of referrals\n• Average referral converts 2.3x faster than paid\n\nRecommendations to scale:\n1. Increase referral reward from $10 to $20 (projected +35% referrals)\n2. Launch tiered rewards for power referrers\n3. Add referral prompt after key milestones\n\nWant me to draft an A/B test plan for the reward increase?'
         }
       ]
     }
@@ -216,6 +221,8 @@ export class UseCasesComponent {
   }
 
   getSelectedUseCase(): UseCase {
-    return this.useCases.find((uc) => uc.id === this.selectedTab) || this.useCases[0]
+    return (
+      this.useCases.find((uc) => uc.id === this.selectedTab) || this.useCases[0]
+    )
   }
 }
