@@ -11,6 +11,7 @@ interface UseCase {
   id: string
   label: string
   icon: string
+  excerpt: string
   messages: ChatMessage[]
 }
 
@@ -27,8 +28,9 @@ export class UseCasesComponent {
   useCases: UseCase[] = [
     {
       id: 'hr',
-      label: 'HR',
+      label: 'HR & People Operations',
       icon: '👥',
+      excerpt: 'Automate PTO requests, onboarding, and employee inquiries.',
       messages: [
         {
           role: 'user',
@@ -52,8 +54,9 @@ export class UseCasesComponent {
     },
     {
       id: 'sales',
-      label: 'Sales',
+      label: 'Sales & CRM',
       icon: '💼',
+      excerpt: 'Track pipelines, draft outreach, and close deals faster.',
       messages: [
         {
           role: 'user',
@@ -77,8 +80,9 @@ export class UseCasesComponent {
     },
     {
       id: 'marketing',
-      label: 'Marketing',
+      label: 'Marketing & Campaigns',
       icon: '📣',
+      excerpt: 'Create and schedule campaigns across all your channels.',
       messages: [
         {
           role: 'user',
@@ -103,8 +107,9 @@ export class UseCasesComponent {
     },
     {
       id: 'operations',
-      label: 'Operations',
+      label: 'Operations & Logistics',
       icon: '⚙️',
+      excerpt: 'Manage shipments, inventory, and supply chain issues.',
       messages: [
         {
           role: 'user',
@@ -128,8 +133,9 @@ export class UseCasesComponent {
     },
     {
       id: 'engineering',
-      label: 'Engineering',
+      label: 'Engineering & DevOps',
       icon: '🛠️',
+      excerpt: 'Debug issues, trigger rollbacks, and manage incidents.',
       messages: [
         {
           role: 'user',
@@ -153,8 +159,9 @@ export class UseCasesComponent {
     },
     {
       id: 'support',
-      label: 'Support',
+      label: 'Customer Support',
       icon: '🎧',
+      excerpt: 'Resolve tickets, process refunds, and delight customers.',
       messages: [
         {
           role: 'user',
@@ -178,8 +185,9 @@ export class UseCasesComponent {
     },
     {
       id: 'growth',
-      label: 'Growth',
+      label: 'Growth & Analytics',
       icon: '📈',
+      excerpt: 'Analyze acquisition channels and optimize conversions.',
       messages: [
         {
           role: 'user',
