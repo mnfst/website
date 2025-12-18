@@ -32,8 +32,8 @@ $text-grey: #7e7e7e;
     border-radius: 24px;
     overflow: hidden;
 
-    // Clean cream base
-    background: #faf8f6;
+    // Warmer cream base for better contrast with page background
+    background: #f5f0eb;
 
     // Layered soft color blobs for organic frosted glass look
     &::before {
@@ -47,15 +47,15 @@ $text-grey: #7e7e7e;
       z-index: 0;
       background:
         // Warm peach in top-left
-        radial-gradient(ellipse 70% 60% at 0% 0%, rgba(255, 210, 180, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse 70% 60% at 0% 0%, rgba(255, 200, 165, 0.5) 0%, transparent 50%),
         // Soft blue in top-right
-        radial-gradient(ellipse 60% 50% at 100% 0%, rgba(200, 220, 255, 0.35) 0%, transparent 45%),
+        radial-gradient(ellipse 60% 50% at 100% 0%, rgba(190, 215, 255, 0.45) 0%, transparent 45%),
         // Light coral in bottom-right
-        radial-gradient(ellipse 55% 50% at 100% 100%, rgba(255, 195, 175, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse 55% 50% at 100% 100%, rgba(255, 185, 160, 0.4) 0%, transparent 50%),
         // Mint green in bottom-left
-        radial-gradient(ellipse 50% 45% at 0% 100%, rgba(180, 230, 210, 0.25) 0%, transparent 45%),
+        radial-gradient(ellipse 50% 45% at 0% 100%, rgba(170, 225, 200, 0.35) 0%, transparent 45%),
         // Central warm glow
-        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255, 250, 245, 0.6) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255, 248, 240, 0.5) 0%, transparent 60%);
     }
 
     @media (max-width: 768px) {
@@ -122,10 +122,9 @@ $text-grey: #7e7e7e;
       }
 
       &.is-active {
-        background: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         margin: 0.25rem 0;
         padding: 1rem 1.25rem;
 
