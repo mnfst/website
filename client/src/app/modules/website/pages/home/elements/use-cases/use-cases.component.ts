@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { ClientLogosComponent } from '../../../../../../common/partials/client-logos/client-logos.component'
 
 interface ChatMessage {
   role: 'user' | 'assistant'
@@ -16,7 +17,7 @@ interface UseCase {
 @Component({
   selector: 'app-use-cases',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ClientLogosComponent],
   templateUrl: './use-cases.component.html',
   styleUrl: './use-cases.component.scss'
 })
@@ -172,6 +173,31 @@ export class UseCasesComponent {
           role: 'assistant',
           content:
             "Done! Here's what I completed:\n\n✅ Refund of $49.00 processed (3-5 business days)\n✅ Confirmation email sent to jane.smith@email.com\n✅ Added $10 account credit as goodwill gesture\n✅ Ticket #8847-R marked resolved\n\nThe customer will see the refund and received our apology email. Is there anything else for this case?"
+        }
+      ]
+    },
+    {
+      id: 'growth',
+      label: 'Growth',
+      icon: '📈',
+      messages: [
+        {
+          role: 'user',
+          content: 'What are our top performing acquisition channels this month?'
+        },
+        {
+          role: 'assistant',
+          content:
+            "Here's your acquisition breakdown for November:\n\n1. Organic Search - 2,340 signups (32% of total, +18% MoM)\n2. Paid Social - 1,890 signups (26%, +5% MoM)\n3. Referrals - 1,450 signups (20%, +42% MoM)\n4. Direct - 980 signups (13%)\n5. Email - 640 signups (9%)\n\nReferrals are your fastest growing channel. Want me to analyze what's driving that growth?"
+        },
+        {
+          role: 'user',
+          content: 'Yes, and suggest ways to double down on referrals'
+        },
+        {
+          role: 'assistant',
+          content:
+            "Referral analysis complete. Key drivers:\n\n• New in-app share feature launched Oct 15 → 3x more shares\n• Power users (top 10%) driving 67% of referrals\n• Average referral converts 2.3x faster than paid\n\nRecommendations to scale:\n1. Increase referral reward from $10 to $20 (projected +35% referrals)\n2. Launch tiered rewards for power referrers\n3. Add referral prompt after key milestones\n\nWant me to draft an A/B test plan for the reward increase?"
         }
       ]
     }

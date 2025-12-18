@@ -6,7 +6,6 @@
   border-top: 1px solid #dadadb;
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - 359px);
 
   &__visual {
     position: relative;
@@ -88,6 +87,27 @@
     @media (min-width: 769px) and (max-width: 1023px) {
       padding-right: 1rem;
       margin-bottom: 2rem;
+    }
+
+    .title.is-1 {
+      font-size: 4.768rem; // Major Third scale
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+
+      @media (max-width: 768px) {
+        font-size: 3.052rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem; // Major Third scale
+    line-height: 1.6;
+    color: #7e7e7e;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
     }
   }
 
@@ -430,6 +450,12 @@
 .is-flex-direction-column-mobile {
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+}
+
+.subtitle__wrapper {
+  @media (min-width: 768px) {
+    padding-right: 10rem;
   }
 }
 
