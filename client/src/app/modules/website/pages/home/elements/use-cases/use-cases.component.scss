@@ -357,6 +357,8 @@ $text-grey: #7e7e7e;
 
   &--user {
     justify-content: flex-end;
+    align-self: flex-end;
+    max-width: 80%;
 
     .chatgpt-message__content {
       background: $chatgpt-user-bg;
