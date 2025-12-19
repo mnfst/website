@@ -81,8 +81,40 @@ export interface ActionButtonsData {
 
 export interface ActionButton {
   label: string
-  icon?: 'email' | 'clock' | 'download' | 'refresh' | 'check'
-  variant?: 'default' | 'primary'
+  icon?: 'email' | 'clock' | 'download' | 'refresh' | 'check' | 'phone' | 'calendar'
+  variant?: 'default' | 'primary' | 'success'
+}
+
+// Pipeline Widget (Sales-focused horizontal stages)
+export interface PipelineData {
+  type: 'pipeline'
+  stages: PipelineStage[]
+  activeStage?: string
+}
+
+export interface PipelineStage {
+  id: string
+  label: string
+  count: number
+  value: string
+  variant?: 'default' | 'active' | 'success' | 'warning' | 'danger'
+}
+
+// Deal Cards Widget (Sales deal cards)
+export interface DealCardsData {
+  type: 'deal-cards'
+  deals: DealCard[]
+}
+
+export interface DealCard {
+  id: string
+  company: string
+  value: string
+  stage: string
+  owner: string
+  nextStep: string
+  daysInStage: number
+  health: 'healthy' | 'at-risk' | 'critical'
 }
 
 // Union type for all widgets
@@ -92,10 +124,20 @@ export type WidgetData =
   | DataTableData
   | DataGridData
   | ActionButtonsData
+  | PipelineData
+  | DealCardsData
+
+// App Bar configuration (displayed above the widget)
+export interface AppBarConfig {
+  name: string
+  logo?: 'manifest' | 'sales' | 'custom'
+  customLogoSvg?: string
+}
 
 // Composite widget configuration
 export interface CompositeWidgetConfig {
-  style: 'hris' | 'browser'
+  style: 'hris' | 'browser' | 'sales'
+  appBar?: AppBarConfig
   header?: {
     title?: string
     subtitle?: string

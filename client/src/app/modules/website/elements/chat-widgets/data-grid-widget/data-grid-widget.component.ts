@@ -11,4 +11,5 @@ import { DataGridData } from '../models/widget.models'
 })
 export class DataGridWidgetComponent {
   @Input() data!: DataGridData
+  @Input() theme: 'dark' | 'light' = 'dark'
 }

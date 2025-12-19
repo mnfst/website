@@ -11,6 +11,7 @@ import { StatGridData, StatItem } from '../models/widget.models'
 })
 export class StatGridWidgetComponent {
   @Input() data!: StatGridData
+  @Input() theme: 'dark' | 'light' = 'dark'
 
   getStatClass(stat: StatItem): string {
     const classes = ['stat-grid__stat']

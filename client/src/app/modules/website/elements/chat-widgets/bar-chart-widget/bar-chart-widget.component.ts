@@ -11,6 +11,7 @@ import { BarChartData, BarChartItem } from '../models/widget.models'
 })
 export class BarChartWidgetComponent implements OnInit {
   @Input() data!: BarChartData
+  @Input() theme: 'dark' | 'light' = 'dark'
 
   maxValue = 0
 

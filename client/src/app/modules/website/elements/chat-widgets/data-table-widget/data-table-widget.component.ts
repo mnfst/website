@@ -17,6 +17,7 @@ import {
 })
 export class DataTableWidgetComponent implements OnInit {
   @Input() data!: DataTableData
+  @Input() theme: 'dark' | 'light' = 'dark'
 
   expandedRows: Set<number> = new Set()
 

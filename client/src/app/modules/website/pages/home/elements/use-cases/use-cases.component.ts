@@ -35,6 +35,10 @@ export class UseCasesComponent {
             'Engineering has the highest attrition with 5 departures under Michael Chen. Sales and Marketing follow with 4 and 3 respectively. Consider scheduling retention interviews with these managers to identify patterns and improve team stability.',
           widget: {
             style: 'hris',
+            appBar: {
+              name: 'Workforce Hub',
+              logo: 'manifest'
+            },
             header: {
               title: 'Team Departures',
               subtitle: 'Last 12 months',
@@ -189,45 +193,86 @@ export class UseCasesComponent {
       messages: [
         {
           role: 'user',
-          content: 'Show me the pipeline for Q4 and highlight deals at risk'
+          content: 'Show me the Q4 pipeline and highlight deals at risk'
         },
         {
           role: 'assistant',
-          content: '',
+          content:
+            'You have 3 deals requiring immediate attention. Acme Corp and GlobalFin are critical due to extended inactivity and competitor activity. I recommend scheduling follow-up calls this week.',
           widget: {
-            style: 'browser',
+            style: 'sales',
+            appBar: {
+              name: 'SalesOpsHub',
+              logo: 'sales'
+            },
             header: {
               title: 'Q4 Pipeline Overview',
-              urlBar: 'salesforce.com/pipeline/q4-2024',
-              badge: { label: 'Live from Salesforce', type: 'live' },
-              icon: 'layers'
+              subtitle: 'November 2024'
             },
             sections: [
               {
-                type: 'stat-grid',
-                stats: [
-                  { value: '$2.4M', label: 'Total Pipeline' },
-                  { value: 47, label: 'Opportunities', variant: 'accent' },
-                  { value: 3, label: 'At Risk', variant: 'danger' }
+                type: 'pipeline',
+                stages: [
+                  {
+                    id: 'discovery',
+                    label: 'Discovery',
+                    count: 12,
+                    value: '$15.6M'
+                  },
+                  {
+                    id: 'proposal',
+                    label: 'Proposal',
+                    count: 8,
+                    value: '$11M'
+                  },
+                  {
+                    id: 'negotiation',
+                    label: 'Negotiation',
+                    count: 5,
+                    value: '$6.2M',
+                    variant: 'warning'
+                  },
+                  {
+                    id: 'closing',
+                    label: 'Closing',
+                    count: 3,
+                    value: '$4.4M',
+                    variant: 'success'
+                  }
                 ]
               },
               {
-                type: 'data-grid',
-                rows: [
+                type: 'deal-cards',
+                deals: [
                   {
-                    label: 'Acme Corp - No activity 14 days',
-                    value: '$180K',
-                    color: '#f87171'
+                    id: 'deal-1',
+                    company: 'Acme Corp',
+                    value: '$180,000',
+                    stage: 'Negotiation',
+                    owner: 'Sarah Chen',
+                    nextStep: 'Schedule executive call',
+                    daysInStage: 14,
+                    health: 'critical'
                   },
                   {
-                    label: 'TechStart - Champion left',
-                    value: '$95K',
-                    color: '#fbbf24'
+                    id: 'deal-2',
+                    company: 'TechStart Inc',
+                    value: '$95,000',
+                    stage: 'Proposal',
+                    owner: 'Mike Johnson',
+                    nextStep: 'Re-engage new champion',
+                    daysInStage: 8,
+                    health: 'at-risk'
                   },
                   {
-                    label: 'GlobalFin - Competitor engaged',
-                    value: '$220K',
-                    color: '#f87171'
+                    id: 'deal-3',
+                    company: 'GlobalFin',
+                    value: '$220,000',
+                    stage: 'Negotiation',
+                    owner: 'Sarah Chen',
+                    nextStep: 'Send competitive analysis',
+                    daysInStage: 21,
+                    health: 'critical'
                   }
                 ]
               },
@@ -235,11 +280,12 @@ export class UseCasesComponent {
                 type: 'action-buttons',
                 buttons: [
                   {
-                    label: 'Draft Outreach',
-                    icon: 'email',
+                    label: 'Schedule Calls',
+                    icon: 'phone',
                     variant: 'primary'
                   },
-                  { label: 'View Timeline', icon: 'clock' }
+                  { label: 'Draft Emails', icon: 'email' },
+                  { label: 'View Calendar', icon: 'calendar' }
                 ]
               }
             ]

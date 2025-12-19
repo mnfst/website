@@ -1,4 +1,4 @@
-<div class="stat-grid">
+<div class="stat-grid" [class.stat-grid--light]="theme === 'light'">
   @for (stat of data.stats; track stat.label) {
     <div [class]="getStatClass(stat)">
       <span [class]="getValueClass(stat)">{{ stat.value }}</span>

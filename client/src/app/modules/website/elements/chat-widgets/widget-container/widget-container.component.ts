@@ -6,13 +6,17 @@ import {
   BarChartData,
   DataTableData,
   DataGridData,
-  ActionButtonsData
+  ActionButtonsData,
+  PipelineData,
+  DealCardsData
 } from '../models/widget.models'
 import { StatGridWidgetComponent } from '../stat-grid-widget/stat-grid-widget.component'
 import { BarChartWidgetComponent } from '../bar-chart-widget/bar-chart-widget.component'
 import { DataTableWidgetComponent } from '../data-table-widget/data-table-widget.component'
 import { DataGridWidgetComponent } from '../data-grid-widget/data-grid-widget.component'
 import { ActionButtonsWidgetComponent } from '../action-buttons-widget/action-buttons-widget.component'
+import { PipelineWidgetComponent } from '../pipeline-widget/pipeline-widget.component'
+import { DealCardsWidgetComponent } from '../deal-cards-widget/deal-cards-widget.component'
 
 @Component({
   selector: 'app-widget-container',
@@ -23,7 +27,9 @@ import { ActionButtonsWidgetComponent } from '../action-buttons-widget/action-bu
     BarChartWidgetComponent,
     DataTableWidgetComponent,
     DataGridWidgetComponent,
-    ActionButtonsWidgetComponent
+    ActionButtonsWidgetComponent,
+    PipelineWidgetComponent,
+    DealCardsWidgetComponent
   ],
   templateUrl: './widget-container.component.html',
   styleUrl: './widget-container.component.scss'
@@ -49,5 +55,13 @@ export class WidgetContainerComponent {
 
   asActionButtons(data: unknown): ActionButtonsData {
     return data as ActionButtonsData
+  }
+
+  asPipeline(data: unknown): PipelineData {
+    return data as PipelineData
+  }
+
+  asDealCards(data: unknown): DealCardsData {
+    return data as DealCardsData
   }
 }

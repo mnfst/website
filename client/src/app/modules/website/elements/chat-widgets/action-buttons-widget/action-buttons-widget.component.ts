@@ -11,11 +11,15 @@ import { ActionButtonsData, ActionButton } from '../models/widget.models'
 })
 export class ActionButtonsWidgetComponent {
   @Input() data!: ActionButtonsData
+  @Input() theme: 'dark' | 'light' = 'dark'
 
   getButtonClass(button: ActionButton): string {
     const base = 'action-buttons__btn'
     if (button.variant === 'primary') {
       return `${base} ${base}--primary`
+    }
+    if (button.variant === 'success') {
+      return `${base} ${base}--success`
     }
     return base
   }
