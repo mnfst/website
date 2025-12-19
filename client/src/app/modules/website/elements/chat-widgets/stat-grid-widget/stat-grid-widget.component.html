@@ -1,0 +1,8 @@
+<div class="stat-grid">
+  @for (stat of data.stats; track stat.label) {
+    <div [class]="getStatClass(stat)">
+      <span [class]="getValueClass(stat)">{{ stat.value }}</span>
+      <span class="stat-grid__label">{{ stat.label }}</span>
+    </div>
+  }
+</div>

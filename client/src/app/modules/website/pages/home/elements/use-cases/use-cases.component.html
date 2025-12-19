@@ -62,9 +62,15 @@
                   [class.chatgpt-message--user]="message.role === 'user'"
                 >
                   <div class="chatgpt-message__content">
+                    @if (message.widget) {
+                    <app-widget-container
+                      [config]="message.widget"
+                    ></app-widget-container>
+                    } @else if (message.content) {
                     <span class="chatgpt-message__text">{{
                       message.content
                     }}</span>
+                    }
                   </div>
                 </div>
                 }

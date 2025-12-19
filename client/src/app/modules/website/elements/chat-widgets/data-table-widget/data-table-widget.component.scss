@@ -1,0 +1,80 @@
+@use '../styles/widget-theme' as theme;
+
+.data-table {
+  background: theme.$widget-card-bg;
+  border-radius: theme.$radius-lg;
+  overflow: hidden;
+  border: 1px solid theme.$widget-border-light;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px;
+    gap: 0.75rem;
+    padding: 0.625rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid theme.$widget-border-light;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: theme.$widget-text-dimmer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px;
+    gap: 0.75rem;
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid theme.$widget-border-lighter;
+    transition: background 0.15s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: theme.$widget-card-bg;
+    }
+
+    span {
+      font-size: 0.8125rem;
+      color: theme.$widget-text;
+
+      &:nth-child(2) {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  &__cell--right {
+    text-align: right;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: theme.$widget-border;
+    color: rgba(255, 255, 255, 0.8);
+
+    &--danger {
+      background: theme.$danger-bg;
+      color: theme.$danger;
+    }
+
+    &--warning {
+      background: theme.$warning-bg;
+      color: theme.$warning;
+    }
+
+    &--success {
+      background: theme.$success-bg;
+      color: theme.$success;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../styles/widget-theme' as theme;
+
+.stat-grid {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid theme.$widget-border-light;
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    &--large .stat-grid__value {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: theme.$widget-text;
+    letter-spacing: -0.02em;
+    line-height: 1;
+
+    &--accent {
+      color: theme.$accent;
+    }
+
+    &--warning {
+      color: theme.$warning;
+    }
+
+    &--danger {
+      color: theme.$danger;
+    }
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    color: theme.$widget-text-dim;
+    text-transform: lowercase;
+  }
+}

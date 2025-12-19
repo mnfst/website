@@ -1,0 +1,145 @@
+@if (config.style === 'browser') {
+  <!-- Browser-style widget -->
+  <div class="widget-container widget-container--browser">
+    <!-- Browser header with window controls -->
+    <div class="widget-container__browser-header">
+      <div class="widget-container__controls">
+        <span class="widget-container__control widget-container__control--close"></span>
+        <span class="widget-container__control widget-container__control--minimize"></span>
+        <span class="widget-container__control widget-container__control--expand"></span>
+      </div>
+      @if (config.header?.urlBar) {
+        <div class="widget-container__url-bar">
+          <svg class="widget-container__url-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M9 3v18M3 9h18"/>
+          </svg>
+          <span class="widget-container__url-text">{{ config.header.urlBar }}</span>
+        </div>
+      }
+      <div class="widget-container__header-actions">
+        <button class="widget-container__header-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+            <polyline points="16,6 12,2 8,6"/>
+            <line x1="12" y1="2" x2="12" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Content area -->
+    <div class="widget-container__content">
+      <!-- App header -->
+      @if (config.header?.title || config.header?.badge) {
+        <div class="widget-container__app-header">
+          <div class="widget-container__app-title">
+            @if (config.header?.icon) {
+              <div class="widget-container__app-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+            }
+            @if (config.header?.title) {
+              <h3 class="widget-container__app-name">{{ config.header.title }}</h3>
+            }
+          </div>
+          @if (config.header?.badge) {
+            <div class="widget-container__app-badge">
+              <span class="widget-container__app-badge-dot"></span>
+              <span>{{ config.header.badge.label }}</span>
+            </div>
+          }
+        </div>
+      }
+
+      <!-- Widget sections -->
+      <div class="widget-container__body">
+        <ng-container *ngTemplateOutlet="widgetSections"></ng-container>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    @if (config.footer) {
+      <div class="widget-container__footer">
+        <div class="widget-container__footer-left">
+          @if (config.footer.source) {
+            <span class="widget-container__footer-text">Source: {{ config.footer.source }}</span>
+          }
+          @if (config.footer.badge) {
+            <span class="widget-container__footer-badge">{{ config.footer.badge }}</span>
+          }
+        </div>
+        <div class="widget-container__footer-right">
+          @if (config.footer.updatedAt) {
+            <span class="widget-container__footer-text">{{ config.footer.updatedAt }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+} @else {
+  <!-- HRIS-style widget -->
+  <div class="widget-container widget-container--hris">
+    <!-- Header with badge -->
+    @if (config.header?.badge) {
+      <div class="widget-container__hris-header">
+        <div class="widget-container__hris-badge">
+          <span class="widget-container__hris-badge-dot"></span>
+          <span>{{ config.header.badge.label }}</span>
+        </div>
+      </div>
+    }
+
+    <!-- Body -->
+    <div class="widget-container__hris-body">
+      @if (config.header?.title) {
+        <div class="widget-container__title-row">
+          <h3 class="widget-container__title">{{ config.header.title }}</h3>
+          @if (config.header?.subtitle) {
+            <span class="widget-container__period">{{ config.header.subtitle }}</span>
+          }
+        </div>
+      }
+      <ng-container *ngTemplateOutlet="widgetSections"></ng-container>
+    </div>
+
+    <!-- Footer -->
+    @if (config.footer) {
+      <div class="widget-container__hris-footer">
+        @if (config.footer.source) {
+          <span class="widget-container__source">Source: {{ config.footer.source }}</span>
+        }
+        @if (config.footer.updatedAt) {
+          <span class="widget-container__updated">{{ config.footer.updatedAt }}</span>
+        }
+      </div>
+    }
+  </div>
+}
+
+<!-- Widget Sections Template -->
+<ng-template #widgetSections>
+  @for (section of config.sections; track $index) {
+    @switch (section.type) {
+      @case ('stat-grid') {
+        <app-stat-grid-widget [data]="asStatGrid(section)"></app-stat-grid-widget>
+      }
+      @case ('bar-chart') {
+        <app-bar-chart-widget [data]="asBarChart(section)"></app-bar-chart-widget>
+      }
+      @case ('data-table') {
+        <app-data-table-widget [data]="asDataTable(section)"></app-data-table-widget>
+      }
+      @case ('data-grid') {
+        <app-data-grid-widget [data]="asDataGrid(section)"></app-data-grid-widget>
+      }
+      @case ('action-buttons') {
+        <app-action-buttons-widget [data]="asActionButtons(section)"></app-action-buttons-widget>
+      }
+    }
+  }
+</ng-template>

@@ -1,0 +1,49 @@
+// ChatGPT Dark Theme Colors
+$widget-bg: #1a1a1a;
+$widget-bg-darker: #0d0d0d;
+$widget-bg-lighter: #121212;
+$widget-border: rgba(255, 255, 255, 0.08);
+$widget-border-light: rgba(255, 255, 255, 0.06);
+$widget-border-lighter: rgba(255, 255, 255, 0.04);
+
+// Text colors
+$widget-text: #ffffff;
+$widget-text-dim: rgba(255, 255, 255, 0.5);
+$widget-text-dimmer: rgba(255, 255, 255, 0.4);
+$widget-text-dimmest: rgba(255, 255, 255, 0.3);
+
+// Accent colors
+$accent: #10a37f;
+$accent-hover: #0d8a6b;
+$warning: #fbbf24;
+$warning-bg: rgba(245, 158, 11, 0.2);
+$danger: #f87171;
+$danger-bg: rgba(239, 68, 68, 0.2);
+$success: #10a37f;
+$success-bg: rgba(16, 163, 127, 0.2);
+$info: #60a5fa;
+$info-bg: rgba(59, 130, 246, 0.15);
+
+// Chart colors
+$chart-bar-default: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+$chart-bar-warning: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+$chart-bar-danger: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
+
+// Backgrounds
+$widget-card-bg: rgba(255, 255, 255, 0.03);
+$widget-card-bg-hover: rgba(255, 255, 255, 0.05);
+$widget-input-bg: rgba(255, 255, 255, 0.06);
+
+// Typography
+$widget-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+// Border radius
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 10px;
+$radius-xl: 12px;
+
+// Window control colors (macOS style)
+$control-close: #ff5f57;
+$control-minimize: #febc2e;
+$control-expand: #28c840;

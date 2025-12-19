@@ -1,0 +1,19 @@
+<div class="bar-chart">
+  @if (data.title) {
+    <div class="bar-chart__title">{{ data.title }}</div>
+  }
+  <div class="bar-chart__bars">
+    @for (bar of data.bars; track bar.name) {
+      <div class="bar-chart__row">
+        <span class="bar-chart__name">{{ bar.name }}</span>
+        <div class="bar-chart__bar-wrap">
+          <div
+            [class]="getBarClass(bar)"
+            [style.width.%]="getBarWidth(bar)"
+          ></div>
+        </div>
+        <span class="bar-chart__val">{{ bar.value }}</span>
+      </div>
+    }
+  </div>
+</div>

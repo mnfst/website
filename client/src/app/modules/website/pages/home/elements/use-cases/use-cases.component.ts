@@ -1,24 +1,16 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
 import { ClientLogosComponent } from '../../../../../../common/partials/client-logos/client-logos.component'
-
-interface ChatMessage {
-  role: 'user' | 'assistant'
-  content: string
-}
-
-interface UseCase {
-  id: string
-  label: string
-  icon: string
-  excerpt: string
-  messages: ChatMessage[]
-}
+import {
+  WidgetContainerComponent,
+  ChatMessage,
+  UseCase
+} from '../../../../elements/chat-widgets'
 
 @Component({
   selector: 'app-use-cases',
   standalone: true,
-  imports: [CommonModule, ClientLogosComponent],
+  imports: [CommonModule, ClientLogosComponent, WidgetContainerComponent],
   templateUrl: './use-cases.component.html',
   styleUrl: './use-cases.component.scss'
 })
@@ -34,21 +26,76 @@ export class UseCasesComponent {
       messages: [
         {
           role: 'user',
-          content: "I'd like to request PTO for December 23-27"
+          content:
+            'From the HRIS, which managers had departures in their teams over the last 12 months?'
         },
         {
           role: 'assistant',
-          content:
-            "I can help you submit that PTO request. Let me check your available balance... You have 12 days remaining. I'll submit the request for December 23-27 (5 days). Your manager Sarah will be notified for approval. Would you like me to proceed?"
-        },
-        {
-          role: 'user',
-          content: 'Yes, please submit it'
-        },
-        {
-          role: 'assistant',
-          content:
-            "Done! Your PTO request has been submitted. You'll receive an email confirmation shortly. Sarah typically responds within 24 hours. Is there anything else I can help you with?"
+          content: '',
+          widget: {
+            style: 'hris',
+            header: {
+              title: 'Team Departures',
+              subtitle: 'Last 12 months',
+              badge: { label: 'Data synced from HRIS', type: 'synced' }
+            },
+            sections: [
+              {
+                type: 'stat-grid',
+                stats: [
+                  { value: 15, label: 'total departures', variant: 'large' },
+                  { value: 5, label: 'teams affected' }
+                ]
+              },
+              {
+                type: 'bar-chart',
+                title: 'Departures by Manager',
+                bars: [
+                  { name: 'M. Chen', value: 5, variant: 'danger' },
+                  { name: 'S. Patel', value: 4, variant: 'warning' },
+                  { name: 'J. Wilson', value: 3, variant: 'warning' },
+                  { name: 'A. Garcia', value: 2 },
+                  { name: 'R. Kim', value: 1 }
+                ]
+              },
+              {
+                type: 'data-table',
+                columns: [
+                  { key: 'manager', label: 'Manager' },
+                  { key: 'department', label: 'Department' },
+                  { key: 'departures', label: 'Departures', align: 'right' }
+                ],
+                rows: [
+                  {
+                    manager: { value: 'Michael Chen' },
+                    department: { value: 'Engineering' },
+                    departures: { value: 5, variant: 'danger', type: 'badge' }
+                  },
+                  {
+                    manager: { value: 'Sarah Patel' },
+                    department: { value: 'Sales' },
+                    departures: { value: 4, variant: 'warning', type: 'badge' }
+                  },
+                  {
+                    manager: { value: 'James Wilson' },
+                    department: { value: 'Marketing' },
+                    departures: { value: 3, variant: 'warning', type: 'badge' }
+                  },
+                  {
+                    manager: { value: 'Ana Garcia' },
+                    department: { value: 'Product' },
+                    departures: { value: 2, type: 'badge' }
+                  },
+                  {
+                    manager: { value: 'Ryan Kim' },
+                    department: { value: 'Operations' },
+                    departures: { value: 1, type: 'badge' }
+                  }
+                ]
+              }
+            ],
+            footer: { source: 'BambooHR', updatedAt: 'Updated 2 hours ago' }
+          }
         }
       ]
     },
@@ -64,17 +111,58 @@ export class UseCasesComponent {
         },
         {
           role: 'assistant',
-          content:
-            'Your Q4 pipeline is at $2.4M across 47 opportunities. I found 3 deals at risk: Acme Corp ($180K) - no activity in 14 days, TechStart ($95K) - champion left company, GlobalFin ($220K) - competitor engaged. Want me to draft re-engagement emails for these accounts?'
-        },
-        {
-          role: 'user',
-          content: 'Yes, draft an email for Acme Corp'
-        },
-        {
-          role: 'assistant',
-          content:
-            "Here's a draft for John at Acme Corp:\n\nSubject: Quick check-in on your implementation timeline\n\nHi John,\n\nI wanted to follow up on our last conversation about streamlining your workflow. Have you had a chance to review the proposal with your team?\n\nI'd love to schedule a quick call to address any questions...\n\nShall I send this or would you like to edit it first?"
+          content: '',
+          widget: {
+            style: 'browser',
+            header: {
+              title: 'Q4 Pipeline Overview',
+              urlBar: 'salesforce.com/pipeline/q4-2024',
+              badge: { label: 'Live from Salesforce', type: 'live' },
+              icon: 'layers'
+            },
+            sections: [
+              {
+                type: 'stat-grid',
+                stats: [
+                  { value: '$2.4M', label: 'Total Pipeline' },
+                  { value: 47, label: 'Opportunities', variant: 'accent' },
+                  { value: 3, label: 'At Risk', variant: 'danger' }
+                ]
+              },
+              {
+                type: 'data-grid',
+                rows: [
+                  {
+                    label: 'Acme Corp - No activity 14 days',
+                    value: '$180K',
+                    color: '#f87171'
+                  },
+                  {
+                    label: 'TechStart - Champion left',
+                    value: '$95K',
+                    color: '#fbbf24'
+                  },
+                  {
+                    label: 'GlobalFin - Competitor engaged',
+                    value: '$220K',
+                    color: '#f87171'
+                  }
+                ]
+              },
+              {
+                type: 'action-buttons',
+                buttons: [
+                  { label: 'Draft Outreach', icon: 'email', variant: 'primary' },
+                  { label: 'View Timeline', icon: 'clock' }
+                ]
+              }
+            ],
+            footer: {
+              source: 'Salesforce CRM',
+              badge: 'API',
+              updatedAt: 'Updated 5 min ago'
+            }
+          }
         }
       ]
     },

@@ -1,0 +1,22 @@
+<div class="data-table">
+  <div class="data-table__header">
+    @for (column of data.columns; track column.key) {
+      <span [class]="getCellClass(column)">{{ column.label }}</span>
+    }
+  </div>
+  @for (row of data.rows; track $index) {
+    <div class="data-table__row">
+      @for (column of data.columns; track column.key) {
+        <span [class]="getCellClass(column)">
+          @if (row[column.key]?.type === 'badge') {
+            <span [class]="getBadgeClass(row[column.key])">{{
+              row[column.key].value
+            }}</span>
+          } @else {
+            {{ row[column.key]?.value }}
+          }
+        </span>
+      }
+    </div>
+  }
+</div>

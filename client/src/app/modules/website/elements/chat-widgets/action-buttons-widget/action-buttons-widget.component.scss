@@ -1,0 +1,43 @@
+@use '../styles/widget-theme' as theme;
+
+.action-buttons {
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 1rem;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: theme.$widget-border;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: theme.$radius-md;
+    color: theme.$widget-text;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: theme.$widget-font;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &--primary {
+      background: theme.$accent;
+      border-color: theme.$accent;
+
+      &:hover {
+        background: theme.$accent-hover;
+        border-color: theme.$accent-hover;
+      }
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
