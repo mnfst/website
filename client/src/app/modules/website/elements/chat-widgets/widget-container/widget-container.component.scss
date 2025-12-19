@@ -21,6 +21,75 @@
     border: 1px solid theme.$widget-border;
   }
 
+  // App Bar (HRIS style)
+  &__app-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid theme.$widget-border-light;
+  }
+
+  &__app-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__app-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__app-bar-name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: theme.$widget-text;
+    letter-spacing: -0.01em;
+  }
+
+  &__app-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__feedback-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    border-radius: theme.$radius-sm;
+    color: theme.$widget-text-dimmer;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: theme.$widget-text-dim;
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
   // Browser header
   &__browser-header {
     display: flex;
