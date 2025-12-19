@@ -61,25 +61,6 @@
         <ng-container *ngTemplateOutlet="widgetSections"></ng-container>
       </div>
     </div>
-
-    <!-- Footer -->
-    @if (config.footer) {
-      <div class="widget-container__footer">
-        <div class="widget-container__footer-left">
-          @if (config.footer.source) {
-            <span class="widget-container__footer-text">Source: {{ config.footer.source }}</span>
-          }
-          @if (config.footer.badge) {
-            <span class="widget-container__footer-badge">{{ config.footer.badge }}</span>
-          }
-        </div>
-        <div class="widget-container__footer-right">
-          @if (config.footer.updatedAt) {
-            <span class="widget-container__footer-text">{{ config.footer.updatedAt }}</span>
-          }
-        </div>
-      </div>
-    }
   </div>
 } @else {
   <!-- HRIS-style widget -->
@@ -106,18 +87,6 @@
       }
       <ng-container *ngTemplateOutlet="widgetSections"></ng-container>
     </div>
-
-    <!-- Footer -->
-    @if (config.footer) {
-      <div class="widget-container__hris-footer">
-        @if (config.footer.source) {
-          <span class="widget-container__source">Source: {{ config.footer.source }}</span>
-        }
-        @if (config.footer.updatedAt) {
-          <span class="widget-container__updated">{{ config.footer.updatedAt }}</span>
-        }
-      </div>
-    }
   </div>
 }
 

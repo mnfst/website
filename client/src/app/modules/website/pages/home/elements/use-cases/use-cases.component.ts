@@ -2,9 +2,8 @@ import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
 import { ClientLogosComponent } from '../../../../../../common/partials/client-logos/client-logos.component'
 import {
-  WidgetContainerComponent,
-  ChatMessage,
-  UseCase
+  UseCase,
+  WidgetContainerComponent
 } from '../../../../elements/chat-widgets'
 
 @Component({
@@ -22,7 +21,8 @@ export class UseCasesComponent {
       id: 'hr',
       label: 'HR & People Operations',
       icon: '👥',
-      excerpt: 'Automate PTO requests, onboarding, and employee inquiries.',
+      excerpt:
+        'Validate PTO requests, answer HR questions, perform emplloyee follow-ups.',
       messages: [
         {
           role: 'user',
@@ -60,6 +60,7 @@ export class UseCasesComponent {
               },
               {
                 type: 'data-table',
+                accordion: true,
                 columns: [
                   { key: 'manager', label: 'Manager' },
                   { key: 'department', label: 'Department' },
@@ -69,32 +70,112 @@ export class UseCasesComponent {
                   {
                     manager: { value: 'Michael Chen' },
                     department: { value: 'Engineering' },
-                    departures: { value: 5, variant: 'danger', type: 'badge' }
+                    departures: { value: 5, variant: 'danger', type: 'badge' },
+                    _details: [
+                      {
+                        name: 'Alex Thompson',
+                        role: 'Senior Engineer',
+                        date: 'Jan 15, 2024'
+                      },
+                      {
+                        name: 'Maria Santos',
+                        role: 'Tech Lead',
+                        date: 'Mar 22, 2024'
+                      },
+                      {
+                        name: 'David Park',
+                        role: 'DevOps Engineer',
+                        date: 'May 8, 2024'
+                      },
+                      {
+                        name: 'Lisa Wang',
+                        role: 'Frontend Developer',
+                        date: 'Aug 30, 2024'
+                      },
+                      {
+                        name: 'Chris Miller',
+                        role: 'Backend Developer',
+                        date: 'Nov 12, 2024'
+                      }
+                    ]
                   },
                   {
                     manager: { value: 'Sarah Patel' },
                     department: { value: 'Sales' },
-                    departures: { value: 4, variant: 'warning', type: 'badge' }
+                    departures: { value: 4, variant: 'warning', type: 'badge' },
+                    _details: [
+                      {
+                        name: 'John Davies',
+                        role: 'Account Executive',
+                        date: 'Feb 5, 2024'
+                      },
+                      {
+                        name: 'Emma Brown',
+                        role: 'Sales Rep',
+                        date: 'Apr 18, 2024'
+                      },
+                      { name: 'Kevin Lee', role: 'SDR', date: 'Jul 25, 2024' },
+                      {
+                        name: 'Rachel Green',
+                        role: 'Account Manager',
+                        date: 'Oct 3, 2024'
+                      }
+                    ]
                   },
                   {
                     manager: { value: 'James Wilson' },
                     department: { value: 'Marketing' },
-                    departures: { value: 3, variant: 'warning', type: 'badge' }
+                    departures: { value: 3, variant: 'warning', type: 'badge' },
+                    _details: [
+                      {
+                        name: 'Sophie Turner',
+                        role: 'Content Writer',
+                        date: 'Mar 1, 2024'
+                      },
+                      {
+                        name: 'Mike Chen',
+                        role: 'SEO Specialist',
+                        date: 'Jun 14, 2024'
+                      },
+                      {
+                        name: 'Anna White',
+                        role: 'Designer',
+                        date: 'Sep 20, 2024'
+                      }
+                    ]
                   },
                   {
                     manager: { value: 'Ana Garcia' },
                     department: { value: 'Product' },
-                    departures: { value: 2, type: 'badge' }
+                    departures: { value: 2, type: 'badge' },
+                    _details: [
+                      {
+                        name: 'Tom Harris',
+                        role: 'Product Manager',
+                        date: 'Apr 28, 2024'
+                      },
+                      {
+                        name: 'Jessica Liu',
+                        role: 'UX Researcher',
+                        date: 'Aug 15, 2024'
+                      }
+                    ]
                   },
                   {
                     manager: { value: 'Ryan Kim' },
                     department: { value: 'Operations' },
-                    departures: { value: 1, type: 'badge' }
+                    departures: { value: 1, type: 'badge' },
+                    _details: [
+                      {
+                        name: 'Mark Johnson',
+                        role: 'Operations Analyst',
+                        date: 'Jul 10, 2024'
+                      }
+                    ]
                   }
                 ]
               }
-            ],
-            footer: { source: 'BambooHR', updatedAt: 'Updated 2 hours ago' }
+            ]
           }
         }
       ]
@@ -152,16 +233,15 @@ export class UseCasesComponent {
               {
                 type: 'action-buttons',
                 buttons: [
-                  { label: 'Draft Outreach', icon: 'email', variant: 'primary' },
+                  {
+                    label: 'Draft Outreach',
+                    icon: 'email',
+                    variant: 'primary'
+                  },
                   { label: 'View Timeline', icon: 'clock' }
                 ]
               }
-            ],
-            footer: {
-              source: 'Salesforce CRM',
-              badge: 'API',
-              updatedAt: 'Updated 5 min ago'
-            }
+            ]
           }
         }
       ]

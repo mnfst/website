@@ -3,6 +3,7 @@
 .stat-grid {
   display: flex;
   gap: 2rem;
+  align-items: flex-end;
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid theme.$widget-border-light;

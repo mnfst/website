@@ -35,6 +35,7 @@ export interface DataTableData {
   type: 'data-table'
   columns: TableColumn[]
   rows: TableRow[]
+  accordion?: boolean
 }
 
 export interface TableColumn {
@@ -44,13 +45,20 @@ export interface TableColumn {
 }
 
 export interface TableRow {
-  [key: string]: TableCell
+  [key: string]: TableCell | TableRowDetail[] | undefined
+  _details?: TableRowDetail[]
 }
 
 export interface TableCell {
   value: string | number
   variant?: 'default' | 'warning' | 'danger' | 'success'
   type?: 'text' | 'badge'
+}
+
+export interface TableRowDetail {
+  name: string
+  role?: string
+  date: string
 }
 
 // Data Grid Widget (simple key-value rows)

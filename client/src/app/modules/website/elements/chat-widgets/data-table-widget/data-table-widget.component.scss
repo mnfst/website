@@ -20,23 +20,41 @@
     letter-spacing: 0.05em;
   }
 
+  &__row-wrapper {
+    border-bottom: 1px solid theme.$widget-border-lighter;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
   &__row {
     display: grid;
     grid-template-columns: 1fr 1fr 80px;
     gap: 0.75rem;
     padding: 0.625rem 1rem;
-    border-bottom: 1px solid theme.$widget-border-lighter;
     transition: background 0.15s ease;
-
-    &:last-child {
-      border-bottom: none;
-    }
 
     &:hover {
       background: theme.$widget-card-bg;
     }
 
+    &--expandable {
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    &--expanded {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
     span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 0.8125rem;
       color: theme.$widget-text;
 
@@ -46,8 +64,19 @@
     }
   }
 
+  &__chevron {
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--expanded {
+      transform: rotate(90deg);
+    }
+  }
+
   &__cell--right {
     text-align: right;
+    justify-content: flex-end;
   }
 
   &__badge {
@@ -75,6 +104,93 @@
     &--success {
       background: theme.$success-bg;
       color: theme.$success;
+    }
+  }
+
+  // Accordion details with smooth animation
+  &__details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--open {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__details-inner {
+    overflow: hidden;
+  }
+
+  &__details-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem 0.5rem 2.25rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  &__details-title {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  &__detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 120px;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem 0.5rem 2.25rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    &:last-child {
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  &__detail-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__detail-icon {
+    color: rgba(255, 255, 255, 0.35);
+    flex-shrink: 0;
+  }
+
+  &__detail-name {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+  }
+
+  &__detail-role {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+  }
+
+  &__detail-date {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.375rem;
+
+    svg {
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 }

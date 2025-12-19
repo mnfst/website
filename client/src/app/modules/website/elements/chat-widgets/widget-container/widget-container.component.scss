@@ -1,6 +1,7 @@
 @use '../styles/widget-theme' as theme;
 
 .widget-container {
+  width: 100%;
   font-family: theme.$widget-font;
   border-radius: theme.$radius-xl;
   overflow: hidden;
