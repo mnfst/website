@@ -21,14 +21,13 @@
     border: 1px solid theme.$widget-border;
   }
 
-  // App Bar (HRIS style)
+  // App Bar (Above HRIS widget)
   &__app-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid theme.$widget-border-light;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
   }
 
   &__app-bar-left {
@@ -38,19 +37,14 @@
   }
 
   &__app-logo {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-
-    svg {
-      width: 14px;
-      height: 14px;
-    }
+    color: #1a1a1a;
   }
 
   &__app-bar-name {

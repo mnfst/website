@@ -66,6 +66,12 @@
                     <app-widget-container
                       [config]="message.widget"
                     ></app-widget-container>
+                    @if (message.content) {
+                    <div class="chatgpt-message__separator"></div>
+                    <span class="chatgpt-message__text">{{
+                      message.content
+                    }}</span>
+                    }
                     } @else if (message.content) {
                     <span class="chatgpt-message__text">{{
                       message.content

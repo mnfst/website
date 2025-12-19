@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import {
   DataTableData,
@@ -15,10 +15,17 @@ import {
   templateUrl: './data-table-widget.component.html',
   styleUrl: './data-table-widget.component.scss'
 })
-export class DataTableWidgetComponent {
+export class DataTableWidgetComponent implements OnInit {
   @Input() data!: DataTableData
 
   expandedRows: Set<number> = new Set()
+
+  ngOnInit(): void {
+    // Expand first row by default when accordion is enabled
+    if (this.data.accordion && this.data.rows.length > 0) {
+      this.expandedRows.add(0)
+    }
+  }
 
   getCellClass(column: TableColumn): string {
     return column.align === 'right' ? 'data-table__cell--right' : ''

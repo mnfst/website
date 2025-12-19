@@ -387,6 +387,12 @@ $text-grey: #7e7e7e;
       font-size: 0.875rem;
     }
   }
+
+  &__separator {
+    height: 1px;
+    background: $chatgpt-border;
+    margin: 1rem 0;
+  }
 }
 
 // ChatGPT Input

@@ -31,7 +31,8 @@ export class UseCasesComponent {
         },
         {
           role: 'assistant',
-          content: '',
+          content:
+            'Engineering has the highest attrition with 5 departures under Michael Chen. Sales and Marketing follow with 4 and 3 respectively. Consider scheduling retention interviews with these managers to identify patterns and improve team stability.',
           widget: {
             style: 'hris',
             header: {
