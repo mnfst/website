@@ -8,7 +8,8 @@ import {
   DataGridData,
   ActionButtonsData,
   PipelineData,
-  DealCardsData
+  DealCardsData,
+  FlightCardsData
 } from '../models/widget.models'
 import { StatGridWidgetComponent } from '../stat-grid-widget/stat-grid-widget.component'
 import { BarChartWidgetComponent } from '../bar-chart-widget/bar-chart-widget.component'
@@ -17,6 +18,7 @@ import { DataGridWidgetComponent } from '../data-grid-widget/data-grid-widget.co
 import { ActionButtonsWidgetComponent } from '../action-buttons-widget/action-buttons-widget.component'
 import { PipelineWidgetComponent } from '../pipeline-widget/pipeline-widget.component'
 import { DealCardsWidgetComponent } from '../deal-cards-widget/deal-cards-widget.component'
+import { FlightCardsWidgetComponent } from '../flight-cards-widget/flight-cards-widget.component'
 
 @Component({
   selector: 'app-widget-container',
@@ -29,7 +31,8 @@ import { DealCardsWidgetComponent } from '../deal-cards-widget/deal-cards-widget
     DataGridWidgetComponent,
     ActionButtonsWidgetComponent,
     PipelineWidgetComponent,
-    DealCardsWidgetComponent
+    DealCardsWidgetComponent,
+    FlightCardsWidgetComponent
   ],
   templateUrl: './widget-container.component.html',
   styleUrl: './widget-container.component.scss'
@@ -63,5 +66,9 @@ export class WidgetContainerComponent {
 
   asDealCards(data: unknown): DealCardsData {
     return data as DealCardsData
+  }
+
+  asFlightCards(data: unknown): FlightCardsData {
+    return data as FlightCardsData
   }
 }

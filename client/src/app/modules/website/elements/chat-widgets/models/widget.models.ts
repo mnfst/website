@@ -117,6 +117,26 @@ export interface DealCard {
   health: 'healthy' | 'at-risk' | 'critical'
 }
 
+// Flight Cards Widget (Skyscanner-style flight results)
+export interface FlightCardsData {
+  type: 'flight-cards'
+  flights: FlightCard[]
+}
+
+export interface FlightCard {
+  id: string
+  airline: string
+  airlineLogo: string
+  departureTime: string
+  arrivalTime: string
+  departureCity: string
+  arrivalCity: string
+  duration: string
+  stops: string
+  price: string
+  isBestValue?: boolean
+}
+
 // Union type for all widgets
 export type WidgetData =
   | StatGridData
@@ -126,17 +146,18 @@ export type WidgetData =
   | ActionButtonsData
   | PipelineData
   | DealCardsData
+  | FlightCardsData
 
 // App Bar configuration (displayed above the widget)
 export interface AppBarConfig {
   name: string
-  logo?: 'manifest' | 'sales' | 'custom'
+  logo?: 'manifest' | 'sales' | 'skyscanner' | 'custom'
   customLogoSvg?: string
 }
 
 // Composite widget configuration
 export interface CompositeWidgetConfig {
-  style: 'hris' | 'browser' | 'sales'
+  style: 'hris' | 'browser' | 'sales' | 'skyscanner'
   appBar?: AppBarConfig
   header?: {
     title?: string

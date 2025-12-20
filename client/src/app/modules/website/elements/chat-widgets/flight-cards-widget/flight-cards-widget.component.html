@@ -1,0 +1,52 @@
+<div class="flight-cards">
+  @for (flight of data.flights; track flight.id) {
+  <div class="flight-card" [class.flight-card--best-value]="flight.isBestValue">
+    @if (flight.isBestValue) {
+    <div class="flight-card__badge">Best value</div>
+    }
+
+    <div class="flight-card__content">
+      <!-- Airline info -->
+      <div class="flight-card__airline">
+        <img
+          [src]="flight.airlineLogo"
+          [alt]="flight.airline"
+          class="flight-card__airline-logo"
+        />
+        <span class="flight-card__airline-name">{{ flight.airline }}</span>
+      </div>
+
+      <!-- Flight times and route -->
+      <div class="flight-card__route">
+        <div class="flight-card__time-block">
+          <span class="flight-card__time">{{ flight.departureTime }}</span>
+          <span class="flight-card__city">{{ flight.departureCity }}</span>
+        </div>
+
+        <div class="flight-card__duration-block">
+          <span class="flight-card__duration">{{ flight.duration }}</span>
+          <div class="flight-card__line">
+            <span class="flight-card__dot"></span>
+            <span class="flight-card__connector"></span>
+            <svg class="flight-card__plane" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+          <span class="flight-card__stops">{{ flight.stops }}</span>
+        </div>
+
+        <div class="flight-card__time-block">
+          <span class="flight-card__time">{{ flight.arrivalTime }}</span>
+          <span class="flight-card__city">{{ flight.arrivalCity }}</span>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="flight-card__price-block">
+        <span class="flight-card__price">{{ flight.price }}</span>
+        <button class="flight-card__select-btn">Select</button>
+      </div>
+    </div>
+  </div>
+  }
+</div>

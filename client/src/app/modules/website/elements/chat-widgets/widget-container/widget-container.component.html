@@ -3,15 +3,27 @@
 <div
   class="widget-container__app-bar"
   [class.widget-container__app-bar--sales]="config.appBar.logo === 'sales'"
+  [class.widget-container__app-bar--skyscanner]="config.appBar.logo === 'skyscanner'"
 >
   <div class="widget-container__app-bar-left">
     <div
       class="widget-container__app-logo"
       [class.widget-container__app-logo--sales]="config.appBar.logo === 'sales'"
+      [class.widget-container__app-logo--skyscanner]="config.appBar.logo === 'skyscanner'"
     >
       @if (config.appBar.logo === 'sales') {
       <svg width="16" height="16" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 0C25.3043 4.00466e-07 30.3919 2.10669 34.1426 5.85742C34.8157 6.53058 35.4354 7.24719 36 8H20C16.8174 8 13.7651 9.26421 11.5146 11.5146C9.26421 13.7651 8 16.8174 8 20H20L36.9102 9.31934C38.1656 11.3074 39.0611 13.5027 39.5547 15.8027L32 20H40L39.9941 20.4971C39.8669 25.6213 37.776 30.5092 34.1426 34.1426C30.3919 37.8933 25.3043 40 20 40C14.6957 40 9.60815 37.8933 5.85742 34.1426C5.18426 33.4694 4.56459 32.7528 4 32H20C23.1826 32 26.2349 30.7358 28.4854 28.4854C30.5952 26.3755 31.8383 23.5608 31.9854 20.5947L32 20H20L3.08984 30.6787C1.83452 28.6906 0.941002 26.4951 0.447266 24.1953L8 20H0C8.00931e-07 14.6957 2.1067 9.60815 5.85742 5.85742C9.60815 2.1067 14.6957 -5.79361e-10 20 0Z" fill="currentColor"/>
+      </svg>
+      } @else if (config.appBar.logo === 'skyscanner') {
+      <!-- Skyscanner Logo -->
+      <svg width="18" height="12" viewBox="0 0 78 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M38.7365 48.8699C39.5497 48.8699 40.3242 48.6762 41.0599 48.2503L49.5405 43.371C51.2444 42.4029 53.2193 41.977 55.1942 42.2093C65.4949 43.4098 72.6975 45.346 74.8274 45.9656C75.2533 46.0817 75.7567 45.9268 76.0278 45.5783C76.3763 45.1523 76.8023 44.4553 77.1508 43.4485C77.4606 42.4804 77.4993 41.6672 77.4606 41.0863C77.4219 40.6216 77.1121 40.1957 76.6474 40.0795C73.3171 39.1114 58.5632 35.1228 38.7365 35.1228C18.9098 35.1228 4.15587 39.1114 0.825597 40.0795C0.360908 40.1957 0.0511157 40.6216 0.0123916 41.0863C-0.0263325 41.6285 0.0123928 42.4417 0.322186 43.4485C0.631978 44.4553 1.09667 45.1523 1.44519 45.5783C1.71625 45.9268 2.21967 46.0817 2.64563 45.9656C4.77546 45.346 12.0169 43.4098 22.2788 42.2093C24.2537 41.977 26.2286 42.4029 27.9325 43.371L36.4131 48.2503C37.1488 48.6762 37.962 48.8699 38.7365 48.8699Z" fill="currentColor"/>
+        <path d="M24.6022 21.4145C25.0669 22.2277 25.8026 22.7699 26.6545 23.0022C27.5065 23.2345 28.3971 23.1184 29.2103 22.6537C30.0235 22.189 30.5657 21.4532 30.798 20.6013C31.0304 19.7494 30.9142 18.8587 30.4495 18.0455L22.8209 4.8406C22.5885 4.41463 22.0851 4.25973 21.6204 4.29846C21.0008 4.33718 20.1489 4.64698 19.1421 5.22784C18.1352 5.8087 17.4382 6.38956 17.0897 6.89297C16.8186 7.28021 16.7412 7.78363 16.9735 8.20959L24.6022 21.4145Z" fill="currentColor"/>
+        <path d="M17.6318 30.8631C18.445 31.3278 19.3744 31.4052 20.1876 31.2116C21.0395 30.9792 21.7753 30.4371 22.24 29.6239C22.7047 28.8107 22.7821 27.8813 22.5885 27.0681C22.3949 26.2549 21.814 25.4804 21.0008 25.0157L7.79588 17.3871C7.36991 17.1547 6.8665 17.2322 6.47926 17.5033C5.97585 17.8518 5.39499 18.5488 4.81413 19.5556C4.23326 20.5625 3.92347 21.4144 3.88475 22.034C3.84602 22.5374 4.03964 23.0021 4.42688 23.2344L17.6318 30.8631Z" fill="currentColor"/>
+        <path d="M42.1052 16.7288C42.1052 17.6582 41.7179 18.5101 41.1371 19.1297C40.5175 19.7493 39.7043 20.0978 38.7362 20.0978C37.8068 20.0978 36.9549 19.7106 36.3353 19.1297C35.7157 18.5101 35.3672 17.6969 35.3672 16.7288V1.51024C35.3672 1.00682 35.677 0.619585 36.1417 0.425965C36.6838 0.154896 37.5745 0 38.7362 0C39.8979 0 40.7886 0.154896 41.3307 0.425965C41.7567 0.658309 42.1052 1.00682 42.1052 1.51024V16.7288Z" fill="currentColor"/>
+        <path d="M52.8706 21.4145C52.4059 22.2277 51.6702 22.7699 50.8182 23.0022C49.9663 23.2345 49.0757 23.1184 48.2625 22.6537C47.4492 22.189 46.9071 21.4532 46.6748 20.6013C46.4424 19.7494 46.5586 18.8587 47.0233 18.0455L54.6519 4.8406C54.8843 4.41463 55.3877 4.25973 55.8524 4.29846C56.472 4.33718 57.3239 4.64698 58.3307 5.22784C59.3375 5.8087 60.0346 6.38956 60.3831 6.89297C60.6542 7.28021 60.7316 7.78363 60.4993 8.20959L52.8706 21.4145Z" fill="currentColor"/>
+        <path d="M59.8408 30.8631C59.0276 31.3278 58.0982 31.4052 57.285 31.2116C56.4331 30.9792 55.6973 30.4371 55.2326 29.6239C54.7679 28.8107 54.6905 27.8813 54.8841 27.0681C55.1165 26.2162 55.6586 25.4804 56.4718 25.0157L69.6767 17.3871C70.1027 17.1547 70.6061 17.2322 70.9933 17.5033C71.4968 17.8518 72.0776 18.5488 72.6585 19.5556C73.2394 20.5625 73.5491 21.4144 73.5879 22.034C73.6266 22.5374 73.433 23.0021 73.0457 23.2344L59.8408 30.8631Z" fill="currentColor"/>
       </svg>
       } @else {
       <svg
@@ -69,7 +81,27 @@
 </div>
 }
 
-@if (config.style === 'sales') {
+@if (config.style === 'skyscanner') {
+<!-- Skyscanner-style widget (LIGHT THEME) -->
+<div class="widget-container widget-container--skyscanner">
+  <!-- Skyscanner header -->
+  <div class="widget-container__skyscanner-header">
+    <div class="widget-container__skyscanner-header-left">
+      @if (config.header?.title) {
+      <h3 class="widget-container__skyscanner-title">{{ config.header.title }}</h3>
+      }
+      @if (config.header?.subtitle) {
+      <span class="widget-container__skyscanner-subtitle">{{ config.header.subtitle }}</span>
+      }
+    </div>
+  </div>
+
+  <!-- Skyscanner body -->
+  <div class="widget-container__skyscanner-body">
+    <ng-container *ngTemplateOutlet="widgetSectionsSkyscanner"></ng-container>
+  </div>
+</div>
+} @else if (config.style === 'sales') {
 <!-- Sales-style widget (LIGHT THEME) -->
 <div class="widget-container widget-container--sales">
   <!-- Sales header -->
@@ -208,6 +240,26 @@
       }
       @case ('deal-cards') {
         <app-deal-cards-widget [data]="asDealCards(section)" [theme]="'light'"></app-deal-cards-widget>
+      }
+      @case ('flight-cards') {
+        <app-flight-cards-widget [data]="asFlightCards(section)" [theme]="'light'"></app-flight-cards-widget>
+      }
+    }
+  }
+</ng-template>
+
+<!-- Widget Sections Template (Skyscanner theme) -->
+<ng-template #widgetSectionsSkyscanner>
+  @for (section of config.sections; track $index) {
+    @switch (section.type) {
+      @case ('flight-cards') {
+        <app-flight-cards-widget [data]="asFlightCards(section)" [theme]="'light'"></app-flight-cards-widget>
+      }
+      @case ('stat-grid') {
+        <app-stat-grid-widget [data]="asStatGrid(section)" [theme]="'light'"></app-stat-grid-widget>
+      }
+      @case ('action-buttons') {
+        <app-action-buttons-widget [data]="asActionButtons(section)" [theme]="'light'"></app-action-buttons-widget>
       }
     }
   }
