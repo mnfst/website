@@ -1,0 +1,112 @@
+<div class="deployment-timeline" [class.deployment-timeline--dark]="theme === 'dark'">
+  @for (deployment of data.deployments; track deployment.id) {
+  <div
+    class="deployment-timeline__item"
+    [class.deployment-timeline__item--expanded]="isExpanded(deployment.id)"
+    [class.deployment-timeline__item--has-errors]="deployment.errorCount > 0"
+  >
+    <!-- Deployment Header (always visible) -->
+    <div
+      class="deployment-timeline__header"
+      (click)="deployment.errors?.length ? toggleDeployment(deployment.id) : null"
+      [class.deployment-timeline__header--clickable]="deployment.errors?.length"
+    >
+      <!-- Status indicator on timeline -->
+      <div class="deployment-timeline__indicator">
+        <div
+          class="deployment-timeline__status-dot"
+          [ngClass]="getStatusClass(deployment.status)"
+        >
+          <span class="deployment-timeline__status-icon">{{ getStatusIcon(deployment.status) }}</span>
+        </div>
+        <div class="deployment-timeline__line"></div>
+      </div>
+
+      <!-- Deployment info -->
+      <div class="deployment-timeline__info">
+        <div class="deployment-timeline__main-row">
+          <div class="deployment-timeline__version-group">
+            <span class="deployment-timeline__version">{{ deployment.version }}</span>
+            @if (deployment.commit) {
+            <span class="deployment-timeline__commit">{{ deployment.commit }}</span>
+            }
+          </div>
+          <span class="deployment-timeline__time">{{ deployment.timestamp }}</span>
+        </div>
+
+        <!-- Stats row -->
+        <div class="deployment-timeline__stats">
+          @if (deployment.errorCount > 0) {
+          <span class="deployment-timeline__stat deployment-timeline__stat--error">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+            {{ deployment.errorCount }} {{ deployment.errorCount === 1 ? 'error' : 'errors' }}
+          </span>
+          }
+          @if (deployment.warningCount && deployment.warningCount > 0) {
+          <span class="deployment-timeline__stat deployment-timeline__stat--warning">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+            </svg>
+            {{ deployment.warningCount }} {{ deployment.warningCount === 1 ? 'warning' : 'warnings' }}
+          </span>
+          }
+          @if (deployment.usersImpacted && deployment.usersImpacted > 0) {
+          <span class="deployment-timeline__stat deployment-timeline__stat--users">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+            {{ deployment.usersImpacted }} users
+          </span>
+          }
+          @if (deployment.environment) {
+          <span class="deployment-timeline__env">{{ deployment.environment }}</span>
+          }
+        </div>
+      </div>
+
+      <!-- Expand arrow -->
+      @if (deployment.errors?.length) {
+      <div class="deployment-timeline__expand">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          [class.deployment-timeline__expand--open]="isExpanded(deployment.id)"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </div>
+      }
+    </div>
+
+    <!-- Error details (expandable) -->
+    @if (isExpanded(deployment.id) && deployment.errors?.length) {
+    <div class="deployment-timeline__errors">
+      @for (error of deployment.errors; track error.id) {
+      <div
+        class="deployment-timeline__error"
+        [ngClass]="getSeverityClass(error.severity)"
+      >
+        <div class="deployment-timeline__error-header">
+          <span class="deployment-timeline__error-type">{{ error.type }}</span>
+          <span class="deployment-timeline__error-count">{{ error.count }}×</span>
+        </div>
+        <div class="deployment-timeline__error-message">{{ error.message }}</div>
+        <div class="deployment-timeline__error-meta">
+          @if (error.affectedEndpoint) {
+          <span class="deployment-timeline__error-endpoint">{{ error.affectedEndpoint }}</span>
+          }
+          <span class="deployment-timeline__error-time">First seen: {{ error.firstSeen }}</span>
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+  }
+</div>

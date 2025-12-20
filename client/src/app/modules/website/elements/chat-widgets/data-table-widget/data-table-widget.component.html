@@ -1,0 +1,76 @@
+<div class="data-table" [class.data-table--accordion]="data.accordion">
+  <div class="data-table__header">
+    @for (column of data.columns; track column.key) {
+      <span [class]="getCellClass(column)">{{ column.label }}</span>
+    }
+  </div>
+  @for (row of data.rows; track $index) {
+    <div class="data-table__row-wrapper">
+      <div
+        class="data-table__row"
+        [class.data-table__row--expandable]="data.accordion && hasDetails(row)"
+        [class.data-table__row--expanded]="isExpanded($index)"
+        (click)="data.accordion && hasDetails(row) ? toggleRow($index) : null"
+      >
+        @for (column of data.columns; track column.key; let first = $first) {
+          <span [class]="getCellClass(column)">
+            @if (first && data.accordion && hasDetails(row)) {
+              <svg
+                class="data-table__chevron"
+                [class.data-table__chevron--expanded]="isExpanded($index)"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            }
+            @if (getCell(row, column.key)?.type === 'badge') {
+              <span [class]="getBadgeClass(getCell(row, column.key)!)">{{
+                getCell(row, column.key)?.value
+              }}</span>
+            } @else {
+              {{ getCell(row, column.key)?.value }}
+            }
+          </span>
+        }
+      </div>
+      <div
+        class="data-table__details"
+        [class.data-table__details--open]="data.accordion && isExpanded($index) && hasDetails(row)"
+      >
+        <div class="data-table__details-inner">
+          <div class="data-table__details-header">
+            <span class="data-table__details-title">Departed employees</span>
+          </div>
+          @for (detail of getDetails(row); track detail.name) {
+            <div class="data-table__detail-row">
+              <div class="data-table__detail-info">
+                <svg class="data-table__detail-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span class="data-table__detail-name">{{ detail.name }}</span>
+              </div>
+              <span class="data-table__detail-role">{{ detail.role }}</span>
+              <span class="data-table__detail-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                {{ detail.date }}
+              </span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

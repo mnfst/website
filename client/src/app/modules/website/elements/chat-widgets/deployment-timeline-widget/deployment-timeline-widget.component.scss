@@ -1,0 +1,339 @@
+.deployment-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0.5rem 0;
+
+  &__item {
+    position: relative;
+
+    &--has-errors {
+      .deployment-timeline__header {
+        &:hover {
+          background: rgba(0, 0, 0, 0.02);
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    transition: background 0.15s ease;
+
+    &--clickable {
+      cursor: pointer;
+    }
+  }
+
+  &__indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    flex-shrink: 0;
+  }
+
+  &__status-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    z-index: 1;
+
+    &--success {
+      background: #22c55e;
+    }
+
+    &--failed {
+      background: #ef4444;
+    }
+
+    &--rolling-back {
+      background: #f59e0b;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+  }
+
+  &__status-icon {
+    line-height: 1;
+  }
+
+  &__line {
+    width: 2px;
+    flex: 1;
+    min-height: 20px;
+    background: #e5e7eb;
+    margin-top: 4px;
+  }
+
+  &__item:last-child &__line {
+    display: none;
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__main-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__version-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  &__version {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: #1f2937;
+  }
+
+  &__commit {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    font-size: 0.6875rem;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+  }
+
+  &__time {
+    font-size: 0.6875rem;
+    color: #9ca3af;
+    white-space: nowrap;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6875rem;
+    font-weight: 500;
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &--error {
+      color: #ef4444;
+    }
+
+    &--warning {
+      color: #f59e0b;
+    }
+
+    &--users {
+      color: #6b7280;
+    }
+  }
+
+  &__env {
+    font-size: 0.625rem;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  &__expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #9ca3af;
+    transition: transform 0.2s ease;
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &--open svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Error details section
+  &__errors {
+    margin-left: 36px;
+    padding: 0.5rem 0 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__error {
+    background: #fef2f2;
+    border-left: 3px solid #ef4444;
+    border-radius: 0 6px 6px 0;
+    padding: 0.625rem 0.75rem;
+
+    &--critical {
+      background: #fef2f2;
+      border-left-color: #ef4444;
+    }
+
+    &--warning {
+      background: #fffbeb;
+      border-left-color: #f59e0b;
+    }
+
+    &--info {
+      background: #eff6ff;
+      border-left-color: #3b82f6;
+    }
+  }
+
+  &__error-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+  }
+
+  &__error-type {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #991b1b;
+
+    .deployment-timeline__error--warning & {
+      color: #92400e;
+    }
+
+    .deployment-timeline__error--info & {
+      color: #1e40af;
+    }
+  }
+
+  &__error-count {
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+
+    .deployment-timeline__error--warning & {
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+    }
+
+    .deployment-timeline__error--info & {
+      color: #3b82f6;
+      background: rgba(59, 130, 246, 0.1);
+    }
+  }
+
+  &__error-message {
+    font-size: 0.75rem;
+    color: #374151;
+    line-height: 1.4;
+    margin-bottom: 0.375rem;
+  }
+
+  &__error-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.625rem;
+    color: #6b7280;
+  }
+
+  &__error-endpoint {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+  }
+
+  // Dark theme
+  &--dark {
+    .deployment-timeline__version {
+      color: #f9fafb;
+    }
+
+    .deployment-timeline__commit {
+      background: rgba(255, 255, 255, 0.1);
+      color: #9ca3af;
+    }
+
+    .deployment-timeline__time {
+      color: #6b7280;
+    }
+
+    .deployment-timeline__line {
+      background: #374151;
+    }
+
+    .deployment-timeline__env {
+      background: rgba(255, 255, 255, 0.1);
+      color: #9ca3af;
+    }
+
+    .deployment-timeline__item--has-errors .deployment-timeline__header:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .deployment-timeline__error {
+      &--critical {
+        background: rgba(239, 68, 68, 0.1);
+      }
+
+      &--warning {
+        background: rgba(245, 158, 11, 0.1);
+      }
+
+      &--info {
+        background: rgba(59, 130, 246, 0.1);
+      }
+    }
+
+    .deployment-timeline__error-message {
+      color: #e5e7eb;
+    }
+
+    .deployment-timeline__error-meta {
+      color: #9ca3af;
+    }
+
+    .deployment-timeline__error-endpoint {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}

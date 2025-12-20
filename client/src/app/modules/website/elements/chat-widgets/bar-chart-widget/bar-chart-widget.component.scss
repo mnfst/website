@@ -1,0 +1,153 @@
+@use '../styles/widget-theme' as theme;
+
+// Marketing theme colors (orange accent)
+$marketing-orange: #ff7a59;
+$marketing-orange-light: #ff8f73;
+$marketing-navy: #2d3e50;
+$marketing-gray: #516f90;
+$marketing-light-gray: #cbd6e2;
+$marketing-bg: #f5f8fa;
+
+.bar-chart {
+  margin-bottom: 1.5rem;
+
+  &__title {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: theme.$widget-text-dimmer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.875rem;
+    padding-top: 1rem;
+  }
+
+  &__subtitle {
+    font-size: 0.75rem;
+    color: theme.$widget-text-dim;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+  }
+
+  &__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 70px 1fr 30px;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__name {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+  }
+
+  &__bar-wrap {
+    height: 8px;
+    background: theme.$widget-border;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__bar {
+    height: 100%;
+    background: theme.$chart-bar-default;
+    border-radius: 4px;
+    transition: width 0.5s ease-out;
+
+    &--warning {
+      background: theme.$chart-bar-warning;
+    }
+
+    &--danger {
+      background: theme.$chart-bar-danger;
+    }
+
+    &--marketing {
+      background: linear-gradient(
+        90deg,
+        $marketing-orange 0%,
+        $marketing-orange-light 100%
+      );
+    }
+  }
+
+  &__val {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: theme.$widget-text;
+    text-align: right;
+  }
+
+  // Marketing theme modifier
+  &--marketing {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid $marketing-light-gray;
+
+    .bar-chart__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $marketing-navy;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+    }
+
+    .bar-chart__subtitle {
+      font-size: 0.8125rem;
+      color: $marketing-gray;
+      margin-bottom: 1.25rem;
+      margin-top: 0;
+    }
+
+    .bar-chart__bars {
+      gap: 0.875rem;
+    }
+
+    .bar-chart__row {
+      grid-template-columns: 110px 1fr 50px;
+      gap: 1rem;
+    }
+
+    .bar-chart__name {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $marketing-navy;
+    }
+
+    .bar-chart__bar-wrap {
+      height: 24px;
+      background: $marketing-bg;
+      border-radius: 4px;
+    }
+
+    .bar-chart__bar {
+      border-radius: 4px;
+    }
+
+    .bar-chart__val {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: $marketing-navy;
+    }
+
+    .bar-chart__footer {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid $marketing-light-gray;
+    }
+
+    .bar-chart__footer-text {
+      font-size: 0.75rem;
+      color: $marketing-gray;
+      font-style: italic;
+    }
+  }
+}

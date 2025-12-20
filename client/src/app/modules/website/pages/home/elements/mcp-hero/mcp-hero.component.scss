@@ -2,11 +2,8 @@
 
 .hero-mcp {
   padding: 0;
-  background: #f8f9fa;
-  border-top: 1px solid #dadadb;
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - 359px);
 
   &__visual {
     position: relative;
@@ -89,6 +86,26 @@
       padding-right: 1rem;
       margin-bottom: 2rem;
     }
+
+    .title.is-1 {
+      font-size: 4.768rem; // Major Third scale
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+
+      @media (max-width: 768px) {
+        font-size: 3.052rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem; // Major Third scale
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   &__description {
@@ -148,15 +165,6 @@
     img {
       height: 24px;
       width: auto;
-      opacity: 0.6;
-      filter: grayscale(100%);
-      transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-        filter: grayscale(0%);
-        transform: scale(1.1);
-      }
 
       @media (max-width: 768px) {
         height: 20px;
@@ -430,6 +438,12 @@
 .is-flex-direction-column-mobile {
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+}
+
+.subtitle__wrapper {
+  @media (min-width: 768px) {
+    padding-right: 10rem;
   }
 }
 

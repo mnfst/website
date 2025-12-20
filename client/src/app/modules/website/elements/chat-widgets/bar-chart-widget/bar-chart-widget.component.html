@@ -1,0 +1,27 @@
+<div [class]="getChartClass()">
+  @if (data.title) {
+    <div class="bar-chart__title">{{ data.title }}</div>
+  }
+  @if (data.subtitle) {
+    <div class="bar-chart__subtitle">{{ data.subtitle }}</div>
+  }
+  <div class="bar-chart__bars">
+    @for (bar of data.bars; track bar.name) {
+      <div class="bar-chart__row">
+        <span class="bar-chart__name">{{ bar.name }}</span>
+        <div class="bar-chart__bar-wrap">
+          <div
+            [class]="getBarClass(bar)"
+            [style.width.%]="getBarWidth(bar)"
+          ></div>
+        </div>
+        <span class="bar-chart__val">{{ formatValue(bar.value) }}</span>
+      </div>
+    }
+  </div>
+  @if (data.theme === 'marketing' && data.subtitle) {
+    <div class="bar-chart__footer">
+      <span class="bar-chart__footer-text">Data synced from CMS + Marketing Automation</span>
+    </div>
+  }
+</div>

@@ -1,0 +1,33 @@
+@use '../styles/widget-theme' as theme;
+
+.data-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    padding: 0.875rem 1rem;
+    background: theme.$widget-card-bg;
+    border-radius: theme.$radius-md;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    &:hover {
+      background: theme.$widget-card-bg-hover;
+    }
+  }
+
+  &__label {
+    font-size: 0.8125rem;
+    color: theme.$widget-text-dim;
+  }
+
+  &__value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: theme.$widget-text;
+    text-align: right;
+  }
+}

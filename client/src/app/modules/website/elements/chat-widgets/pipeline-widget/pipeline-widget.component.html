@@ -1,0 +1,26 @@
+<div class="pipeline">
+  <div class="pipeline__track">
+    @for (stage of data.stages; track stage.id; let last = $last) {
+      <div
+        class="pipeline__stage"
+        [class.pipeline__stage--active]="isActive(stage.id)"
+        [class.pipeline__stage--success]="stage.variant === 'success'"
+        [class.pipeline__stage--warning]="stage.variant === 'warning'"
+        [class.pipeline__stage--danger]="stage.variant === 'danger'"
+      >
+        <div class="pipeline__stage-header">
+          <span class="pipeline__stage-label">{{ stage.label }}</span>
+          <span class="pipeline__stage-count">{{ stage.count }}</span>
+        </div>
+        <div class="pipeline__stage-value">{{ stage.value }}</div>
+      </div>
+      @if (!last) {
+        <div class="pipeline__connector">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </div>
+      }
+    }
+  </div>
+</div>

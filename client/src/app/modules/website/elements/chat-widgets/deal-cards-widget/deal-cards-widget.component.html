@@ -1,0 +1,68 @@
+<div class="deal-cards">
+  @for (deal of data.deals; track deal.id) {
+  <div class="deal-card">
+    <!-- Top row: company, value, health -->
+    <div class="deal-card__header">
+      <div class="deal-card__company">
+        <svg
+          class="deal-card__icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span class="deal-card__name">{{ deal.company }}</span>
+      </div>
+      <div class="deal-card__value">{{ deal.value }}</div>
+      <span [class]="getHealthClass(deal.health)">
+        <span class="deal-card__health-dot"></span>
+        {{ getHealthLabel(deal.health) }}
+      </span>
+    </div>
+
+    <!-- Bottom row: details and next step -->
+    <div class="deal-card__footer">
+      <div class="deal-card__details">
+        <div class="deal-card__detail">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          <span>{{ deal.daysInStage }}d in {{ deal.stage }}</span>
+        </div>
+        <div class="deal-card__detail">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>{{ deal.owner }}</span>
+        </div>
+      </div>
+      <div class="deal-card__next-step">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+        <span>{{ deal.nextStep }}</span>
+      </div>
+    </div>
+  </div>
+  }
+</div>

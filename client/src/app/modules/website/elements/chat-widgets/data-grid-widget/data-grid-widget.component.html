@@ -1,0 +1,10 @@
+<div class="data-grid">
+  @for (row of data.rows; track row.label) {
+    <div class="data-grid__row">
+      <span class="data-grid__label">{{ row.label }}</span>
+      <span class="data-grid__value" [style.color]="row.color">{{
+        row.value
+      }}</span>
+    </div>
+  }
+</div>
