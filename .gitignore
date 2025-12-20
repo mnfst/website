@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 # Docs (compiled)
 client/public/docs
+docs/content
