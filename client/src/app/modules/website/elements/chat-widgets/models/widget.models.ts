@@ -203,7 +203,7 @@ export type WidgetData =
 // App Bar configuration (displayed above the widget)
 export interface AppBarConfig {
   name: string
-  logo?: 'manifest' | 'sales' | 'skyscanner' | 'marketing' | 'devops' | 'custom'
+  logo?: 'manifest' | 'sales' | 'skyscanner' | 'marketing' | 'devops' | 'support' | 'custom'
   customLogoSvg?: string
 }
 

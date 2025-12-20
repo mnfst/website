@@ -566,14 +566,14 @@ export class UseCasesComponent {
     },
     {
       id: 'support',
-      label: 'Customer Support',
+      label: 'Support',
       icon: '🎧',
       excerpt: 'Resolve tickets, process refunds, and delight customers.',
       messages: [
         {
           role: 'user',
           content:
-            'Customer says they were charged twice for their subscription. Account ID: 8847'
+            'Using the ticketing system, show average first-response time and resolution time by support agent for the last month.'
         },
         {
           role: 'assistant',

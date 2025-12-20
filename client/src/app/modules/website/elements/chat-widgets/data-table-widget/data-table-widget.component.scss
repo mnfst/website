@@ -7,10 +7,9 @@
   border: 1px solid theme.$widget-border-light;
 
   &__header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 80px;
+    display: flex;
     gap: 0.75rem;
-    padding: 0.625rem 1rem;
+    padding: 0.5rem 1rem;
     background: rgba(255, 255, 255, 0.03);
     border-bottom: 1px solid theme.$widget-border-light;
     font-size: 0.6875rem;
@@ -18,6 +17,16 @@
     color: theme.$widget-text-dimmer;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    align-items: center;
+
+    > span {
+      flex: 1;
+
+      &:last-child {
+        flex: 0 0 60px;
+        text-align: right;
+      }
+    }
   }
 
   &__row-wrapper {
@@ -29,11 +38,11 @@
   }
 
   &__row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 80px;
+    display: flex;
     gap: 0.75rem;
-    padding: 0.625rem 1rem;
+    padding: 0.4rem 1rem;
     transition: background 0.15s ease;
+    align-items: center;
 
     &:hover {
       background: theme.$widget-card-bg;
@@ -51,15 +60,17 @@
       background: rgba(255, 255, 255, 0.04);
     }
 
-    span {
+    > span {
+      flex: 1;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
       color: theme.$widget-text;
 
-      &:nth-child(2) {
-        color: rgba(255, 255, 255, 0.6);
+      &:last-child {
+        flex: 0 0 60px;
+        justify-content: flex-end;
       }
     }
   }
