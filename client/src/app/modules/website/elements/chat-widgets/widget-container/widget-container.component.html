@@ -5,6 +5,7 @@
   [class.widget-container__app-bar--sales]="config.appBar.logo === 'sales'"
   [class.widget-container__app-bar--skyscanner]="config.appBar.logo === 'skyscanner'"
   [class.widget-container__app-bar--marketing]="config.appBar.logo === 'marketing'"
+  [class.widget-container__app-bar--devops]="config.appBar.logo === 'devops'"
 >
   <div class="widget-container__app-bar-left">
     <div
@@ -12,8 +13,15 @@
       [class.widget-container__app-logo--sales]="config.appBar.logo === 'sales'"
       [class.widget-container__app-logo--skyscanner]="config.appBar.logo === 'skyscanner'"
       [class.widget-container__app-logo--marketing]="config.appBar.logo === 'marketing'"
+      [class.widget-container__app-logo--devops]="config.appBar.logo === 'devops'"
     >
-      @if (config.appBar.logo === 'marketing') {
+      @if (config.appBar.logo === 'devops') {
+      <!-- SafeStack logo (logoipsum-413) -->
+      <svg width="16" height="10" viewBox="0 0 62 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 10H42C47.5228 10 52 14.4772 52 20C52 25.5228 47.5228 30 42 30H36V28H42C46.4183 28 50 24.4183 50 20C50 15.5817 46.4183 12 42 12H32V22H42C43.1046 22 44 21.1046 44 20C44 18.8954 43.1046 18 42 18H36V16H42C44.2091 16 46 17.7909 46 20C46 22.2091 44.2091 24 42 24H32V34H42C49.732 34 56 27.732 56 20C56 12.268 49.732 6 42 6H36V4H42C50.8366 4 58 11.1634 58 20C58 28.8366 50.8366 36 42 36H32V40H42C53.0457 40 62 31.0457 62 20C62 8.95431 53.0457 0 42 0H32V10Z"/>
+        <path d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40H30V30H20C14.4772 30 10 25.5228 10 20C10 14.4772 14.4772 10 20 10H26V12H20C15.5817 12 12 15.5817 12 20C12 24.4183 15.5817 28 20 28H30V18H20C18.8954 18 18 18.8954 18 20C18 21.1046 18.8954 22 20 22H26V24H20C17.7909 24 16 22.2091 16 20C16 17.7909 17.7909 16 20 16H30V6H20C12.268 6 6 12.268 6 20C6 27.732 12.268 34 20 34H26V36H20C11.1634 36 4 28.8366 4 20C4 11.1634 11.1634 4 20 4H30V0H20Z"/>
+      </svg>
+      } @else if (config.appBar.logo === 'marketing') {
       <!-- DataSync Logo (chart/bars icon) -->
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 13h4v8H3v-8zm7-10h4v18h-4V3zm7 6h4v12h-4V9z"/>
@@ -154,6 +162,34 @@
   <!-- Sales body -->
   <div class="widget-container__sales-body">
     <ng-container *ngTemplateOutlet="widgetSectionsSales"></ng-container>
+  </div>
+</div>
+} @else if (config.style === 'devops') {
+<!-- DevOps-style widget (LIGHT THEME - Bugsnag-like) -->
+<div class="widget-container widget-container--devops">
+  <!-- DevOps header -->
+  <div class="widget-container__devops-header">
+    <div class="widget-container__devops-header-left">
+      @if (config.header?.title) {
+      <h3 class="widget-container__devops-title">{{ config.header.title }}</h3>
+      }
+      @if (config.header?.subtitle) {
+      <span class="widget-container__devops-subtitle">{{ config.header.subtitle }}</span>
+      }
+    </div>
+    <div class="widget-container__devops-header-right">
+      @if (config.header?.badge) {
+      <div class="widget-container__devops-badge" [class.widget-container__devops-badge--live]="config.header.badge.type === 'live'">
+        <span class="widget-container__devops-badge-dot"></span>
+        <span>{{ config.header.badge.label }}</span>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- DevOps body -->
+  <div class="widget-container__devops-body">
+    <ng-container *ngTemplateOutlet="widgetSectionsDevops"></ng-container>
   </div>
 </div>
 } @else if (config.style === 'browser') {
@@ -301,6 +337,29 @@
       }
       @case ('stat-grid') {
         <app-stat-grid-widget [data]="asStatGrid(section)" [theme]="'light'"></app-stat-grid-widget>
+      }
+      @case ('data-table') {
+        <app-data-table-widget [data]="asDataTable(section)" [theme]="'light'"></app-data-table-widget>
+      }
+      @case ('action-buttons') {
+        <app-action-buttons-widget [data]="asActionButtons(section)" [theme]="'light'"></app-action-buttons-widget>
+      }
+    }
+  }
+</ng-template>
+
+<!-- Widget Sections Template (DevOps theme - Bugsnag-like) -->
+<ng-template #widgetSectionsDevops>
+  @for (section of config.sections; track $index) {
+    @switch (section.type) {
+      @case ('deployment-timeline') {
+        <app-deployment-timeline-widget [data]="asDeploymentTimeline(section)" [theme]="'light'"></app-deployment-timeline-widget>
+      }
+      @case ('stat-grid') {
+        <app-stat-grid-widget [data]="asStatGrid(section)" [theme]="'light'"></app-stat-grid-widget>
+      }
+      @case ('bar-chart') {
+        <app-bar-chart-widget [data]="asBarChart(section)" [theme]="'light'"></app-bar-chart-widget>
       }
       @case ('data-table') {
         <app-data-table-widget [data]="asDataTable(section)" [theme]="'light'"></app-data-table-widget>

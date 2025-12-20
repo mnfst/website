@@ -9,7 +9,8 @@ import {
   ActionButtonsData,
   PipelineData,
   DealCardsData,
-  FlightCardsData
+  FlightCardsData,
+  DeploymentTimelineData
 } from '../models/widget.models'
 import { StatGridWidgetComponent } from '../stat-grid-widget/stat-grid-widget.component'
 import { BarChartWidgetComponent } from '../bar-chart-widget/bar-chart-widget.component'
@@ -19,6 +20,7 @@ import { ActionButtonsWidgetComponent } from '../action-buttons-widget/action-bu
 import { PipelineWidgetComponent } from '../pipeline-widget/pipeline-widget.component'
 import { DealCardsWidgetComponent } from '../deal-cards-widget/deal-cards-widget.component'
 import { FlightCardsWidgetComponent } from '../flight-cards-widget/flight-cards-widget.component'
+import { DeploymentTimelineWidgetComponent } from '../deployment-timeline-widget/deployment-timeline-widget.component'
 
 @Component({
   selector: 'app-widget-container',
@@ -32,7 +34,8 @@ import { FlightCardsWidgetComponent } from '../flight-cards-widget/flight-cards-
     ActionButtonsWidgetComponent,
     PipelineWidgetComponent,
     DealCardsWidgetComponent,
-    FlightCardsWidgetComponent
+    FlightCardsWidgetComponent,
+    DeploymentTimelineWidgetComponent
   ],
   templateUrl: './widget-container.component.html',
   styleUrl: './widget-container.component.scss'
@@ -70,5 +73,9 @@ export class WidgetContainerComponent {
 
   asFlightCards(data: unknown): FlightCardsData {
     return data as FlightCardsData
+  }
+
+  asDeploymentTimeline(data: unknown): DeploymentTimelineData {
+    return data as DeploymentTimelineData
   }
 }

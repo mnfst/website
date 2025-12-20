@@ -452,57 +452,115 @@ export class UseCasesComponent {
       ]
     },
     {
-      id: 'operations',
-      label: 'Operations & Logistics',
-      icon: '⚙️',
-      excerpt: 'Manage shipments, inventory, and supply chain issues.',
-      messages: [
-        {
-          role: 'user',
-          content:
-            'We have a shipment delay from Shanghai. What orders are affected?'
-        },
-        {
-          role: 'assistant',
-          content:
-            "I found 23 orders affected by the Shanghai delay (container MSKU-4829371). Here's the breakdown:\n\n• 8 orders due this week - customers need notification\n• 12 orders due next week - can be rerouted via Hong Kong (+2 days)\n• 3 large orders - recommend air freight option\n\nWant me to draft customer notifications and calculate the air freight costs?"
-        },
-        {
-          role: 'user',
-          content:
-            'Yes, notify customers and get air freight quotes for the 3 large orders'
-        },
-        {
-          role: 'assistant',
-          content:
-            "I've queued personalized delay notifications for all 23 customers with updated ETAs. For the 3 large orders:\n\n• Order #4521 (MegaCorp): Air freight $1,240 vs $180 sea - saves 8 days\n• Order #4533 (RetailMax): Air freight $890 vs $95 sea - saves 8 days\n• Order #4540 (TechHub): Air freight $1,680 vs $210 sea - saves 8 days\n\nApprove air freight for any of these?"
-        }
-      ]
-    },
-    {
       id: 'engineering',
       label: 'Engineering & DevOps',
       icon: '🛠️',
-      excerpt: 'Debug issues, trigger rollbacks, and manage incidents.',
+      excerpt:
+        'Understand what changed, link deployments to errors, and debug faster.',
       messages: [
         {
           role: 'user',
           content:
-            "There's a spike in error rates on the payment service. What's happening?"
+            "Show recent deployments and the errors that appeared after each. I'm looking for the last 2 days."
         },
         {
           role: 'assistant',
           content:
-            "I'm seeing a 340% increase in 500 errors on /api/payments since 2:34 PM. Root cause analysis:\n\n• Error pattern: TimeoutException from Stripe webhook handler\n• Affected: 12% of checkout attempts\n• Started after deploy #4521 (payment-service v2.3.1)\n\nThe issue appears to be a missing retry mechanism in the new webhook handler. Want me to trigger a rollback to v2.3.0?"
-        },
-        {
-          role: 'user',
-          content: 'Yes, rollback and notify the team'
-        },
-        {
-          role: 'assistant',
-          content:
-            "Rollback initiated to payment-service v2.3.0. Status:\n\n✅ Rollback complete (took 47 seconds)\n✅ Error rates returning to baseline\n✅ Slack notification sent to #engineering\n✅ Incident ticket INC-2341 created\n\nI've tagged the v2.3.1 release with needs-fix and assigned it to the payments team. Anything else you need?"
+            'Here are your deployments from the last 2 days. I found 2 releases with errors — the latest deploy (v2.3.1) is causing a 340% spike compared to the previous release.',
+          widget: {
+            style: 'devops',
+            appBar: {
+              name: 'SafeStack',
+              logo: 'devops'
+            },
+            header: {
+              title: 'Recent Deployments',
+              subtitle: 'Last 2 days',
+              badge: { label: '2 services with errors', type: 'api' }
+            },
+            sections: [
+              {
+                type: 'deployment-timeline',
+                deployments: [
+                  {
+                    id: 'deploy-1',
+                    version: 'payment-service v2.3.1',
+                    commit: 'a3f7c21',
+                    timestamp: 'Today, 2:34 PM',
+                    status: 'failed',
+                    environment: 'prod',
+                    errorCount: 127,
+                    warningCount: 3,
+                    usersImpacted: 842,
+                    errors: [
+                      {
+                        id: 'err-1',
+                        message:
+                          'TimeoutException: Stripe webhook handler exceeded 30s timeout',
+                        type: 'TimeoutException',
+                        count: 98,
+                        severity: 'critical',
+                        firstSeen: '2:36 PM',
+                        affectedEndpoint: '/api/payments/webhook'
+                      },
+                      {
+                        id: 'err-2',
+                        message:
+                          'NullReferenceException: Customer object was null during checkout',
+                        type: 'NullReferenceException',
+                        count: 29,
+                        severity: 'critical',
+                        firstSeen: '2:41 PM',
+                        affectedEndpoint: '/api/checkout'
+                      }
+                    ]
+                  },
+                  {
+                    id: 'deploy-2',
+                    version: 'api-gateway v1.8.0',
+                    commit: 'b2e9d45',
+                    timestamp: 'Today, 10:15 AM',
+                    status: 'success',
+                    environment: 'prod',
+                    errorCount: 0,
+                    warningCount: 1
+                  },
+                  {
+                    id: 'deploy-3',
+                    version: 'user-service v3.1.2',
+                    commit: 'c8f2a67',
+                    timestamp: 'Yesterday, 4:22 PM',
+                    status: 'success',
+                    environment: 'prod',
+                    errorCount: 2,
+                    usersImpacted: 15,
+                    errors: [
+                      {
+                        id: 'err-3',
+                        message:
+                          'DatabaseConnectionError: Connection pool exhausted',
+                        type: 'DatabaseConnectionError',
+                        count: 1,
+                        severity: 'critical',
+                        firstSeen: '4:45 PM',
+                        affectedEndpoint: '/api/users/profile'
+                      },
+                      {
+                        id: 'err-4',
+                        message:
+                          'AuthTokenExpired: JWT validation failed for refresh token',
+                        type: 'AuthTokenExpired',
+                        count: 1,
+                        severity: 'critical',
+                        firstSeen: '4:52 PM',
+                        affectedEndpoint: '/api/auth/refresh'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         }
       ]
     },

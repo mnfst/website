@@ -11,3 +11,4 @@ export { DataGridWidgetComponent } from './data-grid-widget/data-grid-widget.com
 export { ActionButtonsWidgetComponent } from './action-buttons-widget/action-buttons-widget.component'
 export { PipelineWidgetComponent } from './pipeline-widget/pipeline-widget.component'
 export { DealCardsWidgetComponent } from './deal-cards-widget/deal-cards-widget.component'
+export { DeploymentTimelineWidgetComponent } from './deployment-timeline-widget/deployment-timeline-widget.component'

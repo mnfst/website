@@ -158,6 +158,36 @@ export interface FlightCard {
   stopCity?: string
 }
 
+// Deployment Timeline Widget (Bugsnag-style)
+export interface DeploymentTimelineData {
+  type: 'deployment-timeline'
+  deployments: DeploymentItem[]
+}
+
+export interface DeploymentItem {
+  id: string
+  version: string
+  commit?: string
+  timestamp: string
+  status: 'success' | 'failed' | 'rolling-back'
+  environment?: string
+  errorCount: number
+  warningCount?: number
+  usersImpacted?: number
+  errors?: DeploymentError[]
+}
+
+export interface DeploymentError {
+  id: string
+  message: string
+  type: string
+  count: number
+  severity: 'critical' | 'warning' | 'info'
+  firstSeen: string
+  lastSeen?: string
+  affectedEndpoint?: string
+}
+
 // Union type for all widgets
 export type WidgetData =
   | StatGridData
@@ -168,17 +198,18 @@ export type WidgetData =
   | PipelineData
   | DealCardsData
   | FlightCardsData
+  | DeploymentTimelineData
 
 // App Bar configuration (displayed above the widget)
 export interface AppBarConfig {
   name: string
-  logo?: 'manifest' | 'sales' | 'skyscanner' | 'marketing' | 'custom'
+  logo?: 'manifest' | 'sales' | 'skyscanner' | 'marketing' | 'devops' | 'custom'
   customLogoSvg?: string
 }
 
 // Composite widget configuration
 export interface CompositeWidgetConfig {
-  style: 'hris' | 'browser' | 'sales' | 'skyscanner' | 'marketing'
+  style: 'hris' | 'browser' | 'sales' | 'skyscanner' | 'marketing' | 'devops'
   appBar?: AppBarConfig
   header?: {
     title?: string

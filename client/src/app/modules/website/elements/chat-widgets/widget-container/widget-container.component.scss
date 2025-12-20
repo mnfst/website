@@ -598,4 +598,111 @@
   &__marketing-body {
     padding: 0 1.5rem 1.5rem;
   }
+
+  // =============================================
+  // DEVOPS WIDGET STYLES (Light Theme - Bugsnag-like)
+  // =============================================
+
+  // DevOps theme colors
+  $devops-purple: #4f46e5;
+  $devops-red: #ef4444;
+  $devops-green: #22c55e;
+  $devops-yellow: #f59e0b;
+  $devops-dark: #1f2937;
+  $devops-gray: #6b7280;
+  $devops-light-gray: #e5e7eb;
+  $devops-bg: #f9fafb;
+
+  // DevOps-style widget (light theme)
+  &--devops {
+    background: linear-gradient(145deg, #ffffff 0%, $devops-bg 100%);
+    border: 1px solid $devops-light-gray;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+
+  // DevOps app bar
+  &__app-bar--devops {
+    .widget-container__app-bar-name {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .widget-container__feedback-btn {
+      color: rgba(255, 255, 255, 0.7);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+    }
+  }
+
+  &__app-logo--devops {
+    background: linear-gradient(135deg, $devops-purple 0%, #7c3aed 100%);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+  }
+
+  &__devops-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem 0.75rem;
+    border-bottom: 1px solid $devops-light-gray;
+  }
+
+  &__devops-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__devops-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $devops-dark;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  &__devops-subtitle {
+    font-size: 0.8125rem;
+    color: $devops-gray;
+    font-weight: 500;
+  }
+
+  &__devops-header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__devops-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: $devops-red;
+    font-weight: 600;
+
+    &--live {
+      background: rgba(34, 197, 94, 0.1);
+      color: $devops-green;
+    }
+  }
+
+  &__devops-badge-dot {
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  &__devops-body {
+    padding: 0.75rem 1.5rem 1.5rem;
+  }
 }
