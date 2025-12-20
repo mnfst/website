@@ -18,6 +18,7 @@ $marketing-bg: #f5f8fa;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.875rem;
+    padding-top: 1rem;
   }
 
   &__subtitle {
@@ -68,7 +69,11 @@ $marketing-bg: #f5f8fa;
     }
 
     &--marketing {
-      background: linear-gradient(90deg, $marketing-orange 0%, $marketing-orange-light 100%);
+      background: linear-gradient(
+        90deg,
+        $marketing-orange 0%,
+        $marketing-orange-light 100%
+      );
     }
   }
 

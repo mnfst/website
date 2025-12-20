@@ -578,16 +578,65 @@ export class UseCasesComponent {
         {
           role: 'assistant',
           content:
-            'I found the issue for account #8847 (jane.smith@email.com). There were indeed 2 charges on Nov 15:\n\n• $49.00 at 10:23 AM - Annual renewal (legitimate)\n• $49.00 at 10:24 AM - Duplicate charge (system error)\n\nThis was caused by a payment retry during a brief gateway timeout. I can process a refund of $49.00 right now. Should I proceed?'
-        },
-        {
-          role: 'user',
-          content: 'Yes, refund and send them a confirmation email'
-        },
-        {
-          role: 'assistant',
-          content:
-            "Done! Here's what I completed:\n\n✅ Refund of $49.00 processed (3-5 business days)\n✅ Confirmation email sent to jane.smith@email.com\n✅ Added $10 account credit as goodwill gesture\n✅ Ticket #8847-R marked resolved\n\nThe customer will see the refund and received our apology email. Is there anything else for this case?"
+            'Here are your support agent metrics for the last month. Sarah Chen leads with the fastest response time at 8 minutes. The team average has improved 23% compared to last quarter.',
+          widget: {
+            style: 'hris',
+            appBar: {
+              name: 'SupportDesk',
+              logo: 'support'
+            },
+            header: {
+              title: 'Agent Performance',
+              subtitle: 'Last 30 days',
+              badge: { label: 'Data from Ticketing System', type: 'synced' }
+            },
+            sections: [
+              {
+                type: 'data-table',
+                columns: [
+                  { key: 'agent', label: 'Agent' },
+                  { key: 'firstResponse', label: 'Avg First Response' },
+                  { key: 'tickets', label: 'Tickets', align: 'right' }
+                ],
+                rows: [
+                  {
+                    agent: { value: 'Sarah Chen' },
+                    firstResponse: { value: '8 min', variant: 'success' },
+                    tickets: { value: 142, type: 'badge' }
+                  },
+                  {
+                    agent: { value: 'Mike Johnson' },
+                    firstResponse: { value: '12 min' },
+                    tickets: { value: 98, type: 'badge' }
+                  },
+                  {
+                    agent: { value: 'Emma Davis' },
+                    firstResponse: { value: '15 min' },
+                    tickets: { value: 87, type: 'badge' }
+                  },
+                  {
+                    agent: { value: 'Alex Turner' },
+                    firstResponse: { value: '23 min', variant: 'warning' },
+                    tickets: { value: 64, type: 'badge' }
+                  }
+                ]
+              },
+              {
+                type: 'bar-chart',
+                title:
+                  'Average Response Time Over the Last 6 Months (in minutes)',
+                valueFormat: 'number',
+                bars: [
+                  { name: 'Jul', value: 12 },
+                  { name: 'Aug', value: 10 },
+                  { name: 'Sep', value: 9 },
+                  { name: 'Oct', value: 11 },
+                  { name: 'Nov', value: 8 },
+                  { name: 'Dec', value: 18 }
+                ]
+              }
+            ]
+          }
         }
       ]
     }
