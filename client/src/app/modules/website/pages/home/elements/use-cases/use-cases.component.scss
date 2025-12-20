@@ -357,9 +357,11 @@ $text-grey: #7e7e7e;
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    flex-wrap: wrap;
 
     @media (max-width: 768px) {
-      gap: 2rem;
+      gap: 1.5rem 2rem;
+      padding: 0 1rem;
     }
 
     img {
@@ -382,10 +384,19 @@ $text-grey: #7e7e7e;
       }
 
       @media (max-width: 768px) {
-        height: 24px;
+        height: 18px;
+
+        &.skydeck-logo {
+          height: 18px;
+        }
+
+        &.inria-logo {
+          height: 18px;
+          top: -3px;
+        }
 
         &.hec-logo {
-          height: 56px;
+          height: 48px;
         }
       }
     }
