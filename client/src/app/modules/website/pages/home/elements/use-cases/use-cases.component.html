@@ -1,28 +1,27 @@
 <section class="use-cases">
   <div class="use-cases__wrapper">
     <div class="container">
-      <div class="columns">
-        <!-- Left: Vertical Tabs -->
-        <div class="column is-5">
-          <div class="use-cases__tabs-vertical">
-            @for (useCase of useCases; track useCase.id; let i = $index) {
-            <button
-              class="tab-item"
-              [class.is-active]="selectedTab === useCase.id"
-              (click)="selectTab(useCase.id)"
-            >
-              <span class="tab-item__title">{{ useCase.label }}</span>
-              @if (selectedTab === useCase.id) {
-              <p class="tab-item__excerpt">{{ useCase.excerpt }}</p>
-              }
-            </button>
-            }
-          </div>
-        </div>
+      <!-- Horizontal Tabs -->
+      <div class="use-cases__tabs-horizontal">
+        @for (useCase of useCases; track useCase.id) {
+        <button
+          class="tab-item"
+          [class.is-active]="selectedTab === useCase.id"
+          (click)="selectTab(useCase.id)"
+        >
+          <span class="tab-item__title">{{ useCase.label }}</span>
+        </button>
+        }
+      </div>
 
-        <!-- Right: ChatGPT Window -->
-        <div class="column is-7">
-          <div class="use-cases__chat-window">
+      <!-- Selected Use Case Info -->
+      <div class="use-cases__selected-info">
+        <h3 class="use-cases__selected-title">{{ getSelectedUseCase().label }}</h3>
+        <p class="use-cases__selected-excerpt">{{ getSelectedUseCase().excerpt }}</p>
+      </div>
+
+      <!-- ChatGPT Window -->
+      <div class="use-cases__chat-window">
             <div class="chatgpt-container">
               <!-- ChatGPT Header -->
               <div class="chatgpt-header">
@@ -154,8 +153,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </div>
 

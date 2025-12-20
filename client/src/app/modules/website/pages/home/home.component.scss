@@ -1,3 +1,46 @@
+// Full-screen background with fade to white
+.home-page {
+  position: relative;
+  min-height: 100vh;
+
+  &__background {
+    position: absolute;
+    top: -80px; // Start behind the header
+    left: 0;
+    right: 0;
+    height: calc(100vh + 80px);
+    z-index: 0;
+    pointer-events: none;
+
+    // Frosted glass background image with filters
+    background: url('/assets/images/bg-frosted-small.png') center top / cover
+      no-repeat;
+    filter: saturate(3) opacity(0.25);
+
+    // Fade to white at the bottom
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255, 255, 255, 0.5) 40%,
+        rgba(255, 255, 255, 0.9) 70%,
+        #fff 100%
+      );
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .image-stack-container {
   position: relative;
   width: 100%;

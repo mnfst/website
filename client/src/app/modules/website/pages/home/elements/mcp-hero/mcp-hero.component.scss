@@ -2,10 +2,9 @@
 
 .hero-mcp {
   padding: 0;
-  background: #f8f9fa;
-  border-top: 1px solid #dadadb;
+  background: transparent;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 
   &__visual {
     position: relative;
@@ -80,13 +79,13 @@
 
     @media (max-width: 768px) {
       padding-right: 0;
-      margin-bottom: 3rem;
+      margin-bottom: 0;
       text-align: center;
     }
 
     @media (min-width: 769px) and (max-width: 1023px) {
       padding-right: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0;
     }
 
     .title.is-1 {
@@ -123,10 +122,10 @@
   }
 
   &__actions {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 
     @media (max-width: 768px) {
-      margin-bottom: 2rem;
+      margin-bottom: 0;
 
       > div {
         justify-content: center;
