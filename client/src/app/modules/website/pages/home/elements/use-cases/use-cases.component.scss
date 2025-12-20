@@ -33,6 +33,12 @@ $text-grey: #7e7e7e;
     border-radius: 24px;
     overflow: hidden;
 
+    // CSS custom properties for mouse tracking
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --offset-x: 0px;
+    --offset-y: 0px;
+
     // Warmer cream base for better contrast with page background
     background: #f5f0eb;
 
@@ -40,12 +46,16 @@ $text-grey: #7e7e7e;
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      // Extra large to avoid visible edges when moving
+      top: -50px;
+      left: -50px;
+      right: -50px;
+      bottom: -50px;
       pointer-events: none;
       z-index: 0;
+      transition: transform 0.2s ease-out;
+      // Parallax effect using pixel offsets from JS
+      transform: translate(var(--offset-x), var(--offset-y));
       background:
         // Warm peach in top-left
         radial-gradient(
@@ -77,6 +87,30 @@ $text-grey: #7e7e7e;
             rgba(255, 248, 240, 0.5) 0%,
             transparent 60%
           );
+    }
+
+    // Mouse-following spotlight
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.25) 0%,
+        transparent 50%
+      );
+    }
+
+    // Show spotlight on hover
+    &:hover::after {
+      opacity: 1;
     }
 
     @media (max-width: 768px) {

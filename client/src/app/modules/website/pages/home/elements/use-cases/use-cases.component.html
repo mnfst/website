@@ -1,5 +1,10 @@
 <section class="use-cases">
-  <div class="use-cases__wrapper">
+  <div
+    class="use-cases__wrapper"
+    #wrapper
+    (mousemove)="onMouseMove($event)"
+    (mouseleave)="onMouseLeave()"
+  >
     <div class="container">
       <div class="columns">
         <!-- Left: Vertical Tabs -->

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, ElementRef, ViewChild } from '@angular/core'
 import { ClientLogosComponent } from '../../../../../../common/partials/client-logos/client-logos.component'
 import {
   UseCase,
@@ -15,6 +15,35 @@ import {
 })
 export class UseCasesComponent {
   selectedTab = 'growth'
+  @ViewChild('wrapper') wrapperRef!: ElementRef<HTMLDivElement>
+
+  onMouseMove(event: MouseEvent): void {
+    const wrapper = this.wrapperRef?.nativeElement
+    if (!wrapper) return
+
+    const rect = wrapper.getBoundingClientRect()
+    const x = ((event.clientX - rect.left) / rect.width) * 100
+    const y = ((event.clientY - rect.top) / rect.height) * 100
+
+    // Offset for parallax effect (moves shapes towards cursor)
+    const offsetX = (x - 50) * 0.3 // -15px to +15px
+    const offsetY = (y - 50) * 0.3
+
+    wrapper.style.setProperty('--mouse-x', `${x}%`)
+    wrapper.style.setProperty('--mouse-y', `${y}%`)
+    wrapper.style.setProperty('--offset-x', `${offsetX}px`)
+    wrapper.style.setProperty('--offset-y', `${offsetY}px`)
+  }
+
+  onMouseLeave(): void {
+    const wrapper = this.wrapperRef?.nativeElement
+    if (!wrapper) return
+
+    wrapper.style.setProperty('--mouse-x', '50%')
+    wrapper.style.setProperty('--mouse-y', '50%')
+    wrapper.style.setProperty('--offset-x', '0px')
+    wrapper.style.setProperty('--offset-y', '0px')
+  }
 
   useCases: UseCase[] = [
     {
