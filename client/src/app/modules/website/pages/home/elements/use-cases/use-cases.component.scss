@@ -152,6 +152,71 @@ $text-grey: #7e7e7e;
     z-index: 2;
   }
 
+  // Hide tabs column on mobile/tablet
+  &__tabs-column {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  // Mobile/Tablet slider with dots
+  &__mobile-slider {
+    display: none;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    @media (max-width: 1023px) {
+      display: block;
+    }
+  }
+
+  &__slide-header {
+    margin-bottom: 1rem;
+  }
+
+  &__slide-title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  &__slide-excerpt {
+    font-size: 0.9375rem;
+    color: #5a5a5a;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    &.is-active {
+      background: $text-dark;
+      width: 24px;
+      border-radius: 4px;
+    }
+  }
+
   &__header {
     max-width: 700px;
     margin-left: auto;

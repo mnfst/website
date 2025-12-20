@@ -535,6 +535,38 @@ export class UseCasesComponent {
     }
   ]
 
+  // Touch/swipe handling for mobile slider
+  private touchStartX = 0
+  private touchEndX = 0
+
+  onTouchStart(event: TouchEvent): void {
+    this.touchStartX = event.changedTouches[0].screenX
+  }
+
+  onTouchEnd(event: TouchEvent): void {
+    this.touchEndX = event.changedTouches[0].screenX
+    this.handleSwipe()
+  }
+
+  private handleSwipe(): void {
+    const swipeThreshold = 50
+    const diff = this.touchStartX - this.touchEndX
+
+    if (Math.abs(diff) < swipeThreshold) return
+
+    const currentIndex = this.useCases.findIndex(
+      (uc) => uc.id === this.selectedTab
+    )
+
+    if (diff > 0 && currentIndex < this.useCases.length - 1) {
+      // Swipe left - next
+      this.selectedTab = this.useCases[currentIndex + 1].id
+    } else if (diff < 0 && currentIndex > 0) {
+      // Swipe right - previous
+      this.selectedTab = this.useCases[currentIndex - 1].id
+    }
+  }
+
   selectTab(tabId: string): void {
     this.selectedTab = tabId
   }

@@ -9,9 +9,27 @@
     <div class="use-cases__bg"></div>
 
     <div class="container">
+      <!-- Mobile/Tablet: Slider with dots -->
+      <div class="use-cases__mobile-slider">
+        <div class="use-cases__slide-header">
+          <span class="use-cases__slide-title">{{ getSelectedUseCase().label }}</span>
+          <p class="use-cases__slide-excerpt">{{ getSelectedUseCase().excerpt }}</p>
+        </div>
+        <div class="use-cases__dots">
+          @for (useCase of useCases; track useCase.id; let i = $index) {
+          <button
+            class="use-cases__dot"
+            [class.is-active]="selectedTab === useCase.id"
+            (click)="selectTab(useCase.id)"
+            [attr.aria-label]="'Go to ' + useCase.label"
+          ></button>
+          }
+        </div>
+      </div>
+
       <div class="columns">
-        <!-- Left: Vertical Tabs -->
-        <div class="column is-5">
+        <!-- Left: Vertical Tabs (desktop only) -->
+        <div class="column is-5 use-cases__tabs-column">
           <div class="use-cases__tabs-vertical">
             @for (useCase of useCases; track useCase.id; let i = $index) {
             <button
@@ -29,8 +47,12 @@
         </div>
 
         <!-- Right: ChatGPT Window -->
-        <div class="column is-7">
-          <div class="use-cases__chat-window">
+        <div class="column is-7 is-12-touch">
+          <div
+            class="use-cases__chat-window"
+            (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)"
+          >
             <div class="chatgpt-container">
               <!-- ChatGPT Header -->
               <div class="chatgpt-header">
