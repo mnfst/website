@@ -27,12 +27,12 @@ export class UseCasesComponent {
         {
           role: 'user',
           content:
-            'Find non-stop flights to San Francisco from january 15 to January 26, 2026'
+            'Find non-stop flights to San Francisco from January 15 to January 26, 2026'
         },
         {
           role: 'assistant',
           content:
-            'I found 4 non-stop flights from Paris (CDG) to San Francisco (SFO). The Air France morning departure offers the best balance of timing and price.',
+            'I found round-trip options from Paris (CDG) to San Francisco (SFO). Here are the best deals.',
           widget: {
             style: 'skyscanner',
             appBar: {
@@ -40,8 +40,8 @@ export class UseCasesComponent {
               logo: 'skyscanner'
             },
             header: {
-              title: 'Paris → San Francisco',
-              subtitle: 'Non-stop flights · Dec 28, 2024'
+              title: 'Paris ↔ San Francisco',
+              subtitle: 'Round-trip · Jan 15-26, 2026'
             },
             sections: [
               {
@@ -56,33 +56,42 @@ export class UseCasesComponent {
                     departureCity: 'CDG',
                     arrivalCity: 'SFO',
                     duration: '11h 45m',
-                    stops: 'Non-stop',
-                    price: '€487',
-                    isBestValue: true
+                    stops: 'Direct',
+                    price: '$659',
+                    dealsCount: 14,
+                    returnFlight: {
+                      airline: 'Air France',
+                      departureTime: '15:30',
+                      arrivalTime: '11:15+1',
+                      departureCity: 'SFO',
+                      arrivalCity: 'CDG',
+                      duration: '10h 45m',
+                      stops: 'Direct'
+                    }
                   },
                   {
                     id: 'flight-2',
-                    airline: 'United',
-                    airlineLogo: '/assets/images/airlines/united.svg',
-                    departureTime: '11:50',
-                    arrivalTime: '14:40',
-                    departureCity: 'CDG',
-                    arrivalCity: 'SFO',
-                    duration: '11h 50m',
-                    stops: 'Non-stop',
-                    price: '€512'
-                  },
-                  {
-                    id: 'flight-3',
                     airline: 'Delta',
                     airlineLogo: '/assets/images/airlines/delta.svg',
-                    departureTime: '16:30',
-                    arrivalTime: '19:15',
-                    departureCity: 'CDG',
-                    arrivalCity: 'SFO',
-                    duration: '11h 45m',
-                    stops: 'Non-stop',
-                    price: '€534'
+                    departureTime: '3:40 PM',
+                    arrivalTime: '11:35 AM+1',
+                    departureCity: 'SFO',
+                    arrivalCity: 'CDG',
+                    duration: '10h 55',
+                    stops: 'Direct',
+                    price: '$759',
+                    dealsCount: 1,
+                    operatedBy: 'Air France',
+                    returnFlight: {
+                      airline: 'Delta',
+                      departureTime: '10:35 AM',
+                      arrivalTime: '1:25 PM',
+                      departureCity: 'CDG',
+                      arrivalCity: 'SFO',
+                      duration: '11h 50',
+                      stops: 'Direct',
+                      operatedBy: 'Air France'
+                    }
                   }
                 ]
               }

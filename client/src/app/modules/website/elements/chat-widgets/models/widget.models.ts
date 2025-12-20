@@ -123,6 +123,19 @@ export interface FlightCardsData {
   flights: FlightCard[]
 }
 
+export interface FlightLeg {
+  airline: string
+  airlineLogo?: string
+  departureTime: string
+  arrivalTime: string
+  departureCity: string
+  arrivalCity: string
+  duration: string
+  stops: string
+  stopCity?: string
+  operatedBy?: string
+}
+
 export interface FlightCard {
   id: string
   airline: string
@@ -135,6 +148,11 @@ export interface FlightCard {
   stops: string
   price: string
   isBestValue?: boolean
+  // New fields for round-trip cards
+  dealsCount?: number
+  returnFlight?: FlightLeg
+  operatedBy?: string
+  stopCity?: string
 }
 
 // Union type for all widgets

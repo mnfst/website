@@ -1,51 +1,116 @@
 <div class="flight-cards">
   @for (flight of data.flights; track flight.id) {
-  <div class="flight-card" [class.flight-card--best-value]="flight.isBestValue">
-    @if (flight.isBestValue) {
-    <div class="flight-card__badge">Best value</div>
-    }
-
-    <div class="flight-card__content">
-      <!-- Airline info -->
-      <div class="flight-card__airline">
-        <img
-          [src]="flight.airlineLogo"
-          [alt]="flight.airline"
-          class="flight-card__airline-logo"
-        />
-        <span class="flight-card__airline-name">{{ flight.airline }}</span>
-      </div>
-
-      <!-- Flight times and route -->
-      <div class="flight-card__route">
-        <div class="flight-card__time-block">
-          <span class="flight-card__time">{{ flight.departureTime }}</span>
-          <span class="flight-card__city">{{ flight.departureCity }}</span>
+  <div class="flight-card">
+    <!-- Flight Info Section -->
+    <div class="flight-card__info">
+      <!-- Outbound Flight Row -->
+      <div class="flight-card__row">
+        <div class="flight-card__airline">
+          <img
+            [src]="flight.airlineLogo"
+            [alt]="flight.airline"
+            class="flight-card__airline-logo"
+          />
+          <span class="flight-card__airline-name">{{ flight.airline }}</span>
         </div>
 
-        <div class="flight-card__duration-block">
-          <span class="flight-card__duration">{{ flight.duration }}</span>
-          <div class="flight-card__line">
-            <span class="flight-card__dot"></span>
-            <span class="flight-card__connector"></span>
-            <svg class="flight-card__plane" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-            </svg>
+        <div class="flight-card__times">
+          <div class="flight-card__departure">
+            <span class="flight-card__time">{{ flight.departureTime }}</span>
+            <span class="flight-card__city">{{ flight.departureCity }}</span>
           </div>
-          <span class="flight-card__stops">{{ flight.stops }}</span>
-        </div>
 
-        <div class="flight-card__time-block">
-          <span class="flight-card__time">{{ flight.arrivalTime }}</span>
-          <span class="flight-card__city">{{ flight.arrivalCity }}</span>
+          <div class="flight-card__duration">
+            <span class="flight-card__duration-text">{{ flight.duration }}</span>
+            <div class="flight-card__line">
+              <span class="flight-card__dot"></span>
+              <span class="flight-card__connector"></span>
+              @if (flight.stopCity) {
+              <span class="flight-card__stop-indicator"></span>
+              <span class="flight-card__connector"></span>
+              }
+              <span class="flight-card__dot"></span>
+            </div>
+            <span class="flight-card__stops" [class.flight-card__stops--direct]="flight.stops === 'Direct' || flight.stops === 'Non-stop'">
+              {{ flight.stops }}@if (flight.stopCity) { {{ flight.stopCity }}}
+            </span>
+          </div>
+
+          <div class="flight-card__arrival">
+            <span class="flight-card__time">{{ flight.arrivalTime }}</span>
+            <span class="flight-card__city">{{ flight.arrivalCity }}</span>
+          </div>
         </div>
       </div>
 
-      <!-- Price -->
-      <div class="flight-card__price-block">
-        <span class="flight-card__price">{{ flight.price }}</span>
-        <button class="flight-card__select-btn">Select</button>
+      @if (flight.operatedBy) {
+      <div class="flight-card__operated-by">Operated by {{ flight.operatedBy }}</div>
+      }
+
+      <!-- Return Flight Row (if exists) -->
+      @if (flight.returnFlight) {
+      <div class="flight-card__row flight-card__row--return">
+        <div class="flight-card__airline">
+          <img
+            [src]="flight.returnFlight.airlineLogo || flight.airlineLogo"
+            [alt]="flight.returnFlight.airline || flight.airline"
+            class="flight-card__airline-logo"
+          />
+          <span class="flight-card__airline-name">{{ flight.returnFlight.airline || flight.airline }}</span>
+        </div>
+
+        <div class="flight-card__times">
+          <div class="flight-card__departure">
+            <span class="flight-card__time">{{ flight.returnFlight.departureTime }}</span>
+            <span class="flight-card__city">{{ flight.returnFlight.departureCity }}</span>
+          </div>
+
+          <div class="flight-card__duration">
+            <span class="flight-card__duration-text">{{ flight.returnFlight.duration }}</span>
+            <div class="flight-card__line">
+              <span class="flight-card__dot"></span>
+              <span class="flight-card__connector"></span>
+              @if (flight.returnFlight.stopCity) {
+              <span class="flight-card__stop-indicator"></span>
+              <span class="flight-card__connector"></span>
+              }
+              <span class="flight-card__dot"></span>
+            </div>
+            <span class="flight-card__stops" [class.flight-card__stops--direct]="flight.returnFlight.stops === 'Direct' || flight.returnFlight.stops === 'Non-stop'">
+              {{ flight.returnFlight.stops }}@if (flight.returnFlight.stopCity) { {{ flight.returnFlight.stopCity }}}
+            </span>
+          </div>
+
+          <div class="flight-card__arrival">
+            <span class="flight-card__time">{{ flight.returnFlight.arrivalTime }}</span>
+            <span class="flight-card__city">{{ flight.returnFlight.arrivalCity }}</span>
+          </div>
+        </div>
       </div>
+
+      @if (flight.returnFlight.operatedBy) {
+      <div class="flight-card__operated-by">Operated by {{ flight.returnFlight.operatedBy }}</div>
+      }
+      }
+    </div>
+
+    <!-- Price Section -->
+    <div class="flight-card__price-section">
+      <div class="flight-card__price-top">
+        @if (flight.dealsCount) {
+        <span class="flight-card__deals">{{ flight.dealsCount }} deal{{ flight.dealsCount > 1 ? 's' : '' }} from</span>
+        }
+        <svg class="flight-card__heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <span class="flight-card__price">{{ flight.price }}</span>
+      <button class="flight-card__select-btn">
+        Select
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
     </div>
   </div>
   }
