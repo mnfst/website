@@ -11,7 +11,7 @@ import {
   standalone: true,
   imports: [CommonModule, ClientLogosComponent, WidgetContainerComponent],
   templateUrl: './use-cases.component.html',
-  styleUrl: './use-cases.component.scss'
+  styleUrls: ['./use-cases.component.scss']
 })
 export class UseCasesComponent {
   selectedTab = 'growth'
