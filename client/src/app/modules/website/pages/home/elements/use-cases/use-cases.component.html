@@ -12,8 +12,12 @@
       <!-- Mobile/Tablet: Slider with dots -->
       <div class="use-cases__mobile-slider">
         <div class="use-cases__slide-header">
-          <span class="use-cases__slide-title">{{ getSelectedUseCase().label }}</span>
-          <p class="use-cases__slide-excerpt">{{ getSelectedUseCase().excerpt }}</p>
+          <span class="use-cases__slide-title">{{
+            getSelectedUseCase().label
+          }}</span>
+          <p class="use-cases__slide-excerpt">
+            {{ getSelectedUseCase().excerpt }}
+          </p>
         </div>
         <div class="use-cases__dots">
           @for (useCase of useCases; track useCase.id; let i = $index) {
@@ -187,26 +191,40 @@
 
   <!-- Starred by -->
   <div class="container">
-    <div class="use-cases__starred mt-6">
-      <app-client-logos></app-client-logos>
-    </div>
+    <div class="columns is-multiline">
+      <div class="column is-8 is-offset-2">
+        <div class="use-cases__starred mt-6">
+          <app-client-logos></app-client-logos>
+        </div>
+      </div>
 
-    <!-- Backers -->
-    <div class="use-cases__backers mt-6">
-      <p class="has-text-centered has-text-grey is-size-8 mb-3">Backed by</p>
-      <div class="use-cases__backers-logos">
-        <img
-          src="/assets/images/skydeck-logo.svg"
-          alt="Berkeley SkyDeck"
-          loading="lazy"
-        />
-        <img
-          src="/assets/images/inria-logo.svg"
-          alt="Inria"
-          loading="lazy"
-          class="inria-logo"
-        />
-        <img src="/assets/images/hec-incubateur.svg" alt="HEC" loading="lazy" />
+      <div class="column is-6 is-offset-3">
+        <!-- Backers -->
+        <div class="use-cases__backers mt-6">
+          <p class="has-text-centered mb-3">
+            <span class="use-cases__backers-label">Backed by</span>
+          </p>
+          <div class="use-cases__backers-logos">
+            <img
+              src="/assets/images/skydeck-logo.svg"
+              alt="Berkeley SkyDeck"
+              loading="lazy"
+              class="skydeck-logo"
+            />
+            <img
+              src="/assets/images/inria-logo.svg"
+              alt="Inria"
+              loading="lazy"
+              class="inria-logo"
+            />
+            <img
+              src="/assets/images/hec-incubateur.svg"
+              alt="HEC"
+              loading="lazy"
+              class="hec-logo"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
