@@ -31,7 +31,7 @@ $text-grey: #7e7e7e;
     margin: 0 auto;
     max-width: 1400px;
     border-radius: 24px;
-    overflow: hidden;
+    overflow: visible;
 
     // CSS custom properties for mouse tracking
     --mouse-x: 50%;
@@ -39,8 +39,37 @@ $text-grey: #7e7e7e;
     --offset-x: 0px;
     --offset-y: 0px;
 
-    // Warmer cream base for better contrast with page background
+    // Wrapper is transparent, background is in __bg
+    background: transparent;
+
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+      margin: 0 1rem;
+    }
+  }
+
+  // Background layer with rounded corners and overflow hidden
+  // On desktop, height adapts to tabs area so chat window overflows
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: #f5f0eb;
+    border-radius: 24px;
+    z-index: 0;
+    overflow: hidden;
+
+    @media (min-width: 1600px) {
+      top: 4rem;
+      bottom: 4rem;
+      right: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      border-radius: 16px;
+    }
 
     // Layered soft color blobs for organic frosted glass look
     &::before {
@@ -55,7 +84,7 @@ $text-grey: #7e7e7e;
       z-index: 0;
       transition: transform 0.2s ease-out;
       // Parallax effect using pixel offsets from JS
-      transform: translate(var(--offset-x), var(--offset-y));
+      transform: translate(var(--offset-x, 0px), var(--offset-y, 0px));
       background:
         // Warm peach in top-left
         radial-gradient(
@@ -102,22 +131,20 @@ $text-grey: #7e7e7e;
       opacity: 0;
       transition: opacity 0.3s ease;
       background: radial-gradient(
-        600px circle at var(--mouse-x) var(--mouse-y),
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
         rgba(255, 255, 255, 0.25) 0%,
         transparent 50%
       );
     }
 
-    // Show spotlight on hover
-    &:hover::after {
-      opacity: 1;
-    }
-
     @media (max-width: 768px) {
-      padding: 2rem 1rem;
       border-radius: 16px;
-      margin: 0 1rem;
     }
+  }
+
+  // Show spotlight on hover
+  &__wrapper:hover &__bg::after {
+    opacity: 1;
   }
 
   .container {
@@ -157,6 +184,10 @@ $text-grey: #7e7e7e;
     flex-direction: column;
     gap: 0;
     padding-top: 0.5rem;
+
+    @media (min-width: 1600px) {
+      padding-top: 4rem;
+    }
 
     .tab-item {
       display: flex;
@@ -230,6 +261,19 @@ $text-grey: #7e7e7e;
 
   &__chat-window {
     width: 100%;
+    position: relative;
+    z-index: 10;
+
+    // On widescreen, make chat window overflow the background on top, bottom, right
+    @media (min-width: 1600px) {
+      .chatgpt-container {
+        transform: scale(1.1);
+        transform-origin: left center;
+        box-shadow:
+          0 25px 50px -12px rgba(0, 0, 0, 0.25),
+          0 0 0 1px rgba(0, 0, 0, 0.05);
+      }
+    }
   }
 
   &__backers {
