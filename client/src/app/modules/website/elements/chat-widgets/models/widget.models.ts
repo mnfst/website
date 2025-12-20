@@ -20,14 +20,17 @@ export interface StatItem {
 export interface BarChartData {
   type: 'bar-chart'
   title?: string
+  subtitle?: string
   bars: BarChartItem[]
   maxValue?: number
+  valueFormat?: 'number' | 'percent' | 'currency'
+  theme?: 'dark' | 'marketing'
 }
 
 export interface BarChartItem {
   name: string
   value: number
-  variant?: 'default' | 'warning' | 'danger'
+  variant?: 'default' | 'warning' | 'danger' | 'marketing'
 }
 
 // Data Table Widget
@@ -169,13 +172,13 @@ export type WidgetData =
 // App Bar configuration (displayed above the widget)
 export interface AppBarConfig {
   name: string
-  logo?: 'manifest' | 'sales' | 'skyscanner' | 'custom'
+  logo?: 'manifest' | 'sales' | 'skyscanner' | 'marketing' | 'custom'
   customLogoSvg?: string
 }
 
 // Composite widget configuration
 export interface CompositeWidgetConfig {
-  style: 'hris' | 'browser' | 'sales' | 'skyscanner'
+  style: 'hris' | 'browser' | 'sales' | 'skyscanner' | 'marketing'
   appBar?: AppBarConfig
   header?: {
     title?: string

@@ -26,9 +26,29 @@ export class BarChartWidgetComponent implements OnInit {
 
   getBarClass(bar: BarChartItem): string {
     const base = 'bar-chart__bar'
-    if (bar.variant && bar.variant !== 'default') {
-      return `${base} ${base}--${bar.variant}`
+    const variant = bar.variant || (this.data.theme === 'marketing' ? 'marketing' : 'default')
+    if (variant && variant !== 'default') {
+      return `${base} ${base}--${variant}`
     }
     return base
+  }
+
+  getChartClass(): string {
+    const base = 'bar-chart'
+    if (this.data.theme === 'marketing') {
+      return `${base} ${base}--marketing`
+    }
+    return base
+  }
+
+  formatValue(value: number): string {
+    switch (this.data.valueFormat) {
+      case 'percent':
+        return `${value}%`
+      case 'currency':
+        return `$${value.toLocaleString()}`
+      default:
+        return value.toString()
+    }
   }
 }

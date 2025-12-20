@@ -380,26 +380,45 @@ export class UseCasesComponent {
       id: 'marketing',
       label: 'Marketing',
       icon: '📣',
-      excerpt: 'Create and schedule campaigns across all your channels.',
+      excerpt:
+        'Measure campaign performance, optimize conversions, and align content to revenue.',
       messages: [
         {
           role: 'user',
           content:
-            'Create a social media campaign for our Black Friday sale - 30% off all plans'
+            'Pull campaign data from our CMS and marketing automation system and show website conversion rates by campaign for the last 30 days.'
         },
         {
           role: 'assistant',
           content:
-            "I'll create a 5-post campaign across your connected platforms. Here's the first post for Twitter/X:\n\n🔥 Black Friday is HERE!\n\nGet 30% off ALL plans for the next 48 hours.\n\n✅ No code needed\n✅ Applies to annual plans\n✅ Lock in savings forever\n\nDon't miss out → [link]\n\nWant me to schedule all 5 posts now, or review each one first?"
-        },
-        {
-          role: 'user',
-          content: 'Schedule them, but space them 4 hours apart'
-        },
-        {
-          role: 'assistant',
-          content:
-            'Done! 5 posts scheduled starting today at 9 AM:\n\n• 9 AM - Twitter announcement\n• 1 PM - LinkedIn feature highlight\n• 5 PM - Instagram carousel\n• 9 PM - Twitter reminder\n• Tomorrow 9 AM - Final hours push\n\nAll posts are live in your dashboard. Need anything else for the campaign?'
+            'Here are your website conversion rates by campaign for the last 30 days. Spring Promo is leading with a 4.2% conversion rate.',
+          widget: {
+            style: 'marketing',
+            appBar: {
+              name: 'DataHub',
+              logo: 'marketing'
+            },
+            header: {
+              title: 'Campaign Performance',
+              subtitle: 'Last 30 days'
+            },
+            sections: [
+              {
+                type: 'bar-chart',
+                title: 'Website Conversion Rate by Campaign',
+                subtitle: 'Conversion rate (%) from CMS + Marketing Automation',
+                theme: 'marketing',
+                valueFormat: 'percent',
+                bars: [
+                  { name: 'Spring Promo', value: 4.2 },
+                  { name: 'Product Launch', value: 3.6 },
+                  { name: 'Email Nurture', value: 2.9 },
+                  { name: 'Paid Search', value: 2.4 },
+                  { name: 'Retargeting', value: 1.8 }
+                ]
+              }
+            ]
+          }
         }
       ]
     },

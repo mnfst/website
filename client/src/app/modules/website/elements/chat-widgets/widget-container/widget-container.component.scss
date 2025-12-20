@@ -526,4 +526,76 @@
   &__skyscanner-body {
     padding: 0 1.5rem 1.5rem;
   }
+
+  // =============================================
+  // MARKETING WIDGET STYLES (Light Theme with Orange)
+  // =============================================
+
+  // Marketing theme colors
+  $marketing-orange: #ff7a59;
+  $marketing-navy: #2d3e50;
+  $marketing-gray: #516f90;
+  $marketing-light-gray: #cbd6e2;
+  $marketing-bg: #f5f8fa;
+
+  // Marketing-style widget (light theme)
+  &--marketing {
+    background: linear-gradient(145deg, #ffffff 0%, #f5f8fa 100%);
+    border: 1px solid $marketing-light-gray;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+
+  // Marketing app bar
+  &__app-bar--marketing {
+    .widget-container__app-bar-name {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .widget-container__feedback-btn {
+      color: rgba(255, 255, 255, 0.7);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+    }
+  }
+
+  &__app-logo--marketing {
+    background: linear-gradient(135deg, $marketing-orange 0%, #ff5c35 100%);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(255, 122, 89, 0.3);
+  }
+
+  &__marketing-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem 0.75rem;
+  }
+
+  &__marketing-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__marketing-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $marketing-navy;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  &__marketing-subtitle {
+    font-size: 0.8125rem;
+    color: $marketing-gray;
+    font-weight: 500;
+  }
+
+  &__marketing-body {
+    padding: 0 1.5rem 1.5rem;
+  }
 }
