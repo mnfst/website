@@ -52,7 +52,7 @@ export function trackTabView(
     page_path: pagePath
   }
 
-  track('tab_view', eventData)
+  track('tab_view', eventData as unknown as Record<string, string | number>)
 }
 
 /**
