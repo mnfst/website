@@ -1,10 +1,15 @@
-import { CommonModule } from '@angular/common'
-import { Component, ElementRef, ViewChild } from '@angular/core'
+import { CommonModule, DOCUMENT } from '@angular/common'
+import { Component, ElementRef, Inject, ViewChild } from '@angular/core'
 import { ClientLogosComponent } from '../../../../../../common/partials/client-logos/client-logos.component'
 import {
   UseCase,
   WidgetContainerComponent
 } from '../../../../elements/chat-widgets'
+import {
+  getTabIndexById,
+  GrowthTabName,
+  trackTabView
+} from '../../../../../../core/analytics/analytics.utils'
 
 @Component({
   selector: 'app-use-cases',
@@ -16,6 +21,15 @@ import {
 export class UseCasesComponent {
   selectedTab = 'growth'
   @ViewChild('wrapper') wrapperRef!: ElementRef<HTMLDivElement>
+
+  /**
+   * Flag pour éviter le tracking au premier render.
+   * On ne track que les changements explicites de l'utilisateur,
+   * pas l'état initial de la tab.
+   */
+  private hasUserInteracted = false
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   onMouseMove(event: MouseEvent): void {
     const wrapper = this.wrapperRef?.nativeElement
@@ -666,16 +680,45 @@ export class UseCasesComponent {
     )
 
     if (diff > 0 && currentIndex < this.useCases.length - 1) {
-      // Swipe left - next
-      this.selectedTab = this.useCases[currentIndex + 1].id
+      // Swipe left - next: utiliser selectTab pour tracker
+      this.selectTab(this.useCases[currentIndex + 1].id)
     } else if (diff < 0 && currentIndex > 0) {
-      // Swipe right - previous
-      this.selectedTab = this.useCases[currentIndex - 1].id
+      // Swipe right - previous: utiliser selectTab pour tracker
+      this.selectTab(this.useCases[currentIndex - 1].id)
     }
   }
 
+  /**
+   * Handler de changement de tab avec tracking Vercel Analytics.
+   *
+   * Protections anti double-event :
+   * 1. Ignore si la tab est déjà sélectionnée (pas de changement réel)
+   * 2. Ne track pas au premier render grâce au flag hasUserInteracted
+   *
+   * Le tracking est déclenché ICI (dans le handler) et non dans le template
+   * pour garder le JSX propre et la logique métier séparée.
+   */
   selectTab(tabId: string): void {
+    // Protection : ne rien faire si la tab est déjà active
+    if (this.selectedTab === tabId) {
+      return
+    }
+
+    // Mettre à jour la tab sélectionnée
     this.selectedTab = tabId
+
+    // Marquer qu'une interaction utilisateur a eu lieu
+    this.hasUserInteracted = true
+
+    // Tracker l'événement uniquement après une interaction utilisateur
+    const useCase = this.useCases.find((uc) => uc.id === tabId)
+    if (useCase) {
+      const tabIndex = getTabIndexById(this.useCases, tabId)
+      const pagePath =
+        typeof window !== 'undefined' ? window.location.pathname : '/'
+
+      trackTabView(useCase.label.trim() as GrowthTabName, tabIndex, pagePath)
+    }
   }
 
   getSelectedUseCase(): UseCase {
