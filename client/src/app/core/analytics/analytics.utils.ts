@@ -1,7 +1,7 @@
 import { track } from '@vercel/analytics'
 
 /**
- * Liste des tabs disponibles dans la section Growth.
+ * Liste des tabs disponibles dans la section Use Cases.
  * Utiliser cette constante pour garantir la cohérence entre UI et tracking.
  * L'ajout d'une nouvelle tab ici la rend automatiquement disponible partout.
  */
@@ -48,7 +48,7 @@ export function trackTabView(
   const eventData: TabViewEventData = {
     tab_name: tabName,
     tab_index: tabIndex,
-    section: 'Growth',
+    section: 'usecases',
     page_path: pagePath
   }
 
