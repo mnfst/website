@@ -30,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://manifest.build/integrations</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
     <loc>https://manifest.build/sponsors</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -50,46 +43,4 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Integration Detail Pages -->
-  <url>
-    <loc>https://manifest.build/integrations/s3-storage</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://manifest.build/integrations/render</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://manifest.build/integrations/digital-ocean-spaces</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://manifest.build/integrations/fly-io</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://manifest.build/integrations/digital-ocean</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://manifest.build/integrations/heroku</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>

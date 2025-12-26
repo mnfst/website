@@ -19,8 +19,7 @@
     "turbo": "^2.4.4"
   },
   "workspaces": [
-    "client",
-    "docs"
+    "client"
   ],
   "packageManager": "npm@10.7.0"
 }
