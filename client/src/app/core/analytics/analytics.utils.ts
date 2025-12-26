@@ -6,7 +6,6 @@ import { track } from '@vercel/analytics'
  * L'ajout d'une nouvelle tab ici la rend automatiquement disponible partout.
  */
 export const GROWTH_TABS = [
-  'Growth',
   'HR',
   'Sales',
   'Marketing',
