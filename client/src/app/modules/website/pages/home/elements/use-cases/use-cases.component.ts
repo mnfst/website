@@ -19,7 +19,7 @@ import {
   styleUrls: ['./use-cases.component.scss']
 })
 export class UseCasesComponent {
-  selectedTab = 'growth'
+  selectedTab = 'hr'
   @ViewChild('wrapper') wrapperRef!: ElementRef<HTMLDivElement>
 
   /**
@@ -60,89 +60,6 @@ export class UseCasesComponent {
   }
 
   useCases: UseCase[] = [
-    {
-      id: 'growth',
-      label: 'Growth ',
-      icon: '📈',
-      excerpt:
-        'Turn AI conversations into a growth channel. Measure and optimize.',
-      messages: [
-        {
-          role: 'user',
-          content:
-            'Find non-stop flights to San Francisco from January 15 to January 26, 2026'
-        },
-        {
-          role: 'assistant',
-          content:
-            'I found round-trip options from Paris (CDG) to San Francisco (SFO). Here are the best deals.',
-          widget: {
-            style: 'skyscanner',
-            appBar: {
-              name: 'Skyscanner',
-              logo: 'skyscanner'
-            },
-            header: {
-              title: 'Paris ↔ San Francisco',
-              subtitle: 'Round-trip · Jan 15-26, 2026'
-            },
-            sections: [
-              {
-                type: 'flight-cards',
-                flights: [
-                  {
-                    id: 'flight-1',
-                    airline: 'Air France',
-                    airlineLogo: '/assets/images/airlines/air-france.svg',
-                    departureTime: '10:25',
-                    arrivalTime: '13:10',
-                    departureCity: 'CDG',
-                    arrivalCity: 'SFO',
-                    duration: '11h 45m',
-                    stops: 'Direct',
-                    price: '$659',
-                    dealsCount: 14,
-                    returnFlight: {
-                      airline: 'Air France',
-                      departureTime: '15:30',
-                      arrivalTime: '11:15+1',
-                      departureCity: 'SFO',
-                      arrivalCity: 'CDG',
-                      duration: '10h 45m',
-                      stops: 'Direct'
-                    }
-                  },
-                  {
-                    id: 'flight-2',
-                    airline: 'Delta',
-                    airlineLogo: '/assets/images/airlines/delta.svg',
-                    departureTime: '3:40 PM',
-                    arrivalTime: '11:35 AM+1',
-                    departureCity: 'SFO',
-                    arrivalCity: 'CDG',
-                    duration: '10h 55',
-                    stops: 'Direct',
-                    price: '$759',
-                    dealsCount: 1,
-                    operatedBy: 'Air France',
-                    returnFlight: {
-                      airline: 'Delta',
-                      departureTime: '10:35 AM',
-                      arrivalTime: '1:25 PM',
-                      departureCity: 'CDG',
-                      arrivalCity: 'SFO',
-                      duration: '11h 50',
-                      stops: 'Direct',
-                      operatedBy: 'Air France'
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
     {
       id: 'hr',
       label: 'HR',
