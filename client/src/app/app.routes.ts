@@ -17,7 +17,7 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       seo: {
-        title: 'Manifest - ChatGPT App builder for Brands',
+        title: 'Manifest - ChatGPT App builder for Ops teams',
         description:
           'Build Apps that render natively inside ChatGPT and Claude. Ship once, reach every AI assistant. Track what converts. Own the customer relationship.',
         keywords:
@@ -146,7 +146,7 @@ export const routes: Routes = [
       seo: {
         title: 'FAQ - Manifest',
         description:
-          'Frequently asked questions about Manifest (FAQ). Manifest helps brands appear inside ChatGPT and Claude with their own UI.',
+          'Frequently asked questions about Manifest (FAQ). Manifest allows Ops Teams to create Apps that run inside ChatGPT.',
         keywords: 'faq, frequently asked questions, manifest',
         canonicalUrl: `${environment.baseUrl}/faq`,
         og: {
